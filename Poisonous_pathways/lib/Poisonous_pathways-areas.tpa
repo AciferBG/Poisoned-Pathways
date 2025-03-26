@@ -1,0 +1,4 @@
+// area files
+
+
+COPY ~%MOD_FOLDER%/areas/copy~         ~override~

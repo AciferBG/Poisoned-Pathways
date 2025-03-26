@@ -1,0 +1,11 @@
+//Script files
+
+// Compile all scripts in folder "scripts_compile"
+COMPILE ~%MOD_FOLDER%/scripts/scripts_compile~
+
+// Compiling scripts that contain new music
+//COMPILE ~%MOD_FOLDER%/scripts/ACIL10.baf~  EVAL
+
+
+//EXTEND_TOP ~ar0709.bcs~ ~%MOD_FOLDER%/scripts/_ar0709.baf~ // create bard in Den of the Seven Vales
+

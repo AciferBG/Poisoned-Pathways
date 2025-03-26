@@ -1,0 +1,97 @@
+//Worldmap
+
+
+// map icon index in mapicons.bam
+//ACTION_IF GAME_IS ~eet~ BEGIN
+//  ACTION_DEFINE_ASSOCIATIVE_ARRAY remapped_icons BEGIN 10 => 179 END
+//END ELSE 
+ACTION_IF GAME_IS ~eet bg2ee~ BEGIN
+  INCLUDE ~%MOD_FOLDER%/Worldmap/add_map_icons_ee.tpa~
+  LAF ADD_MAP_ICONS_EE STR_VAR path_to_icons = EVAL ~%MOD_FOLDER%/Worldmap/ee/icon.bam~ patch_to_pvrz = EVAL ~%MOD_FOLDER%/Worldmap/ee~ RET new_icon_index END
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY remapped_icons BEGIN 10 => ~%new_icon_index%~ END
+  ACTION_PHP_EACH remapped_icons AS old => new BEGIN
+	PRINT ~%old% => %new%~
+  END
+
+  //STRING_SET 23084 @4000300 //Traveling Hours -> Hours
+  //STRING_SET 5684 @4000301 //Destination Unreachable -> Unreachable
+END 
+ACTION_IF GAME_IS ~bg2 tob bgt~ BEGIN //bg2, bgt
+  INCLUDE ~%MOD_FOLDER%/Worldmap/add_map_icons.tpa~
+  LAF ADD_MAP_ICONS STR_VAR path_to_icons = EVAL ~%MOD_FOLDER%/Worldmap/bg/icon.bam~ RET new_icon_index END
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY remapped_icons BEGIN 10 => ~%new_icon_index%~ END
+END
+
+// patch WMP using TBL files
+INCLUDE ~%MOD_FOLDER%/Worldmap/add_worldmap_tbl.tpa~
+/*
+LAF ADD_WORLDMAP_TBL
+  INT_VAR
+  verbose = 0
+  inclSv = include_saves
+  add_x = wmp_xCoord_SoA
+  add_y = wmp_yCoord_SoA
+  patch_bp_files = 1
+  patch_mastarea = 1
+  STR_VAR
+  path_to_areas = EVAL ~%MOD_FOLDER%/Worldmap/areas_bg2.tbl~
+  path_to_areas_bp = EVAL ~%MOD_FOLDER%/Worldmap/areas.tbl~
+  path_to_links = EVAL ~%MOD_FOLDER%/Worldmap/links.tbl~
+  path_to_trans = EVAL ~%MOD_FOLDER%/language/%LANGUAGE%/worldmap.tra~
+  icons_table = remapped_icons
+END
+*/
+	//Worldmap for BGT
+	ACTION_IF GAME_IS ~bgt~ BEGIN
+		INCLUDE ~%MOD_FOLDER%/lib/add_worldmap_tbl.tpa~
+		LAF ADD_WORLDMAP_TBL
+			INT_VAR
+			verbose = 1
+			inclSv = 0
+			patch_bp_files = 1
+			patch_mastarea = 1
+			STR_VAR
+			path_to_areas = EVAL ~%MOD_FOLDER%/Worldmap/areas_bgt.tbl~
+			path_to_areas_bp = EVAL ~%MOD_FOLDER%/Worldmap/areas_bp_bgt.tbl~
+			path_to_links = EVAL ~%MOD_FOLDER%/Worldmap/links.tbl~
+			path_to_links_bp = EVAL ~%MOD_FOLDER%/Worldmap/links.tbl~
+			path_to_trans = EVAL ~%MOD_FOLDER%/language/%LANGUAGE%/worldmap.tra~
+			icons_table = ~remapped_icons~
+		END
+	END
+	//Worldmap for Vanilla BG2 and BG2EE
+	ACTION_IF GAME_IS ~bg2 tob bg2ee~ AND NOT GAME_IS ~bgt~ BEGIN
+		INCLUDE ~%MOD_FOLDER%/Worldmap/add_worldmap_tbl.tpa~
+		LAF ADD_WORLDMAP_TBL
+			INT_VAR
+			verbose = 0
+			inclSv = 0
+			patch_bp_files = 1
+			patch_mastarea = 1
+			STR_VAR
+			path_to_areas = EVAL ~%MOD_FOLDER%/Worldmap/areas_bg2.tbl~
+			path_to_areas_bp = EVAL ~%MOD_FOLDER%/Worldmap/areas_bp_bgt.tbl~
+			path_to_links = EVAL ~%MOD_FOLDER%/Worldmap/links.tbl~
+			path_to_links_bp = EVAL ~%MOD_FOLDER%/Worldmap/links.tbl~
+			path_to_trans = EVAL ~%MOD_FOLDER%/language/%LANGUAGE%/worldmap.tra~
+			icons_table = ~remapped_icons~
+		END
+	END
+	//Worldmap for EET
+	ACTION_IF GAME_IS ~eet~ BEGIN
+		INCLUDE ~%MOD_FOLDER%/Worldmap/add_worldmap_tbl.tpa~
+		LAF ADD_WORLDMAP_TBL
+			INT_VAR
+			verbose = 1
+			inclSv = 0
+			patch_bp_files = 1
+			patch_mastarea = 1
+			STR_VAR
+			path_to_areas = EVAL ~%MOD_FOLDER%/Worldmap/areas_eet.tbl~
+			path_to_areas_bp = EVAL ~%MOD_FOLDER%/Worldmap/areas_bp_bgt.tbl~
+			path_to_links = EVAL ~%MOD_FOLDER%/Worldmap/links.tbl~
+			path_to_links_bp = EVAL ~%MOD_FOLDER%/Worldmap/links.tbl~
+			path_to_trans = EVAL ~%MOD_FOLDER%/language/%LANGUAGE%/worldmap.tra~
+			icons_table = ~remapped_icons~
+		END
+	END
