@@ -1,0 +1,8 @@
+IF
+    Global("AC#PP_PlotStart","GLOBAL",2)
+    See([PC])
+THEN
+    RESPONSE #100
+        Dialogue([PC])
+END
+

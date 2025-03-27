@@ -1,0 +1,12 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("AC#PPEL2")  // Merethan
+        CreateCreature("CUTSPY",[735.268],S)  // No such index
+        MoveViewPoint([733.277],5)
+        MoveToPoint([733.277])
+        Wait(1)
+        StartDialogueNoSet("AC#PPTA1")  // Delgorth
+END
+

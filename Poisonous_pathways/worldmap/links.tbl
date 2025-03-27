@@ -1,8 +1,7 @@
 
 SRC_AREA     SRC_NWSE     TARGET_ARE   ENTRY_NAME   TRV_TIME     DEF_ENTRY    ENC1         ENC2         ENC3         ENC4         ENC5         ENC_PROB
 
-AR0400       N            ACPP20       Entrywm      8            1            N            N            N            N            N            0
-ACPP20       N            AR0400       ExitSE       4            1            N            N            N            N            N            0
-
-ACPP20       N            ACPP01       Entrywm      4            1            N            N            N            N            N            0
+AR0400       N            ACPP30       Entrywm      8            1            N            N            N            N            N            0
+ACPP30       N            AR0400       ExitSE       4            1            N            N            N            N            N            0
+ACPP30       S            ACPP01       Entrywm      4            1            N            N            N            N            N            0
 

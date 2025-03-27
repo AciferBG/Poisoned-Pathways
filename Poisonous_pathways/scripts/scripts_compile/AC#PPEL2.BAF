@@ -1,0 +1,16 @@
+IF
+    Global("Die_Eldath","ACPP30",1)
+    HasItem("MINHP1",Myself)  // No such index
+THEN
+    RESPONSE #100
+        DestroyItem("MINHP1")  // No such index
+END
+
+IF
+    Global("CutsceneAmbush","ACPP30",10)
+    Delay(3)
+THEN
+    RESPONSE #100
+        ApplyDamage(Myself,1,POISON)
+END
+

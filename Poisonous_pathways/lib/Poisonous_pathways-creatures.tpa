@@ -1,3 +1,14 @@
 // Creatures for %MOD_FOLDER%
 
+COPY ~%MOD_FOLDER%/cre/AC#PPEL1.cre~ ~override~ // Eldath priest #1
+  SAY NAME1 @10 SAY NAME2 @10
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPEL2.cre~ ~override~ // Eldath priest #2: Glade area ACPP30
+  SAY NAME1 @10 SAY NAME2 @10
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPTA1.cre~ ~override~ // Delgorth, Talonite priest in glade area ACPP30
+  SAY NAME1 @11 SAY NAME2 @11
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30  
+
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~

@@ -1,0 +1,16 @@
+IF
+    GlobalGT("AC#PP_PlotStart","GLOBAL",3)
+    InMyArea("AC#PPEL1")
+THEN
+    RESPONSE #100
+       ActionOverride("AC#PPEL1",DestroySelf())  // Merethan
+END
+
+IF
+    Global("AC#PP_PlotStart","GLOBAL",3)
+    Global("AC#PP_Eldath","AR0408",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PP_Eldath","AR0408",1)
+        CreateCreature("AC#PPEL1",[338.332],S)  // Merethan
+END

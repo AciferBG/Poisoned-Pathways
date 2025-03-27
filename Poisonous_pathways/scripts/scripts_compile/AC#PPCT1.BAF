@@ -1,0 +1,22 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        Wait(1)
+        FadeToColor([20.0],0)
+        Wait(1)
+        LeaveAreaLUAPanic("ACPP30","",[288.661],N)
+        LeaveAreaLUA("ACPP30","",[288.661],N)
+        ActionOverride(Player2,LeaveAreaLUA("ACPP30","",[303.723],NE))
+        ActionOverride(Player3,LeaveAreaLUA("ACPP30","",[137.670],NE))
+        ActionOverride(Player4,LeaveAreaLUA("ACPP30","",[143.736],NE))
+        ActionOverride(Player5,LeaveAreaLUA("ACPP30","",[286.794],NE))
+        ActionOverride(Player6,LeaveAreaLUA("ACPP30","",[94.817],NE))
+        MultiPlayerSync()
+        Wait(1)
+        FadeFromColor([20.0],0)
+        Wait(1)
+        ActionOverride("AC#PPEL2",StartDialogueNoSet(Player1))
+END
+

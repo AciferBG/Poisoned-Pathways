@@ -48,14 +48,14 @@ END
 
 AUTO_TRA ~Poisonous_pathways/language/%s~
 
-LANGUAGE ~Deutsch~
-         ~german~
-         ~Poisonous_pathways/language/german/Setup-Poisonous_pathways.tra~
-         ~Poisonous_pathways/language/german/Poisonous_pathways_Journal.tra~
+LANGUAGE ~English~
+         ~english~
+         ~Poisonous_pathways/language/english/Setup-Poisonous_pathways.tra~
+         ~Poisonous_pathways/language/english/Poisonous_pathways_Journal.tra~
 
 BEGIN ~Poisonous pathways~
 
-REQUIRE_PREDICATE GAME_IS ~bg2ee eet~       ~This mod runs only on Enhanced Edition engine.~
+REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~ && FILE_EXISTS ~engine.lua~) ~Requires BG2:EE or EET patched to 2.0 or higher.~
 
 INCLUDE ~Poisonous_pathways/lib/extra_regexp_vars.tph~
 INCLUDE ~Poisonous_pathways/lib/functions.tph~

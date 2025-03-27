@@ -1,0 +1,7 @@
+IF
+    Global("CutsceneAmbush","ACPP30",10)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
