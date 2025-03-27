@@ -125,10 +125,8 @@ COPY ~Poisonous_pathways/pro~         ~override~
 
 COPY ~Poisonous_pathways/spl/copy~         ~override~
 
-/*
-COPY ~Poisonous_pathways/spl/AC#GLDK.spl~          ~override~
-SAY NAME1 @9 SAY NAME2 @9
-*/
+COPY ~Poisonous_pathways/spl/AC#PPS1.spl~          ~override~
+SAY NAME1 @900
 
 
 ///////////////////////////////////////////////////////////////////////

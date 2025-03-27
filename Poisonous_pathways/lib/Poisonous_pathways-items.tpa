@@ -1,11 +1,9 @@
 // Path_of_Poison Item Files
 
+COPY ~%MOD_FOLDER%/itm/AC#PPARP.itm~         ~override~    // poisoned arrow
+  SAY NAME2 @1000
+  SAY DESC @1001
 
 COPY ~Poisonous_pathways/itm/copy~         ~override~
 
-/*
-COPY ~%MOD_FOLDER%/itm/AC#MGMCH.itm~         ~override~   // mithril chainmail +2
-  SAY NAME2 @1000
-  SAY DESC @1000
-*/  
 

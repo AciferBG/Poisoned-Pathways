@@ -1,3 +1,13 @@
 
+// cre files
 @10 = ~Merethan~
 @11 = ~Delgorth~
+@12 = ~Priest of Eldath~
+@13 = ~Alatoasz Berendim~
+
+// spl files
+@900 = ~Analyze Poison~
+
+// itm files
+@1000 = ~Vergifteter Pfeil~
+@1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift präpariert, welches sich nicht auf normalem Wege beseitigen lässt. Ihr sollt den Pfeil nach zu Alatoasz Berendim Duskwood Dell, dem heiligen Ort Eldaths, bringen, damit das Gift dort untersucht werden kann und man einen Hinweis auf den Erzeuger findet.~

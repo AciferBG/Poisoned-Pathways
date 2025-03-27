@@ -16,9 +16,43 @@ DO ~SetGlobal("CutsceneAmbush","ACPP30",10)
 BEGIN ~AC#PPEL2~
 
 CHAIN IF ~Global("CutsceneAmbush","ACPP30",10)~ THEN AC#PPEL2 hello_poison
-~Verflucht, was für... ein... argh... ich... kann.. nicht mehr...~ [GPRIM08]
-DO ~SetGlobal("Die_Eldath","ACPP30",1)
-Kill(Myself)~ EXIT
+~<CHARNAME>! Wir haben Glück! Ich... argh...~ [GPRIM08]
+END
+IF~~THEN REPLY ~So etwas nennt Ihr Glück?~ EXTERN AC#PPEL2 lucky
+IF~~THEN REPLY ~Das sieht man.~ EXTERN AC#PPEL2 lucky
+IF~~THEN REPLY ~Haltet still! Ich werde Euch heilen.~ EXTERN AC#PPEL2 lucky
+
+	CHAIN IF ~~ THEN AC#PPEL2 lucky
+	~Das Gift hat mich zwar erwischt, und schon bald werde ich den ewigen Wasserfällen gegenübertreten... doch... ein Pfeil hat mich verfehlt und steckt hier in meinem Wams... mitsamt dem Gift!~
+	END
+	IF~~THEN REPLY ~Besser hätte es nicht laufen können!~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
+	IF~~THEN REPLY ~Das bedeutet?~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
+	
+		CHAIN IF ~~ THEN AC#PPEL2 bring_arrow_duskwood_dell
+		~Wenn wir das Gift haben, können wir es untersuchen! Nun... ich... wohl nicht mehr. Diese Aufgabe fällt jetzt Euch zu! Ihr müsst... ihr müsst den Pfeil mitsamt dem Gift zu Most Exalted Fallskeeper Alatoasz Berendim, dem obersten meiner Kirche, nach Duskwood Dell bringen. Er weiß sicher, wie man weiter verfahren muss.~
+		END
+		IF~~THEN REPLY ~Was wird aus Euch?~ EXTERN AC#PPEL2 what_about_you
+		IF~~THEN REPLY ~Gut. Sagt mir, wo der Ort ist.~ EXTERN AC#PPEL2 show_duskwood_dell
+		
+		CHAIN IF ~~ THEN AC#PPEL2 what_about_you
+		~Um mich müsst Ihr Euch keine Sorgen mehr machen. Mein Pfad endet hier, so wie ein Fluss letztlich ins große Meer mündet und sich dort verliert. Ihr müsst den Auftrag weiter ausführen und nach Duskwood Dell gehen!~
+		END
+		IF~~THEN REPLY ~Gut. Sagt mir, wo der Ort ist.~ EXTERN AC#PPEL2 show_duskwood_dell
+		
+		CHAIN IF ~~ THEN AC#PPEL2 show_duskwood_dell
+		~Duskwood Dell liegt versteckt im Snakewood. Er ist normalerweise schwer zu finden, doch ich sage Euch, wie Ihr dorthin gelangen könnt...~
+		END
+		IF~~THEN DO ~RevealAreaOnMap("ACPP01")~ EXTERN AC#PPEL2 tell_malagent
+		
+			CHAIN IF ~~ THEN AC#PPEL2 tell_malagent
+			~Und ich vergaß fast, dass unser Gegner aus lauter Eitelkeit sein wahres Antlitz enthüllt hat! Sagt Alatoasz, dass mich ein Malagent vergiftet hat... er wird wissen, was das bedeutet.~
+			END
+			IF~~THEN EXTERN AC#PPEL2 bye_death
+		
+		CHAIN IF ~~ THEN AC#PPEL2 bye_death
+		~Lasst mich hier in diesem schönen Walde meinen letzten Atemzug machen. Ich spüre den Hauch der Göttin! Frieden...~ 
+		DO ~SetGlobal("Die_Eldath","ACPP30",1)
+		Kill(Myself)~ EXIT
 
 CHAIN IF ~Global("CutsceneAmbush","ACPP30",1)~ THEN AC#PPEL2 hello_talonite
 	~Seid gegrüßt, Fremder. Ein schöner Ort, um hier in der Wildnis seinen Geschäften nachzugehen, findet Ihr nicht? Hier gibt es jede Menge Pilze. Man muss nur aufpassen, keine Giftigen zu erwischen.~ 

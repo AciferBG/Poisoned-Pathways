@@ -9,6 +9,12 @@ COPY ~%MOD_FOLDER%/cre/AC#PPEL2.cre~ ~override~ // Eldath priest #2: Glade area 
 COPY ~%MOD_FOLDER%/cre/AC#PPTA1.cre~ ~override~ // Delgorth, Talonite priest in glade area ACPP30
   SAY NAME1 @11 SAY NAME2 @11
   
-COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30  
+COPY ~%MOD_FOLDER%/cre/AC#PPEL3.cre~ ~override~ // Eldath priest #3: duskwood dell entry
+  SAY NAME1 @12 SAY NAME2 @12
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPEL4.cre~ ~override~ // Eldath priest #4: Alatoasz Berendim, chief in duskwood dell
+  SAY NAME1 @13 SAY NAME2 @13
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
