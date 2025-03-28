@@ -1,2 +1,51 @@
-# Poisonous-pathways-dev
-Poisonous pathways is a quest mod for BG2EE.
+# Poisonous Pathways
+
+![Poisonous Pathways Logo](https://github.com/AciferBG/Poisonous-pathways-dev/blob/main/pics/poison_logo_small_01.png)
+
+**Poisonous Pathways** is a quest mod for *Baldur’s Gate II: Enhanced Edition (BG2EE)* and *Enhanced Edition Trilogy (EET)*. It adds new content to the game after a pivotal moment in the early chapters of the Shadows of Amn storyline.
+
+## Features
+- New quest content continuing after the Renfeld encounter in the Docks District  
+- New areas to explore in Amn and Tethyr 
+- New enemies and custom encounters  
+- Unique magical items  
+- Challenging battles and dialogue-driven progression   
+- Approx. 2–3 hours of gameplay  
+- Compatible with both BG2EE and EET   
+
+**How the mod begins:**  
+The mod is triggered **after delivering Renfeld’s body** in the Docks District of Athkatla. Once this event is completed, a new path will open...
+
+## Installation
+1. Remove any previous version of the mod before installing a new one.  
+2. Extract the contents of the mod archive into your game's main directory (`BG2EE` / `EET`, where the `CHITIN.KEY` file is located).  
+3. After extraction, your game folder should contain:  
+   - A folder named **poisonouspathways**  
+   - A file named **setup-poisonouspathways.exe**  
+4. Run the installer:  
+   - Double-click `setup-poisonouspathways.exe` and follow the on-screen instructions.  
+5. To uninstall or change components:  
+   - Run `setup-poisonouspathways.exe` again.
+
+## Recommended Character Level
+- Level 9+  
+- The mod includes scaling elements that adapt to the player’s level and difficulty settings.
+
+## Language Support  
+This mod is available in **English**. The language will be selected automatically based on your game installation.
+
+## Compatibility  
+Poisonous Pathways is compatible with *BG2EE* and *EET*. It does not alter core game content and should be compatible with most other mods.
+
+---
+
+## License  
+**© 2025 Acifer – All Rights Reserved**  
+This mod and all its contents may not be copied, modified, distributed, or used in any form without explicit permission from the author.
+
+---
+
+## Feedback & Support  
+If you encounter issues or have suggestions, please report them in the appropriate forum thread (link to be added).
+
+
