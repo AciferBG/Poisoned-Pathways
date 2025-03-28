@@ -2,7 +2,11 @@
 
 COPY ~%MOD_FOLDER%/itm/AC#PPARP.itm~         ~override~    // poisoned arrow
   SAY NAME2 @1000
-  SAY DESC @1001
+  SAY DESC  @1001
+  
+COPY ~%MOD_FOLDER%/itm/AC#PPPUB.itm~         ~override~    // purple poisonflower, the root of evil
+  SAY NAME2 @1002
+  SAY DESC  @1003
 
 COPY ~Poisonous_pathways/itm/copy~         ~override~
 
