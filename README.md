@@ -1,8 +1,8 @@
-# Poisonous Pathways
+# Poisoned Pathways
 
-![Poisonous Pathways Logo](https://github.com/AciferBG/Poisonous-pathways-dev/blob/main/pics/poison_logo_small_01.png)
+![Poisoned Pathways Logo](https://github.com/AciferBG/Poisoned-Pathways/blob/main/pics/poison_logo_small_01.png)
 
-**Poisonous Pathways** is a quest mod for *Baldur’s Gate II: Enhanced Edition (BG2EE)* and *Enhanced Edition Trilogy (EET)*. It adds new content to the game after a pivotal moment in the early chapters of the Shadows of Amn storyline.
+**Poisoned Pathways** is a quest mod for *Baldur’s Gate II: Enhanced Edition (BG2EE)* and *Enhanced Edition Trilogy (EET)*. It adds new content to the game after a pivotal moment in the early chapters of the Shadows of Amn storyline.
 
 ## Features
 - New quest content continuing after the Renfeld encounter in the Docks District  
@@ -20,12 +20,12 @@ The mod is triggered **after delivering Renfeld’s body** in the Docks District
 1. Remove any previous version of the mod before installing a new one.  
 2. Extract the contents of the mod archive into your game's main directory (`BG2EE` / `EET`, where the `CHITIN.KEY` file is located).  
 3. After extraction, your game folder should contain:  
-   - A folder named **poisonouspathways**  
-   - A file named **setup-poisonouspathways.exe**  
+   - A folder named **Poisonedpathways**  
+   - A file named **setup-Poisonedpathways.exe**  
 4. Run the installer:  
-   - Double-click `setup-poisonouspathways.exe` and follow the on-screen instructions.  
+   - Double-click `setup-poisonedpathways.exe` and follow the on-screen instructions.  
 5. To uninstall or change components:  
-   - Run `setup-poisonouspathways.exe` again.
+   - Run `setup-poisonedpathways.exe` again.
 
 ## Recommended Character Level
 - Level 9+  
@@ -35,7 +35,7 @@ The mod is triggered **after delivering Renfeld’s body** in the Docks District
 This mod is available in **English**. The language will be selected automatically based on your game installation.
 
 ## Compatibility  
-Poisonous Pathways is compatible with *BG2EE* and *EET*. It does not alter core game content and should be compatible with most other mods.
+Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core game content and should be compatible with most other mods.
 
 ---
 
