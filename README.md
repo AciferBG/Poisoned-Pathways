@@ -2,6 +2,8 @@
 
 ![Poisoned Pathways Logo](https://github.com/AciferBG/Poisoned-Pathways/blob/main/pics/poison_logo_small_01.png)
 
+*Have you ever wondered why Renfeld couldn't be cured? Here's the answer.*
+
 **Poisoned Pathways** is a quest mod for *Baldur’s Gate II: Enhanced Edition (BG2EE)* and *Enhanced Edition Trilogy (EET)*. It adds new content to the game after a pivotal moment in the early chapters of the Shadows of Amn storyline.
 
 ## Features
@@ -20,8 +22,8 @@ The mod is triggered **after delivering Renfeld’s body** in the Docks District
 1. Remove any previous version of the mod before installing a new one.  
 2. Extract the contents of the mod archive into your game's main directory (`BG2EE` / `EET`, where the `CHITIN.KEY` file is located).  
 3. After extraction, your game folder should contain:  
-   - A folder named **Poisonedpathways**  
-   - A file named **setup-Poisonedpathways.exe**  
+   - A folder named **poisonedpathways**  
+   - A file named **setup-poisonedpathways.exe**  
 4. Run the installer:  
    - Double-click `setup-poisonedpathways.exe` and follow the on-screen instructions.  
 5. To uninstall or change components:  
