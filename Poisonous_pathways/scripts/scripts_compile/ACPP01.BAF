@@ -1,0 +1,16 @@
+IF
+    Global("EnteredArea","ACPP01",0)  // City Gates
+THEN
+    RESPONSE #100
+           DisplayString(Myself,@2002)
+        SetGlobal("EnteredArea","ACPP01",1)  // City Gates
+END
+
+IF
+    !GlobalTimerNotExpired("NoFightTimer","ACPP01")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPNF",Player1)  // No such index
+        SetGlobalTimer("NoFightTimer","ACPP01",14)
+END
+

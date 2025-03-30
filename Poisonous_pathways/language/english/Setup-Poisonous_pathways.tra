@@ -4,6 +4,10 @@
 @11 = ~Delgorth~
 @12 = ~Priest of Eldath~
 @13 = ~Alatoasz Berendim~
+@14 = ~Peacefang~
+@15 = ~Quietbrook~
+@16 = ~Sharga Gentleswarm~
+@17 = ~Sylvae Streamveil~
 
 // spl files
 @900 = ~Analyze Poison~
@@ -13,3 +17,10 @@
 @1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift präpariert, welches sich nicht auf normalem Wege beseitigen lässt. Ihr sollt den Pfeil zu Alatoasz Berendim nach Duskwood Dell, dem heiligen Ort Eldaths, bringen, damit das Gift dort untersucht werden kann und man einen Hinweis auf den Erzeuger findet.~
 @1002 = ~Vesper Vein~
 @1003 = ~The vesper vein grows only in cursed groves. It is admired by evil alchemists and feared by druids for its lethal beauty. You need to bring one of these flowers to Alatoasz Berendim in Duskwood Dell.~
+@1004 = ~Fungal key~
+@1005 = ~Dieser Schlüssel ist mit allerlei Svchmutz und Sporen bewachsen und scheint eine besondere Tür zu öffnen.~
+
+// script strings
+@2000 = ~Duskwood Dell~
+@2001 = ~Eldath, goddess of peace and calm waters~
+@2002 = ~An diesem Ort überkommt Euch ein Gefühl großen Friedens. Ich spürt, dass Ihr hier niemals imstande sein werdet, eine Waffe zu schwingen.~
