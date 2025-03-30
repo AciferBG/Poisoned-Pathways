@@ -30,6 +30,9 @@ COPY ~%MOD_FOLDER%/cre/AC#PPON2.cre~ ~override~ // Ondonti orc#1: Sharga Gentles
 COPY ~%MOD_FOLDER%/cre/AC#PPDR1.cre~ ~override~ // Dryad in area acpp06
   SAY NAME1 @17 SAY NAME2 @17
   
+COPY ~%MOD_FOLDER%/cre/AC#PPZOT.cre~ ~override~ // zombie treant
+  SAY NAME1 @18 SAY NAME2 @18
+
 COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~

@@ -74,7 +74,7 @@ INCLUDE ~Poisonous_pathways/lib/patches.tpa~
 //
 ///////////////////////////////////////////////////////////////////////
 
-//INCLUDE ~Poisonous_pathways/lib/Poisonous_pathways-animations.tpa~
+INCLUDE ~Poisonous_pathways/lib/Poisonous_pathways-animations.tpa~
 
 ///////////////////////////////////////////////////////////////////////
 // 2DA files

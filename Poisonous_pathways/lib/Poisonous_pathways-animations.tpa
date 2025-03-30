@@ -1,0 +1,3 @@
+ 
+  // Dark treant animation - copy bams only
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Treant_IWD2~         ~override~
