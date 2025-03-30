@@ -14,14 +14,14 @@
 @900 = ~Analyze Poison~
 
 // itm files
-@1000 = ~Vergifteter Pfeil~
-@1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift präpariert, welches sich nicht auf normalem Wege beseitigen lässt. Ihr sollt den Pfeil zu Alatoasz Berendim nach Duskwood Dell, dem heiligen Ort Eldaths, bringen, damit das Gift dort untersucht werden kann und man einen Hinweis auf den Erzeuger findet.~
+@1000 = ~Poisoned Arrow~
+@1001 = ~This arrow is coated with a dangerous poison that cannot be removed by ordinary means. You are to bring the arrow to Alatoasz Berendim in Duskwood Dell, Eldath’s sacred sanctuary, so that the poison may be studied and its origin traced.~
 @1002 = ~Vesper Vein~
-@1003 = ~The vesper vein grows only in cursed groves. It is admired by evil alchemists and feared by druids for its lethal beauty. You need to bring one of these flowers to Alatoasz Berendim in Duskwood Dell.~
-@1004 = ~Fungal key~
-@1005 = ~Dieser Schlüssel ist mit allerlei Svchmutz und Sporen bewachsen und scheint eine besondere Tür zu öffnen.~
+@1003 = ~The vesper vein grows only in cursed groves. Admired by evil alchemists and feared by druids, its beauty is matched only by its lethality. You must deliver one of these blossoms to Alatoasz Berendim in Duskwood Dell.~
+@1004 = ~Fungal Key~
+@1005 = ~This key is overgrown with grime and strange spores. It appears to open a very particular kind of door.~
 
 // script strings
 @2000 = ~Duskwood Dell~
 @2001 = ~Eldath, goddess of peace and calm waters~
-@2002 = ~An diesem Ort überkommt Euch ein Gefühl großen Friedens. Ich spürt, dass Ihr hier niemals imstande sein werdet, eine Waffe zu schwingen.~
+@2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~

@@ -2,10 +2,10 @@ IF
     True()
 THEN
     RESPONSE #100
-        CutSceneId("AC#PPEL4")  // Priest of Eldath
-        ForceSpellRES("AC#PPS1",Myself)  // Know Alignment
+        CutSceneId("AC#PPEL4")  // Alatoasz Berendim
+        ForceSpellRES("AC#PPS1",Myself)  // Analyze Poison
         PlaySound("CAS_M07")
-        Wait(1)
+        Wait(2)
         StartDialogueNoSet(Player1)
 END
 

@@ -1,0 +1,9 @@
+IF
+    GlobalTimerExpired("AC#PP_Investigate","GLOBAL")
+    Global("AC#PPSpellCheckPoison","GLOBAL",2)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPEL4",[260.242],S)  // Alatoasz Berendim
+        SetGlobal("AC#PPSpellCheckPoison","GLOBAL",3)
+END
+

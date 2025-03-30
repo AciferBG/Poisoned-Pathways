@@ -1,9 +1,9 @@
 IF
-    Global("EnteredArea","ACPP01",0)  // City Gates
+    Global("EnteredArea","ACPP01",0)  
 THEN
     RESPONSE #100
-           DisplayString(Myself,@2002)
-        SetGlobal("EnteredArea","ACPP01",1)  // City Gates
+        DisplayString(Myself,@2002)
+        SetGlobal("EnteredArea","ACPP01",1)  
 END
 
 IF
