@@ -46,7 +46,7 @@ IF~~THEN EXTERN AC#PPEL4 poison_myth_unnhoyr
 	IF~~THEN REPLY ~Never heard of that place.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_02
 
 		CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_02
-		~I’m not surprised. It is one of the long-lost elven cities of old Keltormir, which once encompassed the Tethir and Mir forests.~
+		~It is one of the long-lost elven cities of old Keltormir, which once encompassed the Tethir and Mir forests.~
 		END
 		IF~~THEN EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 
