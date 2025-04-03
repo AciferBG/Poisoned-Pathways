@@ -1,0 +1,53 @@
+IF
+ !GlobalTimerNotExpired("AntimagicTimer","ACPP70")
+THEN
+    RESPONSE #100
+        ApplySpell(Player1,DEAD_MAGIC_AREA)  // SPIN646.SPL 
+        SetGlobalTimer("AntimagicTimer","ACPP70",14)
+END
+
+IF
+Exists(Player1)
+Global("AC#PPFinalBossPrepare","GLOBAL",0)
+THEN
+RESPONSE #100
+StartCutScene("AC#PPCT6")
+END
+
+IF
+Global("AC#PPFinalBossPrepare","GLOBAL",2)
+THEN
+RESPONSE #100
+StartCutSceneMode()
+Wait(1)
+ScreenShake([80.80],8)
+Wait(2)
+CreateVisualEffectObject("SPFLESHS","AC#PPTA2")
+Wait(1)
+CreateVisualEffect("SPDEATH3",[610.550])
+CreateVisualEffect("SPDEATH3",[810.490])
+CreateVisualEffect("SPDEATH3",[890.600])
+CreateVisualEffect("SPDEATH3",[680.660])
+Wait(2)
+CreateCreature("AC#PPPX",[610.550],0)
+CreateCreature("AC#PPPX",[810.490],0)
+CreateCreature("AC#PPPX",[890.600],0)
+CreateCreature("AC#PPPX",[680.660],0)
+Wait(1)
+CreateVisualEffect("SPANISUM",[350.500])
+CreateVisualEffect("SPANISUM",[520.370])
+CreateVisualEffect("SPANISUM",[700.420])
+CreateVisualEffect("SPANISUM",[950.330])
+CreateVisualEffect("SPANISUM",[1100.420])
+CreateVisualEffect("SPANISUM",[750.200])
+Wait(2)
+CreateCreature("GIBMUT01",[350.500],0)
+CreateCreature("GIBMUT01",[520.370],0)
+CreateCreature("GIBMUT01",[700.420],0)
+CreateCreature("GIBMUT01",[950.330],0)
+CreateCreature("GIBMUT01",[1100.420],0)
+CreateCreature("GIBMUT01",[750.200],0)
+Wait(2)
+SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
+EndCutSceneMode()
+END

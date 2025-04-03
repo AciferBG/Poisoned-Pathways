@@ -35,4 +35,36 @@ COPY ~%MOD_FOLDER%/cre/AC#PPZOT.cre~ ~override~ // zombie treant
 
 COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30
 
-COPY ~%MOD_FOLDER%/cre/copy~         ~override~
+COPY ~%MOD_FOLDER%/cre/AC#PPWOW.cre~ ~override~ // Will-o'-wisp
+  SAY NAME1 ~Will-o'-wisp~ SAY NAME2 ~Will-o'-wisp~
+  
+  COPY ~%MOD_FOLDER%/cre/AC#PPBES.cre~ ~override~ // Erlavanas Myth'yalv
+  SAY NAME1 ~Erlavanas Myth'yalv~ SAY NAME2 ~Erlavanas Myth'yalv~
+
+COPY ~%MOD_FOLDER%/cre/AC#PPPX.cre~ ~override~ // Will-o'-pox
+  SAY NAME1 ~Will-o'-pox~ SAY NAME2 ~Will-o'-pox~
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#PP_WILLOPOX~))
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPOR2.cre~ ~override~ // Wadal Hrun
+  SAY NAME1 ~Wadal Hrun~ SAY NAME2 ~Wadal Hrun~
+
+COPY ~%MOD_FOLDER%/cre/AC#PPBOY.cre~ ~override~ // Henry (Boy)
+  SAY NAME1 ~Henry~ SAY NAME2 ~Henry~
+
+COPY ~%MOD_FOLDER%/cre/AC#PPSIR.cre~ ~override~ // Na'arla (Sirine)
+  SAY NAME1 ~Na'arla~ SAY NAME2 ~Ná'arla~
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPMAN.cre~ ~override~ // Mannartv (Man)
+  SAY NAME1 ~Mannartv~ SAY NAME2 ~Mannartv~
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPMON.cre~ ~override~ // Montrassa (Monk)
+  SAY NAME1 ~Montrassa~ SAY NAME2 ~Montrassa~
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPPOI.cre~ ~override~ // Poison Manifestation
+  SAY NAME1 ~Poison Manifestation~ SAY NAME2 ~Poison Manifestation~
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPCHA.cre~ ~override~ // Char
+  SAY NAME1 ~Char~ SAY NAME2 ~Char~
+
+COPY ~%MOD_FOLDER%/cre/AC#PPCAA.cre~ ~override~ // Aunt Pesca
+  SAY NAME1 ~Aunt Pesca~ SAY NAME2 ~Aunt Pesca~

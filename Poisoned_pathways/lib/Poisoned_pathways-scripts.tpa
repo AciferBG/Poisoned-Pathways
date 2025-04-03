@@ -4,9 +4,15 @@
 COMPILE ~%MOD_FOLDER%/scripts/scripts_compile~
 
 // Compiling scripts that contain new music
+COMPILE ~%MOD_FOLDER%/scripts/ACPP01.baf~  EVAL
+COMPILE ~%MOD_FOLDER%/scripts/ACPP70.baf~  EVAL
+
+// Compiling scripts that contain new music
 //COMPILE ~%MOD_FOLDER%/scripts/ACIL10.baf~  EVAL
 
 EXTEND_TOP ~ar0408.bcs~ ~%MOD_FOLDER%/scripts/_ar0408.baf~ // plot start: 2nd encounter of eldathyn cleric in temple of ilmater in the slums
+EXTEND_TOP ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_ar1000.baf~ // plot: Boy and the Aunt
+EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334.baf~ // Cromwell
 
 EXTEND_TOP ~ar0020.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 EXTEND_TOP ~ar0300.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
@@ -16,4 +22,6 @@ EXTEND_TOP ~ar0700.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: fi
 EXTEND_TOP ~ar0800.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 EXTEND_TOP ~ar0900.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 EXTEND_TOP ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
+
+EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/scripts/baldur.baf~
 

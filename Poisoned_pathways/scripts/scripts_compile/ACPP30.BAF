@@ -1,0 +1,7 @@
+IF
+Global("AC#PPHideGlade","GLOBAL",0)
+THEN
+RESPONSE #100
+HideAreaOnMap("ACPP30") 
+SetGlobal("AC#PPHideGlade","GLOBAL",1)
+END

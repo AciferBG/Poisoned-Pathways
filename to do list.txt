@@ -1,0 +1,18 @@
+1. Animation after Ilmater's cleric's blessing does not disappear. Actually, both blessings could get a visual boost, they look too simple.
+2. Summoning the poison manifestation: it looks kinda poor, I think it would be cool if you could apply some of you visual magic. I wonder if that enemy should also have some unique abilities, now it just attacks and it's attacks apply poison. 
+3. Summoning the poison manifestation: if we play a non-evil cleric, paladin or druid, we can also bless the flower and variable is set, but it has no effect on the fight. Perhaps if we also blessed it, the demon should be summoned slightly injured and player should be informed it's a result of this blessing?
+4. Some sidequest dialogues could be refined a bit. 
+5. When in Myth U area, sometimes for a moment I cannot shoot from bow at gibberlings? worth trying is it's some sort of local bug.
+
+* * *
+
+Ideas that weren't implemented - Duskwell Dell: 
+- there should be a candle merchant: as we once talked. He/She should sell candles that may be used to cast a spell: as here https://forgottenrealms.fandom.com/wiki/Candle_magic -- and there should also be a scroll that allows you to learn "Create Candle" spell (4th level?) -- when a candle is created such way, it must be used withing 24h or it will be destroyed (can be achieved the same way as good berries are summoned) (maybe located in the central tree?)
+- man near the central tree entrance: he is a poet and he can tell you some of his poems? Maybe some option with someone with a high charisma, so they could practice poetry together?
+- there should be shop: perhaps the dryad should sell potions? The orc Shaman should be the candle merchant? 
+- is the middle tree a future temple? It could be a nice idea to add it there
+- i think there should be someone to talk to on the balcony, that one you can enter through the door next to orc shaman (perhaps some woman paladin saying something about how they once took part in a Greengrass celebrations? https://forgottenrealms.fandom.com/wiki/Greengrass)
+- the inn you made really needs to be added, it looks so cool!
+
+Ideas - Myth Unnohyr: 
+- 2 new towers that can be explored: one having a chest and maybe some new item inside, second should have a banshee named "Razvalya" that is searching for a head of her beloved one we can either kill her, or bring her the head (visually there should be hair tangled around the skull, we can ask about it, and we'll learn that he died in the night, as her hear tangled around his neck and he couldn't breath)

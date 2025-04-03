@@ -1,0 +1,8 @@
+IF
+Global("AC#PPFlowerDelivery","GLOBAL",1)
+Global("AC#PP_SummonFlowerKid_A","AR1000",0)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPCAA",[3160.1880],0)
+SetGlobal("AC#PP_SummonFlowerKid_A","AR1000",1)
+END

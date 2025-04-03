@@ -1,0 +1,30 @@
+IF
+See([PC])
+Global("AC#PPTowerGuardian","GLOBAL",0)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+See([PC])
+Global("AC#PPTowerGuardian","GLOBAL",4)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+HPLT(Myself,10)
+Global("AC#PPTowerGuardian","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPTowerGuardian","GLOBAL",2)
+END
+
+IF
+Global("AC#PPTowerGuardian","GLOBAL",2)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END

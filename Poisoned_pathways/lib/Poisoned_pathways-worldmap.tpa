@@ -7,20 +7,26 @@
 //END ELSE 
 ACTION_IF GAME_IS ~eet bg2ee~ BEGIN
   INCLUDE ~%MOD_FOLDER%/Worldmap/add_map_icons_ee.tpa~
-  LAF ADD_MAP_ICONS_EE STR_VAR path_to_icons = EVAL ~%MOD_FOLDER%/Worldmap/ee/icon.bam~ patch_to_pvrz = EVAL ~%MOD_FOLDER%/Worldmap/ee~ RET new_icon_index END
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY remapped_icons BEGIN 10 => ~%new_icon_index%~ END
-  ACTION_PHP_EACH remapped_icons AS old => new BEGIN
-	PRINT ~%old% => %new%~
+  LAF ADD_MAP_ICONS_EE STR_VAR path_to_icons = EVAL ~%MOD_FOLDER%/Worldmap/ee/MythU/icon.bam~ patch_to_pvrz = EVAL ~%MOD_FOLDER%/Worldmap/ee/MythU~ RET icon = new_icon_index END
+  LAF ADD_MAP_ICONS_EE STR_VAR path_to_icons = EVAL ~%MOD_FOLDER%/Worldmap/ee/Duskwood/icon2.bam~ patch_to_pvrz = EVAL ~%MOD_FOLDER%/Worldmap/ee/Duskwood~ RET icon2 = new_icon_index END
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY remapped_icons BEGIN 18 => ~%icon2%~ END
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY remapped_icons BEGIN 10 => ~%icon%~ END
+  //ACTION_PHP_EACH remapped_icons AS old => new BEGIN
+	//PRINT ~%old% => %new%~
+	OUTER_TEXT_SPRINT areas_tbl ~%MOD_FOLDER%/Worldmap/areas_bgee.tbl~
+  OUTER_TEXT_SPRINT links_tbl ~%MOD_FOLDER%/Worldmap/links.tbl~
   END
 
-  //STRING_SET 23084 @4000300 //Traveling Hours -> Hours
-  //STRING_SET 5684 @4000301 //Destination Unreachable -> Unreachable
-END 
+
+/* 
+
 ACTION_IF GAME_IS ~bg2 tob bgt~ BEGIN //bg2, bgt
   INCLUDE ~%MOD_FOLDER%/Worldmap/add_map_icons.tpa~
   LAF ADD_MAP_ICONS STR_VAR path_to_icons = EVAL ~%MOD_FOLDER%/Worldmap/bg/icon.bam~ RET new_icon_index END
   ACTION_DEFINE_ASSOCIATIVE_ARRAY remapped_icons BEGIN 10 => ~%new_icon_index%~ END
 END
+
+*/
 
 // patch WMP using TBL files
 INCLUDE ~%MOD_FOLDER%/Worldmap/add_worldmap_tbl.tpa~

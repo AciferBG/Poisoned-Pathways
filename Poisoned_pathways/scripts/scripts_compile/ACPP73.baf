@@ -1,0 +1,29 @@
+IF
+Global("AC#PPTowerGuardian","GLOBAL",3)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPOR2",[700.400],0)
+SetGlobal("AC#PPTowerGuardian","GLOBAL",4)
+END
+
+IF
+    OR(2)
+      TimeOfDay(DUSK)
+      TimeOfDay(NIGHT)
+    !GlobalTimerNotExpired("AntimagicTimer","ACPP73")
+THEN
+    RESPONSE #100
+        ApplySpell(Player1,DEAD_MAGIC_AREA)  // SPIN646.SPL 
+        SetGlobalTimer("AntimagicTimer","ACPP73",14)
+END
+
+IF
+    OR(2)
+      TimeOfDay(MORNING)
+      TimeOfDay(DAY)
+    !GlobalTimerNotExpired("WildMagicTimer","ACPP73")
+THEN
+    RESPONSE #100
+        ApplySpell(Player1,WILD_MAGIC_AREA)  // SPIN645.SPL
+        SetGlobalTimer("WildMagicTimer","ACPP73",14)
+END

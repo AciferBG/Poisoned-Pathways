@@ -1,0 +1,28 @@
+IF
+    Global("EnteredArea","ACPP01",0)  
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2002)
+        SetMusic(NIGHT,%AC#PP01%)
+        SetMusic(DAY,%AC#PP01%)
+        SetGlobal("EnteredArea","ACPP01",1)  
+END
+
+IF
+    !GlobalTimerNotExpired("NoFightTimer","ACPP01")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPNF",Player1)  // No such index
+        SetGlobalTimer("NoFightTimer","ACPP01",14)
+END
+
+IF
+Global("AC#PP_MythUnnohyr","GLOBAL",7)
+Global("AC#PP_SummonFlowerKid","ACPP01",0)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPCHA",[365.800],12)
+SetGlobal("AC#PP_SummonFlowerKid","ACPP01",1)
+END
+
+

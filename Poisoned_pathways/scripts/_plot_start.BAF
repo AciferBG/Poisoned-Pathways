@@ -1,16 +1,8 @@
 IF
     PartyHasItem("MISC5F")  // Renfeld's Body
+    GlobalTimerExpired("RenfeldDeath","GLOBAL")
     Global("AC#PP_PlotStart","GLOBAL",0)
     AreaType(OUTDOOR)
-    OR(8)
-        AreaCheck("AR0020")  // City Gates
-        AreaCheck("AR0300")  // The Docks
-        AreaCheck("AR0400")  // Slums
-        AreaCheck("AR0500")  // Bridge District
-        AreaCheck("AR0700")  // Waukeen's Promenade
-        AreaCheck("AR0800")  // Graveyard
-        AreaCheck("AR0900")  // Temple District
-        AreaCheck("AR1000")  // Government District
     InMyArea(Player1)
 THEN
     RESPONSE #100
@@ -19,11 +11,14 @@ END
 
 IF
     !PartyHasItem("MISC5F")  // Renfeld's Body
+    OR(2)
+     GlobalGT("LyrosSpawn","GLOBAL",0)
+     GlobalTimerExpired("RenfeldDeath","GLOBAL")
     Global("AC#PP_PlotStart","GLOBAL",1)
     AreaType(OUTDOOR)
-    OR(8)
+    !AreaCheck("AR0300")  // The Docks
+    OR(7)
         AreaCheck("AR0020")  // City Gates
-        AreaCheck("AR0300")  // The Docks
         AreaCheck("AR0400")  // Slums
         AreaCheck("AR0500")  // Bridge District
         AreaCheck("AR0700")  // Waukeen's Promenade

@@ -7,3 +7,11 @@ THEN
         SetGlobal("AC#PPSpellCheckPoison","GLOBAL",3)
 END
 
+IF
+Global("AC#PPSymbolQuest","GLOBAL",2)
+Global("AC#PPSymbolQuest_C","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPMON",[200.350],S) 
+SetGlobal("AC#PPSymbolQuest_C","GLOBAL",1)
+END

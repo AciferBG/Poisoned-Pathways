@@ -1,8 +1,0 @@
-IF
-    !GlobalTimerNotExpired("AntimagicTimer","ACPP70")
-THEN
-    RESPONSE #100
-        ApplySpell(Player1,DEAD_MAGIC_AREA)  // SPIN646.SPL (No such index)
-        SetGlobalTimer("AntimagicTimer","ACPP70",14)
-END
-

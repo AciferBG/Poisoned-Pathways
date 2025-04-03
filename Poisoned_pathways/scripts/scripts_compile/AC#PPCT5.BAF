@@ -1,0 +1,17 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        StartCutSceneMode()
+        ClearAllActions()
+        Wait(1)
+        CreateVisualEffectObject("SHAREAB","AC#PPOR2")
+        Wait(1)
+        ActionOverride("AC#PPOR2",DestroySelf())
+        SmallWait(2)
+        MultiPlayerSync()
+        DisplayStringHead(Player1,~(The orc is nowehre to be seen, but he couldn't have left Myth Unnohyr, he was too wounded to do that.)~)
+        Wait(1)
+        EndCutSceneMode()
+END

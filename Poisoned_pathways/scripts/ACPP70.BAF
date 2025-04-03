@@ -1,0 +1,75 @@
+IF
+	Global("SetMusic","ACPP70",0)
+THEN
+RESPONSE #100
+	SetMusic(NIGHT,%AC#PP70%)
+	SetMusic(DAY,%AC#PP70%)
+	SetGlobal("SetMusic","ACPP70",1)
+	Continue()
+END
+
+IF
+!Dead("AC#PPTA2")
+PartyHasItem("AC#PPBR")
+Global("AC#PPOpenTowerNow","ACPP70",0)
+THEN
+RESPONSE #100
+TriggerActivation("TrACPP71",TRUE) 
+AmbientActivate("AC#PPPP",FALSE)
+DisplayStringHead(Player1,~(You feel the pull of the berry-shaped Ioun stone towards the tower. It may be a sign you are now able to enter its walls.)~)
+SetGlobal("AC#PPOpenTowerNow","ACPP70",1)
+END
+
+IF
+
+!PartyHasItem("AC#PPBR")
+Global("AC#PPOpenTowerNow","ACPP70",1)
+THEN
+RESPONSE #100
+TriggerActivation("TrACPP71",FALSE) 
+AmbientActivate("AC#PPPP",TRUE)
+DisplayStringHead(Player1,~(You do not have the berry-shaped Ioun stone. You can no longer enter the tower. Without the stone, the barrier is erected.)~)
+SetGlobal("AC#PPOpenTowerNow","ACPP70",0)
+END
+
+IF
+Dead("AC#PPTA2")
+OR(2)
+ Global("AC#PPOpenTowerNow","ACPP70",0)
+ Global("AC#PPOpenTowerNow","ACPP70",1)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPOpenTowerNow","ACPP70",2)
+TriggerActivation("TrACPP71",TRUE) 
+AmbientActivate("AC#PPPP",FALSE)
+END
+
+IF
+Global("AC#PPTowerGuardianA","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPOR2",[3300.1975],1)
+SetGlobal("AC#PPTowerGuardianA","GLOBAL",1)
+END
+
+IF
+    OR(2)
+      TimeOfDay(DUSK)
+      TimeOfDay(NIGHT)
+    !GlobalTimerNotExpired("AntimagicTimer","ACPP70")
+THEN
+    RESPONSE #100
+        ApplySpell(Player1,DEAD_MAGIC_AREA)  // SPIN646.SPL 
+        SetGlobalTimer("AntimagicTimer","ACPP70",14)
+END
+
+IF
+    OR(2)
+      TimeOfDay(MORNING)
+      TimeOfDay(DAY)
+    !GlobalTimerNotExpired("WildMagicTimer","ACPP70")
+THEN
+    RESPONSE #100
+        ApplySpell(Player1,WILD_MAGIC_AREA)  // SPIN645.SPL
+        SetGlobalTimer("WildMagicTimer","ACPP70",14)
+END

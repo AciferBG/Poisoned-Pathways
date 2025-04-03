@@ -1,0 +1,21 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        StartCutSceneMode()
+        ClearAllActions()
+        Wait(1)
+        MoveViewPoint([710.360],VERY_FAST)
+        MoveToPoint([710.310])
+        Wait(1)
+        ActionOverride(Player2,MoveToPoint([610.280]))
+        ActionOverride(Player3,MoveToPoint([640.280]))
+        ActionOverride(Player4,MoveToPoint([670.280]))
+        ActionOverride(Player5,MoveToPoint([700.280]))
+        ActionOverride(Player6,MoveToPoint([730.280]))
+        Wait(3)
+        SetGlobal("AC#PPFinalBossPrepare","GLOBAL",1)
+        EndCutSceneMode()
+        ActionOverride("AC#PPTA2",StartDialogueNoSet(Player1))
+END
