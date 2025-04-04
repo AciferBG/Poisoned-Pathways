@@ -267,13 +267,13 @@ EXIT
 BEGIN AC#PPMON
 
 CHAIN IF ~OR(2) Global("AC#PPSymbolQuest","GLOBAL",0) Global("AC#PPSymbolQuest","GLOBAL",1)~ THEN AC#PPMON 01.00
-~Eldath protect you my friend...~
+~Eldath watch over you, my friend… though my soul drifts heavy, like water burdened by storm.~
 END
 IF~Global("AC#PPSymbolQuest","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I remember you have these problems with making the emblem of Eldath. I think you deserve this. Here. I got it for you.~ EXTERN AC#PPMON 01.03
 IF~~THEN REPLY ~You seem somewhat sad. Is something wrong?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
 IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
-IF~~THEN REPLY ~Mhm. Whatever. I need to go.~ EXIT
-IF~~THEN REPLY ~Mhm. Have a wonderful day, my friend.~ EXIT  
+IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXIT
+IF~~THEN REPLY ~I hope your heart finds calm soon. Farewell.~ EXIT  
 
 CHAIN AC#PPMON 01.01
 ~It's just... Well, I've been here for month, and other brothers and sisters, and all the visitors are very nice. I believe this is the place where I should be.~
@@ -323,6 +323,42 @@ CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",0)~ THEN AC#PPSIR 01.00
 ~Argh!!!~
 END
 IF~~THEN REPLY ~Well, it looks like someone's angry.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
+IF~~THEN REPLY ~You’re the only one in this place who does not show harmony.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
+IF~~THEN REPLY ~I think I'll leave you be.~ EXTERN AC#PPSIR bye
+
+CHAIN AC#PPSIR 01.01
+~Of course I’m angry! When all songs of the world turn to screams, how could I not be? The Realms shudder with war and madness, as if Toril itself has gone mad.~
+==AC#PPSIR ~I came here after my kin clashed with pirates. I saw death... blood... sorrow. Far too much. And now it burns in me—with every breath.~
+==AC#PPSIR ~Sometimes I just want to draw another arrow and end it all—to force the world into peace, if that’s what it takes.~
+==AC#PPSIR ~But I sought peace, not vengeance. So when Eldath’s voice reached me—gentle as waves upon a sleeping shore—I thought I could let the fury sink. But it clings to me still, like seaweed around the heart.~
+END
+IF~~THEN REPLY ~I'm really sorry to hear that.~ EXTERN AC#PPSIR 01.02
+IF~~THEN REPLY ~I didn’t know Eldath’s call reached voices like yours.~ EXTERN AC#PPSIR eldath_siren
+IF~~THEN REPLY ~I don’t think I care about this. I think I’ll just go.~ EXTERN AC#PPSIR 01.03
+
+	CHAIN AC#PPSIR eldath_siren
+	~Surprised? So was I. But even storm-bound hearts crave calm. And hers was the only voice that didn’t ask for blood.~
+	END
+	IF~~THEN REPLY ~Interesting.~ EXTERN AC#PPSIR 01.02
+	IF~~THEN REPLY ~I don’t think I care about this. I think I’ll just go.~ EXTERN AC#PPSIR 01.03
+
+CHAIN AC#PPSIR 01.02
+~My heart mourns, truly it does... but the fury howls within me like a rising tide.~
+DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
+
+CHAIN AC#PPSIR 01.03
+~Then go. Leave. The sooner you're gone, the quieter it gets.~
+DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
+
+CHAIN AC#PPSIR bye
+~Then go. Leave. The sooner you're gone, the quieter it gets.~
+EXIT
+
+/*
+CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",0)~ THEN AC#PPSIR 01.00
+~Argh!!!~
+END
+IF~~THEN REPLY ~Well, it looks like someone's angry.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
 IF~~THEN REPLY ~I... I think I'll leave you be.~ EXIT
 
 CHAIN AC#PPSIR 01.01
@@ -341,6 +377,7 @@ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
 CHAIN AC#PPSIR 01.03
 ~Go then. Leave. The sooner, the better.~
 DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
+*/
 
 //2nd 
 

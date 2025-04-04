@@ -2,7 +2,7 @@
 BACKUP ~Poisoned_pathways/backup~
 AUTHOR ~Acifer~
 //README ~Poisoned_pathways/readme.Poisoned_pathways.%LANGUAGE%.html~ ~readme.Poisoned_pathways.english.html~
-VERSION ~BETA1~
+VERSION ~BETA2~
 
 ALWAYS
 
@@ -53,7 +53,7 @@ LANGUAGE ~English~
          ~Poisoned_pathways/language/english/Setup-Poisoned_pathways.tra~
          ~Poisoned_pathways/language/english/Poisoned_pathways_Journal.tra~
 
-BEGIN ~Poisonous pathways~
+BEGIN ~Poisoned pathways~
 
 REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~ && FILE_EXISTS ~engine.lua~) ~Requires BG2:EE or EET patched to 2.0 or higher.~
 

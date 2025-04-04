@@ -23,9 +23,9 @@ COPY ~%MOD_FOLDER%/itm/AC#PPPX.itm~         ~override~    // Will-o'-pox's attac
 COPY ~%MOD_FOLDER%/itm/AC#PPAM.itm~         ~override~    // Amulet
   SAY NAME1 ~Necklace~
   SAY NAME2 ~Alatoasz Berendim's Gold Necklace~
-  SAY DESC  ~This necklace was enchanted by Alatoasz Berendim. In the process, he used his own life force. He sacreficed it to make sure <CHARNAME> and those <PRO_HESHE> decide to take with <PRO_HIMHER> may stand a chance during the fight with a powerful priest of Talona.
+  SAY DESC  ~This necklace was enchanted by Alatoasz Berendim, High Priest of Eldath. To empower it, he offered a portion of his own life force—a sacrifice made so that <CHARNAME> and those <PRO_HESHE> chooses to bring may stand a chance against a powerful priest of Talona.
 
-It may be even able to become a energy source used by a spellcaster to cast their spells when in a dead magic zone.
+It is said that the amulet may serve as a conduit for arcane power, allowing a spellcaster to draw upon its energy to cast spells, even within the silence of a dead magic zone.
 
 STATISTICS:
 

@@ -1,4 +1,4 @@
- 
+
   // Dark treant animation - copy bams only
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Treant_IWD2~         ~override~
   
@@ -7,6 +7,19 @@
 
   // Animation - green abishai
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/GAbi_BGEE~         ~override~
+  
+  // Acifer's Zombie treant animation
+  LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7f35 slotMax = slotMin + 0xff RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% AC#ZOMBIE_TREANT~ UNLESS ~AC#ZOMBIE_TREANT~
+  CLEAR_IDS_MAP
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Zombie_Treant/exxx.ini~ ~override/%hexNumber%.ini~
+  ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Zombie_Treant~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////

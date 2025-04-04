@@ -3,7 +3,7 @@ IF
 THEN
     RESPONSE #100
         CutSceneId(Player1)
-        StartCutSceneMode()
+        //StartCutSceneMode()
         ClearAllActions()
         Wait(1)
         CreateVisualEffectObject("SHAREAB","AC#PPOR2")

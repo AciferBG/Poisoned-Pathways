@@ -32,6 +32,7 @@ COPY ~%MOD_FOLDER%/cre/AC#PPDR1.cre~ ~override~ // Dryad in area acpp06
   
 COPY ~%MOD_FOLDER%/cre/AC#PPZOT.cre~ ~override~ // zombie treant
   SAY NAME1 @18 SAY NAME2 @18
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#ZOMBIE_TREANT~))
 
 COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30
 

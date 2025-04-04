@@ -136,26 +136,28 @@ IF~~THEN REPLY ~Gladly—if the pay is right.~ EXTERN AC#PPEL1 job
 IF~~THEN REPLY ~Find someone else for your troubles.~ EXTERN AC#PPEL1 bye
 
 CHAIN IF ~~ THEN AC#PPEL1 job
-~Firstly, let me thank you for this moment of your valuable time. I am Merethan, devoted servant of Eldath, the Mother Guardian of Groves. Not long ago, you've encountered a man, poor Renfeld if I heard the name right. He had been poisoned, am I wrong? Let me be clear, I have nothing to do with that cruel act—I investigate this matter solely on behalf of the Church of Eldath. This poison and it's properties troubles me greatly, as it is not the first time someone has been targeted with a toxin for which no magical cure exists. That's what I think it was. A powerful thing, incurable by normal means.~
+~Firstly, let me thank you for this moment of your valuable time. I am Merethan, devoted servant of Eldath, the Mother Guardian of Groves.~ 
+=
+~Not long ago, you've encountered a man, poor Renfeld if I heard the name right. He had been poisoned, am I wrong? Let me be clear, I have nothing to do with that cruel act—I investigate this matter solely on behalf of the Church of Eldath. This poison and it's properties troubles me greatly, as it is not the first time someone has been targeted with a toxin for which no magical cure exists. That's what I think it was. A powerful thing, incurable by normal means.~
 == NaliaJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN  ~We cannot let people suffer because of this... thing!~
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Incurable? How is that even possible? I think—no, I know there is a cure. There always is.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~It sounds like a crime against life itself. It's not as cutting down a tree, but corruption of all the water that runs under a forest.~
 == MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~If what this man is saying is truth, then we cannot ignore presence of such vile threat, <CHARNAME>.~
-== MinscJ  IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN  ~Oh, now Minsc wishes Dynaheir was here—she had sucha a strong brain! She knew how to defeat evil with all that thinking!~
-== AC#PPEL1 ~It's as if this poison—it feels like—like it had a will of its own and knew how to enforce that will on others.~
+== MinscJ  IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN  ~Oh, now Minsc wishes Dynaheir was here—she had such a strong brain! She knew how to defeat evil with all that thinking!~
+== AC#PPEL1 ~It’s as if the poison carries its own intent—subtle, but strong enough to assert itself upon the body.~
 END
 IF~~THEN REPLY ~What do you mean?~ EXTERN AC#PPEL1 about_poison
 IF~~THEN REPLY ~Go on.~ EXTERN AC#PPEL1 about_poison
 
 CHAIN IF ~~ THEN AC#PPEL1 about_poison
-~Look, I know it may sound dramatic, it's not as I really think this poison can think, but it's not normal. It's powerful and feels... wrong.~
+~I’m not saying the poison has a mind of its own, but it behaves unlike anything I’ve ever seen. It’s potent—and it carries a sense of wrongness I can’t explain.~
 == HaerdaJ  IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~Well, it truly sounds like some dark rot tried to reach the hearts of men. 'Tis one of those rots, most likely, that need intervention made by those birds that aspire to being called heroes, hmm? Who knows, perhaps it's our raven that can fly that high.~
 == YoshJ IF ~InParty("yoshimo") !StateCheck("yoshimo",CD_STATE_NOTVALID)~ THEN ~It sounds like a gambit or trick that should never be used. Mayhap even too definitive even for a taste of bounty hunters, my friend.~
 == AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~It... it does. Even more than that. It sounds like wors nightmares coming true.~
 == ViconiJ  IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN  ~Mmm, it sounds like something that would be eagerly used by Matron Mothers. Natha elg'cahl phor jal elg'cahlen. A poison above all poisons.~
-== AC#PPEL1 ~As you may know, most types of poison can be cured—or at least delayed—with simple clerical spells or quite common antidotes. But in this case, even the strongest divine magic has failed. There is no antidote for this poison, for it resists all of our spells and common antidotes are to weak to aid those inflicted with this toxin. All we can do is offer comfort to the dying in their final breaths—or pray for a miracle that their body overcomes it on its own.~
+== AC#PPEL1 ~As you may know, most types of poison can be cured—or at least delayed—with simple clerical spells or quite common antidotes. But in this case, even the strongest divine magic has failed. There is no antidote for this poison, for it resists all of our spells and common antidotes are too weak to aid those inflicted with this toxin. All we can do is offer comfort to the dying in their final breaths—or pray for a miracle that their body overcomes it on its own.~
 == DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~This poison sounds like something we could use ourselves.~
-== AC#PPEL1 ~None of this can be ignored.~
+== AC#PPEL1 ~Even still waters stir when danger draws near. This cannot be left unattended.~
 END
 IF~~THEN REPLY ~Please, go on.~ EXTERN AC#PPEL1 about_poison_02
 IF~~THEN REPLY ~Sounds like something assassins would love to use!~ EXTERN AC#PPEL1 about_poison_02
@@ -168,7 +170,7 @@ CHAIN IF ~~ THEN AC#PPEL1 about_poison_02
 == AC#PPEL1 ~We cannot just stand and let this poison kill another dozens or maybe even hundreds of people.~
 END
 IF~~THEN REPLY ~How do you plan to find such a person?~ EXTERN AC#PPEL1 about_person
-IF~~THEN REPLY ~Let me gues: you want me to find this person for you.~ EXTERN AC#PPEL1 about_person
+IF~~THEN REPLY ~Let me guess: You want me to find this person for you.~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~I think I know where this is going...~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~Let me interrupt you: I'm not interested in any of this. Just leave me be. Go and find someone else to deal with all that crap.~ EXTERN AC#PPEL1 bye
 
