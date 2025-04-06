@@ -1,0 +1,9 @@
+IF
+    Entered([ANYONE])
+    Global("DeadMagicInfo","ACPP70",0)
+THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,@2004)  
+        SetGlobal("DeadMagicInfo","ACPP70",1)
+END
+

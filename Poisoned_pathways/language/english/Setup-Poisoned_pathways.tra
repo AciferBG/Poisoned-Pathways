@@ -9,9 +9,31 @@
 @16 = ~Sharga Gentleswarm~
 @17 = ~Sylvae Streamveil~
 @18 = ~Zombie Treant~
+@19 = ~Priestess of Eldath~
+@20 = ~Will-o'-wisp~
+@21 = ~Erlavanas Myth'yalv~
+@22 = ~Will-o'-pox~
+@23 = ~Wadal Hrun~
+@24 = ~Henry~
+@25 = ~Na'arla~
+@26 = ~Mannartv~
+@27 = ~Montrassa~
+@28 = ~Poison Manifestation~
+@29 = ~Char~
+@30 = ~Aunt Pesca~
+@31 = ~Oren Taval~
+@32 = ~Blightjaw Ankheg~
 
 // spl files
 @900 = ~Water Divination~
+@901 = ~~
+@902 = ~Wisp's Flicker~
+@903 = ~Wild Magic~
+
+//sto files
+@950 = ~Temple of Eldath~
+@951 = ~Wax and Wonder~
+@952 = ~The Leaves' Embrace~
 
 // itm files
 @1000 = ~Poisoned Arrow~
@@ -25,3 +47,6 @@
 @2000 = ~Duskwood Dell~
 @2001 = ~Eldath, goddess of peace and calm waters~
 @2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~
+@2003 = ~As you approach the gate leading to the lower levels, you feel a flicker of magic. It seems the corrupted Mythal does not reach into the depths—meaning your magic should function normally in the areas below.~
+@2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the Mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead silence.~
+

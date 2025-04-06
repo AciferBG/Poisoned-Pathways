@@ -1,0 +1,46 @@
+IF
+    WalkedToTrigger([ANYONE])
+    Global("SpelunkingBack","ACPP73",0)
+THEN
+    RESPONSE #100
+        ClearAllActions()
+        SetGlobal("SpelunkingBack","ACPP73",1)
+        SetGlobalTimer("Pool4Timer","ACPP73",ONE_MINUTE)   
+        DisplayStringNoName(Myself,72209)  // Though the water is murky and the steam from the hot spring nearly made you miss it, you notice a tunnel beneath the surface of the water. You could dive through and explore it if you wish.
+END
+
+IF
+    WalkedToTrigger([ANYONE])
+THEN
+    RESPONSE #100
+        ClearAllActions()
+        SaveGame(0)
+        SmallWait(5)
+        StartCutSceneMode()
+        MoveViewObject(LastTrigger,INSTANT)
+        SetGlobal("SpelunkingBack","ACPP73",0)
+        DisplayStringNoName(Myself,72212)  // You dive through the tunnel and swim as fast as you can to the other end.
+        Wait(2)
+        FadeToColor([30.0],0)
+        Wait(2)
+        ActionOverride(Player1,LeaveAreaLUAPanicEntry("ACPP73","Entry2",[0.0],NW))  // Secret Cave
+        ActionOverride(Player1,LeaveAreaLUAEntry("ACPP73","Entry2",[0.0],NW))  // Secret Cave
+        ActionOverride(Player2,LeaveAreaLUAEntry("ACPP73","Entry2",[0.0],NW))  // Secret Cave
+        ActionOverride(Player3,LeaveAreaLUAEntry("ACPP73","Entry2",[0.0],NW))  // Secret Cave
+        ActionOverride(Player4,LeaveAreaLUAEntry("ACPP73","Entry2",[0.0],NW))  // Secret Cave
+        ActionOverride(Player5,LeaveAreaLUAEntry("ACPP73","Entry2",[0.0],NW))  // Secret Cave
+        ActionOverride(Player6,LeaveAreaLUAEntry("ACPP73","Entry2",[0.0],NW))  // Secret Cave
+        ActionOverride(Player1,Wait(2))
+        ActionOverride(Player1,MultiPlayerSync())
+        ActionOverride(Player1,FadeFromColor([30.0],0))
+        ActionOverride(Player1,EndCutSceneMode())
+END
+
+IF
+    WalkedToTrigger([ANYONE])
+    GlobalTimerNotExpired("Pool4Timer","ACPP73") 
+THEN
+    RESPONSE #100
+        ClearActions(LastTrigger)
+END
+

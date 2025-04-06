@@ -83,6 +83,12 @@ INCLUDE ~Poisoned_pathways/lib/Poisoned_pathways-animations.tpa~
 
 INCLUDE ~Poisoned_pathways/lib/Poisoned_pathways-2da.tpa~
 
+// appending Entries for LeaveAreaLUAEntry working correctly 
+APPEND ~ENTRIES.2DA~
+~ACPP73		1965.1990   1236.1311           *          *         *         *         *         *        *~
+UNLESS ~ACPP73~
+
+
 ///////////////////////////////////////////////////////////////////////
 // ARE files
 //
@@ -129,10 +135,15 @@ COPY ~Poisoned_pathways/spl/AC#PPS1.spl~          ~override~
 SAY NAME1 @900
 
 COPY ~Poisoned_pathways/spl/AC#PPWOW.spl~          ~override~
-SAY NAME1 ~~
+SAY NAME1 @901
 
 COPY ~Poisoned_pathways/spl/AC#PPWO2.spl~          ~override~
-SAY NAME1 ~Wisp's Flicker~
+SAY NAME1 @902
+
+COPY ~Poisoned_pathways/spl/AC#PPWM.spl~         ~override~ // wild magic spell effect in Myth Unnnohyr
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@903) STR_VAR bam_file = AC#WILMG RET icon END
+COPY_EXISTING ~AC#PPWM.spl~         ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 0 parameter2 = icon END
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -167,8 +178,16 @@ INCLUDE ~Poisoned_pathways/lib/Poisoned_pathways-creatures.tpa~
 //
 ///////////////////////////////////////////////////////////////////////
 
-//COPY ~Poisoned_pathways/sto/ac#jamst.sto~ ~override~
-//SAY 0xc @387
+COPY ~Poisoned_pathways/sto/AC#PPEL8.sto~ ~override~ // temple of Eldath
+SAY 0xc @950
+
+COPY ~Poisoned_pathways/sto/AC#PPMYS.sto~ ~override~  // mystic's shop
+SAY 0xc @951
+
+COPY ~Poisoned_pathways/sto/AC#PPELS.sto~ ~override~  //tavern, sleeping place in area acpp11
+SAY 0xc @952
+
+COPY ~Poisoned_pathways/sto/AC#PPPBG.sto~ ~override~  // potion case
 
 
 ///////////////////////////////////////////////////////////////////////

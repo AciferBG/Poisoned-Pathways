@@ -3,7 +3,59 @@
 3. Summoning the poison manifestation: if we play a non-evil cleric, paladin or druid, we can also bless the flower and variable is set, but it has no effect on the fight. Perhaps if we also blessed it, the demon should be summoned slightly injured and player should be informed it's a result of this blessing?
 4. Some sidequest dialogues could be refined a bit. 
 5. When in Myth U area, sometimes for a moment I cannot shoot from bow at gibberlings? worth trying is it's some sort of local bug.
+_________________________________________________________________________________________________________________
+***
+ADDING the new wild and dead magic funtions:
+***
+Here are the two updated script block: add them for all areas (main area, towers, mycodni lair - remember to adjust area name in the timer):
 
+IF
+    OR(2)
+      TimeOfDay(DUSK)
+      TimeOfDay(NIGHT)
+    !GlobalTimerNotExpired("AntimagicTimer","ACPP70")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPDEA",Player1)   // SPIN646.SPL copy (Dead Magic Zone)
+        SetGlobalTimer("AntimagicTimer","ACPP70",6)
+END
+
+IF
+    OR(2)
+      TimeOfDay(MORNING)
+      TimeOfDay(DAY)
+    !GlobalTimerNotExpired("WildMagicTimer","ACPP70")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPWIL",Player1)  // SPIN645.SPL copy (Wild Magic Zone)
+        SetGlobalTimer("WildMagicTimer","ACPP70",6)
+END
+This one is for the final battle that you wanted always to be dead magic area, no matter what time of day it is:
+
+IF
+    !GlobalTimerNotExpired("AntimagicTimer","ACPP72")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPDEA",Player1)   // SPIN646.SPL copy (Dead Magic Zone)
+        SetGlobalTimer("AntimagicTimer","ACPP72",6)
+END
+The amulet properties are on the amulet - if you want to copy them to some other item, just use DLTCEP to copy them to your version of the amulet/ring or whatever it is that protects from the zone effects. Add this line for the description:
+
+– Protection from Myth Unnohyr's effects of Wild Magic Zone and Dead Magic Zone (does not affect wild mages innates abilities or dead magic effects applies from other sources)
+The tp2 additions - copy the new spells - do not give them any name, otherwise the name will be shown every 6 seconds in the log and it's gonna be really annoying:
+
+COPY ~Poisoned_pathways/spl/AC#PPDEA.spl~          ~override~
+SAY NAME1 ~~
+
+COPY ~Poisoned_pathways/spl/AC#PPWIL.spl~          ~override~
+SAY NAME1 ~~
+Right now, it works like that:
+
+zones were previously cast every 2 rounds, I made it be cast every round instead, to make the spells more precise - it's like that for both spells
+Dead Magic Zone: as it used to be, so all spells fail, many effects are dispelled every round. From now on, the "antimagic area" tick is emulated so while dead magic is active, you can no longer use any quick items or charges of any items (these icons are blocked, thus no scrolls, wands etc), potions may still be used via inventory screen, antimagic area also allowed that
+Wild Magic Area: This works the same, just the duration is set to 7, there is 1-second overlap as the spell is cast every 6 seconds, but that's to make sure the slots won't become active for a mili-second
+Sorry, but if you added some custom icons for the effects, you will need to copy them from your spells and apply them to these spells. I hope that won't be a huge problem.
+__________________________________________________________________________________________________________________
 * * *
 
 Ideas that weren't implemented - Duskwell Dell: 

@@ -1,8 +1,16 @@
 IF
- !GlobalTimerNotExpired("AntimagicTimer","ACPP70")
+    Global("Prep","ACPP71",0)
+  THEN
+    RESPONSE #100
+        AddAreaFlag(DEADMAGICZONE)
+        SetGlobal("Prep","ACPP71",1)
+END
+
+IF
+ !GlobalTimerNotExpired("AntimagicTimer","ACPP71")
 THEN
     RESPONSE #100
         ApplySpell(Player1,DEAD_MAGIC_AREA)  // SPIN646.SPL 
-        SetGlobalTimer("AntimagicTimer","ACPP70",14)
+        SetGlobalTimer("AntimagicTimer","ACPP71",14)
 END
 

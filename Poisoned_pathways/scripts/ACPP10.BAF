@@ -1,0 +1,18 @@
+IF
+    Global("EnteredArea","ACPP10",0)  
+THEN
+    RESPONSE #100
+        SetMusic(NIGHT,%AC#PP01%)
+        SetMusic(DAY,%AC#PP01%)
+        //SetAreaRestFlag(0)
+        SetGlobal("EnteredArea","ACPP10",1)  
+END
+
+IF
+    !GlobalTimerNotExpired("NoFightTimer","ACPP10")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPNF",Player1)  // No such index
+        SetGlobalTimer("NoFightTimer","ACPP10",14)
+END
+

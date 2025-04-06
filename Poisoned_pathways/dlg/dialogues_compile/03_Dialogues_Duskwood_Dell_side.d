@@ -1,6 +1,102 @@
 
 // Dialogue sidechars in Duskwood Dell
 
+// "Leaves' Embrace", tavern in area ACPP11 
+BEGIN ~AC#PPELS~
+
+IF ~True()~ THEN BEGIN 0
+  SAY ~Welcome, traveler. The boughs above have whispered of your coming. You’ve found your way to Leaves' Embrace—rest, if you wish, is easily given.~ 
+  IF ~~ THEN REPLY ~What exactly do you offer here?~ GOTO chain_about_shop
+  IF ~~ THEN REPLY ~Not today. Perhaps another time.~ GOTO 1
+  IF ~~ THEN REPLY ~Show me what comforts you provide.~ DO ~StartStore("AC#PPELS",LastTalkedToBy())~ EXIT
+END
+
+IF ~~ THEN BEGIN 1
+  SAY ~Then may the wind carry you gently, and peace follow your steps.~
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 2
+  SAY ~A place to rest beneath the open sky, cradled in the arms of the trees. Blankets warmed by the day’s sun, hammocks swaying between ancient limbs... and a soft hush, broken only by birdsong.~
+  IF ~~ THEN REPLY ~That sounds like something I could use.~ GOTO shop
+  IF ~~ THEN REPLY ~I’ll pass, for now.~ GOTO 1
+END
+
+IF ~~ THEN BEGIN shop
+  SAY ~Then lie back, and let the leaves hold your weight. In this place, the world forgets its noise.~ 
+  IF ~~ THEN DO ~StartStore("AC#PPELS",LastTalkedToBy())~ EXIT
+END
+
+CHAIN IF ~~ THEN AC#PPELS chain_about_shop
+~This is a refuge, not just a hostel. We offer shelter among the branches—sleeping places strung like nests between the limbs, for those who trust the trees to carry them.~
+==AC#PPELS ~We serve warm tea brewed from grove herbs and—should you wish—candles to ease the mind or soothe dreamless sleep.~
+==AC#PPELS ~Peace is our only true offering. But sometimes, that is more than enough.~
+END  
+  IF ~~ THEN REPLY ~I think I’ll stay. The world can wait.~ EXTERN AC#PPELS shop
+  IF ~~ THEN REPLY ~Another time, perhaps.~ EXTERN AC#PPELS 1
+
+
+// mystic, store in area ACPP13
+BEGIN ~AC#PPMYS~
+
+IF ~True()~ THEN BEGIN 0
+  SAY ~Magic. Memory. Meaning. All pass through here, as do you. Shall we speak of what lingers?~ 
+  IF ~~ THEN REPLY ~What exactly do you offer?~ GOTO chain_about_shop
+  IF ~~ THEN REPLY ~Not today. Perhaps another time.~ GOTO 1
+  IF ~~ THEN REPLY ~Let me see what you have.~ DO ~StartStore("AC#PPMYS",LastTalkedToBy())~ EXIT
+END
+
+IF ~~ THEN BEGIN 1
+  SAY ~Then walk in balance, and may no veil cloud your vision.~
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 2
+  SAY ~Magic, drawn from the currents of arcane and divine thought.~ 
+  IF ~~ THEN REPLY ~Let me see what knowledge you've gathered.~ GOTO shop
+  IF ~~ THEN REPLY ~I’ll pass, for now.~ GOTO 1
+END
+
+IF ~~ THEN BEGIN shop
+  SAY ~Then gaze with care. Some knowledge glows to guide—but some burns if held too tightly.~
+  IF ~~ THEN DO ~StartStore("AC#PPMYS",LastTalkedToBy())~ EXIT
+END
+
+
+CHAIN IF ~~ THEN AC#PPMYS chain_about_shop
+~I offer scrolls—threads of arcane thought inked by steady hands. Spells, yes, but more than that: intentions given form, memory made fire.~ 
+==AC#PPMYS ~And for those attuned to subtler currents... I offer candles. Crafted with sigils, wax, and prayer. They burn with purpose—some to soothe the spirit, others to sharpen the mind, or hold back what creeps in the dark.~
+==AC#PPMYS ~They call it candle-magic. I call it quiet power.~
+END  
+  IF ~~ THEN REPLY ~I’ll look, then. Words have power, and so does flame.~ EXTERN AC#PPMYS shop
+  IF ~~ THEN REPLY ~I’ll pass, for now.~ EXTERN AC#PPMYS 1
+
+// priest of Eldath, store in area ACPP02
+BEGIN ~AC#PPEL8~
+
+IF ~True()~ THEN BEGIN 0
+  SAY ~Welcome, my <BROTHERSISTER>. You stand in a place of stillness, under the gentle grace of Eldath, the Quiet One. May her peace settle upon your heart.~
+  IF ~~ THEN REPLY ~I would like to see your services.~ GOTO 1
+  IF ~~ THEN REPLY ~Could you tell me more about Eldath?~ GOTO 2
+  IF ~~ THEN REPLY ~I see. I shall be going.~ GOTO 3
+END
+
+IF ~~ THEN BEGIN 1
+  SAY ~Of course, my <BROTHERSISTER>. Step softly, and let peace guide your path.~
+  IF ~~ THEN DO ~StartStore("AC#PPEL8",LastTalkedToBy(Myself))~ EXIT
+END
+
+IF ~~ THEN BEGIN 2
+  SAY ~Eldath is the goddess of peace, still waters, and quiet groves. We offer sanctuary to those seeking harmony, far from the clamor of the world. No blade is drawn where her blessing lingers.~
+  IF ~~ THEN REPLY ~Could I see your services?~ GOTO 1
+  IF ~~ THEN REPLY ~I see. I shall be going.~ GOTO 3
+END
+
+IF ~~ THEN BEGIN 3
+  SAY ~May the soft winds of Eldath guide you, <BROTHERSISTER>.~
+  IF ~~ THEN EXIT
+END
+
 // dryad in area acpp06 (Eldath's Peace Grotto):
 BEGIN ~AC#PPDR1~
 
@@ -106,6 +202,60 @@ BEGIN AC#PPCAA
 //1st talk
 
 CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",0)~ THEN AC#PPCHA 01.00
+~Excuse me... You're the one who helped our High Priest, aren't you? I was wondering if you might help me as well... just for a moment.~
+END
+IF~~THEN REPLY ~Depends. What do you need?~ EXTERN AC#PPCHA 01.01
+IF~~THEN REPLY ~I have no time on helping boys that do not even shave themselves yet. Go play in the trees.~ EXTERN AC#PPCHA 01.02
+
+CHAIN AC#PPCHA 01.01
+~You see, it was recently that I run away from home. I... I just couldn't live the life I was expected to live! My parents passed when I was still young, and I was raised by my aunt—Pesca. She lives in the Government District of Athkatla. Her world is... marble, silk, and coin. She wanted me to become a refined, wealthy man. Polished. Privileged. Fat. Lazy.~
+==AC#PPCHA ~But none of it ever felt like mine. Not the clothes, not the manners, not the future. One day, I heard something—felt something. A stillness. A call. Eldath’s voice in the wind, maybe.~
+==AC#PPCHA ~So I came here, to Duskwood Dell, to learn, to breathe, to find a path of my own. But... I left without a word. Just vanished. That wasn’t right.~
+==AC#PPCHA ~I can't return—she'd never let me go again. But maybe, if someone brought her this flower... told her I'm safe and where I am... maybe then, peace can grow between us again.~
+==AC#PPCHA ~She's living in Athkatla. She often walks through the gardens of the Government District. Will you take this flower to her, and pass on my message?~
+END
+IF~~THEN REPLY ~Alright. I’ll do it.~ EXTERN AC#PPCHA 01.03
+IF~~THEN REPLY ~That’s your problem, not mine.~ EXTERN AC#PPCHA 01.02
+
+CHAIN AC#PPCHA 01.03
+~Truly? Thank you. Here—take it. She rarely leaves the District; she always said the City of Coins was all she needed.~
+==AC#PPCHA ~Let me know once you’ve given it to her. I’d really appreciate it.~
+DO ~GiveItemCreate("AC#PPFLW",Player1,1,1,0) SetGlobal("AC#PPFlowerDelivery","GLOBAL",1)~ EXIT
+
+CHAIN AC#PPCHA 01.02
+~R-right... I’m sorry to have bothered you.~
+DO ~EscapeArea()~ EXIT
+
+// 2nd talk
+
+CHAIN IF ~OR(3) Global("AC#PPFlowerDelivery","GLOBAL",1) Global("AC#PPFlowerDelivery","GLOBAL",2) Global("AC#PPFlowerDelivery","GLOBAL",3)~ THEN AC#PPCHA 02.00
+~I really hope my aunt will understand I needed to breath. That I needed something else than she does. I didn’t run from her—I ran toward something I needed.~
+END
+IF~Global("AC#PPFlowerDelivery","GLOBAL",2)~THEN REPLY ~I passed your message and gave the flower to your aunt. She suggested that maybe in a while you should give her some flowers on your own.~ EXTERN AC#PPCHA 02.01
+IF~Global("AC#PPFlowerDelivery","GLOBAL",3)~THEN REPLY ~I gave her the flower. I’m not surprised you left. She seems... horrible.~ EXTERN AC#PPCHA 02.02
+IF~~THEN REPLY ~Hmm.~ EXIT
+
+CHAIN AC#PPCHA 02.01
+~She said that? Huh... I wasn’t expecting that.~
+EXTERN AC#PPCHA 02.03
+
+CHAIN AC#PPCHA 02.02
+~Well, she's not THAT bad. I mean... she can be nice sometimes.~ 
+EXTERN AC#PPCHA 02.03
+
+CHAIN AC#PPCHA 02.03
+~Thank you for doing this. It means more than I can say. Now that she knows I’m safe, I can truly begin focusing on what matters.~
+==AC#PPCHA ~Whatever that is, exactly. Still figuring that out. But thanks. Really. You’re alright.~
+DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",4) AddExperienceParty(1800)~ EXIT
+
+// After
+
+CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",4)~ THEN AC#PPCHA 03.00
+~Peace be with you! You carry the scent of earth and danger—were you in some ruin or dark place? I’m not sure I’m made for such paths… but I hope the stillness I find here helps someone, too.~ 
+EXIT
+
+/*
+CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",0)~ THEN AC#PPCHA 01.00
 ~Excuse me. You are the person that helped our High Priest, yes? I thought that—that maybe you could help me too.~
 END
 IF~~THEN REPLY ~It depends on what do you need.~ EXTERN AC#PPCHA 01.01
@@ -156,6 +306,7 @@ DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",4) AddExperienceParty(1800)~ EXIT
 CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",4)~ THEN AC#PPCHA 03.00
 ~Oh! Hi! You look cool with all that stuff you probably found in some dungeon or something. Maybe I should try something like that one day. But I guess I may need to work out a bit first.~
 EXIT
+*/
 
 ////////////////////////////////////////////
 
