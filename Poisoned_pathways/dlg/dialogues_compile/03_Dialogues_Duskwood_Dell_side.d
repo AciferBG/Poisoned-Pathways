@@ -1,6 +1,61 @@
 
 // Dialogue sidechars in Duskwood Dell
 
+// honey making Eldathyn in area ACPP01:
+
+BEGIN ~AC#PPELH~
+
+CHAIN IF ~RandomNum(4,1)~ THEN AC#PPELH hello_01
+~The bees teach us much: they labor in silence, ask for nothing, and still leave behind sweetness and healing.~
+EXIT
+
+CHAIN IF ~RandomNum(4,2)~ THEN AC#PPELH hello_02
+~I make my honey slow and gently filtered, as Eldath would want it. No smoke, no fire—only patience and cool hands.~
+EXIT
+
+CHAIN IF ~RandomNum(4,3)~ THEN AC#PPELH hello_03
+~Honey calms the throat, seals wounds, and carries the scent of every flower it was born from. It is a quiet blessing in golden form.~
+EXIT
+
+CHAIN IF ~RandomNum(4,4)~ THEN AC#PPELH hello_04
+~Each jar I seal is a little peace preserved. When the world stings, a spoon of honey reminds us that not all things hurt.~
+EXIT
+
+// walking Eldathyn priest
+BEGIN ~AC#PPELR~
+
+CHAIN IF ~RandomNum(8,1)~ THEN AC#PPELR hello_01
+~The garden teaches us: Grow in silence, protect what is gentle, and bloom only when the time is right.~
+EXIT
+
+CHAIN IF ~RandomNum(8,2)~ THEN AC#PPELR hello_02
+~War wounds the world. Flowers help it heal. Eldath knew what she was doing when she gave us petals instead of blades.~
+EXIT
+
+CHAIN IF ~RandomNum(8,3)~ THEN AC#PPELR hello_03
+~Peace takes root slowly—like a flower in spring. You can’t force it open. You can only care for the soil and wait.~
+EXIT
+
+CHAIN IF ~RandomNum(8,4)~ THEN AC#PPELR hello_04
+~May your anger wither like frost at dawn, and may your words bloom like soft meadow flowers.~
+EXIT
+
+CHAIN IF ~RandomNum(8,5)~ THEN AC#PPELR hello_05
+~Some say flowers are fragile. I say they are brave—for they bloom even knowing how short their season may be.~
+EXIT
+
+CHAIN IF ~RandomNum(8,6)~ THEN AC#PPELR hello_06
+~I speak with the plants each morning. They never rush, never shout, and yet they grow just fine.~
+EXIT
+
+CHAIN IF ~RandomNum(8,7)~ THEN AC#PPELR hello_07
+~Violence may trample the field—but give it time, and green will return. Always.~
+EXIT
+
+CHAIN IF ~RandomNum(8,8)~ THEN AC#PPELR hello_08
+~Not all healing comes through herbs. Sometimes, a quiet place and the scent of blooming things are enough.~
+EXIT
+
 // "Leaves' Embrace", tavern in area ACPP11 
 BEGIN ~AC#PPELS~
 

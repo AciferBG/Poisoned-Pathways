@@ -5,27 +5,3 @@ THEN
       CreateCreature("AC#PPOR2",[810.760],S)  // Wadal Hrun
       SetGlobal("AC#PPTowerGuardian","GLOBAL",4)
 END
-
-IF
-  OR(2)
-      TimeOfDay(DUSK)
-      TimeOfDay(NIGHT)
-  !GlobalTimerNotExpired("AntimagicTimer","ACPP73")
-THEN
-  RESPONSE #100
-      ApplySpell(Player1,DEAD_MAGIC_AREA)  // SPIN646.SPL (No such index)
-      AddAreaFlag(DEADMAGICZONE)
-      SetGlobalTimer("AntimagicTimer","ACPP73",14)
-END
-
-IF
-  OR(2)
-      TimeOfDay(MORNING)
-      TimeOfDay(DAY)
-  !GlobalTimerNotExpired("WildMagicTimer","ACPP73")
-THEN
-  RESPONSE #100
-      ApplySpellRES("AC#PPWM",Player1) 
-       RemoveAreaFlag(DEADMAGICZONE)
-      SetGlobalTimer("WildMagicTimer","ACPP73",14)
-END

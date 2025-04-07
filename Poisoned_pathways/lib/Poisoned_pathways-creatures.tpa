@@ -1,5 +1,7 @@
 // Creatures for %MOD_FOLDER%
 
+COPY ~%MOD_FOLDER%/cre/copy~         ~override~
+
 COPY ~%MOD_FOLDER%/cre/AC#PPEL1.cre~ ~override~ // Eldath priest #1
   SAY NAME1 @10 SAY NAME2 @10
   
@@ -16,6 +18,12 @@ COPY ~%MOD_FOLDER%/cre/AC#PPEL3.cre~ ~override~ // Eldath priest #3: duskwood de
   SAY NAME1 @12 SAY NAME2 @12
   
 COPY ~%MOD_FOLDER%/cre/AC#PPELS.cre~ ~override~ // Eldath priest: area ACPP11 Leave's Embrace tavern
+  SAY NAME1 @12 SAY NAME2 @12
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPELH.cre~ ~override~ // Eldath priest: area ACPP01 honey maker
+  SAY NAME1 @12 SAY NAME2 @12
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPELR.cre~ ~override~ // Eldath priest: area ACPP01 random walker
   SAY NAME1 @12 SAY NAME2 @12
   
 COPY ~%MOD_FOLDER%/cre/AC#PPEL4.cre~ ~override~ // Eldath priest #4: Alatoasz Berendim, chief in duskwood dell
