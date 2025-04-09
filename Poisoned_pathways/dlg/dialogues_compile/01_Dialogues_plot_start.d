@@ -13,11 +13,11 @@ CHAIN IF ~~ THEN AC#PPSKD interest
 ~Oh, a bit of this and that—venoms to silence a snitch, brews to slow a soldier, drops that’ll send a man coughing up his liver. Handy little tools to make your life easier... and theirs shorter.~
 END
 IF~~THEN REPLY ~You're a blight on this city—I should end you right here!~ EXTERN AC#PPSKD fight
-IF~~THEN REPLY ~I’ve got gold, and I’m looking for something truly powerful.~ EXTERN AC#PPSKD special_poison
+IF~~THEN REPLY ~I’m looking for something more powerful.~ EXTERN AC#PPSKD special_poison
 IF~~THEN REPLY ~Not now. I need to think it through.~ EXTERN AC#PPSKD bye
 
 CHAIN IF ~~ THEN AC#PPSKD special_poison
-~Truth is, I don’t keep the *real* nasty stuff on me—too many pryin’ eyes, you feel me? But... for the right coin and the right kind of customer, I *might* know a bloke who knows a bloke.~
+~Truth is, I don’t keep the real nasty stuff on me—too many pryin’ eyes, you feel me? But... for the right coin and the right kind of customer, I might know a bloke who knows a bloke...~
 END
 IF~~THEN REPLY ~Someone like you has no right to draw breath. Prepare to die!~ EXTERN AC#PPSKD fight
 IF~~THEN REPLY ~Tell me where you get it from!~ EXTERN AC#PPSKD not_telling_bye
@@ -41,9 +41,9 @@ IF~~THEN REPLY ~I won’t suffer a merchant of suffering. You’re done.~ EXTERN
 IF~~THEN REPLY ~Hmph. I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
 
 CHAIN IF ~~ THEN AC#PPSKD threat_rep
-~Now that you mention it—yeah. Folks been whispering about some <PRO_RACE> from the North, stirring up trouble in the city...~
+~Oh, it's you? Now that you mention it—folks been whispering about some <PRO_RACE> like you from the North, stirring up trouble in the city...~
 END
-IF~~THEN REPLY ~And what else?~ EXTERN AC#PPSKD tell_supplier
+IF~~THEN REPLY ~Yep, that's me.~ EXTERN AC#PPSKD tell_supplier
 IF~~THEN REPLY ~Trouble is what I do best.~ EXTERN AC#PPSKD tell_supplier
 IF~~THEN REPLY ~I’m not here to cause trouble. I’m here to end it.~ EXTERN AC#PPSKD tell_supplier
 
@@ -53,12 +53,19 @@ END
 IF~~THEN REPLY ~Name your supplier and we’ll call it even.~ EXTERN AC#PPSKD tell_supplier
 
 CHAIN IF ~~ THEN AC#PPSKD work_bodhi
-~Ah... that *new* guild. Yeah, I’ve heard stories—nasty ones. They tore my buddy Therrik to bits!~
+~Ah... that new guild. Yeah, I’ve heard stories—nasty ones. They tore my buddy Therrik to bits!~
 END
-IF~~THEN REPLY ~Yeah, poor Therrik. Screamed like a stuck pig. Probably would've *preferred* poison.~ EXTERN AC#PPSKD tell_supplier
+IF~~THEN REPLY ~Yeah, poor Therrik. Screamed like a stuck pig. Probably would've preferred your poison.~ EXTERN AC#PPSKD tell_supplier
+IF~~THEN REPLY ~You consider Therrik's fate bad? There's even worse for those who do not cooperate.~ EXTERN AC#PPSKD tell_supplier
+IF~~THEN REPLY ~Before he died, Therrik told my masters about you.~ EXTERN AC#PPSKD tell_supplier
 
 CHAIN IF ~~ THEN AC#PPSKD tell_supplier
-~A-all right, all right! I’ll tell you where I get the real stuff. Name’s Delgorth. Weird fellow. I’ve only met him twice—out in the Snakewood. I... I’ll give you his instructions. Here!~
+~Hey, I don’t want no trouble, right? I—I’m just running a bit of a business here...~
+END
+IF~~THEN EXTERN AC#PPSKD tell_supplier_02
+
+CHAIN IF ~~ THEN AC#PPSKD tell_supplier_02
+~A-all right, all right! I’ll tell you where I get the real stuff. Name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the Snakewood. I... I’ll give you his instructions. Here!~
 END
 IF~~THEN REPLY ~Smart choice.~ EXTERN AC#PPSKD map_bye
 IF~~THEN REPLY ~That’s all I needed.~ EXTERN AC#PPSKD map_bye
@@ -116,20 +123,13 @@ IF~~THEN REPLY ~Couldn’t have worked out better!~ EXTERN AC#PPEL2 bring_arrow_
 IF~~THEN REPLY ~Meaning?~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 
 CHAIN IF ~~ THEN AC#PPEL2 bring_arrow_duskwood_dell
-~With the poison in hand, we can study it! Well... not me anymore. That task falls to you now! I am sorry, <CHARNAME>. Child of Bhaal. You must... you must bring this arrow, poison and all, to Most Exalted Fallskeeper Alatoasz Berendim, high priest of my order, in Duskwood Dell. He’ll know how to proceed.~
+~With the poison in hand, we can study it! Well... not me anymore. That task falls to you now! I am sorry, <CHARNAME>. You must... you must bring this arrow, poison and all, to Most Exalted Fallskeeper Alatoasz Berendim, high priest of my order, in Duskwood Dell. He’ll know how to proceed.~
 END
-IF~~THEN REPLY ~Shush. Please, don't mention it so loudly. And—you knew about my heritage?~ EXTERN AC#PPEL2 what_about_me
 IF~~THEN REPLY ~That's... a very long title.~ EXTERN AC#PPEL2 what_about_title
 IF~~THEN REPLY ~What about you? I thought you would be the one to work with me!~ EXTERN AC#PPEL2 what_about_you
 
 CHAIN AC#PPEL2 what_about_title
 ~Heh... it—it is. *cough* But... he'll help you.~
-END
-IF~~THEN REPLY ~What about you?~ EXTERN AC#PPEL2 what_about_you
-IF~~THEN REPLY ~Very well. Tell me where this place is.~ EXTERN AC#PPEL2 show_duskwood_dell
-
-CHAIN AC#PPEL2 what_about_me
-~I said I... watched you. You stopped a war... That's why I think you can stop... this.~
 END
 IF~~THEN REPLY ~What about you?~ EXTERN AC#PPEL2 what_about_you
 IF~~THEN REPLY ~Very well. Tell me where this place is.~ EXTERN AC#PPEL2 show_duskwood_dell
@@ -165,7 +165,7 @@ Kill(Myself)~ EXIT
 CHAIN IF ~Global("CutsceneAmbush","ACPP30",1)~ THEN AC#PPEL2 hello_talonite
 ~Greetings, stranger. A fine place to conduct business out here in the wilds, wouldn’t you say? Plenty of mushrooms around—just be careful not to pick the poisonous ones.~ 
 == AC#PPTA1 ~No need to pretend, priest. My contacts in Athkatla told me you were coming.~ [STHMA04]
-== AC#PPEL2 ~Then you have brought the poison I so desire?~ 
+== AC#PPEL2 ~That's good! Then you have brought the poison I so desire?~ 
 == AC#PPTA1 ~I have! And you’ll be tasting it soon enough!~ 
 == AC#PPEL2 ~What do you mean...~ 
 == AC#PPTA1 ~How stupid do you think I am, Eldathyn? You believe I can’t see through your scheming? That I wouldn’t notice those brutes hiding among the trees?~ 
@@ -191,20 +191,28 @@ StartCutScene("AC#PPCT2")
 BEGIN ~AC#PPEL1~
 
 CHAIN IF ~Global("AC#PP_PlotStart","GLOBAL",3)~ THEN AC#PPEL1 hello_02
-~Good to see you again! Shall we go and begin the search for the poisoner?~
+~Good to see you again! Were you able to make Skann Delth talk? Do you know where he’s meeting the poison supplier?~
+END
+IF~Global("AC#PPHasMap","GLOBAL",1)~THEN REPLY ~Yes, I managed to get the information. I’ve got a document that mentions the location.~ DO ~SetGlobal("AC#PPHasMap","GLOBAL",10)~ EXTERN AC#PPEL1 about_glade
+IF~~THEN REPLY ~No, I haven’t found anything yet.~ EXTERN AC#PPEL1 bye_wait
+
+CHAIN IF ~~ THEN AC#PPEL1 about_glade
+~Excellent. Let me take a look…~
+=
+~Lowshade Glade? Yes, I know of it. Secluded, rarely visited—an ideal place for a meeting like this. There’s only one path forward now: we go there and see whether the mysterious poisoner reveals himself. Shall we depart?~
 END
 IF~~THEN REPLY ~Yes, let’s go.~ EXTERN AC#PPEL1 lets_go
-IF~~THEN REPLY ~No, I need a little more time.~ EXTERN AC#PPEL1 bye_wait
+IF~~THEN REPLY ~Not just yet. I need a little more time.~ EXTERN AC#PPEL1 bye_wait
 
 CHAIN AC#PPEL1 lets_go
-~Excellent! My dear friend, would you be so kind as to inform my acolyte that we are departing?~
-== SLILMAT ~Of course, priest of the Hidden Goddess.~
+~Excellent! My dear friend, thank you again for your hospitality within these sacred halls.~
+== SLILMAT ~Of course, priest of the Hidden Goddess. May Ilmater’s blessings go with you as well.~
 == AC#PPEL1 ~Then let us be on our way.~
 DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",4)
 ClearAllActions()
 StartCutSceneMode()
-StartCutScene("AC#PPCT1")
-~ EXIT
+StartCutScene("AC#PPCT1")~ EXIT
+
 
 CHAIN AC#PPEL1 bye_wait
 ~Then I shall remain here and wait for you.~

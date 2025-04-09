@@ -46,9 +46,29 @@
 @1004 = ~Fungal Key~
 @1005 = ~This key is overgrown with grime and strange spores. It appears to open a very particular kind of door.~
 @1006 = ~Supplier's Note~
-@1007 = ~Skann, I need you to deliver a large shipment of my work to several interested parties. Meet me at the marked location near the edge of the Snakewood. Destroy this note so it doesn’t fall into the wrong hands.
+@1007 = ~Skann, I need you to deliver a large shipment of my work to several interested parties. Meet me at the marked location near the edge of the Snakewood, at Lowshade Glade. Destroy this note so it doesn’t fall into the wrong hands.
 
 Delgorth~
+@1008 = ~Keltormir, the Fallen Empire~
+@1009 = ~Keltormir, the Fallen Empire
+by Elenneth Moonsyl, Sage of Evereska
+
+“All forests remember. Even when the trees fall and the songs fade, the roots hold the memory.”
+
+In the elder days of Toril, long before the rise of Calimshan or Tethyr, the ancient forest empire of Keltormir stretched across the south of Faerûn like a green ocean. Bound by reverence to the Seldarine and governed by harmony with nature, the elves of Keltormir built their realms not in defiance of the land, but in communion with it.
+
+Among the most enduring legacies of Keltormir were its three Mythal-guarded cities, each a beacon of elven magic and culture—each now lost, faded, or fallen: Myth Rhynn, Myth Unnohyr and Myth Tellaren.
+
+Myth Rhynn
+Hidden deep within the Mytharan Woods, in the shadowed reaches of the Wealdath, lies Myth Rhynn, once a hallowed necropolis of the elves. Its mythal, unlike those of other elven cities, was not wrought for war or wonder, but for reverence. But the mythal is broken. Whether shattered by age, sacrilege, or forgotten sorrow, it no longer binds the dead to sleep. Now, shadows walk among the roots of ancient barrows, and unquiet spirits rise in the stillness. Even the elves who once came to honor their ancestors now avoid the place, for the broken threads of the mythal pull at their hearts, as if mourning its own fall. What was once a sacred resting place is now a sorrowful wound upon the forest—and a warning.
+
+Myth Unnohyr
+The darkest tale among the three, Myth Unnohyr was built within the shadowed valleys of Tethyr’s southern forests. Its magic was of growth, healing, and communion with wild nature. Yet long before the Time of Troubles, something unravelled. Elven lore speaks in whispers of forbidden rites—of a turning away from Corellon Larethian, whose grace once shielded the city. When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.
+
+Myth Tellaren
+Far to the south, in lands now buried under the sands of Calim, stood Myth Tellaren. When the genie-lords of Calim and Memnon warred across the south, their chaos reached even the hidden places of the elves. Myth Tellaren’s mythal, strained by planar pressure and betrayal from within, fractured—and with it, the delicate magic that held the city aloft. The destruction was swift and near-total. Some say the ruin still exists beneath the shifting sands or buried within the jungle’s encroaching roots, frozen in a moment of magical collapse—its mythal broken, yet still pulsing faintly, like embers beneath ash.
+
+Though Keltormir has faded into myth, the echoes of its greatness endure. Where trees grow thick and stars fall strangely, where magic sings through stone or refuses to stir—there, the empire of leaves once stood. And perhaps, may rise again.~
 
 // script strings
 @2000 = ~Duskwood Dell~

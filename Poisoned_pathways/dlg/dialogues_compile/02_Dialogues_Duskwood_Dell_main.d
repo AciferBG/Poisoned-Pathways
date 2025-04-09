@@ -123,7 +123,7 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate_06
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_06
-~I would guess that this poison—rare as it is—must come from a place near one of the ancient elven ruins. It is there, when it was most ofter seen.~
+~I suspect this rare poison originates near one of the ancient elven ruins. It was in those places that its presence was most often recorded—or, mayhap more truthfully, most deeply felt.~
 END
 IF~~THEN REPLY ~Good thing that stuff didn’t kill you too.~ EXTERN AC#PPEL4 poison_investigate_sure
 IF~~THEN REPLY ~And you figured all that out by sniffing the arrow and tasting the poison?~ EXTERN AC#PPEL4 poison_investigate_sure
@@ -139,28 +139,90 @@ CHAIN AC#PPEL4 poison_investigate_further_b
 EXTERN AC#PPEL4 poison_investigate_further
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_further
-~I want to focus on one of the old elven ruins scattered throughout these lands, but... which one? There are many—but which one is the right one? To determine that, I will need some time.~
+~I want to focus on one of the old elven ruins scattered throughout these lands, but... which one? There are many—too many. Finding the right one will be our first true task.~
 END
-IF~~THEN EXTERN AC#PPEL4 poison_investigate_further_02
+IF~~THEN EXTERN AC#PPEL4 about_keltormir
 
-CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_further_02
-~Ah, and where are my manners? You’ve only just arrived, and you must be weary. Rest for a while—this will give me time to study the poison’s origin further. Please, return in two hours. I shall wait for you downstairs. Until then, I’ll walk the woods and hope for a good idea.~
-==AC#PPEL4 ~However... there is something you could do. Bring me a simple golden necklace. This adventure will require special resources and I think I can make something that's going to aid you in the worst possible scenario we may need to deal with.~
-==AC#PPEL4 ~Meet me later, downstairs, and bring the necklace. Eldath shall watch over you, my friend.~
+CHAIN IF ~~ THEN AC#PPEL4 about_keltormir
+~As you may know, the region now called the Lands of Intrigue was once a vast, continuous forest—home to the elven kingdom of Keltormir. The elves built splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right ruin.~
+END
+IF~~THEN REPLY ~And where should I begin the search?~ EXTERN AC#PPEL4 about_keltormir_02
+IF~~THEN REPLY ~Then let’s get to those ruins!~ EXTERN AC#PPEL4 about_keltormir_02
+
+CHAIN IF ~~ THEN AC#PPEL4 about_keltormir_02
+~If only it were that simple. I am no scholar of ancient history. My expertise lies in nature. But... fortunately, I know someone who is.~
+=
+~I ask you to visit the Temple of Oghma in Athkatla. They keep many tomes, including some that speak of the old elven cities. If I can get even a general clue, I may be able to narrow our search considerably.~
+END
+IF~~THEN REPLY ~Back to Athkatla, then.~ EXTERN AC#PPEL4 to_oghma
+IF~~THEN REPLY ~I don’t usually run errands for books... but fine.~ EXTERN AC#PPEL4 to_oghma
+IF~~THEN REPLY ~If you say it helps, I’ll fetch your book.~ EXTERN AC#PPEL4 to_oghma
+
+	CHAIN IF ~~ THEN AC#PPEL4 to_oghma
+	~In the meantime, I shall reflect further on the nature of this poison. You’ve been kind to bring me a sample... though it came at the cost of a good priest’s life.~
+	END
+	IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma
+	IF~PartyHasItem("AC#PPSYM")~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me. I would like to return it to you.~ EXTERN AC#PPEL4 Merethan_emblem
+
+CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem
+~That is a noble gesture. Yes, I shall gladly take it back—so it may one day be passed to another worthy servant of the Green Goddess.~
+END
+IF~~THEN DO ~TakePartyItem("AC#PPSYM")
+SetGlobal("AC#PP_AlaHasSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_oghma
+
+CHAIN IF ~~ THEN AC#PPEL4 to_oghma_bye
+~I shall send a dove ahead to the Temple of Oghma—so their scribes may prepare the appropriate volume. Return to me once you have it. I will await you below, on the lower level of this tree. Eldath shall watch over you, my friend.~
 DO ~SetGlobal("AC#PPSpellCheckPoison","GLOBAL",2)
-SetGlobalTimer("AC#PP_Investigate","GLOBAL",TWO_HOURS)
+SetGlobal("AC#PP_Oghma","GLOBAL",1)
 EscapeArea()~ EXIT
 
 //Third talk with Exalted Fallskeeper Alatoasz Berendim
+CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",3) GlobalGT("AC#PP_Oghma","GLOBAL",0)~ THEN AC#PPEL4 hello_03
+~<CHARNAME>! You’ve returned. Did you bring the book from the Temple of Oghma?~
+END
+IF~PartyHasItem("AC#PPBK1")~THEN REPLY ~Yes. Here it is.~ DO ~TakePartyItem("AC#PPBK1")~ EXTERN AC#PPEL4 read_book
+IF~~THEN REPLY ~Give me another moment. I’ll get back to you as soon as possible.~ EXTERN AC#PPEL4 hello_03x
 
-CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",3) Global("AC#PPCreateAmulet","GLOBAL",0)~ THEN AC#PPEL4 hello_03
+/*
+CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",3) Global("AC#PP_Oghma","GLOBAL",1)~ THEN AC#PPEL4 hello_03
 ~<CHARNAME>! I’ve found the answer! But—as I feared, this mission will be dangerous and I cannot send you there without proper protection. To grant it, I will need that golden necklace I mentioned earlier. The matter is urgent, but I am not going to condemn you to death! I want to enchant it for you, you'll need it. Do you have it?~
 END
 IF~PartyHasItem("AMUL10")~THEN REPLY ~Yes. Here it is.~ DO ~TakePartyItem("AMUL10")~ EXTERN AC#PPEL4 hello_03b
 IF~~THEN REPLY ~You know what, give me another moment. I'll get back to you as soon as possible.~ EXTERN AC#PPEL4 hello_03x
+*/
+
+CHAIN IF ~~ THEN AC#PPEL4 read_book
+~Interesting... A well-crafted tome, with valuable insights. Ah—three Mythal-cities are mentioned explicitly here: Myth Rhynn, Myth Unnohyr, and Myth Tellaren. Hmm. Oh! This is promising—mayhap even a true lead.~
+=
+~Of the three cities, which calls to you as the source? Where do you feel the trail leads?~
+END
+IF~~THEN REPLY ~Myth Rhynn.~ EXTERN AC#PPEL4 wrong_myth_rhynn
+IF~~THEN REPLY ~Myth Unnohyr.~ EXTERN AC#PPEL4 right_myth_unnohyr
+IF~~THEN REPLY ~Myth Tellaren.~ EXTERN AC#PPEL4 wrong_myth_tellaren
+IF~~THEN REPLY ~I’m not sure.~ EXTERN AC#PPEL4 right_myth_unnohyr
+
+CHAIN IF ~~ THEN AC#PPEL4 wrong_myth_rhynn
+~Myth Rhynn—the elven necropolis? An intriguing thought, but no... I don’t believe that’s where we’ll find our answer.~
+END
+IF~~THEN REPLY ~Then it must be Myth Unnohyr.~ EXTERN AC#PPEL4 right_myth_unnohyr
+
+CHAIN IF ~~ THEN AC#PPEL4 wrong_myth_tellaren
+~Myth Tellaren, buried in the sands of Calimshan? We’ll not find a single living plant there—certainly not the one we’re seeking. I’m afraid that can’t be it.~
+END
+IF~~THEN REPLY ~Then Myth Unnohyr must be the one.~ EXTERN AC#PPEL4 right_myth_unnohyr
+
+CHAIN IF ~~ THEN AC#PPEL4 right_myth_unnohyr
+~Yes... Myth Unnohyr. That must be the place. Listen to this passage: 'When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.'~
+=
+~That explains why our spells fail, and why this poison defies all healing—it carries the essence of Myth Unnohyr’s broken mythal, steeped in dead magic!~
+END
+IF~~THEN REPLY ~If you say so.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+IF~Race(Player1,ELF)~THEN REPLY ~Myth Unnohyr... I’ve heard of ruins left by my people, but this place... is weird.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+IF~~THEN REPLY ~Not exactly a pleasant destination.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+
 
 CHAIN AC#PPEL4 hello_03x
-~I'll wait here, then. Please, bring me the necklase, as otherwise, the quest may prove to be overwhelming, even for an experienced adventurer as yourself.~
+~I'll wait here, then. Please, bring me the necklace, as otherwise, the quest may prove to be overwhelming, even for an experienced adventurer as yourself.~
 EXIT
 
 CHAIN AC#PPEL4 hello_03b
@@ -208,11 +270,6 @@ CHAIN AC#PPEL4 dead_magic_areab
 END
 IF~~THEN REPLY ~That’s an interesting theory.~ EXTERN AC#PPEL4 dead_magic_area_02
 IF~~THEN REPLY ~Then we’ve solved the riddle.~ EXTERN AC#PPEL4 dead_magic_area_02
-IF~~THEN REPLY ~Sounds far-fetched to me. It feels as if you made it all up!~ EXTERN AC#PPEL4 dead_magic_area_02b
-
-CHAIN AC#PPEL4 dead_magic_area_02b
-~I wish that was the case, but no. I haven't "made it all up".~
-EXTERN AC#PPEL4 dead_magic_area_02
 
 CHAIN IF ~~ THEN AC#PPEL4 dead_magic_area_02
 ~Now the only question is who is crafting the poison. Did you catch a glimpse of Merethan’s killer?~
@@ -229,7 +286,7 @@ IF~~THEN REPLY ~Maybe?~ EXTERN AC#PPEL4 malagent
 IF~~THEN REPLY ~I don't know and I don't care.~ EXTERN AC#PPEL4 malagent
 
 CHAIN IF ~~ THEN AC#PPEL4 malagent
-~A Malagent! That makes sense. That’s what the unholy priests of Talona call themselves. Do you know who Talona is?~
+~A Malagent. That makes sense. That’s what the unholy priests of Talona call themselves. Do you know who Talona is?~
 END
 IF~~THEN REPLY ~Yes.~ EXTERN AC#PPEL4 talona_yes
 IF~~THEN REPLY ~No.~ EXTERN AC#PPEL4 talona_no
@@ -247,6 +304,14 @@ IF~~THEN REPLY ~...who brews poison within a dead magic zone in Myth Unnohyr.~ E
 
 CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
 ~Exactly! In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
+==AC#PPEL4 ~Good luck, my friend. Go and stop the servant of the Talona, and mayhap, if possible, bring me the flower he used to create the poison. Mayhap I'll find a way to use it properly.~
+DO ~RevealAreaOnMap("ACPP70")
+SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
+SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
+
+/*
+CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
+~Exactly! In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
 == AC#PPEL4 ~Before you go, however, I promised you something. I shall now enchant this amulet for you. One, that will help you survive in that bizarre place.~
 DO ~SetGlobal("AC#PPCreateAmulet","GLOBAL",1) StartCutSceneMode() Wait(1) CreateVisualEffectObject("SPBASERD",Myself) Wait(3) EndCutSceneMode() StartDialogueNoSet(Player1)~ EXIT
 
@@ -259,6 +324,7 @@ SetGlobal("AC#PPCreateAmulet","GLOBAL",2)
 RevealAreaOnMap("ACPP70")
 SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
 SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
+*/
 
 // FINAL: Dialogue Eldathyn highpriest #4; tree house in Duskwood Dell
 

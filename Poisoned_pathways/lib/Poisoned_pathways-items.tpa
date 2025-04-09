@@ -1,5 +1,9 @@
 // Path_of_Poison Item Files
 
+COPY ~%MOD_FOLDER%/itm/AC#PPBK1.itm~         ~override~    // book about keltormir
+  SAY NAME2 @1008
+  SAY DESC  @1009
+
 COPY ~%MOD_FOLDER%/itm/AC#PPMP1.itm~         ~override~    // note
   SAY NAME2 @1006
   SAY DESC  @1007
