@@ -1,0 +1,18 @@
+IF
+  PartyHasItem("AC#PPMP1")  // supplier's note
+  Global("AC#PPHasMap","GLOBAL",0)
+THEN
+  RESPONSE #100
+      SetGlobal("AC#PPHasMap","GLOBAL",1)
+      RevealAreaOnMap("ACPP30")
+END
+
+IF
+  Global("AC#PP_PlotStart","GLOBAL",3)
+  Global("AC#PPSpawnPoisonMerch","GLOBAL",0)
+THEN
+  RESPONSE #100
+      SetGlobal("AC#PPSpawnPoisonMerch","GLOBAL",1)
+      CreateCreature("AC#PPSKD",[1277.2233],NE)  // Skann Delth
+END
+

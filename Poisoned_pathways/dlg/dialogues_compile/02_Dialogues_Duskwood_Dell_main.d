@@ -477,3 +477,18 @@ DO ~GiveItemCreate("AC#PPSYM",Player1,1,0,0)~ EXIT
 CHAIN AC#PPEL4 cnt.04.02
 ~Yes. And I must say that it may be quite interesting to teach this one. I'm glad she came to me.~
 EXIT
+
+// Eldathyn high priest and novice
+BEGIN ~AC#PPST4~
+CHAIN IF ~True()~ THEN AC#PPST4 hello_novice
+~Exalted Fallskeeper... why do we never carry weapons, even when others do? Isn’t peace worth defending?~
+==AC#PPEL4 ~Peace is not a thing we carry in our hands, but in our hearts. A blade can silence a voice—but never spread stillness.~
+==AC#PPST4 ~But what if someone brings violence to our grove? What if they don’t listen?~
+==AC#PPEL4 ~Then we listen more. Words can reach where arrows cannot. And if they strike, we do not answer with pain, but with presence.~
+==AC#PPST4 ~It feels... difficult. Like I must always be still, even when I want to cry out.~
+==AC#PPEL4 ~Stillness is not silence. You may weep, you may speak, but let your voice be like water: clear, and gentle, and strong.~
+==AC#PPST4 ~I will try. I don’t think I understand yet... but I will try.~
+==AC#PPEL4 ~Then you already walk her path. Eldath asks for no perfection—only the courage not to halt.~
+==AC#PPEL4 ~Go now, and let each step be as soft as falling rain.~  
+==AC#PPST4 ~Farewell, Exalted Fallskeeper. May my thoughts be still as the waters you’ve taught me to trust.~
+DO ~EscapeArea()~ EXIT

@@ -23,6 +23,9 @@
 @30 = ~Aunt Pesca~
 @31 = ~Oren Taval~
 @32 = ~Blightjaw Ankheg~
+@33 = ~Novice~
+@34 = ~Peaceman~
+@35 = ~Skann Delth~
 
 // spl files
 @900 = ~Water Divination~
@@ -42,6 +45,10 @@
 @1003 = ~The vesper vein grows only in cursed groves. Admired by evil alchemists and feared by druids, its beauty is matched only by its lethality. You must deliver one of these blossoms to Alatoasz Berendim in Duskwood Dell.~
 @1004 = ~Fungal Key~
 @1005 = ~This key is overgrown with grime and strange spores. It appears to open a very particular kind of door.~
+@1006 = ~Supplier's Note~
+@1007 = ~Skann, I need you to deliver a large shipment of my work to several interested parties. Meet me at the marked location near the edge of the Snakewood. Destroy this note so it doesn’t fall into the wrong hands.
+
+Delgorth~
 
 // script strings
 @2000 = ~Duskwood Dell~

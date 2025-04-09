@@ -2,6 +2,9 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPSKD.cre~ ~override~ // Skann Delth, poison seller
+  SAY NAME1 @35 SAY NAME2 @35
+
 COPY ~%MOD_FOLDER%/cre/AC#PPEL1.cre~ ~override~ // Eldath priest #1
   SAY NAME1 @10 SAY NAME2 @10
   
@@ -24,6 +27,12 @@ COPY ~%MOD_FOLDER%/cre/AC#PPELH.cre~ ~override~ // Eldath priest: area ACPP01 ho
   SAY NAME1 @12 SAY NAME2 @12
   
 COPY ~%MOD_FOLDER%/cre/AC#PPELR.cre~ ~override~ // Eldath priest: area ACPP01 random walker
+  SAY NAME1 @12 SAY NAME2 @12
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPST1.cre~ ~override~ // Eldath priest: area ACPP09 debating
+  SAY NAME1 @34 SAY NAME2 @34
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPST2.cre~ ~override~ // Eldath priest: area ACPP09 debating
   SAY NAME1 @12 SAY NAME2 @12
   
 COPY ~%MOD_FOLDER%/cre/AC#PPEL4.cre~ ~override~ // Eldath priest #4: Alatoasz Berendim, chief in duskwood dell
@@ -90,3 +99,6 @@ COPY ~%MOD_FOLDER%/cre/AC#PPMYS.cre~ ~override~ // Mystic mage
 COPY ~%MOD_FOLDER%/cre/AC#PPBJA.cre~ ~override~ // Blightjaw ankheg in area ACPP70
   SAY NAME1 @32 SAY NAME2 @32
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#ANKHEG_BROWN~))
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPST4.cre~ ~override~ // Novice
+  SAY NAME1 @33 SAY NAME2 @33

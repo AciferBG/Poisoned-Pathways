@@ -1,5 +1,9 @@
 // Path_of_Poison Item Files
 
+COPY ~%MOD_FOLDER%/itm/AC#PPMP1.itm~         ~override~    // note
+  SAY NAME2 @1006
+  SAY DESC  @1007
+
 COPY ~%MOD_FOLDER%/itm/AC#PPPBG.itm~         ~override~    // potion case
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBJ1.itm~         ~override~    // blightjaw ankheg ranged attack
