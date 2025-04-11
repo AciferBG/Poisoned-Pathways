@@ -37,8 +37,8 @@ IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. You know who I am, right?
 IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me—<CHARNAME>. I've brought down worse than you, and I don't need poison to do it. Think carefully about who you're dealing with.~ EXTERN AC#PPSKD threat_rep
 IF~GlobalGT("Linvail","GLOBAL",0)~THEN REPLY ~I work for the Shadow Thieves... and I doubt they'd be pleased to hear about your little side business.~ EXTERN AC#PPSKD work_shadow_thieves
 IF~GlobalGT("BodhiJob","GLOBAL",0)~THEN REPLY ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~ EXTERN AC#PPSKD work_bodhi
-IF~~THEN REPLY ~I won’t suffer a merchant of suffering. You’re done.~ EXTERN AC#PPSKD fight
-IF~~THEN REPLY ~Hmph. I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
+IF~~THEN REPLY ~I don’t deal with back-alley scum like you!~ EXTERN AC#PPSKD fight
+IF~~THEN REPLY ~I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
 
 CHAIN IF ~~ THEN AC#PPSKD threat_rep
 ~Oh, it's you? Now that you mention it—folks been whispering about some <PRO_RACE> like you from the North, stirring up trouble in the city...~

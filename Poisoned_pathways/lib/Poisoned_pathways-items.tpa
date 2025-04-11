@@ -1,5 +1,21 @@
 // Path_of_Poison Item Files
 
+COPY ~%MOD_FOLDER%/itm/AC#PPCO3.itm~         ~override~    // Corellon's amulet tutti
+  SAY NAME2 @1016
+  SAY DESC  @1017
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCO2.itm~         ~override~    // Corellon's amulet piece #2
+  SAY NAME2 @1014
+  SAY DESC  @1015
+
+COPY ~%MOD_FOLDER%/itm/AC#PPHD1.itm~         ~override~    // lover's head
+  SAY NAME2 @1012
+  SAY DESC  @1013
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCO1.itm~         ~override~    // Corellon's amulet piece #1
+  SAY NAME2 @1010
+  SAY DESC  @1011
+
 COPY ~%MOD_FOLDER%/itm/AC#PPBK1.itm~         ~override~    // book about keltormir
   SAY NAME2 @1008
   SAY DESC  @1009

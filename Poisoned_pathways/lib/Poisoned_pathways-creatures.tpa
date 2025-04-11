@@ -2,6 +2,9 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPBA1.cre~ ~override~ // Banshee in tower
+  SAY NAME1 @36 SAY NAME2 @36
+
 COPY ~%MOD_FOLDER%/cre/AC#PPSKD.cre~ ~override~ // Skann Delth, poison seller
   SAY NAME1 @35 SAY NAME2 @35
 
