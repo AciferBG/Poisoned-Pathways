@@ -48,23 +48,9 @@ COPY ~%MOD_FOLDER%/itm/AC#PPPX.itm~         ~override~    // Will-o'-pox's attac
   SAY NAME2 ~Will-o'-pox's attack~
   SAY DESC  ~Will-o'-pox's attack~
 
-COPY ~%MOD_FOLDER%/itm/AC#PPAM.itm~         ~override~    // Amulet
-  SAY NAME1 ~Necklace~
-  SAY NAME2 ~Alatoasz Berendim's Gold Necklace~
-  SAY DESC  ~This necklace was enchanted by Alatoasz Berendim, High Priest of Eldath. To empower it, he offered a portion of his own life force�a sacrifice made so that <CHARNAME> and those <PRO_HESHE> chooses to bring may stand a chance against a powerful priest of Talona.
-
-It is said that the amulet may serve as a conduit for arcane power, allowing a spellcaster to draw upon its energy to cast spells, even within the silence of a dead magic zone.
-
-STATISTICS:
-
-Equipped abilities:
-– Saving Throw vs. Necromancy: +5
-– Maximum Hit Points: +2
-
-Charge abilities:
-– Character wearing the amulet can remove wild magic zone effect and dead magic zone effect from one target and make that target immune to both these effects for the next 30 rounds (3 turns); these charges are never restored and when all are used, the amulet is destroyed.
-
-Weight: 0~
+COPY ~%MOD_FOLDER%/itm/AC#PPAM.itm~         ~override~    // Amulet of life
+  SAY NAME2 @1018
+  SAY DESC  @1019
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBE.itm~         ~override~    // Bell of Erlavanas Myth'yalv
   SAY NAME1 ~Bell~

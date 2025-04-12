@@ -498,6 +498,8 @@ END
 IF~~THEN REPLY ~No, I'm of very good health.~ EXTERN AC#PPBOY 01.01
 IF~~THEN REPLY ~Erm, I don't think so. Sorry.~ EXTERN AC#PPBOY 01.02
 IF~~THEN REPLY ~I'm not even going to answer that question. Goodbye.~ EXIT
+IF~~THEN REPLY ~How does a child like you end up in a place like this?~ EXTERN AC#PPBOY child
+
 
 CHAIN AC#PPBOY 01.01
 ~What—ew! It's not what I meant!~
@@ -506,6 +508,17 @@ EXTERN AC#PPBOY 01.03
 CHAIN AC#PPBOY 01.02
 ~Oh... okay. A pity, though.~
 EXTERN AC#PPBOY 01.03
+
+CHAIN AC#PPBOY child
+~I’m an orphan. The priests here took me in when I had nowhere else to go. They say the goddess doesn’t turn away even the smallest leaf caught in the current.~
+EXTERN AC#PPBOY what_about_worms
+
+	CHAIN IF ~~ THEN AC#PPBOY what_about_worms
+	~Anyway… are you gonna help me find worms, or not?~
+	END
+	IF~~THEN REPLY ~No, I'm of very good health.~ EXTERN AC#PPBOY 01.01
+	IF~~THEN REPLY ~Erm, I don't think so. Sorry.~ EXTERN AC#PPBOY 01.02
+	IF~~THEN REPLY ~I'm not even going to answer that question. Goodbye.~ EXIT
 
 CHAIN AC#PPBOY 01.03
 ~I REALLY want to catch some good fish and show everyone what a good fisher-boy I can be! But I need a nice fat worm to do that! Let me know if you find one!~
@@ -518,6 +531,7 @@ CHAIN IF ~Global("AC#PPWormQuest","GLOBAL",1)~ THEN AC#PPBOY 02.00
 ~Eh, still no luck with all that worm-hunting job. Seriously, how hard it can be. Where are all the worms when a man needs one! I've looked everywhere.~
 END
 IF~PartyHasItem("AC#PPWRM")~ THEN REPLY ~Guess what! I've got a worm for you.~ DO ~TakePartyItem("AC#PPWRM") DestroyItem("AC#PPWRM")~ EXTERN AC#PPBOY 02.01
+IF~~THEN REPLY ~How does a child like you end up in a place like this?~ EXTERN AC#PPBOY child
 IF~~THEN REPLY ~Patience. You'll find it, I feel it my guts.~ EXIT
 
 CHAIN AC#PPBOY 02.01
@@ -588,10 +602,11 @@ IF~~THEN REPLY ~Well, the decision is your. Just do whatever you think is right.
 IF~~THEN REPLY ~Keep it. If your hands get better, you will make a new emblem. But until then, you should have this one. You deserve it.~ EXTERN AC#PPMON 01.04
 
 CHAIN AC#PPMON 01.04
-~Thank you. And—I know it belonged to the Hight Priest. I need to go and thank him.~
-==AC#PPMON ~I feel you also deserve something, a reward. I... I found this on my way here, near some old forest ruins. I'm not sure what it is, but you should have it. Perhaps you'll find a way to fix this.~
-==AC#PPMON ~Goodbye.~
-DO ~GiveItemCreate("AC#PPEL1",Player1,1,0,0) TakePartyItem("AC#PPSYM") AddExperienceParty(4000) SetGlobal("AC#PPSymbolQuest","GLOBAL",2) EscapeArea()~ EXIT
+~You have shown compassion in a world that often forgets it. Such kindness is not only rare—it is sacred.~
+=
+~Please, take this. I have kept this necklace for many years. Its light is gentle, yet enduring... much like the path you now walk. May it strengthen your heart when shadows gather, and may it remind you that even small kindnesses ripple far.~
+==AC#PPMON ~Let mercy be your shield, and compassion your compass. Goobye.~
+DO ~GiveItemCreate("AC#PPAM",Player1,1,0,0) TakePartyItem("AC#PPSYM") AddExperienceParty(4000) SetGlobal("AC#PPSymbolQuest","GLOBAL",2) EscapeArea()~ EXIT
 
 CHAIN IF ~Global("AC#PPSymbolQuest","GLOBAL",2)~ THEN AC#PPMON 02.00
 ~I told our priest that I am thankful for the emblem you gave me. He offered he could teach me and I said yes.~
