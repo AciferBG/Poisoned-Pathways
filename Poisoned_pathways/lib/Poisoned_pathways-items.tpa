@@ -1,5 +1,13 @@
 // Path_of_Poison Item Files
 
+COPY ~%MOD_FOLDER%/itm/AC#PPWA.itm~         ~override~    // Singing Water of Eldath
+  SAY NAME2 @1022
+  SAY DESC @1023
+  
+COPY ~%MOD_FOLDER%/itm/AC#PPWA2.itm~         ~override~    // Springwater of Eldath
+  SAY NAME2 @1020
+  SAY DESC  @1021
+
 COPY ~%MOD_FOLDER%/itm/AC#PPCO3.itm~         ~override~    // Corellon's amulet tutti
   SAY NAME2 @1016
   SAY DESC  @1017
@@ -41,245 +49,92 @@ COPY ~%MOD_FOLDER%/itm/AC#PPKEY.itm~         ~override~    // key in boss area
   SAY DESC  @1005
   
 COPY ~%MOD_FOLDER%/itm/AC#PPWOW.itm~         ~override~    // Will-o'-wisp's attack
-  SAY NAME2 ~Will-o'-wisp's attack~
-  SAY DESC  ~Will-o'-wisp's attack~
+  SAY NAME2 @1024
+  SAY DESC  @1024
   
 COPY ~%MOD_FOLDER%/itm/AC#PPPX.itm~         ~override~    // Will-o'-pox's attack
-  SAY NAME2 ~Will-o'-pox's attack~
-  SAY DESC  ~Will-o'-pox's attack~
+  SAY NAME2 @1025
+  SAY DESC  @1025
 
 COPY ~%MOD_FOLDER%/itm/AC#PPAM.itm~         ~override~    // Amulet of life
   SAY NAME2 @1018
   SAY DESC  @1019
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBE.itm~         ~override~    // Bell of Erlavanas Myth'yalv
-  SAY NAME1 ~Bell~
-  SAY NAME2 ~Bell of Erlavanas Myth'yalv~
-  SAY UNIDENTIFIED_DESC ~Bells like these are music instruments. Bells most often have the shape of an empty cup. When struck, it vibrates in a single strong strike tone. Some noblemen and noblewomen also use this instrument to call their servants, but many artists wouldn't call it a proper use of such item.
-  
-STATISTICS:
-
-Weight: 0~
-  SAY DESC  ~This bell is an old elven instrument, bound witht the spirit of an elven traitor, Erlavanas Myth'yalv. He was once called the "Traitor of the Mythal". What exactly were his crimes, it is hard to say. Tales of this man never survived the trial of time. Unlike as his spirit, as it looks like this bell can still call him and force him to fight on the side of anyone that has this bell.
-
-STATISTICS:
-
-Charge abilities:
-– May call the spirit of Erlavanas Myth'yalv once per day
-
-Weight: 0~
+  SAY NAME1 @1026
+  SAY NAME2 @1027
+  SAY UNIDENTIFIED_DESC @1028
+  SAY DESC  @1029
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBER.itm~         ~override~    // creature's ring
-  SAY NAME1 ~Spectre's Ring~
-  SAY NAME2 ~Spectre's Ring~
+  SAY NAME1 @1030
+  SAY NAME2 @1030
 
 COPY ~%MOD_FOLDER%/itm/AC#PPHE.itm~         ~override~    // Helmet of Elven Chants
-  SAY NAME1 ~Helmet~
-  SAY NAME2 ~Helmet of Elven Chants~
-  SAY DESC  ~This helmet is known as Helmet of Elven Chants and was created by a powerful elven blacksmith. If legends are to be belived, when worn by elves, the helmet improves their natural abilities, as well as it allows to summon an old elven chant that will aid the one that wears this headgear and their allies.
-
-STATISTICS:
-
-Equipped abilities:
-– Protects against critical hits
-– Dexterity: +2 (elves only), +1 (half-elves only)
-
-Charge abilities:
-– May cast Chant once per day
-
-Weight: 0~
+  SAY NAME1 @1031
+  SAY NAME2 @1032
+  SAY DESC  @1033
 
 COPY ~%MOD_FOLDER%/itm/AC#PPSW.itm~         ~override~    // Blade of the Elven Mycologist
-  SAY NAME1 ~Longsword~
-  SAY NAME2 ~Blade of the Elven Mycologist +3~
-  SAY DESC  ~This sword used to belong to an elven mycologist, Vicjane Fol-Truvé. She was known to be one of the most skilled mycologists in Amn. While she knew how to fight myconids, she considered it her last resort, and she would rather try to communicate with them, study their culture. If she had no other choice, though, she would use that exact sword against them.
-
-STATISTICS:
-
-Equipped abilities: 
-– Magic Resistance: +5%
-– Armor Class vs. Myconids: +2
-– Saving Throws vs. Myconids: +2
-
-THAC0: +3
-Damage: 1d8+3, +1 acid damage, +1 fire damage
-Damage type: Slashing
-Speed Factor: 3
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 4~
+  SAY NAME1 @1034
+  SAY NAME2 @1035
+  SAY DESC  @1036
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBR.itm~         ~override~    // Berry-Shaped Ioun Stone
-  SAY NAME1 ~Ioun Stone~
-  SAY NAME2 ~Berry-Shaped Ioun Stone~
-  SAY UNIDENTIFIED_DESC ~This Ioun stone is shaped like a berry. Someone must have used magic to make it look like this.
-  
-STATISTICS:
-
-Weight: 0~
-  SAY DESC ~This Ioun stone was most likely created by a powerful cleric of Talona. It's shaped like a green berry and even has a sour scent that can remind some people of an unripe fruit.
-
-Some say that selected clerics of Talona used this Ioun stone when they planned on attacking other clerics in order to "get them out of their way". It's not surprising that good characters are unable to use this item.
-  
-STATISTICS:
-
-Combat abilities:
-– THAC0 vs. Clerics: +3
-
-Special abilities:
-– When in carried in the inventory or when equipped, this Ioun stone dispels fumes at the entrance to Myth Unnohyr's tower that prevent others from entering
-
-Weight: 0~
+  SAY NAME1 @1037
+  SAY NAME2 @1038
+  SAY UNIDENTIFIED_DESC @1039
+  SAY DESC @1040
 
 COPY ~%MOD_FOLDER%/itm/AC#PPLE.itm~         ~override~    // The Blessed Wyvern +3
-  SAY NAME1 ~Studded Leather~
-  SAY NAME2 ~The Blessed Wyvern +3~
-  SAY DESC ~This studded leather armor is known under the name The Blessed Wyvern and it is believed to protect its wearer by granting them regeneration, but it's also able to manipulate the probability thus it grants its user a boost of luck.
-  
-Some say it was named after a wyvern called Lucretia.
-  
-STATISTICS:
-
-Equipped abilities: 
-– Luck: +1
-– Regenerates 1 Hit Point per round
-
-Armor Class: 4 (2 vs. slashing, 3 vs. piercing and missile)
-Requires:
- 6 Strength
-
-Weight: 8~
-
-COPY ~%MOD_FOLDER%/itm/AC#PPWA.itm~         ~override~    // Singing Water of Eldath
-  SAY NAME1 ~Singing Water of Eldath~
-  SAY NAME2 ~Singing Water of Eldath~
-  SAY DESC ~This is a bottle of Singing Water of Eldath. It is one of the ingredients needed to create an antidote for a poison created by a mad priest of Talona.
-  
-STATISTICS:
-
-Weight: 1~
+  SAY NAME1 @1041
+  SAY NAME2 @1042
+  SAY DESC @1043
 
 COPY ~%MOD_FOLDER%/itm/AC#PPANT.itm~         ~override~    // Celestial Antidote
-  SAY NAME1 ~Celestial Antidote~
-  SAY NAME2 ~Celestial Antirode~
-  SAY DESC ~This is an antidote you created at Myth Unnohyr. It should be able to heal those poisoned by a powerful toxin created from flowers that grow at the ruins.
-  
-STATISTICS:
-
-Weight: 1~
+  SAY NAME1 @1044
+  SAY NAME2 @1045
+  SAY DESC @1046
 
 COPY ~%MOD_FOLDER%/itm/AC#PPRE.itm~         ~override~    // The Moss Shawl
-  SAY NAME1 ~Cloak~
-  SAY NAME2 ~The Moss Shawl~
-  SAY DESC ~This powerful shawl was created by dryad that fell in love with a human druidess. When she realized her feelings, she sang in her grove and as she melody and lyrics were weaving into a true song, so did this wonderful shawl. It's hard to say how exactly was that possible, but when the day come, the dryad was gone. When the druidess came to see her, she never found her friend, but instead, she found this item. From that day, she always wore it, and when she touched the mossy strings, it felt like touching hair of the dryad that once loved her.
-  
-STATISTICS:
-
-Charge abilities:
-– May cast Slow Poison once per day (on self)
-– May cast Zone of Sweet Air once per day (on self)
-
-Equipped abilities:
-– Armor Class: +2, +3 in the Wilderness
-– Saving Throws: +2, +3 in the Wilderness
-– Move Silently: +10%, +20 in the Wilderness
-
-Weight: 3~
+  SAY NAME1 @1047
+  SAY NAME2 @1048
+  SAY DESC @1049
 
 COPY ~%MOD_FOLDER%/itm/AC#PPFLW.itm~         ~override~    // Redhive Flower
-  SAY NAME1 ~Redhive Flower~
-  SAY NAME2 ~Redhive Flower~
-  SAY DESC ~This beautiful and sweet-smelling flower is a gift from a boy that lives in Darkwood Dell for his Aunt from Athkatla's Goverment District. He asked you to delived this flower and a message that he's fine and he needs some space.
-  
-STATISTICS: 
-
-Weight: 1~
+  SAY NAME1 @1050
+  SAY NAME2 @1050
+  SAY DESC @1051
 
 COPY ~%MOD_FOLDER%/itm/AC#PPWRM.itm~         ~override~    // earthworm
-  SAY NAME1 ~Earthworm~
-  SAY NAME2 ~Earthworm~
-  SAY DESC ~This earthworm smells of wet ground and... pumpkins. It looks very pink and it acts quite lively. Apart from that, there is nothing unusual about it.
-  
-STATISTICS: 
-
-Weight: 0~
+  SAY NAME1 @1052
+  SAY NAME2 @1052
+  SAY DESC @1053
 
 COPY ~%MOD_FOLDER%/itm/AC#PPSYM.itm~         ~override~    // Emblem
-  SAY NAME1 ~Emblem~
-  SAY NAME2 ~Emblem of Eldath~
-  SAY UNIDENTIFIED_DESC ~This is a simple emblem. It's not as strong as holy symbols, but it also seem to have some power.
-  
-STATISTICS:
-
-Weight: 0~
-  SAY DESC ~This emblem of Eldath was enchanted with subtle protection magic. It seems to protect those that have it from poison.
-  
-STATISTICS:
-
-Equipped abilities:
-– Immunity to Poison
-
-Weight: 1~
+  SAY NAME1 @1054
+  SAY NAME2 @1055
+  SAY UNIDENTIFIED_DESC @1056
+  SAY DESC @1057
 
 COPY ~%MOD_FOLDER%/itm/AC#PPEL1.itm~         ~override~    // Shield Fragment
-  SAY NAME1 ~Shield Fragment~
-  SAY NAME2 ~Shield Fragment~
-  SAY UNIDENTIFIED_DESC ~This looks like a central part of some shield. Without the other half, however, it's unusable.
-  
-STATISTICS:
-
-Weight: 0~
-  SAY DESC ~his looks like a central part of some shield. Without the other half, however, it's unusable.
-  
-STATISTICS:
-
-Weight: 0~
+  SAY NAME1 @1058
+  SAY NAME2 @1058
+  SAY UNIDENTIFIED_DESC @1059
+  SAY DESC @1060
 
 COPY ~%MOD_FOLDER%/itm/AC#PPEL2.itm~         ~override~    // Shield Fragment
-  SAY NAME1 ~Shield Fragment~
-  SAY NAME2 ~Shield Fragment~
-  SAY UNIDENTIFIED_DESC ~This looks like frame of some shield. Without the central part of it, however, it's unusable.
-  
-STATISTICS:
-
-Weight: 0~
-  SAY DESC ~This looks like frame of some shield. Without the central part of it, however, it's unusable.
-  
-STATISTICS:
-
-Weight: 0~
+  SAY NAME1 @1058
+  SAY NAME2 @1058
+  SAY UNIDENTIFIED_DESC @1061
+  SAY DESC @1061
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBUC.itm~         ~override~    // The Leafrunner +3
-  SAY NAME1 ~Buckler~
-  SAY NAME2 ~The Leafrunner +3~
-  SAY DESC ~This buckler is known as The Leafrunner. It was once used by a druid-protector known as Blasanna Leafrunner, and the item was named after her family name. One day, she had to defent her beloved grove and her family from a group of a gnoll army. The tales say that during the fight, she moved as quickly as a lightning, and she defeated half of the army herself. Rest of the gnolls run away, but she became a local hero.
-  
-Some suggest that her rapid moves were a result of holding this powerful buckler. Others say that it was nature that had her back, pushing her forward, no matter what. Some also say that those that wield this weapon can protect themselves fith wall of energy.
-
-STATISTICS:
-
-Charge abilities:
-– May cast Sanctuary once per day (on self)
-
-Equipped abilities:
-– Armor Class: +4
-– Grants only half of the Armor Class bonus vs. missiles and piercing attacks
-– Doubles movement rate
-– Saving Throws vs. Ivocation School: +2
-
-Requires:
- 4 Strength
-
-Weight: 2~
+  SAY NAME1 @1062
+  SAY NAME2 @1063
+  SAY DESC @1064
 
 COPY ~%MOD_FOLDER%/itm/AC#PPTEA.itm~         ~override~    // Herbal Brew in a Mug
-  SAY NAME1 ~Herbal Brew in a Mug~
-  SAY NAME2 ~Herbal Brew in a Mug~
-  SAY DESC ~This brew is made of chamomile, wild honey, blackberry and lavender. It's supposed to calm people down.
-  
-STATISTICS: 
-
-Weight: 2~
+  SAY NAME1 @1065
+  SAY NAME2 @1065
+  SAY DESC @1066

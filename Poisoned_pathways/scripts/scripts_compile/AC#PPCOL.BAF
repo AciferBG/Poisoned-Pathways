@@ -1,0 +1,35 @@
+IF
+    Clicked([ANYONE])
+    !Range(LastTrigger,10)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,14702)  // You are too far away to use that.
+END
+
+IF
+    Clicked([ANYONE])
+    Range(LastTrigger,10)
+    Global("ForgeAmulet","ACPP79",0)
+    OR(2)
+        !Contains("AC#PPCO1","Anvil")  // Amulet (1st Part)
+        !Contains("AC#PPCO2","Anvil")  // chain (2nd Part)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2005)  // ~You must place both pieces of the amulet upon the anvil to reforge them into one.~
+END
+
+IF
+    Clicked([ANYONE])
+    Range(LastTrigger,10)
+    Global("ForgeAmulet","ACPP79",0)
+    Contains("AC#PPCO1","Anvil") // Amulet (1st Part)
+    Contains("AC#PPCO2","Anvil") // chain (2nd Part)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2006)  // ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
+        CreateVisualEffect("spcrtwpn",[401.348])
+        Wait(2)
+        SetGlobal("ForgeAmulet","ACPP79",1)
+        TriggerActivation("Forgetrigger",FALSE)
+END
+

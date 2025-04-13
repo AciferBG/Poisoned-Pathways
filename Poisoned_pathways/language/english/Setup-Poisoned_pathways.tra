@@ -97,6 +97,207 @@ Equipped abilities:
 – Maximum Hit Points: +2  
 
 Weight: 0~
+@1020 = ~Springwater of Eldath~
+@1021 = ~Drawn from a spring where Eldath’s blessing flows undisturbed, this sacred draught carries more than mere healing. It is said that the water remembers the shape of peace—cleansing not only wounds and sickness, but also breaking curses that bind the soul.
+
+Those who drink of it feel not only restored in body, but unburdened—as though a gentle current carried their troubles away.
+
+STATISTICS:
+
+Special: Cures poison and disease, removes curses, and heals 5 Hit Points
+
+Weight: 1~
+@1022 = ~Singing Water of Eldath~
+@1023 =~This is a bottle of Singing Water of Eldath. It is one of the ingredients needed to create an antidote for a poison created by a priest of Talona.
+  
+STATISTICS:
+
+Weight: 1~
+@1024 = ~Will-o'-wisp's attack~
+@1025 = ~Will-o'-pox's attack~
+@1026 = ~Bell~
+@1027 = ~Bell of Erlavanas Myth'yalv~
+@1028 = ~Bells like these are music instruments. Bells most often have the shape of an empty cup. When struck, it vibrates in a single strong strike tone. Some noblemen and noblewomen also use this instrument to call their servants, but many artists wouldn't call it a proper use of such item.
+  
+STATISTICS:
+
+Weight: 0~
+@1029 = ~This bell is an old elven instrument, bound witht the spirit of an elven traitor, Erlavanas Myth'yalv. He was once called the "Traitor of the Mythal". What exactly were his crimes, it is hard to say. Tales of this man never survived the trial of time. Unlike as his spirit, as it looks like this bell can still call him and force him to fight on the side of anyone that has this bell.
+
+STATISTICS:
+
+Charge abilities:
+– May call the spirit of Erlavanas Myth'yalv once per day
+
+Weight: 0~
+@1030 = ~Spectre's Ring~
+@1031 = ~Helmet~
+@1032 = ~Helmet of Elven Chants~
+@1033 = ~This helmet is known as Helmet of Elven Chants and was created by a powerful elven blacksmith. If legends are to be belived, when worn by elves, the helmet improves their natural abilities, as well as it allows to summon an old elven chant that will aid the one that wears this headgear and their allies.
+
+STATISTICS:
+
+Equipped abilities:
+– Protects against critical hits
+– Dexterity: +2 (elves only), +1 (half-elves only)
+
+Charge abilities:
+– May cast Chant once per day
+
+Weight: 0~
+@1034 = ~Longsword~
+@1035 = ~Blade of the Elven Mycologist +3~
+@1036 = ~This sword used to belong to an elven mycologist, Vicjane Fol-Truvé. She was known to be one of the most skilled mycologists in Amn. While she knew how to fight myconids, she considered it her last resort, and she would rather try to communicate with them, study their culture. If she had no other choice, though, she would use that exact sword against them.
+
+STATISTICS:
+
+Equipped abilities: 
+– Magic Resistance: +5%
+– Armor Class vs. Myconids: +2
+– Saving Throws vs. Myconids: +2
+
+THAC0: +3
+Damage: 1d8+3, +1 acid damage, +1 fire damage
+Damage type: Slashing
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+@1037 = ~Ioun Stone~
+@1038 = ~Berry-Shaped Ioun Stone~
+@1039 = ~This Ioun stone is shaped like a berry. Someone must have used magic to make it look like this.
+  
+STATISTICS:
+
+Weight: 0~
+@1040 = ~This Ioun stone was most likely created by a powerful cleric of Talona. It's shaped like a green berry and even has a sour scent that can remind some people of an unripe fruit.
+
+Some say that selected clerics of Talona used this Ioun stone when they planned on attacking other clerics in order to "get them out of their way". It's not surprising that good characters are unable to use this item.
+  
+STATISTICS:
+
+Combat abilities:
+– THAC0 vs. Clerics: +3
+
+Special abilities:
+– When in carried in the inventory or when equipped, this Ioun stone dispels fumes at the entrance to Myth Unnohyr's tower that prevent others from entering
+
+Weight: 0~
+@1041 = ~Studded Leather~
+@1042 = ~The Blessed Wyvern +3~
+@1043 = ~This studded leather armor is known under the name The Blessed Wyvern and it is believed to protect its wearer by granting them regeneration, but it's also able to manipulate the probability thus it grants its user a boost of luck.
+  
+Some say it was named after a wyvern called Lucretia.
+  
+STATISTICS:
+
+Equipped abilities: 
+– Luck: +1
+– Regenerates 1 Hit Point per round
+
+Armor Class: 4 (2 vs. slashing, 3 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 8~
+@1044 = ~Celestial Antidote~
+@1045 = ~Celestial Antirode~
+@1046 = ~This is an antidote you created at Myth Unnohyr. It should be able to heal those poisoned by a powerful toxin created from flowers that grow at the ruins.
+  
+STATISTICS:
+
+Weight: 1~
+@1047 = ~Cloak~
+@1048 = ~The Moss Shawl~
+@1049 = ~This powerful shawl was created by dryad that fell in love with a human druidess. When she realized her feelings, she sang in her grove and as she melody and lyrics were weaving into a true song, so did this wonderful shawl. It's hard to say how exactly was that possible, but when the day come, the dryad was gone. When the druidess came to see her, she never found her friend, but instead, she found this item. From that day, she always wore it, and when she touched the mossy strings, it felt like touching hair of the dryad that once loved her.
+  
+STATISTICS:
+
+Charge abilities:
+– May cast Slow Poison once per day (on self)
+– May cast Zone of Sweet Air once per day (on self)
+
+Equipped abilities:
+– Armor Class: +2, +3 in the Wilderness
+– Saving Throws: +2, +3 in the Wilderness
+– Move Silently: +10%, +20 in the Wilderness
+
+Weight: 3~
+@1050 = ~Redhive Flower~
+@1051 = ~This beautiful and sweet-smelling flower is a gift from a boy that lives in Darkwood Dell for his Aunt from Athkatla's Goverment District. He asked you to delived this flower and a message that he's fine and he needs some space.
+  
+STATISTICS: 
+
+Weight: 1~
+@1052 = ~Earthworm~
+@1053 = ~This earthworm smells of wet ground and... pumpkins. It looks very pink and it acts quite lively. Apart from that, there is nothing unusual about it.
+  
+STATISTICS: 
+
+Weight: 0~
+@1054 = ~Emblem~
+@1055 = ~Emblem of Eldath~
+@1056 = ~This is a simple emblem. It's not as strong as holy symbols, but it also seem to have some power.
+  
+STATISTICS:
+
+Weight: 0~
+@1057 = ~This emblem of Eldath was enchanted with subtle protection magic. It seems to protect those that have it from poison.
+  
+STATISTICS:
+
+Equipped abilities:
+– Immunity to Poison
+
+Weight: 1~
+@1058 = ~Shield Fragment~
+@1059 = ~This looks like a central part of some shield. Without the other half, however, it's unusable.
+  
+STATISTICS:
+
+Weight: 0~
+@1060 = ~his looks like a central part of some shield. Without the other half, however, it's unusable.
+  
+STATISTICS:
+
+Weight: 0~
+@1061 = ~This looks like frame of some shield. Without the central part of it, however, it's unusable.
+  
+STATISTICS:
+
+Weight: 0~
+@1062 = ~Buckler~
+@1063 = ~The Leafrunner +3~
+@1064 = ~This buckler is known as The Leafrunner. It was once used by a druid-protector known as Blasanna Leafrunner, and the item was named after her family name. One day, she had to defent her beloved grove and her family from a group of a gnoll army. The tales say that during the fight, she moved as quickly as a lightning, and she defeated half of the army herself. Rest of the gnolls run away, but she became a local hero.
+  
+Some suggest that her rapid moves were a result of holding this powerful buckler. Others say that it was nature that had her back, pushing her forward, no matter what. Some also say that those that wield this weapon can protect themselves fith wall of energy.
+
+STATISTICS:
+
+Charge abilities:
+– May cast Sanctuary once per day (on self)
+
+Equipped abilities:
+– Armor Class: +4
+– Grants only half of the Armor Class bonus vs. missiles and piercing attacks
+– Doubles movement rate
+– Saving Throws vs. Ivocation School: +2
+
+Requires:
+ 4 Strength
+
+Weight: 2~
+@1065 = ~Herbal Brew in a Mug~
+@1066 = ~This brew is made of chamomile, wild honey, blackberry and lavender. It's supposed to calm people down.
+  
+STATISTICS: 
+
+Weight: 2~
+
+
 
 // script strings
 @2000 = ~Duskwood Dell~
@@ -104,4 +305,10 @@ Weight: 0~
 @2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~
 @2003 = ~As you approach the gate leading to the lower levels, you feel a flicker of magic. It seems the corrupted mythal does not reach into the depths—meaning your magic should function normally in the areas below.~
 @2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead silence.~
+@2005 = ~You must place both pieces of the amulet upon the anvil to reforge them into one.~
+@2006 = ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
+@2007 = ~Could it be you... my beloved, at last?~
+@2008 = ~A quiet relief washes over you—the corrupted mythal’s grip does not reach this place.~
+@2009 = ~(You feel the pull of the berry-shaped Ioun stone towards the tower. It may be a sign you are now able to enter its walls.)~
+@2010 = ~(You do not have the berry-shaped Ioun stone. You can no longer enter the tower. Without the stone, the barrier is erected.)~
 

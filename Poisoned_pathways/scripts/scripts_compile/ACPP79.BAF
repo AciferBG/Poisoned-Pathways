@@ -1,0 +1,24 @@
+IF
+    Global("EnteredArea","ACPP79",0)  
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2008)
+        SetGlobal("EnteredArea","ACPP79",1)  
+END
+
+IF
+    Global("ForgeAmulet","ACPP79",1)
+    Contains("AC#PPCO1","Anvil")  
+    Contains("AC#PPCO2","Anvil")  
+    Global("AnvilAmulet","ACPP79",0)
+THEN
+    RESPONSE #100
+        ActionOverride("Anvil",DestroyItem("AC#PPCO1"))  
+        ActionOverride("Anvil",DestroyItem("AC#PPCO2"))  
+        SetGlobal("AnvilAmulet","ACPP79",1)
+        ScreenShake([20.45],15)
+        ActionOverride("Anvil",CreateItem("AC#PPCO3",0,0,0))  // Amulet
+        Wait(2)
+        AddExperienceParty(1000)
+END
+

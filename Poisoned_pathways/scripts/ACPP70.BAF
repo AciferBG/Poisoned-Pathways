@@ -16,7 +16,7 @@ THEN
 RESPONSE #100
 TriggerActivation("TrACPP71",TRUE) 
 AmbientActivate("AC#PPPP",FALSE)
-DisplayStringHead(Player1,~(You feel the pull of the berry-shaped Ioun stone towards the tower. It may be a sign you are now able to enter its walls.)~)
+DisplayStringHead(Player1,@2009)
 SetGlobal("AC#PPOpenTowerNow","ACPP70",1)
 END
 
@@ -28,7 +28,7 @@ THEN
 RESPONSE #100
 TriggerActivation("TrACPP71",FALSE) 
 AmbientActivate("AC#PPPP",TRUE)
-DisplayStringHead(Player1,~(You do not have the berry-shaped Ioun stone. You can no longer enter the tower. Without the stone, the barrier is erected.)~)
+DisplayStringHead(Player1,@2010)
 SetGlobal("AC#PPOpenTowerNow","ACPP70",0)
 END
 
