@@ -1,11 +1,52 @@
 IF
-	Global("SetMusic","ACPP70",0)
+	Global("Prep","ACPP70",0)
 THEN
 RESPONSE #100
 	SetMusic(NIGHT,%AC#PP70%)
 	SetMusic(DAY,%AC#PP70%)
-	SetGlobal("SetMusic","ACPP70",1)
+  SpawnPtDeactivate("Spawn_gibberlings")
+  SpawnPtDeactivate("Spawn_wisps01")
+  SpawnPtDeactivate("Spawn_spiders01")  
+	SetGlobal("Prep","ACPP70",1)
 	Continue()
+END
+
+IF
+	GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
+  GlobalLT("ActivateSpawnPoints01","ACPP70",2)
+THEN
+RESPONSE #100
+  SpawnPtDeactivate("Spawn_gibberlings")
+	SetGlobal("ActivateSpawnPoints01","ACPP70",2)
+END
+
+IF
+	GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
+  GlobalLT("ActivateSpawnPoints02","ACPP70",2)
+THEN
+RESPONSE #100
+  SpawnPtDeactivate("Spawn_wisps01")
+  SpawnPtDeactivate("Spawn_spiders01")   
+	SetGlobal("ActivateSpawnPoints02","ACPP70",2)
+END
+
+IF
+	Dead("AC#PPZOT")
+  Global("ActivateSpawnPoints01","ACPP70",0)
+THEN
+RESPONSE #100
+  SpawnPtActivate("Spawn_gibberlings")
+	SetGlobal("ActivateSpawnPoints01","ACPP70",1)
+END
+
+IF
+	Dead("AC#PPWOW")
+  Global("ActivateSpawnPoints02","ACPP70",0)
+THEN
+RESPONSE #100
+  SpawnPtActivate("Spawn_wisps01")
+  SpawnPtActivate("Spawn_spiders01")  
+	SetGlobal("ActivateSpawnPoints02","ACPP70",1)
 END
 
 IF

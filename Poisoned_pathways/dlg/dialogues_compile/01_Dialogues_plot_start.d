@@ -2,6 +2,14 @@
 
 BEGIN ~AC#PPSKD~
 
+CHAIN IF ~StateCheck(Myself,STATE_CHARMED)~ THEN AC#PPSKD hello_charmed
+~Hey there, friends! Friends, right? You wanted to know where the nastiest poison comes from, didn’t you? Well—lucky you! I've got a map right here. It shows the spot where I usually meet the fella who brews the real stuff. But, listen—just a word of advice, friend to friend: don’t mess around with that guy—smile at him wrong, and you’ll be coughing blood.~ 
+=
+~Anyway... here's the map. Farewell for now. I’m feeling kinda dizzy all of a sudden. Think I’ll head to the tavern, get something strong to clear my head.~
+DO ~GiveItem("AC#PPMP1",LastTalkedToBy())
+ChangeEnemyAlly(Myself,NEUTRAL)
+EscapeAreaDestroy(2)~ EXIT
+
 CHAIN IF ~True()~ THEN AC#PPSKD hello_02
 ~Well now, what do we have here? You lookin’ for something that makes problems disappear... real quiet-like? I’ve got potions, powders, and little drips of doom—if your coin’s honest and your conscience ain’t too fussy.~
 END

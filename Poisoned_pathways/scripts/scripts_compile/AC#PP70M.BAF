@@ -5,5 +5,6 @@ THEN
     RESPONSE #100
         DisplayStringHead(Myself,@2004)  
         SetGlobal("DeadMagicInfo","ACPP70",1)
+        SetGlobal("AC#PP_GoMythal","GLOBAL",1)
 END
 

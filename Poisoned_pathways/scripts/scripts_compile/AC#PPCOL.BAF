@@ -10,6 +10,32 @@ IF
     Clicked([ANYONE])
     Range(LastTrigger,10)
     Global("ForgeAmulet","ACPP79",0)
+    Global("AmuletInfo","ACPP79",0)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2011)  
+        SetGlobal("AmuletInfo","ACPP79",1)
+END
+
+IF
+    Clicked([ANYONE])
+    Range(LastTrigger,10)
+    Global("ForgeAmulet","ACPP79",0)
+    Global("AmuletInfo","ACPP79",1)
+    !PartyHasItem("AC#PPCO1")  // Amulet (1st Part)
+    !PartyHasItem("AC#PPCO2")  // chain (2nd Part)
+    !Contains("AC#PPCO1","Anvil")  // Amulet (1st Part)
+    !Contains("AC#PPCO2","Anvil")  // chain (2nd Part)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2012)  
+        SetGlobal("AmuletInfo","ACPP79",2)
+END
+
+IF
+    Clicked([ANYONE])
+    Range(LastTrigger,10)
+    Global("ForgeAmulet","ACPP79",0)
     OR(2)
         !Contains("AC#PPCO1","Anvil")  // Amulet (1st Part)
         !Contains("AC#PPCO2","Anvil")  // chain (2nd Part)

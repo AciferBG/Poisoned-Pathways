@@ -1,4 +1,5 @@
 IF
+  Global("AC#PP_GoMythal","GLOBAL",1)
   OR(2)
       TimeOfDay(DUSK)
       TimeOfDay(NIGHT)
@@ -11,6 +12,7 @@ THEN
 END
 
 IF
+  Global("AC#PP_GoMythal","GLOBAL",1)
   OR(2)
       TimeOfDay(MORNING)
       TimeOfDay(DAY)

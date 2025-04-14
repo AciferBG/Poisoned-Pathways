@@ -305,10 +305,13 @@ Weight: 2~
 @2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~
 @2003 = ~As you approach the gate leading to the lower levels, you feel a flicker of magic. It seems the corrupted mythal does not reach into the depths—meaning your magic should function normally in the areas below.~
 @2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead silence.~
-@2005 = ~You must place both pieces of the amulet upon the anvil to reforge them into one.~
+@2005 = ~You must place both pieces of a necklace upon the anvil to reforge them into one.~
 @2006 = ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
 @2007 = ~Could it be you... my beloved, at last?~
 @2008 = ~A quiet relief washes over you—the corrupted mythal’s grip does not reach this place.~
 @2009 = ~(You feel the pull of the berry-shaped Ioun stone towards the tower. It may be a sign you are now able to enter its walls.)~
 @2010 = ~(You do not have the berry-shaped Ioun stone. You can no longer enter the tower. Without the stone, the barrier is erected.)~
+@2011 = ~A small jeweler’s anvil rests atop a larger one. Fragments of fine chains lie scattered nearby, as though many necklaces were once forged here. Strangely, the anvil radiates strong magic that seems untouched by the corrupted mythal.~
+@2012 = ~None of the items in your inventory appear suitable for crafting a necklace upon this anvil.~
+
 
