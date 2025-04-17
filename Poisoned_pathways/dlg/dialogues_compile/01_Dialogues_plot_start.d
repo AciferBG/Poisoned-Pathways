@@ -131,7 +131,7 @@ IF~~THEN REPLY ~Couldn’t have worked out better!~ EXTERN AC#PPEL2 bring_arrow_
 IF~~THEN REPLY ~Meaning?~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 
 CHAIN IF ~~ THEN AC#PPEL2 bring_arrow_duskwood_dell
-~With the poison in hand, we can study it! Well... not me anymore. That task falls to you now! I am sorry, <CHARNAME>. You must... you must bring this arrow, poison and all, to Most Exalted Fallskeeper Alatoasz Berendim, high priest of my order, in Duskwood Dell. He’ll know how to proceed.~
+~With the poison in hand, we can study it! Well... not me anymore. That task falls to you now! You must... must bring this arrow, poison and all, to Most Exalted Fallskeeper Alatoasz Berendim, high priest of my order, in Duskwood Dell. He’ll know how to proceed.~
 END
 IF~~THEN REPLY ~That's... a very long title.~ EXTERN AC#PPEL2 what_about_title
 IF~~THEN REPLY ~What about you? I thought you would be the one to work with me!~ EXTERN AC#PPEL2 what_about_you
@@ -236,43 +236,42 @@ IF~~THEN REPLY ~Gladly—if the pay is right.~ EXTERN AC#PPEL1 job
 IF~~THEN REPLY ~Find someone else for your troubles.~ EXTERN AC#PPEL1 bye
 
 CHAIN IF ~~ THEN AC#PPEL1 job
-~Firstly, let me thank you for this moment of your valuable time. I am Merethan, devoted servant of Eldath, the Mother Guardian of Groves.~ 
+~Thank you for this moment of your valuable time. I am Merethan, devoted servant of Eldath, the Mother Guardian of Groves.~ 
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Eldath’s servants are rare in times like these. I hope his words carry more than peaceful pleasantries.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Eldath! A gentle presence in a world far too fond of thunder.~
-== AC#PPEL1 ~Not long ago, you crossed paths with a man—Renfeld, if I recall the name. He’d been poisoned, left to suffer in silence. Let me be clear, I have nothing to do with that cruel act—I investigate this matter solely on behalf of the Church of Eldath. This poison and it's properties troubles me greatly, as it is not the first time someone has been targeted with a toxin for which no magical cure exists. That's what I think it was. A powerful thing, incurable by normal means.~
-== NaliaJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN  ~We cannot let people suffer because of this... thing!~
+== AC#PPEL1 ~Not long ago, you crossed paths with a poisoned man—Renfeld, if I recall correctly. The toxin used against him troubles me greatly, for it is not the first time someone has been afflicted with a poison that no magic can cure.~
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Incurable? How is that even possible? I think—no, I know there is a cure. There always is.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~It sounds like a crime against life itself. It's not as cutting down a tree, but corruption of all the water that runs under a forest.~
 == MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~If what this man is saying is truth, then we cannot ignore presence of such vile threat, <CHARNAME>.~
-== MinscJ  IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN  ~Oh, now Minsc wishes Dynaheir was here—she had such a strong wit! She knew how to defeat evil with all that thinking!~
-== AC#PPEL1 ~It’s as if the poison carries its own intent—subtle, but strong enough to assert itself upon the body.~
+== MinscJ  IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN  ~Oh, Minsc wishes Dynaheir was here—she had such a strong wit! She knew how to defeat evil with all that thinking!~
+== AC#PPEL1 ~This was no ordinary toxin. Its effects linger and resist healing in ways that defy what we know of alchemy and magic alike.~
 END
 IF~~THEN REPLY ~What do you mean?~ EXTERN AC#PPEL1 about_poison
 IF~~THEN REPLY ~Go on.~ EXTERN AC#PPEL1 about_poison
 
 CHAIN IF ~~ THEN AC#PPEL1 about_poison
-~I’m not saying the poison has a mind of its own, but it behaves unlike anything I’ve ever seen. It’s potent—and it carries a sense of wrongness I can’t explain.~
+~As you may know, most types of poison can be cured—or at least delayed—with simple clerical spells or quite common antidotes. But in this case, even the strongest divine magic has failed.~
 == HaerdaJ  IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~Well, it truly sounds like some dark rot tried to reach the hearts of men. 'Tis one of those rots, most likely, that need intervention made by those birds that aspire to being called heroes, hmm? Who knows, perhaps it's our raven that can fly that high.~
 == YoshJ IF ~InParty("yoshimo") !StateCheck("yoshimo",CD_STATE_NOTVALID)~ THEN ~It sounds like a gambit or trick that should never be used. Mayhap even too definitive even for a taste of bounty hunters, my friend.~
 == AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~It... it does. Even more than that. It sounds like wors nightmares coming true.~
 == ViconiJ  IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN  ~Mmm, it sounds like something that would be eagerly used by Matron Mothers. Natha elg'cahl phor jal elg'cahlen. A poison above all poisons.~
-== AC#PPEL1 ~As you may know, most types of poison can be cured—or at least delayed—with simple clerical spells or quite common antidotes. But in this case, even the strongest divine magic has failed. There is no antidote for this poison, for it resists all of our spells and common antidotes are too weak to aid those inflicted with this toxin. All we can do is offer comfort to the dying in their final breaths—or pray for a miracle that their body overcomes it on its own.~
+== AC#PPEL1 ~There is no antidote for this poison, for it resists all of our spells and common antidotes are too weak to aid those inflicted with this toxin. All we can do is offer comfort to the dying in their final breaths—or pray for a miracle that their body overcomes it on its own.~
 == DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~This poison sounds like something we could use ourselves.~
-== AC#PPEL1 ~Even still waters stir when danger draws near. This cannot be left unattended.~
+== AC#PPEL1 ~By the will of the Church of Eldath, I have been tasked to uncover the truth behind this poison. Even the calmest waters ripple when danger approaches—and this cannot be ignored.~
 END
 IF~~THEN REPLY ~Please, go on.~ EXTERN AC#PPEL1 about_poison_02
-IF~~THEN REPLY ~Sounds like something assassins would love to use!~ EXTERN AC#PPEL1 about_poison_02
+IF~~THEN REPLY ~Perfect poison for someone with a dagger and dark intentions!~ EXTERN AC#PPEL1 about_poison_02
 IF~~THEN REPLY ~Sounds... useful, this toxin.~ EXTERN AC#PPEL1 about_poison_02
 
 CHAIN IF ~~ THEN AC#PPEL1 about_poison_02
 ~I've seen this poison used by different factions, different people, ones that never worked together, nor they never even shared the same goals. There must be someone else behind it. Someone that is pleased to see how this thing speads and kills almost everyone on its way.~
 == AnomenJ  IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Different factions and people are ready to use this toxin? We should investigate this, <CHARNAME>.~
 == KeldorJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Just think how much more tense recent troubles can get if people just start using this poison agains each other.~
-== AC#PPEL1 ~We cannot just stand and let this poison kill another dozens or maybe even hundreds of people.~
+== AC#PPEL1 ~We cannot simply stand by and let this poison claim dozens—perhaps even hundreds—of lives.~
 END
-IF~~THEN REPLY ~How do you plan to find such a person?~ EXTERN AC#PPEL1 about_person
-IF~~THEN REPLY ~Let me guess: You want me to find this person for you.~ EXTERN AC#PPEL1 about_person
-IF~~THEN REPLY ~I think I know where this is going...~ EXTERN AC#PPEL1 about_person
+IF~~THEN REPLY ~How can we track down the one responsible?~ EXTERN AC#PPEL1 about_person
+IF~~THEN REPLY ~You need someone willing to confront this poison-maker, don't you?~ EXTERN AC#PPEL1 about_person
+IF~~THEN REPLY ~Sounds like you have a task in mind for me...~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~Let me interrupt you: I'm not interested in any of this. Just leave me be. Go and find someone else to deal with all that crap.~ EXTERN AC#PPEL1 bye
 
 CHAIN IF ~~ THEN AC#PPEL1 about_person
@@ -282,27 +281,21 @@ IF~~THEN EXTERN AC#PPEL1 first_task
 
 CHAIN IF ~~ THEN AC#PPEL1 first_task
 ~I may lack the... persuasive skills required in such dealings. You, however, may prove more capable in such matters.~
-=
-~Seek out the poison dealer in the slums of Athkatla. If you can discover the source of his supply, then I ask you to accompany me to confront the one behind it all. Just remember—I seek truth, not violence.~
+== ViconiJ  IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN  ~You worship peace, but send others to do your bidding when matters grow inconvenient?~
+== KORGANJ  IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN  ~Persuasion, eh? Nothing persuades better than a broken nose and a few missing teeth.~
+== JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~So even the faithful of the gentle goddess know when to call upon sharper tongues.~
+== NaliaJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN  ~We cannot let people suffer because of this... thing!~
+== AC#PPEL1 ~I kindly ask you to seek out a poison dealer named Skann Delth in the slums of Athkatla. If you can discover the source of his supply, then I ask you to accompany me to confront the one behind it all. Just remember—I seek truth, not violence.~
 END
 IF~~THEN REPLY ~Fine, I can do that.~ EXTERN AC#PPEL1 job_payment
 IF~~THEN REPLY ~What’s in it for me?~ EXTERN AC#PPEL1 job_payment
 IF~~THEN REPLY ~No, I won’t do it.~ EXTERN AC#PPEL1 job_payment
 
-/*
-CHAIN IF ~~ THEN AC#PPEL1 bodyguard
-~And this is where you come in. I’ve arranged a meeting with that man. But I am a priest of the Goddess of Peace—I do not know how to fight those like him, and I fear all of this may end up with a fight. I ask you to accompany me to the meeting, but remain in the background so as not to startle the stranger. I'll do the talking, but... if anything goes wrong, I'll need you. It is then that you should help me. My life may depend on this.~
-END
-IF~~THEN REPLY ~I can do that.~ EXTERN AC#PPEL1 job_payment
-IF~~THEN REPLY ~What’s in it for me?~ EXTERN AC#PPEL1 job_payment
-IF~~THEN REPLY ~No, I won’t do it.~ EXTERN AC#PPEL1 job_payment
-*/
-
 CHAIN IF ~~ THEN AC#PPEL1 job_payment
-~I do not expect you to act without reward. Gold means little to those of my faith, but I can offer you a number of soothing potions should you agree to assist me in this matter. Perhaps even more than that, perhaps I can organize something else—~
+~I do not expect you to act without reward. Gold means little to those of my faith, but I can offer you a number of soothing potions should you agree to assist me in this matter. Mayhap even more than that and I can organize something else...~
 END
 IF~~THEN REPLY ~Very well. I'm in.~ EXTERN AC#PPEL1 job_yes
-IF~~THEN REPLY ~No worries. I'll help you.~ EXTERN AC#PPEL1 job_yes
+IF~~THEN REPLY ~I'll help you.~ EXTERN AC#PPEL1 job_yes
 IF~~THEN REPLY ~No, I’m not doing this.~ EXTERN AC#PPEL1 bye_sure
 
 CHAIN IF ~~ THEN AC#PPEL1 bye_sure
@@ -312,7 +305,7 @@ IF~~THEN REPLY ~All right, I’ll help you.~ EXTERN AC#PPEL1 job_yes
 IF~~THEN REPLY ~I won’t help you.~ EXTERN AC#PPEL1 bye
 
 CHAIN IF ~~ THEN AC#PPEL1 job_yes
-~Excellent! The poison dealer is a nasty fellow named Skann Delth. He usually lingers on the roof of the Copper Coronet, boasting about his brews. Most of them are of little use—tricks and tinctures for fools. But you should insist you're looking for something truly dangerous. Try to find out where he gets his poison from.~
+~Excellent! Skann Delth usually lingers on the roof of the Copper Coronet, boasting about his brews. Most of them are of little use—tricks and tinctures for fools. But you should insist you're looking for something truly dangerous. Try to find out where he gets his poison from.~
 END
 IF~~THEN EXTERN AC#PPEL1 wait_bye
 

@@ -24,28 +24,6 @@ CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest2
 ~You'll find him in his chambers, in the rearmost tree by the water. Now go—and trouble others no more.~
 DO ~ReputationInc(-1) EscapeArea()~ EXIT
 
-
-/*
-CHAIN IF ~True()~ THEN AC#PPEL3 hello_01
-~Peace of the Goddess be upon you. Strangers like you rarely come here. This place can only be found by those who already know of it. How is it that you are here, and the Goddess has granted you passage?~ 
-END
-IF~~THEN REPLY ~I bring word that a follower of your faith has been poisoned by an unknown assailant. I carry an arrow here, so your order’s leader might trace the source of the poison.~ EXTERN AC#PPEL3 need_go_to_highpriest
-IF~~THEN REPLY ~There is a powerful foe specialized in poisons. Long story short: one of your people is dead and he sent us here.~ EXTERN AC#PPEL3 need_go_to_highpriest
-IF~~THEN REPLY ~There's new powerful thread, blah, blah, blah, people are going to die. I don't want to waste my time on you. Where's your leader. We need to speak to him.~ EXTERN AC#PPEL3 need_go_to_highpriest2
-
-CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest
-~By the Mother Guardian of Groves! So Merethan has failed in his mission? It is him that you speak of, right? This is dire news. Quickly—bring the poison to our High Priest! You’ll find him in his chambers, in the rearmost tree by the water. But take care not to harm yourself with the poison! Alatoasz will know what must be done.~
-== JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~We certainly hope so.~
-== CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~I believe Eldath wouldn't want to see any more of the nature's children sway and fall.~
-== RasaadJ IF ~InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN ~And we will gladly aid him with our knowledge and skills. This poison must be stopped.~
-== AC#PPEL3 ~May the Mother Guardian of Groves and Waters grant her blessing upon you.~
-DO ~EscapeArea()~ EXIT
-
-CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest2
-~You’ll find him in his chambers, in the rearmost tree by the water. Now excuse me.~
-DO ~ReputationInc(-1) EscapeArea()~ EXIT
-*/
-
 //////////////////////////////////////////////////////////////
 // First talk with Exalted Fallskeeper Alatoasz Berendim
 
@@ -70,7 +48,9 @@ IF~~THEN REPLY ~I prefered you reminded me why it scares you so much.~ EXTERN AC
 IF~~THEN REPLY ~He said it couldn’t be cured.~ EXTERN AC#PPEL4 about_poison2
 
 CHAIN IF ~~ THEN AC#PPEL4 about_poison
-~This poison—it seems to resist our magic and simple antidotes work to slowly to ensure the process of elimination of the toxin from an organism. Despite the grim circumstances, it is fortunate that you brought me a sample of this vile substance.~
+~Neither magic nor simple antidotes are swift enough to rid the body of this toxin. All our prayers, all our powers—none can turn back its corruption.~
+=
+~Yet there is hope. Despite these grim circumstances, it is a blessing that you have brought me a sample of this vile substance.~
 END
 IF~~THEN EXTERN AC#PPEL4 spell_poison
 
@@ -107,29 +87,32 @@ IF~~THEN REPLY ~Careful! I don’t want to lose a second Eldathyn.~ EXTERN AC#PP
 IF~~THEN REPLY ~Use at your own risk.~ EXTERN AC#PPEL4 poison_investigate_03
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_03
-~I know it may be dangerous but—we have no time, who knows what's going to happen if whoever is behind all of this will give or sell this toxin to even more dangerous men and women. So... now or never...~
-==AC#PPEL4 ~Hmm... the taste escapes clear memory, yet something lingers—bitter, sharp. And the scent... it's almost like a dream half-forgotten...~
+~I know the risk, but we have no time. If this toxin spreads to even more dangerous hands, the cost will be far greater. So... now or never.~
+==AC#PPEL4 ~The taste eludes clear memory—faint, almost ghostly. And the scent... it clings like the echo of a dream, fading even as I try to grasp it.~
 END
 IF~~THEN DO ~ApplySpellRES("AC#PPPN",Myself)~ EXTERN AC#PPEL4 poison_investigate_04
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_04
-~It’s a plant much like foxglove, though a bit more... bitter, more primal... I can sense how the numbness crawl down my throat, as if it wanted to go deeper, until it reaches my very core... Can it be—~
+~There is a bitterness, like foxglove, but something older lingers within it... something raw and untamed. The numbness spreads, slow and deliberate, reaching toward my heart. Could it be—~
 END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate_05
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_05
-~Of course! It must be the Vesper Vein—a rare elven plant! Highly toxic and revered by elves for millennia. But its poison is usually easily cured with magic—so why doesn't it work? It makes no sense.~
+~Of course! It must be the Vesper Vein—a rare elven plant! Highly toxic and revered by elves for millennia.~ 
+=
+~Yet its poison is usually easily cured by magic—so why does it fail now? It makes no sense.~ 
+END 
+IF~~THEN REPLY ~Good thing that stuff didn’t kill you too.~ EXTERN AC#PPEL4 no_matter
+IF~~THEN REPLY ~And you figured all that out by sniffing the arrow and tasting the poison?~ EXTERN AC#PPEL4 no_matter
+
+
+CHAIN IF ~~ THEN AC#PPEL4 no_matter
+~We often deal with poisons here. Many gravely ill souls come to us, and it falls to us to either heal them or guide them through death. Over time, we’ve gained unfortunate familiarity with some of the foulest substances in the Realms. But never have I encountered something like this. Well, no matter. For now, we know where our search must begin.~
 END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate_06
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_06
-~I suspect this rare poison originates near one of the ancient elven ruins. It was in those places that its presence was most often recorded—or, mayhap more truthfully, most deeply felt.~
-END
-IF~~THEN REPLY ~Good thing that stuff didn’t kill you too.~ EXTERN AC#PPEL4 poison_investigate_sure
-IF~~THEN REPLY ~And you figured all that out by sniffing the arrow and tasting the poison?~ EXTERN AC#PPEL4 poison_investigate_sure
-
-CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_sure
-~We often deal with poisons here. Many gravely ill souls come to us, and it falls to us to either heal them or guide them through death. Over time, we’ve gained unfortunate familiarity with some of the foulest substances in the Realms. But never have I encountered something quite like this.~
+~The plant used to create this poison grows only near the ruins of ancient elven cities, where the land still remembers the old magic.~
 END
 IF~~THEN REPLY ~So what’s next?~ EXTERN AC#PPEL4 poison_investigate_further
 IF~~THEN REPLY ~Your knowledge is... impressive!~ EXTERN AC#PPEL4 poison_investigate_further_b
@@ -161,20 +144,20 @@ IF~~THEN REPLY ~If you say it helps, I’ll fetch your book.~ EXTERN AC#PPEL4 to
 	CHAIN IF ~~ THEN AC#PPEL4 to_oghma
 	~In the meantime, I shall reflect further on the nature of this poison. You’ve been kind to bring me a sample... though it came at the cost of a good priest’s life.~
 	END
-	IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma
+	IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma_bye
 	IF~PartyHasItem("AC#PPSYM")~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me. I would like to return it to you.~ EXTERN AC#PPEL4 Merethan_emblem
 
-CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem
-~That is a noble gesture. Yes, I shall gladly take it back—so it may one day be passed to another worthy servant of the Green Goddess.~
-END
-IF~~THEN DO ~TakePartyItem("AC#PPSYM")
-SetGlobal("AC#PP_AlaHasSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_oghma
+		CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem
+		~That is a noble gesture. Yes, I shall gladly take it back—so it may one day be passed to another worthy servant of the Green Goddess.~
+		END
+		IF~~THEN DO ~TakePartyItem("AC#PPSYM")
+		SetGlobal("AC#PP_AlaHasSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_oghma_bye
 
 CHAIN IF ~~ THEN AC#PPEL4 to_oghma_bye
 ~I shall send a dove ahead to the Temple of Oghma—so their scribes may prepare the appropriate volume. Return to me once you have it. I will await you below, on the lower level of this tree. Eldath shall watch over you, my friend.~
 DO ~SetGlobal("AC#PPSpellCheckPoison","GLOBAL",2)
 SetGlobal("AC#PP_Oghma","GLOBAL",1)
-EscapeArea()~ EXIT
+EscapeAreaDestroy(2)~ EXIT
 
 //Third talk with Exalted Fallskeeper Alatoasz Berendim
 CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",3) GlobalGT("AC#PP_Oghma","GLOBAL",0)~ THEN AC#PPEL4 hello_03
@@ -222,7 +205,7 @@ IF~~THEN REPLY ~Not exactly a pleasant destination.~ EXTERN AC#PPEL4 poison_myth
 
 
 CHAIN AC#PPEL4 hello_03x
-~I'll wait here, then. Please, bring me the necklace, as otherwise, the quest may prove to be overwhelming, even for an experienced adventurer as yourself.~
+~I'll wait here, then.~
 EXIT
 
 CHAIN AC#PPEL4 hello_03b
@@ -286,25 +269,25 @@ IF~~THEN REPLY ~Maybe?~ EXTERN AC#PPEL4 malagent
 IF~~THEN REPLY ~I don't know and I don't care.~ EXTERN AC#PPEL4 malagent
 
 CHAIN IF ~~ THEN AC#PPEL4 malagent
-~A Malagent. That makes sense. That’s what the unholy priests of Talona call themselves. Do you know who Talona is?~
+~A Malagent! Of course. That fits perfectly. That’s what the unholy agents of Talona call themselves—poisoners, corrupters, bringers of decay. Do you know who Talona is?~
 END
 IF~~THEN REPLY ~Yes.~ EXTERN AC#PPEL4 talona_yes
 IF~~THEN REPLY ~No.~ EXTERN AC#PPEL4 talona_no
 
 CHAIN IF ~~ THEN AC#PPEL4 talona_no
-~Talona is the Mistress of Disease, the Lady of Poison. Her followers wander the world spreading suffering and decay—why not with a newly brewed poison? Her devotees are quite... inventive.~
+~Talona is the Lady of Poison and Mistress of Disease. Her followers wander the world spreading suffering and decay—why not with a newly brewed poison? Her devotees are quite... inventive.~
 END
 IF~~THEN EXTERN AC#PPEL4 talona_yes
 
 CHAIN IF ~~ THEN AC#PPEL4 talona_yes
-~Then you now know you are dealing with a follower of the Goddess of Poisons.~
+~Then we now know that our enemy serves none other than the Lady of Poisons herself.~
 END
 IF~~THEN REPLY ~And I’m to enter this blasted elven ruin.~ EXTERN AC#PPEL4 travel_ruin
 IF~~THEN REPLY ~...who brews poison within a dead magic zone in Myth Unnohyr.~ EXTERN AC#PPEL4 travel_ruin
 
 CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
 ~Exactly! In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
-==AC#PPEL4 ~Good luck, my friend. Go and stop the servant of the Talona, and mayhap, if possible, bring me the flower he used to create the poison. Mayhap I'll find a way to use it properly.~
+==AC#PPEL4 ~Go now, and put an end to the servant of Talona. Should you come across the flower he twisted to his ends, bring it to me. I shall seek to cleanse its purpose. May the blessings of Eldath guide your steps.~
 DO ~RevealAreaOnMap("ACPP70")
 SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
 SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
@@ -557,4 +540,4 @@ CHAIN IF ~True()~ THEN AC#PPST4 hello_novice
 ==AC#PPEL4 ~Then you already walk her path. Eldath asks for no perfection—only the courage not to halt.~
 ==AC#PPEL4 ~Go now, and let each step be as soft as falling rain.~  
 ==AC#PPST4 ~Farewell, Exalted Fallskeeper. May my thoughts be still as the waters you’ve taught me to trust.~
-DO ~EscapeArea()~ EXIT
+DO ~EscapeAreaDestroy(1)~ EXIT

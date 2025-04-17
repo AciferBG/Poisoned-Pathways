@@ -219,7 +219,7 @@ INCLUDE ~Poisoned_pathways/lib/Poisoned_pathways-items.tpa~
 // Portraits
 //
 ///////////////////////////////////////////////////////////////////////
-//COPY ~Poisoned_pathways/portraits/copy~         ~override~
+COPY ~Poisoned_pathways/portraits~         ~override~
 
 ///////////////////////////////////////////////////////////////////////
 // EFF files
