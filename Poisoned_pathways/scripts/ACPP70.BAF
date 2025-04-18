@@ -12,6 +12,40 @@ RESPONSE #100
 END
 
 IF
+  Global("ZombieAmbush","ACPP70",1)
+  Global("ZombieSpawn","ACPP70",20)
+THEN
+  RESPONSE #100
+      SetGlobal("ZombieAmbush","ACPP70",2)
+END
+
+IF
+  Global("ZombieAmbush","ACPP70",1)
+  Delay(3)
+THEN
+  RESPONSE #100
+      IncrementGlobal("ZombieSpawn","ACPP70",1)
+      CreateVisualEffect("SPFLESHS",[3781.1542])
+      CreateCreature("AC#PPZOM",[3781.1542],SSE)  // Mud Zombie
+      Continue()
+  RESPONSE #100
+      IncrementGlobal("ZombieSpawn","ACPP70",1)
+      CreateVisualEffect("SPFLESHS",[3921.1541])
+      CreateCreature("AC#PPZOM",[3921.1541],S)  // Mud Zombie
+      Continue()
+  RESPONSE #100
+      IncrementGlobal("ZombieSpawn","ACPP70",1)
+      CreateVisualEffect("SPFLESHS",[4127.1607])
+      CreateCreature("AC#PPZOM",[4127.1607],SW)  // Mud Zombie
+      Continue()
+  RESPONSE #100
+      IncrementGlobal("ZombieSpawn","ACPP70",1)
+      CreateVisualEffect("SPFLESHS",[3908.1869])
+      CreateCreature("AC#PPZOM",[3908.1869],NE)  // Mud Zombie
+      Continue()
+END
+
+IF
 	GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
   GlobalLT("ActivateSpawnPoints01","ACPP70",2)
 THEN

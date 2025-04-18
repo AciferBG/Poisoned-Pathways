@@ -1,0 +1,9 @@
+IF
+    Entered([PC])
+    Global("ZombieAmbush","ACPP70",0)
+    !StateCheck(LastTrigger,STATE_INVISIBLE)
+THEN
+    RESPONSE #100
+        SetGlobal("ZombieAmbush","ACPP70",1)
+END
+

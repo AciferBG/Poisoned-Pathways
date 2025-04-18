@@ -160,10 +160,10 @@ INCLUDE ~Poisoned_pathways/lib/add_music_acpp70.tph~
 INCLUDE ~Poisoned_pathways/lib/add_music_acpp01.tph~
 
 ///////////////////////////////////////////////////////////////////////
-//WAV files
+//sound files
 //
 ///////////////////////////////////////////////////////////////////////
-//COPY ~Poisoned_pathways/sounds/copy~         ~override~
+COPY ~Poisoned_pathways/sounds/copy~         ~override~
 //COPY ~Poisoned_pathways/sounds/%LANGUAGE%~ ~override~
 
 ///////////////////////////////////////////////////////////////////////

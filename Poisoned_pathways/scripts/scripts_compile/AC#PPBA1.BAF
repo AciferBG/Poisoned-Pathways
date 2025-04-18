@@ -5,8 +5,9 @@ THEN
     RESPONSE #100
         ClearAllActions()
         StartCutSceneMode()
+        CreateVisualEffectObject("SPFLESHS",Myself)
+        SmallWait(15)
         DisplayStringHead(Myself,@2007)
-        SwingOnce()       
+        SmallWait(15)
         StartDialogueNoSet([PC])
 END
-

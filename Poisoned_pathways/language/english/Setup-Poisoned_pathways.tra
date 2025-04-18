@@ -27,6 +27,17 @@
 @34 = ~Peaceman~
 @35 = ~Skann Delth~
 @36 = ~Naerwyn~
+@37 = ~Mud Zombie~
+
+
+// cre soundfiles
+@301 = ~~ [AC#PPEL1]
+@302 = ~~ [AC#PPEL2]
+@303 = ~~ [AC#PPEL3]
+@304 = ~~ [AC#PPEL4]
+@305 = ~~ [AC#PPEL5]
+@306 = ~~ [AC#PPEL6]
+@307 = ~~ [AC#PPEL7]
 
 // spl files
 @900 = ~Water Divination~

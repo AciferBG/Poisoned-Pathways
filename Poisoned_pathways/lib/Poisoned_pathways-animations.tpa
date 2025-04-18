@@ -32,6 +32,7 @@
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Zombie_Treant/exxx.ini~ ~override/%hexNumber%.ini~
   ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Zombie_Treant~ ~^.+\.bam$~ BEGIN
     COPY ~%BASH_FOR_FILESPEC%~ ~override~
+    COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Zombie_Treant/Zombie_treant_sounds~ ~override~
   END
 
 ///////////////////////////////////////////////////////////////////////////////
