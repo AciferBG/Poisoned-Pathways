@@ -240,11 +240,7 @@ CHAIN IF ~~ THEN AC#PPEL1 job
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Eldath’s servants are rare in times like these. I hope his words carry more than peaceful pleasantries.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Eldath! A gentle presence in a world far too fond of thunder.~
 == AC#PPEL1 ~Not long ago, you crossed paths with a poisoned man—Renfeld, if I recall correctly. The toxin used against him troubles me greatly, for it is not the first time someone has been afflicted with a poison that no magic can cure.~
-== JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Incurable? How is that even possible? I think—no, I know there is a cure. There always is.~
-== CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~It sounds like a crime against life itself. It's not as cutting down a tree, but corruption of all the water that runs under a forest.~
-== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~If what this man is saying is truth, then we cannot ignore presence of such vile threat, <CHARNAME>.~
-== MinscJ  IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN  ~Oh, Minsc wishes Dynaheir was here—she had such a strong wit! She knew how to defeat evil with all that thinking!~
-== AC#PPEL1 ~This was no ordinary toxin. Its effects linger and resist healing in ways that defy what we know of alchemy and magic alike.~
+== AC#PPEL1 ~This is no ordinary toxin. Its effects linger and resist healing in ways that defy what we know of alchemy and magic alike.~
 END
 IF~~THEN REPLY ~What do you mean?~ EXTERN AC#PPEL1 about_poison
 IF~~THEN REPLY ~Go on.~ EXTERN AC#PPEL1 about_poison
@@ -256,6 +252,10 @@ CHAIN IF ~~ THEN AC#PPEL1 about_poison
 == AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~It... it does. Even more than that. It sounds like wors nightmares coming true.~
 == ViconiJ  IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN  ~Mmm, it sounds like something that would be eagerly used by Matron Mothers. Natha elg'cahl phor jal elg'cahlen. A poison above all poisons.~
 == AC#PPEL1 ~There is no antidote for this poison, for it resists all of our spells and common antidotes are too weak to aid those inflicted with this toxin. All we can do is offer comfort to the dying in their final breaths—or pray for a miracle that their body overcomes it on its own.~
+== JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Incurable? How is that even possible? I think—no, I know there is a cure. There always is.~
+== CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~It sounds like a crime against life itself. It's not as cutting down a tree, but corruption of all the water that runs under a forest.~
+== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~If what this man is saying is truth, then we cannot ignore presence of such vile threat, <CHARNAME>.~
+== MinscJ  IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN  ~Oh, Minsc wishes Dynaheir was here—she had such a strong wit! She knew how to defeat evil with all that thinking!~
 == DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~This poison sounds like something we could use ourselves.~
 == AC#PPEL1 ~By the will of the Church of Eldath, I have been tasked to uncover the truth behind this poison. Even the calmest waters ripple when danger approaches—and this cannot be ignored.~
 END

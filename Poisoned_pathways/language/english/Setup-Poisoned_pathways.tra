@@ -31,13 +31,14 @@
 
 
 // cre soundfiles
-@301 = ~~ [AC#PPEL1]
-@302 = ~~ [AC#PPEL2]
-@303 = ~~ [AC#PPEL3]
-@304 = ~~ [AC#PPEL4]
-@305 = ~~ [AC#PPEL5]
-@306 = ~~ [AC#PPEL6]
-@307 = ~~ [AC#PPEL7]
+@301 = ~Peace walk with you.~ [AC#PPEL1]
+@302 = ~Let calm guide your hand.~ [AC#PPEL2]
+@303 = ~Eldath watches. Even in silence.~ [AC#PPEL3]
+@304 = ~I walk where water rests.~ [AC#PPEL4]
+@305 = ~Where words fail, quiet may heal.~ [AC#PPEL5]
+@306 = ~Lay down your fears, if only for a while.~ [AC#PPEL6]
+@307 = ~Peace be upon you, traveler.~ [AC#PPEL7]
+@308 = ~I hope to bring peace... someday.~ [AC#PPEL8]
 
 // spl files
 @900 = ~Water Divination~
