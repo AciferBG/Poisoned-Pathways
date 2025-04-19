@@ -7,7 +7,7 @@ THEN
 END
 
 IF
-    Global("AC#PPSymbolQuest","GLOBAL",2)
+    Global("AC#PPSymbolQuest","GLOBAL",10)
     Global("AC#PPSymbolQuest_C","GLOBAL",0)
 THEN
     RESPONSE #100

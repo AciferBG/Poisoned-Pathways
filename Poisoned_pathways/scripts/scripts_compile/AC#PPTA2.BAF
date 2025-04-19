@@ -1,0 +1,195 @@
+IF
+    See(NearestEnemyOf(Myself))
+    Global("prep","LOCALS",0)
+THEN
+    RESPONSE #100
+        ApplySpell(Myself,CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
+        ApplySpell(Myself,CLERIC_IRONSKIN)  // SPPR506.SPL (Iron Skins)
+        SetGlobal("prep","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_CHAOTIC_COMMANDS)  // SPPR508.SPL (Chaotic Commands)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CHAOTIC_COMMANDS)  // SPPR508.SPL (Chaotic Commands)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_REGENERATE)  // SPPR711.SPL (Regeneration)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_REGENERATE)  // SPPR711.SPL (Regeneration)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !Range(LastSeenBy(Myself),4)
+    HPPercentLT(Myself,60)
+    HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !Range(LastSeenBy(Myself),4)
+    HPPercentLT(Myself,10)
+    HaveSpell(CLERIC_HEAL)  // SPPR607.SPL (Heal)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_HEAL)  // SPPR607.SPL (Heal)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !Range(LastSeenBy(Myself),4)
+    HPPercentLT(Myself,30)
+    HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+END
+
+IF
+    StateCheck(Myself,STATE_POISONED)
+    HaveSpell(CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
+    HaveSpell(CLERIC_POISON)  // SPPR411.SPL (Poison)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
+        Spell(NearestEnemyOf(Myself),CLERIC_POISON)  // SPPR411.SPL (Poison)
+END
+
+IF
+    Allegiance(Myself,ENEMY)
+    Detect([PC])
+    !See(LastSeenBy(Myself))
+    HaveSpell(CLERIC_INVISIBILITY_PURGE)  // SPPR309.SPL (Invisibility Purge)
+THEN
+    RESPONSE #100
+        Spell(NearestEnemyOf(Myself),CLERIC_INVISIBILITY_PURGE)  // SPPR309.SPL (Invisibility Purge)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+THEN
+    RESPONSE #100
+        Spell(NearestEnemyOf(Myself),CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_CONJURE_ANIMALS)  // SPPR604.SPL (Conjure Animals)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CONJURE_ANIMALS)  // SPPR604.SPL (Conjure Animals)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_INSECT_PLAGUE)  // SPPR517.SPL (Insect Plague)
+THEN
+    RESPONSE #100
+        Spell(NearestEnemyOf(Myself),CLERIC_INSECT_PLAGUE)  // SPPR517.SPL (Insect Plague)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_CAUSE_CRITICAL_WOUNDS)  // SPPR510.SPL (Cause Critical Wounds)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CAUSE_CRITICAL_WOUNDS)  // SPPR510.SPL (Cause Critical Wounds)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("wave1","LOCALS",0)
+THEN
+    RESPONSE #100
+        AttackOneRound(NearestEnemyOf(Myself))
+        AttackOneRound(NearestEnemyOf(Myself))
+        AttackOneRound(NearestEnemyOf(Myself))
+        AttackOneRound(NearestEnemyOf(Myself))
+        SetGlobal("wave1","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_ANIMAL_SUMMONING_1)  // SPPR402.SPL (Animal Summoning I)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_ANIMAL_SUMMONING_1)  // SPPR402.SPL (Animal Summoning I)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+THEN
+    RESPONSE #100
+        Spell(NearestEnemyOf(Myself),CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_CONJURE_EARTH_ELEMENTAL)  // SPPR702.SPL (Conjure Earth Elemental)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CONJURE_EARTH_ELEMENTAL)  // SPPR702.SPL (Conjure Earth Elemental)
+END
+
+IF
+    See([GOODCUTOFF.0.0.0.0.SUMMONED])
+    HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("wave1","LOCALS",1)
+THEN
+    RESPONSE #100
+        AttackOneRound(LastSeenBy(Myself))
+        AttackOneRound(LastSeenBy(Myself))
+        AttackOneRound(LastSeenBy(Myself))
+        AttackOneRound(LastSeenBy(Myself))
+        SetGlobal("wave1","LOCALS",2)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_CLOAK_OF_FEAR)  // SPPR416.SPL (Cloak of Fear)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_CLOAK_OF_FEAR)  // SPPR416.SPL (Cloak of Fear)
+END
+
+IF
+    See([GOODCUTOFF.0.0.0.0.SUMMONED])
+    HaveSpell(CLERIC_HOLD_ANIMAL)  // SPPR305.SPL (Hold Animal)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_HOLD_ANIMAL)  // SPPR305.SPL (Hold Animal)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_FLAME_BLADE)  // SPPR206.SPL (Flame Blade)
+THEN
+    RESPONSE #100
+        Spell(Myself,CLERIC_FLAME_BLADE)  // SPPR206.SPL (Flame Blade)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+

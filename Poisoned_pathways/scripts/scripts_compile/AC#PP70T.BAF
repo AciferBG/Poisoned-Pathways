@@ -4,6 +4,7 @@ IF
     !StateCheck(LastTrigger,STATE_INVISIBLE)
 THEN
     RESPONSE #100
+        ReallyForceSpell(LastTrigger,WIZARD_GREASE)  // SPWI101.SPL (Grease)
         SetGlobal("ZombieAmbush","ACPP70",1)
 END
 

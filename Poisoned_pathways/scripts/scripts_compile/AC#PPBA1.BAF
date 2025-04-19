@@ -1,13 +1,12 @@
 IF
-    NumberOfTimesTalkedTo(0)
-    Allegiance(Myself,NEUTRAL)
+    Delay(3)
 THEN
+    RESPONSE #30
+        Swing()
+        Wait(6)
+    RESPONSE #30
+        Recoil()
+        Wait(6) 
     RESPONSE #100
-        ClearAllActions()
-        StartCutSceneMode()
-        CreateVisualEffectObject("SPFLESHS",Myself)
-        SmallWait(15)
-        DisplayStringHead(Myself,@2007)
-        SmallWait(15)
-        StartDialogueNoSet([PC])
+        Wait(6)                
 END

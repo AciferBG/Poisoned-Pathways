@@ -5,6 +5,7 @@ THEN
         CutSceneId(Player1)
         StartCutSceneMode()
         ClearAllActions()
+        DisplayStringHead(Myself,@2013)
         Wait(1)
         MoveViewPoint([710.360],VERY_FAST)
         MoveToPoint([710.310])
@@ -19,3 +20,4 @@ THEN
         EndCutSceneMode()
         ActionOverride("AC#PPTA2",StartDialogueNoSet(Player1))
 END
+

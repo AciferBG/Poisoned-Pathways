@@ -141,30 +141,52 @@ IF~~THEN REPLY ~Back to Athkatla, then.~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~I don’t usually run errands for books... but fine.~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~If you say it helps, I’ll fetch your book.~ EXTERN AC#PPEL4 to_oghma
 
-	CHAIN IF ~~ THEN AC#PPEL4 to_oghma
-	~In the meantime, I shall reflect further on the nature of this poison. You’ve been kind to bring me a sample... though it came at the cost of a good priest’s life.~
-	END
-	IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma_bye
-	IF~PartyHasItem("AC#PPSYM")~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me. I would like to return it to you.~ EXTERN AC#PPEL4 Merethan_emblem
+CHAIN IF ~~ THEN AC#PPEL4 to_oghma
+~In the meantime, I shall reflect further on the nature of this poison. You were kind enough to bring me a sample... though it came at the cost of a good priest’s life.~
+END
+IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma_bye
+IF~PartyHasItem("AC#PPSYM")~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem
 
-		CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem
-		~That is a noble gesture. Yes, I shall gladly take it back—so it may one day be passed to another worthy servant of the Green Goddess.~
-		END
-		IF~~THEN DO ~TakePartyItem("AC#PPSYM")
-		SetGlobal("AC#PP_AlaHasSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_oghma_bye
+CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem
+~Such emblems are usually passed from one priest to another. Yet for now, I know no one who should carry it. Keep it with you for the time being—mayhap we shall find a worthy soul to whom it may be entrusted.~
+END
+IF~~THEN REPLY ~I might know someone—Montrassa, the elder priestess. Her hands have grown too frail to craft her own emblem.~ EXTERN AC#PPEL4 emblem_montrassa
+IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma_bye
+
+CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa
+~Montrassa? She never spoke of such difficulty... but it makes perfect sense. A thoughtful suggestion! Give her the emblem, with my blessing. And afterward, please proceed to the Temple of Oghma in Athkatla, as we discussed.~
+END
+IF~~THEN DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_oghma_bye
 
 CHAIN IF ~~ THEN AC#PPEL4 to_oghma_bye
-~I shall send a dove ahead to the Temple of Oghma—so their scribes may prepare the appropriate volume. Return to me once you have it. I will await you below, on the lower level of this tree. Eldath shall watch over you, my friend.~
+~I shall send a dove ahead to the Temple of Oghma, so their scribes may ready the proper volume. Return to me once you have the book. I shall be waiting below, on the lower level of this tree. May Eldath's blessings guide your steps, my friend.~
 DO ~SetGlobal("AC#PPSpellCheckPoison","GLOBAL",2)
 SetGlobal("AC#PP_Oghma","GLOBAL",1)
 EscapeAreaDestroy(2)~ EXIT
 
-//Third talk with Exalted Fallskeeper Alatoasz Berendim
+// Third talk with Exalted Fallskeeper Alatoasz Berendim
 CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",3) GlobalGT("AC#PP_Oghma","GLOBAL",0)~ THEN AC#PPEL4 hello_03
-~<CHARNAME>! You’ve returned. Did you bring the book from the Temple of Oghma?~
+~<CHARNAME>! You have returned. Have you brought the book from the Temple of Oghma?~
 END
-IF~PartyHasItem("AC#PPBK1")~THEN REPLY ~Yes. Here it is.~ DO ~TakePartyItem("AC#PPBK1")~ EXTERN AC#PPEL4 read_book
-IF~~THEN REPLY ~Give me another moment. I’ll get back to you as soon as possible.~ EXTERN AC#PPEL4 hello_03x
+IF~PartyHasItem("AC#PPBK1")~THEN REPLY ~Yes, here it is.~ DO ~TakePartyItem("AC#PPBK1")~ EXTERN AC#PPEL4 read_book
+IF~~THEN REPLY ~Give me another moment. I’ll get back to you as soon as I can.~ EXTERN AC#PPEL4 hello_03x
+IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem_02
+
+CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem_02
+~Such emblems are usually passed from one priest to another. Yet at this moment, I know no one to whom it should be given. Hold onto it for now—perhaps we shall find a fitting bearer.~
+END
+IF~~THEN REPLY ~I believe I know someone—Montrassa, the elder priestess, whose hands can no longer craft her own.~ EXTERN AC#PPEL4 emblem_montrassa_02
+IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 hello_03x
+
+CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_02
+~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
+END
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye
+
+CHAIN AC#PPEL4 emblem_montrassa_bye
+~Do so. She will surely be uplifted by your kindness.~
+EXIT
+
 
 /*
 CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",3) Global("AC#PP_Oghma","GLOBAL",1)~ THEN AC#PPEL4 hello_03
