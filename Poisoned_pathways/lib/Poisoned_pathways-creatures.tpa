@@ -1,6 +1,28 @@
-// Creatures for %MOD_FOLDER%
+// Creatures
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
+
+//Creature
+
+COPY ~%MOD_FOLDER%/cre/AC#PPtme.cre~ ~override~
+  SAY NAME1 @40
+  SAY NAME2 @40
+
+COPY ~%MOD_FOLDER%/cre/AC#PPwys.cre~ ~override~
+  //SAY NAME1 ~Baby Wyvern~
+  //SAY NAME2 ~Baby Wyvern~
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPwos.cre~ ~override~
+  //SAY NAME1 ~Winter Wolf~
+  //SAY NAME2 ~Winter Wolf~
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPasu.cre~ ~override~
+  //SAY NAME1 ~Ankheg~
+  //SAY NAME2 ~Ankheg~
+
+COPY ~%MOD_FOLDER%/cre/AC#PPSN1.cre~ ~override~       // Viper
+  SAY NAME1 @38 SAY NAME2 @38
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#SNAKE_SMALL~))
 
 COPY ~%MOD_FOLDER%/cre/AC#PPZOM.cre~ ~override~ // Mud Zombie
   SAY NAME1 @37 SAY NAME2 @37
@@ -140,6 +162,9 @@ COPY ~%MOD_FOLDER%/cre/AC#PPPX.cre~ ~override~ // Will-o'-pox
   
 COPY ~%MOD_FOLDER%/cre/AC#PPOR2.cre~ ~override~ // Wadal Hrun
   SAY NAME1 @23 SAY NAME2 @23
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPOR3.cre~ ~override~ // Torvak Hrun
+  SAY NAME1 @39 SAY NAME2 @39
 
 COPY ~%MOD_FOLDER%/cre/AC#PPBOY.cre~ ~override~ // Henry (Boy)
   SAY NAME1 @24 SAY NAME2 @24

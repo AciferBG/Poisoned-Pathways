@@ -1,5 +1,7 @@
 //Poisonous_pathways 2da files
 
+COPY ~%MOD_FOLDER%/2da/copy~ ~override~
+
 APPEND ~MastArea.2da~
 ~ACPP01     value~
 UNLESS ~ACPP01~

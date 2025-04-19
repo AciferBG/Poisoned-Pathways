@@ -1,0 +1,12 @@
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    HaveSpell(ASSASSIN_POISON)  // SPCL423.SPL (Poison Weapon)
+    !Difficulty(EASIEST)
+    !CheckStat(Myself,4,SCRIPTINGSTATE4)
+    !StateCheck(Myself,STATE_SILENCED)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,ASSASSIN_POISON)  // SPCL423.SPL (Poison Weapon)
+END
+

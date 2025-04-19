@@ -117,7 +117,7 @@ COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
 // VVC files
 //
 ///////////////////////////////////////////////////////////////////////
-//COPY ~Poisoned_pathways/vvc/copy~         ~override~
+COPY ~Poisoned_pathways/vvc/copy~         ~override~
 
 ///////////////////////////////////////////////////////////////////////
 // Pro files
@@ -139,6 +139,62 @@ SAY NAME1 @901
 
 COPY ~Poisoned_pathways/spl/AC#PPWO2.spl~          ~override~
 SAY NAME1 @902
+
+COPY ~Poisoned_pathways/spl/AC#PPCP.spl~          ~override~
+SAY NAME1 @904
+
+COPY ~%MOD_FOLDER%/spl/AC#PPHAS.spl~ ~override~
+  SAY NAME1 @901
+
+COPY ~%MOD_FOLDER%/spl/AC#PPBES.spl~ ~override~
+  SAY NAME1 @901
+  
+// candle spells:
+COPY ~%MOD_FOLDER%/spl/AC#PPCC.spl~ ~override~
+  SAY NAME1 @1098
+  SAY NAME2 @1098
+  SAY UNIDENTIFIED_DESC @1100
+
+COPY ~%MOD_FOLDER%/spl/AC#PPCCX.spl~ ~override~
+  SAY NAME1 @1098
+  SAY NAME2 @1098
+  SAY UNIDENTIFIED_DESC @1100
+
+COPY ~%MOD_FOLDER%/spl/AC#PPCC1.spl~ ~override~
+  SAY NAME1 @1101
+  SAY UNIDENTIFIED_DESC #-1
+
+COPY ~%MOD_FOLDER%/spl/AC#PPCC2.spl~ ~override~
+  SAY NAME1 @1102
+  SAY UNIDENTIFIED_DESC #-1
+  
+COPY ~%MOD_FOLDER%/spl/AC#PPCC3.spl~ ~override~
+  SAY NAME1 @1103
+  SAY UNIDENTIFIED_DESC #-1
+
+COPY ~%MOD_FOLDER%/spl/AC#PPCC4.spl~ ~override~
+  SAY NAME1 @1104
+  SAY UNIDENTIFIED_DESC #-1
+
+COPY ~%MOD_FOLDER%/spl/AC#PPCC5.spl~ ~override~
+  SAY NAME1 @1105
+  SAY UNIDENTIFIED_DESC #-1
+  
+COPY ~%MOD_FOLDER%/spl/AC#PPCC6.spl~ ~override~
+  SAY NAME1 @1106
+  SAY UNIDENTIFIED_DESC #-1
+  
+COPY ~%MOD_FOLDER%/spl/AC#PPCC7.spl~ ~override~
+  SAY NAME1 @1107
+  SAY UNIDENTIFIED_DESC #-1
+  
+COPY ~%MOD_FOLDER%/spl/AC#PPCC8.spl~ ~override~
+  SAY NAME1 @1108
+  SAY UNIDENTIFIED_DESC #-1
+
+COPY ~%MOD_FOLDER%/spl/AC#PPCC9.spl~ ~override~
+  SAY NAME1 @1109
+  SAY UNIDENTIFIED_DESC #-1
 
 /*
 COPY ~Poisoned_pathways/spl/AC#PPWM.spl~         ~override~ // OLD wild magic spell effect in Myth Unnnohyr
@@ -194,6 +250,9 @@ COPY ~Poisoned_pathways/sto/AC#PPELS.sto~ ~override~  //tavern, sleeping place i
 SAY 0xc @952
 
 COPY ~Poisoned_pathways/sto/AC#PPPBG.sto~ ~override~  // potion case
+
+COPY ~%MOD_FOLDER%/sto/ac#pptme.sto~  ~override~ // Debbie's Undoubtful Weapons & Goods
+  SAY 0xc @953
 
 
 ///////////////////////////////////////////////////////////////////////

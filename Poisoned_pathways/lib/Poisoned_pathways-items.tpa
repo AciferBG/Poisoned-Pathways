@@ -1,9 +1,173 @@
-// Path_of_Poison Item Files
+// Item Files
+
+COPY ~%MOD_FOLDER%/itm/copy~         ~override~
+
+///////////////////////////////////////////
+///////// CANDLES AND SPELLS///////////////
+///////////////////////////////////////////
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC.itm~ ~override~
+  SAY NAME1 @1098
+  SAY NAME2 @1098
+  SAY DESC @1099
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC1.itm~ ~override~
+  SAY NAME1 @1110
+  SAY NAME2 @1110
+  SAY DESC @1111
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC2.itm~ ~override~
+  SAY NAME1 @1112
+  SAY NAME2 @1112
+  SAY DESC @1113
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC3.itm~ ~override~
+  SAY NAME1 @1114
+  SAY NAME2 @1114
+  SAY DESC @1115
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC4.itm~ ~override~
+  SAY NAME1 @1116
+  SAY NAME2 @1116
+  SAY DESC @1117
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC5.itm~ ~override~
+  SAY NAME1 @1118
+  SAY NAME2 @1118
+  SAY DESC @1119
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC6.itm~ ~override~
+  SAY NAME1 @1120
+  SAY NAME2 @1120
+  SAY DESC @1121
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC7.itm~ ~override~
+  SAY NAME1 @1122
+  SAY NAME2 @1122
+  SAY DESC @1123
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC8.itm~ ~override~
+  SAY NAME1 @1124
+  SAY NAME2 @1124
+  SAY DESC @1125
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC9.itm~ ~override~
+  SAY NAME1 @1126
+  SAY NAME2 @1126
+  SAY DESC @1127
+
+//stabilized
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC1.itm~ ~override/AC#PPCX1.itm~
+WRITE_LONG 0x34 800
+  SAY NAME1 @1128
+  SAY NAME2 @1128
+  SAY DESC @1129
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC2.itm~ ~override/AC#PPCX2.itm~
+WRITE_LONG 0x34 1600
+  SAY NAME1 @1130
+  SAY NAME2 @1130
+  SAY DESC @1131
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC3.itm~ ~override/AC#PPCX3.itm~
+WRITE_LONG 0x34 200
+  SAY NAME1 @1132
+  SAY NAME2 @1132
+  SAY DESC @1133
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC4.itm~ ~override/AC#PPCX4.itm~
+WRITE_LONG 0x34 800
+  SAY NAME1 @1134
+  SAY NAME2 @1134
+  SAY DESC @1135
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC5.itm~ ~override/AC#PPCX5.itm~
+WRITE_LONG 0x34 600
+  SAY NAME1 @1136
+  SAY NAME2 @1136
+  SAY DESC @1137
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC6.itm~ ~override/AC#PPCX6.itm~
+WRITE_LONG 0x34 800
+  SAY NAME1 @1138
+  SAY NAME2 @1138
+  SAY DESC @1139
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC7.itm~ ~override/AC#PPCX7.itm~
+WRITE_LONG 0x34 800
+  SAY NAME1 @1140
+  SAY NAME2 @1140
+  SAY DESC @1141
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC8.itm~ ~override/AC#PPCX8.itm~
+WRITE_LONG 0x34 600
+  SAY NAME1 @1142
+  SAY NAME2 @1142
+  SAY DESC @1143
+
+COPY ~%MOD_FOLDER%/itm/AC#PPCC9.itm~ ~override/AC#PPCX9.itm~
+WRITE_LONG 0x34 600
+  SAY NAME1 @1144
+  SAY NAME2 @1144
+  SAY DESC @1145
+  
+///////////////////////////////////////////
+///////// OTHER ITEMS///////////////
+///////////////////////////////////////////
+COPY ~%MOD_FOLDER%/itm/AC#PPMYT.itm~ ~override~
+  SAY NAME1 @1071
+  SAY NAME2 @1072
+  SAY DESC @1073
+
+COPY ~%MOD_FOLDER%/itm/AC#PPHAL.itm~ ~override~
+  SAY NAME1 @1075
+  SAY NAME2 @1076
+  SAY DESC @1077
+
+COPY ~%MOD_FOLDER%/itm/AC#PPSCO.itm~ ~override~
+  SAY NAME1 @1078
+  SAY NAME2 @1079
+  SAY DESC @1080
+
+COPY ~%MOD_FOLDER%/itm/AC#PPROB.itm~ ~override~
+  SAY NAME1 @1081
+  SAY NAME2 @1082
+  SAY DESC @1083
+
+COPY ~%MOD_FOLDER%/itm/AC#PPSTA.itm~ ~override~
+  SAY NAME1 @1084
+  SAY NAME2 @1085
+  SAY DESC @1086
+
+COPY ~%MOD_FOLDER%/itm/AC#PPROS.itm~ ~override~
+  SAY NAME1 @1087
+  SAY NAME2 @1087
+  SAY DESC @1088
+
+COPY ~%MOD_FOLDER%/itm/AC#PP2HA.itm~ ~override~
+  SAY NAME1 @1089
+  SAY NAME2 @1090
+  SAY DESC @1091
+
+COPY ~%MOD_FOLDER%/itm/AC#PPXBO.itm~ ~override~
+  SAY NAME1 @1092
+  SAY NAME2 @1093
+  SAY DESC @1094
+
+COPY ~%MOD_FOLDER%/itm/AC#PPBEA.itm~ ~override~
+  SAY NAME1 @1095
+  SAY NAME2 @1096
+  SAY DESC @1097
+
+COPY ~%MOD_FOLDER%/itm/AC#PPNT1.itm~         ~override~    // Delgorth's note
+  SAY NAME2 @1067
+  SAY DESC @1068
 
 COPY ~%MOD_FOLDER%/itm/AC#PPWA.itm~         ~override~    // Singing Water of Eldath
   SAY NAME2 @1022
   SAY DESC @1023
-  
+
 COPY ~%MOD_FOLDER%/itm/AC#PPWA2.itm~         ~override~    // Springwater of Eldath
   SAY NAME2 @1020
   SAY DESC  @1021

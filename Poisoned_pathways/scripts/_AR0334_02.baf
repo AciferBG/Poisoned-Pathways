@@ -1,0 +1,17 @@
+IF
+  Global("AC#PPForgeHide","GLOBAL",1) // player decided to craft item
+  Global("ForgeStuff","GLOBAL",1) // crafting cutscene has completed
+THEN
+  RESPONSE #100
+    SetGlobal("AC#PPForgeHide","GLOBAL",2)
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    TakePartyItemNum("MISC01",1) 
+    TakePartyItemNum("MISC52",1) 
+    TakePartyItemNum("MISC12",1)
+    DestroyItem("MISC01") 
+    DestroyItem("MISC52")
+    DestroyItem("MISC12")
+    GiveItemCreate("AC#PPBEA",Player1,1,0,0) // give completed item
+    SetGlobal("ForgeItem","GLOBAL",1) // will trigger "done crafting" dialogue state 57 from Cromwell
+    ActionOverride("wsmith01",StartDialogueNoSet([PC])) // resume dialogue with Cromwell
+END

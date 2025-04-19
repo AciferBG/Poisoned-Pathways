@@ -11,6 +11,15 @@ THEN
 END
 
 IF
+    GlobalGT("AC#PPFlowerDelivery","GLOBAL",0)
+    Global("AC#PPTravellingMerchant","GLOBAL",0)
+    THEN
+    RESPONSE #100
+    ForceRandomEncounterEntry("ACPP99","En")
+    SetGlobal("AC#PPTravellingMerchant","GLOBAL",1)
+    END
+
+IF
     !GlobalTimerNotExpired("NoFightTimer","ACPP01")
 THEN
     RESPONSE #100

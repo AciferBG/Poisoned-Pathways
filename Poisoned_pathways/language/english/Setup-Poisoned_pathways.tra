@@ -28,6 +28,9 @@
 @35 = ~Skann Delth~
 @36 = ~Naerwyn~
 @37 = ~Mud Zombie~
+@38 = ~Viper~
+@39 = ~Torvak Hrun~
+@40  = ~Debbie Gobblebubble~
 
 
 // cre soundfiles
@@ -45,11 +48,13 @@
 @901 = ~~
 @902 = ~Wisp's Flicker~
 @903 = ~Wild Magic~
+@904 = ~Cloud of Pestilence~
 
 //sto files
 @950 = ~Temple of Eldath~
 @951 = ~Wax and Wonder~
 @952 = ~The Leaves' Embrace~
+@953 = ~Debbie's Undoubtful Weapons & Goods~
 
 // itm files
 @1000 = ~Poisoned Arrow~
@@ -308,6 +313,554 @@ Weight: 2~
 STATISTICS: 
 
 Weight: 2~
+@1067 = ~Delgorth's Note~
+@1068 = ~The Blighted Ledger
+
+First Entry:
+The Vesper Vein... the legends were true. It blooms still amidst the shattered remnants of Myth Unnohyr, where dead magic festers and life warps. Each petal hums with quiet malice, steeped in a power neither divine nor mortal. Talona smiles upon my discovery.
+
+Second Entry:
+With painstaking effort, I have distilled the first batches of the toxin. Small quantities only—precious drops of death, born of the Vein’s purple heart. Already, the results have exceeded expectations: swift, incurable, a silencer of both flesh and spirit.
+
+Third Entry:
+My first shipments have been delivered to certain enemies of the Harpers. Petty lords, disillusioned sellswords, and those who see the Harpers' meddling as a threat to true balance. Let the self-righteous choke on their piousness.
+
+Fourth Entry:
+The Night Masks in Westgate see potential. They offer coin and bodies to spread the work, but they lack subtlety. I must tread carefully. The Zhentarim, ever watchful, may prove useful—if kept at arm’s length.
+
+Fifth Entry:
+The foundations here in Myth Unnohyr are firm enough—its wild and dead magic shields my work from unwanted eyes. Though I have managed to cultivate a few vines within the dead soil, they grow slowly, stubbornly, yielding but scant blossoms. At this rate, it will take seasons to produce enough toxin for the ambitions I nurture. I must seek a way to quicken their growth—or secure more hands willing to tend the cursed harvest.
+
+Sixth Entry:
+This Eldathyn interfered, and paid for his foolishness. Others may come, but the path is clear: the toxin will spread. It will seep into the veins of Faerûn’s mighty and humble alike. Talona’s will is woven into every trembling breath they take.
+
+Let the strong fall and the weak wither. Only decay is eternal!
+May all who breathe know suffering—and in their final, gasping moments, know Her name.
+
+— Malagent Delgorth
+~
+@1071 = ~Longsword~
+@1072 = ~The Remembrance of the Myths +5~
+@1073 = ~This blade once belonged to an elven knight, a hunter of the undead. The tales say that it was used in many battles and managed to pierce from armors and spells of vampires, liches, skeletal warriors and even was used in a fight agains a dracolich. It was during that battle, however, when the creature used all its power to smash the blade. The faith and the magic locked inside the blade manifested in a form of a spectral blade.
+
+From that day, the sword is no longer able to harm the living, but the spectral blade became even more powerful against undead enemies. It is able to hurt both corporeal and incorporeal monsters, as long as there is some undead woven into their existance. 
+
+For many years, the blade was lost, only to be found at the Duskwood Dell and given to <CHARNAME> so <PRO_HESHE> could use this weapon agains powerful undead monsters.
+
+STATISTICS:
+
+Charge abilities:
+– May cast False Dawn once per day
+
+Equipped abilities:
+– Infravision
+– Armor Class vs. Undead: +2
+– Saving Throws vs. Undead: +2
+– Turn Undead level: +2 (paladins and clerics only)
+
+Combat abilities:
+– Cannot harm any living creature, only the undead
+– Does not receive bonus damage from strength and critical hits does not deal any bonus damage
+– Has a 20% chance that an undead enemy hit by this weapon will suffer additional 2d8+5 fire damage (Save vs. Spells -5 to halve the damage)
+– Has a 10% chance that an undead enemy hit by this weapon will be instantly destroyed 
+
+THAC0: +5
+Damage: 2d8+5 (magic)
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+~
+
+@1075 = ~Headband~
+@1076 = ~Halo of Pus~
+@1077 = ~This headband, known as Halo of Pus, was used by an Angel of Decay, a powerful monster imprisoned under Myth Unnohyr. The item has a scent of rotting meat.
+  
+This magical halo may be used to spread a "gift" of decay, resulting in great pain and... to some it may be nothing less than a gift of death.
+
+STATISTICS:
+
+Charge abilities:
+– May cast Dolorous Decay once per day
+
+Equipped abilities:
+– Charisma: -1
+– Acid Resistance: +10%
+– There is a 25% chance that an attacker that succefully hits the wearer of this item will suffer 1d2 acid damage (Death Save -2 to negate)
+– May only be removed with a Remove Curse spell
+
+Weight: 1
+~
+@1078 = ~Dagger~
+@1079 = ~Scolopendra's Spit +3~
+@1080 = ~This powerful dagger is an ideal weapon for spellcasters, especially those that specialize in summonig all sorts of acidic creations and projectiles. It does not only improve caster's abilities, but also allows such adventurers to attack enemies from a distance.
+
+STATISTICS:
+
+Equipped abilities:
+– Decrease spellcasting time by 1
+– Immunity to poison
+
+Combat abilities:
+– Acid Damage dealt: +10%
+– Does allow to make both melee and ranged attacks
+
+THAC0: +3
+Damage (melee): 1d4+3 (piercing), +1 Acid damage
+Damage (ranged): 1d4+3 (acid)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1
+~
+@1081 = ~Robe~
+@1082 = ~Wyrd's Ended Slumber~
+@1083 = ~This robe is known as wyrd's Ended Slumber and it won't be very surprising to say that it was once used by a wyrd from Myth Unnohyr. It feels like it might have looked similar to one of the robes of archimagi, but it was clearly warped by time and wyrd's influence. 
+
+STATISTICS:
+
+Charge abilities:
+– May cast Haste once per day (self-centered)
+– May cast Melf's Minute Meteors once per day 
+
+Equipped abilities:
+– Armor Class: 5
+– Magic Resistance: +5%
+– Caster level (arcane): +4
+
+Weight: 6
+~
+@1084 = ~Staff~
+@1085 = ~Branch from the Duskwood Dell +3~
+@1086 = ~This quarstaff is a powerful weapon, created for those value balance and life. There still grean leaves grow from it, and while it's somewhat less efficient in fighting than other weapons of this enchantment, it has powerful healing properties.
+
+There are some symbols cut on the branch, which indicates that this weapon has been created as a tribute to Eldath. 
+
+STATISTICS:
+
+Charge abilities:
+– May cast Goodberry twice per day 
+– May cast Mass Cure once per day 
+
+Equipped abilities:
+– Regenerates 1 HP / 2 rounds
+– Maximum Hit Points: +20%
+– Saving Throws vs. Death: +2
+
+THAC0: +3
+Damage: 1d2 (non-lethal)
+Speed Factor: 2
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3
+~
+@1087 = ~Rose of Eldath~
+@1088 = ~This is a rose blossom, blessed by a priest of Eldath. Those that consume this flower are healed from the horrible effects of all usual poisons and heals over time.
+  
+STATISTICS:
+
+Special: Cures poison and heals 6 Hit Points over 1 round
+
+Weight: 1~
+@1089 = ~Two-Handed Sword~
+@1090 = ~Good Luck, Honeysuckle +4~
+@1091 = ~This powerful two-handed sword was once used by a ranger named Vala'll Stormneedle, a man known by all living near Larswood. He had a perfect life, perfect family, and a kind and loving wife, warioress Systianna. Each time Vala'll would live on a mission, she would kiss him in a cheek and tell him "good luck, honeysuckly" and would handle him his sord. Legends say that unlike many heroes, he managed to live up until they were both eighty years old. It was then that he lost his life to pneumonia.
+
+Some say that it is this sword that let him live for so long for ordinary human standards and those that spend most of their lives with a sword in their hands.
+  
+STATISTICS:
+
+Equipped abilities:
+– Luck: +1
+– Constitution: +1
+– Missile Damage resistance: +20% (rangers only)
+
+Combat abilities:
+– Each succesful hit has a 15% chance to lower target's luck by 1 point for 2 rounds (Save vs. Spell -4 to negate)
+
+THAC0: +4
+Damage: 1d10+4 (slashing)
+Speed Factor: 7
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 9~
+@1092 = ~Light Crossbow~
+@1093 = ~Thornshooter +1~
+@1094 = ~This crossbow can shoot its own magical thorns that are able to entangle the target.
+  
+The magic used to create this weapon, however, makes only singleclass druid use this crossbow.
+  
+STATISTICS:
+
+Equipped abilities:
+– Crossbow Proficiency is set to 1
+
+Combat abilities:
+– Does not nead ammunition, it shoots magic bolts
+– Each succesful hit has a 20% chance to entangle the enemy (Save vs. Spell -1 to negate)
+
+THAC0: +1
+Damage: 1d6+1 (missile)
+Speed Factor: 4
+Proficiency Type: Crossbow
+Type: Two-handed
+Requires:
+ 8 Strength
+
+Weight: 6~
+@1095 = ~Hide Armor~
+@1096 = ~4th Beast's Hide +3~
+@1097 = ~This magic hide armor was created from scraps of different scraps of animals: pelt of a winter wold, strengthened with parts of ankheg shell and wyvern scales. While the hide is the main part of the armor, and the other two seem to be used for the sake of it's durability and look, it's all been merged together with raw magic. 
+
+What is the fourth beast, if it's made mostly with parts of three different creatures? Well, the fourth beast is the one that wears it, as only such a person would be eager to wear this prmitive and somewhat bloody armor made of different scraps. No matter how powerful it is.
+
+STATISTICS:
+
+Charge abilities:
+– Once per day may summon one random creature (winter wolf, ankheg or baby wyvern)
+
+Combat abilities:
+– Physical damage resistance: +5%
+– Each succeful hit made against the wearer of the armor has 40% chance to apply +1 THAC0 bonus for 1 round (cumulative)
+
+Equipped abilities:
+– Open Locks: -10%
+– Find Traps: -10%
+– Pick Pockets: -10%
+– Move Silently: -20%
+
+Armor Class: 3 (5 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 35~
+@1098 = ~Create Mystic Candle~
+@1099 = ~Create Mystic Candle
+(Evocation)
+
+Level: 5
+Range: 0
+Duration: 24 hours
+Casting Time: 8
+Area of Effect: The caster
+Saving Throw: None
+
+This spell allows the caster to create one Mystic Candle that is able to hold special enchantment which may be trigger when the candle it used. That means the caster may use some power and other ingredients to store it in a form of a candle for later use. Each color candle has different effects:
+
+Red - Charm Person or Mammal
+Blue - Protection from Evil, 10' radius
+Purple - Know Alignment  
+Gold - Cure Medium Wounds
+Yellow - Command
+Green - Luck
+White - Neutralize Poison
+Silver - Draw Upon Holy Might
+Black - Doom
+
+The candle may be used by the caster or another character, provided they have at least 12 or more Wisdom. After twenty four hours passes, the candle is destroyed.
+
+* * *
+
+Note: This spell may be learned by mages, clerics and druids. Clerics and druids can learn it by using it through quick slot items. This spell cannot be cast from a scroll.
+~
+@1100 = ~Create Mystic Candle
+(Evocation)
+
+Level: 5
+Range: 0
+Duration: 24 hours
+Casting Time: 8
+Area of Effect: The caster
+Saving Throw: None
+
+This spell allows the caster to create one Mystic Candle that is able to hold special enchantment which may be trigger when the candle it used. That means the caster may use some power and other ingredients to store it in a form of a candle for later use. Each color candle has different effects:
+
+Red - Charm Person or Mammal (up to 3 targets)
+Blue - Protection from Evil, 10' radius
+Purple - Know Alignment (up to 3 targets)
+Gold - Cure Medium Wounds
+Yellow - Command (up to 3 targets)
+Green - Luck (up to 3 targets)
+White - Neutralize Poison
+Silver - Draw Upon Holy Might
+Black - Doom (up to 3 targets)
+
+The candle may be used by the caster or another character, provided they have at least 12 or more Wisdom. After twenty four hours passes, the candle is destroyed.
+~
+@1101 = ~Create Mystic Candle (Red)~
+@1102 = ~Create Mystic Candle (Blue)~
+@1103 = ~Create Mystic Candle (Purple)~
+@1104 = ~Create Mystic Candle (Gold)~
+@1105 = ~Create Mystic Candle (Yellow)~
+@1106 = ~Create Mystic Candle (Green)~
+@1107 = ~Create Mystic Candle (White)~
+@1108 = ~Create Mystic Candle (Silver)~
+@1109 = ~Create Mystic Candle (Black)~
+@1110 = ~Mystic Candle (Red)~
+@1111 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Charm Person or Mammal on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1112 = ~Mystic Candle (Blue)~
+@1113 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Protection From Evil, 10' Radius on self 
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1114 = ~Mystic Candle (Purple)~
+@1115 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Known Alignment on up to 3 targets 
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1116 = ~Mystic Candle (Gold)~
+@1117 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Cure Medium Wounds on 1 target
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1118 = ~Mystic Candle (Yellow)~
+@1119 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Command on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1120 = ~Mystic Candle (Green)~
+@1121 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Luck on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1122 = ~Mystic Candle (White)~
+@1123 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Neutralize Poison on 1 target
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1124 = ~Mystic Candle (Silver)~
+@1125 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Draw Upon Holy Might on self
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1126 = ~Mystic Candle (Black)~
+@1127 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This candle was created with a spell and will be destroyed 24 hours after its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Doom on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1128 = ~Mystic Candle (Red) - stabilized~
+@1129 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Charm Person or Mammal on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1130 = ~Mystic Candle (Blue) - stabilized~
+@1131 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Protection From Evil, 10' Radius on self 
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1132 = ~Mystic Candle (Purple) - stabilized~
+@1133 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Known Alignment on up to 3 targets 
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1134 = ~Mystic Candle (Gold) - stabilized~
+@1135 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Cure Medium Wounds on 1 target
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1136 = ~Mystic Candle (Yellow) - stabilized~
+@1137 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Command on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1138 = ~Mystic Candle (Green) - stabilized~
+@1139 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Luck on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1140 = ~Mystic Candle (White) - stabilized~
+@1141 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Neutralize Poison on 1 target
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1142 = ~Mystic Candle (Silver) - stabilized~
+@1143 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Draw Upon Holy Might on self
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+@1144 = ~Mystic Candle (Black) - stabilized~
+@1145 = ~Mystic candles are items that hold spells and which may be burnt to trigger that spell.
+  
+This version of the candle was stabilized by a profesional and won't be destroyed after 24 hours from its creation.
+
+STATISTICS:
+
+Special abilities:
+– May be used to cast Doom on up to 3 targets
+
+Requirement: 
+ 12 Wisdom
+ 
+Weight: 1~
+
 
 
 
