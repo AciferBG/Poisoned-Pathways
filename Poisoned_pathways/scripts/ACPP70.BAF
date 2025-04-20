@@ -4,6 +4,7 @@ THEN
 RESPONSE #100
 	SetMusic(NIGHT,%AC#PP70%)
 	SetMusic(DAY,%AC#PP70%)
+  OpenDoor("DOOR01")
   SpawnPtDeactivate("Spawn_gibberlings")
   SpawnPtDeactivate("Spawn_wisps01")
   SpawnPtDeactivate("Spawn_spiders01")  
