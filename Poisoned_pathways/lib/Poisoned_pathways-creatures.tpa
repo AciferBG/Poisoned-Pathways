@@ -2,7 +2,9 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
-//Creature
+COPY ~%MOD_FOLDER%/cre/AC#PPEAE.cre~ ~override~       // corrupted earth elemental
+  SAY NAME1 @41 SAY NAME2 @41
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#ELEMENTAL_EARTH_GRAY~))
 
 COPY ~%MOD_FOLDER%/cre/AC#PPtme.cre~ ~override~
   SAY NAME1 @40
