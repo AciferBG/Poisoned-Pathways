@@ -570,7 +570,7 @@ CHAIN IF ~GlobalLT("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 01.00
 ~Eldath watch over you, my friend... though my soul drifts heavy, like water burdened by storm.~
 END
 IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL",0) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
-IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I have spoken with Alatoasz. He agrees—you are worthy to bear Merethan’s emblem.~ EXTERN AC#PPMON 01.04
+IF~Global("AC#PPSymbolQuest","GLOBAL",2) Global("AC#PP_AlaAgreesSymbol","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I have spoken with Alatoasz. He agrees—you are worthy to bear Merethan’s emblem.~ EXTERN AC#PPMON 01.04
 IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem somewhat sad. Is something wrong?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
 IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
 IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye

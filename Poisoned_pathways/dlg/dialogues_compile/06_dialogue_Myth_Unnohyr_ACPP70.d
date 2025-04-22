@@ -1,6 +1,13 @@
 // Dialogue Banshee in ACPP76
 BEGIN ~AC#PPBA1~
 
+CHAIN IF ~Global("AC#PPBansheeHead","GLOBAL",1)~ THEN AC#PPBA1 hello_need_head
+~My mourning echoes through these shattered woods...~
+END
+IF~~THEN REPLY ~Die, undead wretch!~ EXTERN AC#PPBA1 fight
+IF~PartyHasItem("AC#PPHD1")~THEN REPLY ~I believe I’ve found your lover’s head.~ EXTERN AC#PPBA1 have_head
+IF~~THEN REPLY ~I’ll be going now.~ EXTERN AC#PPBA1 bye
+
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPBA1 hello_01
 ~Oh, my beloved... my beloved! Why did I take your life? What have I done? I could scream from grief!~
 END
@@ -29,7 +36,7 @@ CHAIN IF ~~ THEN AC#PPBA1 eternal_rest
 =
 ~With sorrow as my only companion, I retreated to this lonely spire… but even here, solace slips through my flowing hair like mist. If only I had his head—his beautiful face—to cradle in my arms once more... then perhaps I could sleep.~
 END
-IF~~THEN REPLY ~I’ll find it. I promise.~ EXTERN AC#PPBA1 search_head_bye
+IF~~THEN REPLY ~I’ll find your beloved one's head. I promise.~ EXTERN AC#PPBA1 search_head_bye
 IF~PartyHasItem("AC#PPHD1")~THEN REPLY ~Would this be the head you’re looking for?~ EXTERN AC#PPBA1 have_head
 
 CHAIN AC#PPBA1 search_head_bye

@@ -127,7 +127,7 @@ END
 IF~~THEN EXTERN AC#PPEL4 about_keltormir
 
 CHAIN IF ~~ THEN AC#PPEL4 about_keltormir
-~As you may know, the region now called the Lands of Intrigue was once a vast, continuous forest—home to the elven kingdom of Keltormir. The elves built splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right ruin.~
+~As you may know, the region now called the Lands of Intrigue was once a vast, continuous forest—home to the elven kingdom of Keltormir. The elves built splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
 END
 IF~~THEN REPLY ~And where should I begin the search?~ EXTERN AC#PPEL4 about_keltormir_02
 IF~~THEN REPLY ~Then let’s get to those ruins!~ EXTERN AC#PPEL4 about_keltormir_02
@@ -175,7 +175,7 @@ IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPL
 CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem_02
 ~Such emblems are usually passed from one priest to another. Yet at this moment, I know no one to whom it should be given. Hold onto it for now—perhaps we shall find a fitting bearer.~
 END
-IF~~THEN REPLY ~I believe I know someone—Montrassa, the elder priestess, whose hands can no longer craft her own.~ EXTERN AC#PPEL4 emblem_montrassa_02
+IF~Global("AC#PPSymbolQuest","GLOBAL",2)~THEN REPLY ~I believe I know someone—Montrassa, the elder priestess, whose hands can no longer craft her own.~ EXTERN AC#PPEL4 emblem_montrassa_02
 IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 hello_03x
 
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_02
@@ -255,8 +255,8 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
-~Myth Unnohyr was dedicated to the elven god Corellon Larethian, the Lord of Magic. A mysterious catastrophe caused the Mythal that protected the city to explode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dark void of dead magic by night.~
-== NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic zone AND dark void of dead magic? Wow. That's... encouraging. I'm being sarcasting, by the way.~
+~Myth Unnohyr was dedicated to an unknown elven god. A mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dark void of dead magic by night.~
+== NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic zone AND dark void of dead magic? Wow. That's... encouraging. I'm being sarcastic, by the way.~
 == AC#PPEL4 ~By day, it's chaos. By night, magic just... doesn't exist there. Not in the usual sense. Maybe innate metamagic held by some creatures or items could partially work, but... I don't know. It's a theory. And I wouldn't depend on untested ideas.~
 END
 IF~~THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_area
@@ -309,7 +309,7 @@ IF~~THEN REPLY ~...who brews poison within a dead magic zone in Myth Unnohyr.~ E
 
 CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
 ~Exactly! In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
-==AC#PPEL4 ~Go now, and put an end to the servant of Talona. Should you come across the flower he twisted to his ends, bring it to me. I shall seek to cleanse its purpose. May the blessings of Eldath guide your steps.~
+==AC#PPEL4 ~Go now, and put an end to the servant of Talona. Oh, one more thing: Should you come across the flower he twisted to his ends, bring it to me. I shall seek to cleanse its purpose and create an antidote. And now go. May the blessings of Eldath guide your steps.~
 DO ~RevealAreaOnMap("ACPP70")
 SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
 SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
@@ -556,10 +556,7 @@ CHAIN IF ~True()~ THEN AC#PPST4 hello_novice
 ==AC#PPEL4 ~Peace is not a thing we carry in our hands, but in our hearts. A blade can silence a voice—but never spread stillness.~
 ==AC#PPST4 ~But what if someone brings violence to our grove? What if they don’t listen?~
 ==AC#PPEL4 ~Then we listen more. Words can reach where arrows cannot. And if they strike, we do not answer with pain, but with presence.~
-==AC#PPST4 ~It feels... difficult. Like I must always be still, even when I want to cry out.~
-==AC#PPEL4 ~Stillness is not silence. You may weep, you may speak, but let your voice be like water: clear, and gentle, and strong.~
-==AC#PPST4 ~I will try. I don’t think I understand yet... but I will try.~
-==AC#PPEL4 ~Then you already walk her path. Eldath asks for no perfection—only the courage not to halt.~
-==AC#PPEL4 ~Go now, and let each step be as soft as falling rain.~  
-==AC#PPST4 ~Farewell, Exalted Fallskeeper. May my thoughts be still as the waters you’ve taught me to trust.~
+==AC#PPST4 ~I don’t think I understand yet... but I will try.~
+==AC#PPEL4 ~Then you already walk her path. Eldath asks for no perfection—only the courage not to halt. Go now, and let each step be as soft as falling rain.~  
+==AC#PPST4 ~Thank you for your guidance, Exalted Fallskeeper. I hope that one day I will come to understand Eldath's teachings in all her glory.~
 DO ~EscapeAreaDestroy(1)~ EXIT

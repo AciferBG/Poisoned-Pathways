@@ -82,25 +82,25 @@ Myth Rhynn
 Hidden deep within the Mytharan Woods, in the shadowed reaches of the Wealdath, lies Myth Rhynn, once a hallowed necropolis of the elves. Its mythal, unlike those of other elven cities, was not wrought for war or wonder, but for reverence. But the mythal is broken. Whether shattered by age, sacrilege, or forgotten sorrow, it no longer binds the dead to sleep. Now, shadows walk among the roots of ancient barrows, and unquiet spirits rise in the stillness. Even the elves who once came to honor their ancestors now avoid the place, for the broken threads of the mythal pull at their hearts, as if mourning its own fall. What was once a sacred resting place is now a sorrowful wound upon the forest—and a warning.
 
 Myth Unnohyr
-The darkest tale among the three, Myth Unnohyr was built within the shadowed valleys of Tethyr’s southern forests. Its magic was of growth, healing, and communion with wild nature. Yet long before the Time of Troubles, something unravelled. Elven lore speaks in whispers of forbidden rites—of a turning away from Corellon Larethian, whose grace once shielded the city. When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.
+The darkest tale among the three, Myth Unnohyr rose in the shadowed valleys of Tethyr’s southern forests. Its magic once fostered growth, healing, and deep communion with the natural world. Yet long before the Time of Troubles, something began to unravel. Elven lore speaks in hushed tones of a faltering divine bond—of a protector whose waning strength left the city's heart exposed. When that sacred power faded, the mythal shattered in silent despair, birthing a zone of wild and dead magic—a festering wound upon the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and the poisoned soil hums with restless malice.
 
 Myth Tellaren
 Far to the south, in lands now buried under the sands of the desert, stood Myth Tellaren. When the genie-lords of Calim and Memnon warred across the south, their chaos reached even the hidden places of the elves. Myth Tellaren’s mythal, strained by planar pressure and betrayal from within, fractured—and with it, the delicate magic that held the city aloft. The destruction was swift and near-total. Some say the ruin still exists beneath the shifting sands, frozen in a moment of magical collapse—its mythal broken, yet still pulsing faintly, like embers beneath ash.
 
 Though Keltormir has faded into myth, the echoes of its greatness endure. Where trees grow thick and stars fall strangely, where magic sings through stone or refuses to stir—there, the empire of leaves once stood. And perhaps, may rise again.~
 @1010 = ~Fragment of an Amulet~
-@1011 = ~This is a fragment of a pendant, depicting a rising moon—the sacred symbol of Corellon Larethian, elven god of magic and art. Though incomplete, the object seems subtly attuned to the corrupted mythal of Myth Unnohyr. When held, you feel a faint lessening of the oppressive force around you, as though the shattered weave recoils in recognition. Yet without the complete amulet, its power is limited, and it cannot fully shield you from the mythal’s lingering curse.~
+@1011 = ~This is a fragment of a pendant, depicting three intertwined golden rings—a sacred symbol once revered by an ancient elven guardian of magic and unity. Though incomplete, the fragment still resonates faintly with the corrupted mythal of Myth Unnohyr. When held, you feel the oppressive forces around you soften slightly, as if the fractured Weave remembers its original purpose. Yet without the full amulet, its protective strength remains useless.~
 @1012 = ~Head of an Elf~
 @1013 = ~This is the severed head of what was once a strikingly handsome elven man. Around his neck, strands of long, silken hair remain tightly coiled—still clinging to him in death. It appears he was strangled… not by rope or cord, but by someone’s hair.~  
-@1014 = ~Silver Chain~
-@1015 = ~This is a finely wrought silver chain, once bearing what must have been a splendid amulet. Sadly, the medallion is missing. Only a faint trace of magic lingers where it once rested, hinting at a greater purpose now lost to time.~
+@1014 = ~Golden Chain~
+@1015 = ~This is a finely wrought golden chain, crafted with meticulous care to once bear a splendid amulet. Though the medallion itself has been lost to time, the chain retains a faint, lingering trace of its ancient enchantment—a whisper of a forgotten duty to shield and preserve.~
 @1016 = ~Talisman of the First Binding~
-@1017 = ~Forged during the founding of Myth Unnohyr, this talisman was once attuned to the heart of the city’s mythal. Crafted in reverence to Corellon Larethian, it was meant to preserve the delicate harmony between divine grace and arcane design—a bond that was later shattered when the Weave collapsed in silent judgment.
+@1017 = ~Forged during the founding of Myth Unnohyr, this talisman bore the symbol of three intertwined rings, embodying harmony between divine power and arcane craft. It was created to anchor the city's mythal, a testament to the unity between faith and magic. 
 
-Though weathered by centuries, the talisman still carries a faint echo of its original sanctity. Thus, the wearer is shielded from the chaos of corrupted magic: both wild surges and the oppressive silence of dead magic lose their grip in the presence of this relic.
+Even as centuries of ruin dulled its brilliance, the talisman preserves a fragile echo of its former strength. In the presence of this relic, the wild surges and dead magic of the broken mythal falter, offering precious protection to those who dare walk the fallen city's shattered streets.
 
 Equipped abilities: 
-– Immunity to wild magic and dead magic zone effects in Myth UNnohyr
+– Immunity to wild magic and dead magic zone effects in Myth Unnohyr
 
 Weight: 0~
 @1018 = ~Necklace of Life~
@@ -880,7 +880,7 @@ May you fare better than I.~
 @2001 = ~Eldath, goddess of peace and calm waters~
 @2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~
 @2003 = ~As you approach the gate leading to the lower levels, you feel a flicker of magic. It seems the corrupted mythal does not reach into the depths—meaning your magic should function normally in the areas below.~
-@2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead silence.~
+@2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead magic.~
 @2005 = ~You must place both pieces of a necklace upon the anvil to reforge them into one.~
 @2006 = ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
 @2007 = ~Could it be you... my beloved, at last?~

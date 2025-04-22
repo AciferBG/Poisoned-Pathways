@@ -275,7 +275,7 @@ IF~~THEN REPLY ~Sounds like you have a task in mind for me...~ EXTERN AC#PPEL1 a
 IF~~THEN REPLY ~Let me interrupt you: I'm not interested in any of this. Just leave me be. Go and find someone else to deal with all that crap.~ EXTERN AC#PPEL1 bye
 
 CHAIN IF ~~ THEN AC#PPEL1 about_person
-~I’ve already tried to make contact with someone who might lead us to the one behind all this. There's a shady figure here in the slums of Athkatla who claims he can procure rare poisons. I pretended to be a potential buyer. Unfortunately, I couldn’t get him to reveal the whereabouts of his supplier. He grew wary—and afraid.~
+~I’ve already tried to make contact with someone who might lead us to the one behind all this. There's a shady figure here in the slums of Athkatla who claims he can procure rare poisons. I pretended to be a potential buyer. Unfortunately, I couldn’t get him to reveal the whereabouts of his supplier. He grew wary—and resentful.~
 END
 IF~~THEN EXTERN AC#PPEL1 first_task
 
@@ -285,7 +285,7 @@ CHAIN IF ~~ THEN AC#PPEL1 first_task
 == KORGANJ  IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN  ~Persuasion, eh? Nothing persuades better than a broken nose and a few missing teeth.~
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~So even the faithful of the gentle goddess know when to call upon sharper tongues.~
 == NaliaJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN  ~We cannot let people suffer because of this... thing!~
-== AC#PPEL1 ~I kindly ask you to seek out a poison dealer named Skann Delth in the slums of Athkatla. If you can discover the source of his supply, then I ask you to accompany me to confront the one behind it all. Just remember—I seek truth, not violence.~
+== AC#PPEL1 ~I kindly ask you to seek out this poison dealer named Skann Delth in the slums of Athkatla. If you can discover the source of his supply, then I ask you to accompany me to confront the one behind it all. Just remember—I seek truth, not violence.~
 END
 IF~~THEN REPLY ~Fine, I can do that.~ EXTERN AC#PPEL1 job_payment
 IF~~THEN REPLY ~What’s in it for me?~ EXTERN AC#PPEL1 job_payment

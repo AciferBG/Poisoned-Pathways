@@ -2,21 +2,10 @@
 BACKUP ~Poisoned_pathways/backup~
 AUTHOR ~Acifer~
 //README ~Poisoned_pathways/readme.Poisoned_pathways.%LANGUAGE%.html~ ~readme.Poisoned_pathways.english.html~
-VERSION ~BETA2~
+VERSION ~BETA3~
 
 ALWAYS
 
-/*
-  ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
-  
-  LAF HANDLE_CHARSETS
-  INT_VAR
-  infer_charset = 1
-  STR_VAR
-  tra_path = EVAL ~Poisoned_pathways/language~
-  reload_array = fl#reload
-  END
-*/
   ACTION_IF GAME_IS ~eet~ BEGIN
     OUTER_SET bg2_chapter = 12
   END ELSE BEGIN
@@ -104,14 +93,14 @@ COPY ~Poisoned_pathways/bam/copy~         ~override~
 
 COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
   
-/*
- COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/DAC#MITH.bam~ ~override~ // Mithril desc bam
+
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPBKD.bam~ ~override~ // Mithril desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1001.pvrz~
  END
  END
-*/
+
 
 ///////////////////////////////////////////////////////////////////////
 // VVC files
