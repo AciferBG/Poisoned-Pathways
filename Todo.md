@@ -27,9 +27,9 @@
     - [ ] Summoning the poison manifestation: it looks kinda poor, I think it would be cool if you could apply some of you visual magic. I wonder if that enemy should also have some unique abilities, now it just attacks and it's attacks apply poison. 
     - [ ] Summoning the poison manifestation: if we play a non-evil cleric, paladin or druid, we can also bless the flower and variable is set, but it has no effect on the fight. Perhaps if we also blessed it, the demon should be summoned slightly injured and player should be informed it's a result of this blessing?
 - [ ] *ACPP73.are*:
- - [ ] Alternative to angel of decay: Half-Baelnorn
-  - [ ] Concept: An elven baelnorn whose transformation was interrupted by the collapse of the mythal.
-  - [ ] Now bitter, frustrated, and magically bound to the ruins.
-  - [ ] Also carries a “Necklace of Mythrien”.
+    - [ ] Alternative to angel of decay: Half-Baelnorn
+    - [ ] Concept: An elven baelnorn whose transformation was interrupted by the collapse of the mythal.
+    - [ ] Now bitter, frustrated, and magically bound to the ruins.
+    - [ ] Also carries a “Necklace of Mythrien”.
 
 
