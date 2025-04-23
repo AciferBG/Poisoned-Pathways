@@ -39,8 +39,7 @@ CHAIN IF ~~ THEN AC#PPSKD tell_me
 END
 IF~~THEN REPLY ~Tell me where you get it from!~ EXTERN AC#PPSKD not_telling_bye
 IF~~THEN REPLY ~Please, just tell me.~ EXTERN AC#PPSKD not_telling_bye
-IF~CheckStatLT(LastTalkedToBy,18,STR)~THEN REPLY ~I’ve left bigger fish than you face-down in alleyways. You really want to test me?~ EXTERN AC#PPSKD not_telling_bye
-IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~I’ve left bigger fish than you face-down in alleyways. You really want to test me?~ EXTERN AC#PPSKD threat_rep
+IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~You see my strength? I’m not here to ask politely. Tell me what I need to know... or regret it.~ EXTERN AC#PPSKD threat_rep
 IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. You know who I am, right? Maybe ask around what happens to those who cross me.~ EXTERN AC#PPSKD threat_rep
 IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me—<CHARNAME>. I've brought down worse than you, and I don't need poison to do it. Think carefully about who you're dealing with.~ EXTERN AC#PPSKD threat_rep
 IF~GlobalGT("Linvail","GLOBAL",0)~THEN REPLY ~I work for the Shadow Thieves... and I doubt they'd be pleased to hear about your little side business.~ EXTERN AC#PPSKD work_shadow_thieves

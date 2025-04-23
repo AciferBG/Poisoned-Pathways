@@ -1,4 +1,13 @@
 IF
+    NumberOfTimesTalkedTo(0)
+    See([PC])
+THEN
+    RESPONSE #100
+        Wait(1)
+        StartDialogueNoSet([PC])
+END
+
+IF
     !GlobalTimerNotExpired("OH_Cast","LOCALS")
     HaveSpell(ASSASSIN_POISON)  // SPCL423.SPL (Poison Weapon)
     !Difficulty(EASIEST)
