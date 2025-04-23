@@ -1,5 +1,38 @@
 // Dialogue sidechars in Duskwood Dell
 
+// Dialogue Mannatarv 
+BEGIN ~AC#PPMAN~
+
+IF ~True()~ THEN BEGIN 0
+  SAY ~Welcome, traveler. Few arrive in Duskwood Dell by chance. What brings you beneath these boughs?~
+  IF ~~ THEN REPLY ~What is this place?~ GOTO chain_place
+  IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
+END
+
+IF ~~ THEN BEGIN bye
+  SAY ~Then may your path be soft beneath your feet, and your spirit undisturbed.~
+  IF ~~ THEN EXIT
+END
+CHAIN IF ~~ THEN AC#PPMAN chain_place
+~This is Duskwood Dell—a hidden glade nurtured by the faith of Eldath, the goddess of still waters and quiet groves. Do you wish to know more?~
+END
+ IF ~~ THEN REPLY ~Yes, tell me more.~ GOTO chain_place_more
+ IF ~~ THEN REPLY ~No, I should be on my way.~ GOTO bye
+  
+CHAIN IF ~~ THEN AC#PPMAN chain_place_more 
+~Duskwood Dell was never founded—it revealed itself, as if waiting to be found. Discovered by the first Peacewalkers when the world beyond these woods grew heavy with grief and steel. They sought not escape, but a silence that could soothe what battle had broken.~
+==AC#PPMAN ~They built no walls. The trees have embraced us ever since. We sleep in hammocks between the limbs, our breath shared with wind and leaf.~
+END
+ IF ~~ THEN REPLY ~And what is the purpose of this place?~ GOTO chain_place_more_02
+ IF ~~ THEN REPLY ~You've given me much to reflect on. Farewell.~ GOTO bye
+ 
+CHAIN IF ~~ THEN AC#PPMAN chain_place_more_02
+~This is no place of hiding, but of healing. Peace is not weakness—it is the will to let go of burden, blade, and bitterness. You will find no temples of carved stone here. Only open sky, and the gentle song of streams below.~
+END  
+  IF ~~ THEN REPLY ~That’s enough wisdom for now. Time to move on.~ EXTERN AC#PPMAN bye
+
+
+
 // Two Eldathyn priests debating
 
 BEGIN AC#PPST1 

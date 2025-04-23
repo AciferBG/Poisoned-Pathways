@@ -8,7 +8,9 @@ CHAIN IF ~True()~ THEN AC#PPEL3 hello_01
 END
 IF~~THEN REPLY ~I bring word that a follower of your faith has been poisoned by an unknown assailant. I carry an arrow here, so your order’s leader might trace the source of the poison.~ EXTERN AC#PPEL3 need_go_to_highpriest
 IF~~THEN REPLY ~There is a dangerous foe—skilled in poisons. Long story short: One of your people has fallen, and he sent us here before his end.~ EXTERN AC#PPEL3 need_go_to_highpriest
-IF~~THEN REPLY ~Some threat, some poison, dying people... look, I don’t have time for pleasantries. Just point me to your leader.~ EXTERN AC#PPEL3 need_go_to_highpriest2
+IF~~THEN REPLY ~Some threat, some poison, dying people... look, I don’t have time for pleasantries. Just point me to your leader.~ EXTERN AC#PPEL3 need_go_to_highpriest
+IF~~THEN REPLY ~Honestly? One of yours is dead, and now I’m the one cleaning up the mess because you're all too weak to act. Where’s your spineless leader hiding?~
+ EXTERN AC#PPEL3 need_go_to_highpriest2
 
 CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest
 ~By the Mother Guardian of Groves! Then Merethan has fallen? It is him you speak of, yes? This is grave news indeed...~ 
