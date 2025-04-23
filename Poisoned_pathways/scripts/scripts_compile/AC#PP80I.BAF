@@ -1,0 +1,25 @@
+IF
+    Clicked([ANYONE])
+    GlobalGT("AC#PPChapter6Quest","GLOBAL",0)    
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2015)  
+END
+
+IF
+    Clicked([ANYONE])
+    Race(LastTrigger,ELF)
+    Global("AC#PPChapter6Quest","GLOBAL",0)    
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2016) 
+END
+
+IF
+    Clicked([ANYONE])
+    Global("AC#PPChapter6Quest","GLOBAL",0)    
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2014) 
+END
+

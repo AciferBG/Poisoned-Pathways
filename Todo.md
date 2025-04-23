@@ -1,17 +1,10 @@
 # Poisonous Pathways – To-Do List
 
-## General
 - [ ] add desc bams
 - [ ] Rewrite descriptions for damaged armor and shield – they still reference the Iron Crisis.
-- [ ] Create additional dialogues in Area ACPP01.are
+- [ ] Create some additional dialogues in Duskwood Dell
 - [ ] better soundsets for the Eldathyns
 - [ ] Animation after Ilmater's cleric's blessing does not disappear. Actually, both blessings could get a visual boost, they look too simple.
-
-
----
-
-## Myth Unnohyr
-
 - [ ] wild magic / dead magic scripts sometimes fail to trigger correctly.
 - [ ] *ACPP70.are*: 
   - [ ] Refine spawn points and improve enemy balancing.
@@ -28,8 +21,7 @@
     - [ ] Summoning the poison manifestation: if we play a non-evil cleric, paladin or druid, we can also bless the flower and variable is set, but it has no effect on the fight. Perhaps if we also blessed it, the demon should be summoned slightly injured and player should be informed it's a result of this blessing?
 - [ ] *ACPP73.are*:
     - [ ] Alternative to angel of decay: Half-Baelnorn
-    - [ ] Concept: An elven baelnorn whose transformation was interrupted by the collapse of the mythal.
-    - [ ] Now bitter, frustrated, and magically bound to the ruins.
-    - [ ] Also carries a “Necklace of Mythrien”.
+      - [ ] Concept: An elven baelnorn whose transformation was interrupted by the collapse of the mythal. Now bitter, frustrated, and magically bound to the ruins. Also carries a “Necklace of Mythrien”.
+    - [ ] It would be great if the entry travel region t this area would depict some sort of small staircase
 
 

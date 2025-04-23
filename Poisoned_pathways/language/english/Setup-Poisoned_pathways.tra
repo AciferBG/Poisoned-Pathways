@@ -868,9 +868,83 @@ Yet not all is chaos. Certain beings—Will-o'-Wisps among them—seem curiously
 Before my strength failed me, I theorized that an artifact could be fashioned—one woven with echoes of the original Mythal's purity—to shield its bearer from these wild tides. Whether such a talisman can truly be made, I shall not live to see.
 
 May you fare better than I.~
+@1147 = ~Peacewalker's stories I~
+@1148 = ~"The Still Water Within"
 
+As penned by Lirael of the Gentle Banks, Keeper of the Silent Pool
 
+I was but young when first I wandered deep into the Wood of Sharp Teeth.
+The elders had warned me: "Not all who walk beneath the green honor life."
+Yet my heart knew no fear, only the call to carry Eldath’s peace wherever my steps would take me.
 
+For three nights I slept beneath the starlit canopy, the whispering leaves singing wind-songs to my soul. But on the fourth evening, as mists crept low and cold between the trunks, I came upon him—the ogre Brughul, who sought to feed his god with blood.
+
+A calf, bound and trembling, lay near his fire. Brughul towered like two men, his club glistening with old stains. I could have fled. I could have struck with spell or flame.
+
+But I did what Eldath had always taught: I sat.
+
+Simply that. Cross-legged. Palms open. Heart bare.
+And I began to sing.
+
+No warcry. No enchantment. Just the old lullaby of the quiet water.
+
+“No blood shall quench as calm as light,
+Drawn from a spring so pure and bright.
+No scream shall ever bring release,
+But silence sows the seeds of peace.”
+
+His rage faltered. The beast stepped forward. I heard his breath, heavy and confused. His grip loosened. The club dropped to moss. Then — silence.
+
+And the soft splash of the calf as it stumbled into shallow water and was gone.
+
+When I opened my eyes, I was alone.
+
+They say a ring of white lilies grows there now, though none bloomed before.
+And if you sit, and breathe, and wait… you may yet hear the last note of my song, carried on the wind that knows no violence.
+
+(Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
+@1149 = ~Peacewalker's stories II~
+@1150 = ~"The Thorn and the Dove"
+As recorded by the Willowroot Circle, retold from the journals of Brother Halem of Stillgrove
+
+They say he walked barefoot across Amn.
+
+Brother Eolan—wandering disciple of Eldath—carried no coin, no weapon, no map. Only a waterskin and a heart uncluttered by wrath. Where others turned blades upon strangers, he offered silence, and when the world scorned mercy, he still extended his hand.
+
+But it was in the Gorge of the Fallen Idol that he was most sorely tested.
+
+The gorge is a ragged wound in the earth’s skin, cut deep into the foothills of the Small Teeth. It is a place where prayers go to die. Long ago, a statue—some say of a forgotten god, others a demon—fell from the cliffs and shattered in the chasm below. Since then, the gorge has drawn those whose hearts have likewise broken.
+
+One such was Thornmaw, a scar-marked brigand queen who ruled the shattered gorge. She and her feral kin carved their symbols into the fallen idol’s stone bones, built pyres in the hollows of its ribcage. When Brother Eolan wandered into her domain, she saw him as prey.
+
+He made no plea, no argument.
+
+He simply knelt.
+
+In the dust at the edge of the shattered idol’s gaze, he drew forth his waterskin. With both hands, he offered it to her. His eyes met hers—not in defiance, not in fear, but in shared weariness. And he spoke only once:
+
+"When did you last drink without fear?"
+
+No blade. No spell. Just a question.
+
+The others laughed. But Thornmaw did not. Her hand lingered at her belt, where her curved blade hung heavy with dried blood.
+
+She stepped forward. Took the waterskin. Drank.
+
+Then she hurled it down into the gorge and turned away, saying only,
+“Go.”
+
+And he did.
+
+No one laid hand nor claw on him. He passed unscathed, vanishing into the southern passes like mist before dawn.
+
+The next season, the fallen idol bore something new—a vine, delicate and green, curling up through its cracked stone lips. Water pooled near its base. Some say Thornmaw never drew her blade again.
+
+No one has seen Eolan since.
+
+But in Stillgrove, where lilies bloom thick as grass, the children tell his story. And those who carry heavy hearts sometimes journey to the Gorge of the Fallen Idol—not to conquer it, but to kneel, and listen.
+
+(Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
 
 
 // script strings
@@ -888,5 +962,9 @@ May you fare better than I.~
 @2011 = ~A small jeweler’s anvil rests atop a larger one. Fragments of fine chains lie scattered nearby, as though many necklaces were once forged here. Strangely, the anvil radiates strong magic that seems untouched by the corrupted mythal.~
 @2012 = ~None of the items in your inventory appear suitable for crafting a necklace upon this anvil.~
 @2013 = ~Magic seems to function normally within this chamber.~
+@2014 = ~This statue depicts an elven deity unknown to you.~
+@2015 = ~This statue portrays Mythrien Sarath, a nearly forgotten god once revered for his guardianship over Mythals.~
+@2016 = ~As an elf, you recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
+
 
 
