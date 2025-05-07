@@ -1,4 +1,5 @@
 IF
+  !Global("AC#PPFixMagic","GLOBAL",1)
   Global("AC#PP_GoMythal","GLOBAL",1)
   OR(2)
       TimeOfDay(DUSK)
@@ -12,6 +13,7 @@ THEN
 END
 
 IF
+  !Global("AC#PPFixMagic","GLOBAL",1)
   Global("AC#PP_GoMythal","GLOBAL",1)
   OR(2)
       TimeOfDay(MORNING)

@@ -1,0 +1,28 @@
+IF
+Global("AC#PPChapter6Quest","GLOBAL",14)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",16)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",23)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+	ActionListEmpty()
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END

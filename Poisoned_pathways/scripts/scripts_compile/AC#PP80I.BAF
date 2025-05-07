@@ -8,7 +8,9 @@ END
 
 IF
     Clicked([ANYONE])
-    Race(LastTrigger,ELF)
+    OR(2)
+     Race(LastTrigger,ELF)
+     CheckStatGT(LastTrigger,36,LORE)
     Global("AC#PPChapter6Quest","GLOBAL",0)    
 THEN
     RESPONSE #100

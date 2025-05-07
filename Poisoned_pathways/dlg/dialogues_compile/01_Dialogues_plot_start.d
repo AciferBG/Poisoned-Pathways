@@ -197,10 +197,17 @@ StartCutScene("AC#PPCT2")
 
 BEGIN ~AC#PPEL1~
 
+CHAIN IF ~Global("AC#PPHasMap","GLOBAL",10)~ THEN AC#PPEL1 hello_glade
+~Hello again, <CHARNAME>. Shall we depart to Lowshade Glade?~
+END
+IF~~THEN REPLY ~Yes, let’s go.~ EXTERN AC#PPEL1 lets_go
+IF~~THEN REPLY ~Not just yet. I need a little more time.~ EXTERN AC#PPEL1 bye_wait
+
 CHAIN IF ~Global("AC#PP_PlotStart","GLOBAL",3)~ THEN AC#PPEL1 hello_02
 ~Good to see you again! Were you able to make Skann Delth talk? Do you know where he’s meeting the poison supplier?~
 END
-IF~Global("AC#PPHasMap","GLOBAL",1)~THEN REPLY ~Yes, I managed to get the information. I’ve got a document that mentions the location.~ DO ~SetGlobal("AC#PPHasMap","GLOBAL",10)~ EXTERN AC#PPEL1 about_glade
+IF~Global("AC#PPHasMap","GLOBAL",1)
+PartyHasItem("AC#PPMP1") ~THEN REPLY ~Yes, I managed to get the information. I’ve got a document that mentions the location.~ DO ~SetGlobal("AC#PPHasMap","GLOBAL",10) TakePartyItem("AC#PPMP1") DestroyItem("AC#PPMP1")~ EXTERN AC#PPEL1 about_glade
 IF~~THEN REPLY ~No, I haven’t found anything yet.~ EXTERN AC#PPEL1 bye_wait
 
 CHAIN IF ~~ THEN AC#PPEL1 about_glade
@@ -263,7 +270,7 @@ IF~~THEN REPLY ~Perfect poison for someone with a dagger and dark intentions!~ E
 IF~~THEN REPLY ~Sounds... useful, this toxin.~ EXTERN AC#PPEL1 about_poison_02
 
 CHAIN IF ~~ THEN AC#PPEL1 about_poison_02
-~I've seen this poison used by different factions, different people, ones that never worked together, nor they never even shared the same goals. There must be someone else behind it. Someone that is pleased to see how this thing speads and kills almost everyone on its way.~
+~I've seen this poison used by different factions, different people, ones that never worked together, nor they never even shared the same goals. There must be someone else behind it. Someone that is pleased to see how this thing spreads and kills almost everyone on its way.~
 == AnomenJ  IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Different factions and people are ready to use this toxin? We should investigate this, <CHARNAME>.~
 == KeldorJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Just think how much more tense recent troubles can get if people just start using this poison agains each other.~
 == AC#PPEL1 ~We cannot simply stand by and let this poison claim dozens—perhaps even hundreds—of lives.~
@@ -291,7 +298,7 @@ IF~~THEN REPLY ~What’s in it for me?~ EXTERN AC#PPEL1 job_payment
 IF~~THEN REPLY ~No, I won’t do it.~ EXTERN AC#PPEL1 job_payment
 
 CHAIN IF ~~ THEN AC#PPEL1 job_payment
-~I do not expect you to act without reward. Gold means little to those of my faith, but I can offer you a number of soothing potions should you agree to assist me in this matter. Mayhap even more than that and I can organize something else...~
+~I do not expect you to act without reward. Gold means little to those of my faith, but I can offer you a number of soothing potions should you agree to assist me in this matter.~
 END
 IF~~THEN REPLY ~Very well. I'm in.~ EXTERN AC#PPEL1 job_yes
 IF~~THEN REPLY ~I'll help you.~ EXTERN AC#PPEL1 job_yes

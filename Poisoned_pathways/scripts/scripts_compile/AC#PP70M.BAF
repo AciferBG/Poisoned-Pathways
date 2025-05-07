@@ -1,6 +1,8 @@
 IF
+   OR(2)
+    IsOverMe([PC])
     Entered([ANYONE])
-    Global("DeadMagicInfo","ACPP70",0)
+   Global("DeadMagicInfo","ACPP70",0)
 THEN
     RESPONSE #100
         DisplayStringHead(Myself,@2004)  

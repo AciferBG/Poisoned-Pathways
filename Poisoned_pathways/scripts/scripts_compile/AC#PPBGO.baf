@@ -1,0 +1,8 @@
+IF
+Dead("AC#PPWYR")
+Global("AC#PPKillMyselfNow","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPKillMyselfNow","LOCALS",1)
+Kill(Myself)
+END

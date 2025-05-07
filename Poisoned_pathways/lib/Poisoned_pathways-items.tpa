@@ -312,3 +312,189 @@ COPY ~%MOD_FOLDER%/itm/AC#PPTEA.itm~         ~override~    // Herbal Brew in a M
   SAY NAME1 @1065
   SAY NAME2 @1065
   SAY DESC @1066
+  
+COPY ~%MOD_FOLDER%/itm/AC#PPGRQ.itm~         ~override~    // Green Rose of Mythrien
+  SAY NAME1 ~Green Rose of Mythrien~
+  SAY NAME2 ~Green Rose of Mythrien~
+  SAY DESC ~This crystal rose is known as Green Rose of Mythrien. If legends are to be believed this rose is truly alive, even though it has a structure of a crystal. Some say it's thanks to some unusual kind of Mythal that was used to create this item.
+  
+STATISTICS:
+
+Weight: 1~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPPHA.itm~         ~override~    // Halberd of Fierce Bites +2
+  SAY NAME1 ~Halberd~
+  SAY NAME2 ~Halberd of Fierce Bites +2~
+  SAY DESC ~This halberd has three teeth-like picks that can pierce even through some armors and deal powerful damage to enemies.
+  
+STATISTICS:
+
+Combat abilities:
+– Each succesful hit has a 50% chance to deal additional 1d6 piercing damage 
+
+THAC0: +2
+Damage: 1d10+2 (piercing)
+Speed Factor: 7
+Proficiency Type: Halberd
+Type: Two-handed
+Requires:
+ 13 Strength
+
+Weight: 12~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPBLT.itm~ ~override~
+  SAY NAME1 ~Belt~
+  SAY NAME2 ~Belt of Starshaping~
+  SAY DESC ~This belt was once used by Stinna Raonar, an elven oracle that decided that she no longer wants to see how future may unfold, but that she wants to shape it. To do so, she started to learn how to change the future and manipulate the power of luck.
+
+STATISTICS:
+
+Charge abilities:
+– May cast Oracle once per day
+
+Equipped abilities:
+– Luck: +2 (diviner only)
+– Lore: +10 (diviner only)
+– Saving Throws bonus: +2
+
+Weight: 2~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPBOW.itm~ ~override~
+  SAY NAME1 ~Shortbow~
+  SAY NAME2 ~Bard's Love Letter +3~
+  SAY DESC ~This magical bow is known as Bard's Love Letter. It's known to not only shot arrows well, but it enhances bard's ability to focus. If used properly, it can turn any bard into powerful casters. 
+
+STATISTICS:
+
+Charge abilities:
+– May cast Magic Missile once per day
+
+Equipped abilities:
+– Charisma: +1
+– Can memorize two extra 1st level spells, and one extra 2nd level spell (bard only)
+
+Damage: +1 (bard only)
+THAC0: +3
+Speed Factor: 3
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPFLL.itm~ ~override~
+  SAY NAME1 ~Flail~
+  SAY NAME2 ~Two Arguing Heads +2~
+  SAY DESC ~This flail used to belong to a cleric of Tempus, who found it very difficult to make any decision, what was quite unusual for someone who needs to know how to act even during the greatest battles. Some say it was this weapon wasn't really helping and when he held it, he would overthink things even more.
+
+STATISTICS:
+
+Equipped abilities:
+– Wisdom: -1
+
+Combat abilities:
+– Attacks Per Round: +1/2 
+– Each succesful hit has a 50% chance to deal additional 1d6+3 crushing damage
+
+THAC0: +2
+Damage: 1d6+3 (crushing)
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 13 Strength
+
+Weight: 12~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPHME.itm~ ~override~
+  SAY NAME1 ~War Hammer~
+  SAY NAME2 ~Hammer of Powerful Yet Unlikely Blows +4~
+  SAY DESC ~This hammer is an unusual weapons. While it can break any bone, damage metal plate armors, kill huge beasts like giants or dragons, it's very uncomfortable to hold and use. But if someone is able to land a proper hit, the effect may be truly grand!
+
+STATISTICS:
+
+THAC0: -4
+Damage: 4d4+5 (crushing)
+Speed Factor: 1
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 4~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPMRN.itm~ ~override~
+  SAY NAME1 ~Morning Star~
+  SAY NAME2 ~The Pufferfish +3~
+  SAY DESC ~This morningstar was blessed by a cleric of Umberlee. The name of this weapon was clearly inspired by its round head. Some say that this weapon and its name amuses even The Bitch Queen herself.
+
+STATISTICS:
+
+Equipped abilities:
+– Cold Resistance: +25%
+
+Combat abilities:
+– Each succesful hit has a 5% chance to deal additional 1d4 cold damage
+– Each succesful hit has a 5% chance to deal additional 1d4 piercing damage
+– Each succesful hit has a 5% chance to lower targets cold resistance by 10% for 3 rounds (no saving throw)
+– Only one of the combat abilities above may trigger at one hit
+
+THAC0: +3
+Damage: 2d4+3 (crushing)
+Speed Factor: 4
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 8~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPPLT.itm~ ~override~
+  SAY NAME1 ~Plate Armor~
+  SAY NAME2 ~Wooden Plate of Ants~
+  SAY DESC ~This plate armor is made of hardened  wood thus may also be used by single-class druids. Furthermore, it's been enchanted with some druidic magic and allows a character to summon flying red ants.
+
+STATISTICS:
+
+Charge abilities:
+– May cast Summon Insects once per day
+
+Equipped abilities:
+– Fire Resistance: -10%
+– Electric Resistance: +10%
+– Saving Throws vs. Death: +1
+– Wisdom: +2 (druid only)
+
+Armor Class: 3 (0 vs. slashing)
+Requires:
+ 8 Strength
+
+Weight: 20~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPPTN.itm~ ~override~
+  SAY NAME1 ~Potion~
+  SAY NAME2 ~Potion of Natural Attunement~
+  SAY DESC ~This powerful potion allows the one that uses it to pay a price and gain powerful ability instead. All in the name of growth.
+
+STATISTICS:
+
+Charge ability:
+– Each use lowers character's Magic Resistance by 5% permamently, but gains Cure Light Wounds or Slow Poison ability (50% chance for each) as an innate ability
+
+Weight: 1~
+
+COPY ~%MOD_FOLDER%/itm/AC#PPWND.itm~ ~override~
+  SAY NAME1 ~Wand~
+  SAY NAME2 ~Wand of Goodberry~
+  SAY DESC ~This simple wand can create goodberries. That specific wand has been made at Myth Unnohyr, and is of an old elven design.
+
+STATISTICS:
+
+– May cast Goodberry per charge
+
+Requires:
+ 9 Wisdom
+
+Weight: 1~
+

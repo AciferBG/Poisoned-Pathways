@@ -257,12 +257,12 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
-~Myth Unnohyr was dedicated to an unknown elven god. A mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dark void of dead magic by night.~
-== NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic zone AND dark void of dead magic? Wow. That's... encouraging. I'm being sarcastic, by the way.~
-== AC#PPEL4 ~By day, it's chaos. By night, magic just... doesn't exist there. Not in the usual sense. Maybe innate metamagic held by some creatures or items could partially work, but... I don't know. It's a theory. And I wouldn't depend on untested ideas.~
+~Myth Unnohyr seems to have been an important stronghold, of great significance to those that studied Mythal, elven culture and words of the Seldarine that cared most about magic. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dark void of dead magic by night.~
+== NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic zone AND dark void of dead magic? Wow. That's encouraging. I'm being sarcastic, by the way.~
+== AC#PPEL4 ~By day, it's chaos. By night, magic just doesn't exist there. Not in the usual sense. Maybe innate metamagic held by some creatures or items could partially work, but... I don't know. It's a theory. And I wouldn't depend on untested ideas.~
 END
 IF~~THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_area
-IF~~THEN REPLY ~Ah. That means I'll need to equip myself with lots of weapons...~ EXTERN AC#PPEL4 dead_magic_area2
+IF~~THEN REPLY ~Ah. That means I'll need to equip myself with lots of weapons.~ EXTERN AC#PPEL4 dead_magic_area2
 
 CHAIN IF ~~ THEN AC#PPEL4 dead_magic_area
 ~Don’t you see? It's not just wild magic in there! It's also dead magic!~
@@ -304,14 +304,16 @@ END
 IF~~THEN EXTERN AC#PPEL4 talona_yes
 
 CHAIN IF ~~ THEN AC#PPEL4 talona_yes
-~Then we now know that our enemy serves none other than the Lady of Poisons herself.~
+~We now know that our enemy serves none other than the Lady of Poisons herself.~
 END
 IF~~THEN REPLY ~And I’m to enter this blasted elven ruin.~ EXTERN AC#PPEL4 travel_ruin
-IF~~THEN REPLY ~...who brews poison within a dead magic zone in Myth Unnohyr.~ EXTERN AC#PPEL4 travel_ruin
+IF~~THEN REPLY ~Who brews poison within a dead magic zone in Myth Unnohyr.~ EXTERN AC#PPEL4 travel_ruin
 
 CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
 ~Exactly! In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
-==AC#PPEL4 ~Go now, and put an end to the servant of Talona. Oh, one more thing: Should you come across the flower he twisted to his ends, bring it to me. I shall seek to cleanse its purpose and create an antidote. And now go. May the blessings of Eldath guide your steps.~
+==AC#PPEL4 ~Go now, and put an end to the servant of Talona. Oh, one more thing: Should you come across the flower he twisted to his ends, bring it to me. I shall seek to cleanse its purpose and create an antidote.~ 
+=
+~And now go. May the blessings of Eldath guide your next steps.~
 DO ~RevealAreaOnMap("ACPP70")
 SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
 SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
@@ -418,7 +420,7 @@ EXIT
 CHAIN AC#PPEL4 cnt.01.01
 ~Wonderful! Not let's see...~
 == AC#PPEL4 ~It's in a good state, yes. And it's rather big, so... it should be enough, yes!~
-== AC#PPEL4 ~I searched all my books when you were trying to stop our enemy and I might have found a way to create an antidote. To create it, we need the flower and we need to know the exact spot, the couldron or laboratory when it was created.~
+== AC#PPEL4 ~I searched all my books when you were trying to stop our enemy and I might have found a way to create an antidote. To create it, we need the flower and we need to know the exact spot, the cauldron or laboratory when it was created.~
 END
 IF~~THEN REPLY ~It's the spot where I fought the servant to Talona. There was a cauldron there. One with, what I presume, is an unfinished next batch of the poison.~ EXTERN  AC#PPEL4 cnt.01.03
 
@@ -468,11 +470,11 @@ DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",5)~ EXIT
 //ILMATER
 
 EXTEND_BOTTOM ~SLILMAT~ 6
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flowere here and I need a Blessing of Symphathy. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Symphathy. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
 END
 
 EXTEND_BOTTOM ~SLILMAT~ 0
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flowere here and I need a Blessing of Symphathy. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Symphathy. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
 END
 
 CHAIN SLILMAT AC#IL.BLESS
@@ -483,7 +485,7 @@ DO ~SetGlobal("AC#PP_IlmaterBlessing","GLOBAL",1) CreateVisualEffectObject("SPAR
 //LATHANDER
 
 EXTEND_BOTTOM ~DAWNMAS~ 0
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_LathanderBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flowere here and I need a Blessing of Warmth. I believe you may have already received a letter describing the details.~ EXTERN DAWNMAS AC#DM.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_LathanderBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Warmth. I believe you may have already received a letter describing the details.~ EXTERN DAWNMAS AC#DM.BLESS
 END
 
 CHAIN DAWNMAS AC#DM.BLESS

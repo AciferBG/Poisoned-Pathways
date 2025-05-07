@@ -1,6 +1,6 @@
 BEGIN AC#PPTME
 
-CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPTME 000
+CHAIN IF ~NumTimesTalkedTo(0) AreaCheck("ACPP99")~ THEN AC#PPTME 000
 ~Hello! It looks like you're comming from Duskwood Dell's direction.~
 END
 IF~~THEN REPLY ~Yes, that's true. I've been there.~ EXTERN AC#PPTME 001
@@ -40,6 +40,19 @@ IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
 CHAIN AC#PPTME 007
 ~Sure, have a good one!~
 EXIT
+
+CHAIN IF ~AreaCheck("AR0700")~ THEN AC#PPTME 00A
+~Oh! It's you! Well, of course it's you. It's me: Debbie! Debbie Gobblebubble! You suggested that I should see Athkatla so... here I am! Would you like to buy something? I've got something new since we met on the road.~
+END
+IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
+IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+
+CHAIN IF ~AreaCheck("AR2000")~ THEN AC#PPTME 00T
+~Oh! It's you! Well, of course it's you. It's me: Debbie! Debbie Gobblebubble! You suggested that I should see Trademeet so... here I am! I heard the place had few problems, but I was told you handled them! Nice! I've got something new since we met on the road. Would you like to take a look?~
+END
+IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
+IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+
 
 CHAIN IF ~NumTimesTalkedToGT(0)~ THEN AC#PPTME 00X
 ~Hello again! You remember me? It's Debbie! Debbie Gobblebubble! Maybe you'd like to buy something?~

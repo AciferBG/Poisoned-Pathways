@@ -1,0 +1,28 @@
+IF
+Global("AC#PPChapter6Quest","GLOBAL",9)
+THEN
+RESPONSE #100
+ActionOverride("Corpse01",CreateItem("AC#PPGRQ",0,0,0))
+SetGlobal("AC#PPChapter6Quest","GLOBAL",10)
+END
+
+IF
+PartyHasItem("AC#PPGRQ")
+Global("AC#PPChapter6Quest","GLOBAL",10)
+THEN
+RESPONSE #100
+StartCutSceneMode()
+ClearAllActions()
+SetGlobal("AC#PPChapter6Quest","GLOBAL",11)
+CreateVisualEffect("SPFLESHS",[280.275])
+Wait(2)
+CreateCreature("AC#PPSON",[280.275],11)
+Wait(3)
+DisplayStringHead("AC#PPSON",~*Rose... it must be safe!*~)
+Wait(5)
+DisplayStringHead("AC#PPSON",~*Take it to Mythrien... Place it under his feet and reach for his helping hand...*~)
+Wait(5)
+Kill("AC#PPSON")
+Wait(3)
+EndCutSceneMode()
+END

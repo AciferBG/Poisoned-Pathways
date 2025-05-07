@@ -1,0 +1,6 @@
+IF
+Global("AC#PPChapter6Quest","GLOBAL",6)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END

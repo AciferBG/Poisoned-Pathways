@@ -5,3 +5,11 @@ THEN
       CreateCreature("AC#PPOR2",[810.760],S)  // Wadal Hrun
       SetGlobal("AC#PPTowerGuardian","GLOBAL",4)
 END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",7)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPHEL",[2050.940],3)
+SetGlobal("AC#PPChapter6Quest","GLOBAL",8)
+END

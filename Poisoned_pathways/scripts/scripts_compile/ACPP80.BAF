@@ -1,0 +1,18 @@
+
+IF
+  GlobalGT("CHAPTER","GLOBAL",5)
+	Global("DeactivateSpawn","ACPP80",0)
+THEN
+RESPONSE #100
+  SpawnPtDeactivate("Spawnpoint01")
+	SetGlobal("DeactivateSpawn","ACPP80",1)
+	Continue()
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",11)
+THEN
+RESPONSE #100
+ContainerEnable("Feet",TRUE) 
+SetGlobal("AC#PPChapter6Quest","GLOBAL",12)
+END

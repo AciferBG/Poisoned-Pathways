@@ -478,11 +478,50 @@ EXIT
 */
 
 ////////////////////////////////////////////
-
 CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",1)~ THEN AC#PPCAA 01.00
-~Who are you? Agh, I'm not in the mood for talks with some vagabonds. Leave me be, please.~
+~What is this rabble now? I have neither time nor patience for unsolicited interruptions. Be gone, unless you bear something of true importance.~
 END
-IF~PartyHasItem("AC#PPFLW")~THEN REPLY ~Ah, I think it's you I've been looking for. I talked to your nephew. He run away from you, because he needs to learn what it means to be alive and to make decisions. But he wants you to know that he's fine and he wanted me to give you that flower.~ DO ~TakePartyItem("AC#PPFLW") DestroyItem("AC#PPFLW")~ EXTERN AC#PPCAA 01.01
+IF~PartyHasItem("AC#PPFLW")~THEN REPLY ~Actually, I believe I do. I spoke to your nephew. He left because he wishes to discover life on his own terms. But he wanted you to know he’s well—and he asked me to give you this flower.~ DO ~TakePartyItem("AC#PPFLW") DestroyItem("AC#PPFLW")~ EXTERN AC#PPCAA 01.01
+IF~~THEN REPLY ~Right. I'll be leaving then.~ EXIT 
+
+CHAIN AC#PPCAA 01.01
+~He did *what*? He’s alive? I thought… I feared the worst. And yet he runs off, vanishing without so much as a word? The *audacity*!~
+==AC#PPCAA ~Ungrateful whelp! I sheltered him, clothed him, educated him, gave him *everything*—and this is how he repays me?~
+END
+IF~~THEN REPLY ~Perhaps that’s exactly the problem.~ EXTERN AC#PPCAA 01.02
+IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
+
+CHAIN AC#PPCAA 01.02
+~How *dare* you imply such a thing?~
+END
+IF~~THEN REPLY ~He wants to live his own life. To make his own mistakes. He knows you meant well—but he needs to find his own way.~ EXTERN AC#PPCAA 01.04
+IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
+
+CHAIN AC#PPCAA 01.04
+~And what, pray tell, did he lack *here*? We have everything—comfort, beauty, security! Look at this district! There’s nothing beyond these walls that could serve him better than what I’ve already provided.~
+END
+IF~~THEN REPLY ~He’s fine. Just… give him time. Let him stumble. Let him grow.~ EXTERN AC#PPCAA 01.05
+IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
+
+CHAIN AC#PPCAA 01.05
+~I…~
+END
+IF~~THEN REPLY ~He’s doing well. Try to focus on *that*.~ EXTERN AC#PPCAA 01.06
+IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
+
+CHAIN AC#PPCAA 01.06
+~Very well… Tell him… tell him that next time, he ought to bring me the flowers himself. Hmph. That impudent, stupid, beloved boy!~
+DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",3) EscapeArea()~ EXIT
+
+CHAIN AC#PPCAA 01.03
+~Hmph! Then begone, meddler, and take your leave from my sight!~
+DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",2) EscapeArea()~ EXIT
+
+/*
+CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",1)~ THEN AC#PPCAA 01.00
+~Who are you? I'm not in the mood for talks with some vagabonds. Leave me be.~
+END
+IF~PartyHasItem("AC#PPFLW")~THEN REPLY ~I think it's you I've been looking for. I talked to your nephew. He run away from you, because he wants to learn what it means to be alive and to make decisions. But he wants you to know that he's fine and he wanted me to give you that flower.~ DO ~TakePartyItem("AC#PPFLW") DestroyItem("AC#PPFLW")~ EXTERN AC#PPCAA 01.01
 IF~~THEN REPLY ~Right. I guess I just won't trouble you then.~ EXIT 
 
 CHAIN AC#PPCAA 01.01
@@ -511,12 +550,13 @@ IF~~THEN REPLY ~He's doing fine. Focus on that.~ EXTERN AC#PPCAA 01.06
 IF~~THEN REPLY ~Look, lady, I'm just delivering a message. He's fine, and the two of you will probably meet again once. That's all you need to know. Bye.~ EXTERN AC#PPCAA 01.03
 
 CHAIN AC#PPCAA 01.06
-~Fine. But tell him that... that next time he'd better just come on his own and give me some flowers! That... stipid... wonderful brat. Agh!~
+~Fine. But tell him that... that next time he'd better just come on his own and give me some flowers! That... stupid... wonderful brat!~
 DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",3) EscapeArea()~ EXIT
 
 CHAIN AC#PPCAA 01.03
 ~Humph! Just... just go already, will you?!~
 DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",2) EscapeArea()~ EXIT
+*/
 
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
@@ -743,7 +783,7 @@ IF~~THEN REPLY ~Oh? And do you have a better idea?~ EXTERN AC#PPSIR 02.02
 IF~~THEN REPLY ~Just do whatever you want. I tried to help you, but maybe you're just not ready to feel better.~ EXTERN AC#PPSIR 02.02
 
 CHAIN AC#PPSIR 02.02
-~Agh, fine. Just give me that.~
+~Fine. Just give me that.~
 DO ~TakePartyItem("AC#PPTEA") DestroyItem("AC#PPTEA")~
 ==AC#PPSIR ~So I should drink this and what? It's going to help?~
 END

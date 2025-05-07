@@ -1,0 +1,9 @@
+IF
+Contains("AC#PPGRQ","feet")
+Global("AC#PPChapter6Quest","GLOBAL",12)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPChapter6Quest","GLOBAL",13)
+DestroyItem("AC#PPGRQ")
+StartCutScene("AC#PP6C3")
+END

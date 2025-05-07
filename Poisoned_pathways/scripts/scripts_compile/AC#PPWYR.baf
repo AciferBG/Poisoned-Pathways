@@ -1,0 +1,182 @@
+IF
+Global("AC#PPChapter6Quest","GLOBAL",20)
+HPLT(Myself,3)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPChapter6Quest","GLOBAL",21)
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",21)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+
+//
+
+IF
+OR(2)
+ See([PC])
+ Range([PC],25)
+Global("AC#PPChapter6Quest","GLOBAL",1)
+THEN
+RESPONSE #100
+StartCutScene("AC#PP6C2")
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",2)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",3)
+HPLT(Myself,10)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPChapter6Quest","GLOBAL",4)
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",4)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+//FIGHT (First)
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",3)
+Global("AC#PP70FightSpells","LOCALS",0)
+THEN
+RESPONSE #100
+ApplySpell(Myself,WIZARD_FIRE_SHIELD_BLUE)
+SetGlobal("AC#PP70FightSpells","LOCALS",1)
+SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",9)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_FLAME_ARROW)
+END
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",3)
+Global("AC#PP70FightSpells","LOCALS",1)
+GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
+THEN
+RESPONSE #100
+ApplySpell(Myself,WIZARD_MIRROR_IMAGE)
+ApplySpell(Myself,WIZARD_PROTECTION_FROM_NORMAL_WEAPONS)
+SetGlobal("AC#PP70FightSpells","LOCALS",2)
+SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",9)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_ANIMATE_DEAD)
+END
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",3)
+Global("AC#PP70FightSpells","LOCALS",2)
+GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
+THEN
+RESPONSE #100
+ApplySpell(Myself,WIZARD_WYVERN_CALL)
+SetGlobal("AC#PP70FightSpells","LOCALS",3)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAIN_LIGHTNING)
+END
+
+//Second meeting
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",18)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+Global("AC#PPChapter6Quest","GLOBAL",19)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",20)
+Global("AC#PP70FightSpells_F","LOCALS",0)
+THEN
+RESPONSE #100
+ApplySpell(Myself,WIZARD_FIRE_SHIELD_BLUE)
+ApplySpell(Myself,WIZARD_MIRROR_IMAGE)
+ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+SetGlobal("AC#PP70FightSpells_F","LOCALS",1)
+SetGlobalTimer("AC#PP70FightSpellsTime_F","LOCALS",9)
+END
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",20)
+Global("AC#PP70FightSpells_F","LOCALS",1)
+GlobalTimerExpired("AC#PP70FightSpellsTime_F","LOCALS")
+THEN
+RESPONSE #100
+ApplySpell(Myself,WIZARD_SPELL_TURNING)
+SetGlobal("AC#PP70FightSpells_F","LOCALS",2)
+SetGlobalTimer("AC#PP70FightSpellsTime_F","LOCALS",9)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON)
+END
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",20)
+Global("AC#PP70FightSpells_F","LOCALS",2)
+GlobalTimerExpired("AC#PP70FightSpellsTime_F","LOCALS")
+THEN
+RESPONSE #100
+ApplySpell(Myself,WIZARD_HASTE)
+SetGlobal("AC#PP70FightSpells_F","LOCALS",3)
+SetGlobalTimer("AC#PP70FightSpellsTime_F","LOCALS",9)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_DEATH_SPELL)
+END
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",20)
+Global("AC#PP70FightSpells_F","LOCALS",3)
+GlobalTimerExpired("AC#PP70FightSpellsTime_F","LOCALS")
+THEN
+RESPONSE #100
+ApplySpell(Myself,WIZARD_CARRION)
+SetGlobal("AC#PP70FightSpells_F","LOCALS",4)
+SetGlobalTimer("AC#PP70FightSpellsTime_F","LOCALS",9)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+AreaCheck("ACPP70")
+See(NearestEnemyOf(Myself))
+Global("AC#PPChapter6Quest","GLOBAL",20)
+Global("AC#PP70FightSpells_F","LOCALS",4)
+GlobalTimerExpired("AC#PP70FightSpellsTime_F","LOCALS")
+THEN
+RESPONSE #100
+SetGlobal("AC#PP70FightSpells_F","LOCALS",5)
+SetGlobalTimer("AC#PP70FightSpellsTime_F","LOCALS",9)
+ForceSpell(Player1,WIZARD_MAGIC_MISSILE)
+ForceSpell(Player2,WIZARD_MAGIC_MISSILE)
+ForceSpell(Player3,WIZARD_MAGIC_MISSILE)
+ForceSpell(Player4,WIZARD_MAGIC_MISSILE)
+ForceSpell(Player5,WIZARD_MAGIC_MISSILE)
+ForceSpell(Player6,WIZARD_MAGIC_MISSILE)
+END

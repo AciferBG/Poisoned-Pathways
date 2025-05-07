@@ -15,3 +15,21 @@ THEN
         SetGlobal("AC#PPSymbolQuest_C","GLOBAL",1)
 END
 
+IF
+GlobalLT("CHAPTER","GLOBAL",6)
+Global("AC#PP_FinishedBeforeUD","GLOBAL",0)
+Global("AC#PP_MythUnnohyr","GLOBAL",7)
+THEN
+RESPONSE #100
+SetGlobal("AC#PP_FinishedBeforeUD","GLOBAL",1)
+END
+
+IF
+GlobalGT("CHAPTER","GLOBAL",5)
+Global("AC#PP_MythUnnohyr","GLOBAL",7)
+Global("AC#PP_FinishedBeforeUD","GLOBAL",1)
+THEN 
+RESPONSE #100
+CreateCreature("AC#PPMI",[370.240],S)
+SetGlobal("AC#PP_MythUnnohyr","GLOBAL",8)
+END

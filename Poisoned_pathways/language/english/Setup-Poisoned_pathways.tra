@@ -375,10 +375,10 @@ Weight: 2
 ~
 
 @1075 = ~Headband~
-@1076 = ~Halo of Pus~
-@1077 = ~This headband, known as Halo of Pus, was used by an Angel of Decay, a powerful monster imprisoned under Myth Unnohyr. The item has a scent of rotting meat.
+@1076 = ~Halo of Corrosive Blood~
+@1077 = ~This powerful is a crown made of congealed blood. It was previously worn by a powerful monster imprisoned under Myth Unnohyr - an elder blood amniote.
   
-This magical halo may be used to spread a "gift" of decay, resulting in great pain and... to some it may be nothing less than a gift of death.
+This magical halo may be used to spread a "gift" of corrosion, resulting in great pain and... to some it may be nothing less than a gift of death.
 
 STATISTICS:
 
@@ -962,9 +962,11 @@ But in Stillgrove, where lilies bloom thick as grass, the children tell his stor
 @2011 = ~A small jeweler’s anvil rests atop a larger one. Fragments of fine chains lie scattered nearby, as though many necklaces were once forged here. Strangely, the anvil radiates strong magic that seems untouched by the corrupted mythal.~
 @2012 = ~None of the items in your inventory appear suitable for crafting a necklace upon this anvil.~
 @2013 = ~Magic seems to function normally within this chamber.~
-@2014 = ~This statue depicts an elven deity unknown to you.~
+@2014 = ~This statue depicts an elven deity, but you find it difficult to recognize it.~
 @2015 = ~This statue portrays Mythrien Sarath, a nearly forgotten god once revered for his guardianship over Mythals.~
 @2016 = ~As an elf, you recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
+@2017 = ~** I AM THE POISON AND I SHALL DEVOUR YOU! **~
+@2018 = ~(You can hear some sound comming from the cauldron. It looks like with the death of the creature an antidote was created.)~
 
 
 

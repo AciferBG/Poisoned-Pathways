@@ -1,0 +1,11 @@
+IF
+Global("AC#PPMerSugAth","GLOBAL",1)
+THEN
+RESPONSE #100
+AddStoreItem("ac#pptme","AC#PPBOW",1,1)
+AddStoreItem("ac#pptme","AC#PPFLL",1,1)
+AddStoreItem("ac#pptme","AC#PPHME",1,1)
+AddStoreItem("ac#pptme","AC#PPMRN",1,1)
+CreateCreature("ac#pptme",[700.2400],13)
+SetGlobal("AC#PPMerSugAth","GLOBAL",2)
+END

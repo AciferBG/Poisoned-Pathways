@@ -1,0 +1,13 @@
+IF
+Dead("cefald01")
+Global("geniesgone","GLOBAL",1)
+Global("AC#PPMerSugTra","GLOBAL",1)
+THEN
+RESPONSE #100
+AddStoreItem("ac#pptme","AC#PPBOW",1,1)
+AddStoreItem("ac#pptme","AC#PPFLL",1,1)
+AddStoreItem("ac#pptme","AC#PPHME",1,1)
+AddStoreItem("ac#pptme","AC#PPMRN",1,1)
+CreateCreature("ac#pptme",[1230.2700],0)
+SetGlobal("AC#PPMerSugTra","GLOBAL",2)
+END

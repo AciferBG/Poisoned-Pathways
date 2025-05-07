@@ -20,6 +20,8 @@ EXTEND_BOTTOM ~ACPP80.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
 
 EXTEND_TOP ~ar0408.bcs~ ~%MOD_FOLDER%/scripts/_ar0408.baf~ // plot start: 2nd encounter of eldathyn cleric in temple of ilmater in the slums
 EXTEND_TOP ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_ar1000.baf~ // plot: Boy and the Aunt
+EXTEND_TOP ~ar2000.bcs~ ~%MOD_FOLDER%/scripts/_ar2000.baf~ // Debbie in Trademeet
+EXTEND_TOP ~ar0700.bcs~ ~%MOD_FOLDER%/scripts/_ar0700.baf~ // Debbie in Athkatla
 EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334.baf~ // Cromwell
 
 // create Skann Delth poison seller

@@ -37,7 +37,7 @@ IF~~THEN REPLY ~Actually, I love ruins, and I don't mind little mud.~ EXTERN AC#
 IF~~THEN REPLY ~There are times when someone has to do something. I just couldn't ignore the fact there is a lunatic brewing powerful poison in some rotting hideout.~ EXTERN AC#PPTA2 hello_01
 
 CHAIN AC#PPTA2 hello_01
-~You insolence is somewhat impressive, that I must admit. But Talona, Mother of all Plagues, is watching over me. How else would I find this place? How else would I manage to run this operation? I know she's with me and I know she'll be happy to see me kill you.~
+~Your insolence is somewhat impressive, that I must admit. But Talona, Mother of all Plagues, is watching over me. How else would I find this place? How else would I manage to run this operation? I know she's with me and I know she'll be happy to see me kill you.~
 ==AC#PPTA2 ~And then, I will gladly sell my poison to other people. I believe you've already seen how effective it can be. How powerful. Almost as powerful as The Plague-crone's kiss.~
 END
 IF~~THEN REPLY ~Do you really think you can win? I am stronger than you think!~ EXTERN AC#PPTA2 hello_02

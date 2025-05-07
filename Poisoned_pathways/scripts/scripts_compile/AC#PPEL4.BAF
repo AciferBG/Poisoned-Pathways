@@ -4,3 +4,11 @@ THEN
 RESPONSE #100
 StartDialogueNoSet(Player1)
 END
+
+IF
+See(Player1)
+Global("AC#PP_MythUnnohyr","GLOBAL",8)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END

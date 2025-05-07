@@ -1,0 +1,76 @@
+IF
+	Die()
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("SPUNHOLY",Myself)
+		DestroySelf()
+END
+
+IF
+Dead("AC#PPWYR")
+Global("AC#PPKillMyselfNow","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPKillMyselfNow","LOCALS",1)
+Kill(Myself)
+END
+
+IF
+RandomNum(5,1)
+See(NearestEnemyOf(Myself))
+Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+THEN
+RESPONSE #100
+DisplayStringHead(Myself,~*Blood... All I can see is... blood!*~)
+SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON)
+END
+
+IF
+RandomNum(5,2)
+See(NearestEnemyOf(Myself))
+Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+THEN
+RESPONSE #100
+DisplayStringHead(Myself,~*Free me...! Please!*~)
+SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)
+END
+
+IF
+RandomNum(5,3)
+See(NearestEnemyOf(Myself))
+Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+ForceSpell(Myself,WIZARD_STRENGTH)
+END
+
+IF
+RandomNum(5,4)
+See(NearestEnemyOf(Myself))
+Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_GLITTERDUST)
+END
+
+IF
+RandomNum(5,5)
+See(NearestEnemyOf(Myself))
+Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+THEN
+RESPONSE #100
+SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+ForceSpell(NearestEnemyOf(Myself),WIZARD_FIRE_SHIELD_RED)
+END
+
+IF
+Global("AC#PPSoulAttackWithSpells","LOCALS",1)
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+AttackReevaluate(NearestEnemyOf(Myself),10)
+END
