@@ -9,6 +9,7 @@
 ## Features
 - New quest content continuing after the Renfeld encounter in the Docks District  
 - New areas to explore in Amn and Tethyr 
+- An additional extensive questline in Chapter 6 of the game – make sure to revisit the places of the mod later in your journey!
 - New enemies and custom encounters  
 - Unique magical items  
 - Challenging battles and dialogue-driven progression   
