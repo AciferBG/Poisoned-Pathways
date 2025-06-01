@@ -5,12 +5,45 @@ RESPONSE #100
 	SetMusic(NIGHT,%AC#PP70%)
 	SetMusic(DAY,%AC#PP70%)
   OpenDoor("DOOR01")
+  OpenDoor("DOOR03")  
+  ContainerEnable("Roses",FALSE)
   SpawnPtDeactivate("Spawn_gibberlings")
   SpawnPtDeactivate("Spawn_wisps01")
   SpawnPtDeactivate("Spawn_spiders01")  
 	SetGlobal("Prep","ACPP70",1)
 	Continue()
 END
+
+IF
+    Global("AC#PPChapter6Quest","GLOBAL",9)
+THEN
+    RESPONSE #100
+        ContainerEnable("Roses",TRUE)
+        ActionOverride("Roses",CreateItem("AC#PPGRQ",0,0,0))  // Green Rose of Mythrien
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",10)
+END
+
+IF
+    PartyHasItem("AC#PPGRQ")  // Green Rose of Mythrien
+    Global("AC#PPChapter6Quest","GLOBAL",10)
+THEN
+    RESPONSE #100
+        StartCutSceneMode()
+        ClearAllActions()
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",11)
+        CreateVisualEffect("SPFLESHS",[1525.1110])
+        Wait(2)
+        CreateCreature("AC#PPSON",[1525.1110],S)  // Elven Spirit
+        Wait(3)
+        DisplayStringHead("AC#PPSON",@2019)  // *Rose... it must be safe!*
+        Wait(5)
+        DisplayStringHead("AC#PPSON",@2020)  // *Take it to Mythrien... Place it under his feet and reach for his helping hand...*
+        Wait(5)
+        Kill("AC#PPSON")  // Elven Spirit
+        Wait(3)
+        EndCutSceneMode()
+END
+
 
 IF
     Global("AC#PPAnkhegs","GLOBAL",0)

@@ -37,18 +37,31 @@ IF~~THEN REPLY ~This isn't the right moment. I'll be back.~ EXTERN AC#PPSKD bye
 CHAIN IF ~~ THEN AC#PPSKD tell_me
 ~Ha! You think I’d spill my supplier to the first smooth-talker with a pouch full of coins? Get real. That kind of info don’t come free—and even if it did, I ain’t riskin’ my neck for a stranger in boots too clean for this part of town. Who do you think you are?~
 END
-IF~~THEN REPLY ~Tell me where you get it from!~ EXTERN AC#PPSKD not_telling_bye
+IF~~THEN EXTERN AC#PPSKD tell_me_cycle
+
+CHAIN IF ~~ THEN AC#PPSKD tell_me_cycle
+~You’ll need more than words to get me talking!~
+END
 IF~~THEN REPLY ~Please, just tell me.~ EXTERN AC#PPSKD not_telling_bye
-IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~You see my strength? I’m not here to ask politely. Tell me what I need to know... or regret it.~ EXTERN AC#PPSKD threat_rep
-IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. You know who I am, right? Maybe ask around what happens to those who cross me.~ EXTERN AC#PPSKD threat_rep
-IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me—<CHARNAME>. I've brought down worse than you, and I don't need poison to do it. Think carefully about who you're dealing with.~ EXTERN AC#PPSKD threat_rep
-IF~GlobalGT("Linvail","GLOBAL",0)~THEN REPLY ~I work for the Shadow Thieves... and I doubt they'd be pleased to hear about your little side business.~ EXTERN AC#PPSKD work_shadow_thieves
+//IF~~THEN REPLY ~Everyone has a price. What’s yours?~ EXTERN AC#PPSKD pay_gold_01
+IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~See my muscles? They're not just for crushing melons. Do you want your head burst like a melon in my hands?~ EXTERN AC#PPSKD threat_rep
+IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. Some call me notorious. Ask around what happens to those who cross me.~ EXTERN AC#PPSKD threat_rep
+IF~Dead("maevar")~THEN REPLY ~I helped bring down Mae’Var. So unless you want to follow him, you’ll start talking.~ EXTERN AC#PPSKD threat_rep
+IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me— I'm <CHARNAME>. I've brought down worse than you, and I don't need poison to do it. So tell me what I want to know!~ EXTERN AC#PPSKD threat_rep
+IF~GlobalGT("Linvail","GLOBAL",0)~THEN REPLY ~I work for the Shadow Thieves. I doubt they'd be pleased to hear about your little side business.~ EXTERN AC#PPSKD work_shadow_thieves
 IF~GlobalGT("BodhiJob","GLOBAL",0)~THEN REPLY ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~ EXTERN AC#PPSKD work_bodhi
 IF~~THEN REPLY ~I don’t deal with back-alley scum like you!~ EXTERN AC#PPSKD fight
 IF~~THEN REPLY ~I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
-
+/*
+	CHAIN IF ~~ THEN AC#PPSKD pay_gold_01
+	~For five thousand gold, I’ll forget I ever knew him—and you’ll know everything I do. Deal?~
+	END
+	IF~PartyGoldGT(4999)~THEN REPLY ~Very well. Here is your money.~ DO ~TakePartyGold(5000)~ EXTERN AC#PPSKD tell_supplier
+	IF~~THEN REPLY ~Trouble is what I do best.~ EXTERN AC#PPSKD tell_supplier
+	IF~PartyGoldLT(5000)~THEN REPLY ~I don't have that much money.~ EXTERN AC#PPSKD tell_supplier
+*/
 CHAIN IF ~~ THEN AC#PPSKD threat_rep
-~Oh, it's you? Now that you mention it—folks been whispering about some <PRO_RACE> like you from the North, stirring up trouble in the city...~
+~Oh, it's you? Now that you mention it—folks been whispering about some notorious <PRO_RACE> like you from the North, stirring up trouble in the city...~
 END
 IF~~THEN REPLY ~Yep, that's me.~ EXTERN AC#PPSKD tell_supplier
 IF~~THEN REPLY ~Trouble is what I do best.~ EXTERN AC#PPSKD tell_supplier
@@ -72,7 +85,7 @@ END
 IF~~THEN EXTERN AC#PPSKD tell_supplier_02
 
 CHAIN IF ~~ THEN AC#PPSKD tell_supplier_02
-~A-all right, all right! I’ll tell you where I get the real stuff. Name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the Snakewood. I... I’ll give you his instructions. Here!~
+~A-all right, all right! I’ll tell you where I get the real stuff from. Name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the Snakewood. I... I’ll give you his instructions. Here!~
 END
 IF~~THEN REPLY ~Smart choice.~ EXTERN AC#PPSKD map_bye
 IF~~THEN REPLY ~That’s all I needed.~ EXTERN AC#PPSKD map_bye
@@ -92,7 +105,7 @@ CHAIN AC#PPSKD bye
 EXIT
 
 CHAIN AC#PPSKD not_telling_bye
-~Yeah, sure. Keep on pressing, but you won’t get anything from me unless you got something really good to offer.~
+~Pah! Keep on pressing; you won’t get anything from me unless you got something really good to offer. Get lost!~
 EXIT
 
 
