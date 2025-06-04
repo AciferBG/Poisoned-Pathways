@@ -10,56 +10,64 @@ DO ~GiveItem("AC#PPMP1",LastTalkedToBy())
 ChangeEnemyAlly(Myself,NEUTRAL)
 EscapeAreaDestroy(2)~ EXIT
 
-CHAIN IF ~True()~ THEN AC#PPSKD hello_02
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPSKD hello_00
 ~Well now, what do we have here? You lookin’ for something that makes problems disappear... real quiet-like? I’ve got potions, powders, and little drips of doom—if your coin’s honest and your conscience ain’t too fussy.~
 END
 IF~~THEN REPLY ~You disgust me. The world needs less filth like you!~ EXTERN AC#PPSKD fight
 IF~~THEN REPLY ~That does sound interesting. What exactly are you offering?~ EXTERN AC#PPSKD interest
 IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
-
-CHAIN IF ~~ THEN AC#PPSKD interest
-~Oh, a bit of this and that—venoms to silence a snitch, brews to slow a soldier, drops that’ll send a man coughing up his liver. Handy little tools to make your life easier... and theirs shorter.~
+	
+CHAIN IF ~True()~ THEN AC#PPSKD hello_02
+~Oh, it's you again! What do you want? I’ve got potions, powders, and little drips of doom—if your coin’s honest and your conscience ain’t too fussy.~
 END
-IF~~THEN REPLY ~You're a blight on this city—I should end you right here!~ EXTERN AC#PPSKD fight
-IF~~THEN REPLY ~I’m looking for something more powerful.~ EXTERN AC#PPSKD special_poison
-IF~~THEN REPLY ~Not now. I need to think it through.~ EXTERN AC#PPSKD bye
+IF~~THEN REPLY ~You disgust me. The world needs less filth like you!~ EXTERN AC#PPSKD fight
+IF~~THEN REPLY ~That does sound interesting. What exactly are you offering?~ EXTERN AC#PPSKD interest
+IF~Global("TellSupplier","LOCALS",1)~THEN REPLY ~Tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
+IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 
-CHAIN IF ~~ THEN AC#PPSKD special_poison
-~Truth is, I don’t keep the real nasty stuff on me—too many pryin’ eyes, you feel me? But... for the right coin and the right kind of customer, I might know a bloke who knows a bloke...~
-END
-IF~~THEN REPLY ~Someone like you has no right to draw breath. Prepare to die!~ EXTERN AC#PPSKD fight
-IF~~THEN REPLY ~Tell me where you get it from!~ EXTERN AC#PPSKD not_telling_bye
-IF~~THEN REPLY ~Please, I need to know.~ EXTERN AC#PPSKD tell_me
-IF~~THEN REPLY ~Alright, tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
-IF~GlobalGT("BodhiJob","GLOBAL",0)~THEN REPLY ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~ EXTERN AC#PPSKD work_bodhi
-IF~~THEN REPLY ~This isn't the right moment. I'll be back.~ EXTERN AC#PPSKD bye
-
-CHAIN IF ~~ THEN AC#PPSKD tell_me
-~Ha! You think I’d spill my supplier to the first smooth-talker with a pouch full of coins? Get real. That kind of info don’t come free—and even if it did, I ain’t riskin’ my neck for a stranger in boots too clean for this part of town. Who do you think you are?~
-END
-IF~~THEN EXTERN AC#PPSKD tell_me_cycle
-
-CHAIN IF ~~ THEN AC#PPSKD tell_me_cycle
-~You’ll need more than words to get me talking!~
-END
-IF~~THEN REPLY ~Please, just tell me.~ EXTERN AC#PPSKD not_telling_bye
-//IF~~THEN REPLY ~Everyone has a price. What’s yours?~ EXTERN AC#PPSKD pay_gold_01
-IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~See my muscles? They're not just for crushing melons. Do you want your head burst like a melon in my hands?~ EXTERN AC#PPSKD threat_rep
-IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. Some call me notorious. Ask around what happens to those who cross me.~ EXTERN AC#PPSKD threat_rep
-IF~Dead("maevar")~THEN REPLY ~I helped bring down Mae’Var. So unless you want to follow him, you’ll start talking.~ EXTERN AC#PPSKD threat_rep
-IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me— I'm <CHARNAME>. I've brought down worse than you, and I don't need poison to do it. So tell me what I want to know!~ EXTERN AC#PPSKD threat_rep
-IF~GlobalGT("Linvail","GLOBAL",0)~THEN REPLY ~I work for the Shadow Thieves. I doubt they'd be pleased to hear about your little side business.~ EXTERN AC#PPSKD work_shadow_thieves
-IF~GlobalGT("BodhiJob","GLOBAL",0)~THEN REPLY ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~ EXTERN AC#PPSKD work_bodhi
-IF~~THEN REPLY ~I don’t deal with back-alley scum like you!~ EXTERN AC#PPSKD fight
-IF~~THEN REPLY ~I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
-/*
-	CHAIN IF ~~ THEN AC#PPSKD pay_gold_01
-	~For five thousand gold, I’ll forget I ever knew him—and you’ll know everything I do. Deal?~
+	CHAIN IF ~~ THEN AC#PPSKD interest
+	~Oh, a bit of this and that—venoms to silence a snitch, brews to slow a soldier, drops that’ll send a man coughing up his liver. Handy little tools to make your life easier... and theirs shorter.~
 	END
-	IF~PartyGoldGT(4999)~THEN REPLY ~Very well. Here is your money.~ DO ~TakePartyGold(5000)~ EXTERN AC#PPSKD tell_supplier
-	IF~~THEN REPLY ~Trouble is what I do best.~ EXTERN AC#PPSKD tell_supplier
-	IF~PartyGoldLT(5000)~THEN REPLY ~I don't have that much money.~ EXTERN AC#PPSKD tell_supplier
-*/
+	IF~~THEN REPLY ~You're a blight on this city—I should end you right here!~ EXTERN AC#PPSKD fight
+	IF~Global("TellSupplier","LOCALS",0)~THEN REPLY ~I’m looking for something more powerful.~ DO ~SetGlobal("TellSupplier","LOCALS",1)~ EXTERN AC#PPSKD special_poison
+	IF~Global("TellSupplier","LOCALS",1)~THEN REPLY ~Tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
+	IF~~THEN REPLY ~Not now. I need to think it through.~ EXTERN AC#PPSKD bye
+
+	CHAIN IF ~~ THEN AC#PPSKD special_poison
+	~Truth is, I don’t keep the real nasty stuff on me—too many pryin’ eyes, you feel me? But... for the right coin and the right kind of customer, I might know a bloke who knows a bloke...~
+	END
+	IF~~THEN REPLY ~Someone like you has no right to draw breath. Prepare to die!~ EXTERN AC#PPSKD fight
+	IF~~THEN REPLY ~Please, I need to know.~ EXTERN AC#PPSKD tell_me
+	IF~~THEN REPLY ~Tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
+	IF~~THEN REPLY ~This isn't the right moment. I'll be back.~ EXTERN AC#PPSKD bye
+
+	CHAIN IF ~~ THEN AC#PPSKD tell_me
+	~Ha! You think I’d spill my supplier to the first smooth-talker with a pouch full of coins? Get real. That kind of info don’t come free—and even if it did, I ain’t riskin’ my neck for a stranger in boots too clean for this part of town. Who do you think you are?~
+	END
+	IF~~THEN EXTERN AC#PPSKD tell_me_cycle
+
+	CHAIN IF ~~ THEN AC#PPSKD tell_me_cycle
+	~You’ll need more than words to get me talking!~
+	END
+	IF~~THEN REPLY ~Please, just tell me.~ EXTERN AC#PPSKD not_telling_bye
+	IF~Global("TellPrice","LOCALS",1)~THEN REPLY ~How much did you say the price was again?~ EXTERN AC#PPSKD pay_gold_01
+	IF~Global("TellPrice","LOCALS",0)~THEN REPLY ~Everyone has a price. What’s yours?~ DO ~SetGlobal("TellPrice","LOCALS",1)~ EXTERN AC#PPSKD pay_gold_01
+	IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~See my muscles? They're not just for crushing melons. Do you want your head burst like a melon in my hands?~ EXTERN AC#PPSKD threat_rep
+	IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. Some call me notorious. Ask around what happens to those who cross me.~ EXTERN AC#PPSKD threat_rep
+	IF~Dead("maevar")~THEN REPLY ~I helped bring down Mae’Var. So unless you want to follow him, you’ll start talking.~ EXTERN AC#PPSKD threat_rep
+	IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me— I'm <CHARNAME>. I've brought down worse than you, and I don't need poison to do it. So tell me what I want to know!~ EXTERN AC#PPSKD threat_rep
+	IF~GlobalGT("Linvail","GLOBAL",0)~THEN REPLY ~I work for the Shadow Thieves. I doubt they'd be pleased to hear about your little side business.~ EXTERN AC#PPSKD work_shadow_thieves
+	IF~GlobalGT("BodhiJob","GLOBAL",0)~THEN REPLY ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~ EXTERN AC#PPSKD work_bodhi
+	IF~~THEN REPLY ~I don’t deal with back-alley scum like you!~ EXTERN AC#PPSKD fight
+	IF~~THEN REPLY ~I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
+
+	CHAIN IF ~~ THEN AC#PPSKD pay_gold_01
+	~For five thousand gold, I’ll forget I ever knew my supplier—and you’ll know everything I do. Deal?~
+	END
+	IF~PartyGoldGT(4999)~THEN REPLY ~Very well. Here is your money.~ DO ~TakePartyGold(5000)~ EXTERN AC#PPSKD tell_supplier_02
+	IF~~THEN REPLY ~That is too much.~ EXTERN AC#PPSKD not_telling_bye
+	IF~PartyGoldLT(5000)~THEN REPLY ~I don't have that much money.~ EXTERN AC#PPSKD not_telling_bye
+
 CHAIN IF ~~ THEN AC#PPSKD threat_rep
 ~Oh, it's you? Now that you mention it—folks been whispering about some notorious <PRO_RACE> like you from the North, stirring up trouble in the city...~
 END
@@ -85,7 +93,7 @@ END
 IF~~THEN EXTERN AC#PPSKD tell_supplier_02
 
 CHAIN IF ~~ THEN AC#PPSKD tell_supplier_02
-~A-all right, all right! I’ll tell you where I get the real stuff from. Name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the Snakewood. I... I’ll give you his instructions. Here!~
+~Now I’ll tell you where I get the real stuff from: Name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the Snakewood. I’ll give you his instructions. Here!~
 END
 IF~~THEN REPLY ~Smart choice.~ EXTERN AC#PPSKD map_bye
 IF~~THEN REPLY ~That’s all I needed.~ EXTERN AC#PPSKD map_bye
@@ -105,7 +113,7 @@ CHAIN AC#PPSKD bye
 EXIT
 
 CHAIN AC#PPSKD not_telling_bye
-~Pah! Keep on pressing; you won’t get anything from me unless you got something really good to offer. Get lost!~
+~Pah! You won’t get anything from me unless you got something really good to offer. Get lost!~
 EXIT
 
 
@@ -226,14 +234,16 @@ IF~~THEN REPLY ~No, I haven’t found anything yet.~ EXTERN AC#PPEL1 bye_wait
 CHAIN IF ~~ THEN AC#PPEL1 about_glade
 ~Excellent. Let me take a look…~
 =
-~Lowshade Glade? Yes, I know of it. Secluded, rarely visited—an ideal place for a meeting like this. There’s only one path forward now: we go there and see whether the mysterious poisoner reveals himself. Shall we depart?~
+~Lowshade Glade? Yes, I know of it. Secluded, rarely visited—an ideal place for a meeting like this. There’s only one path forward now: We go there and see whether the mysterious poisoner reveals himself. Shall we depart?~
 END
 IF~~THEN REPLY ~Yes, let’s go.~ EXTERN AC#PPEL1 lets_go
 IF~~THEN REPLY ~Not just yet. I need a little more time.~ EXTERN AC#PPEL1 bye_wait
 
 CHAIN AC#PPEL1 lets_go
-~Excellent! My dear friend, thank you again for your hospitality within these sacred halls.~
-== SLILMAT ~Of course, priest of the Hidden Goddess. May Ilmater’s blessings go with you as well.~
+~Excellent! The journey shouldn't take too long from here.~
+=
+~Farewell, my dear Ilmaterian friend, thank you again for your hospitality within these sacred halls.~
+== SLILMAT ~Farewell, priest of the Hidden Goddess. May Ilmater’s blessings go with you as well.~
 == AC#PPEL1 ~Then let us be on our way.~
 DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",4)
 ClearAllActions()
@@ -259,7 +269,7 @@ CHAIN IF ~~ THEN AC#PPEL1 job
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Eldath’s servants are rare in times like these. I hope his words carry more than peaceful pleasantries.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Eldath! A gentle presence in a world far too fond of thunder.~
 == AC#PPEL1 ~Not long ago, you crossed paths with a poisoned man—Renfeld, if I recall correctly. The toxin used against him troubles me greatly, for it is not the first time someone has been afflicted with a poison that no magic can cure.~
-== AC#PPEL1 ~This is no ordinary toxin. Its effects linger and resist healing in ways that defy what we know of alchemy and magic alike.~
+== AC#PPEL1 ~This was no ordinary toxin. Its effects linger and resist healing in ways that defy what we know of alchemy and magic alike.~
 END
 IF~~THEN REPLY ~What do you mean?~ EXTERN AC#PPEL1 about_poison
 IF~~THEN REPLY ~Go on.~ EXTERN AC#PPEL1 about_poison
@@ -267,16 +277,14 @@ IF~~THEN REPLY ~Go on.~ EXTERN AC#PPEL1 about_poison
 CHAIN IF ~~ THEN AC#PPEL1 about_poison
 ~As you may know, most types of poison can be cured—or at least delayed—with simple clerical spells or quite common antidotes. But in this case, even the strongest divine magic has failed.~
 == HaerdaJ  IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~Well, it truly sounds like some dark rot tried to reach the hearts of men. 'Tis one of those rots, most likely, that need intervention made by those birds that aspire to being called heroes, hmm? Who knows, perhaps it's our raven that can fly that high.~
-== YoshJ IF ~InParty("yoshimo") !StateCheck("yoshimo",CD_STATE_NOTVALID)~ THEN ~It sounds like a gambit or trick that should never be used. Mayhap even too definitive even for a taste of bounty hunters, my friend.~
 == AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~It... it does. Even more than that. It sounds like wors nightmares coming true.~
 == ViconiJ  IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN  ~Mmm, it sounds like something that would be eagerly used by Matron Mothers. Natha elg'cahl phor jal elg'cahlen. A poison above all poisons.~
 == AC#PPEL1 ~There is no antidote for this poison, for it resists all of our spells and common antidotes are too weak to aid those inflicted with this toxin. All we can do is offer comfort to the dying in their final breaths—or pray for a miracle that their body overcomes it on its own.~
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Incurable? How is that even possible? I think—no, I know there is a cure. There always is.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~It sounds like a crime against life itself. It's not as cutting down a tree, but corruption of all the water that runs under a forest.~
 == MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~If what this man is saying is truth, then we cannot ignore presence of such vile threat, <CHARNAME>.~
-== MinscJ  IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN  ~Oh, Minsc wishes Dynaheir was here—she had such a strong wit! She knew how to defeat evil with all that thinking!~
 == DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~This poison sounds like something we could use ourselves.~
-== AC#PPEL1 ~By the will of the Church of Eldath, I have been tasked to uncover the truth behind this poison. Even the calmest waters ripple when danger approaches—and this cannot be ignored.~
+== AC#PPEL1 ~By the will of the Church of Eldath, I have been tasked to uncover the truth behind this poison. Even the calmest waters ripple when danger approaches—this cannot be ignored.~
 END
 IF~~THEN REPLY ~Please, go on.~ EXTERN AC#PPEL1 about_poison_02
 IF~~THEN REPLY ~Perfect poison for someone with a dagger and dark intentions!~ EXTERN AC#PPEL1 about_poison_02
@@ -291,7 +299,7 @@ END
 IF~~THEN REPLY ~How can we track down the one responsible?~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~You need someone willing to confront this poison-maker, don't you?~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~Sounds like you have a task in mind for me...~ EXTERN AC#PPEL1 about_person
-IF~~THEN REPLY ~Let me interrupt you: I'm not interested in any of this. Just leave me be. Go and find someone else to deal with all that crap.~ EXTERN AC#PPEL1 bye
+IF~~THEN REPLY ~I'm not interested in any of this. Go and find someone else to deal with all that crap.~ EXTERN AC#PPEL1 bye
 
 CHAIN IF ~~ THEN AC#PPEL1 about_person
 ~I’ve already tried to make contact with someone who might lead us to the one behind all this. There's a shady figure here in the slums of Athkatla who claims he can procure rare poisons. I pretended to be a potential buyer. Unfortunately, I couldn’t get him to reveal the whereabouts of his supplier. He grew wary—and resentful.~
@@ -299,12 +307,12 @@ END
 IF~~THEN EXTERN AC#PPEL1 first_task
 
 CHAIN IF ~~ THEN AC#PPEL1 first_task
-~I may lack the... persuasive skills required in such dealings. You, however, may prove more capable in such matters.~
+~I may lack the persuasive skills required in such dealings. You, however, may prove more capable in such matters.~
 == ViconiJ  IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN  ~You worship peace, but send others to do your bidding when matters grow inconvenient?~
 == KORGANJ  IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN  ~Persuasion, eh? Nothing persuades better than a broken nose and a few missing teeth.~
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~So even the faithful of the gentle goddess know when to call upon sharper tongues.~
-== NaliaJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN  ~We cannot let people suffer because of this... thing!~
-== AC#PPEL1 ~I kindly ask you to seek out this poison dealer named Skann Delth in the slums of Athkatla. If you can discover the source of his supply, then I ask you to accompany me to confront the one behind it all. Just remember—I seek truth, not violence.~
+== NaliaJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN  ~We cannot let people suffer because of this!~
+== AC#PPEL1 ~I kindly ask you to seek out a poison dealer named Skann Delth in the slums of Athkatla. If you can discover the source of his supply, then I ask you to accompany me to confront the one behind it all. Just remember—I seek truth, not violence.~
 END
 IF~~THEN REPLY ~Fine, I can do that.~ EXTERN AC#PPEL1 job_payment
 IF~~THEN REPLY ~What’s in it for me?~ EXTERN AC#PPEL1 job_payment
@@ -329,7 +337,7 @@ END
 IF~~THEN EXTERN AC#PPEL1 wait_bye
 
 CHAIN IF ~~ THEN AC#PPEL1 wait_bye
-~I will wait for you at the temple of Ilmater in the Slums. They are my allies and offer me shelter whenever I need it. Find me there once you’ve learned anything—when we know where to continue the search for the source of this mysterious poison.~
+~I will wait for you at the temple of Ilmater in the Slums. They are my allies and offer me shelter whenever I need it. Find me there once you’ve learned anything—so we know where to continue the search for the source of this mysterious poison.~
 DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",3)
 EscapeArea()
 ~ EXIT

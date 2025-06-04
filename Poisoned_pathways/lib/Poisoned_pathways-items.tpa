@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PP77W.itm~         ~override~    // elven wardstone in area acpp77
+  SAY NAME2 @1151
+  SAY DESC  @1152
+
 COPY ~%MOD_FOLDER%/itm/AC#PPBK3.itm~         ~override~    // book eldath 01
   SAY NAME2 @1149
   SAY DESC  @1150

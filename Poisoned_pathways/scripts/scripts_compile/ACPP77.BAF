@@ -1,0 +1,10 @@
+IF
+    Global("HasWardstone","ACPP77",0)
+    PartyHasItem("AC#PP77W")  // Abazigal's Wardstone
+THEN
+    RESPONSE #100
+        OpenDoor("DOOR01")
+        PlaySound("EFF_M62")
+        SetGlobal("HasWardstone","ACPP77",1)
+END
+

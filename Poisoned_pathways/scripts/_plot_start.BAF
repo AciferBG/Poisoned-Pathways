@@ -6,12 +6,13 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("AC#PP_PlotStart","GLOBAL",1)
+        SetGlobalTimer("AC#PP_MerethanAppear","GLOBAL",ONE_DAY)
 END
 
 IF
-    PartyHasItem("MISC5F")  // Renfeld's Body
-    GlobalTimerExpired("RenfeldDeath","GLOBAL")
+    !PartyHasItem("MISC5F")
     Global("AC#PP_PlotStart","GLOBAL",1)
+    GlobalTimerExpired("AC#PP_MerethanAppear","GLOBAL")
     AreaType(OUTDOOR)
     InMyArea(Player1)
 THEN
