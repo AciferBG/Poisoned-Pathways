@@ -93,6 +93,12 @@ COPY ~Poisoned_pathways/bam/copy~         ~override~
 
 COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
   
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PP2HD.bam~ ~override~ // Honeysuckle desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1000.pvrz~
+ END
+ END
 
  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPBKD.bam~ ~override~ // Keltormir desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
@@ -101,13 +107,61 @@ COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
  END
  END
  
-  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPPUD.bam~ ~override~ // Keltormir desc bam
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPPUD.bam~ ~override~ // vesper veil desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1002.pvrz~
  END
  END
 
+  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPCD2.bam~ ~override~ // chain necklace 2 desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1004.pvrz~
+ END
+ END
+
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPSTD.bam~ ~override~ // staff desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1005.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PP77D.bam~ ~override~ // elven wardstone desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1006.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPHED.bam~ ~override~ // elven helmet desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1007.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPHDD.bam~ ~override~ // elven head desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1008.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPDED.bam~ ~override~ // decanter of Eldath's water desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1009.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPSCD.bam~ ~override~ // dagger desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1010.pvrz~
+ END
+ END
 
 ///////////////////////////////////////////////////////////////////////
 // VVC files
