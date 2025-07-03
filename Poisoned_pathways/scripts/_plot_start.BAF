@@ -10,17 +10,32 @@ THEN
 END
 
 IF
-    !PartyHasItem("MISC5F")
+    !PartyHasItem("MISC5F")  // Renfeld's Body
     Global("AC#PP_PlotStart","GLOBAL",1)
+    Global("AC#PP_SpawnMerethan","GLOBAL",0)
     GlobalTimerExpired("AC#PP_MerethanAppear","GLOBAL")
     AreaType(OUTDOOR)
     InMyArea(Player1)
 THEN
     RESPONSE #100
+        SetGlobal("AC#PP_SpawnMerethan","GLOBAL",1)
+        SetGlobalTimer("AC#PP_MerethanAppear02","GLOBAL",ONE_DAY)
+END
+
+IF
+    Global("AC#PP_PlotStart","GLOBAL",1)
+    Global("AC#PP_SpawnMerethan","GLOBAL",1)
+    GlobalTimerExpired("AC#PP_MerethanAppear02","GLOBAL")
+    AreaType(OUTDOOR)
+    InMyArea(Player1)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PP_SpawnMerethan","GLOBAL",2)
         SetGlobal("AC#PP_PlotStart","GLOBAL",2)
         CreateCreatureObjectOffset("AC#PPEL1",Player1,[5.5])  // Merethan
 END
 
+/*
 IF
     !PartyHasItem("MISC5F")  // Renfeld's Body
     OR(2)
@@ -43,3 +58,4 @@ THEN
         SetGlobal("AC#PP_PlotStart","GLOBAL",2)
         CreateCreatureObjectOffset("AC#PPEL1",Player1,[5.5])  // Merethan
 END
+*/
