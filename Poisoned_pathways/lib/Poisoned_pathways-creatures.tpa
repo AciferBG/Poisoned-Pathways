@@ -149,7 +149,14 @@ COPY ~%MOD_FOLDER%/cre/AC#PPZOT.cre~ ~override~ // zombie treant
   
 COPY ~%MOD_FOLDER%/cre/AC#PPEL8.cre~ ~override~ // priestess of eldath in area acpp02
   SAY NAME1 @19 SAY NAME2 @19
-
+  SAY INITIAL_MEETING @325
+  SAY SELECT_COMMON1 @326
+  SAY SELECT_COMMON2 @327
+  SAY SELECT_COMMON3 @325
+  SAY SELECT_COMMON4 @328
+  SAY SELECT_COMMON5 @326
+  SAY SELECT_COMMON6 @325
+  
 COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWOW.cre~ ~override~ // Will-o'-wisp
@@ -179,6 +186,13 @@ COPY ~%MOD_FOLDER%/cre/AC#PPMAN.cre~ ~override~ // Mannartv (Man)
   
 COPY ~%MOD_FOLDER%/cre/AC#PPMON.cre~ ~override~ // Montrassa (Monk)
   SAY NAME1 @27 SAY NAME2 @27
+  SAY INITIAL_MEETING @325
+  SAY SELECT_COMMON1 @326
+  SAY SELECT_COMMON2 @327
+  SAY SELECT_COMMON3 @325
+  SAY SELECT_COMMON4 @328
+  SAY SELECT_COMMON5 @326
+  SAY SELECT_COMMON6 @325
   
 COPY ~%MOD_FOLDER%/cre/AC#PPPOI.cre~ ~override~ // Poison Manifestation
   SAY NAME1 @28 SAY NAME2 @28
