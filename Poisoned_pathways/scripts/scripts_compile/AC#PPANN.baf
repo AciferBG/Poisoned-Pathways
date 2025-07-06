@@ -4,5 +4,5 @@ Global("AC#PPMesmerAnkheg","GLOBAL",0)
 THEN
 RESPONSE #100
 SetGlobal("AC#PPMesmerAnkheg","GLOBAL",1)
-DisplayStringHead(Player1,~(When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.)~)  
+DisplayStringHead(Player1,@2021)
 END

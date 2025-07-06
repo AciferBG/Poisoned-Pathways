@@ -2,14 +2,15 @@ IF
 	Global("Prep","ACPP70",0)
 THEN
 RESPONSE #100
-	SetMusic(NIGHT,%AC#PP70%)
-	SetMusic(DAY,%AC#PP70%)
+	SetMusic(NIGHT,%AC#PP77%)
+	SetMusic(DAY,%AC#PP77%)
   OpenDoor("DOOR01")
   OpenDoor("DOOR03")  
   ContainerEnable("Roses",FALSE)
   SpawnPtDeactivate("Spawn_gibberlings")
   SpawnPtDeactivate("Spawn_wisps01")
   SpawnPtDeactivate("Spawn_spiders01")  
+  TriggerActivation("Info_no_way_back",FALSE)
 	SetGlobal("Prep","ACPP70",1)
 	Continue()
 END
@@ -21,6 +22,30 @@ THEN
         ContainerEnable("Roses",TRUE)
         ActionOverride("Roses",CreateItem("AC#PPGRQ",0,0,0))  // Green Rose of Mythrien
         SetGlobal("AC#PPChapter6Quest","GLOBAL",10)
+END
+
+IF
+    Global("AC#PP_MythUnnohyr","GLOBAL",10)
+    Global("Ch6ChangeSpawns","ACPP70",0)
+THEN
+    RESPONSE #100
+        SpawnPtDeactivate("Spawn_gibberlings")
+        SpawnPtDeactivate("Spawn_wisps01")
+        SpawnPtDeactivate("Spawn_spiders01")
+        SpawnPtDeactivate("Mud_zombies")
+        SpawnPtDeactivate("Spawn_ankhegs_entry")
+        SpawnPtDeactivate("Spawn_ankhegs_tower")
+        SpawnPtDeactivate("Spawn_undead_entry")
+        SpawnPtDeactivate("Spawn_undead_tower")
+        SpawnPtDeactivate("Spawn_spiders02")
+        SpawnPtDeactivate("Spawn_spiders03")
+        SpawnPtDeactivate("Spawn_spiders04")
+        SpawnPtDeactivate("Spawn_spiders05")
+        SpawnPtDeactivate("Spawn_undead02")
+        SpawnPtDeactivate("Spawn_undead03")
+        SpawnPtDeactivate("Spawn_undead04")
+        TriggerActivation("Info_no_way_back",TRUE)
+        SetGlobal("Ch6ChangeSpawns","ACPP70",1)
 END
 
 IF
@@ -44,14 +69,41 @@ THEN
         EndCutSceneMode()
 END
 
+IF
+    Global("OpenTreeDoor","ACPP70",1)
+THEN
+    RESPONSE #100
+        OpenDoor("DOOR03")
+        SetGlobal("OpenTreeDoor","ACPP70",2)
+END
 
 IF
-    Global("AC#PPAnkhegs","GLOBAL",0)
-    THEN
+    PartyHasItem("AC#PPWA")  
+    Global("SecondVisit","ACPP70",0)
+THEN
     RESPONSE #100
+    CloseDoor("DOOR03")
+    CreateCreature("AC#PPANN",[744.2498],S)
+    CreateCreature("AC#PPWY1",[4108.1050],NW)
+    SetGlobal("SecondVisit","ACPP70",1)
+END
+
+IF
+    Global("AC#PPOpenTomb","GLOBAL",1)
+    Global("OpenDoor03","ACPP70",0)
+THEN
+    RESPONSE #100
+    OpenDoor("DOOR02")
+    SetGlobal("OpenDoor03","ACPP70",1)
+END
+
+IF
+  Global("AC#PPAnkhegs","GLOBAL",0)
+THEN
+  RESPONSE #100
     ForceRandomEncounterEntry("ACPP98","En")
     SetGlobal("AC#PPAnkhegs","GLOBAL",1)
-    END
+END
 
 IF
   Global("ZombieAmbush","ACPP70",1)

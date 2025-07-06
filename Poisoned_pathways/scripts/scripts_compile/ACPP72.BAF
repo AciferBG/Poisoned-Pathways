@@ -18,6 +18,16 @@ StartCutScene("AC#PPCT6")
 END
 
 IF
+    Global("AC#PP_MythUnnohyr","GLOBAL",10)
+    Global("Ch6Changes","ACPP72",0)
+THEN
+    RESPONSE #100
+        Unlock("DOOR01")
+        OpenDoor("DOOR01")
+        SetGlobal("Ch6Changes","ACPP72",1)
+END
+
+IF
 Global("AC#PPFinalBossPrepare","GLOBAL",2)
 THEN
 RESPONSE #100

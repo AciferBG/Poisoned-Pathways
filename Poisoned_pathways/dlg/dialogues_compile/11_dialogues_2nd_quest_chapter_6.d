@@ -17,7 +17,7 @@ IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~You mentioned some shame before. 
 BEGIN AC#PPMI
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",8)~ THEN AC#PPEL4 C6.QUEST.01.00
-~<CHARNAME>! You’ve arrived at a crucial moment. There’s trouble brewing, and you are... involved, whether by choice or fate.~
+~<CHARNAME>! You’ve arrived at a crucial moment. There’s trouble brewing, and you are involved, whether by choice or fate.~
 ==AC#PPMI ~We all have a share in this, Alatoasz Berendim.~
 ==AC#PPEL4 ~Allow me to introduce High Ranger Mismal Al'Visalle. Once of Gwaeron’s Slumber—now serving among the Mielikkians of Amn.~
 ==AC#PPMI ~I appreciate the fine introduction, but we’re not gathered here to trade titles, I’m afraid. I wish it were so, but this is no simple matter.~

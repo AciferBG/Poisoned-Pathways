@@ -4,7 +4,7 @@ THEN
     RESPONSE #100
         DisplayString(Myself,@2002)
         SetMusic(NIGHT,%AC#PP01%)
-        SetMusic(DAY,%AC#PP01%)
+        //SetMusic(DAY,%AC#PP01%)
         HideAreaOnMap("ACPP30")
         //SetAreaRestFlag(0)
         SetGlobal("EnteredArea","ACPP01",1)  

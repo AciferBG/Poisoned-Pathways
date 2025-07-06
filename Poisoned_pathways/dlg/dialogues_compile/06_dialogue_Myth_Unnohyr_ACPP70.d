@@ -1,3 +1,64 @@
+// Dialogue wyrd in zombie shape in ACPP70
+BEGIN ~AC#PPWY2~
+
+CHAIN IF ~Global("ByeTomb","ACPP77",1)~ THEN AC#PPWY2 hello_bye_tomb
+~Es ist offen! Ihr habt das Siegel gebannt! Nun sind wir vereint, für immer vereint, meine geliebte Elv-Esster Aened!!~
+END
+IF~~THEN DO ~SetGlobal("ByeTomb","ACPP77",10)
+CreateVisualEffectObject("SPDEATH3",Myself)
+ReallyForceSpell("Wardstone",BEHOLDER_BLAST_VISUAL2)
+AddexperienceParty(200)
+Kill(Myself)~ EXIT
+
+CHAIN IF ~True()~ THEN AC#PPWY2 hello_open_tomb
+~Hier ist es... das Grab meiner Geliebten! Rasch, entfernt das Siegel, damit ich ruhen kann und Ihr weiterreisen könnt!~
+END
+IF~~THEN EXIT
+
+// Dialogue wyrd in zombie shape in ACPP70
+BEGIN ~AC#PPWY1~
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWY1 hello_tree_fallen
+~Halt! Haltet ein, Fremde! Hier geht es nicht mehr weiter...~
+END
+IF~~THEN REPLY ~Was ist passiert?~ EXTERN AC#PPWY1 no_way
+
+	CHAIN IF ~~ THEN AC#PPWY1 no_way
+	~Die... die Bäume... sie versperren den Weg... doch ich... ich kann Euch helfen! Ich erkenne, dass Ihr passieren müsst. Ich... ich weiß, wie!~
+	END
+	IF~~THEN REPLY ~Wie könnt Ihr mir helfen?~ EXTERN AC#PPWY1 help_way
+	
+	CHAIN IF ~~ THEN AC#PPWY1 help_way
+	~Ich helfe Euch, indem Ihr mir helft. Ihr könnt die Bäume wegbewegen... sie... sie werden von den Zombie-Treants kontrolliert. Wenn Ihr die Zombie-Treants bannt, werden sich die Bäume Euch beugen.~
+	END
+	IF~~THEN REPLY ~Wie soll ich das bewerkstelligen?~ EXTERN AC#PPWY1 how_help
+	
+	CHAIN IF ~~ THEN AC#PPWY1 how_help
+	~Es... es gibt in der Nähe ein Grabmal... dessen Siegel... Untote fernhält. Untote wie mich! Ich muss in dieses Grabmal. Ihr nehmt das Siegel, sodass ich letzte Ruhe finde.~
+	END
+	IF~~THEN  EXTERN AC#PPWY1 how_help_02
+	
+	CHAIN IF ~~ THEN AC#PPWY1 how_help_02
+	~Habt Ihr das Siegel, könnt Ihr die untoten Bäume bannen. Und ich bin am Ziel meiner Reise und kann ruhen.~
+	END
+	IF~~THEN REPLY ~Warum ruhen?~ EXTERN AC#PPWY1 about_tomb
+	
+		CHAIN IF ~~ THEN AC#PPWY1 about_tomb
+		~Seht mich doch an! Ein rastloser Untoter, getrieben von Sehnsucht nach ewiger Ruhe. Ruhe in den Armen meiner Geliebten! Der Geliebten, die in ihrem Grab ruht. Ein Grab, das mir durch das Siegel verwehrt bleibt.~
+		END
+		IF~~THEN REPLY ~Wer liegt in dem Grab?~ EXTERN AC#PPWY1 about_tomb_02
+		
+		CHAIN IF ~~ THEN AC#PPWY1 about_tomb_02
+		~Meine geliebte Elv-Esster Aened! Die Liebe meines Lebens. Die Liebe meines Todes. Die Liebe meines Untodes.~
+		END
+		IF~~THEN EXTERN AC#PPWY1 follow_me
+		
+			CHAIN AC#PPWY1 follow_me
+			~Ihr wollt weiterkommen, ich will heimkommen. Folgt mir, das Grabmal ist gleich im Norden!~  
+			DO ~SetGlobal("AC#PPOpenTomb","GLOBAL",1)
+			EscapeAreaObject("Tracpp77")~ EXIT
+
+
 // Dialogue Banshee in ACPP76
 BEGIN ~AC#PPBA1~
 

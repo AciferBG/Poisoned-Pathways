@@ -1,0 +1,10 @@
+IF
+    Global("HasWardstone","ACPP77",1)
+    Global("ByeTomb","ACPP77",0)
+THEN
+    RESPONSE #100
+        Wait(1)
+        SetGlobal("ByeTomb","ACPP77",1)
+        StartDialogueNoSet([PC])
+END
+

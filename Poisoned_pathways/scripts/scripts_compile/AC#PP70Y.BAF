@@ -1,0 +1,13 @@
+IF
+    IsOverMe([PC])
+    HasItem("AC#PP77W",LastTrigger)  // Elven Wardstone
+    Global("OpenTreeDoor","ACPP70",0)
+THEN
+    RESPONSE #100
+        SetGlobal("OpenTreeDoor","ACPP70",1)
+        CreateVisualEffectObject("FIRECOLD",LastTrigger)
+        DisplayString(Myself,@2023)
+        TakePartyItem("AC#PP77W")
+        DestroyItem("AC#PP77W")
+END
+

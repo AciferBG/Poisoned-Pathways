@@ -11,7 +11,7 @@ THEN
         ActionOverride("AC#PPOR2",DestroySelf())
         SmallWait(2)
         MultiPlayerSync()
-        DisplayStringHead(Player1,~(The orc is nowehre to be seen, but he couldn't have left Myth Unnohyr, he was too wounded to do that.)~)
+        DisplayStringHead(Player1,@2026)
         Wait(1)
         EndCutSceneMode()
 END

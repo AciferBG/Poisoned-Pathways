@@ -1,4 +1,14 @@
 IF
+	Global("Prep","ACPP73",0)
+THEN
+RESPONSE #100
+	SetMusic(NIGHT,%AC#PP70%)
+	SetMusic(DAY,%AC#PP70%)
+	SetGlobal("Prep","ACPP73",1)
+	Continue()
+END
+
+IF
   Global("AC#PPTowerGuardian","GLOBAL",3)
 THEN
   RESPONSE #100

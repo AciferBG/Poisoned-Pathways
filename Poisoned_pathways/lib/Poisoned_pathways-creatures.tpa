@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPWY2.cre~ ~override~ // Wyrd in ACPP77(in zombie disguise)
+
+COPY ~%MOD_FOLDER%/cre/AC#PPWY1.cre~ ~override~ // Wyrd in ACPP70 (in zombie disguise)
+
 COPY ~%MOD_FOLDER%/cre/AC#PPEAE.cre~ ~override~       // corrupted earth elemental
   SAY NAME1 @41 SAY NAME2 @41
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#ELEMENTAL_EARTH_GRAY~))
@@ -156,7 +160,7 @@ COPY ~%MOD_FOLDER%/cre/AC#PPEL8.cre~ ~override~ // priestess of eldath in area a
   SAY SELECT_COMMON4 @328
   SAY SELECT_COMMON5 @326
   SAY SELECT_COMMON6 @325
-  
+
 COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // orc archer in glade area ACPP30
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWOW.cre~ ~override~ // Will-o'-wisp

@@ -3,7 +3,7 @@ IF
 THEN
     RESPONSE #100
         SetMusic(NIGHT,%AC#PP01%)
-        SetMusic(DAY,%AC#PP01%)
+        //SetMusic(DAY,%AC#PP01%)
         //SetAreaRestFlag(0)
         SetGlobal("EnteredArea","ACPP10",1)  
 END
