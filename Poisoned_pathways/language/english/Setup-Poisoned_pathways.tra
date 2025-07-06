@@ -32,6 +32,16 @@
 @39 = ~Torvak Hrun~
 @40  = ~Debbie Gobblebubble~
 @41 = ~Graveearth Elemental~
+@42 = ~Ancient Blood Amniote~
+@43 = ~Blood Puddle~
+@44 = ~Mesmerized Ankheg~
+@45 = ~Mismal Al'Visalle~
+@46 = ~Wild Wyrd~
+@47 = ~Blood-Soaked Spirit~
+@48 = ~Blood-Soaked Spirit~
+@49 = ~Elven Spirit~
+@50 = ~Bone Weirdling~
+@51 = ~Mythrien Sarath~
 
 
 // cre soundfiles
@@ -960,6 +970,8 @@ But in Stillgrove, where lilies bloom thick as grass, the children tell his stor
 (Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
 @1151 = ~Elven Wardstone~
 @1152 = ~This is a finely crafted elven wardstone.~
+@1153 = ~Zweigschlüssel~
+@1154 = ~Dieser Schlüssel ist aus Zweigen hergestellt und scheint eine besondere Tür zu öffnen.~
 
 
 // script strings

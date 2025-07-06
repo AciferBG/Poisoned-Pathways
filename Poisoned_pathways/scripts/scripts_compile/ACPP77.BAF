@@ -1,10 +1,37 @@
 IF
     Global("HasWardstone","ACPP77",0)
-    PartyHasItem("AC#PP77W")  // Abazigal's Wardstone
+    PartyHasItem("AC#PP77W")  // Elven Wardstone
 THEN
     RESPONSE #100
         OpenDoor("DOOR01")
         PlaySound("EFF_M62")
         SetGlobal("HasWardstone","ACPP77",1)
+END
+
+IF
+    Global("AC#PP_CH6_ENEMIES","ACPP77",0)
+    Global("AC#PP_MythUnnohyr","GLOBAL",10)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWYR",[650.490],SSW)  // Wild Wyrd
+        SetGlobal("AC#PP_CH6_ENEMIES","ACPP77",1)
+END
+
+IF
+    Global("CreateWyrd2","ACPP77",0)    
+    Global("AC#PPChapter6Quest","GLOBAL",18)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWYR",[650.490],SSW)
+        SetGlobal("CreateWyrd2","ACPP77",1)
+END
+
+IF
+    Dead("AC#PPWYR")
+    CombatCounter(0)
+    Global("AC#PPChapter6Quest","GLOBAL",22)
+THEN
+    RESPONSE #100
+        StartCutScene("AC#PP6C7")
 END
 

@@ -41,3 +41,946 @@ EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334_02.baf~
 
 EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/scripts/baldur.baf~
 
+
+COPY_EXISTING ~BALDUR.BCS~ ~override~
+    // Patching thieves guild failure in baldurs.bcs
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("JosterReturn","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    // Patching thieves guild failure in baldurs.bcs
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("JosterPaid","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    // Patching keep failure in baldurs.bcs
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("KPPlotTime","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    // Patching planar sphere failure in baldurs.bcs
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("TeolMessenger","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    // Patching druid stronghold stuff in baldurs.bcs
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(Global("DruidADSpawn","GLOBAL",0)\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    //  Patching druid stronghold stuff #2 in baldurs.bcs
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("DruidADReturn","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+
+COPY_EXISTING ~JAHEIRA.BCS~ ~override~
+    // Patching various lovetalk triggers in Jaheira's script
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(!AreaType(DUNGEON)\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    // Patching various spawn triggers in Jaheira's script
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(!AreaCheck("AR2500")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    // Patching Meronia spawn triggers in Jaheira's script
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(Global("JaheiraHarperPlot","GLOBAL",0)\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+
+//Patching Nalia compaining about her keep
+COPY_EXISTING ~NALIA.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("ArrivedNaliaKeep","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("NaliaGraveyardTimer","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("IsaeaArrestTimer","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+
+// Patching various triggers in HaerDalis's script
+COPY_EXISTING ~HAERDALI.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("HaerDalisHaveGem","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("HaerDalisNoGem","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Aerie's script to prevent Qayle messenger reminder
+COPY_EXISTING ~AERIE.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("AerieRemindsQuayle","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+COPY_EXISTING ~AERIE.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("QuayleMessengerComes","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Anomen's script to prevent Terl's appearance
+COPY_EXISTING ~ANOMEN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(!Exists("Terl")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Minsc's script to prevent Imnesvale complaint
+COPY_EXISTING ~MINSC.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("MinscRemindsImnesvale","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Edwin's script to prevent Nether scroll quest
+COPY_EXISTING ~EDWIN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("EdwinScroll","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Edwin's script to complain nether scroll quest
+COPY_EXISTING ~EDWIN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("EdwinComplainAboutScroll","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Edwin's script to spawn Degardan
+COPY_EXISTING ~EDWIN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("DegardanSpawn","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Korgan's script to prevent madeen quest
+COPY_EXISTING ~KORGAN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("KorganRemindsMadeen","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Korgan's script to prevent book of Kazah quest
+COPY_EXISTING ~KORGAN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("KorganBook","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Korgan's script to prevent shagbag#1 quest
+COPY_EXISTING ~KORGAN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("FindShagbag","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Korgan's script to prevent shagbag#2 quest
+COPY_EXISTING ~KORGAN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("KorganContract","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+// Patching Korgan's script to prevent shagbag#2 quest
+COPY_EXISTING ~KORGAN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(GlobalTimerExpired("KorganRemindsValygar","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+

@@ -218,40 +218,40 @@ COPY ~%MOD_FOLDER%/cre/AC#PPST4.cre~ ~override~ // Novice
   SAY NAME1 @33 SAY NAME2 @33
   SAY INITIAL_MEETING @308
   
-//NEW CREATURES
+//CHAPTER 6 CREATURES
   
-COPY ~%MOD_FOLDER%/cre/AC#PPBLO.cre~ ~override~ // Ancient Blood Amniote
-  SAY NAME1 ~Ancient Blood Amniote~ SAY NAME2 ~Ancient Blood Amniote~
+COPY ~%MOD_FOLDER%/cre/AC#PPBLO.cre~ ~override~ 
+SAY NAME1 @42   SAY NAME2 @42
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#BLOOD_AMNIOTE~))
   
 COPY ~%MOD_FOLDER%/cre/AC#PPBP.cre~ ~override~ // Blood Puddle
-  SAY NAME1 ~Blood Puddle~ SAY NAME2 ~Blood Puddle~
+  SAY NAME1 @43 SAY NAME2 @43
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#BLOOD_PUDDLE~))
   
 COPY ~%MOD_FOLDER%/cre/AC#PPANN.cre~ ~override~ 
-  SAY NAME1 ~Mesmerized Ankheg~ SAY NAME2 ~Mesmerized Ankheg~
+  SAY NAME1 @44 SAY NAME2 @44
   
 COPY ~%MOD_FOLDER%/cre/AC#PPMI.cre~ ~override~ 
-  SAY NAME1 ~Mismal Al'Visalle~ SAY NAME2 ~Mismal Al'Visalle~
+  SAY NAME1 @45 SAY NAME2 @45
   
 COPY ~%MOD_FOLDER%/cre/AC#PPWYR.cre~ ~override~ // WILD WYRD
-  SAY NAME1 ~Wild Wyrd~ SAY NAME2 ~Wild Wyrd~
+  SAY NAME1 @46 SAY NAME2 @46
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#WYRD~))
   
 COPY ~%MOD_FOLDER%/cre/AC#PPSPI.cre~ ~override~ // Blood-Soaked Spirit
-  SAY NAME1 ~Blood-Soaked Spirit~ SAY NAME2 ~Blood-Soaked Spirit~
+  SAY NAME1 @47 SAY NAME2 @47
   
 COPY ~%MOD_FOLDER%/cre/AC#PPSYM.cre~ ~override~ // Gruesome Symbiote
-  SAY NAME1 ~Gruesome Symbiote~ SAY NAME2 ~Gruesome Symbiote~
+  SAY NAME1 @48 SAY NAME2 @48
   
 COPY ~%MOD_FOLDER%/cre/AC#PPHEL.cre~ ~override~ // Vaxh Aened - Elven Spirit
-  SAY NAME1 ~Elven Spirit~ SAY NAME2 ~Elven Spirit~
+  SAY NAME1 @49 SAY NAME2 @49
   
 COPY ~%MOD_FOLDER%/cre/AC#PPSON.cre~ ~override~ // Son
-  SAY NAME1 ~Elven Spirit~ SAY NAME2 ~Elven Spirit~
+  SAY NAME1 @49 SAY NAME2 @49
 
 COPY ~%MOD_FOLDER%/cre/AC#PPBGO.cre~ ~override~ // Bone Weirdling
-  SAY NAME1 ~Bone Weirdling~ SAY NAME2 ~Bone Weirdling~
+  SAY NAME1 @50 SAY NAME2 @50
   
 COPY ~%MOD_FOLDER%/cre/AC#PPMYT.cre~ ~override~ // Mythrien Serath
-  SAY NAME1 ~Mythrien Serath~ SAY NAME2 ~Mythrien Serath~
+  SAY NAME1 @51 SAY NAME2 @51

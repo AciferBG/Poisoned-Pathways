@@ -8,25 +8,25 @@ THEN
         Wait(1)
         FadeToColor([20.0],0)
         Wait(2)
-        JumpToPoint([3700.580])
+        JumpToPoint([642.480])
         SmallWait(1)
-        MoveViewPoint([3700.580],INSTANT)
-        ActionOverride(Player2,JumpToPoint([3600.690]))
-        ActionOverride(Player3,JumpToPoint([3550.650]))
-        ActionOverride(Player4,JumpToPoint([3710.770]))
-        ActionOverride(Player5,JumpToPoint([3470.580]))
-        ActionOverride(Player6,JumpToPoint([3500.450]))
-        ActionOverride("AC#PPMYT",JumpToPoint([3800.460]))
+        MoveViewPoint([642.480],INSTANT)
+        ActionOverride(Player2,JumpToPoint([548.455]))
+        ActionOverride(Player3,JumpToPoint([593.533]))
+        ActionOverride(Player4,JumpToPoint([775.509]))
+        ActionOverride(Player5,JumpToPoint([519.530]))
+        ActionOverride(Player6,JumpToPoint([622.544]))
+        ActionOverride("AC#PPMYT",JumpToPoint([697.397]))
         SmallWait(1)
-        FaceObject("AC#PPMYT")
+        FaceObject("AC#PPMYT")  // Mythrien Serath
         SmallWait(1)
-        ActionOverride(Player2,FaceObject("AC#PPMYT"))
-        ActionOverride(Player3,FaceObject("AC#PPMYT"))
-        ActionOverride(Player4,FaceObject("AC#PPMYT"))
-        ActionOverride(Player5,FaceObject("AC#PPMYT"))
-        ActionOverride(Player6,FaceObject("AC#PPMYT"))
+        ActionOverride(Player2,FaceObject("AC#PPMYT"))  // Mythrien Serath
+        ActionOverride(Player3,FaceObject("AC#PPMYT"))  // Mythrien Serath
+        ActionOverride(Player4,FaceObject("AC#PPMYT"))  // Mythrien Serath
+        ActionOverride(Player5,FaceObject("AC#PPMYT"))  // Mythrien Serath
+        ActionOverride(Player6,FaceObject("AC#PPMYT"))  // Mythrien Serath
         ActionOverride("AC#PPMYT",FaceObject(Player1))
-        CreateCreature("AC#PPHEL",[3640.400],0)
+        CreateCreature("AC#PPHEL",[780.397],S)  // Elven Spirit
         Wait(2)
         FadeFromColor([20.0],0)
         Wait(3)
@@ -35,3 +35,4 @@ THEN
         MultiPlayerSync()
         EndCutSceneMode()
 END
+

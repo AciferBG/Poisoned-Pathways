@@ -5,6 +5,7 @@ THEN
         CutSceneId(Player1)
         StartCutSceneMode()
         ClearAllActions()
+/*        
         Wait(1)
         CreateVisualEffectObject("SPPORTAL",Player1)
         CreateVisualEffectObject("SPPORTAL",Player2)
@@ -35,6 +36,7 @@ THEN
         Wait(2)
         FadeFromColor([20.0],0)
         Wait(3)
+ */       
         SetGlobal("AC#PPChapter6Quest","GLOBAL",18)
         SmallWait(1)
         MultiPlayerSync()

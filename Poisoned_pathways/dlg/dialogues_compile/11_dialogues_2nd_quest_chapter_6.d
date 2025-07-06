@@ -130,65 +130,76 @@ BEGIN AC#PPWYR
 //1ST FIGHT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",2)~ THEN AC#PPWYR 1.00
-~** I sensed someone meddling with my minions, in my stronghold! **~
+~I sensed someone meddling with my minions, in my stronghold!~
 END
 IF~~THEN REPLY ~Your stronghold? You are just making it more dangerous. More... dead.~ EXTERN AC#PPWYR 1.01
 IF~~THEN REPLY ~You must be the wyrd I heard about. You took over the body of an elf; of a hero that did all she could to defend this place.~ EXTERN AC#PPWYR 1.01
 IF~~THEN REPLY ~Well, I heard there is some new monster trying to turn this place into its base, so I came. I wouldn't want to miss all the fun.~ EXTERN AC#PPWYR 1.01
 
 CHAIN AC#PPWYR 1.01
-~** Just look at you. You think you can match my power? **~
-==AC#PPWYR ~** Believe me or not, but I am an ancient being. I saw the world crumble. I saw it being rebuilt. I've seen all that there is, the rot, the destruction, death, power, fear... and life. And I came, to be part of this. **~
-==AC#PPWYR ~** This elf—oh, how she loved this place. And that's why I chose it. So we—me and her—could see this place together. So we could take all the dead parts of it, and build a new enclave. Wild. Dead. And yet... alive. **~
-==AC#PPWYR ~** And I know you've been here before. Even then I was already humming my silent song! Lured the poisonous. Lured the wild. Lured the rotten roots. All these things weave so well with the wicked energied engraved in Myth Unnohyr's stones and walls. **~
+~Just look at you. You think you can match my power?~
+==AC#PPWYR ~Believe me or not, but I am an ancient being. I saw the world crumble. I saw it being rebuilt. I've seen all that there is, the rot, the destruction, death, power, fear... and life. And I came, to be part of this.~
+==AC#PPWYR ~This elf—oh, how she loved this place. And that's why I chose it. So we—me and her—could see this place together. So we could take all the dead parts of it, and build a new enclave. Wild. Dead. And yet... alive.~
+==AC#PPWYR ~And I know you've been here before. Even then I was already humming my silent song! Lured the poisonous. Lured the wild. Lured the rotten roots. All these things weave so well with the wicked energied engraved in Myth Unnohyr's stones and walls.~
 END
 IF~~THEN REPLY ~So you knew about the Talonite that made his base here? And you lured the monsters that came here?~ EXTERN AC#PPWYR 1.02
 IF~~THEN REPLY ~It looks like some's been one busy wyrd!~ EXTERN AC#PPWYR 1.03
 
 CHAIN AC#PPWYR 1.02
-~** Partially. All these things were here. I just hummed my song. **~
+~Partially. All these things were here. I just hummed my song.~
 EXTERN AC#PPWYR 1.03
 
 CHAIN AC#PPWYR 1.03
-~** You may think that what I am doing here is... evil. Oh, you living things love that word. You want to call thing evil. Wrong. Bad. But I am none of these things. I am ancient. I am above all of this. **~
-==AC#PPWYR ~** However, some could say that I am hungry. Just as hungry as Myth Unnohyr and the earth below it! It's already swallowed part of this place before. This time, however, we will feed on dreams, and hopes, and life and... those that dared to came. And it looks like you are on that list. **~
+~You may think that what I am doing here is... evil. Oh, you living things love that word. You want to call thing evil. Wrong. Bad. But I am none of these things. I am ancient. I am above all of this.~
+==AC#PPWYR ~However, some could say that I am hungry. Just as hungry as Myth Unnohyr and the earth below it! It's already swallowed part of this place before. This time, however, we will feed on dreams, and hopes, and life and... those that dared to came. And it looks like you are on that list.~
 END
 IF~~THEN REPLY ~You won't win this.~ EXTERN AC#PPWYR 1.04
 IF~~THEN REPLY ~I came armed. You're not going to defeat me, monsters. I shall be your doom.~ EXTERN AC#PPWYR 1.04
 IF~~THEN REPLY ~I suppose it was a mistake to come here. Let me leave. I'm not going to fight you. I changed my mind.~ EXTERN AC#PPWYR 1.05
 
 CHAIN AC#PPWYR 1.04
-~** Do not make promises that you are unable to hold. **~
+~Do not make promises that you are unable to hold.~
 EXTERN AC#PPWYR 1.06
 
 CHAIN AC#PPWYR 1.05
-~** No. It's too late for you. You will be consumed by us. By this place. Your bones will become part of it. **~
+~No. It's too late for you. You will be consumed by us. By this place. Your bones will become part of it.~
 EXTERN AC#PPWYR 1.06
 
 CHAIN AC#PPWYR 1.06
 ~** Some here. Let's test your weapons and will. Hahaha! **~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",3) CreateCreature("AC#PPSPI",[3730.420],1) CreateVisualEffect("SPFLESHS",[3730.420]) CreateCreature("AC#PPSPI",[3900.490],1) CreateVisualEffect("SPFLESHS",[3900.490]) Enemy()~ EXIT
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",3) 
+CreateCreature("AC#PPSPI",[522.378],0) 
+CreateVisualEffect("SPFLESHS",[522.378]) 
+CreateCreature("AC#PPSPI",[825.491],2) 
+CreateVisualEffect("SPFLESHS",[825.491]) 
+Enemy()~ EXIT
 
 //2ND TALK - HURT 
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",4)~ THEN AC#PPWYR 2.00
-~** You are putting a lot of effort in all of this. It's almost impressive. But this place is mine, and I shall leave just as long as the half-dead and half-wild nature of this place. **~
-==AC#PPWYR ~** My beautiful symbiotes link me to this place. You cannot defeat me, but—I encourage you to try. I want to see you tired. I want to see you lose all hope. **~
+~You are putting a lot of effort in all of this. It's almost impressive. But this place is mine, and I shall leave just as long as the half-dead and half-wild nature of this place.~
+==AC#PPWYR ~My beautiful symbiotes link me to this place. You cannot defeat me, but—I encourage you to try. I want to see you tired. I want to see you lose all hope.~
 END
 IF~~THEN REPLY ~Symbiotes?~ EXTERN AC#PPWYR 2.01
 IF~~THEN REPLY ~I will find some way to destroy you!~ EXTERN AC#PPWYR 2.02
 
 CHAIN AC#PPWYR 2.01
-~** Well, everyone has their ways to control the flow of power. And they are mine. But that knowledge will give you nothing. I am too powerful for you, with or without them! **~
+~Well, everyone has their ways to control the flow of power. And they are mine. But that knowledge will give you nothing. I am too powerful for you, with or without them!~
 EXTERN AC#PPWYR 2.03
 
 CHAIN AC#PPWYR 2.02
-~** You are clearly a dreamer, haha! **~
+~You are clearly a dreamer, haha!~
 EXTERN AC#PPWYR 2.03
 
 CHAIN AC#PPWYR 2.03
-~** I shall watch how you struggle. Remember that. Go. Do you best. And let me enjoy the spectacle, little one. **~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",5) StartCutSceneMode() Wait(1) ScreenShake([20.45],15) Wait(2) EndCutSceneMode() DestroySelf()~ EXIT
+~I shall watch how you struggle. Remember that. Go. Do you best. And let me enjoy the spectacle, little one.~
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",5) 
+StartCutSceneMode() 
+Wait(1) 
+ScreenShake([20.45],15) 
+Wait(2) 
+EndCutSceneMode() 
+DestroySelf()~ EXIT
 
 //HELPER 
 
@@ -336,7 +347,10 @@ EXTERN AC#PPMYT 02.04
 CHAIN AC#PPMYT 02.04
 ~^0xFF8FAD5DBut worry not. I will assist you. I want to see this place free. I want peace to come. ^-~
 ==AC#PPMYT ~^0xFF8FAD5DNow go. Find that creature and I will come when the time is right. ^-~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",17) SetGlobal("AC#PPFixMagic","GLOBAL",1) CreateVisualEffect("SPPORTAL",[710.705]) DestroySelf()~ EXIT
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",17) 
+SetGlobal("AC#PPFixMagic","GLOBAL",1) 
+CreateVisualEffect("SPPORTAL",[710.705]) 
+DestroySelf()~ EXIT
 
 //WYRD 2nd Meeting
 

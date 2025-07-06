@@ -3,32 +3,82 @@
 // Dialogue Mannatarv 
 BEGIN ~AC#PPMAN~
 
-IF ~True()~ THEN BEGIN 0
+IF ~NumTimesTalkedTo(0)~ THEN BEGIN hello_0
   SAY ~Welcome, traveler. Few arrive in Duskwood Dell by chance. What brings you beneath these boughs?~
   IF ~~ THEN REPLY ~What is this place?~ GOTO chain_place
+  IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
+  IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
+  IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
+  IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
+END
+
+IF ~True()~ THEN BEGIN hello_1
+  SAY ~Greetings again. What can I do for you, seeker of peace?~
+  IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
+  IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
+  IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
+  IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
 END
 
 IF ~~ THEN BEGIN bye
-  SAY ~Then may your path be soft beneath your feet, and your spirit undisturbed.~
+  SAY ~May your path be soft beneath your feet, and your spirit undisturbed.~
   IF ~~ THEN EXIT
 END
+
+CHAIN IF ~~ THEN AC#PPMAN looking_for_highpriest
+~Oh, you're looking for Most Exalted Fallskeeper Alatoasz Berendim? He can be found in one of the trees — the northeastern one, near the water. You'll most likely find him in the canopy, where he discusses difficult matters with the birds of the forest.~
+END
+  IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~I have another question.~ GOTO questions
+
+	CHAIN IF ~~ THEN AC#PPMAN looking_for_highpriest_bye
+	~Do that. He’ll be glad to meet you.~
+	EXIT
+
+
+CHAIN IF ~~ THEN AC#PPMAN seek_worm
+~Earthworms? You’d have to dig up the whole sacred ground to find one. No, I’m afraid I can’t help you there.~
+END
+  IF ~~ THEN REPLY ~I have another question.~ GOTO questions
+  IF ~~ THEN REPLY ~That would be all. Farewell.~ GOTO bye
+
+CHAIN IF ~~ THEN AC#PPMAN questions
+~You have questions? Gladly! I only hope I have answers you'll like.~
+END
+IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
+IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
+IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
+IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
+IF ~~ THEN REPLY ~I must be going.~ GOTO bye
+
+
+CHAIN IF ~~ THEN AC#PPMAN chain_church
+~Our church is guided by Most Exalted Fallskeeper Alatoasz Berendim, the wisest and most peace-minded of our order. All other priests you see here serve under his guidance. Unlike other faiths, we hold no rigid hierarchy — our belief in nature's harmony unites us and guides our service to the community.~
+==AC#PPMAN ~Some priests are occasionally sent out to make the world a more peaceful place. We call them Freewalkers — they travel to places shown to them by our goddess, seeking to ease conflict and end strife. A dangerous path, but a worthy one.~
+END
+  IF ~~ THEN REPLY ~I have another question.~ GOTO questions
+  IF ~~ THEN REPLY ~I should be on my way.~ GOTO bye
+
 CHAIN IF ~~ THEN AC#PPMAN chain_place
-~This is Duskwood Dell—a hidden glade nurtured by the faith of Eldath, the goddess of still waters and quiet groves. Do you wish to know more?~
+~This is Duskwood Dell — a hidden glade nurtured by the faith of Eldath, the goddess of still waters and quiet groves. It is a haven for those who seek peace and balance. Do you wish to know more?~
 END
- IF ~~ THEN REPLY ~Yes, tell me more.~ GOTO chain_place_more
- IF ~~ THEN REPLY ~No, I should be on my way.~ GOTO bye
-  
+  IF ~~ THEN REPLY ~Yes, tell me more.~ GOTO chain_place_more
+  IF ~~ THEN REPLY ~No, I should be on my way.~ GOTO bye
+
 CHAIN IF ~~ THEN AC#PPMAN chain_place_more 
-~Duskwood Dell was never founded—it revealed itself, as if waiting to be found. Discovered by the first Peacewalkers when the world beyond these woods grew heavy with grief and steel. They sought not escape, but a silence that could soothe what battle had broken.~
+~Duskwood Dell has existed in this forest since time immemorial — when the woods were still young and untouched. The first followers of Eldath settled this glade back then. In the murmuring waters, they first heard the voice of the goddess, and built a sanctuary here in her honor.~
 ==AC#PPMAN ~They built no walls. The trees have embraced us ever since. We sleep in hammocks between the limbs, our breath shared with wind and leaf.~
+==AC#PPMAN ~The waters around us are part of the Green Goddess Falls, sacred cascades that gather in pools at the glade before flowing on as the River Rimril, joining the Trifin Creek and eventually feeding into the Amstel River.~
 END
- IF ~~ THEN REPLY ~And what is the purpose of this place?~ GOTO chain_place_more_02
- IF ~~ THEN REPLY ~You've given me much to reflect on. Farewell.~ GOTO bye
- 
+  IF ~~ THEN REPLY ~And what is the purpose of this place?~ GOTO chain_place_more_02
+  IF ~~ THEN REPLY ~You've given me much to reflect on. Farewell.~ GOTO bye
+
 CHAIN IF ~~ THEN AC#PPMAN chain_place_more_02
-~This is no place of hiding, but of healing. Peace is not weakness—it is the will to let go of burden, blade, and bitterness. You will find no temples of carved stone here. Only open sky, and the gentle song of streams below.~
+~The purpose of this place? What purpose does peace need? Peace is the will to let go of burden, blade, and bitterness. You will find no temples of carved stone here. Only open sky, and the gentle song of streams below.~
 END  
+  IF ~~ THEN REPLY ~Thank you for your insights. I must go.~ EXTERN AC#PPMAN bye
   IF ~~ THEN REPLY ~That’s enough wisdom for now. Time to move on.~ EXTERN AC#PPMAN bye
 
 

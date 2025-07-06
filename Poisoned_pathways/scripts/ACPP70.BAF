@@ -242,7 +242,6 @@ CreateCreature("AC#PPSPI",[3000.420],4)
 CreateCreature("AC#PPSPI",[1300.2020],8)
 CreateCreature("AC#PPSPI",[1320.2170],8)
 CreateCreature("AC#PPSPI",[1420.2120],8)
-CreateCreature("AC#PPWYR",[3800.460],1)
 SetGlobal("AC#PP_CH6_ENEMIES","ACPP70",1)
 END
 
@@ -314,15 +313,6 @@ Global("AC#PPChapter6Quest","GLOBAL",17)
 THEN
 RESPONSE #100
 StartCutScene("AC#PP6C5")
-END
-
-IF
-Dead("AC#PPWYR")
-CombatCounter(0)
-Global("AC#PPChapter6Quest","GLOBAL",22)
-THEN
-RESPONSE #100
-StartCutScene("AC#PP6C7")
 END
 
 IF
