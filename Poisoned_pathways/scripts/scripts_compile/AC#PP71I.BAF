@@ -1,5 +1,5 @@
 IF
-    Entered([ANYONE])
+    OpenState(Myself,TRUE)
     Global("DeadMagicInfo","ACPP71",0)
 THEN
     RESPONSE #100
