@@ -219,7 +219,7 @@ StartCutScene("AC#PPCT2")
 BEGIN ~AC#PPEL1~
 
 CHAIN IF ~Global("AC#PPHasMap","GLOBAL",10)~ THEN AC#PPEL1 hello_glade
-~Hello again, <CHARNAME>. Shall we depart to Lowshade Glade?~
+~Hello again, <CHARNAME>. Shall we depart to Toadstool Hollow?~
 END
 IF~~THEN REPLY ~Yes, let’s go.~ EXTERN AC#PPEL1 lets_go
 IF~~THEN REPLY ~Not just yet. I need a little more time.~ EXTERN AC#PPEL1 bye_wait
@@ -234,7 +234,7 @@ IF~~THEN REPLY ~No, I haven’t found anything yet.~ EXTERN AC#PPEL1 bye_wait
 CHAIN IF ~~ THEN AC#PPEL1 about_glade
 ~Excellent. Let me take a look…~
 =
-~Lowshade Glade? Yes, I know of it. Secluded, rarely visited—an ideal place for a meeting like this. There’s only one path forward now: We go there and see whether the mysterious poisoner reveals himself. Shall we depart?~
+~Toadstool Hollow? Yes, I know of it. Secluded, rarely visited—an ideal place for a meeting like this. There’s only one path forward now: We go there and see whether the mysterious poisoner reveals himself. Shall we depart?~
 END
 IF~~THEN REPLY ~Yes, let’s go.~ EXTERN AC#PPEL1 lets_go
 IF~~THEN REPLY ~Not just yet. I need a little more time.~ EXTERN AC#PPEL1 bye_wait

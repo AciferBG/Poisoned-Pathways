@@ -3,15 +3,15 @@ BEGIN ~AC#PPOR2~
 //1st
 
 CHAIN IF ~Global("AC#PPTowerGuardian","GLOBAL",0)~ THEN AC#PPOR2 TG.01.00
-~Me can see you! Ha! You think you can disturb master?! No one can disturb the master! The tower is locked! Puff! See the fumes?! No one can pass the, only master, his pets, and Wadal Hrun!~
-==AC#PPOR2 ~You be lucky Wadal saw you before he could pick a new batch of special arrows, but even without them Wada can kill you! Hahaha!~
+~Ssso, you dare draw near? Foolissshh creature... You would trespassss upon the massster’s tower?! None ssshall disssturb him! The path isss sssealed, cloaked in vaporsss... only the massster, hisss choosssen beasts, and Wadal Hrun may passss.~
+==AC#PPOR2 ~You ssshould consssider yourssself fortunate... Wadal sssaw you before fetching hisss venom-tipped arrowsss. Yet even unarmed, Wadal can end you. Sssso easily...~
 DO ~SetGlobal("AC#PPTowerGuardian","GLOBAL",1) Enemy()~ EXIT
 
 //2nd
 
 CHAIN IF ~Global("AC#PPTowerGuardian","GLOBAL",2)~ THEN AC#PPOR2 TG.02.00
-~Stupid <PRO_RACE>!~
-==AC#PPOR2 ~If Wadal cannot kill <PRO_RACE>, then WADAL will hide and <PRO_RACE> will never enter the tower! And Wadal is very good at hiding, hahaha!~
+~Wretched little <PRO_RACE>... Ssscuttling vermin!~
+==AC#PPOR2 ~If Wadal cannot ssstrike you down, then Wadal ssshall vanisssh into the fog... and you ssshall never enter the tower! Hsss... Wadal isss a massster of ssshadowsss!~ 
 DO ~ClearAllActions()
 SetGlobal("AC#PPTowerGuardian","GLOBAL",3) 
 TriggerActivation("Portral",TRUE) 
@@ -22,8 +22,9 @@ StartCutScene("AC#PPCT5")~ EXIT
 //3rd
 
 CHAIN IF ~Global("AC#PPTowerGuardian","GLOBAL",4)~ THEN AC#PPOR2 TG.03.00
-~You again?! Agh, Wadal healed, Wadal will continue fighting with you! And mushroom-people are going to help Wadal!~
+~You return...? Impudent ssstain. Wadal hasss healed — and now, you ssshall feel the wrath of hisss allies... the myconid brood risesss with him!~
 DO ~DestroyItem("MINHP1") SetGlobal("AC#PPTowerGuardian","GLOBAL",5) Enemy()~ EXIT
+
 
 //////////////////////////////////
 // Dialogue in area acpp72

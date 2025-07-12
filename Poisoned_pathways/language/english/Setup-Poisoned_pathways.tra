@@ -22,14 +22,14 @@
 @29 = ~Char~
 @30 = ~Aunt Pesca~
 @31 = ~Oren Taval~
-@32 = ~Blightjaw Ankheg~
+@32 = ~Blightspawn Ankheg~
 @33 = ~Novice~
 @34 = ~Peaceman~
 @35 = ~Skann Delth~
 @36 = ~Naerwyn~
 @37 = ~Mud Zombie~
 @38 = ~Viper~
-@39 = ~Torvak Hrun~
+@39 = ~Thorn Wither~
 @40  = ~Debbie Gobblebubble~
 @41 = ~Graveearth Elemental~
 @42 = ~Ancient Blood Amniote~
@@ -42,6 +42,7 @@
 @49 = ~Elven Spirit~
 @50 = ~Bone Weirdling~
 @51 = ~Mythrien Sarath~
+@52 = ~Yuan-Ti Archer~
 
 
 // cre soundfiles
@@ -88,7 +89,7 @@
 @1004 = ~Fungal Key~
 @1005 = ~This key is overgrown with grime and strange spores. It appears to open a very particular kind of door.~
 @1006 = ~Supplier's Note~
-@1007 = ~Skann, I need you to deliver a large shipment of my work to several interested parties. Meet me at the marked location near the edge of the Snakewood, at Lowshade Glade. Destroy this note so it doesn’t fall into the wrong hands.
+@1007 = ~Skann, I need you to deliver a large shipment of my work to several interested parties. Meet me at the marked location near the edge of the Snakewood, at Toadstool Hollow. Destroy this note so it doesn’t fall into the wrong hands.
 
 Delgorth~
 @1008 = ~Keltormir, the Fallen Empire~
@@ -970,8 +971,8 @@ But in Stillgrove, where lilies bloom thick as grass, the children tell his stor
 (Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
 @1151 = ~Elven Wardstone~
 @1152 = ~This is a finely crafted elven wardstone.~
-@1153 = ~Zweigschlüssel~
-@1154 = ~Dieser Schlüssel ist aus Zweigen hergestellt und scheint eine besondere Tür zu öffnen.~
+@1153 = ~Branch Key~
+@1154 = ~This key is crafted from interwoven branches and appears to open a particular kind of door.~
 
 
 // script strings
@@ -1001,7 +1002,7 @@ But in Stillgrove, where lilies bloom thick as grass, the children tell his stor
 @2023 = ~By the power of the wardstone, the throng of undead trees is banished.~
 @2024 = ~Blood... All I can see is blood!~
 @2025 = ~Free me! Please!~
-@2026 = ~(The orc is nowhere to be seen, but he couldn't have left Myth Unnohyr, he was too wounded for that.)~
+@2026 = ~(The yuan-ti is nowhere to be seen, but he couldn't have left Myth Unnohyr, he was too wounded for that.)~
 @2027 = ~You're in Myth Unnohyr again. The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
 @2028 = ~Something unsettling stirs in the north. To reach it, you must pass through the sanctuary once claimed by the priest of Talona.~
 @2029 = ~We should see our dryad-friend first. From what I understand, she has the sword.~
