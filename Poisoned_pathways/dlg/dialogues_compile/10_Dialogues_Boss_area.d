@@ -4,7 +4,7 @@ BEGIN ~AC#PPOR2~
 
 CHAIN IF ~Global("AC#PPTowerGuardian","GLOBAL",0)~ THEN AC#PPOR2 TG.01.00
 ~Ssso, you dare draw near? Foolissshh creature... You would trespassss upon the massster’s tower?! None ssshall disssturb him! The path isss sssealed, cloaked in vaporsss... only the massster, hisss choosssen beasts, and Wadal Hrun may passss.~
-==AC#PPOR2 ~You ssshould consssider yourssself fortunate... Wadal sssaw you before fetching hisss venom-tipped arrowsss. Yet even unarmed, Wadal can end you. Sssso easily...~
+==AC#PPOR2 ~You ssshould consssider yourssself fortunate... Wadal sssaw you before he could fetch hisss venom-tipped arrowsss... the onesss laced with incurable poissson. Yet even without them, Wadal can end you sssso easssily!~
 DO ~SetGlobal("AC#PPTowerGuardian","GLOBAL",1) Enemy()~ EXIT
 
 //2nd

@@ -6,6 +6,10 @@ COPY ~%MOD_FOLDER%/cre/AC#PPWY2.cre~ ~override~ // Wyrd in ACPP77(in zombie disg
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWY1.cre~ ~override~ // Wyrd in ACPP70 (in zombie disguise)
 
+COPY ~%MOD_FOLDER%/cre/AC#PPSCR.cre~ ~override~       // scorpion
+  SAY NAME1 @53 SAY NAME2 @53
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~SCORPION_ACIFER~))
+
 COPY ~%MOD_FOLDER%/cre/AC#PP71V.cre~ ~override~       // thron wither in area ACPP71
   SAY NAME1 @39 SAY NAME2 @39
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~THORN_WITHER_ACIFER~))
