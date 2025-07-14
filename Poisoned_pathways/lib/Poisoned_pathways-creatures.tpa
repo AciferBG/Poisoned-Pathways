@@ -169,8 +169,11 @@ COPY ~%MOD_FOLDER%/cre/AC#PPEL8.cre~ ~override~ // priestess of eldath in area a
   SAY SELECT_COMMON5 @326
   SAY SELECT_COMMON6 @325
 
-COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // yuan-ti archer in glade area ACPP30
+COPY ~%MOD_FOLDER%/cre/AC#PPYU2.cre~ ~override~ // yuan-ti archer
   SAY NAME1 @52 SAY NAME2 @52
+
+COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // yuan-ti archer Wadal Hrun in glade area ACPP30
+  SAY NAME1 @23 SAY NAME2 @23
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWOW.cre~ ~override~ // Will-o'-wisp
   SAY NAME1 @20 SAY NAME2 @20

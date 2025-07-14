@@ -5,6 +5,7 @@ RESPONSE #100
 	SetMusic(NIGHT,%AC#PP70%)
 	SetMusic(DAY,%AC#PP70%)
 	SetGlobal("Prep","ACPP73",1)
+	DisplayStringHead(Player1,@2013)
 	Continue()
 END
 

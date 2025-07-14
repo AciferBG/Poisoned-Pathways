@@ -14,8 +14,6 @@ CHAIN IF ~Global("AC#PPTowerGuardian","GLOBAL",2)~ THEN AC#PPOR2 TG.02.00
 ==AC#PPOR2 ~If Wadal cannot ssstrike you down, then Wadal ssshall vanisssh into the fog... and you ssshall never enter the tower! Hsss... Wadal isss a massster of ssshadowsss!~ 
 DO ~ClearAllActions()
 SetGlobal("AC#PPTowerGuardian","GLOBAL",3) 
-TriggerActivation("Portral",TRUE) 
-AmbientActivate("PORTALBAM",TRUE)
 StartCutSceneMode() 
 StartCutScene("AC#PPCT5")~ EXIT
 

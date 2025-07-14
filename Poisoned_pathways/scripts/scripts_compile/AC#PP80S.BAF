@@ -1,0 +1,12 @@
+IF
+    Entered([ANYONE])
+    Global("Scorpions","ACPP80",0)
+THEN
+    RESPONSE #100
+        SetGlobal("Scorpions","ACPP80",1)
+        CreateCreature("AC#PPSCR",[369.1000],NE)  // Scorpion
+        CreateCreature("AC#PPSCR",[527.1099],NE)  // Scorpion
+        CreateCreature("AC#PPSCR",[6889.1046],NE)  // Scorpion
+        CreateCreature("AC#PPSCR",[325.1042],NE)  // Scorpion
+END
+

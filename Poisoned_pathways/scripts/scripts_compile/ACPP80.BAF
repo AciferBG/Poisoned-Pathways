@@ -1,3 +1,19 @@
+IF
+	Global("Prep","ACPP80",0)
+THEN
+RESPONSE #100
+  SpawnPtDeactivate("Spawnpoint01")
+  SetGlobal("Prep","ACPP80",1)
+END
+
+IF
+	Global("Prep","ACPP80",1)
+  Dead("AC#PPOR2")
+THEN
+RESPONSE #100
+  SpawnPtActivate("Spawnpoint01")
+  SetGlobal("Prep","ACPP80",2)
+END
 
 IF
   GlobalGT("CHAPTER","GLOBAL",5)

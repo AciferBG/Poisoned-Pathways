@@ -119,6 +119,8 @@ EXIT
 
 // Dialogue Talonite priest in glade (ambush area)
 
+BEGIN ~AC#PPOR1~
+
 BEGIN ~AC#PPTA1~
 
 CHAIN IF ~True()~ THEN AC#PPTA1 hello_0
@@ -197,9 +199,12 @@ CHAIN IF ~Global("CutsceneAmbush","ACPP30",1)~ THEN AC#PPEL2 hello_talonite
 == AC#PPTA1 ~I have! And you’ll be tasting it soon enough!~ 
 == AC#PPEL2 ~What do you mean...~ 
 == AC#PPTA1 ~How stupid do you think I am, Eldathyn? You believe I can’t see through your scheming? That I wouldn’t notice those brutes hiding among the trees?~ 
-== AC#PPTA1 ~You meant to ambush me, but instead I’ve turned the trap on you.~ 
+== AC#PPTA1 ~You meant to ambush me, but instead I’ve turned the trap on you. Wadal, my loyal servant?~ 
+== AC#PPOR1 ~Yesss, massster?~
+== AC#PPTA1 ~Take the special arrow I prepared. Fire it at that miserable peace-craver.~ 
+== AC#PPOR1 ~With eassse... Wadal never misssesss.~ 
 == AC#PPEL2 ~<CHARNAME>! To me!~ 
-== AC#PPTA1 ~Your <CHARNAME> won’t save you. You’ll get the poison you crave, oh yes. Right in the heart!~ 
+== AC#PPTA1 ~Your <CHARNAME> won’t save you. You’ll get the poison you desire, oh yes! Right in your heart!~ 
 END
 IF ~~ THEN DO ~SetGlobal("CutsceneAmbush","ACPP30",2)
 StartCutSceneMode()

@@ -11,8 +11,31 @@ RESPONSE #100
   SpawnPtDeactivate("Spawn_wisps01")
   SpawnPtDeactivate("Spawn_spiders01")  
   TriggerActivation("Info_no_way_back",FALSE)
+  SoundActivate("Portal01",FALSE)
+  SoundActivate("Portal02",FALSE)
 	SetGlobal("Prep","ACPP70",1)
 	Continue()
+END
+
+IF
+    GlobalGT("AC#PPTowerGuardian","GLOBAL",2)
+    Global("ActivatePortal","ACPP70",0)
+THEN
+    RESPONSE #100
+        TriggerActivation("Portral",TRUE) 
+        AmbientActivate("PORTALBAM",TRUE)
+        SoundActivate("Portal01",TRUE)
+        SoundActivate("Portal02",TRUE)
+        SetGlobal("ActivatePortal","ACPP70",1)
+END
+
+IF
+    Global("ActivatePortal","ACPP70",1)
+    PartyHasItem("AC#PPBR")
+THEN
+    RESPONSE #100
+        TriggerActivation("Info_blocked_door",FALSE) 
+        SetGlobal("ActivatePortal","ACPP70",2)
 END
 
 IF
