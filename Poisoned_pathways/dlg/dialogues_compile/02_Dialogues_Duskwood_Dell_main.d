@@ -152,7 +152,7 @@ IF~PartyHasItem("AC#PPSYM")~THEN REPLY ~One more thing—I have Merethan’s sym
 CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem
 ~Such emblems are usually passed from one priest to another. Yet for now, I know no one who should carry it. Keep it with you for the time being—mayhap we shall find a worthy soul to whom it may be entrusted.~
 END
-IF~~THEN REPLY ~I might know someone—Montrassa, the elder priestess. Her hands have grown too frail to craft her own emblem.~ EXTERN AC#PPEL4 emblem_montrassa
+IF~Global("AC#PPSymbolQuest","GLOBAL",2)~THEN REPLY ~I might know someone—Montrassa, the elder priestess. Her hands have grown too frail to craft her own emblem.~ EXTERN AC#PPEL4 emblem_montrassa
 IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma_bye
 
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa
