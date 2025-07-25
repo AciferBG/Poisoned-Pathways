@@ -1,5 +1,63 @@
 // Dialogue sidechars in Duskwood Dell
 
+// Bear telling stories in area ACPP08
+BEGIN AC#PP06B // Bear
+BEGIN AC#PP06R // Rabbit
+BEGIN AC#PP06S // Squirrel
+BEGIN AC#PP06M // Rat
+BEGIN AC#PP06G // Groundhog
+BEGIN AC#PP06P // Pheasant
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PP06B story_01
+~And that, little ones, is how the squirrel saved the oak by making the storm cough.~
+==AC#PP06R ~That was wonderful! I liked the part where the clouds cried from laughter!~
+==AC#PP06S ~You always like the funny bits. I liked when the squirrel tricked the thunder itself.~
+==AC#PP06G ~But it wasn’t fair. The beetle didn’t deserve to be squashed like that.~
+==AC#PP06P ~I still say the beetle had it coming. Stupid beetle.~
+==AC#PP06M ~It’s just a story... or is it? Maybe it really happened once.~
+==AC#PP06B ~All stories carry truth, little ones. You must listen with more than ears.~
+==AC#PP06R ~With ears like mine, I could hear even the stars whisper!~
+==AC#PP06G ~Well, mine aren’t that big, and I’m still listening! Most of the time, anyway...~
+==AC#PP06R ~Do you know another one? One with a rabbit in it?~
+==AC#PP06B ~Very well. Settle down. This is the tale of the moonlit grove and the rabbit who outran time...~
+==AC#PP06P ~Oh, not the time story again...~
+==AC#PP06S ~Shhh! I love that one.~
+==AC#PP06B ~Long ago, before even the stars had names...~
+==AC#PP06M ~Ohh!~
+EXIT
+
+CHAIN IF ~NumTimesTalkedTo(1)~ THEN AC#PP06B hello_listen
+~Greetings, two-legged creatures. Listen carefully, but don't scare my little ones, will you? I'm telling stories here.~
+EXIT
+
+CHAIN IF ~RandomNum(3,1)~ THEN AC#PP06B story_02
+~And that, little ones, is how the hedgehog tricked the sun into sleeping late, so the flowers could bloom longer.~
+==AC#PP06R ~That hedgehog was so clever! I bet he never gets sunburned.~
+==AC#PP06G ~I still think it’s rude to fool the sun. What if it gets angry?~
+==AC#PP06S ~Then we’d have night-time all the time! Imagine the nuts I could stash!~
+==AC#PP06M ~What did the sun do after? Did it chase the hedgehog?~
+==AC#PP06B ~Ah, that is another tale... for another time.~
+EXIT
+
+CHAIN IF ~RandomNum(3,2)~ THEN AC#PP06B story_03
+~Once, the wind fell in love with a songbird, and followed her so closely it blew all her feathers the wrong way.~
+==AC#PP06R ~That's why birds look so messy after a storm! I knew it!~
+==AC#PP06S ~Is that why the wind always whistles? Because it’s lonely now?~
+==AC#PP06P ~That bird should’ve sung a lullaby. Might’ve calmed the wind down.~
+==AC#PP06G ~But what happened to her? Did she fly away?~
+==AC#PP06B ~She sang one final note so sweet, the wind carried it across the world. Some say it's still echoing, in the quiet before dawn.~
+EXIT
+
+CHAIN IF ~RandomNum(3,3)~ THEN AC#PP06B story_04
+~And so, the tiny mouse climbed the old cloud giant’s shoulder—not to conquer him, but to whisper a song into the hollow of his heart.~
+==AC#PP06R ~That’s not bravery. That’s foolishness with tiny paws.~
+==AC#PP06M ~And what good’s a song against a creature taller than ten trees?~
+==AC#PP06G ~It’s not the size of the paws—it’s the sharpness of the note.~
+==AC#PP06S ~I once gnawed through a harp string. Does that count?~
+==AC#PP06P ~If the giant had stepped on it, there’d be no tale to tell. Just pulp.~
+==AC#PP06B ~But the giant did not step. He listened. And in his stillness, the world grew a little kinder.~
+EXIT
+
 // Dialogue Mannatarv 
 BEGIN ~AC#PPMAN~
 
