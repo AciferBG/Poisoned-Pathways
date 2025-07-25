@@ -4,7 +4,8 @@
 BEGIN ~AC#PPEL3~
 
 CHAIN IF ~True()~ THEN AC#PPEL3 hello_01
-~Peace of the Goddess be upon you. It is rare for strangers to find their way here. This grove reveals itself only to those who already know of it. How is it, then, that you have come—and that Eldath has allowed your steps to pass?~ 
+~Peace of the Goddess be upon you. It is rare for strangers to find their way here. This grove reveals itself only to those who already know of it.~ 
+= ~How is it, then, that you have come—and that Eldath has allowed your steps to pass?~ 
 END
 IF~~THEN REPLY ~I bring word that a follower of your faith has been poisoned by an unknown assailant. I carry an arrow here, so your order’s leader might trace the source of the poison.~ EXTERN AC#PPEL3 need_go_to_highpriest
 IF~~THEN REPLY ~There is a dangerous foe—skilled in poisons. Long story short: One of your people has fallen, and he sent us here before his end.~ EXTERN AC#PPEL3 need_go_to_highpriest
@@ -16,10 +17,7 @@ CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest
 ~By the Mother Guardian of Groves! Then Merethan has fallen? It is him you speak of, yes? This is grave news indeed...~ 
 =
 ~Quickly—bring the poisoned arrow to our High Priest. You’ll find him in his chambers, in the rearmost tree by the water’s edge. But be careful—the venom seems potent, and even a trace may do harm. Alatoasz will know how to proceed.~
-== JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~We certainly hope so.~
-== CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~I believe Eldath wouldn't want to see any more of the nature's children sway and fall.~
-== RasaadJ IF ~InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN ~And we will gladly aid him with our knowledge and skills. This poison must be stopped.~
-== AC#PPEL3 ~May the Mother Guardian of Groves and Waters grant you her blessing.~
+== AC#PPEL3 ~Despite these troubling times, I bid you welcome to our grove. May the Green Goddess grant you her blessing.~
 DO ~EscapeArea()~ EXIT
 
 CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest2
@@ -34,10 +32,11 @@ CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN AC#PPEL4 hello_01
 END
 IF~~THEN REPLY ~Let's make it brief: Merethan is dead. He was killed with this poison. We need to find out who made it.~ EXTERN AC#PPEL4 about_arrow
 IF~~THEN REPLY ~Your priest, Merethan, was poisoned. I have here an arrow soaked in the toxin. He hoped you might be able to use it to trace the culprit.~ EXTERN AC#PPEL4 about_arrow
-IF~~THEN REPLY ~Greetings, Most Exalted Fallskeeper Alatoasz Berendim. I come with sad news. Your priest, Merethan, was poisoned. Here. I have an arrow soaked in the toxin that ended his life. One that was also used lately by kill others, like Renfeld, a man from Athkatla. He hoped you might be able to use it to trace the one responsible for creating this vile thing.~ EXTERN AC#PPEL4 about_arrow
+IF~~THEN REPLY ~Merethan died choking on his peace. This poisoned arrow’s all that’s left.~ EXTERN AC#PPEL4 about_arrow
+IF~~THEN REPLY ~Greetings, Most Exalted Fallskeeper. I bring sad news—your priest Merethan was poisoned. This arrow carries the same toxin that killed him... and others. Merethan hoped you could trace its source.~ EXTERN AC#PPEL4 about_arrow
 
 CHAIN IF ~~ THEN AC#PPEL4 about_arrow
-~This is sad news. Merethan was a faithful follower—a Freewalker—ever traveling to spread the word of our silent goddess throughout the Realms. It pains me that he has left this world in such a way. I know the circumstances—indeed, I was the one who tasked him with investigating the troubling cases of poisoning.~
+~This is sad news. Merethan was a faithful follower—a Freewalker—traveling to spread the word of peace throughout the Realms. It pains me that he has left our world. I know the circumstances—indeed, I was the one who tasked him with investigating the troubling cases of poisoning.~
 = ~Let me take a closer look at the arrow...~
 END
 IF~~THEN DO ~TakePartyItem("AC#PPARP")~ EXTERN AC#PPEL4 check_arrow
@@ -77,20 +76,25 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate
-~Well then, if magic fails, we must once again rely on our senses, mustn’t we? I can smell something on this arrow—a peculiar scent, sharp and sweet. A plant-based poison, that much is certain...~
+~Well then, if magic fails, we must rely on our senses. I smell something on this arrow—a peculiar scent, sharp and sweet. A plant-based poison, for sure...~
 END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate_02
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_02
-~Let me taste a small amount of the poison...~
+~Let me taste a small amount of the poison.~
 END
 IF~~THEN REPLY ~You’re not seriously putting that in your mouth, are you?~ EXTERN AC#PPEL4 poison_investigate_03
 IF~~THEN REPLY ~Careful! I don’t want to lose a second Eldathyn.~ EXTERN AC#PPEL4 poison_investigate_03
+IF~~THEN REPLY ~If tasting it brings us answers, then so be it.~ EXTERN AC#PPEL4 poison_investigate_tasting
 IF~~THEN REPLY ~Use at your own risk.~ EXTERN AC#PPEL4 poison_investigate_03
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_03
-~I know the risk, but we have no time. If this toxin spreads to even more dangerous hands, the cost will be far greater. So... now or never.~
-==AC#PPEL4 ~The taste eludes clear memory—faint, almost ghostly. And the scent... it clings like the echo of a dream, fading even as I try to grasp it.~
+~I know the risk, but we have no time. If this toxin spreads to even more dangerous hands, the cost will be far greater.~
+END
+IF~~THEN EXTERN AC#PPEL4 poison_investigate_tasting
+
+CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_tasting
+~Hmm... The taste is like the nectar of a flower long forgotten—sweet, yet slipping through memory like petals on the wind. The scent lingers like overripe fruit in a sun-dappled grove, fragrant one moment, lost the next.~
 END
 IF~~THEN DO ~ApplySpellRES("AC#PPPN",Myself)~ EXTERN AC#PPEL4 poison_investigate_04
 
@@ -105,6 +109,7 @@ CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_05
 ~Yet its poison is usually easily cured by magic—so why does it fail now? It makes no sense.~ 
 END 
 IF~~THEN REPLY ~Good thing that stuff didn’t kill you too.~ EXTERN AC#PPEL4 no_matter
+IF~~THEN REPLY ~You seem to place a lot of trust in the protection of your goddess. Don't overdo it.~ EXTERN AC#PPEL4 no_matter
 IF~~THEN REPLY ~And you figured all that out by sniffing the arrow and tasting the poison?~ EXTERN AC#PPEL4 no_matter
 
 
@@ -114,22 +119,24 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate_06
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_06
-~The plant used to create this poison grows only near the ruins of ancient elven cities, where the land still remembers the old magic.~
+~The plant used to create this poison grows only near the ruins of ancient elven cities, where the land still remembers the old magic and the soft melodies sung by those who no longer walk this world.~
 END
 IF~~THEN REPLY ~So what’s next?~ EXTERN AC#PPEL4 poison_investigate_further
-IF~~THEN REPLY ~Your knowledge is... impressive!~ EXTERN AC#PPEL4 poison_investigate_further_b
+IF~~THEN REPLY ~How many possible ancient elven ruins are we talking about?~ EXTERN AC#PPEL4 poison_investigate_further
+IF~~THEN REPLY ~Elven cities, old magic, mysterious poison plants—this keeps getting better.~ EXTERN AC#PPEL4 poison_investigate_further
+IF~~THEN REPLY ~Your knowledge is impressive.~ EXTERN AC#PPEL4 poison_investigate_further_b
 
 CHAIN AC#PPEL4 poison_investigate_further_b
 ~Thank you, but I hope it will be enough to find the actual place.~
 EXTERN AC#PPEL4 poison_investigate_further
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_further
-~I want to focus on one of the old elven ruins scattered throughout these lands, but... which one? There are many—too many. Finding the right one will be our first true task.~
+~We need to focus on one of the old elven ruins scattered throughout these lands, but which one? There are many—too many. Finding the right one will be our first true task.~
 END
 IF~~THEN EXTERN AC#PPEL4 about_keltormir
 
 CHAIN IF ~~ THEN AC#PPEL4 about_keltormir
-~As you may know, the region now called the Lands of Intrigue was once a vast, continuous forest—home to the elven kingdom of Keltormir. The elves built splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
+~This region, as you may know, was once blanketed by a vast and unbroken forest—the ancient heart of the elven kingdom of Keltormir. The elves built splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
 END
 IF~~THEN REPLY ~And where should I begin the search?~ EXTERN AC#PPEL4 about_keltormir_02
 IF~~THEN REPLY ~Then let’s get to those ruins!~ EXTERN AC#PPEL4 about_keltormir_02
@@ -140,6 +147,7 @@ CHAIN IF ~~ THEN AC#PPEL4 about_keltormir_02
 ~I ask you to visit the Temple of Oghma in Athkatla. They keep many tomes, including some that speak of the old elven cities. If I can get even a general clue, I may be able to narrow our search considerably.~
 END
 IF~~THEN REPLY ~Back to Athkatla, then.~ EXTERN AC#PPEL4 to_oghma
+IF~~THEN REPLY ~I just arrived here from Athkatla, and you're already sending me back?~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~I don’t usually run errands for books... but fine.~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~If you say it helps, I’ll fetch your book.~ EXTERN AC#PPEL4 to_oghma
 
@@ -189,15 +197,6 @@ CHAIN AC#PPEL4 emblem_montrassa_bye
 ~Do so. She will surely be uplifted by your kindness.~
 EXIT
 
-
-/*
-CHAIN IF ~Global("AC#PPSpellCheckPoison","GLOBAL",3) Global("AC#PP_Oghma","GLOBAL",1)~ THEN AC#PPEL4 hello_03
-~<CHARNAME>! I’ve found the answer! But—as I feared, this mission will be dangerous and I cannot send you there without proper protection. To grant it, I will need that golden necklace I mentioned earlier. The matter is urgent, but I am not going to condemn you to death! I want to enchant it for you, you'll need it. Do you have it?~
-END
-IF~PartyHasItem("AMUL10")~THEN REPLY ~Yes. Here it is.~ DO ~TakePartyItem("AMUL10")~ EXTERN AC#PPEL4 hello_03b
-IF~~THEN REPLY ~You know what, give me another moment. I'll get back to you as soon as possible.~ EXTERN AC#PPEL4 hello_03x
-*/
-
 CHAIN IF ~~ THEN AC#PPEL4 read_book
 ~Interesting... A well-crafted tome, with valuable insights. Ah—three Mythal-cities are mentioned explicitly here: Myth Rhynn, Myth Unnohyr, and Myth Tellaren. Hmm. Oh! This is promising—mayhap even a true lead.~
 =
@@ -224,6 +223,7 @@ CHAIN IF ~~ THEN AC#PPEL4 right_myth_unnohyr
 ~That explains why our spells fail, and why this poison defies all healing—it carries the essence of Myth Unnohyr’s broken mythal, steeped in dead magic!~
 END
 IF~~THEN REPLY ~If you say so.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+IF~~THEN REPLY ~If that’s where the plant grows, that’s where we go.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 IF~Race(Player1,ELF)~THEN REPLY ~Myth Unnohyr... I’ve heard of ruins left by my people, but this place... is weird.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 IF~~THEN REPLY ~Not exactly a pleasant destination.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 
@@ -257,29 +257,30 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
-~Myth Unnohyr seems to have been an important stronghold, of great significance to those that studied Mythal, elven culture and words of the Seldarine that cared most about magic. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dark void of dead magic by night.~
-== NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic zone AND dark void of dead magic? Wow. That's encouraging. I'm being sarcastic, by the way.~
-== AC#PPEL4 ~By day, it's chaos. By night, magic just doesn't exist there. Not in the usual sense. Maybe innate metamagic held by some creatures or items could partially work, but... I don't know. It's a theory. And I wouldn't depend on untested ideas.~
+~Myth Unnohyr seems to have been an important stronghold, of great significance to those that studied Mythal, elven culture and words of the Seldarine that cared most about magic. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dead magic zone by night.~
+== NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic?! Gods, yes! Or no. Or maybe! I love it when even reality can’t make up its mind.~
+==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN ~Elven ruins or not, this Mythal was never meant for mortal hands. And now it bleeds its vengeance into the land.~
+== HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~A stage once divine, now set for tragedy. When gods fall silent, the poison sings.~
+== AC#PPEL4 ~By day, it's chaos. By night, magic doesn’t seem to exist at all—not in any conventional sense. Maybe some innate metamagic from creatures or enchanted items still functions... but honestly? I’m not sure. It's a theory. And I wouldn't depend on untested ideas.~
 END
-IF~~THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_area
-IF~~THEN REPLY ~Ah. That means I'll need to equip myself with lots of weapons.~ EXTERN AC#PPEL4 dead_magic_area2
+IF~~THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_areab
+IF~~THEN REPLY ~So we’ll have to rely on steel and wits.~ EXTERN AC#PPEL4 dead_magic_areab
+IF~~THEN REPLY ~Magic or no magic, death still listens when I speak.~ EXTERN AC#PPEL4 dead_magic_areab
+IF~~THEN REPLY ~That means I'll need to equip myself with lots of weapons.~ EXTERN AC#PPEL4 dead_magic_area2
 
-CHAIN IF ~~ THEN AC#PPEL4 dead_magic_area
-~Don’t you see? It's not just wild magic in there! It's also dead magic!~
-EXTERN AC#PPEL4 dead_magic_areab
-
-CHAIN IF ~~ THEN AC#PPEL4 dead_magic_area2
-~You may need more than just weapons, but remember: Even without control over magic, a keen mind can help you when facing all sorts of tasks.~
-EXTERN AC#PPEL4 dead_magic_areab
+	CHAIN IF ~~ THEN AC#PPEL4 dead_magic_area2
+	~You may need more than just weapons, but remember: Even without control over magic, a keen mind can help you when facing all sorts of tasks.~
+	EXTERN AC#PPEL4 dead_magic_areab
 
 CHAIN AC#PPEL4 dead_magic_areab
-~The plants that produce the poison must grow there—twisted by the wild magic and infused with the remnants of that dead magic itself. Our healing spells fail because the poison carries that same dead magic into the body of the victim! This is why this poison cannot be healed.~
+~The plants that produce the poison must grow there—twisted by the wild magic and infused with the remnants of that dead magic itself. Our healing spells fail because the poison carries that same dead magic into the body of the victim. The poison isn’t just toxic—it’s magically inert. A wound that resists both blade and blessing. This is why this poison cannot be healed!~
 END
 IF~~THEN REPLY ~That’s an interesting theory.~ EXTERN AC#PPEL4 dead_magic_area_02
+IF~~THEN REPLY ~Alright. To cure the victims, we’d have to unravel the magic itself. Or what's left of it...~ EXTERN AC#PPEL4 dead_magic_area_02
 IF~~THEN REPLY ~Then we’ve solved the riddle.~ EXTERN AC#PPEL4 dead_magic_area_02
 
 CHAIN IF ~~ THEN AC#PPEL4 dead_magic_area_02
-~Now the only question is who is crafting the poison. Did you catch a glimpse of Merethan’s killer?~
+~The only question is who is crafting the poison. Did you catch a glimpse of Merethan’s killer?~
 END
 IF~~THEN REPLY ~Not really. He said something like Mal... Malar...~ EXTERN AC#PPEL4 malagent_what
 IF~~THEN REPLY ~Strange fellow with a strange name. Something like Mala-something.~ EXTERN AC#PPEL4 malagent_what
@@ -304,36 +305,35 @@ END
 IF~~THEN EXTERN AC#PPEL4 talona_yes
 
 CHAIN IF ~~ THEN AC#PPEL4 talona_yes
-~We now know that our enemy serves none other than the Lady of Poisons herself.~
+~Then it all makes sense. The incurable poison, the corrupted magic... it all bears Talona's mark. We now know that our enemy serves none other than the Lady of Poisons herself. This Malagent is working as her hand, spreading poison everywhere. We have the answers. Now we seek the source.~
 END
-IF~~THEN REPLY ~And I’m to enter this blasted elven ruin.~ EXTERN AC#PPEL4 travel_ruin
-IF~~THEN REPLY ~Who brews poison within a dead magic zone in Myth Unnohyr.~ EXTERN AC#PPEL4 travel_ruin
+IF~~THEN REPLY ~And I’m the one to enter this desolate elven ruin?~ EXTERN AC#PPEL4 travel_ruin_b
+IF~~THEN REPLY ~His poison lingers. So will our blade.~ EXTERN AC#PPEL4 travel_ruin_b
+IF~~THEN REPLY ~Then let’s not waste time.~ EXTERN AC#PPEL4 travel_ruin
+IF~~THEN REPLY ~The path is clear. Faith and steel shall see us through.~ EXTERN AC#PPEL4 travel_ruin
+IF~~THEN REPLY ~Fine. But I expect at least one uneventful day after this.~ EXTERN AC#PPEL4 travel_ruin
+IF~~THEN REPLY ~Seeking answer’s the easy part. What comes after tends to get messy.~ EXTERN AC#PPEL4 travel_ruin
+IF~~THEN REPLY ~A devotee of Talona is brewing his poison within a dead magic zone in Myth Unnohyr?~ EXTERN AC#PPEL4 travel_ruin_b
+
+	CHAIN IF ~~ THEN AC#PPEL4 travel_ruin_b
+	~Exactly!~ 
+	END 
+	IF~~THEN EXTERN AC#PPEL4 travel_ruin
 
 CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
-~Exactly! In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
-==AC#PPEL4 ~Go now, and put an end to the servant of Talona. Oh, one more thing: Should you come across the flower he twisted to his ends, bring it to me. I shall seek to cleanse its purpose and create an antidote.~ 
+~In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
+==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~The weak weep for balance. The strong thrive in chaos. I say let this Mythal rot—it is not our concern.~
+== MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN ~Evil magic in the air? Boo says it feels like we should hit something until it’s peaceful again!~
+== CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~The poisoner has made his mark. Now let nature guide our retribution.~
+== KeldorJ IF ~InParty("keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ THEN ~Such defilement is a blight upon the realms. It offends all that is sacred. It must be ended.~
+== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~May our steps disturb not the ruins, but leave a mark where balance must be restored.~
+== AerieJ IF ~InParty("aerie") !StateCheck("aerie",CD_STATE_NOTVALID)~ THEN ~Please, let’s be careful. I fear whatever broke the Mythal still lingers—and it doesn’t welcome visitors.~
+==AC#PPEL4 ~One more thing: Should you come across the flower he twisted to his ends, bring it to me. I shall seek to cleanse its purpose and create an antidote.~ 
 =
-~And now go. May the blessings of Eldath guide your next steps.~
+~Go now, and put an end to the servant of Talona. May the blessings of Eldath guide your next steps.~
 DO ~RevealAreaOnMap("ACPP70")
 SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
 SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
-
-/*
-CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
-~Exactly! In Myth Unnohyr you will find both the plant and the culprit. But it will not be easy—I dare not imagine what other creatures might dwell in such a forsaken place. You’ll find the ruins of Myth Unnohyr in the southern remnants of the ancient elven forests. I’ll mark the location on your map.~
-== AC#PPEL4 ~Before you go, however, I promised you something. I shall now enchant this amulet for you. One, that will help you survive in that bizarre place.~
-DO ~SetGlobal("AC#PPCreateAmulet","GLOBAL",1) StartCutSceneMode() Wait(1) CreateVisualEffectObject("SPBASERD",Myself) Wait(3) EndCutSceneMode() StartDialogueNoSet(Player1)~ EXIT
-
-CHAIN IF ~Global("AC#PPCreateAmulet","GLOBAL",1)~THEN AC#PPEL4 travel_ruin_fin
-~Here—take this amulet. I have woven into it the soil of Myth Unnohyr… and a full year of my own life and strength. It carries my sacrifice, and with it, you may briefly draw upon that essence—to cast spells and shield yourself against the wild magic that haunts that place.~
-==AC#PPEL4 ~But remember, this effect is going to last only for a moment. It also won't affect the wild magic engraved in a person, so if there is a wild mage among you, they will be protected only by that place's effect, not their own power.~
-==AC#PPEL4 ~Good luck, my friend. Go and stop the servant of the Talona, and mayhap, if possible, bring me the flower he used to create the poison. Mayhap I'll find a way to use it properly.~
-DO ~GiveItemCreate("AC#PPAM",Player1,8,0,0)
-SetGlobal("AC#PPCreateAmulet","GLOBAL",2)
-RevealAreaOnMap("ACPP70")
-SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
-SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
-*/
 
 // FINAL: Dialogue Eldathyn highpriest #4; tree house in Duskwood Dell
 
@@ -561,6 +561,6 @@ CHAIN IF ~True()~ THEN AC#PPST4 hello_novice
 ==AC#PPST4 ~But what if someone brings violence to our grove? What if they don’t listen?~
 ==AC#PPEL4 ~Then we listen more. Words can reach where arrows cannot. And if they strike, we do not answer with pain, but with presence.~
 ==AC#PPST4 ~I don’t think I understand yet... but I will try.~
-==AC#PPEL4 ~Then you already walk her path. Eldath asks for no perfection—only the courage not to halt. Go now, and let each step be as soft as falling rain.~  
+==AC#PPEL4 ~Then you already walk her path. Eldath asks for no haste—only the courage not to halt. Go now, and let each step be as soft as falling rain.~  
 ==AC#PPST4 ~Thank you for your guidance, Exalted Fallskeeper. I hope that one day I will come to understand Eldath's teachings in all her glory.~
 DO ~EscapeAreaDestroy(1)~ EXIT

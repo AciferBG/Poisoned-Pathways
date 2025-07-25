@@ -121,8 +121,9 @@ EscapeArea()~ EXIT
 
 
 CHAIN AC#PPSKD fight
-~Well, ain’t you the hero type. Shame you picked the wrong roof to play vigilante on! Let’s fight, then!~
-DO ~Enemy()~ EXIT
+~Well, ain’t you the hero type. Shame you picked the wrong roof to play vigilante on! Let’s fight, then! My little friends, to me!~
+DO ~SetGlobal("AC#PP_SkannFight","GLOBAL",1)
+Enemy()~ EXIT
 
 CHAIN AC#PPSKD bye
 ~Fine, fine. Come back if you grow a taste for shadows and want your troubles bottled. I'll be here... till I ain't.~
@@ -153,50 +154,55 @@ EscapeArea()~ EXIT
 BEGIN ~AC#PPEL2~
 
 CHAIN IF ~Global("CutsceneAmbush","ACPP30",10)~ THEN AC#PPEL2 hello_poison
-~<CHARNAME>! We—we did something truly important...! We’re... lucky! I... argh...~ 
-== ValygarJ IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Remain still. Perhaps we can at least try to slow that poison, <CHARNAME>.~
-== YoshJ IF ~InParty("yoshimo") !StateCheck("yoshimo",CD_STATE_NOTVALID)~ THEN ~I fear that this man's life is sealed.~
-== AC#PPEL2 ~I... I have it...~
+~<CHARNAME>! We’re lucky! I... *cough*... catched that potent poison!~ 
 END
-IF~~THEN REPLY ~You call that luck? You're hurt!~ EXTERN AC#PPEL2 lucky
-IF~~THEN REPLY ~What are you even talking about?~ EXTERN AC#PPEL2 lucky
-IF~~THEN REPLY ~Hold still! I’ll heal you. I'll fix this!~ EXTERN AC#PPEL2 lucky
+IF~~THEN REPLY ~That is clearly evident.~ EXTERN AC#PPEL2 lucky
+IF~~THEN REPLY ~Don't worry! I’ll heal you.~ EXTERN AC#PPEL2 lucky
+IF~~THEN REPLY ~If you call that luck, I never want to know what misfortune looks like to you.~ EXTERN AC#PPEL2 lucky
+IF~~THEN REPLY ~Splendid! Everything turned out well.~ EXTERN AC#PPEL2 lucky
+IF~~THEN REPLY ~What are you talking about?~ EXTERN AC#PPEL2 lucky
 
 CHAIN IF ~~ THEN AC#PPEL2 lucky
-~The poison struck true, and soon I’ll stand before the Eternal Waterfalls... but... one arrow missed its mark and lodged here in my tunic... still laced with the poison!~
+~I was hit by the poison, but one of the arrows got lodged in my tunic. The tip's still laced with it.~
 END
 IF~~THEN REPLY ~Couldn’t have worked out better!~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
+IF~~THEN REPLY ~Poisoned and still doing work. You Eldathyn are truly stubborn.~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
+IF~~THEN REPLY ~That arrow may point us straight to the bastard responsible.~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 IF~~THEN REPLY ~Meaning?~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 
 CHAIN IF ~~ THEN AC#PPEL2 bring_arrow_duskwood_dell
-~With the poison in hand, we can study it! Well... not me anymore. That task falls to you now! You must... must bring this arrow, poison and all, to Most Exalted Fallskeeper Alatoasz Berendim, high priest of my order, in Duskwood Dell. He’ll know how to proceed.~
+~With the poison in hand, we can study it! Well... not me anymore. Eldath's still waters await me. I can feel Her pull already... So the task falls to you now!~ 
+== AC#PPEL2~You must... must bring this arrow, poison and all, to Most Exalted Fallskeeper Alatoasz Berendim, high priest of my order, in Duskwood Dell. He’ll know how to proceed.~
 END
-IF~~THEN REPLY ~That's a very long title.~ EXTERN AC#PPEL2 what_about_title
+IF~~THEN REPLY ~That's a very long title your high priest is holding.~ EXTERN AC#PPEL2 what_about_title
+IF~~THEN REPLY ~You have my word. I’ll take it to him.~ EXTERN AC#PPEL2 show_duskwood_dell
+IF~~THEN REPLY ~The Fallskeeper will know, and someone will pay for what’s been done to you.~ EXTERN AC#PPEL2 show_duskwood_dell
+IF~~THEN REPLY ~If it helps end this madness, I’ll do it.~ EXTERN AC#PPEL2 show_duskwood_dell
 IF~~THEN REPLY ~What about you? I thought you would be the one to work with me!~ EXTERN AC#PPEL2 what_about_you
+IF~~THEN REPLY ~I’ve had enough. I want nothing more to do with this.~ EXTERN AC#PPEL2 dont_know_duskwood_dell
 
 CHAIN AC#PPEL2 what_about_title
-~Heh... it—it is. *cough* But... he'll help you.~
+~Titles mean little to him, truly. But among our order, it honors his wisdom and years of service. Behind it stands a man of rare peace and purpose—you’ll see.~
 END
 IF~~THEN REPLY ~What about you?~ EXTERN AC#PPEL2 what_about_you
 IF~~THEN REPLY ~Very well. Tell me where this place is.~ EXTERN AC#PPEL2 show_duskwood_dell
 
 CHAIN IF ~~ THEN AC#PPEL2 what_about_you
 ~You need not worry about me. My path ends here, as a river eventually flows into the vast sea and is lost within it. You must carry on the task and go to Duskwood Dell!~
-== JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~This isn't fair. You should be the one to go there with us.~
-== AC#PPEL2 ~Please... At least I know I did the right thing.~
 END
 IF~~THEN REPLY ~Very well. Tell me where this place is.~ EXTERN AC#PPEL2 show_duskwood_dell
-IF~~THEN REPLY ~I... I don't know. I really don't want to be part of any of this.~ EXTERN AC#PPEL2 show_duskwood_dell2
+IF ~~ THEN REPLY ~I don't know. I don't want to be part of this anymore.~ EXTERN AC#PPEL2 dont_know_duskwood_dell
+
+	CHAIN IF ~~ THEN AC#PPEL2 dont_know_duskwood_dell
+	~The path has already taken you in, even if you step away. Please... if not for me, then for those who may yet be spared. I can do no more. But you still can. Go to Duskwood Dell.~
+	END
+	IF~~THEN EXTERN AC#PPEL2 show_duskwood_dell
 
 CHAIN IF ~~ THEN AC#PPEL2 show_duskwood_dell
-~Duskwood Dell lies hidden within the Snakewood. It's hard to find under normal circumstances, but I shall tell you how to reach it...~
+~Duskwood Dell is the heart of my faith—not just in Amn, but across all of Faerûn. It is there that the trail of poison must be followed. My temple lies hidden within the Snakewood. It is difficult to find under normal circumstances... but I shall tell you how to reach it.~
 END
 IF~~THEN DO ~RevealAreaOnMap("ACPP01")~ EXTERN AC#PPEL2 tell_malagent
 
-CHAIN IF ~~ THEN AC#PPEL2 show_duskwood_dell2
-~You are already part of this, I'm afraid... Please. Don't leave it like this. Unsolved. Duskwood Dell lies hidden within the Snakewood. It's hard to find under normal circumstances, but I shall tell you how to reach it...~
-END
-IF~~THEN DO ~RevealAreaOnMap("ACPP01")~ EXTERN AC#PPEL2 tell_malagent
 
 CHAIN IF ~~ THEN AC#PPEL2 tell_malagent
 ~And I almost forgot—our enemy, in his vanity, revealed his true face! Tell Alatoasz that I was poisoned by a Malagent... he will know what that means.~
@@ -204,12 +210,30 @@ END
 IF~~THEN EXTERN AC#PPEL2 bye_death
 
 CHAIN IF ~~ THEN AC#PPEL2 bye_death
-~Let me take my final breath here in this beautiful forest. I can feel the breath of the goddess... peace...~ 
+~No more words... Let this forest cradle my breath, and Her breeze carry me to the still waters...~
+== AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~He was so kind... I wish we could have done more.~
+==RasaadJ IF ~InParty("rasaad") !StateCheck("rasaad",CD_STATE_NOTVALID)~ THEN ~Your path ends in stillness, as all must. May your soul merge with the quiet waters you served so faithfully.~
+==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~How touching. The weak always love to pretend their end has meaning.~
+==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Rest now, priest of Eldath. The forest will remember you, as will we. May your spirit find stillness.~
+==HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~You exit the stage with naught but a whisper and a breeze... A fitting end for one who worshipped silence.~
+==HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~Another corpse in the dirt. You flesh-born mourn too easily. At least he didn’t scream—it makes disposal so much simpler.~
+==NeeraJ IF ~InParty("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN ~Oh no... That’s just awful. I mean, peaceful and all, but still awful. Do you think his goddess really takes him somewhere?~
+==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN ~You chose your place well, priest. A quiet end beneath ancient boughs... May your spirit drift with the wind, far from this poisoned world.~
+== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Death is like a bad case of the trots—you never feel it comin’ till it’s too late and halfway down your trousers.~
+==CerndJ IF ~InParty("cernd") !StateCheck("cernd",CD_STATE_NOTVALID)~ THEN ~Go gently, brother. The leaves shall whisper your name, and the wind shall carry your breath into the endless cycle.~
+== KeldorJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~He dies with purpose—and in faith. May his goddess receive him.~
+== AnomenJ  IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~I honor your devotion. Rest now, servant of Eldath—your sacrifice shall be remembered.~
+==NaliaJ IF ~InParty("nalia") !StateCheck("nalia",CD_STATE_NOTVALID)~ THEN ~You gave everything for your faith... I hope your goddess grants you peace, truly. The world could use more like you.~
+==MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN ~He was a good man, Boo agrees! May the forest cradle him gently... and may the poisoner feel my righteous fury soon!~
+== DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~Peace and poison—a charming combination. I’m sure his goddess approves of the irony.~
+== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~An idealist bleeds out in the dirt, babbling about peace. Let the worms have him—perhaps they’ll be inspired to pacifism.~ 
+==KorganJ IF ~InParty("korgan") !StateCheck("korgan",CD_STATE_NOTVALID)~ THEN ~If I ever die like that—flat on me back in a pile o’ birdshite, starin’ up at leaves—ye’d best throw me on a pyre quick, else I’ll rise from the grave, ‘fore the shame kills me twice!~ 
+== AC#PPEL2 ~Peace... finally...~
 DO ~SetGlobal("Die_Eldath","ACPP30",1)
 Kill(Myself)~ EXIT
 
 CHAIN IF ~Global("CutsceneAmbush","ACPP30",1)~ THEN AC#PPEL2 hello_talonite
-~Greetings, stranger. A fine place to conduct business out here in the wilds, wouldn’t you say? Plenty of mushrooms around—just be careful not to pick the poisonous ones.~ 
+~Greetings, stranger. A fine place to conduct business out here in the wilds, isn't it? Plenty of mushrooms around—just be careful not to pick the poisonous ones.~ 
 == AC#PPTA1 ~No need to pretend, priest. My contacts in Athkatla told me you were coming.~ [STHMA04]
 == AC#PPEL2 ~That's good! Then you have brought the poison I so desire?~ 
 == AC#PPTA1 ~I have! And you’ll be tasting it soon enough!~ 
@@ -242,7 +266,7 @@ BEGIN ~AC#PPEL1~
 CHAIN IF ~Global("AC#PPHasMap","GLOBAL",10)~ THEN AC#PPEL1 hello_glade
 ~Hello again, <CHARNAME>. Shall we depart to Toadstool Hollow?~
 END
-IF~~THEN REPLY ~Yes, let’s go.~ EXTERN AC#PPEL1 lets_go
+IF~~THEN REPLY ~Sure! Let’s go.~ EXTERN AC#PPEL1 lets_go
 IF~~THEN REPLY ~Not just yet. I need a little more time.~ EXTERN AC#PPEL1 bye_wait
 
 CHAIN IF ~Global("AC#PP_PlotStart","GLOBAL",3)~ THEN AC#PPEL1 hello_02
@@ -255,9 +279,9 @@ IF~~THEN REPLY ~No, I haven’t found anything yet.~ EXTERN AC#PPEL1 bye_wait
 CHAIN IF ~~ THEN AC#PPEL1 about_glade
 ~Excellent. Let me take a look...~
 =
-~Toadstool Hollow? Yes, I know of it. Secluded, rarely visited—an ideal place for a meeting like this. There’s only one path forward now: We go there and see whether the mysterious poisoner reveals himself. Shall we depart?~
+~Toadstool Hollow? I know this place. Secluded, rarely visited—an ideal location for a meeting like this. There’s only one path forward now: We go there and see whether the mysterious poisoner reveals himself. Shall we depart?~
 END
-IF~~THEN REPLY ~Yes, let’s go.~ EXTERN AC#PPEL1 lets_go
+IF~~THEN REPLY ~Sure! Let’s go.~ EXTERN AC#PPEL1 lets_go
 IF~~THEN REPLY ~Not just yet. I need a little more time.~ EXTERN AC#PPEL1 bye_wait
 
 CHAIN AC#PPEL1 lets_go
@@ -339,6 +363,7 @@ IF~~THEN REPLY ~Sounds useful, this toxin.~ EXTERN AC#PPEL1 about_poison_02
 CHAIN IF ~~ THEN AC#PPEL1 about_poison_02
 ~I initially suspected that one of Faerûn’s more malevolent groups had devised this terrible poison. But my search uncovered something troubling: The poison has been used by unrelated factions, with no alliance or shared interest between them. No shared ambition—only the same deadly means.~
 == AC#PPEL1 ~That can only mean a different power is behind this—one that acts on his own, working in the shadows. Someone who delights in the death this poison leaves behind.~
+== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Silent but violent... This stuff’s like a fart in a crowded room during a turnip banquet—you don’t know who did it, but someone’s definitely going to suffer.~
 END
 IF~~THEN REPLY ~So you want me to face this poison-maker?~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~And just how are we meant to find this mysterious mastermind?~ EXTERN AC#PPEL1 about_person
@@ -387,8 +412,15 @@ EscapeArea()
 ~ EXIT
 
 CHAIN IF ~~ THEN AC#PPEL1 bye
-~That is unfortunate. Very well, I shall have to seek help elsewhere.~
-DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",20)
+~That is unfortunate. Are you sure you don't want to help me?~
+END
+IF~~THEN REPLY ~Alright, I will try help you.~ EXTERN AC#PPEL1 about_person
+IF~~THEN REPLY ~Yes, I'm sure. Find someone else.~ EXTERN AC#PPEL1 bye_definitve
+
+CHAIN IF ~~ THEN AC#PPEL1 bye_definitve
+~Alright, I shall have to seek help elsewhere.~
+END
+IF~~THEN DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",20)
 EscapeArea()~ EXIT
 
 

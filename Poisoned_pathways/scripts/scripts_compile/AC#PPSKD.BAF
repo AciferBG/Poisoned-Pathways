@@ -1,0 +1,108 @@
+IF
+    Allegiance(Myself,ENEMY)
+    Global("Fight","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("Fight","LOCALS",1)
+        CreateCreatureObjectOffset("AC#PPSCR",Player1,[1.1])
+        CreateCreatureObjectOffset("AC#PPSCR",Player2,[1.1])
+        CreateCreatureObjectOffset("AC#PPSCR",Player3,[1.1])
+        CreateCreatureObjectOffset("AC#PPSCR",Player4,[1.1])
+        CreateCreatureObjectOffset("AC#PPSCR",Player5,[1.1])
+        CreateCreatureObjectOffset("AC#PPSCR",Player6,[1.1])
+END
+
+IF
+    HPPercentLT(Myself,50)
+    HasItem("potn52",Myself)  // Potion of Extra Healing
+THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("potn52",Myself)  // Potion of Extra Healing
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    OR(2)
+    StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+    StateCheck(Myself,STATE_INVISIBLE)
+THEN
+    RESPONSE #100
+ RandomWalk()
+     RESPONSE #100
+ Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    HasItem("potn10",Myself)  // Potion of Invisibility
+THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("potn10",Myself)  // Potion of Invisibility
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    ActionListEmpty()
+    AttackedBy([ANYONE],DEFAULT)
+    Range(LastAttackerOf(Myself),4)
+THEN
+    RESPONSE #100
+        EquipMostDamagingMelee()
+        AttackReevaluate(LastAttackerOf(Myself),30)
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself),4)
+    Range(NearestEnemyOf(Myself),10)
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),45)
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself),10)
+THEN
+    RESPONSE #100
+        EquipRanged()
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),4)
+THEN
+    RESPONSE #100
+        EquipMostDamagingMelee()
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself),4)
+THEN
+    RESPONSE #100
+        EquipRanged()
+        EquipMostDamagingMelee()
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+
+

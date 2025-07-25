@@ -1,4 +1,13 @@
 IF
+    OnCreation()
+    GlobalGT("CutsceneAmbush","ACPP30",1)
+THEN
+    RESPONSE #100
+        PlayDeadInterruptable(100000)
+        Continue()
+END
+
+IF
     Global("Die_Eldath","ACPP30",1)
     HasItem("MINHP1",Myself)  // No such index
 THEN
