@@ -91,10 +91,11 @@ IF ~NumTimesTalkedTo(0)~ THEN BEGIN hello_0
   IF ~~ THEN REPLY ~What is this place?~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
   IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
-  IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Failsweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
+  IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
   IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
   IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm still looking for the Moist Exhaling Failsweeper Aladent Brushadin.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
   IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~I'm still looking for the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
+  IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~I'm still looking for the Most Inflated Fartsleeper Analoss Bladderbim .~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
   IF~Global("AC#PPSpellCheckPoison","GLOBAL",0)~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPMAN looking_for_highpriest
   IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
@@ -137,29 +138,39 @@ END
 
 CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name
 ~You must mean the Most Exalted Fallskeeper Alatoasz Berendim. Please do not mock his name—it is a sacred title. You’ll find him in the northeastern treehouse, near the water.~
+==MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN  ~Strange name for a holy man, but Minsc has heard stranger! Onward to the tree with the water!~
 END
   IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
-  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Sorry, I'll be on my way.~ GOTO looking_for_highpriest_bye
   IF ~~ THEN REPLY ~I have another question.~ GOTO questions
   
 CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_2
 ~Sigh. It's Most Exalted Fallskeeper Alatoasz Berendim. Please show some respect—this is a sanctuary, not a tavern full of jesters. You’ll find him in the northeastern treehouse by the water. And try to compose yourself before you speak to him.~
+==MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN  ~Why are you always asking the same question, <CHARNAME>? We know the priest you’re looking for lives in the tree by the water.~
+==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Must you really mock a servant of Eldath? Their patience is not a challenge for your amusement. Show some respect.~
+==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~Oh, do go on, <CHARNAME>! I so enjoy watching sanctimonious fools squirm.~
 END
-  IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
-  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Apologies. I'll head to his tree.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~I’ve fought dragons with fewer names. Anyway, I'll be on my way.~ GOTO looking_for_highpriest_bye
   IF ~~ THEN REPLY ~I have another question.~ GOTO questions
   
   CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_3
-	~Most Exalted Fallskeeper Alatoasz Berendim! Not anything else! By the still waters, how hard is that? Show some reverence or the trees themselves might sigh at your ignorance. Go on, you’ll find him by the water’s edge.~
+	~Most Exalted Fallskeeper Alatoasz Berendim! Not anything else! By the still waters, how hard is that? Show some reverence or the trees themselves might sigh at your ignorance. Go on, you’ll find him by the water’s edge.~ 
+	==HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~To provoke a priest of peace—what melody do you expect, my raven? A scream? A sonnet? There is no drama in still waters.~
+	== KeldorJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~It is unwise to test the patience of one who has sworn never to lose it. There is no honor in mocking restraint.~
+	== DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~A little blasphemy never hurt anyone—except mayhap the pride of pious weaklings.~
+	==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~Words sting more than blades, they say. I almost feel sorry for this moss-addled relic. Almost.~
+	==KorganJ IF ~InParty("korgan") !StateCheck("korgan",CD_STATE_NOTVALID)~ THEN ~Go on then—let’s see if the priest’ll shed his peaceful skin and bare some teeth!~
 	END
-  IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
-  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Forgive me, I’m just bad with so many silly—uh, I mean syllables. Bye.~ GOTO looking_for_highpriest_bye
   IF ~~ THEN REPLY ~I have another question.~ GOTO questions
   
    CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_4
 	~It's Most Exalted Fallskeeper Alatoasz Berendim! Say it with me: Ber-en-dim! If you can’t manage that, at least keep your lips sealed while you head northeast toward his chambers.~
+	== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Don’t worry, We’ll just call him Fallsy from now on.~
+	== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~Hah. It takes wit, not war, to make a priest of peace lose his composure. (Naturally, I excel at both.)~
 	END
-  IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~I meant no offense. Bye.~ GOTO looking_for_highpriest_bye
   IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
   IF ~~ THEN REPLY ~I have another question.~ GOTO questions
 
@@ -184,6 +195,11 @@ END
 IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
 IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
 IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
+IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
+IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
+IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm still looking for the Moist Exhaling Failsweeper Aladent Brushadin.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
+IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~I'm still looking for the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
+IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~I'm still looking for the Most Inflated Fartsleeper Analoss Bladderbim .~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
 IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
 IF ~~ THEN REPLY ~I must be going.~ GOTO bye
 

@@ -51,7 +51,8 @@ IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 	IF~~THEN REPLY ~Please, just tell me.~ EXTERN AC#PPSKD not_telling_bye
 	IF~Global("TellPrice","LOCALS",1)~THEN REPLY ~How much did you say the price was again?~ EXTERN AC#PPSKD pay_gold_01
 	IF~Global("TellPrice","LOCALS",0)~THEN REPLY ~Everyone has a price. What’s yours?~ DO ~SetGlobal("TellPrice","LOCALS",1)~ EXTERN AC#PPSKD pay_gold_start
-	IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~My strength isn’t for show. Do I really have to beat the answer out of you? Choose wisely which side of my fist you’d like to be on.~ EXTERN AC#PPSKD tell_supplier
+	IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~My strength isn’t for show. Do I really have to beat the answer out of you? Choose wisely which side of my fists you’d like to be on.~ EXTERN AC#PPSKD tell_supplier
+	IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN REPLY ~Minsc, perhaps Skann would feel more cooperative if you showed him your muscles. Would you be so kind?~ EXTERN MinscJ Minsc_show_muscles
 	IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. People call me notorious. Ask around what happens to those who cross me.~ EXTERN AC#PPSKD threat_rep
 	IF~Dead("maevar")~THEN REPLY ~I helped bring down Mae’Var. So unless you want to follow him, you’ll start talking.~ EXTERN AC#PPSKD threat_rep
 	IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me— I'm <CHARNAME>. I've brought down worse than you, and I don't need poison to do it. So tell me what I want to know!~ EXTERN AC#PPSKD threat_rep
@@ -59,7 +60,19 @@ IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 	IF~GlobalGT("BodhiJob","GLOBAL",0)~THEN REPLY ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~ EXTERN AC#PPSKD work_bodhi
 	IF~~THEN REPLY ~You disgust me. The world needs less filth like you!~ EXTERN AC#PPSKD fight
 	IF~~THEN REPLY ~I don’t deal with back-alley scum like you!~ EXTERN AC#PPSKD fight
-	IF~~THEN REPLY ~I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
+	IF~~THEN REPLY ~I’ll return when the time’s right.~ EXTERN AC#PPSKD bye	
+	
+		CHAIN AC#PPSKD Minsc_show_muscles_02
+		~That's a hamster. You're threatening me with a rodent?~		
+		== AC#PPSKD ~Take your circus act and scram—unless you’ve got gold in your hand or steel at my throat. I’ve got a reputation to keep!~
+		== AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~Oh, Minsc... I don’t think he understood Boo’s warning.~
+		==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~Maybe keep the hamster in reserve until we’ve mastered the art of intimidation.~
+		==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Perhaps we ought to rehearse that little act before attempting it again.~
+		==HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~A valiant effort... but perhaps best refined before an encore.~
+		== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~A bold attempt. Still, timing and delivery are everything.~
+		== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~Well, that certainly didn’t go as planned. Next time, let’s try cruelty paired with intelligence.~ 
+		==KorganJ IF ~InParty("korgan") !StateCheck("korgan",CD_STATE_NOTVALID)~ THEN ~Showin' off muscles? I’d rather show him his own bowels spillin’ out. That gets the chatter started, I tell ya!~
+		EXIT
 
 	CHAIN IF ~~ THEN AC#PPSKD pay_gold_start
 	~Hah... If I told you, I’d be a dead man by dawn...~
@@ -422,5 +435,12 @@ CHAIN IF ~~ THEN AC#PPEL1 bye_definitve
 END
 IF~~THEN DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",20)
 EscapeArea()~ EXIT
+
+APPEND ~MINSCJ~
+IF ~~ THEN BEGIN Minsc_show_muscles
+   SAY ~Muscles? Nay! But behold—BOO! The fury of righteousness!~
+   IF ~~ THEN EXTERN ~AC#PPSKD~ Minsc_show_muscles_02
+END
+END
 
 

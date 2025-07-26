@@ -132,17 +132,18 @@ CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_06
 END
 IF~~THEN REPLY ~So what’s next?~ EXTERN AC#PPEL4 poison_investigate_further
 IF~~THEN REPLY ~How many possible ancient elven ruins are we talking about?~ EXTERN AC#PPEL4 poison_investigate_further
-IF~~THEN REPLY ~Elven cities, old magic, mysterious poison plants—this keeps getting better.~ EXTERN AC#PPEL4 poison_investigate_further
-IF~~THEN REPLY ~Your knowledge is impressive.~ EXTERN AC#PPEL4 poison_investigate_further_b
-
-CHAIN AC#PPEL4 poison_investigate_further_b
-~Thank you, but I hope it will be enough to find the actual place.~
-EXTERN AC#PPEL4 poison_investigate_further
+IF~~THEN REPLY ~Elven cities, old magic, mysterious poison plants—this keeps getting better and better.~ EXTERN AC#PPEL4 poison_investigate_further
+IF~~THEN REPLY ~Your knowledge is impressive.~ EXTERN AC#PPEL4 poison_investigate_further
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_further
-~We need to focus on one of the old elven ruins scattered throughout these lands, but which one? There are many—too many. Finding the right one will be our first true task.~
+~Surely the plant we are looking for grows in an old elven ruin. That must be where the poison was produced. In addition, we should consider who is behind all this. Every clue could be important!~
 END
-IF~~THEN EXTERN AC#PPEL4 about_keltormir
+IF~~THEN REPLY ~So let's start looking for the right ruins.~ EXTERN AC#PPEL4 start_looking_ruins
+
+	CHAIN IF ~~ THEN AC#PPEL4 start_looking_ruins
+	~We need to focus on one of the old elven ruins scattered throughout these lands. But there are many. Finding the right one will be our first task.~
+	END
+	IF~~THEN EXTERN AC#PPEL4 about_keltormir
 
 CHAIN IF ~~ THEN AC#PPEL4 about_keltormir
 ~This region, as you may know, was once blanketed by a vast and unbroken forest—the ancient heart of the elven kingdom of Keltormir. The elves built splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
@@ -241,6 +242,7 @@ CHAIN AC#PPEL4 hello_03x
 ~I'll wait here, then.~
 EXIT
 
+/*
 CHAIN AC#PPEL4 hello_03b
 ~Splendid! I'll talk as I gather ingredients needed to enchant this fine piece of jewlery. Where should I start...~
 EXTERN AC#PPEL4 poison_myth_unnhoyr
@@ -264,12 +266,13 @@ CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_02
 ~It is one of the long-lost elven cities of old Keltormir, which once encompassed the Tethir and Mir forests. One of my close friends been there, even brought me few samples.~
 END
 IF~~THEN EXTERN AC#PPEL4 poison_myth_unnhoyr_03
-
+*/
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
 ~Myth Unnohyr seems to have been an important stronghold, of great significance to those that studied Mythal, elven culture and words of the Seldarine that cared most about magic. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dead magic zone by night.~
 == NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic?! Gods, yes! Or no. Or maybe! I love it when even reality can’t make up its mind.~
 ==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN ~Elven ruins or not, this Mythal was never meant for mortal hands. And now it bleeds its vengeance into the land.~
-== HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~A stage once divine, now set for tragedy. When gods fall silent, the poison sings.~
+== HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~Creepy ruins, cursed mythals, shattered relics—these elves had a real sense of drama.~
+==HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~When gods fall silent, the poison sings.~
 == AC#PPEL4 ~By day, it's chaos. By night, magic doesn’t seem to exist at all—not in any conventional sense. Maybe some innate metamagic from creatures or enchanted items still functions... but honestly? I’m not sure. It's a theory. And I wouldn't depend on untested ideas.~
 END
 IF~~THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_areab
