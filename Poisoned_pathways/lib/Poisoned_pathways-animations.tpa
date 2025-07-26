@@ -19,7 +19,6 @@
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Midwife_PST/exxx.ini~ ~override/%hexNumber%.ini~
   ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Midwife_PST~ ~^.+\.bam$~ BEGIN
     COPY ~%BASH_FOR_FILESPEC%~ ~override~
-    //COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Scorpion/Scorpion_sounds~ ~override~
   END
 
 // scorpion animation

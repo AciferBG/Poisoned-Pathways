@@ -2,11 +2,36 @@
 
 // Bear telling stories in area ACPP08
 BEGIN AC#PP06B // Bear
+
 BEGIN AC#PP06R // Rabbit
+
+CHAIN IF ~True()~ THEN AC#PP06R hello_shut_up
+~Big ears, bigger stories. Quiet, please—he’s getting to the good part.~
+EXIT
+
 BEGIN AC#PP06S // Squirrel
+
+CHAIN IF ~True()~ THEN AC#PP06S hello_shut_up
+~Shhh! If you make noise, I’ll forget where we were in the story—and where I buried my snacks.~
+EXIT
+
 BEGIN AC#PP06M // Rat
+
+CHAIN IF ~True()~ THEN AC#PP06M hello_shut_up
+~Go away! I’ve got a warm spot, a good story, and no patience for interruptions.~
+EXIT
+
 BEGIN AC#PP06G // Groundhog
+
+CHAIN IF ~True()~ THEN AC#PP06G hello_shut_up
+~Every story needs quiet to grow, like a root in the soil. You’re stomping on mine.~
+EXIT
+
 BEGIN AC#PP06P // Pheasant
+
+CHAIN IF ~True()~ THEN AC#PP06P hello_shut_up
+~Please! I’m listening intently. It’s rare to find a bear with such narrative rhythm.~
+EXIT
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PP06B story_01
 ~And that, little ones, is how the squirrel saved the oak by making the storm cough.~
@@ -66,6 +91,19 @@ IF ~NumTimesTalkedTo(0)~ THEN BEGIN hello_0
   IF ~~ THEN REPLY ~What is this place?~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
   IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
+  IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Failsweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
+  IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
+  IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm still looking for the Moist Exhaling Failsweeper Aladent Brushadin.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
+  IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~I'm still looking for the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
+  IF~Global("AC#PPSpellCheckPoison","GLOBAL",0)~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPMAN looking_for_highpriest
+  IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
+  IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
+END
+
+IF ~Global("WrongHighPriestName","ACPP01",10)~ THEN BEGIN hello__10
+  SAY ~Before you're asking: You'll find the Most Exalted Fallskeeper Alatoasz Berendim in the northeastern treehouse, near the water. Anything else?~
+  IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
+  IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
   IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
 END
@@ -75,6 +113,12 @@ IF ~True()~ THEN BEGIN hello_1
   IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
   IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
+  IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
+  IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
+  IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm still looking for the Moist Exhaling Failsweeper Aladent Brushadin.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
+  IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~I'm still looking for the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
+  IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~I'm still looking for the Most Inflated Fartsleeper Analoss Bladderbim .~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
+  IF~Global("AC#PPSpellCheckPoison","GLOBAL",0)~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPMAN looking_for_highpriest
   IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
 END
@@ -87,10 +131,42 @@ END
 CHAIN IF ~~ THEN AC#PPMAN looking_for_highpriest
 ~Oh, you're looking for Most Exalted Fallskeeper Alatoasz Berendim? He can be found in one of the trees — the northeastern one, near the water. You'll most likely find him in the canopy, where he discusses difficult matters with the birds of the forest.~
 END
+  IF ~~ THEN REPLY ~All right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~I have another question.~ GOTO questions
+
+CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name
+~You must mean the Most Exalted Fallskeeper Alatoasz Berendim. Please do not mock his name—it is a sacred title. You’ll find him in the northeastern treehouse, near the water.~
+END
+  IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~I have another question.~ GOTO questions
+  
+CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_2
+~Sigh. It's Most Exalted Fallskeeper Alatoasz Berendim. Please show some respect—this is a sanctuary, not a tavern full of jesters. You’ll find him in the northeastern treehouse by the water. And try to compose yourself before you speak to him.~
+END
+  IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~I have another question.~ GOTO questions
+  
+  CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_3
+	~Most Exalted Fallskeeper Alatoasz Berendim! Not anything else! By the still waters, how hard is that? Show some reverence or the trees themselves might sigh at your ignorance. Go on, you’ll find him by the water’s edge.~
+	END
+  IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
+  IF ~~ THEN REPLY ~I have another question.~ GOTO questions
+  
+   CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_4
+	~It's Most Exalted Fallskeeper Alatoasz Berendim! Say it with me: Ber-en-dim! If you can’t manage that, at least keep your lips sealed while you head northeast toward his chambers.~
+	END
   IF ~~ THEN REPLY ~Uh, all right. I’ll go find him there.~ GOTO looking_for_highpriest_bye
   IF ~~ THEN REPLY ~Right then. Into the trees we go.~ GOTO looking_for_highpriest_bye
   IF ~~ THEN REPLY ~I have another question.~ GOTO questions
 
+   CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_5
+	~That’s enough. You’d do well to use the stillness of this grove to reflect on your behavior!~
+	DO ~SetGlobal("WrongHighPriestName","ACPP01",10) ReallyForceSpellRES("SPWISH35",LastTalkedToBy())~ EXIT
+	
 	CHAIN IF ~~ THEN AC#PPMAN looking_for_highpriest_bye
 	~Do that. He’ll be glad to meet you.~
 	EXIT

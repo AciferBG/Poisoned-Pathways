@@ -13,7 +13,6 @@ EscapeAreaDestroy(2)~ EXIT
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPSKD hello_00
 ~Well now, what do we have here? You lookin’ for something that makes problems disappear... real quiet-like? I’ve got potions, powders, and little drips of doom—if your coin’s honest and your conscience ain’t too fussy.~
 END
-IF~~THEN REPLY ~You disgust me. The world needs less filth like you!~ EXTERN AC#PPSKD fight
 IF~~THEN REPLY ~That does sound interesting. What exactly are you offering?~ EXTERN AC#PPSKD interest
 IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 	
@@ -58,6 +57,7 @@ IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 	IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me— I'm <CHARNAME>. I've brought down worse than you, and I don't need poison to do it. So tell me what I want to know!~ EXTERN AC#PPSKD threat_rep
 	IF~GlobalGT("Linvail","GLOBAL",0)~THEN REPLY ~I work for the Shadow Thieves. I doubt they'd be pleased to hear about your little side business.~ EXTERN AC#PPSKD work_shadow_thieves
 	IF~GlobalGT("BodhiJob","GLOBAL",0)~THEN REPLY ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~ EXTERN AC#PPSKD work_bodhi
+	IF~~THEN REPLY ~You disgust me. The world needs less filth like you!~ EXTERN AC#PPSKD fight
 	IF~~THEN REPLY ~I don’t deal with back-alley scum like you!~ EXTERN AC#PPSKD fight
 	IF~~THEN REPLY ~I’ll return when the time’s right.~ EXTERN AC#PPSKD bye
 
@@ -166,7 +166,7 @@ CHAIN IF ~~ THEN AC#PPEL2 lucky
 ~I was hit by the poison, but one of the arrows got lodged in my tunic. The tip's still laced with it.~
 END
 IF~~THEN REPLY ~Couldn’t have worked out better!~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
-IF~~THEN REPLY ~Poisoned and still doing work. You Eldathyn are truly stubborn.~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
+IF~~THEN REPLY ~Poisoned and still clinging to your mission. You Eldathyn really are stubborn.~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 IF~~THEN REPLY ~That arrow may point us straight to the bastard responsible.~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 IF~~THEN REPLY ~Meaning?~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 

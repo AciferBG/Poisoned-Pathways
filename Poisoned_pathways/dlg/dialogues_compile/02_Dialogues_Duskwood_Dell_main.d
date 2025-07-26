@@ -10,19 +10,28 @@ END
 IF~~THEN REPLY ~I bring word that a follower of your faith has been poisoned by an unknown assailant. I carry an arrow here, so your order’s leader might trace the source of the poison.~ EXTERN AC#PPEL3 need_go_to_highpriest
 IF~~THEN REPLY ~There is a dangerous foe—skilled in poisons. Long story short: One of your people has fallen, and he sent us here before his end.~ EXTERN AC#PPEL3 need_go_to_highpriest
 IF~~THEN REPLY ~Some threat, some poison, dying people... look, I don’t have time for pleasantries. Just point me to your leader.~ EXTERN AC#PPEL3 need_go_to_highpriest
-IF~~THEN REPLY ~Honestly? One of yours is dead, and now I’m the one cleaning up the mess because you're all too weak to act. Where’s your spineless leader hiding?~
- EXTERN AC#PPEL3 need_go_to_highpriest2
+IF~~THEN REPLY ~I'm looking for the Most Exhausted Fallseater Alabass Berendish.~ EXTERN AC#PPEL3 seek_highpriest_wrong_name
+IF~~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPEL3 seek_highpriest_right__name
+IF~~THEN REPLY ~Honestly? One of yours is dead, and now I’m the one cleaning up the mess because you're all too weak to act. Where’s your spineless leader hiding?~ EXTERN AC#PPEL3 need_go_to_highpriest2
 
 CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest
 ~By the Mother Guardian of Groves! Then Merethan has fallen? It is him you speak of, yes? This is grave news indeed...~ 
 =
-~Quickly—bring the poisoned arrow to our High Priest. You’ll find him in his chambers, in the rearmost tree by the water’s edge. But be careful—the venom seems potent, and even a trace may do harm. Alatoasz will know how to proceed.~
+~Quickly—bring the poisoned arrow to our High Priest. You’ll find him in his chambers, in the rearmost northeastern tree by the water’s edge. But be careful—the venom seems potent, and even a trace may do harm. Alatoasz will know how to proceed.~
 == AC#PPEL3 ~Despite these troubling times, I bid you welcome to our grove. May the Green Goddess grant you her blessing.~
 DO ~EscapeArea()~ EXIT
 
 CHAIN IF ~~ THEN AC#PPEL3 need_go_to_highpriest2
 ~You'll find him in his chambers, in the rearmost tree by the water. Now go—and trouble others no more.~
 DO ~ReputationInc(-1) EscapeArea()~ EXIT
+
+CHAIN IF ~~ THEN AC#PPEL3 seek_highpriest_wrong_name
+~I believe you’re referring to the Most Exalted Fallskeeper Alatoasz Berendim. Peace teaches us patience, but even names deserve respect. He resides in the treehouse by the water, northeast of here.~
+DO ~EscapeArea()~ EXIT
+
+CHAIN IF ~~ THEN AC#PPEL3 seek_highpriest_right__name
+~You’ll find our High Priest in his chambers, in the northeastern tree at the water’s edge. May he grant you the Green Goddess’s blessing.~
+DO ~EscapeArea()~ EXIT
 
 //////////////////////////////////////////////////////////////
 // First talk with Exalted Fallskeeper Alatoasz Berendim
