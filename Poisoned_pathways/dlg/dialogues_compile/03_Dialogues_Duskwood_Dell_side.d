@@ -263,6 +263,47 @@ EXIT
 BEGIN AC#PPST1 
 BEGIN AC#PPST2
 
+// Dialog between two Eldathyn (AC#PPST1, AC#PPST2) and Korgan (KORGANJ) Priest #1
+CHAIN IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)
+Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST1 hello_korgan
+~Look, brother! A new soul has arrived in Duskwood Dell.~
+==AC#PPST2 ~Peace be upon you, dwarven seeker of stillness...~
+==AC#PPST1 ~A still pond reflects more clearly than a rushing stream. Action must follow reflection.~
+==KORGANJ ~Hmph.~
+==AC#PPST1 ~Tell us, brother—what is your name?~
+==KORGANJ ~Korgan. BLOOD-Axe.~
+==AC#PPST2 ~Ah. So tell us, brother—when was the last time you truly felt peace?~
+==KORGANJ ~When I chopped off Timble’s ugly head.~
+==AC#PPST1 ~Uh... and when did you last hear the eternal silence?~
+==KORGANJ ~When I cut out Larry’s jabbering tongue.~
+==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
+==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
+==KORGANJ ~Aye. And proud of it!~
+END
+IF ~~ THEN DO ~SetGlobal("DebatingKorgan","ACPP01",1)~ EXIT
+
+// Dialog between two Eldathyn (AC#PPST1, AC#PPST2) and Korgan (KORGANJ) Priest #2
+CHAIN IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)
+Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST2 hello_korgan
+~Look, brother! A new soul has arrived in Duskwood Dell.~
+==AC#PPST1 ~Peace be upon you, dwarven seeker of stillness...~
+==AC#PPST1 ~A still pond reflects more clearly than a rushing stream. Action must follow reflection.~
+==KORGANJ ~Hmph.~
+==AC#PPST1 ~Tell us, brother—what is your name?~
+==KORGANJ ~Korgan. BLOOD-Axe.~
+==AC#PPST2 ~Ah. So tell us, brother—when was the last time you truly felt peace?~
+==KORGANJ ~When I chopped off Timble’s ugly head.~
+==AC#PPST1 ~Uh... and when did you last hear the eternal silence?~
+==KORGANJ ~When I cut out Larry’s jabbering tongue.~
+==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
+==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
+==KORGANJ ~Aye. And proud of it!~
+END
+IF ~~ THEN DO ~SetGlobal("DebatingKorgan","ACPP01",1)~ EXIT
+
+
 // Eldathyn #1
 CHAIN IF ~RandomNum(3,1)~ THEN AC#PPST1 hello_1
 ~That path of thought bears further walking.~
@@ -306,6 +347,27 @@ END
 IF~RandomNum(3,1)~THEN EXTERN AC#PPST1 stillness
 IF~RandomNum(3,2)~THEN EXTERN AC#PPST1 war
 IF~RandomNum(3,3)~THEN EXTERN AC#PPST1 water
+
+
+// Dialog between two Eldathyn (AC#PPST1, AC#PPST2) and Korgan (KORGANJ)
+
+CHAIN IF ~~ THEN AC#PPST1 hello_korgan
+~Look, brother! A new soul has arrived in Duskwood Dell.~
+==AC#PPST2 ~Peace be upon you, dwarven seeker of stillness...~
+==AC#PPST1 ~A still pond reflects more clearly than a rushing stream. Action must follow reflection.~
+==KORGANJ ~Hmph.~
+==AC#PPST1 ~Tell us, brother—what is your name?~
+==KORGANJ ~Korgan. BLOOD-Axe.~
+==AC#PPST2 ~Ah. So tell us, brother—when was the last time you truly felt peace?~
+==KORGANJ ~When I chopped off Timble’s bloody head.~
+==AC#PPST1 ~Uh... and when did you last hear the eternal silence?~
+==KORGANJ ~When I cut out Larry’s jabbering tongue.~
+==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
+==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==AC#PPST2 ~By the Green Goddess! He’s beyond reach.~
+==KORGANJ ~Aye. And proud of it!~
+EXIT
+
 
 CHAIN IF ~~ THEN AC#PPST1 stillness
 ~Stillness is the essence of Eldath’s teaching. In silence, we find truth.~
