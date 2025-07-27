@@ -76,6 +76,7 @@
 @902 = ~Wisp's Flicker~
 @903 = ~Wild Magic~
 @904 = ~Cloud of Pestilence~
+@905 = ~Protection From Animals~
 
 //sto files
 @950 = ~Temple of Eldath~
@@ -497,23 +498,20 @@ Special: Cures poison and heals 6 Hit Points over 1 round
 
 Weight: 1~
 @1089 = ~Two-Handed Sword~
-@1090 = ~Good Luck, Honeysuckle +4~
-@1091 = ~This powerful two-handed sword was once used by a ranger named Vala'll Stormneedle, a man known by all living near Larswood. He had a perfect life, perfect family, and a kind and loving wife, warioress Systianna. Each time Vala'll would live on a mission, she would kiss him in a cheek and tell him "good luck, honeysuckly" and would handle him his sord. Legends say that unlike many heroes, he managed to live up until they were both eighty years old. It was then that he lost his life to pneumonia.
+@1090 = ~Good Luck, Honeysuckle +3~
+@1091 = ~This finely balanced two-handed sword once belonged to a ranger named Vala’ll Stormneedle, a beloved protector of the Larswood region. He was known not only for his skill in battle, but for the joy with which he lived—a perfect life, a loving family, and his wife named Systianna, a faithful of Tymora.
 
-Some say that it is this sword that let him live for so long for ordinary human standards and those that spend most of their lives with a sword in their hands.
+Before each mission, she would kiss his cheek and hand him the blade, whispering, “Good luck, honeysuckle.” Unlike many folk heroes whose tales end in blood, the legend of Vala’ll is one of rare peace: He lived with Systianna until the age of eighty, passing not to sword or spell, but to pneumonia.
+
+Some believe it was this very sword that shielded him all those years—a silent companion preserving his life long beyond the span of most who walk with steel in hand. 
   
 STATISTICS:
 
-Equipped abilities:
-– Luck: +1
-– Constitution: +1
-– Missile Damage resistance: +20% (rangers only)
-
 Combat abilities:
-– Each succesful hit has a 15% chance to lower target's luck by 1 point for 2 rounds (Save vs. Spell -4 to negate)
+– Each successful hit has a 15% chance to lower the target's Luck by 1 point for 2 rounds (Save vs. Spell at –4 negates), while increasing the wielder's Luck by 1 point for an entire day.
 
-THAC0: +4
-Damage: 1d10+4 (slashing)
+THAC0: +3
+Damage: 1d10+3 (slashing)
 Speed Factor: 7
 Proficiency Type: Two-handed Sword
 Type: Two-handed
@@ -1098,19 +1096,17 @@ Requires:
 
 Weight: 8~
 @1175 = ~Plate Armor~
-@1176 = ~Wooden Plate of Ants~
-@1177 = ~This plate armor is made of hardened  wood thus may also be used by single-class druids. Furthermore, it's been enchanted with some druidic magic and allows a character to summon flying red ants.
+@1176 = ~Duskwood Plate~
+@1177 = ~This finely crafted suit of armor is fashioned from layered duskwood—an ancient, iron-hard timber known for its resilience and quiet grace. Though shaped in the form of full plate, its organic structure and natural resonance allow even single-class druids to don it without breaking their sacred oaths.
+
+Woven into the wood are subtle enchantments of druidic origin. While it offers the solid defense of conventional plate, it remains lighter and more attuned to natural energy, resisting corruption and warding off unnatural decay. Those who wear it say the scent of wet leaves and moss lingers faintly within.
 
 STATISTICS:
 
-Charge abilities:
-– May cast Summon Insects once per day
-
 Equipped abilities:
 – Fire Resistance: -10%
-– Electric Resistance: +10%
+– Electricity Resistance: +10%
 – Saving Throws vs. Death: +1
-– Wisdom: +2 (druid only)
 
 Armor Class: 3 (0 vs. slashing)
 Requires:
@@ -1119,17 +1115,23 @@ Requires:
 Weight: 20~
 @1178 = ~Potion~
 @1179 = ~Potion of Natural Attunement~
-@1180 = ~This powerful potion allows the one that uses it to pay a price and gain powerful ability instead. All in the name of growth.
+@1180 = ~This murky green potion exudes the scent of wet bark and crushed leaves. It was designed by druids who believe that all true growth comes through greater sacrifice.
+
+Upon drinking the entire potion, the user feels a subtle shift in <PRO_HISHER> being—strength wanes, but something healing stirs. In surrendering brute force, the body opens to the quiet powers of rejuvenation—an ancient balance, restored through loss.
+
+Such potions are rare and respected, for they teach what every tree already knows: that what is shed may nourish something greater.
 
 STATISTICS:
 
 Charge ability:
-– Each use lowers character's Magic Resistance by 5% permamently, but gains Cure Light Wounds or Slow Poison ability (50% chance for each) as an innate ability
+– Drinking the potion permanently lowers the character’s Strength by 1, but grants Cure Serious Wounds or Neutralize Poison (50% chance each) as an innate ability
 
 Weight: 1~
 @1181 = ~Wand~
 @1182 = ~Wand of Goodberry~
-@1183 = ~This simple wand can create goodberries. That specific wand has been made at Myth Unnohyr, and is of an old elven design.
+@1183 = ~This slender wand appears to have grown rather than been carved—it is shaped from a single twisting branch, smooth to the touch and still warm with life. At either end, tiny berries have sprouted, glowing faintly with druidic magic.
+
+Though humble in form, this wand holds the power to conjure Goodberries, just like the druidic spell. These enchanted fruits offer nourishment, restore vitality, and provide comfort in the wilds—each a small gift of peace in a world too often torn by blade and flame.
 
 STATISTICS:
 
@@ -1138,7 +1140,26 @@ STATISTICS:
 Requires:
  9 Wisdom
 
-Weight: 1~ 
+Weight: 1~
+
+@1184 = ~Face of the Forest~
+@1185 = ~This mask, woven from living leaves and supple vines, seems to shift gently with every breath of wind. Its features resemble a serene face—neither elf nor human, but something older, wilder. Druids of the High Forest assume that it was once worn by a guardian spirit of the woods, a being that walked unseen among beasts and boughs.
+
+By donning the mask, the wearer feels the quiet strength of the forest. In daylight, when the sun touches leaf and root, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
+
+Another power, when invoked, is the way certain mammals respond to the wearer—with unexpected calm, even trust. From field mouse to forest bear, creatures of fur and fang seem to ignore the being behind the mask.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Regenerate 1 Hit Point per round during daytime
+– Protects against critical hits
+
+Charge abilities:
+– Cast protection from animals once per day: Casting this spell causes all non-magical animals, especially mammals, to disregard the wearer of the mask for one turn.
+
+Weight: 1~
 
 
 // script strings

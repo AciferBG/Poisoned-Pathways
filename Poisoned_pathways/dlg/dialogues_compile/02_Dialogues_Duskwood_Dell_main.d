@@ -146,13 +146,18 @@ IF~~THEN REPLY ~So let's start looking for the right ruins.~ EXTERN AC#PPEL4 sta
 	IF~~THEN EXTERN AC#PPEL4 about_keltormir
 
 CHAIN IF ~~ THEN AC#PPEL4 about_keltormir
-~This region, as you may know, was once blanketed by a vast and unbroken forest—the ancient heart of the elven kingdom of Keltormir. The elves built splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
+~This region, as you may know, was once blanketed by a vast and unbroken forest—the ancient heart of the elven kingdom of Keltormir.~
+== IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Keltormir? Sure, Candlekeep had stuff on it. All leaves and legends. Elves love their trees, don’t they?~
 END
+IF~Race(Player1,ELF)~THEN REPLY ~The tale of Keltormir is well known among my people. It is our lost heritage... but all that remains are memories.~ EXTERN AC#PPEL4 about_keltormir_02
+IF~CheckStatGT(Player1,49,LORE)~THEN REPLY ~I believe I've come across the name Keltormir in my studies. Familiar... but long vanished.~ EXTERN AC#PPEL4 about_keltormir_02
 IF~~THEN REPLY ~And where should I begin the search?~ EXTERN AC#PPEL4 about_keltormir_02
-IF~~THEN REPLY ~Then let’s get to those ruins!~ EXTERN AC#PPEL4 about_keltormir_02
+IF~~THEN REPLY ~Time to uncover what’s left of Keltormir.~ EXTERN AC#PPEL4 about_keltormir_02
 
 CHAIN IF ~~ THEN AC#PPEL4 about_keltormir_02
-~If only it were that simple. I am no scholar of ancient history. My expertise lies in nature. But... fortunately, I know someone who is.~
+~The elves built many splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
+=
+~However, I am no scholar of ancient history. My expertise lies in nature. But... fortunately, I know someone who is.~
 =
 ~I ask you to visit the Temple of Oghma in Athkatla. They keep many tomes, including some that speak of the old elven cities. If I can get even a general clue, I may be able to narrow our search considerably.~
 END
@@ -242,31 +247,6 @@ CHAIN AC#PPEL4 hello_03x
 ~I'll wait here, then.~
 EXIT
 
-/*
-CHAIN AC#PPEL4 hello_03b
-~Splendid! I'll talk as I gather ingredients needed to enchant this fine piece of jewlery. Where should I start...~
-EXTERN AC#PPEL4 poison_myth_unnhoyr
-
-CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr
-~As you know, I tried to find out where this poison could be brewed. I believe the plant used in creating this poison must be harvested in the ancient city of Myth Unnohyr.~
-END
-IF~~THEN REPLY ~Never heard of that place.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_02
-IF~Race(Player1,ELF)~THEN REPLY ~Myth Unnohyr—I remember you mentioned ruins left by my kin, elves, but...~ EXTERN AC#PPEL4 poison_myth_unnhoyr_02b
-IF~CheckStatGT(Player1,34,LORE)~THEN REPLY ~I think I heard about this place, Myth Unnohyr. This is an old elven city, Mythal was erected there, once.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_02c
-
-CHAIN AC#PPEL4 poison_myth_unnhoyr_02b
-~Ah, yes. You're an elf. It is your culture we're discussing here.~
-EXTERN AC#PPEL4 poison_myth_unnhoyr_02
-
-CHAIN AC#PPEL4 poison_myth_unnhoyr_02c
-~Yes. You're correct.~
-EXTERN AC#PPEL4 poison_myth_unnhoyr_02
-
-CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_02
-~It is one of the long-lost elven cities of old Keltormir, which once encompassed the Tethir and Mir forests. One of my close friends been there, even brought me few samples.~
-END
-IF~~THEN EXTERN AC#PPEL4 poison_myth_unnhoyr_03
-*/
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
 ~Myth Unnohyr seems to have been an important stronghold, of great significance to those that studied Mythal, elven culture and words of the Seldarine that cared most about magic. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dead magic zone by night.~
 == NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic?! Gods, yes! Or no. Or maybe! I love it when even reality can’t make up its mind.~

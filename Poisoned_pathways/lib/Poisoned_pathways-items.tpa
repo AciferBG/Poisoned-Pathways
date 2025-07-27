@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPHM1.itm~         ~override~    // Face of the Forest
+  SAY NAME2 @1184
+  SAY DESC  @1185
+
 COPY ~%MOD_FOLDER%/itm/AC#PPK71.itm~         ~override~    // key for door in area acpp71
   SAY NAME2 @1153
   SAY DESC  @1154
