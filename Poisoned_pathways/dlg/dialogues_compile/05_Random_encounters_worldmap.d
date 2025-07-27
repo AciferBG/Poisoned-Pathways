@@ -1,7 +1,68 @@
 BEGIN AC#PPTME
 
 CHAIN IF ~NumTimesTalkedTo(0) AreaCheck("ACPP99")~ THEN AC#PPTME 000
-~Hello! It looks like you're comming from Duskwood Dell's direction.~
+~Oho! You're comin’ from the leafy end o’ the woods, aren’t ya? Duskwood Dell, I’d wager a pouch o’ plums!~
+END
+IF~~THEN REPLY ~Yes, that's true. I've been there.~ EXTERN AC#PPTME 001
+IF~~THEN REPLY ~Duskwood Dell? I don't know what you're talking about.~ EXTERN AC#PPTME 002
+
+CHAIN AC#PPTME 001
+~Knew it! Well, least they let *someone* in. Bit sniffy, those grove-folk...~
+EXTERN AC#PPTME 003
+
+CHAIN AC#PPTME 002
+~No need to fib! I saw you sneakin’ round the mossy bits—unless you’ve got a twin with equally muddy boots!~
+EXTERN AC#PPTME 003
+
+CHAIN AC#PPTME 003
+~Name's Debbie Gobblebubble—five B’s, two G’s, and a whole lotta charm!~
+==AC#PPTME ~Tried settin’ up shop in the Dell, y’know, but those leaf-lovin’ tree-huggers told me—and I quote—“You have *far* too many weapons.” Pfft! Rude!~
+==AC#PPTME ~So now I'm off... somewhere. Still mullin’ it over. North? South? East by bellybutton?~
+END
+IF~~THEN REPLY ~Right...~ EXTERN AC#PPTME 004
+IF~~THEN REPLY ~Maybe you should go to Athkatla. There's this huge Promenade there.~ DO ~SetGlobal("AC#PPMerSugAth","GLOBAL",1)~ EXTERN AC#PPTME 005
+IF~OR(3) Global("TMAcceptance","GLOBAL",1) Global("ShTrade","GLOBAL",1) Global("MazzyHappy","GLOBAL",1)~THEN REPLY ~Maybe you should try Trademeet. Sounds like your kind o’ crowd!~ DO ~SetGlobal("AC#PPMerSugTra","GLOBAL",1)~ EXTERN AC#PPTME 005
+
+CHAIN AC#PPTME 004
+~You’re not much of a talker, huh? That’s all right. I talk enough for two! ‘Course, unless my belly starts hollerin’ for some goulash.~
+EXTERN AC#PPTME 006
+
+CHAIN AC#PPTME 005
+~Huh! Big city or bustling market... sounds promising. I’ll give it a think between spoonfuls o’ goulash.~
+EXTERN AC#PPTME 006
+
+CHAIN AC#PPTME 006
+~Speaking o’ stew—goulash’s almost done! Spiced with Corm Orp herbs, kissed by halfling hands, and stirred with a spoon older than my auntie's gossip. You’re welcome to a bowl, and hey, while we’re both here and breathin’, wanna trade a few trinkets? You never know what treasure hides in a halfling’s rumblin’ belly or a humble halfling’s pouch!~
+END
+IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
+IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+
+CHAIN AC#PPTME 007
+~Fair winds and fewer bandits to ya!~
+EXIT
+
+CHAIN IF ~AreaCheck("AR0700")~ THEN AC#PPTME 00A
+~Well jiggle me jam jars—it’s you again! Debbie Gobblebubble, at your service, remember? You said Athkatla, so here I am! City’s a bit loud, but the snacks are divine. Care to browse my wares? Got new things since the woods!~
+END
+IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
+IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+
+CHAIN IF ~AreaCheck("AR2000")~ THEN AC#PPTME 00T
+~Ah-ha! Knew I’d bump into you again! You suggested Trademeet, and here I am, tradin’ and meetin’. I heard you cleared up some nastiness here. Brave soul! Fancy a peek at my goods? Got somethin’ spicy since the road!~
+END
+IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
+IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+
+CHAIN IF ~NumTimesTalkedToGT(0)~ THEN AC#PPTME 00X
+~Hey hey! It’s you again! Debbie Gobblebubble, still gabbing and still gobbling up business. Wanna see what I’ve got this time?~
+END
+IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
+IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+
+
+/*
+CHAIN IF ~NumTimesTalkedTo(0) AreaCheck("ACPP99")~ THEN AC#PPTME 000
+~Hello! It looks like you're coming from Duskwood Dell's direction.~
 END
 IF~~THEN REPLY ~Yes, that's true. I've been there.~ EXTERN AC#PPTME 001
 IF~~THEN REPLY ~Duskwood Dell? I don't know what you are talking about.~ EXTERN AC#PPTME 002
@@ -59,3 +120,4 @@ CHAIN IF ~NumTimesTalkedToGT(0)~ THEN AC#PPTME 00X
 END
 IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
 IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+*/

@@ -33,14 +33,20 @@ CHAIN IF ~Global("AC#PPFinalBossPrepare","GLOBAL",1)~ THEN AC#PPTA2 hello_00
 ~Who would have thought that you would walk right into a viper’s nest! Haha! I thought once you realized this viper could strike just as hard as it hisses, you’d know better than to stay. But no, you had to keep pushing, even if that meant wading through dangerous elven ruins and chilling mud.~
 END
 IF~~THEN REPLY ~Actually, I love ruins, and I don't mind little mud.~ EXTERN AC#PPTA2 hello_01
+IF~~THEN REPLY ~If standing for the innocent means walking into vipers’ nests, then so be it.~ EXTERN AC#PPTA2 hello_01
+IF~~THEN REPLY ~Danger and chill I can handle. It’s your smugness that’s truly unbearable.~ EXTERN AC#PPTA2 hello_01
+IF~~THEN REPLY ~You talk like rot—loud, foul, and hollow. Let’s see if you spread like it too.~ EXTERN AC#PPTA2 hello_01
 IF~~THEN REPLY ~There are times when someone has to do something. I just couldn't ignore the fact there is a lunatic brewing powerful poison in some rotting hideout.~ EXTERN AC#PPTA2 hello_01
 
 CHAIN AC#PPTA2 hello_01
-~Your insolence is somewhat impressive, that I must admit. But Talona, Mother of all Plagues, is watching over me. How else would I find this place? How else would I manage to run this operation? I know she's with me and I know she'll be happy to see me kill you.~
-==AC#PPTA2 ~And then, I will gladly sell my poison to other people. I believe you've already seen how effective it can be. How powerful. Almost as powerful as The Plague-crone's kiss.~
+~Your insolence is somewhat impressive, that I must admit. But Talona, Mother of all Plagues, is watching over me. She led me here, whispered how to let the sickness bloom. And now she watches, eager to see you perish by her servant’s hand.~
+==AC#PPTA2 ~Afterwards, I’ll gladly share my poison with others. You’ve already witnessed its grace—how swift, how certain. Almost as potent as the Plague-Crone’s kiss herself.~
 END
 IF~~THEN REPLY ~Do you really think you can win? I am stronger than you think!~ EXTERN AC#PPTA2 hello_02
+IF~~THEN REPLY ~Your faith is as rotten as your breath!~ EXTERN AC#PPTA2 hello_02
+IF~~THEN REPLY ~You’ve already taken too many lives. That ends now.~ EXTERN AC#PPTA2 hello_02
 IF~~THEN REPLY ~Give up and perhaps I'll let you live.~ EXTERN AC#PPTA2 hello_03
+IF~~THEN REPLY ~Interesting. Maybe I’ll take your recipe... once I’ve peeled it off your corpse.~ EXTERN AC#PPTA2 hello_03
 
 CHAIN AC#PPTA2 hello_02
 ~Hahaha! You really think you're going to scare me?~
@@ -53,5 +59,5 @@ EXTERN AC#PPTA2 hello_04
 CHAIN AC#PPTA2 hello_04
 ~Even if you succeed, several batches of the poison are already being distributed throughout Amn. And who’s to say some of those vials won’t find their way beyond the borders of the Lands of Intrigue?~
 ==AC#PPTA2 ~I managed to make this happen. I managed to merge light and pox! I tested my wonderful creation on pathetic little creatures! And with all that knowledge, I am going to turn Myth Unnohyr into my lady's toxic domain!~
-==AC#PPTA2 ~Now, let's see if you can only bark, dog, or can you truly fight.~
+==AC#PPTA2 ~You’ve stepped into the temple of decay—let’s see if you bloom like a blight or wither like a leaf!~
 DO ~SetGlobal("AC#PPFinalBossPrepare","GLOBAL",2) Enemy()~ EXIT

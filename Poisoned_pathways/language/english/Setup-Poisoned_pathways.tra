@@ -521,18 +521,18 @@ Requires:
 Weight: 9~
 @1092 = ~Light Crossbow~
 @1093 = ~Thornshooter +1~
-@1094 = ~This crossbow can shoot its own magical thorns that are able to entangle the target.
-  
-The magic used to create this weapon, however, makes only singleclass druid use this crossbow.
-  
+@1094 =~This unique crossbow conjures its own magical thorn-bolts: Sharp, barbed projectiles that can cause enemies to become entangled on impact.
+
+Due to the nature of the druidic enchantments woven into the weapon, only single-class druids are able to wield it effectively.
+
 STATISTICS:
 
-Equipped abilities:
-– Crossbow Proficiency is set to 1
+Equipped Abilities:
+– Sets Crossbow Proficiency to 1
 
-Combat abilities:
-– Does not nead ammunition, it shoots magic bolts
-– Each succesful hit has a 20% chance to entangle the enemy (Save vs. Spell -1 to negate)
+Combat Abilities:
+– Does not require ammunition; fires conjured magical thorn-bolts
+– 20% chance per hit to entangle the target (Save vs. Spell at -1 negates)
 
 THAC0: +1
 Damage: 1d6+1 (missile)
@@ -1160,6 +1160,16 @@ Charge abilities:
 – Cast protection from animals once per day: Casting this spell causes all non-magical animals, especially mammals, to disregard the wearer of the mask for one turn.
 
 Weight: 1~
+@1186 = ~Chestnut Bullet +2~
+@1187 = ~These magically hardened sling bullets are made from wild chestnuts—still bearing their natural spines. Originally enchanted by a halfling named Tipple Fernburrow to scare off a pack of hungry goblins, they’ve since found favor with pranksters and wanderers across the Western Heartlands. Despite their humble appearance, they strike with surprising force—and a sting you won’t soon forget.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d4+3 (missile), +2 piercing damage
+Launcher: Sling
+
+Weight: 0~
 
 
 // script strings

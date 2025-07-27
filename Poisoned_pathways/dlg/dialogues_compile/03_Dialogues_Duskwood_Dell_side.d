@@ -312,8 +312,6 @@ CHAIN IF ~~ THEN AC#PPST1 stillness
 ==AC#PPST2 ~Silence, yes—but not passivity. Even the river flows, though it makes no noise in the deep.~
 ==AC#PPST1 ~And yet, a still pool reflects more clearly than rushing water. Action must come only after reflection.~
 ==AC#PPST2 ~Reflection without movement is stagnation. Peace must walk the land, not only dream beneath it.~
-==AC#PPST1 ~I do not dispute the need to act—but our first duty is to preserve calm, not chase conflict.~
-==AC#PPST2 ~Nor do I seek conflict. But even a gentle hand must lift a branch when it blocks the light.~
 ==AC#PPST1 ~Then we are agreed, perhaps: peace is not the absence of motion, but its guidance.~
 ==AC#PPST2 ~Well said. May our steps remain light, and our purpose rooted.~
 EXIT
@@ -324,9 +322,8 @@ CHAIN IF ~~ THEN AC#PPST1 war
 ==AC#PPST1 ~That peace is not the absence of pain, but the healing that follows. War is a fire; peace is the rain.~
 ==AC#PPST2 ~And yet some rains come too late. I have seen fields scorched beyond all tending.~
 ==AC#PPST1 ~Even the blackest earth may bloom again, if given time and care. Eldath does not give up on any soil.~
-==AC#PPST2 ~Then neither shall we. But what of those who march now, sword in hand, claiming their cause is just?~
-==AC#PPST1 ~Let them march. We shall walk. And wherever they burn, we shall plant.~
 ==AC#PPST2 ~And in time, may flowers grow where banners once stood.~
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~If I hear "peace" again, I swear I’ll start chopping trees. Then people. In that order.~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPST1 water
@@ -334,10 +331,6 @@ CHAIN IF ~~ THEN AC#PPST1 water
 ==AC#PPST2 ~And yet it has no shape of its own. It takes the form of all things, and resists none.~
 ==AC#PPST1 ~That is its strength. In yielding, it endures. In softness, it wears down stone.~
 ==AC#PPST2 ~And when troubled, it reflects nothing. It reminds us to still our thoughts.~
-==AC#PPST1 ~But when it is clear, it reveals truth—even when we are not ready to see it.~
-==AC#PPST2 ~It quenches thirst, nourishes life, and yet... in floods, it destroys.~
-==AC#PPST1 ~Even peace must be balanced. Eldath’s waters flow gently, but they do not forget their power.~
-==AC#PPST2 ~Then let us serve as she does: quiet, giving... and strong beneath the surface.~
 EXIT
 
 // honey making Eldathyn in area ACPP01:
