@@ -222,15 +222,40 @@ CHAIN IF ~~ THEN AC#PPMAN chain_place_more
 ==AC#PPMAN ~They built no walls. The trees have embraced us ever since. We sleep in hammocks between the limbs, our breath shared with wind and leaf.~
 ==AC#PPMAN ~The waters around us are part of the Green Goddess Falls, sacred cascades that gather in pools at the glade before flowing on as the River Rimril, joining the Trifin Creek and eventually feeding into the Amstel River.~
 END
-  IF ~~ THEN REPLY ~And what is the purpose of this place?~ GOTO chain_place_more_02
+  IF ~GlobalGT("PeaceNPCReaction_MAN","ACPP01",0)~ THEN REPLY ~And what is the purpose of this place?~ GOTO chain_place_more_02
+  IF ~Global("PeaceNPCReaction_MAN","ACPP01",0)~ THEN REPLY ~And what is the purpose of this place?~ DO ~SetGlobal("PeaceNPCReaction_MAN","ACPP01",1)~ GOTO chain_place_more_02_NPC
   IF ~~ THEN REPLY ~You've given me much to reflect on. Farewell.~ GOTO bye
 
-CHAIN IF ~~ THEN AC#PPMAN chain_place_more_02
-~The purpose of this place? What purpose does peace need? Peace is the will to let go of burden, blade, and bitterness. You will find no temples of carved stone here. Only open sky, and the gentle song of streams below.~
+CHAIN IF ~~ THEN AC#PPMAN chain_place_more_02_NPC
+~The purpose of this place? What purpose does peace need? You will find no temples of carved stone here. Only open sky, and the gentle song of streams below. Peace is the will to let go of burden, blade, and bitterness, and there is no better place to let go.~
+== AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Clinging to peace is cowardice dressed in silk. Helm teaches justice through righteous strength, not passive prayer.~
+== CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~There is beauty in stillness... but refusing to act invites ruin. Even forests must defend themselves.~
+== MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN ~No fighting? But how will evil learn its lesson? Boo and I are very good teachers!~
+== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Peace is a luxury of those not burdened with the world's reality. Nature can be as cruel as it is calm.~
+== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~A stagnant concept for the meek and magicless. Power, not pacifism, shapes the Realms!~
+== HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~How very mortal. Come back to me when you've been torn apart and still choose kindness.~
+== RASAADJ IF ~InParty("RASAAD") !StateCheck("RASAAD",CD_STATE_NOTVALID)~ THEN ~My brothers teach that peace is the goal, not the absence of conflict but the end of it. In this, I think we and the Eldathyn are not so different~
+== IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~The Weave isn’t peaceful. It shifts, it burns, it consumes. Can peace truly last in a world like this?~
+== ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN ~You speak of peace like it’s a place we can walk to. But I’ve never seen a road leading to this place.~
+== YoshJ IF ~InParty("yoshimo") !StateCheck("yoshimo",CD_STATE_NOTVALID)~ THEN ~Peace is for people who never had to fight for their next breath.~
+== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Maybe peace isn’t the absence of conflict... just the courage not to feed it.~
 END  
+  IF ~~ THEN REPLY ~Nice ideals. But I’ve found that peace only follows a blade.~ EXTERN AC#PPMAN peace_dicussion_bye
+  IF ~~ THEN REPLY ~Sounds great!~ EXTERN AC#PPMAN peace_dicussion_bye
   IF ~~ THEN REPLY ~Thank you for your insights. I must go.~ EXTERN AC#PPMAN bye
   IF ~~ THEN REPLY ~That’s enough wisdom for now. Time to move on.~ EXTERN AC#PPMAN bye
-
+  
+CHAIN IF ~~ THEN AC#PPMAN chain_place_more_02
+~The purpose of this place? What purpose does peace need? You will find no temples of carved stone here. Only open sky, and the gentle song of streams below. Peace is the will to let go of burden, blade, and bitterness, and there is no better place to let go.~
+END  
+  IF ~~ THEN REPLY ~Nice ideals. But I’ve found that peace only follows a blade.~ EXTERN AC#PPMAN peace_dicussion_bye
+  IF ~~ THEN REPLY ~Sounds great!~ EXTERN AC#PPMAN peace_dicussion_bye
+  IF ~~ THEN REPLY ~Thank you for your insights. I must go.~ EXTERN AC#PPMAN bye
+  IF ~~ THEN REPLY ~That’s enough wisdom for now. Time to move on.~ EXTERN AC#PPMAN bye  
+ 
+CHAIN IF ~~ THEN AC#PPMAN peace_dicussion_bye 
+  ~Rivers do not rush to war, yet they shape the land more deeply than any army. Consider that, my <LADYLORD>. Farewell.~
+EXIT
 
 
 // Two Eldathyn priests debating
@@ -455,16 +480,18 @@ IF ~~ THEN BEGIN 1
   IF ~~ THEN DO ~StartStore("AC#PPEL8",LastTalkedToBy(Myself))~ EXIT
 END
 
-IF ~~ THEN BEGIN 2
-  SAY ~Eldath is the goddess of peace, still waters, and quiet groves. We offer sanctuary to those seeking harmony, far from the clamor of the world. No blade is drawn where her blessing lingers.~
-  IF ~~ THEN REPLY ~Could I see your services?~ GOTO 1
-  IF ~~ THEN REPLY ~I see. I shall be going.~ GOTO 3
-END
-
 IF ~~ THEN BEGIN 3
   SAY ~May the soft winds of Eldath guide you, <BROTHERSISTER>.~
   IF ~~ THEN EXIT
 END
+
+  CHAIN AC#PPEL8 2
+  ~Eldath is the goddess of peace, still waters, and quiet groves. We offer sanctuary to those seeking harmony, far from the clamor of the world. No blade is drawn where her blessing lingers.~
+  == MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN ~No sword? No smashing? Even not a little butt-kicking? How confusing...~
+  == ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~A goddess of peace... How quaint. If she exists, she’ll be the first to bleed.~
+  END
+  IF ~~ THEN REPLY ~Could I see your services?~ EXTERN AC#PPEL8 1
+  IF ~~ THEN REPLY ~I see. I shall be going.~ EXTERN AC#PPEL8 3
 
 // dryad in area acpp06 (Eldath's Peace Grotto):
 BEGIN ~AC#PPDR1~
