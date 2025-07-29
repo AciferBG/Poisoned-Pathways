@@ -17,7 +17,18 @@ EXTERN AC#PPTME 003
 CHAIN AC#PPTME 003
 ~Name's Debbie Gobblebubble—five B’s, two G’s, and a whole lotta charm!~
 ==AC#PPTME ~Tried settin’ up shop in the Dell, y’know, but those leaf-lovin’ tree-huggers told me—and I quote—“You have *far* too many weapons.” Pfft! Rude!~
-==AC#PPTME ~So now I'm off... somewhere. Still mullin’ it over. North? South? East by bellybutton?~
+END
+IF~~THEN REPLY ~How in the Nine Hells did you get the idea to sell weapons in the sanctuary of the goddess of peace?~ EXTERN AC#PPTME how_the_hell
+IF~~THEN REPLY ~Right...~ EXTERN AC#PPTME which_direction
+
+	CHAIN AC#PPTME how_the_hell
+	~Honestly? Because there’s no competition there! Where there’s demand, there’s Debbie. That’s how markets work, even in sacred groves.~
+	==AC#PPTME ~Besides, even peace-lovers need to not die sometimes, right?~
+	END
+	IF~~THEN EXTERN AC#PPTME which_direction
+
+CHAIN AC#PPTME which_direction
+~So now I'm off... somewhere. Still mullin’ it over. North? South? East by bellybutton?~
 END
 IF~~THEN REPLY ~Right...~ EXTERN AC#PPTME 004
 IF~~THEN REPLY ~Maybe you should go to Athkatla. There's this huge Promenade there.~ DO ~SetGlobal("AC#PPMerSugAth","GLOBAL",1)~ EXTERN AC#PPTME 005

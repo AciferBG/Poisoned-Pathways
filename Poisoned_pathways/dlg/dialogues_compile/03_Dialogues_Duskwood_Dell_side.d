@@ -93,7 +93,7 @@ IF ~NumTimesTalkedTo(0)~ THEN BEGIN hello_0
   IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
   IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
   IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
-  IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm eager trying to find the Moist Exhaling Failsweeper Aladent Brushadin.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
+  IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm eager trying to find the Moist Exhaling Failsweeper Alatooth Brushdent.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
   IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~Still no luck locating the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
   IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~My search continues for the Most Inflated Fartsleeper Analoss Bladderbim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
   IF~Global("AC#PPSpellCheckPoison","GLOBAL",0)~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPMAN looking_for_highpriest
@@ -116,7 +116,7 @@ IF ~True()~ THEN BEGIN hello_1
   IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
   IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
   IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
-  IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm eager trying to find the Moist Exhaling Failsweeper Aladent Brushadin.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
+  IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm eager trying to find the Moist Exhaling Failsweeper Alatooth Brushdent.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
   IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~Still no luck locating the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
   IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~My search continues for the Most Inflated Fartsleeper Analoss Bladderbim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
   IF~Global("AC#PPSpellCheckPoison","GLOBAL",0)~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPMAN looking_for_highpriest
@@ -197,7 +197,7 @@ IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GO
 IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
 IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
 IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
-IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm eager trying to find the Moist Exhaling Failsweeper Aladent Brushadin.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
+IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm eager trying to find the Moist Exhaling Failsweeper Alatooth Brushdent.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
 IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~Still no luck locating the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
 IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~My search continues for the Most Inflated Fartsleeper Analoss Bladderbim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
 IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
@@ -278,6 +278,8 @@ Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST1 hello_korgan
 ==KORGANJ ~When I cut out Larry’s jabbering tongue.~
 ==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
 ==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==AC#PPST2 ~By Eldath, you have problems with your temper!~
+==KORGANJ ~No, *you* have problems with your delusions!~
 ==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
 ==KORGANJ ~Aye. And proud of it!~
 END
@@ -298,6 +300,8 @@ Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST2 hello_korgan
 ==KORGANJ ~When I cut out Larry’s jabbering tongue.~
 ==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
 ==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==AC#PPST2 ~By Eldath, you have problems with your temper!~
+==KORGANJ ~No, *you* have problems with your delusions!~
 ==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
 ==KORGANJ ~Aye. And proud of it!~
 END

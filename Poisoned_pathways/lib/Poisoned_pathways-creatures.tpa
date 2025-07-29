@@ -121,8 +121,8 @@ COPY ~%MOD_FOLDER%/cre/AC#PPELR.cre~ ~override~ // Eldath priest: area ACPP01 ra
   SAY SELECT_COMMON5 @301
   SAY SELECT_COMMON6 @307
 
-COPY ~%MOD_FOLDER%/cre/AC#PPST1.cre~ ~override~ // Eldath priest: area ACPP09 debating
-  SAY NAME1 @34 SAY NAME2 @34
+COPY ~%MOD_FOLDER%/cre/AC#PPST1.cre~ ~override~ // Eldath priest: area ACPP01 debating
+  SAY NAME1 @54 SAY NAME2 @54
   SAY INITIAL_MEETING @303
   SAY SELECT_COMMON1 @302
   SAY SELECT_COMMON2 @301
@@ -131,8 +131,8 @@ COPY ~%MOD_FOLDER%/cre/AC#PPST1.cre~ ~override~ // Eldath priest: area ACPP09 de
   SAY SELECT_COMMON5 @306
   SAY SELECT_COMMON6 @307
 
-COPY ~%MOD_FOLDER%/cre/AC#PPST2.cre~ ~override~ // Eldath priest: area ACPP09 debating
-  SAY NAME1 @12 SAY NAME2 @12
+COPY ~%MOD_FOLDER%/cre/AC#PPST2.cre~ ~override~ // Eldath priest: area ACPP01 debating
+  SAY NAME1 @55 SAY NAME2 @55
   SAY INITIAL_MEETING @305
   SAY SELECT_COMMON1 @302
   SAY SELECT_COMMON2 @303

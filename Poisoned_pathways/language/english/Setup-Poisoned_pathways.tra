@@ -9,14 +9,14 @@
 @16 = ~Sharga Gentleswarm~
 @17 = ~Sylvae Streamveil~
 @18 = ~Zombie Treant~
-@19 = ~Priestess of Eldath~
+@19 = ~Sister Irinwe~
 @20 = ~Will-o'-wisp~
 @21 = ~Erlavanas Myth'yalv~
 @22 = ~Will-o'-pox~
 @23 = ~Wadal Hrun~
 @24 = ~Henry~
 @25 = ~Na'arla~
-@26 = ~Mannartv~
+@26 = ~Brother Edrim~
 @27 = ~Montrassa~
 @28 = ~Poison Manifestation~
 @29 = ~Char~
@@ -44,6 +44,8 @@
 @51 = ~Mythrien Sarath~
 @52 = ~Yuan-Ti Archer~
 @53 = ~Scorpion~
+@54 = ~Brother Calmor~
+@55 = ~Brother Stillnor~
 
 
 // cre soundfiles
