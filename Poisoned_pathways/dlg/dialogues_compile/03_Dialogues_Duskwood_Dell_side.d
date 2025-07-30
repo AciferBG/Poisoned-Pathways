@@ -268,7 +268,6 @@ CHAIN IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)
 Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST1 hello_korgan
 ~Look, brother! A new soul has arrived in Duskwood Dell.~
 ==AC#PPST2 ~Peace be upon you, dwarven seeker of stillness...~
-==AC#PPST1 ~A still pond reflects more clearly than a rushing stream. Action must follow reflection.~
 ==KORGANJ ~Hmph.~
 ==AC#PPST1 ~Tell us, brother—what is your name?~
 ==KORGANJ ~Korgan. BLOOD-Axe.~
@@ -290,7 +289,6 @@ CHAIN IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)
 Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST2 hello_korgan
 ~Look, brother! A new soul has arrived in Duskwood Dell.~
 ==AC#PPST1 ~Peace be upon you, dwarven seeker of stillness...~
-==AC#PPST1 ~A still pond reflects more clearly than a rushing stream. Action must follow reflection.~
 ==KORGANJ ~Hmph.~
 ==AC#PPST1 ~Tell us, brother—what is your name?~
 ==KORGANJ ~Korgan. BLOOD-Axe.~
@@ -530,7 +528,8 @@ BEGIN ~AC#PPEL8~
 IF ~True()~ THEN BEGIN 0
   SAY ~Welcome, my <BROTHERSISTER>. You stand in a place of stillness, under the gentle grace of Eldath, the Quiet One. May her peace settle upon your heart.~
   IF ~~ THEN REPLY ~I would like to see your services.~ GOTO 1
-  IF ~~ THEN REPLY ~Could you tell me more about Eldath?~ GOTO 2
+  IF ~Global("MinscViconia_ACPP02","ACPP02",1)~ THEN REPLY ~Could you tell me more about Eldath?~ GOTO 2
+  IF ~Global("MinscViconia_ACPP02","ACPP02",0)~ THEN REPLY ~Could you tell me more about Eldath?~ GOTO eldath_once
   IF ~~ THEN REPLY ~I see. I shall be going.~ GOTO 3
 END
 
@@ -544,46 +543,128 @@ IF ~~ THEN BEGIN 3
   IF ~~ THEN EXIT
 END
 
-  CHAIN AC#PPEL8 2
+  CHAIN AC#PPEL8 eldath_once
   ~Eldath is the goddess of peace, still waters, and quiet groves. We offer sanctuary to those seeking harmony, far from the clamor of the world. No blade is drawn where her blessing lingers.~
   == MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN ~No sword? No smashing? Even not a little butt-kicking? How confusing...~
   == ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~A goddess of peace... How quaint. If she exists, she’ll be the first to bleed.~
+  == AC#PPEL8 ~Many laughed at us when we planted the first saplings here. Yet now you stand in their shade.~
+  END
+  IF ~~ THEN DO ~SetGlobal("MinscViconia_ACPP02","ACPP02",1)~ EXTERN AC#PPEL8 eldath_once_2
+  
+  CHAIN AC#PPEL8 eldath_once_2
+  ~Anything else?~
+  END
+  IF ~~ THEN REPLY ~Could I see your services?~ EXTERN AC#PPEL8 1
+  IF ~~ THEN REPLY ~I see. I shall be going.~ EXTERN AC#PPEL8 3
+  
+  CHAIN AC#PPEL8 2
+  ~Eldath is the goddess of peace, still waters, and quiet groves. We offer sanctuary to those seeking harmony, far from the clamor of the world. No blade is drawn where her blessing lingers.~
   END
   IF ~~ THEN REPLY ~Could I see your services?~ EXTERN AC#PPEL8 1
   IF ~~ THEN REPLY ~I see. I shall be going.~ EXTERN AC#PPEL8 3
 
 // dryad in area acpp06 (Eldath's Peace Grotto):
-BEGIN ~AC#PPDR1~
+BEGIN ~AC#PPDR1~ //Dryad
+BEGIN ~AC#PPFI1~ //Fighter
+
+// Dialog in Eldath's Grotto – zwischen einer Nymphe (AC#PPDR1) und einem reumütigen Krieger (AC#PPFI1)
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPFI1 hello_peace
+~I’ve carried steel and blood on my hands for too many years... I want it to end. No more battles. No more killing.~
+==AC#PPDR1 ~Then lay down your weapon, brave one, and let the weight of war drift away like leaves upon a gentle current. The Mother of Groves does not judge the past—only the courage to choose stillness now.~
+==AC#PPFI1 ~So... let this tool of destruction rest. May my hands learn to heal instead of harm.~
+==AC#PPDR1 ~Eldath smiles upon your choice. Drink of Her blessed waters and walk on unburdened, with soft moss to cradle every step.~
+==AC#PPFI1 ~I feel... relieved...~
+DO ~CreateVisualEffectObject("SPHEALIN",Myself)
+DropInventory()
+DestroyItem("PLAT01",[-1.-1])
+DestroyItem("HELM01",[-1.-1])
+EscapeAreaDestroy(3)~
+EXIT
 
 CHAIN IF ~True()~ THEN AC#PPDR1 hello_01
 ~Greetings, <RACE>. Have you come to lay down your arms and receive the blessing of the Goddess?~ 
 END
-IF~~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place
+IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place
+IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place_2
+IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPDR1 who_are_you
 IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met this sirine outside. She's so full of anger. I'm sure you too had to find a way to live here, and with your goal here, it seems like you value peace and calmness of the soul. Do you know how may I help her?~ EXTERN AC#PPDR1 hello_s_00
+IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+
+	CHAIN IF ~~ THEN AC#PPDR1 who_are_you
+	~I am a dryad, bound to this grove. Long ago, Eldath’s touch calmed my frightened heart, and since then I serve as her gentle warden here. My spirit is tied to its trees, its waters, and the quiet breath of Eldath herself.~ 
+	END
+	IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place
+	IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place_2
+	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
+	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 
 	CHAIN IF ~~ THEN AC#PPDR1 what_place
-	~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~ 
+	~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
+	== AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~All these weapons just thrown aside? So much steel, wasted... I can’t decide if it’s inspiring or foolish.~
+	== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Peace is well and good—until the next pack of bandits shows up. Then what? Sing them to death?~
+	== DORNJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~A sword keeps you alive. Giving it up? That’s as good as digging your own grave.~
+	== KeldorJ IF ~InParty("keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ THEN ~That’s... admirable. To turn away from war takes more courage than swinging a blade ever could.~
+	END
+	IF~~THEN DO ~SetGlobal("NPC_ThrowWeapon","ACPP06",1)~ EXTERN AC#PPDR1 throw_weapon_too
+	
+		CHAIN IF ~~ THEN AC#PPDR1 what_place_2
+	~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
+	END
+	IF~~THEN EXTERN AC#PPDR1 throw_weapon_too
+
+	CHAIN IF ~~ THEN AC#PPDR1 throw_weapon_too
+	~Have you come to lay down your weapons here as well, in the name of peace?~
+	END
+	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+	IF~~THEN REPLY ~Tempus forbid, no!~ EXTERN AC#PPDR1 weapon_01
+	IF~~THEN REPLY ~To each their own, but I prefer keeping my weapon close at hand.~ EXTERN AC#PPDR1 weapon_01
+	IF~~THEN REPLY ~If I could, I would... but I’m not ready yet.~ EXTERN AC#PPDR1 weapon_01
+	IF~~THEN REPLY ~Let’s just hope none of them regret leaving their blades behind someday.~ EXTERN AC#PPDR1 weapon_01
+	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
+	
+	CHAIN IF ~~ THEN AC#PPDR1 weapon_01
+	~Peace is never forced here. Whether you hold a blade or set it down, only your heart can choose its path.~ 
 	END
 	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met this sirine outside. She's so full of anger. I'm sure you too had to find a way to live here, and with your goal here, it seems like you value peace and calmness of the soul. Do you know how may I help her?~ EXTERN AC#PPDR1 hello_s_00
+	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 
 	CHAIN IF ~~ THEN AC#PPDR1 bye
 	~Peace to you, traveler. May your path be soft beneath your feet.~
-	DO ~~ EXIT
+	EXIT
 	
 	CHAIN AC#PPDR1 hello_s_00
-	~I think it's different for everyone. I had to leave my trusted dagger here, on this pile. Others find peace in these little things. The way you speak of her—it feels like she may need to give up.~
+	~My sister of the tides wanders lost in her fury, unable to hear the whispers of still water?~
 	END
-	IF~~THEN REPLY ~Give up?~ EXTERN AC#PPDR1 hello_s_01
-	IF~~THEN REPLY ~What sort of stupid idea is that?~ EXTERN AC#PPDR1 hello_s_01
-	
+	IF~~THEN EXTERN AC#PPDR1 hello_s_01
+
+CHAIN IF ~~ THEN AC#PPDR1 hello_s_01
+~Bring her this. Blessed water mingled with chamomile, wild honey, blackberry, and lavender—each a whisper of calm from the grove. May it melt her wrath like morning sun on winter frost, leaving only quiet within.~
+== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Mayhap we could offer some of that brew to our angry dwarf here as well?~
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Ha! Very funny, half-elf! My rage bows to no potion—and that’s the way I like it! Now shut yer mouth before I find a new reason to get truly mad!~
+END
+IF~~THEN DO ~SetGlobal("AC#PPSirineQuest_d","GLOBAL",1) GiveItemCreate("AC#PPTEA",Player1,1,1,0)~ EXTERN AC#PPDR1 hello_s_02
+
+CHAIN IF ~~ THEN AC#PPDR1 hello_s_02
+~Let my siren sister drink this potion beneath the open sky. If her spirit is willing, Eldath’s calm will seep through the anger like sunlight thawing frozen waters.~
+END
+IF~~THEN REPLY ~Thank you, this will help her.~ EXTERN AC#PPDR1 hello_s_bye
+IF~~THEN REPLY ~Hopefully this will work.~ EXTERN AC#PPDR1 hello_s_bye
+IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#PPDR1 hello_s_bye
+
+	CHAIN IF ~~ THEN AC#PPDR1 hello_s_bye
+	~Carry calm as your shield, and kindness as your blade.~
+	EXIT
+
+
+/*	
 CHAIN AC#PPDR1 hello_s_01
 ~It sounds as if there was still some sort of fight inside of her. And it's going to lose until one part of her looses. Perhaps she needs to accept that despire she's a sirine, there is a burning fire inside her, and it's not going to disappear.~
 ==AC#PPDR1 ~I hope she can accept it and perhaps, at least that fire won't hurt her so much. Maybe it will become... acceptable. I wish I could give you something more, but—~
 ==AC#PPDR1 ~—wait. Maybe there is something. I mentined that she may need to enjoy little things. Perhaps help her with our special brew. There's some chamomile, wild honey, blackberry and some lavender. And ask her to let her accept that there are things she may feel angry about. That may be a first step to becoming more calm.~
 ==AC#PPDR1 ~Truth be told, though, she needs to let her feel that tranquility. Without that step, no brew, no book and no god is going to help her.~
 DO ~SetGlobal("AC#PPSirineQuest_d","GLOBAL",1) GiveItemCreate("AC#PPTEA",Player1,1,1,0)~ EXIT
+*/
 
 // honey-making orc in area acpp07:
 BEGIN ~AC#PPON2~

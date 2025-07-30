@@ -376,7 +376,7 @@ IF~~THEN REPLY ~Sounds useful, this toxin.~ EXTERN AC#PPEL1 about_poison_02
 CHAIN IF ~~ THEN AC#PPEL1 about_poison_02
 ~I initially suspected that one of Faerûn’s more malevolent groups had devised this terrible poison. But my search uncovered something troubling: The poison has been used by unrelated factions, with no alliance or shared interest between them. No shared ambition—only the same deadly means.~
 == AC#PPEL1 ~That can only mean a different power is behind this—one that acts on his own, working in the shadows. Someone who delights in the death this poison leaves behind.~
-== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Silent but violent... This stuff’s like a fart in a crowded room during a turnip banquet—you don’t know who did it, but someone’s definitely going to suffer.~
+== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Silent but violent... This stuff’s like a rogue fart at a turnip banquet: You don’t know who did it, but someone’s definitely going to suffer.~
 END
 IF~~THEN REPLY ~So you want me to face this poison-maker?~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~And just how are we meant to find this mysterious mastermind?~ EXTERN AC#PPEL1 about_person

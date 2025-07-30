@@ -7,7 +7,7 @@
 @14 = ~Peacefang~
 @15 = ~Quietbrook~
 @16 = ~Sharga Gentleswarm~
-@17 = ~Sylvae Streamveil~
+@17 = ~Sister Sylvae~
 @18 = ~Zombie Treant~
 @19 = ~Sister Irinwe~
 @20 = ~Will-o'-wisp~
@@ -21,7 +21,7 @@
 @28 = ~Poison Manifestation~
 @29 = ~Char~
 @30 = ~Aunt Pesca~
-@31 = ~Oren Taval~
+@31 = ~Mannatarv~
 @32 = ~Blightspawn Ankheg~
 @33 = ~Novice~
 @34 = ~Peaceman~
@@ -46,6 +46,7 @@
 @53 = ~Scorpion~
 @54 = ~Brother Calmor~
 @55 = ~Brother Stillnor~
+@56 = ~Varric Redscar~
 
 
 // cre soundfiles
@@ -1172,6 +1173,11 @@ Damage: 1d4+3 (missile), +2 piercing damage
 Launcher: Sling
 
 Weight: 0~
+@1188 = ~This ancient elven armor has long since seen its prime. Once finely crafted and bearing the elegance of its people, it is now dulled, cracked, and fragile with age. Whatever enchantments or strength it once held have faded to dust, leaving only a shell unfit for battle.
+
+STATISTICS:
+
+Weight: 20~
 
 
 // script strings

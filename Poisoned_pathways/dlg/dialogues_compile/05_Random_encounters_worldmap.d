@@ -16,6 +16,7 @@ EXTERN AC#PPTME 003
 
 CHAIN AC#PPTME 003
 ~Name's Debbie Gobblebubble—five B’s, two G’s, and a whole lotta charm!~
+== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~By Arvoreen, that's a mouthful! Your parents must have had high hopes for you. Well met, cousin!~
 ==AC#PPTME ~Tried settin’ up shop in the Dell, y’know, but those leaf-lovin’ tree-huggers told me—and I quote—“You have *far* too many weapons.” Pfft! Rude!~
 END
 IF~~THEN REPLY ~How in the Nine Hells did you get the idea to sell weapons in the sanctuary of the goddess of peace?~ EXTERN AC#PPTME how_the_hell
