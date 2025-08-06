@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPWYN.itm~         ~override~    // jagged script
+  SAY NAME2 @1189
+  SAY DESC  @1190
+
 COPY ~%MOD_FOLDER%/itm/AC#PPM58.itm~         ~override~    // broken armor
   SAY DESC  @1187
 

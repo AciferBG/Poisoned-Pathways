@@ -43,6 +43,16 @@ IF~~THEN REPLY ~Let's make it brief: Merethan is dead. He was killed with this p
 IF~~THEN REPLY ~Your priest, Merethan, was poisoned. I have here an arrow soaked in the toxin. He hoped you might be able to use it to trace the culprit.~ EXTERN AC#PPEL4 about_arrow
 IF~~THEN REPLY ~Merethan died choking on his peace. This poisoned arrow’s all that’s left.~ EXTERN AC#PPEL4 about_arrow
 IF~~THEN REPLY ~Greetings, Most Exalted Fallskeeper. I bring sad news—your priest Merethan was poisoned. This arrow carries the same toxin that killed him... and others. Merethan hoped you could trace its source.~ EXTERN AC#PPEL4 about_arrow
+IF~Global("AC#PPWrongPriestName","GLOBAL",1)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Appletoast Barelydim.~ DO ~SetGlobal("AC#PPWrongPriestName","GLOBAL",2)~ EXTERN AC#PPEL4 wrong_name_fun
+
+	CHAIN IF ~~ THEN AC#PPEL4 wrong_name_fun
+	~Blast it! You’ve seen through my disguise! I’m not Alatoasz at all... I'm Appletoast! A pity... I worked hard on the beard and the title. Would you still care to talk to this imposter, or shall I bow out and leave you to your heroic wandering?~
+	END
+	IF~~THEN REPLY ~Let's make it brief: Merethan is dead. He was killed with this poison. We need to find out who made it.~ EXTERN AC#PPEL4 about_arrow
+	IF~~THEN REPLY ~Your priest, Merethan, was poisoned. I have here an arrow soaked in the toxin. He hoped you might be able to use it to trace the culprit.~ EXTERN AC#PPEL4 about_arrow
+	IF~~THEN REPLY ~Merethan died choking on his peace. This poisoned arrow’s all that’s left.~ EXTERN AC#PPEL4 about_arrow
+	IF~~THEN REPLY ~Greetings, Most Exalted Fallskeeper. I bring sad news—your priest Merethan was poisoned. This arrow carries the same toxin that killed him... and others. Merethan hoped you could trace its source.~ EXTERN AC#PPEL4 about_arrow
+
 
 CHAIN IF ~~ THEN AC#PPEL4 about_arrow
 ~This is sad news. Merethan was a faithful follower—a Freewalker—traveling to spread the word of peace throughout the Realms. It pains me that he has left our world. I know the circumstances—indeed, I was the one who tasked him with investigating the troubling cases of poisoning.~

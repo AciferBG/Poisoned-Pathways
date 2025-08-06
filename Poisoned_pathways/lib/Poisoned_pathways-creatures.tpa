@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPTAL.cre~ ~override~       // Poison Incarnation (Talona)
+  SAY NAME1 @57 SAY NAME2 @57
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~TALONA_ACIFER~))
+
 COPY ~%MOD_FOLDER%/cre/AC#PPFI1.cre~ ~override~ // Fighter
   SAY NAME1 @56
   SAY NAME2 @56

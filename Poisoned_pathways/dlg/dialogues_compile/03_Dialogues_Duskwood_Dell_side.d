@@ -114,7 +114,7 @@ IF ~True()~ THEN BEGIN hello_1
   IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
   IF ~Global("AC#PPSpellCheckPoison","GLOBAL",0)~ THEN REPLY ~I'm looking for your high priest.~ GOTO looking_for_highpriest
-  IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
+  IF~Global("WrongHighPriestName","ACPP01",0)~THEN REPLY ~I'm looking for the Moist Exulted Flailweeper Alabath Bumbleditch.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",1) SetGlobal("AC#PPWrongPriestName","GLOBAL",1)~ EXTERN AC#PPMAN seek_highpriest_wrong_name
   IF~Global("WrongHighPriestName","ACPP01",1)~THEN REPLY ~I'm still looking for the Moss-Exalting Fallskipper Alatoss Boringdim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",2)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_2
   IF~Global("WrongHighPriestName","ACPP01",2)~THEN REPLY ~I'm eager trying to find the Moist Exhaling Failsweeper Alatooth Brushdent.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",3)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_3
   IF~Global("WrongHighPriestName","ACPP01",3)~THEN REPLY ~Still no luck locating the Most Exhausted Flatkeeper Alatoast Berrydrink.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",4)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_4
@@ -176,7 +176,7 @@ END
 
    CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_5
 	~That’s enough. You’d do well to use the stillness of this grove to reflect on your behavior!~
-	DO ~SetGlobal("WrongHighPriestName","ACPP01",10) ReallyForceSpellRES("SPWISH35",LastTalkedToBy())~ EXIT
+	DO ~SetGlobal("WrongHighPriestName","ACPP01",10) ReallyForceSpellRES("AC#PPSC",LastTalkedToBy())~ EXIT
 	
 	CHAIN IF ~~ THEN AC#PPMAN looking_for_highpriest_bye
 	~Do that. He’ll be glad to meet you.~
@@ -621,6 +621,7 @@ IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)
 	IF~~THEN REPLY ~To each their own, but I prefer keeping my weapon close at hand.~ EXTERN AC#PPDR1 weapon_01
 	IF~~THEN REPLY ~If I could, I would... but I’m not ready yet.~ EXTERN AC#PPDR1 weapon_01
 	IF~~THEN REPLY ~Let’s just hope none of them regret leaving their blades behind someday.~ EXTERN AC#PPDR1 weapon_01
+	IF~~THEN REPLY ~You don’t mind if I take a look at those weapons, do you? Maybe one or two could still be of use to me.~ EXTERN AC#PPDR1 take_some_weapons
 	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
 	
 	CHAIN IF ~~ THEN AC#PPDR1 weapon_01
@@ -628,6 +629,29 @@ IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)
 	END
 	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
 	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+	
+		CHAIN IF ~~ THEN AC#PPDR1 take_some_weapons
+		~These weapons have already tasted blood. Whether they lie here or in your hands makes little difference to the past. Peace cannot be forced on the unwilling.~ 
+		END
+		IF~~THEN REPLY ~Do you perhaps keep any special weapons here—ones I might put to use?~ EXTERN AC#PPDR1 spectral_blade
+		IF~~THEN REPLY ~Then I’ll take a look around, see if anything’s worth keeping.~ EXTERN AC#PPDR1 bye
+		IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
+		IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+		
+		CHAIN IF ~~ THEN AC#PPDR1 spectral_blade
+		~A single blade among these still hums with ancient grief. It carries the weight of old vows, sworn in battles long past. If you are truly set on walking a path against the dead, it may answer your call. Perhaps it waits for someone bold enough to wield it once more.~ 
+		END
+		IF~~THEN REPLY ~Could you give it to me?~ EXTERN AC#PPDR1 give_spectral_blade
+		IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
+		IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+		
+			CHAIN IF ~~ THEN AC#PPDR1 give_spectral_blade
+			~No, not yet. You are not ready for such a burden. If fate wills it, it will one day rest in your grasp. Be patient... perhaps, in time, you'll be chosen to wield the blade.~ 
+			END
+			IF~~THEN REPLY ~Then I’ll prove myself, no matter what trials lie ahead.~ EXTERN AC#PPDR1 bye
+			IF~~THEN REPLY ~If it’s waiting for someone bold and handsome, I think I’m already the best candidate, but let's wait.~ EXTERN AC#PPDR1 bye
+			IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
+			IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 
 	CHAIN IF ~~ THEN AC#PPDR1 bye
 	~Peace to you, traveler. May your path be soft beneath your feet.~

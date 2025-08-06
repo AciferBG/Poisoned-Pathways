@@ -307,6 +307,9 @@ SAY NAME1 @904
 COPY ~Poisoned_pathways/spl/AC#PPPM.spl~          ~override~
 SAY NAME1 @905
 
+COPY ~Poisoned_pathways/spl/AC#PPSC.spl~          ~override~
+SAY NAME1 @906
+
 COPY ~%MOD_FOLDER%/spl/AC#PPHAS.spl~ ~override~
   SAY NAME1 @901
 

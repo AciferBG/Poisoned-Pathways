@@ -8,6 +8,20 @@
   // Animation - green abishai
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/GAbi_BGEE~         ~override~
 
+  // Acifer's Talona animation
+  LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7f35 slotMax = slotMin + 0xff RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% TALONA_ACIFER~ UNLESS ~TALONA_ACIFER~
+  CLEAR_IDS_MAP
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Talona/exxx.ini~ ~override/%hexNumber%.ini~
+  ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Talona~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+    COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Talona/Talona_sounds~ ~override~
+  END
+
 // Midwife PST animation
  LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x1300 slotMax = slotMin + 0xff RET slot END
   ACTION_IF (slot <= 0) BEGIN

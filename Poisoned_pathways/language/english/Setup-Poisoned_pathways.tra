@@ -47,6 +47,7 @@
 @54 = ~Brother Calmor~
 @55 = ~Brother Stillnor~
 @56 = ~Varric Redscar~
+@57 = ~Poison Incarnation~
 
 
 // cre soundfiles
@@ -80,6 +81,7 @@
 @903 = ~Wild Magic~
 @904 = ~Cloud of Pestilence~
 @905 = ~Protection From Animals~
+@906 = ~Eldath's Silence~
 
 //sto files
 @950 = ~Temple of Eldath~
@@ -1178,6 +1180,12 @@ Weight: 0~
 STATISTICS:
 
 Weight: 20~
+@1189 = ~Jagged Script~
+@1190 = ~The script is crude and jagged, yet disturbingly deliberate. It reads:
+
+Patience, patience... centuries of it, and still the prize lies just beyond my reach. The elf’s flesh, locked tight by foolish wards. But even the strongest seal can be undone by mortal hands too curious for their own good.
+Find one. Any one. Whisper promises. Let them break the seal on her tomb for me.
+Then... I shall have a body again. A perfect one. A vessel worthy of my hunger.~
 
 
 // script strings

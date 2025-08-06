@@ -2,7 +2,7 @@
 BEGIN ~AC#PPWY2~
 
 CHAIN IF ~Global("ByeTomb","ACPP77",1)~ THEN AC#PPWY2 hello_bye_tomb
-~Es ist offen! Ihr habt das Siegel gebannt! Nun sind wir vereint, für immer vereint, meine geliebte Elv-Esster Aened!!~
+~It is open! You have broken the seal! Now we are united, forever united, my beloved Elv-Esster Aened!!~
 END
 IF~~THEN DO ~SetGlobal("ByeTomb","ACPP77",10)
 CreateVisualEffectObject("SPDEATH3",Myself)
@@ -11,7 +11,7 @@ AddexperienceParty(200)
 Kill(Myself)~ EXIT
 
 CHAIN IF ~True()~ THEN AC#PPWY2 hello_open_tomb
-~Hier ist es... das Grab meiner Geliebten! Rasch, entfernt das Siegel, damit ich ruhen kann und Ihr weiterreisen könnt!~
+~Here it is... the tomb of my beloved! Quickly, remove the seal, so that I may rest at last and you may continue on your journey!~
 END
 IF~~THEN EXIT
 
@@ -19,44 +19,44 @@ IF~~THEN EXIT
 BEGIN ~AC#PPWY1~
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWY1 hello_tree_fallen
-~Halt! Haltet ein, Fremde! Hier geht es nicht mehr weiter...~
+~Stop! Halt, strangers! You cannot pass this way...~
 END
-IF~~THEN REPLY ~Was ist passiert?~ EXTERN AC#PPWY1 no_way
+IF~~THEN REPLY ~What happened here?~ EXTERN AC#PPWY1 no_way
 
-	CHAIN IF ~~ THEN AC#PPWY1 no_way
-	~Die... die Bäume... sie versperren den Weg... doch ich... ich kann Euch helfen! Ich erkenne, dass Ihr passieren müsst. Ich... ich weiß, wie!~
-	END
-	IF~~THEN REPLY ~Wie könnt Ihr mir helfen?~ EXTERN AC#PPWY1 help_way
-	
-	CHAIN IF ~~ THEN AC#PPWY1 help_way
-	~Ich helfe Euch, indem Ihr mir helft. Ihr könnt die Bäume wegbewegen... sie... sie werden von den Zombie-Treants kontrolliert. Wenn Ihr die Zombie-Treants bannt, werden sich die Bäume Euch beugen.~
-	END
-	IF~~THEN REPLY ~Wie soll ich das bewerkstelligen?~ EXTERN AC#PPWY1 how_help
-	
-	CHAIN IF ~~ THEN AC#PPWY1 how_help
-	~Es... es gibt in der Nähe ein Grabmal... dessen Siegel... Untote fernhält. Untote wie mich! Ich muss in dieses Grabmal. Ihr nehmt das Siegel, sodass ich letzte Ruhe finde.~
-	END
-	IF~~THEN  EXTERN AC#PPWY1 how_help_02
-	
-	CHAIN IF ~~ THEN AC#PPWY1 how_help_02
-	~Habt Ihr das Siegel, könnt Ihr die untoten Bäume bannen. Und ich bin am Ziel meiner Reise und kann ruhen.~
-	END
-	IF~~THEN REPLY ~Warum ruhen?~ EXTERN AC#PPWY1 about_tomb
-	
-		CHAIN IF ~~ THEN AC#PPWY1 about_tomb
-		~Seht mich doch an! Ein rastloser Untoter, getrieben von Sehnsucht nach ewiger Ruhe. Ruhe in den Armen meiner Geliebten! Der Geliebten, die in ihrem Grab ruht. Ein Grab, das mir durch das Siegel verwehrt bleibt.~
-		END
-		IF~~THEN REPLY ~Wer liegt in dem Grab?~ EXTERN AC#PPWY1 about_tomb_02
-		
-		CHAIN IF ~~ THEN AC#PPWY1 about_tomb_02
-		~Meine geliebte Elv-Esster Aened! Die Liebe meines Lebens. Die Liebe meines Todes. Die Liebe meines Untodes.~
-		END
-		IF~~THEN EXTERN AC#PPWY1 follow_me
-		
-			CHAIN AC#PPWY1 follow_me
-			~Ihr wollt weiterkommen, ich will heimkommen. Folgt mir, das Grabmal ist gleich im Norden!~  
-			DO ~SetGlobal("AC#PPOpenTomb","GLOBAL",1)
-			EscapeAreaObject("Tracpp77")~ EXIT
+    CHAIN IF ~~ THEN AC#PPWY1 no_way
+    ~The... the trees... they block the path... but I... I can help you! I can see you need to pass. I... I know how!~
+    END
+    IF~~THEN REPLY ~How can you help me?~ EXTERN AC#PPWY1 help_way
+    
+    CHAIN IF ~~ THEN AC#PPWY1 help_way
+    ~I will help you, if you help me. The trees... they are bound by the will of the zombie-treants. If you banish them, the path will open for you.~
+    END
+    IF~~THEN REPLY ~How am I supposed to do that?~ EXTERN AC#PPWY1 how_help
+    
+    CHAIN IF ~~ THEN AC#PPWY1 how_help
+    ~There is a tomb nearby... its seal repels the undead. Undead like me! I need to reach that tomb. You must take the seal, so that I can finally rest.~
+    END
+    IF~~THEN  EXTERN AC#PPWY1 how_help_02
+    
+    CHAIN IF ~~ THEN AC#PPWY1 how_help_02
+    ~With the seal in your hands, you can banish the undead trees. And I... I will at last reach my destination and know peace.~
+    END
+    IF~~THEN REPLY ~Why do you seek rest?~ EXTERN AC#PPWY1 about_tomb
+    
+        CHAIN IF ~~ THEN AC#PPWY1 about_tomb
+        ~Look at me! A restless undead, driven only by longing for eternal rest. Rest in the arms of my beloved! My beloved who lies sealed in her tomb, denied to me by this cursed ward.~
+        END
+        IF~~THEN REPLY ~Who lies in the tomb?~ EXTERN AC#PPWY1 about_tomb_02
+        
+        CHAIN IF ~~ THEN AC#PPWY1 about_tomb_02
+        ~My beloved Elv-Esster Aened! The love of my life. The love of my death. The love of my unlife.~
+        END
+        IF~~THEN EXTERN AC#PPWY1 follow_me
+        
+            CHAIN AC#PPWY1 follow_me
+            ~You wish to go on, I wish to go home. Follow me, the tomb is just north of here!~
+            DO ~SetGlobal("AC#PPOpenTomb","GLOBAL",1)
+            EscapeAreaObject("Tracpp77")~ EXIT
 
 
 // Dialogue Banshee in ACPP76
