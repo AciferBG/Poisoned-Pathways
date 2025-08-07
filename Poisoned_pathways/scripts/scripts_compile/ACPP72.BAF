@@ -1,6 +1,6 @@
 IF
-    Exists(Player1)
     Global("AC#PPFinalBossPrepare","GLOBAL",0)
+    Global("AC#PPFinalBossDialog","ACPP72",1)
 THEN
     RESPONSE #100
         StartCutScene("AC#PPCT6")
@@ -41,13 +41,14 @@ THEN
         CreateCreature("AC#PPPX",[810.490],S)  // Will-o'-pox
         CreateCreature("AC#PPPX",[890.600],S)  // Will-o'-pox
         CreateCreature("AC#PPPX",[680.660],S)  // Will-o'-pox
-        CreateCreature("AC#PPSN1",[350.500],S)  // Viper
-        CreateCreature("AC#PPSN1",[520.370],S)  // Viper
-        CreateCreature("AC#PPSN1",[700.420],S)  // Viper
-        CreateCreature("AC#PPSN1",[950.330],S)  // Viper
-        CreateCreature("AC#PPSN1",[1100.420],S)  // Viper
+        CreateCreature("AC#PPGH1",[350.500],S)  // Ghoul
+        CreateCreature("AC#PPGH1",[520.370],S)  // Ghoul
+        CreateCreature("AC#PPGH1",[700.420],S)  // Mane
+        CreateCreature("MANE",[950.330],S)  // Mane
+        CreateCreature("MANE",[1100.420],S)  // Mane
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
+        ActionOverride("AC#PPTA2",Enemy())
         EndCutSceneMode()
 END
 

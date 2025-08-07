@@ -1,4 +1,28 @@
 IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Global("AC#PPFinalBossDialog","ACPP72",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPFinalBossDialog","ACPP72",1)
+END
+
+IF
+    NumberOfTimesTalkedTo(0)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogueNoSet([PC])
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
     See(NearestEnemyOf(Myself))
     Global("prep","LOCALS",0)
 THEN
@@ -9,10 +33,10 @@ END
 
 IF
     See(NearestEnemyOf(Myself))
-    HaveSpellRES("AC#PPCP")  // Cloudkill
+    HaveSpellRES("AC#PPCP")  // Cloud of Pestilence
 THEN
     RESPONSE #100
-        SpellRES("AC#PPCP",NearestEnemyOf(Myself))  // Cloudkill
+        SpellRES("AC#PPCP",NearestEnemyOf(Myself))  // Cloud of Pestilence
 END
 
 IF
@@ -138,6 +162,15 @@ THEN
 END
 
 IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    ActionListEmpty()
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100

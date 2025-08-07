@@ -29,7 +29,7 @@ DO ~DestroyItem("MINHP1") SetGlobal("AC#PPTowerGuardian","GLOBAL",5) Enemy()~ EX
 
 BEGIN ~AC#PPTA2~
 
-CHAIN IF ~Global("AC#PPFinalBossPrepare","GLOBAL",1)~ THEN AC#PPTA2 hello_00
+CHAIN IF ~True()~ THEN AC#PPTA2 hello_00
 ~Who would have thought that you would walk right into a viper’s nest! Haha! I thought once you realized this viper could strike just as hard as it hisses, you’d know better than to stay. But no, you had to keep pushing, even if that meant wading through dangerous elven ruins and chilling mud.~
 END
 IF~~THEN REPLY ~Actually, I love ruins, and I don't mind little mud.~ EXTERN AC#PPTA2 hello_01
@@ -60,4 +60,4 @@ CHAIN AC#PPTA2 hello_04
 ~Even if you succeed, several batches of the poison are already being distributed throughout Amn. And who’s to say some of those vials won’t find their way beyond the borders of the Lands of Intrigue?~
 ==AC#PPTA2 ~I managed to make this happen. I managed to merge light and pox! I tested my wonderful creation on pathetic little creatures! And with all that knowledge, I am going to turn Myth Unnohyr into my lady's toxic domain!~
 ==AC#PPTA2 ~You’ve stepped into the temple of decay—let’s see if you bloom like a blight or wither like a leaf!~
-DO ~SetGlobal("AC#PPFinalBossPrepare","GLOBAL",2) Enemy()~ EXIT
+DO ~SetGlobal("AC#PPFinalBossPrepare","GLOBAL",2)~ EXIT
