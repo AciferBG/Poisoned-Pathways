@@ -1,34 +1,36 @@
 IF
-Contains("AC#PPPUB","Cauldron")
-Contains("AC#PPWA","Cauldron")
+    Contains("AC#PPPUB","Cauldron")  // Vesper Vein
+    Contains("AC#PPWA","Cauldron")  // Singing Water of Eldath
 THEN
-RESPONSE #100
-StartCutSceneMode()
-CutSceneId(Player1)
-MoveViewPoint([772.606],INSTANT)
-CreateVisualEffect("AC#PPGAG",[860.600])
-Wait(4)
-CreateCreature("AC#PPPOI",[860.600],0)
-Wait(1)
-CreateVisualEffect("SPBOOM",[770.560])
-AmbientActivate("Fire_cauldron2",TRUE) 
-AmbientActivate("Fire_cauldron",FALSE) 
-Wait(1)
-DisplayStringHead("AC#PPPOI",@2017)
-Wait(3)
-DestroyItem("AC#PPPUB")
-DestroyItem("AC#PPWA")
-ActionOverride("AC#PPPOI",Enemy())
-SetGlobal("AC#PP_PoisonSummoned","GLOBAL",1)
-EndCutSceneMode()
+    RESPONSE #100
+        ClearAllActions()
+        StartCutSceneMode()
+        CutSceneId(Player1)
+        MoveViewPoint([772.606],INSTANT)
+        CreateVisualEffect("AC#PPGAG",[835.489])
+        Wait(4)
+        AmbientActivate("Talona_statue",FALSE)
+        CreateCreature("AC#PPTAL",[827.487],SW)  // Poison Incarnation
+        Wait(1)
+        CreateVisualEffect("SPBOOM",[770.560])
+        AmbientActivate("Fire_cauldron2",TRUE)
+        AmbientActivate("Fire_cauldron",FALSE)
+        Wait(1)
+        DisplayStringHead("AC#PPTAL",@2017)
+        Wait(1)
+        DestroyItem("AC#PPPUB")  // Vesper Vein
+        DestroyItem("AC#PPWA")  // Singing Water of Eldath
+        ActionOverride("AC#PPTAL",Enemy())
+        SetGlobal("AC#PP_PoisonSummoned","GLOBAL",1)
+        EndCutSceneMode()
 END
 
 IF
-Dead("AC#PPPOI")
-Global("AC#PP_PoisonSummoned","GLOBAL",1)
+    Dead("AC#PPTAL")  // Poison Incarnation
+    Global("AC#PP_PoisonSummoned","GLOBAL",1)
 THEN
-RESPONSE #100
-DisplayStringHead(Myself,@2018)
-CreateItem("AC#PPANT",1,0,0)
-SetGlobal("AC#PP_PoisonSummoned","GLOBAL",2)
+    RESPONSE #100
+        DisplayStringHead(Myself,@2018)
+        CreateItem("AC#PPANT",1,0,0)
+        SetGlobal("AC#PP_PoisonSummoned","GLOBAL",2)
 END
