@@ -123,7 +123,7 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate_05
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_05
-~Of course! It must be the Vesper Vein—a rare elven plant! Highly toxic and revered by elves for millennia.~ 
+~Of course! It must be the Groveglove—a rare elven plant! Highly toxic and revered by elves for millennia.~ 
 =
 ~Yet its poison is usually easily cured by magic—so why does it fail now? It makes no sense.~ 
 END 

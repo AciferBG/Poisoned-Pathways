@@ -563,133 +563,6 @@ END
   IF ~~ THEN REPLY ~Could I see your services?~ EXTERN AC#PPEL8 1
   IF ~~ THEN REPLY ~I see. I shall be going.~ EXTERN AC#PPEL8 3
 
-// dryad in area acpp06 (Eldath's Peace Grotto):
-BEGIN ~AC#PPDR1~ //Dryad
-BEGIN ~AC#PPFI1~ //Fighter
-
-// Dialog in Eldath's Grotto – zwischen einer Nymphe (AC#PPDR1) und einem reumütigen Krieger (AC#PPFI1)
-
-CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPFI1 hello_peace
-~I’ve carried steel and blood on my hands for too many years... I want it to end. No more battles. No more killing.~
-==AC#PPDR1 ~Then lay down your weapon, brave one, and let the weight of war drift away like leaves upon a gentle current. The Mother of Groves does not judge the past—only the courage to choose stillness now.~
-==AC#PPFI1 ~So... let this tool of destruction rest. May my hands learn to heal instead of harm.~
-==AC#PPDR1 ~Eldath smiles upon your choice. Drink of Her blessed waters and walk on unburdened, with soft moss to cradle every step.~
-==AC#PPFI1 ~I feel... relieved...~
-DO ~CreateVisualEffectObject("SPHEALIN",Myself)
-DropInventory()
-DestroyItem("PLAT01",[-1.-1])
-DestroyItem("HELM01",[-1.-1])
-EscapeAreaDestroy(3)~
-EXIT
-
-CHAIN IF ~True()~ THEN AC#PPDR1 hello_01
-~Greetings, <RACE>. Have you come to lay down your arms and receive the blessing of the Goddess?~ 
-END
-IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place
-IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place_2
-IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPDR1 who_are_you
-IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
-
-	CHAIN IF ~~ THEN AC#PPDR1 who_are_you
-	~I am a dryad, bound to this grove. Long ago, Eldath’s touch calmed my frightened heart, and since then I serve as her gentle warden here. My spirit is tied to its trees, its waters, and the quiet breath of Eldath herself.~ 
-	END
-	IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place
-	IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place_2
-	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
-
-	CHAIN IF ~~ THEN AC#PPDR1 what_place
-	~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
-	== AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~All these weapons just thrown aside? So much steel, wasted... I can’t decide if it’s inspiring or foolish.~
-	== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Peace is well and good—until the next pack of bandits shows up. Then what? Sing them to death?~
-	== DORNJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~A sword keeps you alive. Giving it up? That’s as good as digging your own grave.~
-	== KeldorJ IF ~InParty("keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ THEN ~That’s... admirable. To turn away from war takes more courage than swinging a blade ever could.~
-	END
-	IF~~THEN DO ~SetGlobal("NPC_ThrowWeapon","ACPP06",1)~ EXTERN AC#PPDR1 throw_weapon_too
-	
-		CHAIN IF ~~ THEN AC#PPDR1 what_place_2
-	~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
-	END
-	IF~~THEN EXTERN AC#PPDR1 throw_weapon_too
-
-	CHAIN IF ~~ THEN AC#PPDR1 throw_weapon_too
-	~Have you come to lay down your weapons here as well, in the name of peace?~
-	END
-	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
-	IF~~THEN REPLY ~Tempus forbid, no!~ EXTERN AC#PPDR1 weapon_01
-	IF~~THEN REPLY ~To each their own, but I prefer keeping my weapon close at hand.~ EXTERN AC#PPDR1 weapon_01
-	IF~~THEN REPLY ~If I could, I would... but I’m not ready yet.~ EXTERN AC#PPDR1 weapon_01
-	IF~~THEN REPLY ~Let’s just hope none of them regret leaving their blades behind someday.~ EXTERN AC#PPDR1 weapon_01
-	IF~~THEN REPLY ~You don’t mind if I take a look at those weapons, do you? Maybe one or two could still be of use to me.~ EXTERN AC#PPDR1 take_some_weapons
-	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-	
-	CHAIN IF ~~ THEN AC#PPDR1 weapon_01
-	~Peace is never forced here. Whether you hold a blade or set it down, only your heart can choose its path.~ 
-	END
-	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
-	
-		CHAIN IF ~~ THEN AC#PPDR1 take_some_weapons
-		~These weapons have already tasted blood. Whether they lie here or in your hands makes little difference to the past. Peace cannot be forced on the unwilling.~ 
-		END
-		IF~~THEN REPLY ~Do you perhaps keep any special weapons here—ones I might put to use?~ EXTERN AC#PPDR1 spectral_blade
-		IF~~THEN REPLY ~Then I’ll take a look around, see if anything’s worth keeping.~ EXTERN AC#PPDR1 bye
-		IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-		IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
-		
-		CHAIN IF ~~ THEN AC#PPDR1 spectral_blade
-		~A single blade among these still hums with ancient grief. It carries the weight of old vows, sworn in battles long past. If you are truly set on walking a path against the dead, it may answer your call. Perhaps it waits for someone bold enough to wield it once more.~ 
-		END
-		IF~~THEN REPLY ~Could you give it to me?~ EXTERN AC#PPDR1 give_spectral_blade
-		IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-		IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
-		
-			CHAIN IF ~~ THEN AC#PPDR1 give_spectral_blade
-			~No, not yet. You are not ready for such a burden. If fate wills it, it will one day rest in your grasp. Be patient... perhaps, in time, you'll be chosen to wield the blade.~ 
-			END
-			IF~~THEN REPLY ~Then I’ll prove myself, no matter what trials lie ahead.~ EXTERN AC#PPDR1 bye
-			IF~~THEN REPLY ~If it’s waiting for someone bold and handsome, I think I’m already the best candidate, but let's wait.~ EXTERN AC#PPDR1 bye
-			IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-			IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
-
-	CHAIN IF ~~ THEN AC#PPDR1 bye
-	~Peace to you, traveler. May your path be soft beneath your feet.~
-	EXIT
-	
-	CHAIN AC#PPDR1 hello_s_00
-	~My sister of the tides wanders lost in her fury, unable to hear the whispers of still water?~
-	END
-	IF~~THEN EXTERN AC#PPDR1 hello_s_01
-
-CHAIN IF ~~ THEN AC#PPDR1 hello_s_01
-~Bring her this. Blessed water mingled with chamomile, wild honey, blackberry, and lavender—each a whisper of calm from the grove. May it melt her wrath like morning sun on winter frost, leaving only quiet within.~
-== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Mayhap we could offer some of that brew to our angry dwarf here as well?~
-== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Ha! Very funny, half-elf! My rage bows to no potion—and that’s the way I like it! Now shut yer mouth before I find a new reason to get truly mad!~
-END
-IF~~THEN DO ~SetGlobal("AC#PPSirineQuest_d","GLOBAL",1) GiveItemCreate("AC#PPTEA",Player1,1,1,0)~ EXTERN AC#PPDR1 hello_s_02
-
-CHAIN IF ~~ THEN AC#PPDR1 hello_s_02
-~Let my siren sister drink this potion beneath the open sky. If her spirit is willing, Eldath’s calm will seep through the anger like sunlight thawing frozen waters.~
-END
-IF~~THEN REPLY ~Thank you, this will help her.~ EXTERN AC#PPDR1 hello_s_bye
-IF~~THEN REPLY ~Hopefully this will work.~ EXTERN AC#PPDR1 hello_s_bye
-IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#PPDR1 hello_s_bye
-
-	CHAIN IF ~~ THEN AC#PPDR1 hello_s_bye
-	~Carry calm as your shield, and kindness as your blade.~
-	EXIT
-
-
-/*	
-CHAIN AC#PPDR1 hello_s_01
-~It sounds as if there was still some sort of fight inside of her. And it's going to lose until one part of her looses. Perhaps she needs to accept that despire she's a sirine, there is a burning fire inside her, and it's not going to disappear.~
-==AC#PPDR1 ~I hope she can accept it and perhaps, at least that fire won't hurt her so much. Maybe it will become... acceptable. I wish I could give you something more, but—~
-==AC#PPDR1 ~—wait. Maybe there is something. I mentined that she may need to enjoy little things. Perhaps help her with our special brew. There's some chamomile, wild honey, blackberry and some lavender. And ask her to let her accept that there are things she may feel angry about. That may be a first step to becoming more calm.~
-==AC#PPDR1 ~Truth be told, though, she needs to let her feel that tranquility. Without that step, no brew, no book and no god is going to help her.~
-DO ~SetGlobal("AC#PPSirineQuest_d","GLOBAL",1) GiveItemCreate("AC#PPTEA",Player1,1,1,0)~ EXIT
-*/
-
 // honey-making orc in area acpp07:
 BEGIN ~AC#PPON2~
 
@@ -1099,7 +972,7 @@ EXIT
 BEGIN AC#PPSIR
 
 CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",0)~ THEN AC#PPSIR 01.00
-~Argh!!!~
+~Argh!~
 END
 IF~~THEN REPLY ~Well, it looks like someone's angry.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
 IF~~THEN REPLY ~You’re the only one in this place who does not show harmony.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
@@ -1161,72 +1034,57 @@ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
 //2nd 
 
 CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",1)~ THEN AC#PPSIR 02.00
-~Argh!!!~
+~Argh!~
 END
 IF~~THEN REPLY ~I'll just leave you be.~ EXIT
-IF~PartyHasItem("AC#PPTEA")~THEN REPLY ~I consulted with another person from the Duskwood Dell and she suggested that you should try and accept that there may be some anger with you. Look, we all feel angry, even those priests and people in Duskwood Dell. It's not going to disappear, but maybe let yourself rest. Drink this tea with me. Please.~ EXTERN AC#PPSIR 02.01
+IF~PartyHasItem("AC#PPTEA")~THEN REPLY ~I spoke with the dryad in Eldath’s grotto. She believes you should accept that some anger will remain. She gave me this herbal brew to calm you down.~ EXTERN AC#PPSIR 02.01
+IF ~PartyHasItem("AC#PPTEA")~ THEN REPLY ~Here — a mouthful of this herbal brew, and your troubles will be gone. Or so the dryad claims.~ EXTERN AC#PPSIR 02.01
+
 
 CHAIN AC#PPSIR 02.01
-~Tea?! You're giving me... tea?!~
+~Herbal brew? You think a few sips will make me forget all the terrible things I’ve seen?~
 END
-IF~~THEN REPLY ~Let's at least try, hmm?~ EXTERN AC#PPSIR 02.02
-IF~~THEN REPLY ~Oh? And do you have a better idea?~ EXTERN AC#PPSIR 02.02
-IF~~THEN REPLY ~Just do whatever you want. I tried to help you, but maybe you're just not ready to feel better.~ EXTERN AC#PPSIR 02.02
+IF ~~ THEN REPLY ~Well, it might be worth a try.~ EXTERN AC#PPSIR 02.02
+IF ~~ THEN REPLY ~Do you have a better idea?~ EXTERN AC#PPSIR 02.02
+IF ~~ THEN REPLY ~To be honest: no.~ EXTERN AC#PPSIR 02.02
+IF ~~ THEN REPLY ~Do as you wish. I tried to help, but perhaps you're not ready to feel better.~ EXTERN AC#PPSIR 02.02
+
 
 CHAIN AC#PPSIR 02.02
-~Fine. Just give me that.~
-DO ~TakePartyItem("AC#PPTEA") DestroyItem("AC#PPTEA")~
-==AC#PPSIR ~So I should drink this and what? It's going to help?~
+~Well... I suppose I can at least give it a chance.~
+= ~...~
 END
-IF~~THEN REPLY ~I think it's a start.~ EXTERN AC#PPSIR 02.03
-IF~~THEN REPLY ~I think you also need to learn how to enjoy little things. And these moments when people acting like some furious honeybagers and just try to help.~ EXTERN AC#PPSIR 02.04
-IF~~THEN REPLY ~I don't know. But it's worth a try, no?~ EXTERN AC#PPSIR 02.05
-
-CHAIN AC#PPSIR 02.03
-~Eh...~
-EXTERN AC#PPSIR 02.06
-
-CHAIN AC#PPSIR 02.04
-~Hmm. That's not easy.~ 
-EXTERN AC#PPSIR 02.06
-
-CHAIN AC#PPSIR 02.05
-~I suppose it is.~
-EXTERN AC#PPSIR 02.06
-
-CHAIN AC#PPSIR 02.06
-~I just want it all to be better. And it won't be better if there are so many people playing with power and knowledge they can't even usu properly.~
-END
-IF~~THEN REPLY ~You are doing all you can. You are trying to be calm. But you need to let yourself feel alright about what you feel and want.~ EXTERN AC#PPSIR 02.07
-IF~~THEN REPLY ~It feels like you are still taking an active part in some sort of battle. Perhaps... let it go. Somtimes loosing can make us better.~ EXTERN AC#PPSIR 02.07
-IF~~THEN REPLY ~Look, I'm done. Just do whatever you want. I'm leaving.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",3) AddExperienceParty(100)~ EXIT
-
-CHAIN AC#PPSIR 02.07
-~I don't know how to do that.~
-END
-IF~~THEN REPLY ~Then drink. And breath. And perhaps sit down for a bit. The world won't shatter only because you sat down for a moment.~ EXTERN AC#PPSIR 02.08
-IF~~THEN REPLY ~You don't want to feel better, then don't. I'm done wasting my time on this. I'm leaving.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",3) AddExperienceParty(100)~ EXIT
+IF ~~ THEN DO ~TakePartyItem("AC#PPTEA") 
+DestroyItem("AC#PPTEA")
+CreateVisualEffectObject("SPHEALIN",Myself)~ EXTERN AC#PPSIR 02.08
 
 CHAIN AC#PPSIR 02.08
-~It does feel comfortable.~
+~It does feel... comfortable.~
 END
-IF~~THEN REPLY ~Then let yourself sit here for a while. And perhaps one day you will be ready to leave your bow in this chamber over there. People leave there their swords, hammers, bows. Perhaps you can do that, too. When you're ready, of course.~ EXTERN  AC#PPSIR 02.09
-IF~~THEN REPLY ~Just enjoy this moment. I'll leave you know. Do not hurry to do anything, just let yourself to have that break.~ EXTERN AC#PPSIR 02.10
+IF ~~ THEN REPLY ~See? That wasn’t so hard.~ EXTERN AC#PPSIR give_arrows
+IF ~~ THEN REPLY ~That went better than I expected.~ EXTERN AC#PPSIR give_arrows
+IF ~~ THEN REPLY ~Just enjoy this moment. I’ll leave you now.~ EXTERN AC#PPSIR give_arrows
 
-CHAIN AC#PPSIR 02.09
-~I'll think about this.~
-DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",2) AddExperienceParty(1900)~ EXIT
+CHAIN AC#PPSIR give_arrows
+~A breath of calm at last... the only weight I still carry is this quiver of arrows, forever reminding me of the life I once led.~
+== AC#PPSIR ~I’ve held these arrows close for longer than I can remember, but now I feel them pulling me back instead of setting me free — at least within these waters.~ 
+= ~You, on the other hand, look like someone who can still make use of them. Take them. They have served me well, but I think they might serve you better. You have my thanks... and perhaps a measure of my peace.~
+END
+IF ~~ THEN DO ~GiveItemCreate("AC#PPARO",LastTalkedToBy,10,0,0)
+GiveItemCreate("AROW05",LastTalkedToBy,10,0,0)
+SetGlobal("AC#PPSirineQuest","GLOBAL",2) 
+AddexperienceParty(300)~ EXIT
 
-CHAIN AC#PPSIR 02.10
-~I'll try.~
-DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",2) AddExperienceParty(1900)~ EXIT
-
-//3rd
 
 CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",2)~ THEN AC#PPSIR 03.00
-~(The sirine ignores you. She's just sitting and looking on the horizon.)~
+~I’d rather not talk right now... I just want to watch the water.~
 EXIT
 
 CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",3)~ THEN AC#PPSIR 03.0b
-~I don't know why I thought this place would make things better...~
+~I don’t know why I ever thought this place would make things better...~
 EXIT
+
+CHAIN IF ~~ THEN AC#PPSIR bye_no_help
+~*sigh*~
+EXIT
+

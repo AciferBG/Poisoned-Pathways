@@ -45,7 +45,7 @@ END
 IF~~THEN REPLY ~Do you really think you can win? I am stronger than you think!~ EXTERN AC#PPTA2 hello_02
 IF~~THEN REPLY ~Your faith is as rotten as your breath!~ EXTERN AC#PPTA2 hello_02
 IF~~THEN REPLY ~You’ve already taken too many lives. That ends now.~ EXTERN AC#PPTA2 hello_02
-IF~~THEN REPLY ~Give up and perhaps I'll let you live.~ EXTERN AC#PPTA2 hello_03
+IF~~THEN REPLY ~You and your bubbling pot are no match for us. Surrender now!~ EXTERN AC#PPTA2 hello_03
 IF~~THEN REPLY ~Interesting. Maybe I’ll take your recipe... once I’ve peeled it off your corpse.~ EXTERN AC#PPTA2 hello_03
 
 CHAIN AC#PPTA2 hello_02

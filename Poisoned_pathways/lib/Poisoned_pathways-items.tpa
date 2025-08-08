@@ -2,6 +2,14 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPARO.itm~         ~override~    //  arrow of charmng
+  SAY NAME2 @1193
+  SAY DESC  @1194
+
+COPY ~%MOD_FOLDER%/itm/AC#PPSTW.itm~         ~override~    // staff of withering
+  SAY NAME2 @1191
+  SAY DESC  @1192
+
 COPY ~%MOD_FOLDER%/itm/AC#PPWYN.itm~         ~override~    // jagged script
   SAY NAME2 @1189
   SAY DESC  @1190

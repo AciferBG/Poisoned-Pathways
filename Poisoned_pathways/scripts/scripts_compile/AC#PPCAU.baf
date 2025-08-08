@@ -1,5 +1,5 @@
 IF
-    Contains("AC#PPPUB","Cauldron")  // Vesper Vein
+    Contains("AC#PPPUB","Cauldron")  // Groveglove
     Contains("AC#PPWA","Cauldron")  // Singing Water of Eldath
 THEN
     RESPONSE #100
@@ -7,18 +7,16 @@ THEN
         StartCutSceneMode()
         CutSceneId(Player1)
         MoveViewPoint([772.606],INSTANT)
+        CreateVisualEffect("AC#PPBOM",[769.556])
+        Wait(1)
         CreateVisualEffect("AC#PPGAG",[835.489])
         Wait(4)
         AmbientActivate("Talona_statue",FALSE)
         CreateCreature("AC#PPTAL",[827.487],SW)  // Poison Incarnation
         Wait(1)
-        CreateVisualEffect("SPBOOM",[770.560])
-        AmbientActivate("Fire_cauldron2",TRUE)
-        AmbientActivate("Fire_cauldron",FALSE)
+        DisplayStringHead("AC#PPTAL",@2017)  // I AM THE POISON AND I SHALL DEVOUR YOU!
         Wait(1)
-        DisplayStringHead("AC#PPTAL",@2017)
-        Wait(1)
-        DestroyItem("AC#PPPUB")  // Vesper Vein
+        DestroyItem("AC#PPPUB")  // Groveglove
         DestroyItem("AC#PPWA")  // Singing Water of Eldath
         ActionOverride("AC#PPTAL",Enemy())
         SetGlobal("AC#PP_PoisonSummoned","GLOBAL",1)
@@ -31,6 +29,9 @@ IF
 THEN
     RESPONSE #100
         DisplayStringHead(Myself,@2018)
-        CreateItem("AC#PPANT",1,0,0)
+        OpenDoor("DOOR02")
+        AmbientActivate("Fire_cauldron2",TRUE)
+        AmbientActivate("Fire_cauldron",FALSE)
+        CreateItem("AC#PPANT",1,0,0)  // Celestial Antidote
         SetGlobal("AC#PP_PoisonSummoned","GLOBAL",2)
 END

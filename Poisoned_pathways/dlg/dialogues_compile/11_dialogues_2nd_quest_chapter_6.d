@@ -81,6 +81,7 @@ CHAIN AC#PPMI C6.QUEST.01.04c
 ==AC#PPMI ~You will also receive the Memory of the Myths. A powerful sword able to hurt even the strongest of undead. It cannot harm the living, things but its spectral blade can hurt the undead.~
 ==AC#PPMI ~It shall also be your reward. You will be able to use it to slay those like Bodhi.~
 END
+IF~~THEN REPLY ~Wyrd name, wyrd plan, wyrd ending.~ EXTERN AC#PPMI C6.QUEST.01.05
 IF~~THEN REPLY ~We have a deal.~ EXTERN AC#PPMI C6.QUEST.01.05
 IF~~THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.06
 IF~~THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait, thus... I need to leave.~ EXTERN AC#PPMI C6.QUEST.01.07

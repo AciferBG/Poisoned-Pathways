@@ -92,8 +92,15 @@
 // itm files
 @1000 = ~Poisoned Arrow~
 @1001 = ~This arrow is coated with a dangerous poison that cannot be removed by ordinary means. You are to bring the arrow to Alatoasz Berendim in Duskwood Dell, Eldath’s sacred sanctuary, so that the poison may be studied and its origin traced.~
-@1002 = ~Vesper Vein~
-@1003 = ~The vesper vein grows only in cursed groves. Admired by evil alchemists and feared by druids, its beauty is matched only by its lethality. You must deliver one of these blossoms to Alatoasz Berendim in Duskwood Dell.~
+@1002 = ~Groveglove~
+@1003 = ~The Groveglove is an exceptionally rare flowering plant whose waxy, foxglove-like bells bloom in shimmering hues ranging from deep violet to pale pink. It grows only in ancient, magic-laden elven groves, often near still spring pools or within the boundaries of a Mythal.
+
+A single drop of sap is enough to kill an adult—or, in skilled hands, to craft a cure for equally lethal afflictions. Druids regard the plant with ambivalence: as a natural part of the world’s balance, but also as a reminder that even the most beautiful gifts of nature can be deadly.
+
+You must deliver one of these blossoms to Alatoasz Berendim in Duskwood Dell.
+
+Notable Traits:
+Found only in elven groves under the influence of strong nature magic.~
 @1004 = ~Fungal Key~
 @1005 = ~This key is overgrown with grime and strange spores. It appears to open a very particular kind of door.~
 @1006 = ~Supplier's Note~
@@ -341,14 +348,14 @@ Requires:
 
 Weight: 2~
 @1065 = ~Herbal Brew in a Mug~
-@1066 = ~This brew is made of chamomile, wild honey, blackberry and lavender. It's supposed to calm people down.
+@1066 = ~This brew is made of chamomile, wild honey, blackberry and lavender. It's supposed to calm people down. You are to bring this brew to the sirine by the water in Duskwood Dell, so that she may find peace.
   
 STATISTICS: 
 
 Weight: 2~
 @1067 = ~Delgorth's Note~
 @1068 = ~First Entry:
-The Vesper Vein... the legends were true. It blooms still amidst the shattered remnants of Myth Unnohyr, where dead magic festers and life warps. Each petal hums with quiet malice, steeped in a power neither divine nor mortal. Talona smiles upon my discovery.
+The Groveglove... the legends were true. It blooms still amidst the shattered remnants of Myth Unnohyr, where dead magic festers and life warps. Each petal hums with quiet malice, steeped in a power neither divine nor mortal. Talona smiles upon my discovery.
 
 Second Entry:
 With painstaking effort, I have distilled the first batches of the toxin. Small quantities only—precious drops of death, born of the Vein’s purple heart. Already, the results have exceeded expectations: swift, incurable, a silencer of both flesh and spirit.
@@ -1186,6 +1193,45 @@ Weight: 20~
 Patience, patience... centuries of it, and still the prize lies just beyond my reach. The elf’s flesh, locked tight by foolish wards. But even the strongest seal can be undone by mortal hands too curious for their own good.
 Find one. Any one. Whisper promises. Let them break the seal on her tomb for me.
 Then... I shall have a body again. A perfect one. A vessel worthy of my hunger.~
+@1191 = ~Blightstaff~
+@1192 = ~Carved from the heartwood of a long-dead tree in the Plaguewastes, this staff radiates a faint odor of decay. It is said to have been gifted by Talona herself to a mortal champion whose very touch brought weakness and fever. The Blightstaff does not strike to kill swiftly; it spreads languor, sickness, and inevitability—until the victim's strength falters entirely.
+
+To wield it is to channel the patient cruelty of disease, and the knowledge that all life withers in time.
+
+Equipped abilities:
+– Immunity to disease
+– +2 bonus to Saving Throws vs. Death
+
+Combat abilities:
+– On Hit: 5% chance to inflict Withering Sickness – target must Save vs. Death or lose 1d2 Strength for 4 hours (stacking)
+
+Charge abilities:
+– Poison Strike (1/day): For the next 3 rounds, each hit poisons the target (2d6 damage per round for 3 rounds, Save vs. Death halves duration)
+
+STATISTICS:
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+@1193 = ~Arrows of Charming~
+@1194 = ~These finely crafted arrows are unlike any of mundane make. Their tips are delicately shaped into hearts of polished coral, glimmering faintly in the light. It is said they were fashioned by the sirines of the Sword Coast, not for war, but for persuasion — each arrow carrying a whisper of its maker’s beguiling song. When loosed, they seek not to harm, but to sway the will of the target, drawing them toward the archer’s cause.
+
+STATISTICS:
+
+Combat abilities:
+– Target must save vs. Spell or be charmed for 5 rounds
+
+THAC0: +1
+Damage: 0 (missile)
+Launcher: Bow
+
+Weight: 0~
 
 
 // script strings
