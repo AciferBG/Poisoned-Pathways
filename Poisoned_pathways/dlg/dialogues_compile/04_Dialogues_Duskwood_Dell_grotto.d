@@ -18,6 +18,60 @@ EscapeAreaDestroy(3)~
 EXIT
 
 // Dryad in Eldath's grotto main dialogues
+
+// Dialogue: Offering to trade named weapons for Eldath's blessing
+CHAIN IF ~Global("AC#PP_TradeWeapons","GLOBAL",1)~ THEN AC#PPDR1 hello_trade_weapons
+~A word with you, <PRO_RACE>. I see your weapons. Though I may not understand it, I can tell you cannot yet part with those you bear—at least not all of them. Others, perhaps, you could.~
+END
+IF ~~ THEN REPLY ~What do you mean by that?~ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~ EXTERN AC#PPDR1 trade_weapons_02
+IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#PPDR1 bye_trade_weapons
+
+CHAIN IF ~~ THEN AC#PPDR1 bye_trade_weapons
+~As you wish. Farewell.~
+EXIT
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_02
+~It is rare that... people like you pass through here—those who do not seek peace, but simply move on. You have seen many battles, of that I am sure. And you have seen many weapons whose owners are no longer among the living.~
+END
+IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_03
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_03
+~You gather these weapons, sell them... and a new hand wields them to bring more death and suffering. It does not have to be so—not anymore.~
+END
+IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_04
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_04
+~If you were to bring such weapons here instead, they would harm no one again. Here, in Eldath’s embrace, they would be kept safe. It costs you nothing—you still keep your own arms. But those you no longer need, leave them here.~
+END
+IF ~~ THEN REPLY ~You want to take all the weapons I find from my enemies?~ EXTERN AC#PPDR1 trade_weapons_05
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_05
+~Not all weapons—that would be more than even our sacred grove could bear. No, I mean the special ones, the unique ones. Those that have been swung in hundreds of battles, that have taken hundreds of lives. Bring such weapons here, and Eldath will bless you.~
+END
+IF ~~ THEN REPLY ~What do I get in return?~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get
+IF ~~ THEN REPLY ~Selling those weapons is how I make my living!~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_what_do_i_get
+~I... I cannot give you gold. But Eldath’s blessing is yours to take. With each weapon you surrender, she will grace you—granting you strength and vitality beyond what killing alone could bring. With every blade you give up, you will grow and thrive, even as others will *not* die by it anymore.~ 
+=
+~One less weapon, more life for you—that is Eldath’s bargain.~
+END
+IF ~~ THEN REPLY ~Which weapons exactly are we talking about?~ EXTERN AC#PPDR1 trade_weapons_which_weapons
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_which_weapons
+~You will know them—the weapons that bear a name. A named weapon has claimed many lives. Such weapons will earn you Eldath’s blessing.~  
+=  
+~And those that have already become legend will grant you even greater vitality. So, what do you say?~
+END
+IF ~~ THEN REPLY ~Do I have any such weapons with me?~ EXTERN AC#PPDR1 trade_root
+IF ~~ THEN REPLY ~I will think on it.~ EXTERN AC#PPDR1 trade_think_about_it
+IF ~~ THEN REPLY ~Not a chance!~ EXTERN AC#PPDR1 bye_trade_weapons
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_think_about_it
+~I ask no more of you. Whenever you find a blade you will not wield yourself, think of Eldath—and take the chance to carry peace into the world. Farewell, <PRO_RACE>.~
+EXIT
+
+
 CHAIN IF ~True()~ THEN AC#PPDR1 hello_01
 ~Greetings, <RACE>. Have you come to lay down your arms and receive the blessing of the Goddess?~ 
 END
@@ -25,7 +79,7 @@ IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY ~What is this place?~ EXTERN 
 IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place_2
 IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPDR1 who_are_you
 IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-IF~~THEN REPLY ~I have weapons I’d like to lay to rest here.~ EXTERN AC#PPDR1 trade_root
+IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~I have weapons I’d like to lay to rest here.~ EXTERN AC#PPDR1 trade_root
 IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 
 	CHAIN IF ~~ THEN AC#PPDR1 who_are_you
@@ -129,7 +183,7 @@ IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#P
 
 // ---------- ROOT ----------
 CHAIN IF ~~ THEN AC#PPDR1 trade_root
-~If you carry steel born of quarrel or grief, the waters can quiet it. How shall we proceed?~
+~If you carry steel born of quarrel or grief, the waters can quiet it. Will you trade a weapon for a touch more life in you?~
 END
   IF ~OR(8)
         PartyHasItem("SW1H54")    // The Equalizer
@@ -160,8 +214,9 @@ END
         PartyHasItem("MISC75")     // Dagger of Venom +2
         PartyHasItem("SW1H38")     // Jhor the Bleeder +2
 		~ THEN REPLY ~I’d like to surrender another weapon.~ EXTERN AC#PPDR1 trade_lesser_menu
-  IF ~~ THEN REPLY ~Not now.~ EXTERN AC#PPDR1 no_trade_bye
-  IF ~~ THEN REPLY ~And what do I gain from this?~ EXTERN AC#PPDR1 trade_gain
+		IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 no_trade_bye
+		IF ~~ THEN REPLY ~Not now.~ EXTERN AC#PPDR1 no_trade_bye
+		IF ~~ THEN REPLY ~And what do I gain from this?~ EXTERN AC#PPDR1 trade_gain
 
 	CHAIN IF ~~ THEN AC#PPDR1 trade_gain
 	~You shall receive a blessing of Eldath—one that will help you bear the weight of life a little more lightly.~

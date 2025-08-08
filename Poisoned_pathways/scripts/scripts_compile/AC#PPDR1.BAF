@@ -1,0 +1,10 @@
+IF
+    NumTimesTalkedToGT(0)
+    Global("AC#PP_TradeWeapons","GLOBAL",0)
+    See([PC])
+THEN
+    RESPONSE #100
+    SetGlobal("AC#PP_TradeWeapons","GLOBAL",1)
+    StartDialogueNoSet([PC])
+END
+
