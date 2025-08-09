@@ -1,0 +1,10 @@
+IF
+    Die()
+THEN
+    RESPONSE #100
+        DisplayString(Myself,57749)  // Illusion Dispelled
+        ReallyForceSpellDeadRES("AC#PPTD",Myself)  // No such index
+        Wait(1)
+        DestroySelf()
+END
+

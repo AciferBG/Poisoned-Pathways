@@ -1,0 +1,115 @@
+Poisoned Pathways — Eldath’s Grotto Trade System (Summary)
+==============================================================
+
+What this feature does (in‑game)
+--------------------------------
+In Eldath’s Grotto, a dryad offers to retire “named” weapons so they can harm no one again.
+When you hand a weapon to her, you receive Eldath’s blessing:
+
+• Lesser (normal) weapon  →  +1 permanent maximum Hit Point (AC#PPH1).
+• Legendary weapon        →  +2 permanent maximum Hit Points (AC#PPH2)
+                             +1% permanent resistance to ALL physical damage types
+                             (slashing, piercing, crushing, missile) (AC#PPGR).
+
+No gold is paid. The weapon is removed from your inventory and “laid to rest”
+Bonuses stack with each offering
+
+------------------------------------------------------------
+LEGENDARY WEAPONS (original game + mod items)
+------------------------------------------------------------
+
+ORIGINAL GAME
+- SW1H54  — The Equalizer
+- SW2H10  — Carsomyr +5
+- BLUN14  — Flail of Ages
+- HAMM09  — Crom Faeyr
+- SW2H08  — Soul Reaver
+- MISCBC  — Blackrazor   (note: some installs use SW1H63; I chose MISCBC)
+- SW2H03  — Lilarcor +3
+- SW1H51  — Celestial Fury +3
+- SW2H09  — Warblade +4
+- SW2H15  — Silver Sword
+- BOW19   — Shortbow of Gesen
+- SW1H15  — Icingdeath +3
+- SW1H16  — Twinkle
+- STAF11  — Staff of the Magi
+
+MOD: CALL OF THE LOST GODDESS (legendary set)
+- AC#WSW50 — Doomed Loser +5
+
+MOD: THRONE OF THE MAD GOD (legendary)
+- AC#MGFLS — Flayer Slayer +4
+
+
+--------------------------------------
+LESSER (NORMAL) WEAPONS (original game)
+--------------------------------------
+- SPER08 — Impaler +3
+- SPER10 — Spear of Withering
+- AX1H13 — Frostreaver +3
+- BLUN18 — Skullcrusher +3
+- HAMM07 — Hammer of Thunderbolts +3
+- HAMM06 — Dwarven Thrower +3
+- DAGG14 — Boneblade +4
+- BLUN22 — Blackblood +3
+- SW1H39 — Blade of Searing +3
+- AX1H10 — Azuredge +3
+- BOW12  — Elven Court Bow
+- BOW10  — Heartseeker +3
+- SW1H26 — Daystar +2
+- SW1H20 — Adjatha the Drinker +2
+- SW1H30 — Ras +2
+- SW1H34 — Kundane +2
+- SW1H27 — Belm +2
+- SW1H35 — Namarra +2
+- SW1H61 — Angurvadal +4
+- SW1H60 — Spectral Brand +4
+- SW2H14 — Dragon’s Bane +3
+- SW1H24 — Flame Tongue +1
+- AX1H09 — Stonefire +3
+- AX1H06 — Rifthome Axe +3
+- AX1H05 — Slaying Axe +2
+- SW1H38 — Jhor the Bleeder +2
+
+------------------------------
+LESSER (NORMAL) WEAPONS — MODS
+------------------------------
+
+MOD: POISONED PATHWAYS (lesser)
+- AC#PPSW   — Blade of the Elven Mycologist
+- AC#PPSCO  — Scolopendra’s Spit +3
+- AC#PP2HA  — Good Luck, Honeysuckle +3
+- AC#PPBOW  — Bard’s Love Letter +3
+- AC#PPHME  — Hammer of Powerful Yet Unlikely Blows +4
+
+MOD: THRONE OF THE MAD GOD (lesser)
+- AC#MGSP1 — Blackbite +3
+- AC#MGMS1 — Bonefang +2/+3
+- AC#MGAMB — Astral Mace of Blasting
+- AC#CLKBL — Clockwork Blade of Venom
+- AC#MGTRH — Grubnuk’s Hand +3
+- AC#MGSCI — Prismatic Scimitar +3
+- AC#MGHMA — Air Hammer +3
+
+MOD: CALL OF THE LOST GODDESS (lesser)
+- AC#W75SW — False Pride +3
+- AC#WSKCL — Skull Mace
+- AC#WFLBO — Flesh and Boils +4
+- AC#WMSHP — Meatshaper +3
+- AC#W901  — Heads +3
+- AC#W902  — Tails +3
+- AC#W90SC — Venom Slicer
+- AC#W90DG — Bloodblade
+- AC#WRUSP — Rust Spreader +3
+- AC#WHSRZ — Heart‑Shaped Razor +3
+
+
+
+Notes
+-----
+• “Legendary” vs. “Lesser” classification determines the blessing: +2 HP & +1% all physical resists vs. +1 HP.
+• Drizzt’s blades (Icingdeath, Twinkle) appear only if legitimately acquired in your run/install. :-)
+
+Note to myself:
+• If I change a weapon’s tier later, update the dialog node to swap AC#PPH1/AC#PPH2 and add/remove AC#PPGR accordingly.
+• If I prefer a cap on total resistances or HP, I can add a GLOBAL check before applying spells.

@@ -274,6 +274,27 @@ COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1026.pvrz~
  END
  END
+ 
+  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPHMD.bam~ ~override~ // face of the forest desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1027.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPAND.bam~ ~override~ // celestial antidote desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1028.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPSDW.bam~ ~override~ // blightstaff desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1029.pvrz~
+ END
+ END
 ///////////////////////////////////////////////////////////////////////
 // VVC files
 //

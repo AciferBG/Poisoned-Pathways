@@ -28,7 +28,7 @@ IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#
 
 CHAIN IF ~~ THEN AC#PPDR1 bye_trade_weapons
 ~As you wish. Farewell.~
-DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~
+DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",10)~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_02
@@ -163,8 +163,8 @@ IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY ~Your High Priest has sent 
 
 CHAIN IF ~~ THEN AC#PPDR1 hello_s_01
 ~Bring her this. Blessed water mingled with chamomile, wild honey, blackberry, and lavender—each a whisper of calm from the grove. May it melt her wrath like morning sun on winter frost, leaving only quiet within.~
-== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Perhaps we could offer some of that brew to our angry dwarf here as well?~
-== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Ha! Very funny, half-elf! My rage bows to no potion—and that’s the way I like it! Now shut yer mouth before I find a new reason to get truly mad!~
+== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID) InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Perhaps we could offer some of that brew to our angry dwarf here as well?~
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Ha! Very funny, half-elf! My rage bows to no potion—and that’s the way I like it! Now shut yer mouth before I find a new reason to get truly mad!~
 END
 IF~~THEN DO ~SetGlobal("AC#PPSirineQuest_d","GLOBAL",1) GiveItemCreate("AC#PPTEA",Player1,1,1,0)~ EXTERN AC#PPDR1 hello_s_02
 
@@ -193,35 +193,8 @@ IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#P
 CHAIN IF ~~ THEN AC#PPDR1 trade_root
 ~If you carry steel born of quarrel or grief, the waters can quiet it. Will you trade a weapon for a touch more life in you?~
 END
-  IF ~OR(8)
-        PartyHasItem("SW1H54")    // The Equalizer
-        PartyHasItem("SW2H10")     // Carsomyr +5
-        PartyHasItem("BLUN14")          // Flail of Ages
-        PartyHasItem("HAMM09")         // Crom Faeyr
-        PartyHasItem("SW2H08")   // Soul Reaver +4
-        PartyHasItem("MISCBC")   // Blackrazor
-        PartyHasItem("SW1H51")   // Celestial Fury +3
-        PartyHasItem("SW2H14")     // Lilarcor~ THEN REPLY ~I’d like to surrender a legendary weapon.~ EXTERN AC#PPDR1 trade_legend_menu
-  IF ~OR(18)
-        PartyHasItem("SW1H40")      // Blade of Roses
-        PartyHasItem("AX1H12")        // Stonefire +3
-        PartyHasItem("AX1H09")         // Rifthome Axe +3
-        PartyHasItem("HALB04")   // Dragon’s Bane +3
-        PartyHasItem("HALB09")     // Wave Halberd +4
-        PartyHasItem("SW1H33")              // Ras +2
-        PartyHasItem("DAGG13")      // Pixie Prick +3
-        PartyHasItem("SW1H33")        // Cutthroat +4
-        PartyHasItem("SW1H68")   // Spectral Brand +4
-        PartyHasItem("SW1H35")          // Adjatha the Drinker +2
-        PartyHasItem("SW2H16")      // Sword of Chaos +2
-        PartyHasItem("SW1H34")          // Albruin +1
-        PartyHasItem("SW1H53")      // Sword of Flame +1/+3
-        PartyHasItem("SW1H31")          // Daystar +2
-        PartyHasItem("SW1H10")      // The Shadow's Blade +3
-        PartyHasItem("SW1H30")             // Belm +2
-        PartyHasItem("MISC75")     // Dagger of Venom +2
-        PartyHasItem("SW1H38")     // Jhor the Bleeder +2
-		~ THEN REPLY ~I’d like to surrender another weapon.~ EXTERN AC#PPDR1 trade_lesser_menu
+		IF ~~ THEN REPLY ~I’d like to surrender a legendary magical weapon.~ EXTERN AC#PPDR1 trade_legend_menu
+		IF ~~ THEN REPLY ~I’d like to surrender a magical weapon.~ EXTERN AC#PPDR1 trade_lesser_menu
 		IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 no_trade_bye
 		IF ~~ THEN REPLY ~Not now.~ EXTERN AC#PPDR1 no_trade_bye
 		IF ~~ THEN REPLY ~And what do I gain from this?~ EXTERN AC#PPDR1 trade_gain
@@ -246,31 +219,39 @@ END
 // =====================================================
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_legend_menu
-~These are blades that stirred armies and sundered vows. Which burden will you lay down?~
+~Many legendary blades have stirred armies and sundered vows. Which of these weapons will you lay down?~
 END
+	//Equalizer
   IF ~PartyHasItem("SW1H54") Global("AC#TradeEqualizer","GLOBAL",0)~
   THEN REPLY ~The Equalizer balanced nothing but corpses. Let the water end its argument.~ EXTERN AC#PPDR1 trade_legend_equalizer
-
+  
+	//Carsomyr
   IF ~PartyHasItem("SW2H10") Global("AC#TradeCarsomyr","GLOBAL",0)~
   THEN REPLY ~Carsomyr’s zeal cuts too deep. I surrender it to stillness.~ EXTERN AC#PPDR1 trade_legend_carsomyr
-
+  
+	//Flail of Ages
   IF ~PartyHasItem("BLUN14") Global("AC#TradeFoA","GLOBAL",0)~
   THEN REPLY ~The Flail of Ages bound three tempests to war; unbind it here.~ EXTERN AC#PPDR1 trade_legend_foa
 
+	//Crom Faeyr
   IF ~PartyHasItem("HAMM09") Global("AC#TradeCrom","GLOBAL",0)~
   THEN REPLY ~Crom Faeyr shook mountains; let it trouble roots and moss no more.~ EXTERN AC#PPDR1 trade_legend_crom
 
+	//Soul Reaver
   IF ~PartyHasItem("SW2H08") Global("AC#TradeSoulReaver","GLOBAL",0)~
   THEN REPLY ~Soul Reaver drinks hope; I give it to waters that heal.~ EXTERN AC#PPDR1 trade_legend_soulreaver
 
+	//Blackrazor
   IF ~PartyHasItem("MISCBC") Global("AC#TradeBlackrazor","GLOBAL",0)~
   THEN REPLY ~Blackrazor whispers of hunger. May the pool teach it silence.~ EXTERN AC#PPDR1 trade_legend_blackrazor
 
-  IF ~PartyHasItem("SW1H51") Global("AC#TradeCelFury","GLOBAL",0)~
-  THEN REPLY ~Celestial Fury’s thunder belongs to the sky, not to wandering hands.~ EXTERN AC#PPDR1 trade_legend_celestialfury
-
+	//Lilarcor
   IF ~PartyHasItem("SW2H14") Global("AC#TradeLilarcor","GLOBAL",0)~
   THEN REPLY ~I can’t stand Lilarcor's chatter anymore. Take it. If anyone can hush it, it’s you.~ EXTERN AC#PPDR1 trade_legend_lilarcor
+  
+  //Celestial Fury
+  IF ~PartyHasItem("SW1H51") Global("AC#TradeCelFury","GLOBAL",0)~
+  THEN REPLY ~Celestial Fury’s thunder belongs to the sky, not to wandering hands.~ EXTERN AC#PPDR1 trade_legend_celestialfury
 
 // Warblade +4 (SW2H09)
 IF ~PartyHasItem("SW2H09") Global("AC#TradeWarblade","GLOBAL",0)~
@@ -280,71 +261,17 @@ THEN REPLY ~I offer the Warblade—its edge has tasted enough blood.~ EXTERN AC#
 IF ~PartyHasItem("SW2H15") Global("AC#TradeSilverSword","GLOBAL",0)~
 THEN REPLY ~Take the Silver Sword—may it claim no more minds or lives.~ EXTERN AC#PPDR1 trade_legend_silversword
 
-
 // Shortbow of Gesen (BOW19)
 IF ~PartyHasItem("BOW19") Global("AC#TradeGesen","GLOBAL",0)~
 THEN REPLY ~The Shortbow of Gesen—let its lightning sleep in peace.~ EXTERN AC#PPDR1 trade_legend_gesen
-
-// Heartseeker +3 (BOW10)
-IF ~PartyHasItem("BOW10") Global("AC#TradeHeartseeker","GLOBAL",0)~
-THEN REPLY ~I part with Heartseeker—no more hearts shall it find.~ EXTERN AC#PPDR1 trade_legend_heartseeker
-
-
-// Elven Court Bow (BOW12)
-IF ~PartyHasItem("BOW12") Global("AC#TradeCourtBow","GLOBAL",0)~
-THEN REPLY ~The Elven Court Bow belongs to memory, not to murder. Take it.~ EXTERN AC#PPDR1 trade_legend_courtbow
-
-// Impaler +3 (SPER08)
-IF ~PartyHasItem("SPER08") Global("AC#TradeImpaler","GLOBAL",0)~
-THEN REPLY ~The Impaler has ended enough lives. Keep it where it can harm none.~ EXTERN AC#PPDR1 trade_legend_impaler
-
-
-// Spear of Withering (SPER10)
-IF ~PartyHasItem("SPER10") Global("AC#TradeWithering","GLOBAL",0)~
-THEN REPLY ~I surrender the Spear of Withering—no more decay for the living.~ EXTERN AC#PPDR1 trade_legend_withering
-
-// Frostreaver +3 (AX1H13)
-IF ~PartyHasItem("AX1H13") Global("AC#TradeFrostreaver","GLOBAL",0)~
-THEN REPLY ~Take Frostreaver—its cold bite ends here.~ EXTERN AC#PPDR1 trade_legend_frostreaver
-
 
 // Icingdeath +3 (SW1H15) — Drizzt’s blade
 IF ~PartyHasItem("SW1H15") Global("AC#TradeIcingdeath","GLOBAL",0)~
 THEN REPLY ~Even Icingdeath’s chill should rest now.~ EXTERN AC#PPDR1 trade_legend_icingdeath
 
-// Twinkle (SW116) — Drizzt’s blade
-IF ~PartyHasItem("SW116") Global("AC#TradeTwinkle","GLOBAL",0)~
+// Twinkle (SW1H16) — Drizzt’s blade
+IF ~PartyHasItem("SW1H16") Global("AC#TradeTwinkle","GLOBAL",0)~
 THEN REPLY ~Twinkle’s light can fade in peace here.~ EXTERN AC#PPDR1 trade_legend_twinkle
-
-// Skullcrusher +3 (BLUN18)
-IF ~PartyHasItem("BLUN18") Global("AC#TradeSkullcrusher","GLOBAL",0)~
-THEN REPLY ~The Skullcrusher belongs where skulls are safe. Take it.~ EXTERN AC#PPDR1 trade_legend_skullcrusher
-
-// Hammer of Thunderbolts +3 (HAMM07)
-IF ~PartyHasItem("HAMM07") Global("AC#TradeThunderbolts","GLOBAL",0)~
-THEN REPLY ~The Hammer of Thunderbolts should thunder no more.~ EXTERN AC#PPDR1 trade_legend_thunderbolts
-
-// Dwarven Thrower +3 (HAMM06)
-IF ~PartyHasItem("HAMM06") Global("AC#TradeDwarvenThrower","GLOBAL",0)~
-THEN REPLY ~Let the Dwarven Thrower find stillness here.~ EXTERN AC#PPDR1 trade_legend_dwarventhrower
-
-// Boneblade +4 (DAGG14)
-IF ~PartyHasItem("DAGG14") Global("AC#TradeBoneblade","GLOBAL",0)~
-THEN REPLY ~The Boneblade has feasted on enough death. Keep it safe.~ EXTERN AC#PPDR1 trade_legend_boneblade
-
-
-// Blackblood +3 (BLUN22)
-IF ~PartyHasItem("BLUN22") Global("AC#TradeBlackblood","GLOBAL",0)~
-THEN REPLY ~Take Blackblood—may it never taste life again.~ EXTERN AC#PPDR1 trade_legend_blackblood
-
-// Blade of Searing +3 (SW1H39)
-IF ~PartyHasItem("SW1H39") Global("AC#TradeSearing","GLOBAL",0)~
-THEN REPLY ~The Blade of Searing shall burn no more flesh.~ EXTERN AC#PPDR1 trade_legend_searing
-
-// Azuredge +3 (AX1H10)
-IF ~PartyHasItem("AX1H10") Global("AC#TradeAzuredge","GLOBAL",0)~
-THEN REPLY ~Azuredge can rest; its crusade is done.~ EXTERN AC#PPDR1 trade_legend_azuredge
-
 
 // Staff of the Magi (STAF11)
 IF ~PartyHasItem("STAF11") Global("AC#TradeSotM","GLOBAL",0)~
@@ -354,50 +281,13 @@ THEN REPLY ~Even the Staff of the Magi can be laid to rest.~ EXTERN AC#PPDR1 tra
 IF ~PartyHasItem("AC#WSW50") Global("AC#TradeDoomedLoser","GLOBAL",0)~
 THEN REPLY ~This blade calls itself the Doomed Loser. Let it vanish into still waters instead.~ EXTERN AC#PPDR1 trade_legend_doomedloser
 
-// False Pride +3 (AC#W75SW)
-IF ~PartyHasItem("AC#W75SW") Global("AC#TradeFalsePride","GLOBAL",0)~
-THEN REPLY ~I surrender False Pride—may humility drown its conceit.~ EXTERN AC#PPDR1 trade_legend_falsepride
-
-// Skull Mace (AC#WSKCL)
-IF ~PartyHasItem("AC#WSKCL") Global("AC#TradeSkullMace","GLOBAL",0)~
-THEN REPLY ~Take this Skull Mace—its hunger for strength ends here.~ EXTERN AC#PPDR1 trade_legend_skullmace
-
-// Flesh and Boils +4 (AC#WFLBO)
-IF ~PartyHasItem("AC#WFLBO") Global("AC#TradeFleshBoils","GLOBAL",0)~
-THEN REPLY ~Here—‘Flesh and Boils’. It belongs nowhere among the living.~ EXTERN AC#PPDR1 trade_legend_fleshboils
-
-// Meatshaper +3 (AC#WMSHP)
-IF ~PartyHasItem("AC#WMSHP") Global("AC#TradeMeatshaper","GLOBAL",0)~
-THEN REPLY ~The Meatshaper warps flesh with every blow. End it here.~ EXTERN AC#PPDR1 trade_legend_meatshaper
-
-// Heads +3 (AC#W901)
-IF ~PartyHasItem("AC#W901") Global("AC#TradeHeads","GLOBAL",0)~
-THEN REPLY ~‘Heads’—a coin turned killer. I give it to the pool.~ EXTERN AC#PPDR1 trade_legend_heads
-
-// Tails +3 (AC#W902)
-IF ~PartyHasItem("AC#W902") Global("AC#TradeTails","GLOBAL",0)~
-THEN REPLY ~‘Tails’—let the other half of this blade rest as well.~ EXTERN AC#PPDR1 trade_legend_tails
-
-// Venom Slicer (AC#W90SC)
-IF ~PartyHasItem("AC#W90SC") Global("AC#TradeVenomSlicer","GLOBAL",0)~
-THEN REPLY ~The Venom Slicer carries the Abyss in its bite. Take it.~ EXTERN AC#PPDR1 trade_legend_venomslicer
-
-// Bloodblade (AC#W90DG)
-IF ~PartyHasItem("AC#W90DG") Global("AC#TradeBloodblade","GLOBAL",0)~
-THEN REPLY ~This Bloodblade drips with the Lower Planes. Let it bleed out here.~ EXTERN AC#PPDR1 trade_legend_bloodblade
-
-// Rust Spreader +3 (AC#WRUSP)
-IF ~PartyHasItem("AC#WRUSP") Global("AC#TradeRustSpreader","GLOBAL",0)~
-THEN REPLY ~The Rust Spreader corrupts all it touches—end its creeping rot.~ EXTERN AC#PPDR1 trade_legend_rustspreader
-
-// Heart-Shaped-Razor +3 (AC#WHSRZ)
-IF ~PartyHasItem("AC#WHSRZ") Global("AC#TradeHeartRazor","GLOBAL",0)~
-THEN REPLY ~This heart-shaped razor was made for butchery, not love—take it.~ EXTERN AC#PPDR1 trade_legend_heartrazor
-
 // Flayer Slayer
 IF ~PartyHasItem("AC#MGFL") Global("AC#TradeFlayerSlayer","GLOBAL",0)~
   THEN REPLY ~The Flayer Slayer has cleaved through horrors best left forgotten. Let Eldath’s waters wash its memory away.~ EXTERN AC#PPDR1 trade_legend_flayerslayer
+  
+IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 trade_root  
 IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
+IF ~~ THEN REPLY ~I changed my mind and will leave. Farewell.~ EXTERN AC#PPDR1 no_trade_bye 
 
 // ----- Legendary turn-ins (apply AC#PPH2 + AC#PPGR) -----
 
@@ -411,103 +301,13 @@ DO ~TakePartyItem("AC#MGFL")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
 ~ EXIT
+
 //Godcall weapons
 
 CHAIN AC#PPDR1 trade_legend_doomedloser
 ~By Eldath… a sword that flees after failure. What a cruel jest of the Abyss. Let it trouble no hands again.~
 DO ~TakePartyItem("AC#WSW50")
    SetGlobal("AC#TradeDoomedLoser","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_falsepride
-~Pride cuts deeper than steel. The pool will teach this blade to be still.~
-DO ~TakePartyItem("AC#W75SW")
-   SetGlobal("AC#TradeFalsePride","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_skullmace
-~A fallen paladin’s skull profaned… what horrors mortals make. Let mercy close its teeth forever.~
-DO ~TakePartyItem("AC#WSKCL")
-   SetGlobal("AC#TradeSkullMace","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_fleshboils
-~A club of meat and acid… the Abyss mocks the body itself. Let the waters unmake this blight.~
-DO ~TakePartyItem("AC#WFLBO")
-   SetGlobal("AC#TradeFleshBoils","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_meatshaper
-~Sinew threaded with cruelty. Peace will not abide such stitching.~
-DO ~TakePartyItem("AC#WMSHP")
-   SetGlobal("AC#TradeMeatshaper","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_heads
-~Wealth twisted into death… may the water cool its greed.~
-DO ~TakePartyItem("AC#W901")
-   SetGlobal("AC#TradeHeads","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_tails
-~Two halves of one greed. Both will sink, and none shall drown by them again.~
-DO ~TakePartyItem("AC#W902")
-   SetGlobal("AC#TradeTails","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_venomslicer
-~Tharzax’s poison has no voice in this grove. The waters will silence its sting.~
-DO ~TakePartyItem("AC#W90SC")
-   SetGlobal("AC#TradeVenomSlicer","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_bloodblade
-~Sap that keeps wounds from closing… abominations upon healing. Peace will close what this opened.~
-DO ~TakePartyItem("AC#W90DG")
-   SetGlobal("AC#TradeBloodblade","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_rustspreader
-~A blade that gnaws even its wielder… such misery belongs to the depths.~
-DO ~TakePartyItem("AC#WRUSP")
-   SetGlobal("AC#TradeRustSpreader","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_heartrazor
-~‘You cannot crush the heart that’s already missing’… such cruelty shall not echo here.~
-DO ~TakePartyItem("AC#WHSRZ")
-   SetGlobal("AC#TradeHeartRazor","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
@@ -535,59 +335,6 @@ DO ~TakePartyItem("BOW19")
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
-CHAIN AC#PPDR1 trade_legend_heartseeker
-~Let arrows stray from sorrow; may this bow learn gentleness at last.~
-DO ~TakePartyItem("BOW10")
-   SetGlobal("AC#TradeHeartseeker","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-CHAIN AC#PPDR1 trade_legend_courtbow
-~An heirloom of grace turned grim—let the grove return it to grace.~
-DO ~TakePartyItem("BOW12")
-   SetGlobal("AC#TradeCourtBow","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_impaler
-~A point made too often dulls the world. The waters will blunt it kindly.~
-DO ~TakePartyItem("SPER08")
-   SetGlobal("AC#TradeImpaler","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_withering
-~Let blight unlearn its path; the pool remembers only growth.~
-DO ~TakePartyItem("SPER10")
-   SetGlobal("AC#TradeWithering","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_frostreaver
-~Winter’s edge has no place in a summer grove.~
-DO ~TakePartyItem("AX1H13")
-   SetGlobal("AC#TradeFrostreaver","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
 CHAIN AC#PPDR1 trade_legend_icingdeath
 ~A famed frost laid to thaw; may peace melt its legend to quiet.~
 DO ~TakePartyItem("SW1H15")
@@ -598,88 +345,10 @@ DO ~TakePartyItem("SW1H15")
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
-
 CHAIN AC#PPDR1 trade_legend_twinkle
 ~Brightness is not always kindness; let gentler stars watch over it.~
-DO ~TakePartyItem("SW116")
+DO ~TakePartyItem("SW1H16")
    SetGlobal("AC#TradeTwinkle","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_skullcrusher
-~Let bone be shielded by mercy, not broken by rage.~
-DO ~TakePartyItem("BLUN18")
-   SetGlobal("AC#TradeSkullcrusher","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_thunderbolts
-~Boom becomes hush; may the sky forgive what the forge demanded.~
-DO ~TakePartyItem("HAMM07")
-   SetGlobal("AC#TradeThunderbolts","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_dwarventhrower
-~A faithful tool of war can be faithful to peace.~
-DO ~TakePartyItem("HAMM06")
-   SetGlobal("AC#TradeDwarvenThrower","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_boneblade
-~Let marrow remember life, not cutting.~
-DO ~TakePartyItem("DAGG14")
-   SetGlobal("AC#TradeBoneblade","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_blackblood
-~Let this bitter club be sweetened by stillness.~
-DO ~TakePartyItem("BLUN22")
-   SetGlobal("AC#TradeBlackblood","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_searing
-~Fire forgets itself in water; so too shall this blade.~
-DO ~TakePartyItem("SW1H39")
-   SetGlobal("AC#TradeSearing","GLOBAL",1)
-   ApplySpellRES("AC#PPH2",Player1)
-   ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
-   SetGlobal("EldathBless","ACPP06",1)
-~ EXIT
-
-
-CHAIN AC#PPDR1 trade_legend_azuredge
-~Even righteous edges can cut too deep. The grove will keep it gentle.~
-DO ~TakePartyItem("AX1H10")
-   SetGlobal("AC#TradeAzuredge","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
@@ -795,15 +464,64 @@ END
   IF ~~ THEN REPLY ~I have another legendary blade.~ EXTERN AC#PPDR1 trade_legend_menu
   IF ~~ THEN REPLY ~Perhaps we can start over.~ EXTERN AC#PPDR1 trade_root
   IF ~~ THEN REPLY ~Not now.~ EXTERN AC#PPDR1 no_trade_bye
-
+ 
 
 // =====================================================
 // LESSER / OTHER BRANCH
 // =====================================================
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_lesser_menu
-~Quarrels don’t need legends to cut deep. Which other burden will you surrender?~
+~Quarrels don’t need legends to cut deep. Which magical weapons will you surrender?~
 END
+
+// Skullcrusher +3 (BLUN18)
+IF ~PartyHasItem("BLUN18") Global("AC#TradeSkullcrusher","GLOBAL",0)~
+THEN REPLY ~The Skullcrusher belongs where skulls are safe. Take it.~ EXTERN AC#PPDR1 trade_legend_skullcrusher
+
+// Hammer of Thunderbolts +3 (HAMM07)
+IF ~PartyHasItem("HAMM07") Global("AC#TradeThunderbolts","GLOBAL",0)~
+THEN REPLY ~The Hammer of Thunderbolts should thunder no more.~ EXTERN AC#PPDR1 trade_legend_thunderbolts
+
+// Dwarven Thrower +3 (HAMM06)
+IF ~PartyHasItem("HAMM06") Global("AC#TradeDwarvenThrower","GLOBAL",0)~
+THEN REPLY ~Let the Dwarven Thrower find stillness here.~ EXTERN AC#PPDR1 trade_legend_dwarventhrower
+
+// Boneblade +4 (DAGG14)
+IF ~PartyHasItem("DAGG14") Global("AC#TradeBoneblade","GLOBAL",0)~
+THEN REPLY ~The Boneblade has feasted on enough death. Keep it safe.~ EXTERN AC#PPDR1 trade_legend_boneblade
+
+// Blackblood +3 (BLUN22)
+IF ~PartyHasItem("BLUN22") Global("AC#TradeBlackblood","GLOBAL",0)~
+THEN REPLY ~Take Blackblood—may it never taste life again.~ EXTERN AC#PPDR1 trade_legend_blackblood
+
+// Blade of Searing +3 (SW1H39)
+IF ~PartyHasItem("SW1H39") Global("AC#TradeSearing","GLOBAL",0)~
+THEN REPLY ~The Blade of Searing shall burn no more flesh.~ EXTERN AC#PPDR1 trade_legend_searing
+
+// Azuredge +3 (AX1H10)
+IF ~PartyHasItem("AX1H10") Global("AC#TradeAzuredge","GLOBAL",0)~
+THEN REPLY ~Azuredge can rest; its crusade is done.~ EXTERN AC#PPDR1 trade_legend_azuredge
+
+// Heartseeker +3 (BOW10)
+IF ~PartyHasItem("BOW10") Global("AC#TradeHeartseeker","GLOBAL",0)~
+THEN REPLY ~I part with Heartseeker—no more hearts shall it find.~ EXTERN AC#PPDR1 trade_legend_heartseeker
+
+// Elven Court Bow (BOW12)
+IF ~PartyHasItem("BOW12") Global("AC#TradeCourtBow","GLOBAL",0)~
+THEN REPLY ~The Elven Court Bow belongs to memory, not to murder. Take it.~ EXTERN AC#PPDR1 trade_legend_courtbow
+
+// Impaler +3 (SPER08)
+IF ~PartyHasItem("SPER08") Global("AC#TradeImpaler","GLOBAL",0)~
+THEN REPLY ~The Impaler has ended enough lives. Keep it where it can harm none.~ EXTERN AC#PPDR1 trade_legend_impaler
+
+// Spear of Withering (SPER10)
+IF ~PartyHasItem("SPER10") Global("AC#TradeWithering","GLOBAL",0)~
+THEN REPLY ~I surrender the Spear of Withering—no more decay for the living.~ EXTERN AC#PPDR1 trade_legend_withering
+
+// Frostreaver +3 (AX1H13)
+IF ~PartyHasItem("AX1H13") Global("AC#TradeFrostreaver","GLOBAL",0)~
+THEN REPLY ~Take Frostreaver—its cold bite ends here.~ EXTERN AC#PPDR1 trade_legend_frostreaver
+
   IF ~PartyHasItem("SW1H40") Global("AC#TradeL_BladeRoses","GLOBAL",0)~
   THEN REPLY ~This Blade of Roses has stained too many proud hearts; I bring it to you now.~ EXTERN AC#PPDR1 trade_lesser_bladeroses
 
@@ -879,6 +597,47 @@ THEN REPLY ~Bard's Love Letter… words unspoken now whispered only by the bowst
 IF ~PartyHasItem("AC#PPHME") Global("AC#TradeUnlikelyHammer","GLOBAL",0)~
 THEN REPLY ~Hammer of Powerful Yet Unlikely Blows… each strike a story, each miss an even better one.~ EXTERN AC#PPDR1 trade_lesser_unlikelyhammer
 
+// Godcall items
+
+// False Pride +3 (AC#W75SW)
+IF ~PartyHasItem("AC#W75SW") Global("AC#TradeFalsePride","GLOBAL",0)~
+THEN REPLY ~I surrender False Pride—may humility drown its conceit.~ EXTERN AC#PPDR1 trade_legend_falsepride
+
+// Skull Mace (AC#WSKCL)
+IF ~PartyHasItem("AC#WSKCL") Global("AC#TradeSkullMace","GLOBAL",0)~
+THEN REPLY ~Take this Skull Mace—its hunger for strength ends here.~ EXTERN AC#PPDR1 trade_legend_skullmace
+
+// Flesh and Boils +4 (AC#WFLBO)
+IF ~PartyHasItem("AC#WFLBO") Global("AC#TradeFleshBoils","GLOBAL",0)~
+THEN REPLY ~Here—‘Flesh and Boils’. It belongs nowhere among the living.~ EXTERN AC#PPDR1 trade_legend_fleshboils
+
+// Meatshaper +3 (AC#WMSHP)
+IF ~PartyHasItem("AC#WMSHP") Global("AC#TradeMeatshaper","GLOBAL",0)~
+THEN REPLY ~The Meatshaper warps flesh with every blow. End it here.~ EXTERN AC#PPDR1 trade_legend_meatshaper
+
+// Heads +3 (AC#W901)
+IF ~PartyHasItem("AC#W901") Global("AC#TradeHeads","GLOBAL",0)~
+THEN REPLY ~‘Heads’—a coin turned killer. I give it to the pool.~ EXTERN AC#PPDR1 trade_legend_heads
+
+// Tails +3 (AC#W902)
+IF ~PartyHasItem("AC#W902") Global("AC#TradeTails","GLOBAL",0)~
+THEN REPLY ~‘Tails’—let the other half of this blade rest as well.~ EXTERN AC#PPDR1 trade_legend_tails
+
+// Venom Slicer (AC#W90SC)
+IF ~PartyHasItem("AC#W90SC") Global("AC#TradeVenomSlicer","GLOBAL",0)~
+THEN REPLY ~The Venom Slicer carries the Abyss in its bite. Take it.~ EXTERN AC#PPDR1 trade_legend_venomslicer
+
+// Bloodblade (AC#W90DG)
+IF ~PartyHasItem("AC#W90DG") Global("AC#TradeBloodblade","GLOBAL",0)~
+THEN REPLY ~This Bloodblade drips with the Lower Planes. Let it bleed out here.~ EXTERN AC#PPDR1 trade_legend_bloodblade
+
+// Rust Spreader +3 (AC#WRUSP)
+IF ~PartyHasItem("AC#WRUSP") Global("AC#TradeRustSpreader","GLOBAL",0)~
+THEN REPLY ~The Rust Spreader corrupts all it touches—end its creeping rot.~ EXTERN AC#PPDR1 trade_legend_rustspreader
+
+// Heart-Shaped-Razor +3 (AC#WHSRZ)
+IF ~PartyHasItem("AC#WHSRZ") Global("AC#TradeHeartRazor","GLOBAL",0)~
+THEN REPLY ~This heart-shaped razor was made for butchery, not love—take it.~ EXTERN AC#PPDR1 trade_legend_heartrazor
 // Mad God items
 IF ~PartyHasItem("AC#MGSP1") Global("AC#TradeBlackbite","GLOBAL",0)~
 THEN REPLY ~Blackbite has bitten enough in its time. Let the waters wash away its venom.~ EXTERN AC#PPDR1 trade_lesser_blackbite
@@ -901,10 +660,212 @@ THEN REPLY ~The Prismatic Scimitar has shone enough colors in battle. Time to le
 IF ~PartyHasItem("AC#MGHMA") Global("AC#TradeAirHammer","GLOBAL",0)~
 THEN REPLY ~The Air Hammer has cleared enough storms. Let the winds settle here.~ EXTERN AC#PPDR1 trade_lesser_airhammer
 
+IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 trade_root  
 IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
+IF ~~ THEN REPLY ~I changed my mind and will leave. Farewell.~ EXTERN AC#PPDR1 no_trade_bye 
 
 
 // ----- Lesser turn-ins (apply AC#PPH1) -----
+
+CHAIN AC#PPDR1 trade_legend_skullcrusher
+~Let bone be shielded by mercy, not broken by rage.~
+DO ~TakePartyItem("BLUN18")
+   SetGlobal("AC#TradeSkullcrusher","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_thunderbolts
+~Boom becomes hush; may the sky forgive what the forge demanded.~
+DO ~TakePartyItem("HAMM07")
+   SetGlobal("AC#TradeThunderbolts","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_dwarventhrower
+~A faithful tool of war can be faithful to peace.~
+DO ~TakePartyItem("HAMM06")
+   SetGlobal("AC#TradeDwarvenThrower","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_boneblade
+~Let marrow remember life, not cutting.~
+DO ~TakePartyItem("DAGG14")
+   SetGlobal("AC#TradeBoneblade","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_blackblood
+~Let this bitter club be sweetened by stillness.~
+DO ~TakePartyItem("BLUN22")
+   SetGlobal("AC#TradeBlackblood","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_searing
+~Fire forgets itself in water; so too shall this blade.~
+DO ~TakePartyItem("SW1H39")
+   SetGlobal("AC#TradeSearing","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_azuredge
+~Even righteous edges can cut too deep. The grove will keep it gentle.~
+DO ~TakePartyItem("AX1H10")
+   SetGlobal("AC#TradeAzuredge","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_falsepride
+~Pride cuts deeper than steel. The pool will teach this blade to be still.~
+DO ~TakePartyItem("AC#W75SW")
+   SetGlobal("AC#TradeFalsePride","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)  
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_skullmace
+~A fallen paladin’s skull profaned… what horrors mortals make. Let mercy close its teeth forever.~
+DO ~TakePartyItem("AC#WSKCL")
+   SetGlobal("AC#TradeSkullMace","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)   
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_fleshboils
+~A club of meat and acid… the Abyss mocks the body itself. Let the waters unmake this blight.~
+DO ~TakePartyItem("AC#WFLBO")
+   SetGlobal("AC#TradeFleshBoils","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+  
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_meatshaper
+~Sinew threaded with cruelty. Peace will not abide such stitching.~
+DO ~TakePartyItem("AC#WMSHP")
+   SetGlobal("AC#TradeMeatshaper","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)   
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_heads
+~Wealth twisted into death… may the water cool its greed.~
+DO ~TakePartyItem("AC#W901")
+   SetGlobal("AC#TradeHeads","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1) 
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_tails
+~Two halves of one greed. Both will sink, and none shall drown by them again.~
+DO ~TakePartyItem("AC#W902")
+   SetGlobal("AC#TradeTails","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)  
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_venomslicer
+~Tharzax’s poison has no voice in this grove. The waters will silence its sting.~
+DO ~TakePartyItem("AC#W90SC")
+   SetGlobal("AC#TradeVenomSlicer","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)   
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_bloodblade
+~Sap that keeps wounds from closing… abominations upon healing. Peace will close what this opened.~
+DO ~TakePartyItem("AC#W90DG")
+   SetGlobal("AC#TradeBloodblade","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)   
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_rustspreader
+~A blade that gnaws even its wielder… such misery belongs to the depths.~
+DO ~TakePartyItem("AC#WRUSP")
+   SetGlobal("AC#TradeRustSpreader","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)   
+   AddexperienceParty(500)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_heartrazor
+~‘You cannot crush the heart that’s already missing’… such cruelty shall not echo here.~
+DO ~TakePartyItem("AC#WHSRZ")
+   SetGlobal("AC#TradeHeartRazor","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)   
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_heartseeker
+~Let arrows stray from sorrow; may this bow learn gentleness at last.~
+DO ~TakePartyItem("BOW10")
+   SetGlobal("AC#TradeHeartseeker","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_courtbow
+~An heirloom of grace turned grim—let the grove return it to grace.~
+DO ~TakePartyItem("BOW12")
+   SetGlobal("AC#TradeCourtBow","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_impaler
+~A point made too often dulls the world. The waters will blunt it kindly.~
+DO ~TakePartyItem("SPER08")
+   SetGlobal("AC#TradeImpaler","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_withering
+~Let blight unlearn its path; the pool remembers only growth.~
+DO ~TakePartyItem("SPER10")
+   SetGlobal("AC#TradeWithering","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_frostreaver
+~Winter’s edge has no place in a summer grove.~
+DO ~TakePartyItem("AX1H13")
+   SetGlobal("AC#TradeFrostreaver","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_blackbite
 ~A dragon’s fang should rest in still waters, not in fresh blood.~
