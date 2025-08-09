@@ -4,7 +4,8 @@ IF
     See([PC])
 THEN
     RESPONSE #100
-    SetGlobal("AC#PP_TradeWeapons","GLOBAL",1)
-    StartDialogueNoSet([PC])
+        Wait(1)
+        SetGlobal("AC#PP_TradeWeapons","GLOBAL",1)
+        StartDialogueNoSet([PC])
 END
 

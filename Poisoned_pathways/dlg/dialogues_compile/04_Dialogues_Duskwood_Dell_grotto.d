@@ -28,6 +28,7 @@ IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#
 
 CHAIN IF ~~ THEN AC#PPDR1 bye_trade_weapons
 ~As you wish. Farewell.~
+DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_02
@@ -81,6 +82,13 @@ IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPDR1 who_are_you
 IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~I have weapons I’d like to lay to rest here.~ EXTERN AC#PPDR1 trade_root
 IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY ~Your High Priest has sent me. I am to collect a carafe of Eldath’s sacred singing water.~ EXTERN AC#PPDR1 need_singing_water
+
+	CHAIN IF ~~ THEN AC#PPDR1 need_singing_water
+	~The singing water? Of course. Here it is — handle it with care, for it is as precious as the peace it brings.~
+	DO ~SetGlobal("AC#PP_HolyWater","GLOBAL",10)
+	GiveItemCreate("AC#PPWA",Player1,1,0,0)~ EXIT
+
 
 	CHAIN IF ~~ THEN AC#PPDR1 who_are_you
 	~I am a dryad, bound to this grove. Long ago, Eldath’s touch calmed my frightened heart, and since then I serve as her gentle warden here. My spirit is tied to its trees, its waters, and the quiet breath of Eldath herself.~ 
@@ -342,10 +350,170 @@ THEN REPLY ~Azuredge can rest; its crusade is done.~ EXTERN AC#PPDR1 trade_legen
 IF ~PartyHasItem("STAF11") Global("AC#TradeSotM","GLOBAL",0)~
 THEN REPLY ~Even the Staff of the Magi can be laid to rest.~ EXTERN AC#PPDR1 trade_legend_sotm
 
+// Doomed Loser +5 (AC#WSW50)
+IF ~PartyHasItem("AC#WSW50") Global("AC#TradeDoomedLoser","GLOBAL",0)~
+THEN REPLY ~This blade calls itself the Doomed Loser. Let it vanish into still waters instead.~ EXTERN AC#PPDR1 trade_legend_doomedloser
+
+// False Pride +3 (AC#W75SW)
+IF ~PartyHasItem("AC#W75SW") Global("AC#TradeFalsePride","GLOBAL",0)~
+THEN REPLY ~I surrender False Pride—may humility drown its conceit.~ EXTERN AC#PPDR1 trade_legend_falsepride
+
+// Skull Mace (AC#WSKCL)
+IF ~PartyHasItem("AC#WSKCL") Global("AC#TradeSkullMace","GLOBAL",0)~
+THEN REPLY ~Take this Skull Mace—its hunger for strength ends here.~ EXTERN AC#PPDR1 trade_legend_skullmace
+
+// Flesh and Boils +4 (AC#WFLBO)
+IF ~PartyHasItem("AC#WFLBO") Global("AC#TradeFleshBoils","GLOBAL",0)~
+THEN REPLY ~Here—‘Flesh and Boils’. It belongs nowhere among the living.~ EXTERN AC#PPDR1 trade_legend_fleshboils
+
+// Meatshaper +3 (AC#WMSHP)
+IF ~PartyHasItem("AC#WMSHP") Global("AC#TradeMeatshaper","GLOBAL",0)~
+THEN REPLY ~The Meatshaper warps flesh with every blow. End it here.~ EXTERN AC#PPDR1 trade_legend_meatshaper
+
+// Heads +3 (AC#W901)
+IF ~PartyHasItem("AC#W901") Global("AC#TradeHeads","GLOBAL",0)~
+THEN REPLY ~‘Heads’—a coin turned killer. I give it to the pool.~ EXTERN AC#PPDR1 trade_legend_heads
+
+// Tails +3 (AC#W902)
+IF ~PartyHasItem("AC#W902") Global("AC#TradeTails","GLOBAL",0)~
+THEN REPLY ~‘Tails’—let the other half of this blade rest as well.~ EXTERN AC#PPDR1 trade_legend_tails
+
+// Venom Slicer (AC#W90SC)
+IF ~PartyHasItem("AC#W90SC") Global("AC#TradeVenomSlicer","GLOBAL",0)~
+THEN REPLY ~The Venom Slicer carries the Abyss in its bite. Take it.~ EXTERN AC#PPDR1 trade_legend_venomslicer
+
+// Bloodblade (AC#W90DG)
+IF ~PartyHasItem("AC#W90DG") Global("AC#TradeBloodblade","GLOBAL",0)~
+THEN REPLY ~This Bloodblade drips with the Lower Planes. Let it bleed out here.~ EXTERN AC#PPDR1 trade_legend_bloodblade
+
+// Rust Spreader +3 (AC#WRUSP)
+IF ~PartyHasItem("AC#WRUSP") Global("AC#TradeRustSpreader","GLOBAL",0)~
+THEN REPLY ~The Rust Spreader corrupts all it touches—end its creeping rot.~ EXTERN AC#PPDR1 trade_legend_rustspreader
+
+// Heart-Shaped-Razor +3 (AC#WHSRZ)
+IF ~PartyHasItem("AC#WHSRZ") Global("AC#TradeHeartRazor","GLOBAL",0)~
+THEN REPLY ~This heart-shaped razor was made for butchery, not love—take it.~ EXTERN AC#PPDR1 trade_legend_heartrazor
+
+// Flayer Slayer
+IF ~PartyHasItem("AC#MGFL") Global("AC#TradeFlayerSlayer","GLOBAL",0)~
+  THEN REPLY ~The Flayer Slayer has cleaved through horrors best left forgotten. Let Eldath’s waters wash its memory away.~ EXTERN AC#PPDR1 trade_legend_flayerslayer
 IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
 
 // ----- Legendary turn-ins (apply AC#PPH2 + AC#PPGR) -----
 
+// MadGod items
+
+CHAIN AC#PPDR1 trade_legend_flayerslayer
+~Some battles leave wounds that no healer can close—save time and stillness.~
+DO ~TakePartyItem("AC#MGFL")
+   SetGlobal("AC#TradeFlayerSlayer","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+//Godcall weapons
+
+CHAIN AC#PPDR1 trade_legend_doomedloser
+~By Eldath… a sword that flees after failure. What a cruel jest of the Abyss. Let it trouble no hands again.~
+DO ~TakePartyItem("AC#WSW50")
+   SetGlobal("AC#TradeDoomedLoser","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_falsepride
+~Pride cuts deeper than steel. The pool will teach this blade to be still.~
+DO ~TakePartyItem("AC#W75SW")
+   SetGlobal("AC#TradeFalsePride","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_skullmace
+~A fallen paladin’s skull profaned… what horrors mortals make. Let mercy close its teeth forever.~
+DO ~TakePartyItem("AC#WSKCL")
+   SetGlobal("AC#TradeSkullMace","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_fleshboils
+~A club of meat and acid… the Abyss mocks the body itself. Let the waters unmake this blight.~
+DO ~TakePartyItem("AC#WFLBO")
+   SetGlobal("AC#TradeFleshBoils","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_meatshaper
+~Sinew threaded with cruelty. Peace will not abide such stitching.~
+DO ~TakePartyItem("AC#WMSHP")
+   SetGlobal("AC#TradeMeatshaper","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_heads
+~Wealth twisted into death… may the water cool its greed.~
+DO ~TakePartyItem("AC#W901")
+   SetGlobal("AC#TradeHeads","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_tails
+~Two halves of one greed. Both will sink, and none shall drown by them again.~
+DO ~TakePartyItem("AC#W902")
+   SetGlobal("AC#TradeTails","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_venomslicer
+~Tharzax’s poison has no voice in this grove. The waters will silence its sting.~
+DO ~TakePartyItem("AC#W90SC")
+   SetGlobal("AC#TradeVenomSlicer","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_bloodblade
+~Sap that keeps wounds from closing… abominations upon healing. Peace will close what this opened.~
+DO ~TakePartyItem("AC#W90DG")
+   SetGlobal("AC#TradeBloodblade","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_legend_rustspreader
+~A blade that gnaws even its wielder… such misery belongs to the depths.~
+DO ~TakePartyItem("AC#WRUSP")
+   SetGlobal("AC#TradeRustSpreader","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+
+CHAIN AC#PPDR1 trade_legend_heartrazor
+~‘You cannot crush the heart that’s already missing’… such cruelty shall not echo here.~
+DO ~TakePartyItem("AC#WHSRZ")
+   SetGlobal("AC#TradeHeartRazor","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+~ EXIT
+
+// Vanilla items
 CHAIN AC#PPDR1 trade_legend_silversword
 ~A gleam that severed thought and fate; let it fade beneath still waters.~
 DO ~TakePartyItem("SW2H15")
@@ -354,7 +522,7 @@ DO ~TakePartyItem("SW2H15")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_gesen
@@ -365,7 +533,7 @@ DO ~TakePartyItem("BOW19")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_heartseeker
 ~Let arrows stray from sorrow; may this bow learn gentleness at last.~
@@ -375,7 +543,7 @@ DO ~TakePartyItem("BOW10")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_courtbow
 ~An heirloom of grace turned grim—let the grove return it to grace.~
@@ -385,7 +553,7 @@ DO ~TakePartyItem("BOW12")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_impaler
@@ -396,7 +564,7 @@ DO ~TakePartyItem("SPER08")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_withering
@@ -407,7 +575,7 @@ DO ~TakePartyItem("SPER10")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_frostreaver
@@ -418,7 +586,7 @@ DO ~TakePartyItem("AX1H13")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_icingdeath
 ~A famed frost laid to thaw; may peace melt its legend to quiet.~
@@ -428,7 +596,7 @@ DO ~TakePartyItem("SW1H15")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_twinkle
@@ -439,7 +607,7 @@ DO ~TakePartyItem("SW116")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_skullcrusher
@@ -450,7 +618,7 @@ DO ~TakePartyItem("BLUN18")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_thunderbolts
@@ -461,7 +629,7 @@ DO ~TakePartyItem("HAMM07")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_dwarventhrower
@@ -472,7 +640,7 @@ DO ~TakePartyItem("HAMM06")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_boneblade
@@ -483,7 +651,7 @@ DO ~TakePartyItem("DAGG14")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_blackblood
@@ -494,7 +662,7 @@ DO ~TakePartyItem("BLUN22")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_searing
@@ -505,7 +673,7 @@ DO ~TakePartyItem("SW1H39")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 
 CHAIN AC#PPDR1 trade_legend_azuredge
@@ -516,7 +684,7 @@ DO ~TakePartyItem("AX1H10")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_sotm
 ~Great power stirs great tempests; here, it will know still waters.~
@@ -526,7 +694,7 @@ DO ~TakePartyItem("STAF11")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_warblade
 ~Steel that fed on war should sleep, not sing. Let the grove still its hunger.~
@@ -536,7 +704,7 @@ DO ~TakePartyItem("SW2H09")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_equalizer
 ~Endless balance sought through endless strife... let the water end the argument.~
@@ -546,7 +714,7 @@ DO ~TakePartyItem("SW1H54")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_carsomyr
 ~Holy or not, such a sword has ended many lives. Be still now.~
@@ -556,7 +724,7 @@ DO ~TakePartyItem("SW2H10")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_foa
 ~Shards of three tempests belong in one calm pool.~
@@ -566,7 +734,7 @@ DO ~TakePartyItem("BLUN14")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_crom
 ~Strength that breaks mountains can also break the quiet. Lay it down.~
@@ -576,7 +744,7 @@ DO ~TakePartyItem("HAMM09")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_soulreaver
 ~A draught of despair clings to this steel. The moss will drink it away.~
@@ -586,7 +754,7 @@ DO ~TakePartyItem("SW2H08")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_blackrazor
 ~Hush. Your hunger will trouble the grove no longer.~
@@ -596,7 +764,7 @@ DO ~TakePartyItem("MISCBC")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_celestialfury
 ~Thunder belongs to the sky, not to mortal tempers. Sleep now.~
@@ -606,7 +774,7 @@ DO ~TakePartyItem("SW1H51")
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_lilarcor
 ~Even in silence, I hear the chatter. The pool will teach you quiet.~
@@ -618,7 +786,7 @@ DO ~TakePartyItem("SW2H14")
    //DisplayString(Player1,@909)
    AddexperienceParty(1000)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXIT //EXTERN AC#PPDR1 trade_legend_refresh
+~ EXIT 
 
 // Legend refresh: loop if more legendary remain; else back to root
 CHAIN IF ~~ THEN AC#PPDR1 trade_legend_refresh
@@ -690,10 +858,150 @@ END
   IF ~PartyHasItem("SW1H38") Global("AC#TradeL_Jhor","GLOBAL",0)~ 
   THEN REPLY ~I wish to part with Jhor the Bleeder—it has drawn enough blood in its time.~ EXTERN AC#PPDR1 trade_lesser_jhor 
 
-  IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
+// Lesser Weapons - Poisoned Pathways
+// Blade of the Elven Mycologist
+IF ~PartyHasItem("AC#PPSW") Global("AC#TradeMycologistBlade","GLOBAL",0)~
+THEN REPLY ~The Blade of the Elven Mycologist… its edge smells faintly of damp earth. May it return to the soil.~ EXTERN AC#PPDR1 trade_lesser_mycologist_blade
+
+// Scolopendra's Spit +3
+IF ~PartyHasItem("AC#PPSCO") Global("AC#TradeScolopendra","GLOBAL",0)~
+THEN REPLY ~Scolopendra's Spit… venomous, patient, and silent. I will not miss its company.~ EXTERN AC#PPDR1 trade_lesser_scolopendra
+
+// Good Luck, Honeysuckle +3
+IF ~PartyHasItem("AC#PP2HA") Global("AC#TradeHoneysuckle","GLOBAL",0)~
+THEN REPLY ~Good Luck, Honeysuckle… may its fortune bloom for another, far from the clash of blades.~ EXTERN AC#PPDR1 trade_lesser_honeysuckle
+
+// Bard's Love Letter +3
+IF ~PartyHasItem("AC#PPBOW") Global("AC#TradeLoveLetter","GLOBAL",0)~
+THEN REPLY ~Bard's Love Letter… words unspoken now whispered only by the bowstring.~ EXTERN AC#PPDR1 trade_lesser_loveletter
+
+// Hammer of Powerful Yet Unlikely Blows +4
+IF ~PartyHasItem("AC#PPHME") Global("AC#TradeUnlikelyHammer","GLOBAL",0)~
+THEN REPLY ~Hammer of Powerful Yet Unlikely Blows… each strike a story, each miss an even better one.~ EXTERN AC#PPDR1 trade_lesser_unlikelyhammer
+
+// Mad God items
+IF ~PartyHasItem("AC#MGSP1") Global("AC#TradeBlackbite","GLOBAL",0)~
+THEN REPLY ~Blackbite has bitten enough in its time. Let the waters wash away its venom.~ EXTERN AC#PPDR1 trade_lesser_blackbite
+
+IF ~PartyHasItem("AC#MGMS1") Global("AC#TradeBonefang","GLOBAL",0)~
+THEN REPLY ~The Bonefang has crushed enough skulls. I think it’s time it found peace here.~ EXTERN AC#PPDR1 trade_lesser_bonefang
+
+IF ~PartyHasItem("AC#MGAMB") Global("AC#TradeAstralMace","GLOBAL",0)~
+THEN REPLY ~The Astral Mace of Blasting should mark no more endings. Let it rest under Eldath’s gaze.~ EXTERN AC#PPDR1 trade_lesser_astralmace
+
+IF ~PartyHasItem("AC#CLKBL") Global("AC#TradeClockworkBlade","GLOBAL",0)~
+THEN REPLY ~The Clockwork Blade of Venom has ticked its last strike. Let the gears wind down in peace.~ EXTERN AC#PPDR1 trade_lesser_clockworkblade
+
+IF ~PartyHasItem("AC#MGTRH") Global("AC#TradeGrubnuksHand","GLOBAL",0)~
+THEN REPLY ~Grubnuk’s Hand has clutched enough lives. I think it’s time it let go forever.~ EXTERN AC#PPDR1 trade_lesser_grubnuk
+
+IF ~PartyHasItem("AC#MGSCI") Global("AC#TradePrismaticScimitar","GLOBAL",0)~
+THEN REPLY ~The Prismatic Scimitar has shone enough colors in battle. Time to let it fade into quiet waters.~ EXTERN AC#PPDR1 trade_lesser_prismaticscimitar
+
+IF ~PartyHasItem("AC#MGHMA") Global("AC#TradeAirHammer","GLOBAL",0)~
+THEN REPLY ~The Air Hammer has cleared enough storms. Let the winds settle here.~ EXTERN AC#PPDR1 trade_lesser_airhammer
+
+IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
 
 
 // ----- Lesser turn-ins (apply AC#PPH1) -----
+
+CHAIN AC#PPDR1 trade_lesser_blackbite
+~A dragon’s fang should rest in still waters, not in fresh blood.~
+DO ~TakePartyItem("AC#MGSP1")
+   SetGlobal("AC#TradeBlackbite","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_lesser_bonefang
+~Even a giant’s strength can be laid to rest in the waters.~
+DO ~TakePartyItem("AC#MGMS1")
+   SetGlobal("AC#TradeBonefang","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_lesser_astralmace
+~Even the stars fade into stillness in time.~
+DO ~TakePartyItem("AC#MGAMB")
+   SetGlobal("AC#TradeAstralMace","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_lesser_clockworkblade
+~Even time itself can be coaxed into stillness.~
+DO ~TakePartyItem("AC#CLKBL")
+   SetGlobal("AC#TradeClockworkBlade","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_lesser_grubnuk
+~Even a troll’s grasp loosens when offered peace.~
+DO ~TakePartyItem("AC#MGTRH")
+   SetGlobal("AC#TradeGrubnuksHand","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_lesser_prismaticscimitar
+~Even light can rest when the fight is done.~
+DO ~TakePartyItem("AC#MGSCI")
+   SetGlobal("AC#TradePrismaticScimitar","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_lesser_airhammer
+~Even the wind grows weary and seeks calm.~
+DO ~TakePartyItem("AC#MGHMA")
+   SetGlobal("AC#TradeAirHammer","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(500)
+~ EXIT
+
+CHAIN AC#PPDR1 trade_lesser_mycologist_blade
+~Even steel may grow weary of blood. Let the moss claim it now.~
+DO ~TakePartyItem("AC#PPSW")
+   SetGlobal("AC#TradeMycologistBlade","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(750)~
+EXIT
+
+CHAIN AC#PPDR1 trade_lesser_scolopendra
+~Venom without a hand to guide it drips harmless into the earth.~
+DO ~TakePartyItem("AC#PPSCO")
+   SetGlobal("AC#TradeScolopendra","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(750)~
+EXIT
+
+
+CHAIN AC#PPDR1 trade_lesser_honeysuckle
+~Some luck is better sown than swung. Let the grove be its new keeper.~
+DO ~TakePartyItem("AC#PP2HA")
+   SetGlobal("AC#TradeHoneysuckle","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(750)~
+EXIT
+
+CHAIN AC#PPDR1 trade_lesser_loveletter
+~Let the wind carry its verses, not its arrows.~
+DO ~TakePartyItem("AC#PPBOW")
+   SetGlobal("AC#TradeLoveLetter","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(750)~
+EXIT
+
+CHAIN AC#PPDR1 trade_lesser_unlikelyhammer
+~May its next tale be of peace, not shattering.~
+DO ~TakePartyItem("AC#PPHME")
+   SetGlobal("AC#TradeUnlikelyHammer","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   AddexperienceParty(750)~
+EXIT
 
 CHAIN AC#PPDR1 trade_lesser_jhor
 ~Then let its thirst be quenched forever, and its memory sink into still waters.~
@@ -702,7 +1010,7 @@ DO ~TakePartyItem("SW1H38")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_bladeroses
 ~May the brightness of peace outshine any duel this blade once starred in.~
@@ -711,7 +1019,7 @@ DO ~TakePartyItem("SW1H40")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_stonefire
 ~From molten memory to the calm of stone and water.~
@@ -720,7 +1028,7 @@ DO ~TakePartyItem("AX1H12")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_rifthome
 ~Axes remember feuds long after the names are gone.~
@@ -729,7 +1037,7 @@ DO ~TakePartyItem("AX1H09")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_dragonsbreath
 ~Let the flame that once burned dragons fade into silent ash.~
@@ -738,7 +1046,7 @@ DO ~TakePartyItem("HALB04")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_wave
 ~A tide turned to killing is no tide for this grove.~
@@ -747,7 +1055,7 @@ DO ~TakePartyItem("HALB09")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_ras
 ~Let the dead rest. No more summons.~
@@ -756,7 +1064,7 @@ DO ~TakePartyItem("SW1H33")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_pixie
 ~Sleep should be mercy, not ambush.~
@@ -765,7 +1073,7 @@ DO ~TakePartyItem("DAGG13")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_cutthroat
 ~Steel named for murder needs quiet most of all.~
@@ -774,7 +1082,7 @@ DO ~TakePartyItem("SW1H33")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_spectral
 ~Let echoes return to silence.~
@@ -783,7 +1091,7 @@ DO ~TakePartyItem("SW1H68")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_adjatha
 ~Thirst for magic is still thirst. Be satisfied no more.~
@@ -792,7 +1100,7 @@ DO ~TakePartyItem("SW1H35")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_chaos
 ~Chaos feeds on crowds. Here, it starves.~
@@ -801,7 +1109,7 @@ DO ~TakePartyItem("SW2H16")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_albruin
 ~Hunters of the hidden often become what they fear. Rest now.~
@@ -810,7 +1118,7 @@ DO ~TakePartyItem("SW1H34")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_flame
 ~Fire in a hilt is still fire. The pool will cool it.~
@@ -819,7 +1127,7 @@ DO ~TakePartyItem("SW1H53")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_daystar
 ~Light can blind as surely as it guides.~
@@ -828,7 +1136,7 @@ DO ~TakePartyItem("SW1H31")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_ssbackstab
 ~Let betrayal find no purchase here.~
@@ -837,7 +1145,7 @@ DO ~TakePartyItem("SW1H10")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_belm
 ~A quick hand learns patience, in time.~
@@ -846,7 +1154,7 @@ DO ~TakePartyItem("SW1H30")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_dagvenom
 ~Venom loses its sting in still water.~
@@ -855,7 +1163,7 @@ DO ~TakePartyItem("MISC75")
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
    SetGlobal("EldathBless","ACPP06",1)
-~ EXTERN AC#PPDR1 trade_lesser_refresh
+~ EXIT
 
 
 // Lesser refresh: loop if more lesser remain; else back to root

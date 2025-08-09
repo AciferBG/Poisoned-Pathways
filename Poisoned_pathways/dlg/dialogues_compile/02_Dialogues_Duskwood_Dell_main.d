@@ -429,31 +429,6 @@ CHAIN AC#PPEL4 cnt.01.02
 ==AC#PPEL4 ~If we are to prepare the antidote, the flower is essential. Please, continue your search. I shall remain here and wait. May Eldath guide your steps.~
 EXIT
 
-/*
-CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",2)~ THEN AC#PPEL4 cnt.01.00
-~Ah, you're back! I may only assume, my friend, that this is because you're interested in what I have to say and—I suppose that while the main threat is eliminated, our work isn't entirely done.~
-==AC#PPEL4 IF ~Global("AC#PP_ShowFlower","GLOBAL",1)~ THEN ~We discusses the flower and the last time we talked you mentioned it too. And this is what I wished to discuss.~
-==AC#PPEL4 IF ~Global("AC#PP_ShowFlower","GLOBAL",0)~ THEN ~Just before you set off to Myth Unnohyr, I asked you to look for the plant our enemy used to brew the toxin.~
-==AC#PPEL4 ~While no more of the poison should be created by our enemy, some of it is already there, in the world. I want to prepare the antidote and I hope you can help me.~
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",3)~
-==AC#PPEL4 ~To do so,, I'll need more than knoweldge. First of all, we need the flower. Do you have it?~
-END
-IF~PartyHasItem("AC#PPPUB")~THEN REPLY ~Yes. It is here.~ EXTERN AC#PPEL4 cnt.01.01
-IF~!PartyHasItem("AC#PPPUB")~THEN REPLY ~Sorry, but no. I don't.~ EXTERN AC#PPEL4 cnt.01.02
-
-CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",3)~ THEN AC#PPEL4 cnt.01.0B
-~Ah, I'm so glad you're here. Have you found the flower?~
-END
-IF~PartyHasItem("AC#PPPUB")~THEN REPLY ~Yes, I have. It is here.~ EXTERN AC#PPEL4 cnt.01.01
-IF~!PartyHasItem("AC#PPPUB")~THEN REPLY ~Sorry, but no.~ EXTERN AC#PPEL4 cnt.01.02
-IF~~THEN REPLY ~Hm? What? I mean... I'll be right back.~ EXIT
-
-CHAIN AC#PPEL4 cnt.01.02
-~You—you don't have it? That's bad. That's very bad.~
-==AC#PPEL4 ~I need you to find it, if we are to create this antidote. Please, look for it. I'll wait for you here. It's important we had it.~
-EXIT
-*/
-
 CHAIN AC#PPEL4 cnt.01.01
 ~Wonderful! Not let's see...~
 == AC#PPEL4 ~It's in a good state, yes. And it's rather big, so... it should be enough, yes!~
@@ -463,7 +438,7 @@ IF~~THEN REPLY ~It's the spot where I fought the servant to Talona. There was a 
 
 CHAIN AC#PPEL4 cnt.01.03
 ~Yes, that's exactly what I hoped for. But that's not all we need. Let me share what I have found in my books.~
-==AC#PPEL4 ~You see, we need a blessing of three different gods or goddesses to be engraved in this flower. One or two are not enough, the dead magic this flower was fed with is powerful. We need to mark this flower with life, symphathy and warmth.~
+==AC#PPEL4 ~You see, we need a blessing of three different gods or goddesses to be engraved in this flower. One or two are not enough, the dead magic this flower was fed with is powerful. We need to mark this flower with life, sympathy and warmth.~
 ==AC#PPEL4 ~And I know exactly where to turn for help. You must travel to Athkatla and speak with the priest of Ilmater in the Slums. Ask him for the Blessing of Sympathy. He and I are on good terms—I believe he will support our cause without hesitation.~
 =
 ~You should also visit the Church of Lathander in the city and request the Blessing of Warmth. I will send a white dove to carry my message. When you reach the temples, they will already be prepared to aid you.~ 
@@ -477,7 +452,7 @@ END
 IF~OR(2) Alignment(Player1,MASK_GOOD) Alignment(Player1,MASK_GENEUTRAL) OR(3) Class(Player1,CLERIC_ALL) Class(Player1,DRUID_ALL) Class(Player1,PALADIN_ALL)~THEN REPLY ~What about me? Perhaps I should bless the flower, too? I am also a person of faith!~ EXTERN  AC#PPEL4 cnt.01.05a
 IF~Alignment(Player1,MASK_EVIL) OR(3) Class(Player1,CLERIC_ALL) Class(Player1,DRUID_ALL) Class(Player1,PALADIN_ALL)~THEN REPLY ~What about me? Perhaps I should bless the flower, too? I am also a person of faith!~ EXTERN  AC#PPEL4 cnt.01.05b
 IF~~THEN REPLY ~Right. I should get back to work then. I presume that once I have the blessings, I should return here, to you. Yes?~ EXTERN AC#PPEL4 cnt.01.06
-IF~~THEN REPLY ~I hope you'll pay me for all the effort and time I'm supposed to invest in this, hmm?~ EXTERN AC#PPEL4 cnt.01.07
+IF~~THEN REPLY ~I hope you'll pay me for all the effort and time I'm supposed to invest in this?~ EXTERN AC#PPEL4 cnt.01.07
 
 CHAIN AC#PPEL4 cnt.01.05a
 ~I still believe these priests should help us, I already sent some letters, they will be expecting you, but... I suppose your blessing can be helpful, too.~ 
@@ -488,7 +463,7 @@ CHAIN AC#PPEL4 cnt.01.05b
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",4) Global("AC#PP_BonusBlessing","GLOBAL",1)~ THEN AC#PPEL4 cnt.01.0BB
-~Thank you. But remember that we will also need the blessings of the two priests I mentioned. They were heads of their churches for a while, this isn't just magic what we're doing, it's symbollic. It's faith. And hope.~
+~Thank you. But remember that we will also need the blessings of the two priests I mentioned. They were heads of their churches for a while, this isn't just magic what we're doing, it's symbolic. It's faith. And hope.~
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN AC#PPEL4 cnt.01.06
@@ -500,9 +475,14 @@ CHAIN AC#PPEL4 cnt.01.07
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN AC#PPEL4 cnt.01.08
-~Remember that I'm counting on you, my friends, and I truly believe you are right next to the plants, a second crucial part of this puzzle. One that's the key to our victory.~
-==AC#PPEL4 ~Return to me when you gather the blessings.~
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",5)~ EXIT
+~In addition, you will need a jug of Eldath’s singing water from our grotto. Speak to Eldath’s handmaiden near the water; she will give you a carafe of the sacred water.~
+=
+~When you have the water and the blessings of Lathander and Ilmater, return to me. Then I shall tell you what must be done next.~
+=
+~I'm counting on you, <CHARNAME>. We will be able to halt the spread of this vile poison — of that I am certain. Return to me once you have gathered everything.~
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",5)
+SetGlobal("AC#PP_HolyWater","GLOBAL",1)~ EXIT
+
 
 //ILMATER
 
@@ -533,20 +513,24 @@ DO ~SetGlobal("AC#PP_LathanderBlessing","GLOBAL",1) CreateVisualEffectObject("SP
 //BLESSING
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",5)~ THEN AC#PPEL4 cnt.02.00
-~Welcome back. Have you received the blessings already?~
+~Welcome back. Have you received the blessings already and gathered some of Eldath's singing water from our grotto?~
 END
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_LathanderBlessing","GLOBAL",1) Global("AC#PP_IlmaterBlessing","GLOBAL",1)~THEN REPLY ~Yes, I have. What's next?~ EXTERN AC#PPEL4 cnt.02.02
+IF~PartyHasItem("AC#PPWA") PartyHasItem("AC#PPPUB") Global("AC#PP_LathanderBlessing","GLOBAL",1) Global("AC#PP_IlmaterBlessing","GLOBAL",1)~THEN REPLY ~Yes, I have. What's next?~ EXTERN AC#PPEL4 have_blessings_have_flower_have_water
 IF~~THEN REPLY ~I'm still working on this.~ EXTERN AC#PPEL4 cnt.02.01
 
 CHAIN AC#PPEL4 cnt.02.01
 ~I see. Return to me when you're done with that part. Eldath bless you, my friend!~
 EXIT
 
-CHAIN AC#PPEL4 cnt.02.02
-~Wonderful!~
-DO ~GiveItemCreate("AC#PPWA",Player1,1,0,0)~
-==AC#PPEL4 ~We have the flower, we have the blessings. And we know where the poison was prepared. Now, we're going to use that exact place to give the shape to the toxin and prepare the antidote. But you will also need this: the singing water of Eldath.~
-==AC#PPEL4 ~What you need to do is bring these to Myth Unnohyr and place the blessed flower and the singing water of Eldath inside that cauldron you mentioned. When it all mixes, the remains of the poison, its source, the blessed flower and the water, it should conjure the manifestation of the toxin and when it's defeated, some antidote should be created.~
+CHAIN AC#PPEL4 have_blessings_have_flower_have_water
+//DO ~GiveItemCreate("AC#PPWA",Player1,1,0,0)~
+~We have the flower, we have the blessings. And we know where the poison was prepared. But you will also need the singing water of Eldath. Now, we're going to use that exact place to give the shape to the toxin and prepare the antidote.~
+END
+IF~~THEN EXTERN AC#PPEL4 have_blessings_have_flower_have_water_02
+
+
+CHAIN AC#PPEL4 have_blessings_have_flower_have_water_02
+~What you need to do is bring these to Myth Unnohyr and place the blessed flower and the singing water of Eldath inside that cauldron you mentioned. When it all mixes, the remains of the poison, its source, the blessed flower and the water, it should conjure the manifestation of the toxin and when it's defeated, some antidote should be created.~
 ==AC#PPEL4 ~We need toremember we are dealing with wild magic, dead magic, blessing and—it's an explosive concoction. But I think it may work—no: It has to work.~
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~It will. I know it.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~A risk must be taken, if a bird is to learn how to fly. And we are such birds. We need to do whatever we can, and we'll sly above the threats.~
