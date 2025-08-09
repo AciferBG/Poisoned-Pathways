@@ -82,6 +82,9 @@
 @904 = ~Cloud of Pestilence~
 @905 = ~Protection From Animals~
 @906 = ~Eldath's Silence~
+@907 = ~^0xFF22B4E6has gained +1 maximum Hit Point. ^-~
+@908 = ~^0xFF22B4E6has gained +2 maximum Hit Points. ^-~
+@909 = ~^0xFF22B4E6has gained +1% resistance to slashing, piercing, crushing, and missile damage. ^-~
 
 //sto files
 @950 = ~Temple of Eldath~
@@ -1277,6 +1280,10 @@ Weight: 0~
 @2039 = ~If anyone is to win this battle, it's you.~
 @2040 = ~The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
 @2041 = ~The entrance to this tower is shrouded in an unnatural mist. Without the proper means, you will not be able to enter.~
+
+
+
+
 
 
 

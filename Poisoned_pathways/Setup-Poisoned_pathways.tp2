@@ -292,6 +292,15 @@ COPY ~Poisoned_pathways/vvc/copy~         ~override~
 
 COPY ~Poisoned_pathways/spl/copy~         ~override~
 
+COPY ~Poisoned_pathways/spl/AC#PPH1.spl~          ~override~
+SAY 0xfe @907
+
+COPY ~Poisoned_pathways/spl/AC#PPH2.spl~          ~override~
+SAY 0xfe @908
+
+COPY ~Poisoned_pathways/spl/AC#PPGR.spl~          ~override~
+SAY 0x18e @909
+
 COPY ~Poisoned_pathways/spl/AC#PPS1.spl~          ~override~
 SAY NAME1 @900
 

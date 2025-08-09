@@ -1,0 +1,8 @@
+IF
+    Global("EldathBless","ACPP06",1)
+THEN
+    RESPONSE #100
+        CreateVisualEffect("SPDHRMNY",[581.333])
+        SetGlobal("EldathBless","ACPP06",0)
+END
+

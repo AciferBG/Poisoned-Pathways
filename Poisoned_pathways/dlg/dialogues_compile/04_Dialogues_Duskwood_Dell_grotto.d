@@ -264,10 +264,279 @@ END
   IF ~PartyHasItem("SW2H14") Global("AC#TradeLilarcor","GLOBAL",0)~
   THEN REPLY ~I can’t stand Lilarcor's chatter anymore. Take it. If anyone can hush it, it’s you.~ EXTERN AC#PPDR1 trade_legend_lilarcor
 
-  IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
+// Warblade +4 (SW2H09)
+IF ~PartyHasItem("SW2H09") Global("AC#TradeWarblade","GLOBAL",0)~
+THEN REPLY ~I offer the Warblade—its edge has tasted enough blood.~ EXTERN AC#PPDR1 trade_legend_warblade
 
+// Silver Sword (SW2H15)
+IF ~PartyHasItem("SW2H15") Global("AC#TradeSilverSword","GLOBAL",0)~
+THEN REPLY ~Take the Silver Sword—may it claim no more minds or lives.~ EXTERN AC#PPDR1 trade_legend_silversword
+
+
+// Shortbow of Gesen (BOW19)
+IF ~PartyHasItem("BOW19") Global("AC#TradeGesen","GLOBAL",0)~
+THEN REPLY ~The Shortbow of Gesen—let its lightning sleep in peace.~ EXTERN AC#PPDR1 trade_legend_gesen
+
+// Heartseeker +3 (BOW10)
+IF ~PartyHasItem("BOW10") Global("AC#TradeHeartseeker","GLOBAL",0)~
+THEN REPLY ~I part with Heartseeker—no more hearts shall it find.~ EXTERN AC#PPDR1 trade_legend_heartseeker
+
+
+// Elven Court Bow (BOW12)
+IF ~PartyHasItem("BOW12") Global("AC#TradeCourtBow","GLOBAL",0)~
+THEN REPLY ~The Elven Court Bow belongs to memory, not to murder. Take it.~ EXTERN AC#PPDR1 trade_legend_courtbow
+
+// Impaler +3 (SPER08)
+IF ~PartyHasItem("SPER08") Global("AC#TradeImpaler","GLOBAL",0)~
+THEN REPLY ~The Impaler has ended enough lives. Keep it where it can harm none.~ EXTERN AC#PPDR1 trade_legend_impaler
+
+
+// Spear of Withering (SPER10)
+IF ~PartyHasItem("SPER10") Global("AC#TradeWithering","GLOBAL",0)~
+THEN REPLY ~I surrender the Spear of Withering—no more decay for the living.~ EXTERN AC#PPDR1 trade_legend_withering
+
+// Frostreaver +3 (AX1H13)
+IF ~PartyHasItem("AX1H13") Global("AC#TradeFrostreaver","GLOBAL",0)~
+THEN REPLY ~Take Frostreaver—its cold bite ends here.~ EXTERN AC#PPDR1 trade_legend_frostreaver
+
+
+// Icingdeath +3 (SW1H15) — Drizzt’s blade
+IF ~PartyHasItem("SW1H15") Global("AC#TradeIcingdeath","GLOBAL",0)~
+THEN REPLY ~Even Icingdeath’s chill should rest now.~ EXTERN AC#PPDR1 trade_legend_icingdeath
+
+// Twinkle (SW116) — Drizzt’s blade
+IF ~PartyHasItem("SW116") Global("AC#TradeTwinkle","GLOBAL",0)~
+THEN REPLY ~Twinkle’s light can fade in peace here.~ EXTERN AC#PPDR1 trade_legend_twinkle
+
+// Skullcrusher +3 (BLUN18)
+IF ~PartyHasItem("BLUN18") Global("AC#TradeSkullcrusher","GLOBAL",0)~
+THEN REPLY ~The Skullcrusher belongs where skulls are safe. Take it.~ EXTERN AC#PPDR1 trade_legend_skullcrusher
+
+// Hammer of Thunderbolts +3 (HAMM07)
+IF ~PartyHasItem("HAMM07") Global("AC#TradeThunderbolts","GLOBAL",0)~
+THEN REPLY ~The Hammer of Thunderbolts should thunder no more.~ EXTERN AC#PPDR1 trade_legend_thunderbolts
+
+// Dwarven Thrower +3 (HAMM06)
+IF ~PartyHasItem("HAMM06") Global("AC#TradeDwarvenThrower","GLOBAL",0)~
+THEN REPLY ~Let the Dwarven Thrower find stillness here.~ EXTERN AC#PPDR1 trade_legend_dwarventhrower
+
+// Boneblade +4 (DAGG14)
+IF ~PartyHasItem("DAGG14") Global("AC#TradeBoneblade","GLOBAL",0)~
+THEN REPLY ~The Boneblade has feasted on enough death. Keep it safe.~ EXTERN AC#PPDR1 trade_legend_boneblade
+
+
+// Blackblood +3 (BLUN22)
+IF ~PartyHasItem("BLUN22") Global("AC#TradeBlackblood","GLOBAL",0)~
+THEN REPLY ~Take Blackblood—may it never taste life again.~ EXTERN AC#PPDR1 trade_legend_blackblood
+
+// Blade of Searing +3 (SW1H39)
+IF ~PartyHasItem("SW1H39") Global("AC#TradeSearing","GLOBAL",0)~
+THEN REPLY ~The Blade of Searing shall burn no more flesh.~ EXTERN AC#PPDR1 trade_legend_searing
+
+// Azuredge +3 (AX1H10)
+IF ~PartyHasItem("AX1H10") Global("AC#TradeAzuredge","GLOBAL",0)~
+THEN REPLY ~Azuredge can rest; its crusade is done.~ EXTERN AC#PPDR1 trade_legend_azuredge
+
+
+// Staff of the Magi (STAF11)
+IF ~PartyHasItem("STAF11") Global("AC#TradeSotM","GLOBAL",0)~
+THEN REPLY ~Even the Staff of the Magi can be laid to rest.~ EXTERN AC#PPDR1 trade_legend_sotm
+
+IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
 
 // ----- Legendary turn-ins (apply AC#PPH2 + AC#PPGR) -----
+
+CHAIN AC#PPDR1 trade_legend_silversword
+~A gleam that severed thought and fate; let it fade beneath still waters.~
+DO ~TakePartyItem("SW2H15")
+   SetGlobal("AC#TradeSilverSword","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_gesen
+~Storms belong to the sky, not the vein. The pool will quiet its spark.~
+DO ~TakePartyItem("BOW19")
+   SetGlobal("AC#TradeGesen","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+CHAIN AC#PPDR1 trade_legend_heartseeker
+~Let arrows stray from sorrow; may this bow learn gentleness at last.~
+DO ~TakePartyItem("BOW10")
+   SetGlobal("AC#TradeHeartseeker","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+CHAIN AC#PPDR1 trade_legend_courtbow
+~An heirloom of grace turned grim—let the grove return it to grace.~
+DO ~TakePartyItem("BOW12")
+   SetGlobal("AC#TradeCourtBow","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_impaler
+~A point made too often dulls the world. The waters will blunt it kindly.~
+DO ~TakePartyItem("SPER08")
+   SetGlobal("AC#TradeImpaler","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_withering
+~Let blight unlearn its path; the pool remembers only growth.~
+DO ~TakePartyItem("SPER10")
+   SetGlobal("AC#TradeWithering","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_frostreaver
+~Winter’s edge has no place in a summer grove.~
+DO ~TakePartyItem("AX1H13")
+   SetGlobal("AC#TradeFrostreaver","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+CHAIN AC#PPDR1 trade_legend_icingdeath
+~A famed frost laid to thaw; may peace melt its legend to quiet.~
+DO ~TakePartyItem("SW1H15")
+   SetGlobal("AC#TradeIcingdeath","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_twinkle
+~Brightness is not always kindness; let gentler stars watch over it.~
+DO ~TakePartyItem("SW116")
+   SetGlobal("AC#TradeTwinkle","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_skullcrusher
+~Let bone be shielded by mercy, not broken by rage.~
+DO ~TakePartyItem("BLUN18")
+   SetGlobal("AC#TradeSkullcrusher","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_thunderbolts
+~Boom becomes hush; may the sky forgive what the forge demanded.~
+DO ~TakePartyItem("HAMM07")
+   SetGlobal("AC#TradeThunderbolts","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_dwarventhrower
+~A faithful tool of war can be faithful to peace.~
+DO ~TakePartyItem("HAMM06")
+   SetGlobal("AC#TradeDwarvenThrower","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_boneblade
+~Let marrow remember life, not cutting.~
+DO ~TakePartyItem("DAGG14")
+   SetGlobal("AC#TradeBoneblade","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_blackblood
+~Let this bitter club be sweetened by stillness.~
+DO ~TakePartyItem("BLUN22")
+   SetGlobal("AC#TradeBlackblood","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_searing
+~Fire forgets itself in water; so too shall this blade.~
+DO ~TakePartyItem("SW1H39")
+   SetGlobal("AC#TradeSearing","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+
+CHAIN AC#PPDR1 trade_legend_azuredge
+~Even righteous edges can cut too deep. The grove will keep it gentle.~
+DO ~TakePartyItem("AX1H10")
+   SetGlobal("AC#TradeAzuredge","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+CHAIN AC#PPDR1 trade_legend_sotm
+~Great power stirs great tempests; here, it will know still waters.~
+DO ~TakePartyItem("STAF11")
+   SetGlobal("AC#TradeSotM","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
+
+CHAIN AC#PPDR1 trade_legend_warblade
+~Steel that fed on war should sleep, not sing. Let the grove still its hunger.~
+DO ~TakePartyItem("SW2H09")
+   SetGlobal("AC#TradeWarblade","GLOBAL",1)
+   ApplySpellRES("AC#PPH2",Player1)
+   ApplySpellRES("AC#PPGR",Player1)
+   AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_equalizer
 ~Endless balance sought through endless strife... let the water end the argument.~
@@ -276,6 +545,7 @@ DO ~TakePartyItem("SW1H54")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_carsomyr
@@ -285,6 +555,7 @@ DO ~TakePartyItem("SW2H10")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_foa
@@ -294,6 +565,7 @@ DO ~TakePartyItem("BLUN14")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_crom
@@ -303,6 +575,7 @@ DO ~TakePartyItem("HAMM09")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_soulreaver
@@ -312,6 +585,7 @@ DO ~TakePartyItem("SW2H08")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_blackrazor
@@ -321,6 +595,7 @@ DO ~TakePartyItem("MISCBC")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_celestialfury
@@ -330,6 +605,7 @@ DO ~TakePartyItem("SW1H51")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    AddexperienceParty(1000)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_legend_refresh
 
 CHAIN AC#PPDR1 trade_legend_lilarcor
@@ -338,8 +614,11 @@ DO ~TakePartyItem("SW2H14")
    SetGlobal("AC#TradeLilarcor","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
+   //DisplayString(Player1,@908)
+   //DisplayString(Player1,@909)
    AddexperienceParty(1000)
-~ EXTERN AC#PPDR1 trade_legend_refresh
+   SetGlobal("EldathBless","ACPP06",1)
+~ EXIT //EXTERN AC#PPDR1 trade_legend_refresh
 
 // Legend refresh: loop if more legendary remain; else back to root
 CHAIN IF ~~ THEN AC#PPDR1 trade_legend_refresh
@@ -422,6 +701,7 @@ DO ~TakePartyItem("SW1H38")
    SetGlobal("AC#TradeL_Jhor","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_bladeroses
@@ -430,6 +710,7 @@ DO ~TakePartyItem("SW1H40")
    SetGlobal("AC#TradeL_BladeRoses","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_stonefire
@@ -438,6 +719,7 @@ DO ~TakePartyItem("AX1H12")
    SetGlobal("AC#TradeL_Stonefire","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_rifthome
@@ -446,6 +728,7 @@ DO ~TakePartyItem("AX1H09")
    SetGlobal("AC#TradeL_Rifthome","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_dragonsbreath
@@ -454,6 +737,7 @@ DO ~TakePartyItem("HALB04")
    SetGlobal("AC#TradeL_DragBreath","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_wave
@@ -462,6 +746,7 @@ DO ~TakePartyItem("HALB09")
    SetGlobal("AC#TradeL_WaveHalb","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_ras
@@ -470,6 +755,7 @@ DO ~TakePartyItem("SW1H33")
    SetGlobal("AC#TradeL_Ras","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_pixie
@@ -478,6 +764,7 @@ DO ~TakePartyItem("DAGG13")
    SetGlobal("AC#TradeL_PixiePrick","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_cutthroat
@@ -486,6 +773,7 @@ DO ~TakePartyItem("SW1H33")
    SetGlobal("AC#TradeL_Cutthroat","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_spectral
@@ -494,6 +782,7 @@ DO ~TakePartyItem("SW1H68")
    SetGlobal("AC#TradeL_SpectralBrand","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_adjatha
@@ -502,6 +791,7 @@ DO ~TakePartyItem("SW1H35")
    SetGlobal("AC#TradeL_Adjatha","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_chaos
@@ -510,6 +800,7 @@ DO ~TakePartyItem("SW2H16")
    SetGlobal("AC#TradeL_SwordChaos","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_albruin
@@ -518,6 +809,7 @@ DO ~TakePartyItem("SW1H34")
    SetGlobal("AC#TradeL_Albruin","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_flame
@@ -526,6 +818,7 @@ DO ~TakePartyItem("SW1H53")
    SetGlobal("AC#TradeL_SwordFlame","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_daystar
@@ -534,6 +827,7 @@ DO ~TakePartyItem("SW1H31")
    SetGlobal("AC#TradeL_Daystar","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_ssbackstab
@@ -542,6 +836,7 @@ DO ~TakePartyItem("SW1H10")
    SetGlobal("AC#TradeL_SSBackstab","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_belm
@@ -550,6 +845,7 @@ DO ~TakePartyItem("SW1H30")
    SetGlobal("AC#TradeL_Belm","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 CHAIN AC#PPDR1 trade_lesser_dagvenom
@@ -558,6 +854,7 @@ DO ~TakePartyItem("MISC75")
    SetGlobal("AC#TradeL_DagVenom","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    AddexperienceParty(800)
+   SetGlobal("EldathBless","ACPP06",1)
 ~ EXTERN AC#PPDR1 trade_lesser_refresh
 
 
