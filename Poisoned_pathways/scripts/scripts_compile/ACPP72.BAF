@@ -24,8 +24,8 @@ THEN
         ClearAllActions()
         StartCutSceneMode()
         ClearAllActions()
-        ScreenShake([80.80],8)
-        CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
+        ScreenShake([20.20],3)
+        CreateVisualEffectObject("SPFLESHS","AC#PPTA2")
         CreateVisualEffect("SPDEATH3",[610.550])
         CreateVisualEffect("SPDEATH3",[810.490])
         CreateVisualEffect("SPDEATH3",[890.600])
@@ -43,9 +43,9 @@ THEN
         CreateCreature("AC#PPPX",[680.660],S)  // Will-o'-pox
         CreateCreature("AC#PPGH1",[350.500],S)  // Ghoul
         CreateCreature("AC#PPGH1",[520.370],S)  // Ghoul
-        CreateCreature("AC#PPGH1",[700.420],S)  // Mane
-        CreateCreature("MANE",[950.330],S)  // Mane
-        CreateCreature("MANE",[1100.420],S)  // Mane
+        CreateCreature("AC#PPGH1",[700.420],S)  // Ghoul
+        CreateCreature("AC#PPSCR",[950.330],S)
+        CreateCreature("AC#PPSCR",[1100.420],S)
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
         ActionOverride("AC#PPTA2",Enemy())

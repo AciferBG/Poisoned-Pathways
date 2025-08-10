@@ -1235,6 +1235,37 @@ Damage: 0 (missile)
 Launcher: Bow
 
 Weight: 0~
+@1195 = ~Poisoned Bullets~
+@1196 = ~These sling bullets are coated in a thick, foul-smelling contact poison. Upon impact, it seeps into the wound, causing a grievous affliction.
+
+STATISTICS:
+
+Combat abilities:
+– Hit target must save vs. Death or suffer 2 points of poison damage per second for 10 seconds
+
+THAC0: +1
+Damage: 1d4+1
+Damage type: Missile
+Launcher: Sling
+
+Weight: 0~
+@1197 = ~Witherbranch~
+@1198 = ~This cruel club appears to be nothing more than a gnarled, blackened bough, its surface split and twisted as if writhing in pain. It was cut from a tree deep within a plague-ridden grove, where Talona’s breath had stilled all life. Its thorns gleam with a dull green patina — residue from years of venomous anointing. Wielded in battle, the Witherbranch delivers not only a bruising blow, but the creeping embrace of rot.
+
+STATISTICS:
+
+Combat abilities:
+– Hit target must save vs. Death or suffer 1 point of poison damage per second for 6 seconds in 50% of hits
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 1
+Proficiency Type: Club
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 1~
 
 
 // script strings

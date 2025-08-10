@@ -2,7 +2,15 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
-COPY ~%MOD_FOLDER%/itm/AC#PPARO.itm~         ~override~    //  arrow of charmng
+COPY ~%MOD_FOLDER%/itm/AC#PPBL1.itm~         ~override~    //  witherbranch
+  SAY NAME2 @1197
+  SAY DESC  @1198
+  
+COPY ~%MOD_FOLDER%/itm/AC#PPBUL.itm~         ~override~    //  poisoned bullets
+  SAY NAME2 @1195
+  SAY DESC  @1196
+
+COPY ~%MOD_FOLDER%/itm/AC#PPARO.itm~         ~override~    //  arrow of charming
   SAY NAME2 @1193
   SAY DESC  @1194
 

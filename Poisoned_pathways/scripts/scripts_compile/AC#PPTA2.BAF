@@ -23,6 +23,31 @@ THEN
 END
 
 IF
+    !GlobalTimerNotExpired("TrueSeeing","LOCALS")
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Detect(NearestEnemyOf(Myself))
+    OR(12)
+        StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+        StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+        StateCheck(SecondNearestEnemyOf(Myself),STATE_INVISIBLE)
+        StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+        StateCheck(ThirdNearestEnemyOf(Myself),STATE_INVISIBLE)
+        StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+        StateCheck(FourthNearestEnemyOf(Myself),STATE_INVISIBLE)
+        StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+        StateCheck(FifthNearestEnemyOf(Myself),STATE_INVISIBLE)
+        StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+        StateCheck(SixthNearestEnemyOf(Myself),STATE_INVISIBLE)
+        StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("TrueSeeing","LOCALS",TEN_ROUNDS)
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,CLERIC_TRUE_SIGHT)  // SPPR505.SPL (True Seeing)
+        Continue()
+END
+
+IF
     See(NearestEnemyOf(Myself))
     Global("prep","LOCALS",0)
 THEN
@@ -32,45 +57,316 @@ THEN
 END
 
 IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
     See(NearestEnemyOf(Myself))
     HaveSpellRES("AC#PPCP")  // Cloud of Pestilence
 THEN
     RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
         SpellRES("AC#PPCP",NearestEnemyOf(Myself))  // Cloud of Pestilence
 END
 
 IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
     See(NearestEnemyOf(Myself))
     HaveSpell(CLERIC_INSECT_PLAGUE)  // SPPR517.SPL (Insect Plague)
 THEN
     RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
         Spell(NearestEnemyOf(Myself),CLERIC_INSECT_PLAGUE)  // SPPR517.SPL (Insect Plague)
 END
 
 IF
     See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    HaveSpell(CLERIC_DISPEL_MAGIC)  // SPPR303.SPL (Dispel Magic)
+THEN
+    RESPONSE #100
+        Spell(LastSeenBy(Myself),CLERIC_DISPEL_MAGIC)  // SPPR303.SPL (Dispel Magic)
+END
+
+IF
+    HaveSpell(CLERIC_SANCTUARY)  // SPPR109.SPL (Sanctuary)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    !CheckStat(Myself,1,SANCTUARY)
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+    !StateCheck(Myself,STATE_SILENCED)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+    RESPONSE #100
+        SetInterrupt(FALSE)
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,CLERIC_SANCTUARY)  // SPPR109.SPL (Sanctuary)
+        SetInterrupt(TRUE)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    See(NearestEnemyOf(Myself))
+    CheckStat(Myself,1,SANCTUARY)
+    HaveSpell(CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    HasItem("POTN11",Myself)  // Potion of Invulnerability
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("POTN11",Myself)  // Potion of Invulnerability
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    HasItem("POTN42",Myself)  // Potion of Regeneration
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("POTN42",Myself)  // Potion of Regeneration
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    HasItem("POTN34",Myself)  // Potion of Magic Protection
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("POTN34",Myself)  // Potion of Magic Protection
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_CHANT)  // SPPR203.SPL (Chant)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,CLERIC_CHANT)  // SPPR203.SPL (Chant)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),8)
+    HaveSpell(CLERIC_CLOAK_OF_FEAR)  // SPPR416.SPL (Cloak of Fear)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,CLERIC_CLOAK_OF_FEAR)  // SPPR416.SPL (Cloak of Fear)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    See(NearestEnemyOf(Myself))
+    HPPercentLT(Myself,100)
     HaveSpell(CLERIC_REGENERATE)  // SPPR711.SPL (Regeneration)
 THEN
     RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
         Spell(Myself,CLERIC_REGENERATE)  // SPPR711.SPL (Regeneration)
 END
 
 IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
     Allegiance(Myself,ENEMY)
     Detect([PC])
     !See(LastSeenBy(Myself))
     HaveSpell(CLERIC_INVISIBILITY_PURGE)  // SPPR309.SPL (Invisibility Purge)
 THEN
     RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
         Spell(NearestEnemyOf(Myself),CLERIC_INVISIBILITY_PURGE)  // SPPR309.SPL (Invisibility Purge)
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    HaveSpell(CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+    CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    !StateCheck(Myself,STATE_SILENCED)
+    !Difficulty(EASIEST)
+    See(Nearest([GOODCUTOFF.0.0.0.0.0.MASK_GOOD]))
+    !StateCheck(LastSeenBy(Myself),STATE_NOT_VISIBLE)
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    CheckStatLT(LastSeenBy(Myself),55,MAGICDAMAGERESISTANCE)
+    !CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
+    !HasItemEquiped("clck26",LastSeenBy(Myself))  // Cloak of Mirroring
 THEN
     RESPONSE #100
-        Spell(NearestEnemyOf(Myself),CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+    RESPONSE #50
+        Continue()
+END
+
+IF
+    OR(2)
+        See([PC.0.HALF_ELF.MAGE_ALL])
+        See([PC.0.HUMAN.MAGE_ALL])
+THEN
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    !GlobalTimerNotExpired("OH_Doom","LOCALS")
+    HaveSpell(CLERIC_DOOM)  // SPPR113.SPL (Doom)
+    Allegiance(Myself,ENEMY)
+    !StateCheck(LastSeenBy(Myself),STATE_NOT_VISIBLE)
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+    !CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)
+    CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+    !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+    !StateCheck(Myself,STATE_SILENCED)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobalTimer("OH_Doom","LOCALS",THREE_ROUNDS)
+        Spell(LastSeenBy(Myself),CLERIC_DOOM)  // SPPR113.SPL (Doom)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Allegiance(Myself,ENEMY)
+    !CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    HaveSpell(CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Allegiance(Myself,ENEMY)
+    OR(2)
+        See([PC.0.HALF_ELF.MAGE_ALL])
+        See([PC.0.HUMAN.MAGE_ALL])
+    !CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    HaveSpell(CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Allegiance(Myself,ENEMY)
+    See([PC.0.0.MAGE_ALL])
+    !CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    HaveSpell(CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Allegiance(Myself,ENEMY)
+    OR(4)
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]))
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.SORCERER]))
+    !CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+    !CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+    CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+    HaveSpell(CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    HaveSpell(CLERIC_SLAY_LIVING)  // SPPR511.SPL (Slay Living)
+    !HasItem("SLAYLIVE",Myself)  // Slay Living
+    Range(NearestEnemyOf(Myself),6)
+    HPGT(NearestEnemyOf(Myself),20)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),CLERIC_SLAY_LIVING)  // SPPR511.SPL (Slay Living)
+        AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Allegiance(Myself,ENEMY)
+    OR(4)
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.DRUID_ALL]))
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+        See(NearestEnemyOfType([GOODCUTOFF.0.0.SORCERER]))
+    HaveSpell(CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+    !StateCheck(LastSeenBy(Myself),STATE_POISONED)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),6)
+    HaveSpell(NPC_BLADE_BARRIER)  // SPPR698.SPL (Blade Barrier)
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,NPC_BLADE_BARRIER)  // SPPR698.SPL (Blade Barrier)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_FREE_ACTION)  // SPPR403.SPL (Free Action)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(Myself,CLERIC_FREE_ACTION)  // SPPR403.SPL (Free Action)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
+    !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        Spell(NearestEnemyOf(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
 
 IF
@@ -83,82 +379,10 @@ END
 
 IF
     See(NearestEnemyOf(Myself))
-    Global("wave1","LOCALS",0)
-THEN
-    RESPONSE #100
-        AttackOneRound(NearestEnemyOf(Myself))
-        AttackOneRound(NearestEnemyOf(Myself))
-        AttackOneRound(NearestEnemyOf(Myself))
-        AttackOneRound(NearestEnemyOf(Myself))
-        SetGlobal("wave1","LOCALS",1)
-END
-
-IF
-    See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_ANIMAL_SUMMONING_1)  // SPPR402.SPL (Animal Summoning I)
-THEN
-    RESPONSE #100
-        Spell(Myself,CLERIC_ANIMAL_SUMMONING_1)  // SPPR402.SPL (Animal Summoning I)
-END
-
-IF
-    See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
-THEN
-    RESPONSE #100
-        Spell(NearestEnemyOf(Myself),CLERIC_SUMMON_INSECTS)  // SPPR319.SPL (Summon Insects)
-END
-
-IF
-    See(NearestEnemyOf(Myself))
     HaveSpell(CLERIC_CONJURE_EARTH_ELEMENTAL)  // SPPR702.SPL (Conjure Earth Elemental)
 THEN
     RESPONSE #100
         Spell(Myself,CLERIC_CONJURE_EARTH_ELEMENTAL)  // SPPR702.SPL (Conjure Earth Elemental)
-END
-
-IF
-    See([GOODCUTOFF.0.0.0.0.SUMMONED])
-    HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
-THEN
-    RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
-END
-
-IF
-    See(NearestEnemyOf(Myself))
-    Global("wave1","LOCALS",1)
-THEN
-    RESPONSE #100
-        AttackOneRound(LastSeenBy(Myself))
-        AttackOneRound(LastSeenBy(Myself))
-        AttackOneRound(LastSeenBy(Myself))
-        AttackOneRound(LastSeenBy(Myself))
-        SetGlobal("wave1","LOCALS",2)
-END
-
-IF
-    See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_CLOAK_OF_FEAR)  // SPPR416.SPL (Cloak of Fear)
-THEN
-    RESPONSE #100
-        Spell(Myself,CLERIC_CLOAK_OF_FEAR)  // SPPR416.SPL (Cloak of Fear)
-END
-
-IF
-    See([GOODCUTOFF.0.0.0.0.SUMMONED])
-    HaveSpell(CLERIC_HOLD_ANIMAL)  // SPPR305.SPL (Hold Animal)
-THEN
-    RESPONSE #100
-        Spell(LastSeenBy(Myself),CLERIC_HOLD_ANIMAL)  // SPPR305.SPL (Hold Animal)
-END
-
-IF
-    See(NearestEnemyOf(Myself))
-    HaveSpell(CLERIC_FLAME_BLADE)  // SPPR206.SPL (Flame Blade)
-THEN
-    RESPONSE #100
-        Spell(Myself,CLERIC_FLAME_BLADE)  // SPPR206.SPL (Flame Blade)
 END
 
 IF
@@ -172,8 +396,10 @@ END
 IF
     ActionListEmpty()
     See(NearestEnemyOf(Myself))
+    !StateCheck(Myself,STATE_INVISIBLE)
+    !CheckStat(Myself,1,SANCTUARY)
 THEN
     RESPONSE #100
-        AttackReevaluate(NearestEnemyOf(Myself),30)
+        AttackReevaluate(NearestEnemyOf(Myself),6)
 END
 
