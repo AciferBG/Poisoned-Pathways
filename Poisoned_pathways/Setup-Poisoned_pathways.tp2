@@ -269,7 +269,7 @@ COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
  END
 
  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPB2D.bam~ ~override~ // buckler desc bam
- LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1026.pvrz~
  END
@@ -293,6 +293,13 @@ COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1029.pvrz~
+ END
+ END
+ 
+  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPADO.bam~ ~override~ // arrows of charming desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END 
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1030.pvrz~
  END
  END
 ///////////////////////////////////////////////////////////////////////
