@@ -1,0 +1,119 @@
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    See(NearestEnemyOf(Myself))
+    Global("Insect_Plague","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobal("Insect_Plague","LOCALS",1)
+        ForceSpell(NearestEnemyOf(Myself),CLERIC_INSECT_PLAGUE)  // SPPR517.SPL (Insect Plague)
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    See(NearestEnemyOf(Myself))
+    Global("Enfeeblement","LOCALS",0)
+THEN
+    RESPONSE #100
+           SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobal("Enfeeblement","LOCALS",1)
+        ReallyForceSpell(LastSeenBy(Myself),WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
+END
+
+IF
+    See([PC])
+    Global("Paralyze","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC],TANARI_PARALYZE)  // SPIN999.SPL (Paralyze)
+        SetGlobal("Paralyze","LOCALS",1)
+END
+
+IF
+    See([PC.0.0.CLERIC_MAGE])
+    Global("Silence","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC.0.0.CLERIC_MAGE],TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+        SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+    See([PC.0.0.MAGE])
+    Global("Silence","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC.0.0.MAGE],TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+        SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+    See([PC.0.0.MAGE_THIEF])
+    Global("Silence","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC.0.0.MAGE_THIEF],TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+        SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+    See([PC.0.0.CLERIC])
+    Global("Silence","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC.0.0.CLERIC],TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+        SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+    See([PC.0.0.BARD])
+    Global("Silence","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC.0.0.BARD],TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+        SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+    See([PC.0.0.DRUID])
+    Global("Silence","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC.0.0.DRUID],TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+        SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+    See([PC])
+    Global("Silence","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell([PC],TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+        SetGlobal("Silence","LOCALS",1)
+END
+
+
+
+IF
+    Heard([ANYONE],111)
+THEN
+    RESPONSE #100
+        MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
