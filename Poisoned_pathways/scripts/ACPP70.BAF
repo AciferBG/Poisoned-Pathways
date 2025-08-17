@@ -296,20 +296,20 @@ SetGlobal("AC#PPCreateWeirdling","ACPP70",1)
 END
 
 IF
-NumDead("AC#PPSYM",5)
-CombatCounter(0)
-Global("AC#PPChapter6Quest","GLOBAL",5)
+    NumDead("AC#PPSYM",3)  // Blood-Soaked Spirit
+    CombatCounter(0)
+    Global("AC#PPChapter6Quest","GLOBAL",5)
 THEN
-RESPONSE #100
-StartCutSceneMode()
-Wait(1)
-CreateCreatureObjectOffset("AC#PPHEL",Player1,[40.40])
-SmallWait(1)
-CreateVisualEffectObject("SPDIMNDR","AC#PPHEL")
-Wait(5)
-SetGlobal("AC#PPChapter6Quest","GLOBAL",6)
-Wait(1)
-EndCutSceneMode()
+    RESPONSE #100
+        StartCutSceneMode()
+        Wait(1)
+        CreateCreatureObjectOffset("AC#PPHEL",Player1,[40.40])  // Elven Spirit
+        SmallWait(1)
+        CreateVisualEffectObject("SPDIMNDR","AC#PPHEL")  // Elven Spirit
+        Wait(5)
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",6)
+        Wait(1)
+        EndCutSceneMode()
 END
 
 IF

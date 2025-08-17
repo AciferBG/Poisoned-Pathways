@@ -33,7 +33,7 @@ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",10)~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_02
-~It is rare that people like you pass through here—those who do not seek peace, but simply move on. You have seen many battles, of that I am sure. And you have seen many weapons whose owners are no longer among the living.~
+~It is rare that people like you pass through here—those who do not seek peace, but simply move on. You have seen many battles, of that I am sure. And you have collected many weapons whose former owners are no longer among the living.~
 END
 IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_03
 
@@ -44,6 +44,7 @@ IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_04
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_04
 ~If you were to bring such weapons here instead, they would harm no one again. Here, in Eldath’s embrace, they would be kept safe. It costs you nothing—you still keep your own arms. But those you no longer need, leave them here.~
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Hah! Strip myself of spoils after battle? Ye ask a warrior’s folly.~ 
 END
 IF ~~ THEN REPLY ~You want to take all the weapons I find from my enemies?~ EXTERN AC#PPDR1 trade_weapons_05
 IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#PPDR1 bye_trade_weapons
@@ -80,6 +81,7 @@ END
 IF ~~ THEN REPLY ~Do I have any such weapons with me?~ EXTERN AC#PPDR1 trade_root
 IF ~~ THEN REPLY ~You must be clearer about what I gain from this trade.~ EXTERN AC#PPDR1 trade_weapons_exact_benefit
 IF ~~ THEN REPLY ~I will think on it.~ EXTERN AC#PPDR1 trade_think_about_it
+IF ~~ THEN REPLY ~If this brings honor to Eldath, I shall gladly leave a blade or two behind.~ EXTERN AC#PPDR1 trade_think_about_it
 IF ~~ THEN REPLY ~Not a chance!~ EXTERN AC#PPDR1 bye_trade_weapons
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_think_about_it

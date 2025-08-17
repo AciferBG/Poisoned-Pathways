@@ -194,7 +194,7 @@ END
 IF~~THEN DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_oghma_bye
 
 CHAIN IF ~~ THEN AC#PPEL4 to_oghma_bye
-~I shall send a dove ahead to the Temple of Oghma, so their scribes may ready the proper volume. Return to me once you have the book. I shall be waiting below, on the lower level of this tree. May Eldath's blessings guide your steps, my friend.~
+~I shall send a dove ahead to the Temple of Oghma, so their scribes may ready the proper volume. Return to me once you have the book. I shall be waiting below, on the lower level of this tree. May Eldath's blessings guide your steps.~
 DO ~SetGlobal("AC#PPSpellCheckPoison","GLOBAL",2)
 SetGlobal("AC#PP_Oghma","GLOBAL",1)
 EscapeAreaDestroy(2)~ EXIT
@@ -404,7 +404,7 @@ IF ~~ THEN REPLY ~I am weary and would rest now. Let us speak of this another ti
 
 
 CHAIN AC#PPEL4 malagent_dead_flo
-~So, you have it! That is most welcome news...~
+~So, you have it! That is most welcome news.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",2) SetGlobal("AC#PP_ShowFlower","GLOBAL",1)~ EXTERN AC#PPEL4 cnt.01.01
 
 CHAIN AC#PPEL4 malagent_dead_no_flo
@@ -461,16 +461,28 @@ DO ~StartCutSceneMode() ForceSpell(Myself,DO_NOTHING) SmallWait(2) CreateVisualE
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",4) Global("AC#PP_BonusBlessing","GLOBAL",0)~ THEN AC#PPEL4 cnt.01.04
 ~Done. These blessings should rest upon you as well, so that should the flower resist even prayer, your own hands may yet bear the grace to pass them on.~
 END
-IF~OR(2) Alignment(Player1,MASK_GOOD) Alignment(Player1,MASK_GENEUTRAL) OR(3) Class(Player1,CLERIC_ALL) Class(Player1,DRUID_ALL) Class(Player1,PALADIN_ALL)~THEN REPLY ~What about me? Perhaps I should bless the flower, too? I am also a person of faith!~ EXTERN  AC#PPEL4 cnt.01.05a
+// Player1 is a priest of Lathander:
+IF ~Kit(Player1,GODLATHANDER)~ THEN REPLY ~The Morninglord’s servant stands before you; permit me to bless the flower.~ EXTERN AC#PPEL4 blessing_player_priest_lathander
+// Player1 is either a cleric, druid, or paladin, but not a priest of Lathander:
+IF~!Kit(Player1,GODLATHANDER)
+OR(2) 
+Alignment(Player1,MASK_GOOD) Alignment(Player1,MASK_GENEUTRAL) 
+OR(3)
+ Class(Player1,CLERIC_ALL) Class(Player1,DRUID_ALL) Class(Player1,PALADIN_ALL)~THEN REPLY ~What about me? Perhaps I should bless the flower, too? I am also a person of faith!~ EXTERN  AC#PPEL4 cnt.01.05a
+// player1 is an evil cleric:
 IF~Alignment(Player1,MASK_EVIL) OR(3) Class(Player1,CLERIC_ALL) Class(Player1,DRUID_ALL) Class(Player1,PALADIN_ALL)~THEN REPLY ~What about me? Perhaps I should bless the flower, too? I am also a person of faith!~ EXTERN  AC#PPEL4 cnt.01.05b
+// player's other responses:
 IF ~~ THEN REPLY ~Very well. Once the blessings are gathered, I shall return to you without delay.~ EXTERN AC#PPEL4 cnt.01.08
 IF ~~ THEN REPLY ~I will do as you ask, though it seems no simple errand.~ EXTERN AC#PPEL4 cnt.01.08
 IF ~~ THEN REPLY ~If the gods themselves are to be invoked, I can only hope the reward proves as divine as the task.~ EXTERN AC#PPEL4 cnt.01.07
 IF ~~ THEN REPLY ~I trust there will be due reward for all the effort and time this task demands of me?~ EXTERN AC#PPEL4 cnt.01.07
 
+CHAIN AC#PPEL4 blessing_player_priest_lathander
+~Ah, I had not considered that—of course! Very well, then. Proceed, and lay your blessing upon it.~
+DO ~StartCutSceneMode() SmallWait(2) ActionOverride(Player1,ForceSpell(Myself,DO_NOTHING)) CreateVisualEffectObject("SPROTECT",Player1) CreateVisualEffectObject("SPROTECT",Player2) CreateVisualEffectObject("SPROTECT",Player3) CreateVisualEffectObject("SPROTECT",Player4) CreateVisualEffectObject("SPROTECT",Player5) CreateVisualEffectObject("SPROTECT",Player6) Wait(2) SetGlobal("AC#PP_LathanderBlessing","GLOBAL",1) SetGlobal("AC#PP_BonusBlessing","GLOBAL",1) SmallWait(1) EndCutSceneMode()~ EXIT
 
 CHAIN AC#PPEL4 cnt.01.05a
-~I still believe these priests should help us, I already sent some letters, they will be expecting you, but... I suppose your blessing can be helpful, too.~ 
+~I remain certain that these priests must aid us—I have already sent letters, and they will be expecting you. Yet your blessing, too, may lend strength to our cause.~
 DO ~StartCutSceneMode() SmallWait(2) CreateVisualEffectObject("SPROTECT",Player1) CreateVisualEffectObject("SPROTECT",Player2) CreateVisualEffectObject("SPROTECT",Player3) CreateVisualEffectObject("SPROTECT",Player4) CreateVisualEffectObject("SPROTECT",Player5) CreateVisualEffectObject("SPROTECT",Player6) Wait(2) SetGlobal("AC#PP_BonusBlessing","GLOBAL",1) SmallWait(1) EndCutSceneMode()~ EXIT
 
 CHAIN AC#PPEL4 cnt.01.05b
@@ -478,11 +490,11 @@ CHAIN AC#PPEL4 cnt.01.05b
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",4) Global("AC#PP_BonusBlessing","GLOBAL",1)~ THEN AC#PPEL4 cnt.01.0BB
-~Thank you. But remember that we will also need the blessings of the two priests I mentioned. They were heads of their churches for a while, this isn't just magic what we're doing, it's symbolic. It's faith. And hope.~
+~Thank you. Yet remember, we shall need the blessings of all faiths I spoke of.~
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN AC#PPEL4 cnt.01.07
-~Of course. I'll prepare something for you. Perhaps not gold, but something else. Something that will be of use during your journeys.~
+~Of course. I'll prepare something for you. Not gold, but something else. Something that will be of use during your journeys.~
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN AC#PPEL4 cnt.01.08
@@ -498,28 +510,29 @@ SetGlobal("AC#PP_HolyWater","GLOBAL",1)~ EXIT
 //ILMATER
 
 EXTEND_BOTTOM ~SLILMAT~ 6
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from Duskwood Dell. I have this flower here and I need a Blessing of Compassion. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from Duskwood Dell. I have this flower and I need a Blessing of Compassion. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
 END
 
 EXTEND_BOTTOM ~SLILMAT~ 0
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from Duskwood Dell. I have this flower here and I need a Blessing of Compassion. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from Duskwood Dell. I have this flower and I need a Blessing of Compassion. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
 END
 
 CHAIN SLILMAT AC#IL.BLESS
 ~Ah… yes. I had thought they would send one of their own, yet it matters not. You have come, and you shall not be denied my blessing.~  
 == SLILMAT ~Hear me, Ilmater, Crying God, Endurer of all torments. Look with pity upon those who suffer and grant them the strength to endure. Let their burdens be eased, if only for a moment, and let their pain be mine to bear. Weep for the wounded, shield the broken, and clothe us all in patience and mercy. In your compassion lies our only hope—so let that hope flow now into this flower, that it may carry solace where poison once was sown.~  
 == SLILMAT ~The blessing is given. Take it, my child, and let your heart weep for others, as my god has ever wept for you.~
-DO ~SetGlobal("AC#PP_IlmaterBlessing","GLOBAL",1) CreateVisualEffectObject("SPARMOUR",Player1) CreateVisualEffectObject("SPARMOUR",Player2) CreateVisualEffectObject("SPARMOUR",Player3) CreateVisualEffectObject("SPARMOUR",Player4) CreateVisualEffectObject("SPARMOUR",Player5) CreateVisualEffectObject("SPARMOUR",Player6)~ EXIT
+DO ~SetGlobal("AC#PP_IlmaterBlessing","GLOBAL",1) CreateVisualEffectObject("AC#PPARM",Player1) CreateVisualEffectObject("AC#PPARM",Player2) CreateVisualEffectObject("AC#PPARM",Player3) CreateVisualEffectObject("AC#PPARM",Player4) CreateVisualEffectObject("AC#PPARM",Player5) CreateVisualEffectObject("AC#PPARM",Player6)~ EXIT
 
 //LATHANDER
 
 EXTEND_BOTTOM ~DAWNMAS~ 0
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_LathanderBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Renewal. I believe you may have already received a letter describing the details.~ EXTERN DAWNMAS AC#DM.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_LathanderBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from Duskwood Dell. I have this flower and I need a Blessing of Renewal. I believe you may have already received a letter describing the details.~ EXTERN DAWNMAS AC#DM.BLESS
 END
 
 CHAIN DAWNMAS AC#DM.BLESS
-~Yes, yes. I indeed received a letter, and of course, I will give you my blessing so you could continue with your quest.~
-== DAWNMAS ~Lathander, Bringer of the Dawn, grand this adventurer your blessing, and grand them warmth so they could carry them even into the coldest dens!~
+~Yes, yes—I did receive the letter, and of course I shall grant you my blessing, that you may continue your quest with the Morninglord’s light at your side.~  
+== DAWNMAS ~Lathander, Bringer of the Dawn, Herald of Renewal, grant this <PRO_RACE> your blessing. Fill <PRO_HIMHER> with the warmth of the rising sun, that <PRO_HESHE> may carry its light even into the coldest shadows and darkest dens.~
+== DAWNMAS ~The blessing is bestowed. Go now with the Morninglord’s light upon you—may his dawn ever rise within your heart, and may each step you take carry the promise of renewal.~
 DO ~SetGlobal("AC#PP_LathanderBlessing","GLOBAL",1) CreateVisualEffectObject("SPHOLYMT",Player1) CreateVisualEffectObject("SPHOLYMT",Player2) CreateVisualEffectObject("SPHOLYMT",Player3) CreateVisualEffectObject("SPHOLYMT",Player4) CreateVisualEffectObject("SPHOLYMT",Player5) CreateVisualEffectObject("SPHOLYMT",Player6)~ EXIT
 
 //BLESSING
@@ -531,49 +544,57 @@ IF~PartyHasItem("AC#PPWA") PartyHasItem("AC#PPPUB") Global("AC#PP_LathanderBless
 IF~~THEN REPLY ~I'm still working on this.~ EXTERN AC#PPEL4 cnt.02.01
 
 CHAIN AC#PPEL4 cnt.02.01
-~I see. Return to me when you're done with that part. Eldath bless you, my friend!~
+~I see. Return to me when you're done with that part. Eldath bless you!~
 EXIT
 
 CHAIN AC#PPEL4 have_blessings_have_flower_have_water
 //DO ~GiveItemCreate("AC#PPWA",Player1,1,0,0)~
-~We have the flower, we have the blessings. And we know where the poison was prepared. But you will also need the singing water of Eldath. Now, we're going to use that exact place to give the shape to the toxin and prepare the antidote.~
+~We have the flower, the singing water of Eldath, and we have the blessings. And we know where the poison was prepared. Now, we're going to use that exact place to give the shape to the toxin and prepare the antidote.~
 END
 IF~~THEN EXTERN AC#PPEL4 have_blessings_have_flower_have_water_02
 
 
 CHAIN AC#PPEL4 have_blessings_have_flower_have_water_02
-~What you need to do is bring these to Myth Unnohyr and place the blessed flower and the singing water of Eldath inside that cauldron you mentioned. When it all mixes, the remains of the poison, its source, the blessed flower and the water, it should conjure the manifestation of the toxin and when it's defeated, some antidote should be created.~
-==AC#PPEL4 ~We need toremember we are dealing with wild magic, dead magic, blessing and—it's an explosive concoction. But I think it may work—no: It has to work.~
+~You must remember: We are contending with wild magic, dead magic, and sacred blessing—a volatile mixture indeed. Yet I believe it shall hold… no, it must hold.~
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~It will. I know it.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~A risk must be taken, if a bird is to learn how to fly. And we are such birds. We need to do whatever we can, and we'll sly above the threats.~
 == RasaadJ IF ~InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN ~Even though we cannot be completely sure about how the dead magic zone may affect the plan, we should indeed do our best. There are people who depend on us.~
-==AC#PPEL4 ~Return to me with the antidote, and I promise you a proper reward my friend.~
+==AC#PPEL4 ~You must return to Myth Unnohyr and place the blessed flower and Eldath’s singing water within the malagent’s cauldron. When they mingle with the poison’s remnants, the toxin will take form—defeat it, and an antidote shall be wrought.~
+== AC#PPEL4 ~Return to me with the completed antidote, and you shall have both my gratitude and a fitting reward. May Eldath’s peace enfold you on your path and may shield you from all harm until we meet again.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",6)~ EXIT
 
 //ANTIDOTE
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",6)~ THEN AC#PPEL4 cnt.03.00
-~Have you created the antidote, my friend? Is that why you came back? To tell me the good news?~
+~Have you fashioned the antidote? Is that why you have returned—to bring me good news?~
 END
-IF~PartyHasItem("AC#PPANT")~THEN REPLY ~Yes. It is here. But that wasn't an easy task.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
-IF~~THEN REPLY ~No, not yet.~ EXTERN AC#PPEL4 cnt.03.01
+IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Yes. Here it is—but it was no easy task.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
+IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~The antidote is made. May it spare many lives.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
+IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Here—freshly wrought, and hard-won.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
+IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~It is done, and no small thanks to your guidance. Here is the remedy.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
+IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~This little vial cost me blood, sweat, and more than a few corpses. Take it, before I change my mind.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
+IF ~~ THEN REPLY ~Not yet.~ EXTERN AC#PPEL4 cnt.03.01
 
 CHAIN AC#PPEL4 cnt.03.01
-~I see. Please, return to me once you have it. It's very important and... and we're almost there.~
+~I understand. Return to me as soon as it is complete. This is of great import, and we are close now.~
 EXIT
 
+
 CHAIN AC#PPEL4 cnt.03.02
-~Yes! Oh, joyful day! You are truly a hero! And one of the most... heroic ones!~
-==AC#PPEL4 ~I thank you for everything you have done for us. For the people of Amn, and for the Duskwood Dell, of course. Just as a I promised, I have something for you. Hopefully it's going to help you during all sorts of missions and adventures.~
-==AC#PPEL4 ~I will use this antidote whenever we'll hear about someone struck by a magic-resistant disease or poison. This will truly save lives.~
-==AC#PPEL4 ~Whenever you'll need a place to stay and rest, Duskwell Dell will greet you with open arms, my friend.~
+~Oh, blessed day! You have done a deed of true compassion. Few could be called a greater friend to peace than you.~  
+== AC#PPEL4 ~With this antidote, we shall answer whenever word reaches us of one stricken by a poison or ailment untouched by magic. Through it, lives will be spared, and suffering eased.~  
+== AC#PPEL4 ~For all you have done—for the people of Amn, and for Duskwood Dell—I offer my deepest thanks. And as I promised, I have something for you. May it aid you in the trials and journeys yet before you.~  
+== AC#PPEL4 ~And know this: Whenever you are in need of shelter or rest, Duskwood Dell shall welcome you with open arms, under the peace of Eldath’s embrace.~  
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",7) GiveItemCreate("AC#PPRE",Player1,1,0,0) AddXPObject(Player1,4200) AddXPObject(Player2,4200) AddXPObject(Player3,4200) AddXPObject(Player4,4200) AddXPObject(Player5,4200) AddXPObject(Player6,4200)~ EXIT
+
 
 //FINISHED
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",7)~ THEN AC#PPEL4 cnt.04.00
-~It's good to see you my friend. As I once said, you're always welcome in Duskwood Dell.~
+~It gladdens me to see you again, <CHARNAME>. As I have said before, Duskwood Dell shall ever welcome you in peace.~  
 END
+IF~~THEN EXIT
+/*
 IF~~THEN REPLY ~Thank you.~ EXIT
 IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PPSymbolAskNow","GLOBAL",0)~THEN REPLY ~One of your sisters has been trying to make this Eldath emblem, but she cannot succeed. She is suffering from serious numbness in her hands. Perhaps you have some emblem, or a symbol I could give her. I think she deserves it.~ DO ~SetGlobal("AC#PPSymbolAskNow","GLOBAL",1)~ EXTERN AC#PPEL4 cnt.04.01
 IF~InMyArea("AC#PPMON")~THEN REPLY ~I can see our mutual friend came here to thank you for the symbol.~ EXTERN AC#PPEL4 cnt.04.02
@@ -585,6 +606,7 @@ DO ~GiveItemCreate("AC#PPSYM",Player1,1,0,0)~ EXIT
 CHAIN AC#PPEL4 cnt.04.02
 ~Yes. And I must say that it may be quite interesting to teach this one. I'm glad she came to me.~
 EXIT
+*/
 
 // Eldathyn high priest and novice
 BEGIN ~AC#PPST4~

@@ -1,11 +1,16 @@
 //ELHAN
 
 EXTEND_BOTTOM ~c6elhan2~ 47
-IF~Global("AC#PP_MythUnnohyr","GLOBAL",7)~THEN REPLY ~I helped followers of Eldath of Duskwood Dell. Perhaps they will help us if they find out we are going to face vampires and help elves from the Forest of Tethir.~ EXTERN c6elhan2 AC#PP.ELHAN
+IF~Global("AC#PP_MythUnnohyr","GLOBAL",7)~THEN REPLY ~I aided Eldath’s faithful in Duskwood Dell against a great evil in Myth Unnohyr. Perhaps they will aid us now, if they learn we face vampires threatening the elves of Tethir.~ EXTERN c6elhan2 elhan_myth_unnohyr 
 END
 
+CHAIN c6elhan2 elhan_myth_unnohyr
+~Myth Unnohyr! Long has it been since I heard that name. A city wholly cursed, said to have brought about its own downfall through great tragedy. And the priests of Eldath sent you there? Then surely they are in your debt.~  
+END
+IF ~~ THEN EXTERN c6elhan2 AC#PP.ELHAN
+
 CHAIN c6elhan2 AC#PP.ELHAN
-~I know the priest of Duskwood Dell. They are pacifist so I doubt they will help you, but perhaps they have potions and ointments that may help you during you fight with our enemies. If you're in good terms with them, talk to those Eldathyn and see if they can help you. Keep my advice in mind.~
+~But mark this: You know the priests of Duskwood Dell. They are pacifists, and I doubt they will take up arms in your cause. Yet mayhap they possess draughts and balms that may aid you in the struggle ahead. If you are on good terms with them, speak with those Eldathyn and see what help they may offer. Keep my counsel in mind.~  
 END
 IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~Can you help with special supplies? Holy water and stakes come to mind.~ DO ~AddJournalEntry(57714,INFO) EraseJournalEntry(97341) EraseJournalEntry(97340) AddJournalEntry(97342,QUEST) SetGlobal("ElhanWater","LOCALS",1) SetGlobal("AskedElhanForHolyWater","GLOBAL",1)~ EXTERN c6elhan2 48
 IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~I will do what I can, though Bodhi is very strong. Have you holy water and stakes?~ DO ~AddJournalEntry(57714,INFO) EraseJournalEntry(97341) EraseJournalEntry(97340) AddJournalEntry(97342,QUEST) SetGlobal("ElhanWater","LOCALS",1) SetGlobal("ToldElhanAboutBodhi","GLOBAL",1) SetGlobal("AskedElhanForHolyWater","GLOBAL",1)~ EXTERN c6elhan2 48
@@ -15,71 +20,69 @@ IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~You mentioned some shame before. 
 //DUSKWOOD DELL CH6 -- FIRST TALK
 
 BEGIN AC#PPMI
-
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",8)~ THEN AC#PPEL4 C6.QUEST.01.00
-~<CHARNAME>! You’ve arrived at a crucial moment. There’s trouble brewing, and you are involved, whether by choice or fate.~
-==AC#PPMI ~We all have a share in this, Alatoasz Berendim.~
-==AC#PPEL4 ~Allow me to introduce High Ranger Mismal Al'Visalle. Once of Gwaeron’s Slumber—now serving among the Mielikkians of Amn.~
-==AC#PPMI ~I appreciate the fine introduction, but we’re not gathered here to trade titles, I’m afraid. I wish it were so, but this is no simple matter.~
+~<CHARNAME>! You arrive at a crucial moment. Trouble stirs, and you are entwined in it—whether by choice or by fate.~  
+== AC#PPMI ~We all share in this burden, Alatoasz.~  
+== AC#PPEL4 ~Allow me to present Mismal Al’Visalle, once a ranger of Gwaeron’s Slumber, now serving among the Mielikkians of Amn.~  
+== AC#PPMI ~A gracious introduction, but we are not gathered here to trade titles, alas. I wish it were so. Yet this is no simple matter.~  
 END
-IF~~THEN REPLY ~You sound concerned.~
- EXTERN AC#PPMI C6.QUEST.01.01
-IF~~THEN REPLY ~Actually, Alatoasz, I was hoping to ask something of you.~ EXTERN AC#PPEL4 C6.QUEST.01.02
+IF ~~ THEN REPLY ~You sound troubled.~ EXTERN AC#PPMI C6.QUEST.01.01
+IF ~~ THEN REPLY ~Actually, Alatoasz, I was hoping to ask something of you.~ EXTERN AC#PPEL4 C6.QUEST.01.02
 
 CHAIN AC#PPMI C6.QUEST.01.01
-~Indeed, I am concerned—and not without cause.~
+~Indeed I am—and not without cause.~  
 END
-IF~~THEN REPLY ~Then tell me more.~ EXTERN AC#PPMI C6.QUEST.01.03
-IF~~THEN REPLY ~Go on. What’s this about?~ EXTERN AC#PPMI C6.QUEST.01.03
-IF~~THEN REPLY ~We all carry our share of burdens.~ EXTERN AC#PPMI C6.QUEST.01.03
+IF ~~ THEN REPLY ~Then tell me more.~ EXTERN AC#PPMI C6.QUEST.01.03
+IF ~~ THEN REPLY ~Go on. What is this about?~ EXTERN AC#PPMI C6.QUEST.01.03
+IF ~~ THEN REPLY ~We all must bear our share of burdens.~ EXTERN AC#PPMI C6.QUEST.01.03
 
 CHAIN AC#PPEL4 C6.QUEST.01.02
-~You will tell me everything in a moment, friend. Let Mismal introduce you to what we have been discussing for a while now.~
+~Your questions will be answered soon enough. But first, let Mismal speak of what we have been discussing at length.~  
 EXTERN AC#PPMI C6.QUEST.01.03
 
 CHAIN AC#PPMI C6.QUEST.01.03
-~I’ve heard of your deeds—how you defeated the priest of Talona. It compelled me to learn more, for I was certain I’d come across your name before. And indeed, I had. You helped prevent war between Amn and Baldur’s Gate. You thwarted the Iron Throne’s schemes in the Cloakwood. I must admit: That is no small legacy.~
-==AC#PPMI ~And I know you’ve been to Myth Unnohyr. It’s a strange place, as you well know—caught somewhere between life and death. But since your last battle there, things have worsened.~
+~I have heard of your deeds—you have walked in Myth Unnohyr. You know how strange it is, poised between life and death. But since your last battle there, the place has worsened.~  
 END
-IF~~THEN REPLY ~Worsened? How so? The Talonite is dead.~ EXTERN AC#PPMI C6.QUEST.01.04a
-IF~~THEN REPLY ~I had hoped that ordeal was finished. Why, by all the gods, does everyone always want something from me?~ EXTERN AC#PPMI C6.QUEST.01.04a
+IF ~~ THEN REPLY ~Worsened? How so? The Talonite is dead.~ EXTERN AC#PPMI C6.QUEST.01.04a
+IF ~~ THEN REPLY ~I had hoped that ordeal was finished. Why, in all the gods’ names, does everyone always want something from me?~ EXTERN AC#PPMI C6.QUEST.01.04a
 
 CHAIN AC#PPMI C6.QUEST.01.04a
-~Everything that happened at Myth Unnohyr woke something up. Something old.~
-==AC#PPMI ~I am not here to debate whether it stems from the Malagent, from you, or from Talona herself. That question no longer matters. What matters is this: The evil awakened there has begun to spread. Groves, woodland creatures—even the dryads—have been forced to flee. It feels as though the land itself is being consumed: Trees, ponds, and every quiet glade drawn into its hunger.~
-==AC#PPMI ~I came here to ask for your help. From the information I gathered, it seems like the power is of undead origin. We suspect a powerful Wyrd, a spirit that took over the dead body of Commander Elv-Esster Aened who died the very same place Myth Unnohyr became what it is today.~
+~The events at Myth Unnohyr roused something ancient.~
+== AC#PPMI ~I will not argue whether it arose from the malagent, from you, or from Talona herself—that question no longer matters. What matters is this: The evil awakened there has begun to spread. It feels as though the land itself is being consumed—trees, ponds, every quiet glade, all drawn into its hunger. Strange beings, remnants of the elven kin, now roam that place.~  
+== AC#PPMI ~From all I have gathered, the power reeks of undeath. We suspect a mighty Wyrd, a spirit that seizes the husks of the dead, has possessed the corpse of Commander Elv-Esster Aened, once leader of Myth Unnohyr’s guard. She was interred within a sealed sarcophagus—but the ward stone was taken, and the Wyrd slipped within to claim her body.~  
 END
-IF~Global("BodhiDead","GLOBAL",0)~THEN REPLY ~Truth be told, I came here because I wanted to ask for help with another monster. A powerful vampire named Bodhi. She and her brother, Irenicus, must be stopped.~ EXTERN AC#PPMI C6.QUEST.01.04b
-IF~Global("BodhiDead","GLOBAL",0)~THEN REPLY ~Heh. Funny thing. I'm also trying to stop a powerful vampire. Bodhi. She and her accomplice, Irenicus, are getting out of control.~ EXTERN AC#PPMI C6.QUEST.01.04b
-IF~Global("BodhiDead","GLOBAL",1)~THEN REPLY ~I actually just killed a powerful vampire. Bodhi. Her brother, Irenicus, should be next.~ EXTERN AC#PPMI C6.QUEST.01.04b
+IF ~Global("BodhiDead","GLOBAL",0)~ THEN REPLY ~Truth be told, I need help with another monster: a vampire named Bodhi. She and her brother, Irenicus, must be stopped.~ EXTERN AC#PPMI C6.QUEST.01.04b
+IF ~Global("BodhiDead","GLOBAL",0)~ THEN REPLY ~Heh. Fitting. I too am hunting a powerful undead—Bodhi. She and her ally, Irenicus, are beyond control.~ EXTERN AC#PPMI C6.QUEST.01.04b
+IF ~Global("BodhiDead","GLOBAL",1)~ THEN REPLY ~I have already slain one such monster: the vampire Bodhi. Her brother, Irenicus, shall follow.~ EXTERN AC#PPMI C6.QUEST.01.04b
 
 CHAIN AC#PPMI C6.QUEST.01.04b
-~Bodhi? Irenicus? I know these names. I've been to Suldanessellar and I know Elhan. Now that you said all of this—I suspect you know him too.~
-==AC#PPMI ~We can help each other. And that's what I've been telling the Hight Priest.~
-==AC#PPEL4 ~And I've been trying to tell you brother that Duskwood Dell is a place of peace. We took an active part in stopping the Malagent, but that was in the name of peace and to obtain the antidote for those that may need it.~
-==AC#PPMI ~Peace is a privilege we may not be cannot afford right now, Alatoasz.~
-==AC#PPEL4 ~One can always afford peace, Mismal.~
-==AC#PPMI ~You see why we cannot push this matter forward, in the direction of a needed solution, <CHARNAME>. Alatoasz doesn't want to be part of this.~
-==AC#PPEL4 ~We are pacifist and we've been walking a thin line before. <CHARNAME> helped, we assisted him. Eldath guided us so we could finally welcome tranquility in our hearts and souls, not to start another war.~
-==AC#PPEL4 ~As I told you, we can still help. You can tell everyone that needs to hide, that as long as they can follow our rules, they are welcome here. This may become their sanctuary as well.~
-==AC#PPMI ~We may need more than a place to hide. And perhaps we need you.~
+~Bodhi? Irenicus? Aye, I know those names. I have walked in Suldanessellar and spoken with Elhan. And now that you speak them—I suspect you know him as well. Perhaps we may aid each other.~  
+== AC#PPEL4 ~Duskwood Dell is a place of peace. We helped to bring down the malagent, yes—but it was for peace’s sake, and to craft the antidote for those in need.~  
+== AC#PPMI ~Peace is a luxury we may not afford, Alatoasz.~  
+== AC#PPEL4 ~Peace is never a luxury, Mismal. It is the path itself.~  
+== AC#PPMI ~You see the divide, <CHARNAME>. Alatoasz will not commit further. He sees no road but withdrawal.~  
+== AC#PPEL4 ~We are pacifists, and ever we have walked a narrow line. <CHARNAME> aided us, we aided him. Eldath guided us—to find stillness in heart and soul, not to rouse another war.~  
+== AC#PPEL4 ~Yet as I said, we can still offer aid. Tell those who must hide that, so long as they respect our ways, they shall be welcome here. This sanctuary may be theirs as well.~  
+== AC#PPMI ~We may need more than refuge. We may need you as well.~  
 END
-IF~~THEN REPLY ~Right...~ EXTERN AC#PPMI C6.QUEST.01.04c
-IF~~THEN REPLY ~I will gladly help. There is a chance the situation at Myth Unnohyr became more complicated because of me.~ EXTERN AC#PPMI C6.QUEST.01.04c
-IF~~THEN REPLY ~Perhaps you do. The question is if you are ready to provide me with a proper reward in exchange for all the effort I would need to put in this.~ EXTERN AC#PPMI C6.QUEST.01.04c
+IF ~~ THEN REPLY ~Right...~ EXTERN AC#PPMI C6.QUEST.01.04c
+IF ~~ THEN REPLY ~I will gladly help. Perhaps the trouble at Myth Unnohyr grew worse because of me.~ EXTERN AC#PPMI C6.QUEST.01.04c
+IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I will try to help.~ EXTERN AC#PPMI C6.QUEST.01.04c
+IF ~~ THEN REPLY ~Perhaps you do. The question is whether you will provide me with a reward worthy of the effort this will demand.~ EXTERN AC#PPMI C6.QUEST.01.04c
+
 
 CHAIN AC#PPMI C6.QUEST.01.04c
-~It looks like you are dealing with powerful undead creatures yourself. And Alatoasz has something that could both help with the Wyrd and creatures like Bodhi.~
-==AC#PPEL4 ~High Ranger...~
-==AC#PPMI ~Eldath and Mielikki are like sisters. You are supposed to help us!~
-==AC#PPEL4 ~I won't raise my hand in this fight, Mismal Al'Visalle. There are principles and in these circumstances, in the light of previous happenings, I feel I need them more than I ever did.~
-==AC#PPMI ~Fine. We won't force your hand, but please, let <CHARNAME> take the sword. And I won't ask you for anything else. I beg you. The blade cannot even harm the living, you will still protect life, it's only the undead that may be affected by it.~
-==AC#PPEL4 ~I...~
-==AC#PPEL4 ~I will let <PRO_HIMHER> take it. You are right, it cannot do harm to living things. But I cannot do more. I won't do more.~
-==AC#PPMI ~That should be enough.~
-==AC#PPMI ~Myth Unnohyr is now protected by this barrier. I can get you and the blade inside, but you will need to get the barrier down to leave the place. I presume that killing the Wyrd may be your way out.~
-==AC#PPMI ~You will also receive the Memory of the Myths. A powerful sword able to hurt even the strongest of undead. It cannot harm the living, things but its spectral blade can hurt the undead.~
-==AC#PPMI ~It shall also be your reward. You will be able to use it to slay those like Bodhi.~
+~It seems you, too, are beset by powers of undeath. And Alatoasz holds something that could aid against both the Wyrd and creatures such as Bodhi.~  
+== AC#PPEL4 ~High ranger...~  
+== AC#PPMI ~Eldath and Mielikki are as sisters. You are bound to stand with us!~  
+== AC#PPEL4 ~I will not raise my hand in this struggle, Mismal Al’Visalle. I am guided by principles, and after all that has transpired, I cling to them more tightly than ever.~  
+== AC#PPMI ~So be it. We will not force your hand. But at least let <CHARNAME> bear the sword. I beg you, Alatoasz. The blade cannot harm the living—you will still guard life—yet against the undead it may tip the balance.~  
+== AC#PPEL4 ~I...~  
+== AC#PPEL4 ~Very well. <PRO_HESHE> may take it. You are right—the blade cannot wound the living. But I can do no more. I will do no more.~  
+== AC#PPMI ~That shall suffice.~  
+== AC#PPMI ~Myth Unnohyr now lies sealed by a barrier. I can bring you and the blade within, but to depart you must tear the ward asunder. I believe the Wyrd’s death will be the key.~  
+== AC#PPMI ~And we should take the Memory of the Myths—a sword forged to strike even the mightiest undead. It cannot touch the living, but its spectral edge shall wound the unliving foe.~  
+== AC#PPMI ~Let it serve also as your reward, for with it you may cut down even those like Bodhi and the Wyrd.~  
 END
 IF~~THEN REPLY ~Wyrd name, wyrd plan, wyrd ending.~ EXTERN AC#PPMI C6.QUEST.01.05
 IF~~THEN REPLY ~We have a deal.~ EXTERN AC#PPMI C6.QUEST.01.05
@@ -87,11 +90,7 @@ IF~~THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.06
 IF~~THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait, thus... I need to leave.~ EXTERN AC#PPMI C6.QUEST.01.07
 
 CHAIN AC#PPMI C6.QUEST.01.05
-~Wonderful!~
-==AC#PPMI ~When you're ready, we'll go with Alatoasz's blessing to our dryad-friend where heroes leave their weapons.~
-==AC#PPEL4 ~...~
-==AC#PPMI ~I can also hear your discontent, Alatoasz. Anyway, once we have the blade, I will open a gate to Myth Unnohyr. It should take you close enough, but due to the dead and the wild magic, I won't be able to help you more, so prepare yourself as thoroughly as you can.~
-==AC#PPMI ~Let me know when you're ready.~
+~When you're ready, we'll go with Alatoasz's blessing to the grotto where heroes surrender their weapons. Let me know when you're ready.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
 
 CHAIN AC#PPMI C6.QUEST.01.06
@@ -259,8 +258,8 @@ CHAIN AC#PPHEL HELPER.2.07
 ==AC#PPHEL ~Elv-Esster tried to save us, but she failed. Her magic became unpredictable. We knew we had to ask Mythrien for help, so we sent our son for this... relic... The Green Rose of Mythrien.~
 ==AC#PPHEL ~It wasn't required for the Mythal to function, but... it was the symbol of our loyalty. Of our hope... We wanted to enter the House of Mythrien with it, but—my son...~
 ==AC#PPHEL ~He also died... just like his mother. And just like... me.~
-==AC#PPHEL ~But the rose is still there...! I can feel it. Under one of the bodied! You might have missed it, most did, as he had it under his vest, he wanted to protect it from all the chaos that befell our home...~
-==AC#PPHEL ~Search the bodies above us... Find the body of my son and take the rose to the temple of Mythrien, in the very heart of our city, near the magic passage that brought you here. You had to alk through that place.~
+==AC#PPHEL ~But the rose is still there...! I can feel it. You might have missed it, most did... but the roses still blossom to this dark day~
+==AC#PPHEL ~Find the rose and take it to the temple of Mythrien, in the very heart of our city, near the magic passage that brought you here. You had to walk through that place.~
 ==AC#PPHEL ~Then, place the rose under Mythrien's feet... He will answer. I know it.~
 ==AC#PPHEL ~Ask him for help. Destroy the wyrd. Heal this place. And let peace inside these walls...~
 END
