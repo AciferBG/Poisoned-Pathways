@@ -455,6 +455,11 @@ CHAIN AC#PPEL4 cnt.01.03
 == AC#PPEL4 ~I cannot bestow all three blessings myself. For this, we must seek the aid of other faiths. And I know well where to turn for such help.~
 == AC#PPEL4 ~You must travel to Athkatla and speak with the priest of Ilmater in the Slums. Ask him for the Blessing of Compassion. He and I are on good terms—I believe he will support our cause without hesitation.~
 == AC#PPEL4 ~You should also visit the Church of Lathander in the city and request the Blessing of Renewal. I shall send a white dove ahead with my message. By the time you arrive, they will already be prepared to aid you.~ 
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Compassion? Renewal? Sounds like a feast fer cowards.~
+== HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~Oh splendid. A holy scavenger hunt. Shall we embroider the petals with lace as well?~
+== ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~Renewal? Life? You would have us grovel before Ilmater’s sniveling flock? The weak cling to such words when truth and strength fail them.~
+== DORNJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~Compassion is for the meek. Renewal is for the broken. Neither are for me.~
+== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~If I wanted sermons, I would have stayed in Thay—at least there they come with necromancy and a sacrifice.~
 == AC#PPEL4 ~As for the third part, I shall bestow upon you the Blessing of Life myself.~
 DO ~StartCutSceneMode() ForceSpell(Myself,DO_NOTHING) SmallWait(2) CreateVisualEffectObject("AC#PPRAI",Player1) CreateVisualEffectObject("AC#PPRAI",Player2) CreateVisualEffectObject("AC#PPRAI",Player3) CreateVisualEffectObject("AC#PPRAI",Player4) CreateVisualEffectObject("AC#PPRAI",Player5) CreateVisualEffectObject("AC#PPRAI",Player6) Wait(2) SetGlobal("AC#PP_MythUnnohyr","GLOBAL",4) SmallWait(1) EndCutSceneMode()~ EXIT
 
@@ -560,6 +565,11 @@ CHAIN AC#PPEL4 have_blessings_have_flower_have_water_02
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~A risk must be taken, if a bird is to learn how to fly. And we are such birds. We need to do whatever we can, and we'll sly above the threats.~
 == RasaadJ IF ~InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN ~Even though we cannot be completely sure about how the dead magic zone may affect the plan, we should indeed do our best. There are people who depend on us.~
 ==AC#PPEL4 ~You must return to Myth Unnohyr and place the blessed flower and Eldath’s singing water within the malagent’s cauldron. When they mingle with the poison’s remnants, the toxin will take form—defeat it, and an antidote shall be wrought.~
+== AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Then let the vile concoction be given flesh, that we might smite it in righteous combat!~
+== NEERAJ IF ~InParty("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN ~This is either going to end in glorious salvation... or one really big kaboom.~
+== IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~So, we toss blessings in, stir thrice clockwise, and hope it doesn’t explode in our faces? Sounds like my first cooking attempts with Winthrop back in Candlekeep.~
+== MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN ~If the cauldron brews a monster, then we make chopped monster stew! Justice will be well-fed today!~
+== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~If it starts sprouting tentacles, just remember: Tentacles first, clean-up later. Worked for Aunt Belba’s laundry cauldron.~
 == AC#PPEL4 ~Return to me with the completed antidote, and you shall have both my gratitude and a fitting reward. May Eldath’s peace enfold you on your path and may shield you from all harm until we meet again.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",6)~ EXIT
 

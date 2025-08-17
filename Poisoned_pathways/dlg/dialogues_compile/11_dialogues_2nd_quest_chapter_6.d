@@ -95,7 +95,7 @@ DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
 
 CHAIN AC#PPMI C6.QUEST.01.06
 ~I see.~
-==AC#PPMI ~If you decide to help, we'll go with Alatoasz's blessing to our dryad-friend where heroes leave their weapons.~
+==AC#PPMI ~If you decide to help, we'll go with Alatoasz's blessing to the grotto where heroes surrender their weapons.~
 ==AC#PPEL4 ~...~
 ==AC#PPMI ~I can also hear your discontent, Alatoasz. So, <CHARNAME>, if you decide to help, I will open a gate to Myth Unnohyr, but due to the dead and the wild magic, I won't be able to help you more. If you decide the reward is tempting, or your morality get to you, come to me, and we should start our mission.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
