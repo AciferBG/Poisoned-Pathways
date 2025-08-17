@@ -383,27 +383,34 @@ IF ~~ THEN REPLY ~One thing keeps bugging me: Are there any creatures I'm actual
 	  IF ~~ THEN REPLY ~That’s all I needed to know.~ GOTO no_news
 
 CHAIN IF ~~ THEN AC#PPEL4 no_news
-~Very well. You will know best how to proceed. I shall wait for your return.~
+~You know best how to proceed. I shall wait here for your return.~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPEL4 malagent_dead
-~That is good news! Though I am no friend of violence, in some cases, it is better that a wrongdoer troubles another world, rather than this one.~
-== AC#PPEL4 ~You deserve a fine reward for what you have done for us, Amn, and all potential victims of that diabolical toxin. Here. I gathered as much gold as I could for you, my friend.~
+~That is heartening news! Though I am no friend to violence, at times it is better that a wrongdoer troubles another realm rather than this one.~
+== AC#PPEL4 ~You are most deserving of a reward for what you have done—for us, for Amn, and for all who might have fallen prey to that vile toxin. Here, I have gathered as much gold as I could for you.~
 DO ~GiveGoldForce(6500) AddXPObject(Player1,6200) AddXPObject(Player2,6200) AddXPObject(Player3,6200) AddXPObject(Player4,6200) AddXPObject(Player5,6200) AddXPObject(Player6,6200)~
-== AC#PPEL4 ~You have done us a great service. For that, I thank you! The gates of Duskwood Dell shall always be open to you. And... if you have some more time, we could still make the situation even better.~
-== AC#PPEL4 ~But—I'm sure you are tired. Rest. And stay with us as long as you'd like. If you think you can spare some more of your time on fighting against Talona's wicked plans, visit me. I'll present you my offer.~
+== AC#PPEL4 ~You have rendered us a great service, and for that I thank you! Yet the matter may still be set to greater rights.~
 END
-IF~PartyHasItem("AC#PPPUB")~THEN REPLY ~And what about the plant you told me to bring?~ EXTERN AC#PPEL4 malagent_dead_flo
-IF~!PartyHasItem("AC#PPPUB")~THEN REPLY ~Understood.~ EXTERN AC#PPEL4 malagent_dead_no_flo
-IF~~THEN REPLY ~I'm half-asleep right now. We'll tak some other time. Toodles!~ DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",2)~ EXIT
+IF ~~ THEN EXTERN AC#PPEL4 antidote_quest_01
+
+CHAIN IF ~~ THEN AC#PPEL4 antidote_quest_01
+~With the proper antidote, we could nullify all the poisons this venom-brewer has already loosed upon the land. But to craft it, we require a sample of the plant the Malagent used for his foul draughts. Were you able to secure a specimen of Groveglove?~
+END
+IF ~PartyHasItem("AC#PPPUB")~ THEN REPLY ~I have brought you a specimen of that plant.~ EXTERN AC#PPEL4 malagent_dead_flo
+IF ~PartyHasItem("AC#PPPUB")~ THEN REPLY ~Would this little flower be the one you seek?~ EXTERN AC#PPEL4 malagent_dead_flo
+IF ~!PartyHasItem("AC#PPPUB")~ THEN REPLY ~I have not yet come across such a plant.~ EXTERN AC#PPEL4 malagent_dead_no_flo
+IF ~~ THEN REPLY ~I am weary and would rest now. Let us speak of this another time.~ EXTERN AC#PPEL4 malagent_dead_no_flo
+
 
 CHAIN AC#PPEL4 malagent_dead_flo
-~So you have it! Wonderful. Guard it for a another moment and—I promise to tell you what's on my mind. Just tell me when you're ready.~
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",2) SetGlobal("AC#PP_ShowFlower","GLOBAL",1)~ EXIT
+~So, you have it! That is most welcome news...~
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",2) SetGlobal("AC#PP_ShowFlower","GLOBAL",1)~ EXTERN AC#PPEL4 cnt.01.01
 
 CHAIN AC#PPEL4 malagent_dead_no_flo
-~Good. Now again: rest. And if you want to hear what's on my mind, just visit me whenever you're ready for some additional work, my friend.~
+~I see. Then I can only ask that you search once more within the ruins of Myth Unnohyr for this plant. Return to me when you have secured the specimen.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",2)~ EXIT
+
 
 //CONTINUATION AFTER THE MAIN PLOT:
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",2)~ THEN AC#PPEL4 cnt.01.00
@@ -422,37 +429,45 @@ CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",3)~ THEN AC#PPEL4 cnt.01.0B
 END
 IF~PartyHasItem("AC#PPPUB")~THEN REPLY ~Yes, I have it with me.~ EXTERN AC#PPEL4 cnt.01.01
 IF~!PartyHasItem("AC#PPPUB")~THEN REPLY ~No, not yet.~ EXTERN AC#PPEL4 cnt.01.02
-IF~~THEN REPLY ~Ah—give me a moment. I’ll be back shortly.~ EXIT
+IF~~THEN REPLY ~Give me a moment. I’ll be back shortly.~ EXIT
 
 CHAIN AC#PPEL4 cnt.01.02
-~You... you don’t have it? That is most unfortunate.~
+~You don’t have it? That is most unfortunate.~
 ==AC#PPEL4 ~If we are to prepare the antidote, the flower is essential. Please, continue your search. I shall remain here and wait. May Eldath guide your steps.~
 EXIT
 
 CHAIN AC#PPEL4 cnt.01.01
-~Wonderful! Not let's see...~
-== AC#PPEL4 ~It's in a good state, yes. And it's rather big, so... it should be enough, yes!~
-== AC#PPEL4 ~I searched all my books when you were trying to stop our enemy and I might have found a way to create an antidote. To create it, we need the flower and we need to know the exact spot, the cauldron or laboratory when it was created.~
+~Let me take a look at the plant. Keep it with you, however, for you shall soon have need of it. So, this is the Groveglove—grown in a dead-magic zone within Myth Unnohyr. How very curious...~
+== AC#PPEL4 ~It is in fine condition, yes. And it has grown tall, laden with venomous blossoms—more than enough for an antidote!~
+== AC#PPEL4 ~While you strove to thwart our foe, I searched through all my books, and I believe I have found a way to fashion such an antidote. For it, we require both the flower and knowledge of the precise place—the cauldron or laboratory—where the poison was first brewed.~
 END
-IF~~THEN REPLY ~It's the spot where I fought the servant to Talona. There was a cauldron there. One with, what I presume, is an unfinished next batch of the poison.~ EXTERN  AC#PPEL4 cnt.01.03
+IF ~~ THEN REPLY ~I recall the place well. A cauldron stood there, steeped in the venom of his craft. It seemed the work was left unfinished.~ EXTERN AC#PPEL4 cnt.01.03
+IF ~~ THEN REPLY ~You mean the chamber where I struck down Talona’s servant? There was a cauldron there, no doubt meant for his next brew of poison.~ EXTERN AC#PPEL4 cnt.01.03
+IF ~~ THEN REPLY ~A cauldron, yes—I saw it when I fought him. The stench alone told me it was not yet complete.~ EXTERN AC#PPEL4 cnt.01.03
+IF ~~ THEN REPLY ~I did notice a cauldron there, though I had little mind for it while trading blows. If that is what you need, I can lead you to it.~ EXTERN AC#PPEL4 cnt.01.03
+IF ~~ THEN REPLY ~Oh, that bubbling pot? Looked like something half-finished—and wholly unpleasant.~ EXTERN AC#PPEL4 cnt.01.03
+
+
 
 CHAIN AC#PPEL4 cnt.01.03
-~Yes, that's exactly what I hoped for. But that's not all we need. Let me share what I have found in my books.~
-==AC#PPEL4 ~You see, we need a blessing of three different gods or goddesses to be engraved in this flower. One or two are not enough, the dead magic this flower was fed with is powerful. We need to mark this flower with life, sympathy and warmth.~
-==AC#PPEL4 ~And I know exactly where to turn for help. You must travel to Athkatla and speak with the priest of Ilmater in the Slums. Ask him for the Blessing of Sympathy. He and I are on good terms—I believe he will support our cause without hesitation.~
-=
-~You should also visit the Church of Lathander in the city and request the Blessing of Warmth. I will send a white dove to carry my message. When you reach the temples, they will already be prepared to aid you.~ 
-=
-~As for the third part, I shall grant you the Blessing of Life myself.~
-DO ~StartCutSceneMode() SmallWait(2) CreateVisualEffectObject("SPRAISEI",Player1) CreateVisualEffectObject("SPRAISEI",Player2) CreateVisualEffectObject("SPRAISEI",Player3) CreateVisualEffectObject("SPRAISEI",Player4) CreateVisualEffectObject("SPRAISEI",Player5) CreateVisualEffectObject("SPRAISEI",Player6) Wait(2) SetGlobal("AC#PP_MythUnnohyr","GLOBAL",4) SmallWait(1) EndCutSceneMode()~ EXIT
+~That is precisely what I had hoped. Yet more is still required. Allow me to share what I discovered in my books.~
+== AC#PPEL4 ~Know this: Three blessings of the gods must be inscribed upon this flower. One or two alone shall not avail, for the dead magic that has fed it is grievously strong. Only when it is sanctified with life, compassion, and renewal may the corruption be purged.~ 
+== AC#PPEL4 ~I cannot bestow all three blessings myself. For this, we must seek the aid of other faiths. And I know well where to turn for such help.~
+== AC#PPEL4 ~You must travel to Athkatla and speak with the priest of Ilmater in the Slums. Ask him for the Blessing of Compassion. He and I are on good terms—I believe he will support our cause without hesitation.~
+== AC#PPEL4 ~You should also visit the Church of Lathander in the city and request the Blessing of Renewal. I shall send a white dove ahead with my message. By the time you arrive, they will already be prepared to aid you.~ 
+== AC#PPEL4 ~As for the third part, I shall bestow upon you the Blessing of Life myself.~
+DO ~StartCutSceneMode() ForceSpell(Myself,DO_NOTHING) SmallWait(2) CreateVisualEffectObject("AC#PPRAI",Player1) CreateVisualEffectObject("AC#PPRAI",Player2) CreateVisualEffectObject("AC#PPRAI",Player3) CreateVisualEffectObject("AC#PPRAI",Player4) CreateVisualEffectObject("AC#PPRAI",Player5) CreateVisualEffectObject("AC#PPRAI",Player6) Wait(2) SetGlobal("AC#PP_MythUnnohyr","GLOBAL",4) SmallWait(1) EndCutSceneMode()~ EXIT
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",4) Global("AC#PP_BonusBlessing","GLOBAL",0)~ THEN AC#PPEL4 cnt.01.04
-~Done. These blessings should also apply to you, as perhaps if the flower somehow resists even prayers, then maybe your hands will at least pass it to the flower.~
+~Done. These blessings should rest upon you as well, so that should the flower resist even prayer, your own hands may yet bear the grace to pass them on.~
 END
 IF~OR(2) Alignment(Player1,MASK_GOOD) Alignment(Player1,MASK_GENEUTRAL) OR(3) Class(Player1,CLERIC_ALL) Class(Player1,DRUID_ALL) Class(Player1,PALADIN_ALL)~THEN REPLY ~What about me? Perhaps I should bless the flower, too? I am also a person of faith!~ EXTERN  AC#PPEL4 cnt.01.05a
 IF~Alignment(Player1,MASK_EVIL) OR(3) Class(Player1,CLERIC_ALL) Class(Player1,DRUID_ALL) Class(Player1,PALADIN_ALL)~THEN REPLY ~What about me? Perhaps I should bless the flower, too? I am also a person of faith!~ EXTERN  AC#PPEL4 cnt.01.05b
-IF~~THEN REPLY ~Right. I should get back to work then. I presume that once I have the blessings, I should return here, to you. Yes?~ EXTERN AC#PPEL4 cnt.01.06
-IF~~THEN REPLY ~I hope you'll pay me for all the effort and time I'm supposed to invest in this?~ EXTERN AC#PPEL4 cnt.01.07
+IF ~~ THEN REPLY ~Very well. Once the blessings are gathered, I shall return to you without delay.~ EXTERN AC#PPEL4 cnt.01.08
+IF ~~ THEN REPLY ~I will do as you ask, though it seems no simple errand.~ EXTERN AC#PPEL4 cnt.01.08
+IF ~~ THEN REPLY ~If the gods themselves are to be invoked, I can only hope the reward proves as divine as the task.~ EXTERN AC#PPEL4 cnt.01.07
+IF ~~ THEN REPLY ~I trust there will be due reward for all the effort and time this task demands of me?~ EXTERN AC#PPEL4 cnt.01.07
+
 
 CHAIN AC#PPEL4 cnt.01.05a
 ~I still believe these priests should help us, I already sent some letters, they will be expecting you, but... I suppose your blessing can be helpful, too.~ 
@@ -464,10 +479,6 @@ EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",4) Global("AC#PP_BonusBlessing","GLOBAL",1)~ THEN AC#PPEL4 cnt.01.0BB
 ~Thank you. But remember that we will also need the blessings of the two priests I mentioned. They were heads of their churches for a while, this isn't just magic what we're doing, it's symbolic. It's faith. And hope.~
-EXTERN AC#PPEL4 cnt.01.08
-
-CHAIN AC#PPEL4 cnt.01.06
-~Yes.~
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN AC#PPEL4 cnt.01.07
@@ -487,22 +498,23 @@ SetGlobal("AC#PP_HolyWater","GLOBAL",1)~ EXIT
 //ILMATER
 
 EXTEND_BOTTOM ~SLILMAT~ 6
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Symphathy. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from Duskwood Dell. I have this flower here and I need a Blessing of Compassion. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
 END
 
 EXTEND_BOTTOM ~SLILMAT~ 0
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Symphathy. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_IlmaterBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from Duskwood Dell. I have this flower here and I need a Blessing of Compassion. I believe you may have already received a letter describing the details.~ EXTERN SLILMAT AC#IL.BLESS
 END
 
 CHAIN SLILMAT AC#IL.BLESS
-~Ah. Yes. Hmm, I thought they would send someone of their own, but you shall receive my blessing. Ilmater, watch over those that need you the most. Weep for them and equip us with hope.~
-== SLILMAT ~Take the blessing, my child, and weep for others, just like my god wept for you and your success.~
+~Ah… yes. I had thought they would send one of their own, yet it matters not. You have come, and you shall not be denied my blessing.~  
+== SLILMAT ~Hear me, Ilmater, Crying God, Endurer of all torments. Look with pity upon those who suffer and grant them the strength to endure. Let their burdens be eased, if only for a moment, and let their pain be mine to bear. Weep for the wounded, shield the broken, and clothe us all in patience and mercy. In your compassion lies our only hope—so let that hope flow now into this flower, that it may carry solace where poison once was sown.~  
+== SLILMAT ~The blessing is given. Take it, my child, and let your heart weep for others, as my god has ever wept for you.~
 DO ~SetGlobal("AC#PP_IlmaterBlessing","GLOBAL",1) CreateVisualEffectObject("SPARMOUR",Player1) CreateVisualEffectObject("SPARMOUR",Player2) CreateVisualEffectObject("SPARMOUR",Player3) CreateVisualEffectObject("SPARMOUR",Player4) CreateVisualEffectObject("SPARMOUR",Player5) CreateVisualEffectObject("SPARMOUR",Player6)~ EXIT
 
 //LATHANDER
 
 EXTEND_BOTTOM ~DAWNMAS~ 0
-IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_LathanderBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Warmth. I believe you may have already received a letter describing the details.~ EXTERN DAWNMAS AC#DM.BLESS
+IF~PartyHasItem("AC#PPPUB") Global("AC#PP_MythUnnohyr","GLOBAL",5) Global("AC#PP_LathanderBlessing","GLOBAL",0)~THEN REPLY ~I was sent here from the Duskwood Dell. I have this flower here and I need a Blessing of Renewal. I believe you may have already received a letter describing the details.~ EXTERN DAWNMAS AC#DM.BLESS
 END
 
 CHAIN DAWNMAS AC#DM.BLESS

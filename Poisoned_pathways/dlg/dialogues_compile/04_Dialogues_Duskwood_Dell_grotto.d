@@ -24,6 +24,7 @@ CHAIN IF ~Global("AC#PP_TradeWeapons","GLOBAL",1)~ THEN AC#PPDR1 hello_trade_wea
 ~A word with you, <PRO_RACE>. I see your weapons. Though I may not understand it, I can tell you cannot yet part with those you bear—at least not all of them. Others, perhaps, you could.~
 END
 IF ~~ THEN REPLY ~What do you mean by that?~ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~ EXTERN AC#PPDR1 trade_weapons_02
+IF ~~ THEN REPLY ~Could you perhaps be a little less cryptic?~ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~ EXTERN AC#PPDR1 trade_weapons_02
 IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#PPDR1 bye_trade_weapons
 
 CHAIN IF ~~ THEN AC#PPDR1 bye_trade_weapons
@@ -32,12 +33,12 @@ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",10)~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_02
-~It is rare that... people like you pass through here—those who do not seek peace, but simply move on. You have seen many battles, of that I am sure. And you have seen many weapons whose owners are no longer among the living.~
+~It is rare that people like you pass through here—those who do not seek peace, but simply move on. You have seen many battles, of that I am sure. And you have seen many weapons whose owners are no longer among the living.~
 END
 IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_03
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_03
-~You gather these weapons, sell them... and a new hand wields them to bring more death and suffering. It does not have to be so—not anymore.~
+~You gather these weapons, sell them, and a new hand wields them to bring more death and suffering. It does not have to be so—not anymore.~
 END
 IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_04
 
@@ -45,19 +46,31 @@ CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_04
 ~If you were to bring such weapons here instead, they would harm no one again. Here, in Eldath’s embrace, they would be kept safe. It costs you nothing—you still keep your own arms. But those you no longer need, leave them here.~
 END
 IF ~~ THEN REPLY ~You want to take all the weapons I find from my enemies?~ EXTERN AC#PPDR1 trade_weapons_05
+IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#PPDR1 bye_trade_weapons
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_05
 ~Not all weapons—that would be more than even our sacred grove could bear. No, I mean the special ones, the unique ones. Those that have been swung in hundreds of battles, that have taken hundreds of lives. Bring such weapons here, and Eldath will bless you.~
 END
 IF ~~ THEN REPLY ~What do I get in return?~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get
+IF ~~ THEN REPLY ~I never would have guessed you deal in weapons.~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get
 IF ~~ THEN REPLY ~Selling those weapons is how I make my living!~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_what_do_i_get
-~I... I cannot give you gold. But Eldath’s blessing is yours to take. With each weapon you surrender, she will grace you—granting you strength and vitality beyond what killing alone could bring. With every blade you give up, you will grow and thrive, even as others will *not* die by it anymore.~ 
-=
+~I cannot give you gold. But Eldath’s blessing is yours to take. With each weapon you surrender, she will grace you—granting you life and vitality beyond what killing alone could bring. With every blade you give up, you grow and thrive, even as others will *not* die by it anymore.~ 
+END
+IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_hub
+
+CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_hub
 ~One less weapon, more life for you—that is Eldath’s bargain.~
 END
 IF ~~ THEN REPLY ~Which weapons exactly are we talking about?~ EXTERN AC#PPDR1 trade_weapons_which_weapons
+IF ~~ THEN REPLY ~You must be clearer about what I gain from this trade.~ EXTERN AC#PPDR1 trade_weapons_exact_benefit
+
+	CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_exact_benefit
+	~Weapons take life. Eldath gives life. If you give up a weapon, your life force will increase—a little more with each one surrendered.~
+	END
+	IF ~~ THEN REPLY ~Which weapons exactly are we talking about?~ EXTERN AC#PPDR1 trade_weapons_which_weapons
+	IF ~~ THEN REPLY ~Not a chance!~ EXTERN AC#PPDR1 bye_trade_weapons
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_which_weapons
 ~You will know them—the weapons that bear a name. A named weapon has claimed many lives. Such weapons will earn you Eldath’s blessing.~  
@@ -65,6 +78,7 @@ CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_which_weapons
 ~And those that have already become legend will grant you even greater vitality. So, what do you say?~
 END
 IF ~~ THEN REPLY ~Do I have any such weapons with me?~ EXTERN AC#PPDR1 trade_root
+IF ~~ THEN REPLY ~You must be clearer about what I gain from this trade.~ EXTERN AC#PPDR1 trade_weapons_exact_benefit
 IF ~~ THEN REPLY ~I will think on it.~ EXTERN AC#PPDR1 trade_think_about_it
 IF ~~ THEN REPLY ~Not a chance!~ EXTERN AC#PPDR1 bye_trade_weapons
 
@@ -81,6 +95,7 @@ IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN 
 IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPDR1 who_are_you
 IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~I have weapons I’d like to lay to rest here.~ EXTERN AC#PPDR1 trade_root
+IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~Remind me, how was it again with the weapons I was to give you?~ EXTERN AC#PPDR1 trade_weapons_hub
 IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY ~Your High Priest has sent me. I am to collect a carafe of Eldath’s sacred singing water.~ EXTERN AC#PPDR1 need_singing_water
 
@@ -91,7 +106,7 @@ IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY ~Your High Priest has sent 
 
 
 	CHAIN IF ~~ THEN AC#PPDR1 who_are_you
-	~I am a dryad, bound to this grove. Long ago, Eldath’s touch calmed my frightened heart, and since then I serve as her gentle warden here. My spirit is tied to its trees, its waters, and the quiet breath of Eldath herself.~ 
+	~I am a spirit bound to this grove. Long ago, Eldath’s touch calmed my frightened heart, and since then I serve as her gentle warden here. My soul is tied to its waters and the quiet breath of Eldath herself.~ 
 	END
 	IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place
 	IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place_2
@@ -191,13 +206,13 @@ IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#P
 
 // ---------- ROOT ----------
 CHAIN IF ~~ THEN AC#PPDR1 trade_root
-~If you carry steel born of quarrel or grief, the waters can quiet it. Will you trade a weapon for a touch more life in you?~
+~You would surrender a magic weapon here? Very well—Eldath’s waters shall receive it. Will you trade a weapon for a touch more life within you?~
 END
 		IF ~~ THEN REPLY ~I’d like to surrender a legendary magical weapon.~ EXTERN AC#PPDR1 trade_legend_menu
 		IF ~~ THEN REPLY ~I’d like to surrender a magical weapon.~ EXTERN AC#PPDR1 trade_lesser_menu
 		IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 no_trade_bye
 		IF ~~ THEN REPLY ~Not now.~ EXTERN AC#PPDR1 no_trade_bye
-		IF ~~ THEN REPLY ~And what do I gain from this?~ EXTERN AC#PPDR1 trade_gain
+		IF ~~ THEN REPLY ~What do I gain from this?~ EXTERN AC#PPDR1 trade_gain
 
 	CHAIN IF ~~ THEN AC#PPDR1 trade_gain
 	~You shall receive a blessing of Eldath—one that will help you bear the weight of life a little more lightly.~
@@ -208,7 +223,7 @@ END
 
 	  
 	  CHAIN IF ~~ THEN AC#PPDR1 trade_gain_02
-    ~Parting with a weapon is an act of strength—strength that grants you vitality.~
+    ~Parting with a weapon grants you vitality.~
 	= ~With each weapon surrendered, you’ll feel your life grow—just a little for a lesser blade, more for a legendary one. Only Eldath knows the true worth of each weapon that vanishes from the world.~
 	END
 	IF ~~ THEN REPLY ~That’s all I wanted to know.~ EXTERN AC#PPDR1 trade_root
@@ -471,7 +486,7 @@ END
 // =====================================================
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_lesser_menu
-~Quarrels don’t need legends to cut deep. Which magical weapons will you surrender?~
+~A wise decision. Which magical weapons will you surrender?~
 END
 
 // Skullcrusher +3 (BLUN18)
