@@ -51,6 +51,14 @@ IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_05
 ~Not all weapons—that would be more than even our sacred grove could bear. No, I mean the special ones, the unique ones. Those that have been swung in hundreds of battles, that have taken hundreds of lives. Bring such weapons here, and Eldath will bless you.~
+== AerieJ IF ~InParty("aerie") !StateCheck("aerie",CD_STATE_NOTVALID)~ THEN ~That... that sounds right. So much pain lingers in these blades. To put them to rest would be a kindness.~
+== KeldorJ IF ~InParty("keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ THEN ~A wise proposal. Far too many weapons of dread pass from hand to hand, leaving only grief behind.~
+== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~Yes, splendid. Let us all hand our power to the shrubbery. Truly, a masterstroke of silly strategy.~
+== DORNJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~What weak sentiment. Weapons are meant to kill. I will not coddle blades that thirst for blood.~
+== NEERAJ IF ~InParty("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN ~Uh. I dunno. I kind of like collecting weird, dangerous weapons. Makes me feel sparkly.~
+== HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~Blades thirst for blood, but even thirst can be slaked. To trade the clamor of battle for the hush of leaves...how sweet the verse.~
+== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~One less blade sowing bloodshed—such is a gain for the balance. I will not stand against it.~
+== CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~In the harmony of the grove, the echoes of steel may be quieted at last. This is well.~
 END
 IF ~~ THEN REPLY ~What do I get in return?~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get
 IF ~~ THEN REPLY ~I never would have guessed you deal in weapons.~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get

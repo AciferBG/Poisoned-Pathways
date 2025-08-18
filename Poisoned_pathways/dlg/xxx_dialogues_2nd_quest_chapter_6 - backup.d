@@ -21,12 +21,12 @@ IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~You mentioned some shame before. 
 
 BEGIN AC#PPMI
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",8)~ THEN AC#PPEL4 C6.QUEST.01.00
-~<CHARNAME>! You arrive at a crucial moment. Trouble stirs, and you are entwined in it—whether by choice or by fate.~    
+~<CHARNAME>! You arrive at a crucial moment. Trouble stirs, and you are entwined in it—whether by choice or by fate.~  
+== AC#PPMI ~We all share in this burden, Alatoasz.~  
 == AC#PPEL4 ~Allow me to present Mismal Al’Visalle, once a ranger of Gwaeron’s Slumber, now serving among the Mielikkians of Amn.~  
 == AC#PPMI ~A gracious introduction, but we are not gathered here to trade titles, alas. I wish it were so. Yet this is no simple matter.~  
 END
 IF ~~ THEN REPLY ~You sound troubled.~ EXTERN AC#PPMI C6.QUEST.01.01
-IF ~~ THEN REPLY ~Simple matters are rarely laid at my feet either.~ EXTERN AC#PPMI C6.QUEST.01.01
 IF ~~ THEN REPLY ~Actually, Alatoasz, I was hoping to ask something of you.~ EXTERN AC#PPEL4 C6.QUEST.01.02
 
 CHAIN AC#PPMI C6.QUEST.01.01
@@ -41,46 +41,48 @@ CHAIN AC#PPEL4 C6.QUEST.01.02
 EXTERN AC#PPMI C6.QUEST.01.03
 
 CHAIN AC#PPMI C6.QUEST.01.03
-~I will not cloak this in fair speech. You know Myth Unnohyr, you have walked its ruins. You know how strange it is, caught between life and death. But since your last battle there, the place has worsened.~  
+~I have heard of your deeds—you have walked in Myth Unnohyr. You know how strange it is, poised between life and death. But since your last battle there, the place has worsened.~  
 END
 IF ~~ THEN REPLY ~Worsened? How so? The Talonite is dead.~ EXTERN AC#PPMI C6.QUEST.01.04a
-IF ~~ THEN REPLY ~That happens often enough. Wherever I pass, the place seems worse off after.~ EXTERN AC#PPMI C6.QUEST.01.04a
-IF ~~ THEN REPLY ~That is no longer my concern.~ EXTERN AC#PPMI C6.QUEST.01.04a
 IF ~~ THEN REPLY ~I had hoped that ordeal was finished. Why, in all the gods’ names, does everyone always want something from me?~ EXTERN AC#PPMI C6.QUEST.01.04a
 
 CHAIN AC#PPMI C6.QUEST.01.04a
-~The events at Myth Unnohyr roused something ancient.~  
-== AC#PPMI ~It feels as though the land itself is being consumed—trees, ponds, every quiet glade, all drawn into its hunger. Strange beings, remnants of the elven kin, now roam that place. From what I have gathered, the power reeks of elven undeath.~  
+~The events at Myth Unnohyr roused something ancient.~
+== AC#PPMI ~I will not argue whether it arose from the malagent, from you, or from Talona herself—that question no longer matters. What matters is this: The evil awakened there has begun to spread. It feels as though the land itself is being consumed—trees, ponds, every quiet glade, all drawn into its hunger. Strange beings, remnants of the elven kin, now roam that place.~  
+== AC#PPMI ~From all I have gathered, the power reeks of undeath. We suspect a mighty Wyrd, a spirit that seizes the husks of the dead, has possessed the corpse of Commander Elv-Esster Aened, once leader of Myth Unnohyr’s guard. She was interred within a sealed sarcophagus—but the ward stone was taken, and the Wyrd slipped within to claim her body.~  
 END
-IF ~Global("BodhiDead","GLOBAL",0)~ THEN REPLY ~Truth be told, I need help with another monster: a vampire named Bodhi. She and her brother, Irenicus, must be stopped.~ EXTERN AC#PPMI bodhi_irenicus_mention
-IF ~Global("BodhiDead","GLOBAL",1)~ THEN REPLY ~I have already slain one such monster: the vampire Bodhi. Her brother, Irenicus, shall follow.~ EXTERN AC#PPMI bodhi_irenicus_mention
-IF ~~ THEN REPLY ~What kind of undeath are we speaking of, exactly?~ EXTERN AC#PPMI about_wyrd
-IF ~~ THEN REPLY ~Whatever it is, it should stay there.~ EXTERN AC#PPMI about_wyrd
+IF ~Global("BodhiDead","GLOBAL",0)~ THEN REPLY ~Truth be told, I need help with another monster: a vampire named Bodhi. She and her brother, Irenicus, must be stopped.~ EXTERN AC#PPMI C6.QUEST.01.04b
+IF ~Global("BodhiDead","GLOBAL",0)~ THEN REPLY ~Heh. Fitting. I too am hunting a powerful undead—Bodhi. She and her ally, Irenicus, are beyond control.~ EXTERN AC#PPMI C6.QUEST.01.04b
+IF ~Global("BodhiDead","GLOBAL",1)~ THEN REPLY ~I have already slain one such monster: the vampire Bodhi. Her brother, Irenicus, shall follow.~ EXTERN AC#PPMI C6.QUEST.01.04b
 
-CHAIN AC#PPMI bodhi_irenicus_mention
-~Bodhi? Irenicus? Aye, I know those names. I have walked in Suldanessellar and spoken with Elhan. And now that you name them—I suspect you know him as well. Perhaps we may aid each other. We can give you something that will help against this creature.~  
-END
-IF ~~ THEN EXTERN AC#PPMI about_wyrd
-
-CHAIN AC#PPMI about_wyrd
-~We suspect a mighty Wyrd, a spirit that seizes the husks of dead elves, has possessed the corpse of Commander Elv-Esster Aened, once leader of Myth Unnohyr’s guard. She was interred within a sealed sarcophagus—but the ward stone was taken, and the Wyrd slipped within to claim her body.~  
-=  
-~It feeds on the rotten magic of the place to raise further undead. It will not be long before these beings spill into the surrounding lands. You must put an end to that creature.~  
+CHAIN AC#PPMI C6.QUEST.01.04b
+~Bodhi? Irenicus? Aye, I know those names. I have walked in Suldanessellar and spoken with Elhan. And now that you speak them—I suspect you know him as well. Perhaps we may aid each other.~  
+== AC#PPEL4 ~Duskwood Dell is a place of peace. We helped to bring down the malagent, yes—but it was for peace’s sake, and to craft the antidote for those in need.~  
+== AC#PPMI ~Peace is a luxury we may not afford, Alatoasz.~  
+== AC#PPEL4 ~Peace is never a luxury, Mismal. It is the path itself.~  
+== AC#PPMI ~You see the divide, <CHARNAME>. Alatoasz will not commit further. He sees no road but withdrawal.~  
+== AC#PPEL4 ~We are pacifists, and ever we have walked a narrow line. <CHARNAME> aided us, we aided him. Eldath guided us—to find stillness in heart and soul, not to rouse another war.~  
+== AC#PPEL4 ~Yet as I said, we can still offer aid. Tell those who must hide that, so long as they respect our ways, they shall be welcome here. This sanctuary may be theirs as well.~  
+== AC#PPMI ~We may need more than refuge. We may need you as well.~  
 END
 IF ~~ THEN REPLY ~Right...~ EXTERN AC#PPMI C6.QUEST.01.04c
 IF ~~ THEN REPLY ~I will gladly help. Perhaps the trouble at Myth Unnohyr grew worse because of me.~ EXTERN AC#PPMI C6.QUEST.01.04c
 IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I will try to help.~ EXTERN AC#PPMI C6.QUEST.01.04c
-IF ~~ THEN REPLY ~Myth Unnohyr? Not ten rothé could drag me back there.~ EXTERN AC#PPMI C6.QUEST.01.04c
+IF ~~ THEN REPLY ~Perhaps you do. The question is whether you will provide me with a reward worthy of the effort this will demand.~ EXTERN AC#PPMI C6.QUEST.01.04c
+
 
 CHAIN AC#PPMI C6.QUEST.01.04c
-~You have fought the undead before. Vampires, I have heard—under the mistress Bodhi. You may face them again. And Alatoasz holds something that could aid against such foes.~   
-== AC#PPEL4 ~No. Evil cannot be undone by answering it with further deeds of blood.~  
-== AC#PPMI ~This blade is a blessing against the undead, not a curse upon the living. Let <CHARNAME> take up once more the weapon that was laid down in the grotto.~  
-== AC#PPEL4 ~What was laid to rest in that grotto must never again be turned to bring death. Such is Eldath’s charge.~  
-== AC#PPMI ~The creatures that stand before <CHARNAME> are already dead. They bring only further death. And you know the blade cannot harm the living.~  
-== AC#PPEL4 ~You… you… you speak true.~      
-== AC#PPEL4 ~Very well, <CHARNAME>, you may wield the Memory of the Myths. But I can do no more. I will do no more.~      
-== AC#PPMI ~The blade was forged to strike the undead. Its spectral cannot touch the living, but shall wound all unliving, like the Wyrd.~     
+~It seems you, too, are beset by powers of undeath. And Alatoasz holds something that could aid against both the Wyrd and creatures such as Bodhi.~  
+== AC#PPEL4 ~High ranger...~  
+== AC#PPMI ~Eldath and Mielikki are as sisters. You are bound to stand with us!~  
+== AC#PPEL4 ~I will not raise my hand in this struggle, Mismal Al’Visalle. I am guided by principles, and after all that has transpired, I cling to them more tightly than ever.~  
+== AC#PPMI ~So be it. We will not force your hand. But at least let <CHARNAME> bear the sword. I beg you, Alatoasz. The blade cannot harm the living—you will still guard life—yet against the undead it may tip the balance.~  
+== AC#PPEL4 ~I...~  
+== AC#PPEL4 ~Very well. <PRO_HESHE> may take it. You are right—the blade cannot wound the living. But I can do no more. I will do no more.~  
+== AC#PPMI ~That shall suffice.~  
+== AC#PPMI ~Myth Unnohyr now lies sealed by a barrier. I can bring you and the blade within, but to depart you must tear the ward asunder. I believe the Wyrd’s death will be the key.~  
+== AC#PPMI ~And we should take the Memory of the Myths—a sword forged to strike even the mightiest undead. It cannot touch the living, but its spectral edge shall wound the unliving foe.~  
+== AC#PPMI ~Let it serve also as your reward, for with it you may cut down even those like Bodhi and the Wyrd.~  
 END
 IF~~THEN REPLY ~Wyrd name, wyrd plan, wyrd ending.~ EXTERN AC#PPMI C6.QUEST.01.05
 IF~~THEN REPLY ~We have a deal.~ EXTERN AC#PPMI C6.QUEST.01.05
@@ -88,7 +90,7 @@ IF~~THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.06
 IF~~THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait, thus... I need to leave.~ EXTERN AC#PPMI C6.QUEST.01.07
 
 CHAIN AC#PPMI C6.QUEST.01.05
-~When you're ready, we'll go with Alatoasz's blessing to the grotto where heroes surrender their weapons. Myth Unnohyr now lies sealed by a barrier. I can bring you within, but to depart you must tear the ward asunder. I believe the Wyrd’s death will be the key. Let me know when you're ready.~
+~When you're ready, we'll go with Alatoasz's blessing to the grotto where heroes surrender their weapons. Let me know when you're ready.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
 
 CHAIN AC#PPMI C6.QUEST.01.06

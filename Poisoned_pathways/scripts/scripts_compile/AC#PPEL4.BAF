@@ -1,14 +1,16 @@
 IF
-Global("AC#PP_MythUnnohyr","GLOBAL",4)
+    Global("AC#PP_MythUnnohyr","GLOBAL",4)
 THEN
-RESPONSE #100
-StartDialogueNoSet(Player1)
+    RESPONSE #100
+        StartDialogueNoSet(Player1)
 END
 
 IF
-See(Player1)
-Global("AC#PP_MythUnnohyr","GLOBAL",8)
+    See([PC])
+    Range([PC],12)
+    Global("AC#PP_MythUnnohyr","GLOBAL",8)
 THEN
-RESPONSE #100
-StartDialogueNoSet(Player1)
+    RESPONSE #100
+        StartDialogueNoSet(Player1)
 END
+
