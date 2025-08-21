@@ -108,6 +108,30 @@ IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~I have weapons I’d like
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~Remind me, how was it again with the weapons I was to give you?~ EXTERN AC#PPDR1 trade_weapons_hub
 IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY ~Your High Priest has sent me. I am to collect a carafe of Eldath’s sacred singing water.~ EXTERN AC#PPDR1 need_singing_water
+IF ~Global("AC#PP_GiveBlade","GLOBAL",1) !Dead("AC#PPWYR")~ THEN REPLY ~I was told to collect a weapon here, one said to aid me against the undead.~ EXTERN AC#PPDR1 need_blade_01
+
+CHAIN IF ~~ THEN AC#PPDR1 need_blade_01
+~You seek the blade that may wound only dead flesh? I can scarce believe the Fallskeeper allowed it. Weapons laid down here are meant to rest forever.~  
+END
+IF ~~ THEN REPLY ~Then this time, it shall be otherwise.~ EXTERN AC#PPDR1 need_blade_02
+IF ~~ THEN REPLY ~I would not ask, were it not urgent.~ EXTERN AC#PPDR1 need_blade_02
+IF ~~ THEN REPLY ~Enough of this prattle. Give me the blade that is mine by right!~ EXTERN AC#PPDR1 need_blade_unfriendly
+IF ~Global("AC#PP_ReturnBlade","GLOBAL",1)~ THEN REPLY ~I have sworn to return it once the battle is done.~ EXTERN AC#PPDR1 need_blade_give_back_later
+
+CHAIN IF ~~ THEN AC#PPDR1 need_blade_give_back_later
+~Very well. If you vow to wield it only against dead flesh, then mayhap the Fallskeeper had reason to entrust it to you.~  
+END
+IF ~~ THEN EXTERN AC#PPDR1 need_blade_02
+
+CHAIN IF ~~ THEN AC#PPDR1 need_blade_unfriendly
+~Such rudeness! What was the Fallskeeper thinking, to permit you this? Still... it is not mine to decide.~  
+END
+IF ~~ THEN EXTERN AC#PPDR1 need_blade_02
+
+CHAIN IF ~~ THEN AC#PPDR1 need_blade_02
+~Here is the weapon. It is called the Memory of the Myths. Treat it with care.~  
+DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",10)  
+GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 
 	CHAIN IF ~~ THEN AC#PPDR1 need_singing_water
 	~The singing water? Of course. Here it is — handle it with care, for it is as precious as the peace it brings.~

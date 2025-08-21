@@ -86,6 +86,7 @@
 @907 = ~^0xFF22B4E6has gained +1 maximum Hit Point. ^-~
 @908 = ~^0xFF22B4E6has gained +2 maximum Hit Points. ^-~
 @909 = ~^0xFF22B4E6has gained +1% resistance to slashing, piercing, crushing, and missile damage. ^-~
+@910 = ~Talona's Kiss~
 
 //sto files
 @950 = ~Temple of Eldath~
@@ -382,23 +383,16 @@ May all who breathe know suffering—and in their final, gasping moments, know H
 — Malagent Delgorth
 ~
 @1071 = ~Longsword~
-@1072 = ~The Remembrance of the Myths +5~
-@1073 = ~This blade once belonged to an elven knight, a hunter of the undead. The tales say that it was used in many battles and managed to pierce from armors and spells of vampires, liches, skeletal warriors and even was used in a fight agains a dracolich. It was during that battle, however, when the creature used all its power to smash the blade. The faith and the magic locked inside the blade manifested in a form of a spectral blade.
-
-From that day, the sword is no longer able to harm the living, but the spectral blade became even more powerful against undead enemies. It is able to hurt both corporeal and incorporeal monsters, as long as there is some undead woven into their existance. 
-
-For many years, the blade was lost, only to be found at the Duskwood Dell and given to <CHARNAME> so <PRO_HESHE> could use this weapon agains powerful undead monsters.
+@1072 = ~The Memory of the Myths +5~
+@1073 = ~This blade once belonged to the elven knight Telva, a renowned hunter of the undead. Legends tell that it was carried through countless battles, its edge striking true against the armored husks of skeletal warriors, rending the wards of liches, and even drawing the blood of vampires. In one desperate struggle it was turned against a dracolich itself.
+It was in that battle, however, that the creature summoned all its foul strength and shattered the weapon. Yet the faith and enchantments bound within the steel did not perish. Instead, they flared forth, reshaping the weapon into a spectral blade.
+From that day, the sword could no longer wound the living. Against the undead, though, its power grew even keener—able to pierce both flesh and phantasm, striking at any being tainted by undeath.
 
 STATISTICS:
 
-Charge abilities:
-– May cast False Dawn once per day
-
 Equipped abilities:
-– Infravision
 – Armor Class vs. Undead: +2
 – Saving Throws vs. Undead: +2
-– Turn Undead level: +2 (paladins and clerics only)
 
 Combat abilities:
 – Cannot harm any living creature, only the undead
@@ -1202,6 +1196,8 @@ Then... I shall have a body again. A perfect one. A vessel worthy of my hunger.~
 
 To wield it is to channel the patient cruelty of disease, and the knowledge that all life withers in time.
 
+STATISTICS:
+
 Equipped abilities:
 – Immunity to disease
 – +2 bonus to Saving Throws vs. Death
@@ -1211,8 +1207,6 @@ Combat abilities:
 
 Charge abilities:
 – Poison Strike (1/day): For the next 3 rounds, each hit poisons the target (2d6 damage per round for 3 rounds, Save vs. Death halves duration)
-
-STATISTICS:
 
 THAC0: +3
 Damage: 1d6+3 (crushing)
@@ -1254,6 +1248,9 @@ Weight: 0~
 @1198 = ~This cruel club appears to be nothing more than a gnarled, blackened bough, its surface split and twisted as if writhing in pain. It was cut from a tree deep within a plague-ridden grove, where Talona’s breath had stilled all life. Its thorns gleam with a dull green patina — residue from years of venomous anointing. Wielded in battle, the Witherbranch delivers not only a bruising blow, but the creeping embrace of rot.
 
 STATISTICS:
+
+Equipped abilities:
+–  Talona's Kiss: While the wielder is poisoned, <PRO_HESHE> gains a +5 bonus to all saving throws and attack rolls until the poison subsides.  
 
 Combat abilities:
 – Hit target must save vs. Death or suffer 1 point of poison damage per second for 6 seconds in 50% of hits

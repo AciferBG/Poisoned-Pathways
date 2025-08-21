@@ -30,7 +30,7 @@ IF ~~ THEN REPLY ~Simple matters are rarely laid at my feet either.~ EXTERN AC#P
 IF ~~ THEN REPLY ~Actually, Alatoasz, I was hoping to ask something of you.~ EXTERN AC#PPEL4 C6.QUEST.01.02
 
 CHAIN AC#PPMI C6.QUEST.01.01
-~Indeed I am—and not without cause.~  
+~Aye, I am troubled by this matter, and not without cause.~  
 END
 IF ~~ THEN REPLY ~Then tell me more.~ EXTERN AC#PPMI C6.QUEST.01.03
 IF ~~ THEN REPLY ~Go on. What is this about?~ EXTERN AC#PPMI C6.QUEST.01.03
@@ -73,40 +73,71 @@ IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I wi
 IF ~~ THEN REPLY ~Myth Unnohyr? Not ten rothé could drag me back there.~ EXTERN AC#PPMI C6.QUEST.01.04c
 
 CHAIN AC#PPMI C6.QUEST.01.04c
-~You have fought the undead before. Vampires, I have heard—under the mistress Bodhi. You may face them again. And Alatoasz holds something that could aid against such foes.~   
+~You have fought similar foes before. Undead, I have heard—under their mistress Bodhi. You may face them again. And Duskwood Dell holds a weapon that could aid against such foes.~   
+== AC#PPEL4 ~You mean the Memory of the Myths, that fabled blade, Mismal?~  
+== AC#PPMI ~The very same. It has rested here long enough. The time has come to set it against the foes of life. Give it to <CHARNAME>.~   
 == AC#PPEL4 ~No. Evil cannot be undone by answering it with further deeds of blood.~  
-== AC#PPMI ~This blade is a blessing against the undead, not a curse upon the living. Let <CHARNAME> take up once more the weapon that was laid down in the grotto.~  
+== AC#PPMI ~The blade I propose was forged to strike the undead. Its spectral edge cannot touch the living, but it shall wound all unliving, such as a Wyrd. It is a blessing against the undead, not a curse upon the living. Let <CHARNAME> take up the weapon that was once laid down in the grotto.~  
 == AC#PPEL4 ~What was laid to rest in that grotto must never again be turned to bring death. Such is Eldath’s charge.~  
 == AC#PPMI ~The creatures that stand before <CHARNAME> are already dead. They bring only further death. And you know the blade cannot harm the living.~  
-== AC#PPEL4 ~You… you… you speak true.~      
-== AC#PPEL4 ~Very well, <CHARNAME>, you may wield the Memory of the Myths. But I can do no more. I will do no more.~      
-== AC#PPMI ~The blade was forged to strike the undead. Its spectral cannot touch the living, but shall wound all unliving, like the Wyrd.~     
+== AC#PPEL4 ~No. Eldath would not approve of this.~  
+== AC#PPMI ~*Sigh*. <CHARNAME>, perhaps you can persuade Alatoasz to entrust you with the blade? It would be of great use to you—not only on your return to Myth Unnohyr.~  
 END
-IF~~THEN REPLY ~Wyrd name, wyrd plan, wyrd ending.~ EXTERN AC#PPMI C6.QUEST.01.05
-IF~~THEN REPLY ~We have a deal.~ EXTERN AC#PPMI C6.QUEST.01.05
-IF~~THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.06
-IF~~THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait, thus... I need to leave.~ EXTERN AC#PPMI C6.QUEST.01.07
+IF ~~ THEN REPLY ~If you would guard life, then give me the means to end what threatens it. This weapon may prevent more deaths.~ EXTERN AC#PPEL4 convince_memory
+IF ~~ THEN REPLY ~If the sword must rest in worthy hands, then let it be mine. I will not falter where others would.~ EXTERN AC#PPEL4 convince_memory
+IF ~~ THEN REPLY ~If it eases your heart, I swear to return the blade once the Wyrd is undone. Lend it to me only for this task.~ EXTERN AC#PPEL4 convince_memory_return
+IF ~~ THEN REPLY ~Why waste such a treasure rotting in your grotto? Hand it over—what I do with it is none of your concern.~ EXTERN AC#PPEL4 deny_memory
+IF ~~ THEN REPLY ~The sword belongs in the hands of one strong enough to wield it, not locked away by cowards.~ EXTERN AC#PPEL4 deny_memory
+IF ~~ THEN REPLY ~Keep your blade. I trust in my own weapons.~ EXTERN AC#PPMI cont_no_blade
 
-CHAIN AC#PPMI C6.QUEST.01.05
-~When you're ready, we'll go with Alatoasz's blessing to the grotto where heroes surrender their weapons. Myth Unnohyr now lies sealed by a barrier. I can bring you within, but to depart you must tear the ward asunder. I believe the Wyrd’s death will be the key. Let me know when you're ready.~
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
+CHAIN AC#PPEL4 convince_memory  
+~Your reasoning is sound; you speak with reverence for Eldath’s teaching. If this weapon can preserve life without endangering it, then I cannot deny you. May your hand wield the blade only against those already lost. Take it, and may peace guide each strike. Remember always the charge you carry.~       
+== AC#PPMI ~With this weapon, it will be easier for you to defeat the Wyrd.~  
+== AC#PPEL4 ~You may collect the blade, the Memory of the Myths, from our handmaiden in Eldath’s Grotto.~   
+== AC#PPMI ~When you are ready, go with Alatoasz’s blessing to the grotto where heroes once surrendered their weapons—and claim it.~    
+END
+IF ~~ THEN DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",1)~ EXTERN AC#PPMI wyrd_wait_for_start
 
-CHAIN AC#PPMI C6.QUEST.01.06
-~I see.~
-==AC#PPMI ~If you decide to help, we'll go with Alatoasz's blessing to the grotto where heroes surrender their weapons.~
-==AC#PPEL4 ~...~
-==AC#PPMI ~I can also hear your discontent, Alatoasz. So, <CHARNAME>, if you decide to help, I will open a gate to Myth Unnohyr, but due to the dead and the wild magic, I won't be able to help you more. If you decide the reward is tempting, or your morality get to you, come to me, and we should start our mission.~
+	CHAIN AC#PPEL4 deny_memory  
+	~Such words reek of cruelty. You would turn a gift of peace into a tool of slaughter? I will not be party to such evil.~ 
+	END
+	IF ~~ THEN EXTERN AC#PPMI cont_no_blade	
+	
+	
+	CHAIN AC#PPMI cont_no_blade
+	~So be it. Even without the blade, the time has come to put an end to the Wyrd.~  
+	END
+	IF ~~ THEN EXTERN AC#PPMI wyrd_wait_for_start
+	
+	CHAIN AC#PPEL4 convince_memory_return
+	~If you give me your solemn word, then so be it. Take the blade, and when the Wyrd is no more, return it here, where it shall rest in peace once more.~  
+	== AC#PPMI ~With this weapon, it will be easier for you to defeat the Wyrd.~  
+	== AC#PPEL4 ~You may collect the blade from our handmaiden in Eldath’s Grotto.~  
+	== AC#PPMI ~When you are ready, go with Alatoasz’s blessing to the grotto where heroes once surrendered their weapons—and claim it.~    
+	END
+	IF ~~ THEN DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",1) SetGlobal("AC#PP_ReturnBlade","GLOBAL",1)~ EXTERN AC#PPMI wyrd_wait_for_start
+
+CHAIN AC#PPMI wyrd_wait_for_start
+~Myth Unnohyr now lies sealed by a barrier. I can guide you through the thickets to another entrance. Let me know when you are ready.~
+END  
+IF ~~ THEN REPLY ~Wyrd name, wyrd plan, wyrd ending.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
+IF ~~ THEN REPLY ~We have a deal.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
+IF ~~ THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
+IF ~~ THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait, so I must leave.~ EXTERN AC#PPMI C6.QUEST.01.07
+
+CHAIN AC#PPMI wyrd_wait_for_start_bye
+~We shall wait for you here.~  
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
 
 CHAIN AC#PPMI C6.QUEST.01.07
-~Mhm.~
-==AC#PPMI ~If you change your mind, come to me and let me know. We really need your help.~
+~If you change your mind, come to me and let me know. We truly need your aid.~  
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
+
 
 //DUSKWOOD DELL CH6 -- 2ND TALK (CLERIC)
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",9)~ THEN AC#PPEL4 c6.2nd.c.00
-~I knot it may seem strange for someone like you that I am not very optimistic about any of this, but I've seen enough suffering. I will do what I must, but I won't rise my hand. I hope you understand.~
+~I know it may seem strange for someone like you that I am not very optimistic about any of this, but I've seen enough suffering. I will do what I must, but I won't rise my hand. I hope you understand.~
 END
 IF~~THEN REPLY ~I do.~ EXIT
 IF~~THEN REPLY ~I will never understand how you can allow such battles happen while you're here, in your little hideout. Goodbye.~ EXIT
@@ -114,14 +145,27 @@ IF~~THEN REPLY ~I will never understand how you can allow such battles happen wh
 //HIGH RANGER
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",9)~ THEN AC#PPMI C6.QUEST.02.00
-~Are you ready to face the wyrd? If so, we should go for the sword Hight Priest allowed us to take and I shall send you inside Myth Unnohyr.~
+~Are you prepared to face the Wyrd?~
+END 
+IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ THEN EXTERN AC#PPMI depart_with_sword
+IF ~Global("AC#PP_GiveBlade","GLOBAL",0)~ THEN EXTERN AC#PPMI depart_without_sword
+
+CHAIN IF ~~ THEN AC#PPMI depart_with_sword
+~If you have taken up the sword entrusted to you by the High Priest, then I can send you into Myth Unnohyr.~  
 END
-IF~~THEN REPLY ~I'm ready.~ EXTERN AC#PPMI C6.QUEST.02.01
-IF~~THEN REPLY ~I'm not ready yet. Let me take care of something else first.~ EXIT
+IF ~~ THEN REPLY ~I am ready.~ EXTERN AC#PPMI C6.QUEST.02.01
+IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXIT
+
+CHAIN IF ~~ THEN AC#PPMI depart_without_sword
+~I shall send you into Myth Unnohyr if you are ready.~  
+END
+IF ~~ THEN REPLY ~I am ready.~ EXTERN AC#PPMI C6.QUEST.02.01
+IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXIT
+
 
 CHAIN AC#PPMI C6.QUEST.02.01
 ~Good. Follow me.~
-DO ~StartCutScene("AC#PP6C1")~ EXIT
+DO ~StartCutScene("AC#PP6CA")~ EXIT
 
 BEGIN AC#PPWYR
 
