@@ -6,6 +6,7 @@ THEN
     RESPONSE #100
         SetGlobal("OpenTreeDoor","ACPP70",1)
         CreateVisualEffectObject("FIRECOLD",LastTrigger)
+        CreateVisualEffect("AC#PPBLM",[4096.1232])
         DisplayString(Myself,@2023)
         TakePartyItem("AC#PP77W")
         DestroyItem("AC#PP77W")

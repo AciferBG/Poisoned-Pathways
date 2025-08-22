@@ -320,6 +320,9 @@ COPY ~Poisoned_pathways/vvc/copy~         ~override~
 
 COPY ~Poisoned_pathways/spl/copy~         ~override~
 
+COPY ~Poisoned_pathways/spl/AC#CHAS.spl~          ~override~
+SAY NAME1 @911
+
 COPY ~Poisoned_pathways/spl/AC#PPB1.spl~          ~override~
 SAY NAME1 @910
 
