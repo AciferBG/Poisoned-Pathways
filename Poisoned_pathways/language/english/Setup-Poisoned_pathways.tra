@@ -1265,6 +1265,25 @@ Requires:
  5 Strength
 
 Weight: 1~
+@1199 = ~Gauntlets of the Treant~
+@1200 = ~These massive gauntlets are formed of bark and living root, bound with strips of ironwood. Their surface shifts slightly, as if the gauntlets still draw strength from unseen soil. Druids tell that they were crafted in reverence to the treants of the Forest of Tethir, guardians as patient as the earth itself.
+When the wearer’s flesh is hardened with Barkskin, the gauntlets channel that living armor into raw strength, allowing the bearer to strike with the might of a towering oak.
+
+STATISTICS:
+
+Equipped abilities:
+– +2 Strength while Barkskin is active
+
+Weight: 2~
+@1201 = ~Amulet of Inner Stillness~
+@1202 = ~This plain wooden amulet, set with a single green pearl, bears no inscription. It is said to have been blessed in the still waters of Eldath. When silence falls upon its wearer, a deep inner peace rises instead, shielding the mind from all intrusive forces. Neither confusion nor charms, domination nor stunning magic can shake the quiet center of the soul.
+
+STATISTICS:
+
+Equipped abilities:
+– While Silenced: Immunity to Suggestion, Charm, Domination, Command, Sleep, Maze, Stun, Confusion and Psionic Blast.
+
+Weight: 1~
 
 
 // script strings

@@ -596,7 +596,6 @@ END
 IF~~THEN REPLY ~An orc! I’ll take your head off!~ EXTERN AC#PPON3 orc_fight
 IF~~THEN REPLY ~Didn’t expect to see someone like you here.~ EXTERN AC#PPON3 orc_not_expecting
 IF~~THEN REPLY ~I think I’ll leave you to your work.~ EXTERN AC#PPON3 bye
-IF~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~It looks like there's a lot of dirt around and it's somewhat humid—I'm looking for a earthworm. I know it sounds strange, but maybe you've seen one around?~ EXTERN AC#PPON3 hello_worm
 
 	CHAIN IF ~~ THEN AC#PPON3 orc_fight
 	~No! Don’t fight!~ 
@@ -608,22 +607,15 @@ IF~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~T
 	END
 	IF~~THEN REPLY ~And I’m supposed to believe that?~ EXTERN AC#PPON3 orc_believe
 	IF~~THEN REPLY ~Then I’ll let you get back to your work.~ EXTERN AC#PPON3 bye
-	IF~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~It looks like there's a lot of dirt around and it's somewhat humid—I'm looking for a earthworm. I know it sounds strange, but maybe you've seen one around?~ EXTERN AC#PPON3 hello_worm
 
 	CHAIN IF ~~ THEN AC#PPON3 orc_believe
 	~Yes. I only lift axe to split pumpkin now. Pumpkin harder to split than human head! But Peacefang doesn’t mind the work.~ 
 	END
 	IF~~THEN REPLY ~Then I’ll let you get back to your work.~ EXTERN AC#PPON3 bye
-	IF~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~It looks like there's a lot of dirt around and it's somewhat humid—I'm looking for a earthworm. I know it sounds strange, but maybe you've seen one around?~ EXTERN AC#PPON3 hello_worm
 
 	CHAIN IF ~~ THEN AC#PPON3 bye
 	~Keep axe sharp! For chopping pumpkin.~ 
 	DO ~~ EXIT
-	
-	CHAIN  AC#PPON3 hello_worm
-	~You need worm? Hmm. If you need worm, then me give you worm. Nice, hmm? Here. You may take it.~
-	== AC#PPON3 ~Bye bye, worm.~
-	DO ~GiveItemCreate("AC#PPWRM",Player1,1,1,0) SetGlobal("AC##PPWormQuestOrc","GLOBAL",1)~ EXIT
 
 	
 ////////////////////////////////////////////////////////

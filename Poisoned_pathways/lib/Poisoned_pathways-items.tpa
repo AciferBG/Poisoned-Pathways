@@ -2,6 +2,14 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPAM2.itm~         ~override~    //  Amulet of inner stillness
+  SAY NAME2 @1201
+  SAY DESC  @1202
+
+COPY ~%MOD_FOLDER%/itm/AC#PPBRT.itm~         ~override~    //  Gauntlets of the Treant
+  SAY NAME2 @1199
+  SAY DESC  @1200
+
 COPY ~%MOD_FOLDER%/itm/AC#PPBL1.itm~         ~override~    //  witherbranch
   SAY NAME2 @1197
   SAY DESC  @1198

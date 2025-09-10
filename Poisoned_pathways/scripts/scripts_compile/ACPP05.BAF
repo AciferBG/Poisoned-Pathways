@@ -1,0 +1,18 @@
+IF
+    Global("Prep","ACPP05",0)
+THEN
+    RESPONSE #100
+        ContainerEnable("Con_earth",FALSE)
+        SetGlobal("Prep","ACPP05",1)
+END
+
+IF
+    Global("AC#PPWormQuest","GLOBAL",1)
+    Global("CreateWorm","ACPP05",0)
+THEN
+    RESPONSE #100
+        ContainerEnable("Con_earth",TRUE)
+        ActionOverride("Con_earth",CreateItem("AC#PPWRM",0,0,0))  // Earthworm
+        SetGlobal("CreateWorm","ACPP05",1)
+END
+
