@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPPOW.cre~ ~override~       // Poison Weird
+  SAY NAME1 @59 SAY NAME2 @59
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#POISON_WEIRD~))
+
 COPY ~%MOD_FOLDER%/cre/AC#PPCHS.cre~ ~override~       // Chasme
   SAY NAME1 @58 SAY NAME2 @58
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~CHASME_ACIFER~))

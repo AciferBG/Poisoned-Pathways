@@ -1,3 +1,13 @@
+// Messenger in Elhan'S area
+/*
+BEGIN AC#PPC6E
+CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",8)~ THEN AC#PPC6E hello_01
+~<CHARNAME>! Ja, Ihr seid es~    
+== AC#PPEL4 ~Allow me to present Mismal Al’Visalle, once a ranger of Gwaeron’s Slumber, now serving among the Mielikkians of Amn.~  
+== AC#PPMI ~A gracious introduction, but we are not gathered here to trade titles, alas. I wish it were so. Yet this is no simple matter.~  
+END
+IF ~~ THEN REPLY ~You sound troubled.~ EXTERN AC#PPMI C6.QUEST.01.01
+*/
 //ELHAN
 
 EXTEND_BOTTOM ~c6elhan2~ 47

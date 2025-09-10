@@ -18,6 +18,7 @@ END
 
 IF
     Global("AC#PPFinalBossPrepare","GLOBAL",2)
+    Difficulty(EASIEST)
 THEN
     RESPONSE #100
         StartCombatCounter()
@@ -25,7 +26,75 @@ THEN
         StartCutSceneMode()
         ClearAllActions()
         ScreenShake([20.20],3)
-        CreateVisualEffectObject("SPFLESHS","AC#PPTA2")
+        CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
+        CreateVisualEffect("SPDEATH3",[610.550])
+        CreateVisualEffect("SPDEATH3",[810.490])
+        CreateVisualEffect("SPANISUM",[350.500])
+        CreateVisualEffect("SPANISUM",[520.370])
+        CreateVisualEffect("SPANISUM",[950.330])
+        CreateVisualEffect("SPANISUM",[1100.420])
+        CreateVisualEffect("SPANISUM",[750.200])
+        Wait(2)
+        CreateCreature("AC#PPPX",[610.550],S)  // Will-o'-pox
+        CreateCreature("AC#PPPX",[810.490],S)  // Will-o'-pox
+        CreateCreature("AC#PPGH1",[350.500],S)  // Ghoul
+        CreateCreature("AC#PPGH1",[520.370],S)  // Ghoul
+        CreateCreature("AC#PPSCR",[950.330],S)  // Scorpion
+        CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
+        CreateCreature("AC#PPSN1",[750.200],S)  // Viper
+        SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
+        ActionOverride("AC#PPTA2",Enemy())
+        EndCutSceneMode()
+END
+
+IF
+    Global("AC#PPFinalBossPrepare","GLOBAL",2)
+    Difficulty(EASY)
+THEN
+    RESPONSE #100
+        StartCombatCounter()
+        ClearAllActions()
+        StartCutSceneMode()
+        ClearAllActions()
+        ScreenShake([20.20],3)
+        CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
+        CreateVisualEffect("SPDEATH3",[610.550])
+        CreateVisualEffect("SPDEATH3",[810.490])
+        CreateVisualEffect("SPDEATH3",[890.600])
+        CreateVisualEffect("SPDEATH3",[680.660])
+        CreateVisualEffect("SPANISUM",[350.500])
+        CreateVisualEffect("SPANISUM",[520.370])
+        CreateVisualEffect("SPANISUM",[700.420])
+        CreateVisualEffect("SPANISUM",[950.330])
+        CreateVisualEffect("SPANISUM",[1100.420])
+        CreateVisualEffect("SPANISUM",[750.200])
+        Wait(2)
+        CreateCreature("AC#PPPX",[610.550],S)  // Will-o'-pox
+        CreateCreature("AC#PPPX",[810.490],S)  // Will-o'-pox
+        CreateCreature("AC#PPPX",[890.600],S)  // Will-o'-pox
+        CreateCreature("AC#PPPX",[680.660],S)  // Will-o'-pox
+        CreateCreature("AC#PPGH1",[350.500],S)  // Ghoul
+        CreateCreature("AC#PPSCR",[520.370],S)  // Scorpion
+        CreateCreature("AC#PPSCR",[700.420],S)  // Scorpion
+        CreateCreature("AC#PPSCR",[950.330],S)  // Scorpion
+        CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
+        CreateCreature("AC#PPSN1",[750.200],S)  // Viper
+        SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
+        ActionOverride("AC#PPTA2",Enemy())
+        EndCutSceneMode()
+END
+
+IF
+    Global("AC#PPFinalBossPrepare","GLOBAL",2)
+    Difficulty(NORMAL)
+THEN
+    RESPONSE #100
+        StartCombatCounter()
+        ClearAllActions()
+        StartCutSceneMode()
+        ClearAllActions()
+        ScreenShake([20.20],3)
+        CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPDEATH3",[610.550])
         CreateVisualEffect("SPDEATH3",[810.490])
         CreateVisualEffect("SPDEATH3",[890.600])
@@ -44,8 +113,49 @@ THEN
         CreateCreature("AC#PPGH1",[350.500],S)  // Ghoul
         CreateCreature("AC#PPGH1",[520.370],S)  // Ghoul
         CreateCreature("AC#PPGH1",[700.420],S)  // Ghoul
-        CreateCreature("AC#PPSCR",[950.330],S)
-        CreateCreature("AC#PPSCR",[1100.420],S)
+        CreateCreatureImpassable("AC#PPPOW",[545.527],N)  // Poison Weird
+        CreateCreatureImpassable("AC#PPPOW",[931.501],N)  // Poison Weird
+        CreateCreature("AC#PPSCR",[950.330],S)  // Scorpion
+        CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
+        CreateCreature("AC#PPSN1",[750.200],S)  // Viper
+        SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
+        ActionOverride("AC#PPTA2",Enemy())
+        EndCutSceneMode()
+END
+
+IF
+    Global("AC#PPFinalBossPrepare","GLOBAL",2)
+    DifficultyGT(NORMAL)
+THEN
+    RESPONSE #100
+        StartCombatCounter()
+        ClearAllActions()
+        StartCutSceneMode()
+        ClearAllActions()
+        ScreenShake([20.20],3)
+        CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
+        CreateVisualEffect("SPDEATH3",[610.550])
+        CreateVisualEffect("SPDEATH3",[810.490])
+        CreateVisualEffect("SPDEATH3",[890.600])
+        CreateVisualEffect("SPDEATH3",[680.660])
+        CreateVisualEffect("SPANISUM",[350.500])
+        CreateVisualEffect("SPANISUM",[520.370])
+        CreateVisualEffect("SPANISUM",[700.420])
+        CreateVisualEffect("SPANISUM",[950.330])
+        CreateVisualEffect("SPANISUM",[1100.420])
+        CreateVisualEffect("SPANISUM",[750.200])
+        Wait(2)
+        CreateCreature("AC#PPPX",[610.550],S)  // Will-o'-pox
+        CreateCreature("AC#PPPX",[810.490],S)  // Will-o'-pox
+        CreateCreature("AC#PPPX",[890.600],S)  // Will-o'-pox
+        CreateCreature("AC#PPPX",[680.660],S)  // Will-o'-pox
+        CreateCreature("AC#PPGH1",[350.500],S)  // Ghoul
+        CreateCreature("AC#PPGH1",[520.370],S)  // Ghoul
+        CreateCreature("AC#PPGH1",[700.420],S)  // Ghoul
+        CreateCreatureImpassable("AC#PPPOW",[545.527],N)  // Poison Weird
+        CreateCreatureImpassable("AC#PPPOW",[931.501],N)  // Poison Weird
+        CreateCreature("AC#PPSCR",[950.330],S)  // Scorpion
+        CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
         ActionOverride("AC#PPTA2",Enemy())
