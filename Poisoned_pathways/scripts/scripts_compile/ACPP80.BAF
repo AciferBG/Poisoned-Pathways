@@ -1,34 +1,46 @@
 IF
-	Global("Prep","ACPP80",0)
+    Global("Prep","ACPP80",0)
 THEN
-RESPONSE #100
-  SpawnPtDeactivate("Spawnpoint01")
-  SetGlobal("Prep","ACPP80",1)
+    RESPONSE #100
+        SpawnPtDeactivate("Spawnpoint01")
+        AmbientActivate("Mythrien_eye",FALSE)
+        SoundActivate("Mythrien_eye_sound_01",FALSE)
+        SetGlobal("Prep","ACPP80",1)
 END
 
 IF
-	Global("Prep","ACPP80",1)
-  Dead("AC#PPOR2")
+    Global("Prep","ACPP80",1)
+    Dead("AC#PPOR2")  // Wadal Hrun
 THEN
-RESPONSE #100
-  SpawnPtActivate("Spawnpoint01")
-  SetGlobal("Prep","ACPP80",2)
+    RESPONSE #100
+        SpawnPtActivate("Spawnpoint01")
+        SetGlobal("Prep","ACPP80",2)
 END
 
 IF
-  GlobalGT("CHAPTER","GLOBAL",5)
-	Global("DeactivateSpawn","ACPP80",0)
+    GlobalGT("CHAPTER","GLOBAL",5)
+    Global("DeactivateSpawn","ACPP80",0)
 THEN
-RESPONSE #100
-  SpawnPtDeactivate("Spawnpoint01")
-	SetGlobal("DeactivateSpawn","ACPP80",1)
-	Continue()
+    RESPONSE #100
+        SpawnPtDeactivate("Spawnpoint01")
+        SetGlobal("DeactivateSpawn","ACPP80",1)
+        Continue()
 END
 
 IF
-Global("AC#PPChapter6Quest","GLOBAL",11)
+    Global("AC#PPChapter6Quest","GLOBAL",11)
 THEN
-RESPONSE #100
-ContainerEnable("Feet",TRUE) 
-SetGlobal("AC#PPChapter6Quest","GLOBAL",12)
+    RESPONSE #100
+        ContainerEnable("Feet",TRUE)
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",12)
+END
+
+IF
+    Global("AC#PPChapter6Quest","GLOBAL",24)
+    Global("Bye_Mythrien","ACPP80",0)
+THEN
+    RESPONSE #100
+        AmbientActivate("Mythrien_eye",FALSE)
+        SoundActivate("Mythrien_eye_sound_01",FALSE)
+        SetGlobal("Bye_Mythrien","ACPP80",1)
 END

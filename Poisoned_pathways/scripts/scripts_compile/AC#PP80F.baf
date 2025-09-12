@@ -1,9 +1,11 @@
 IF
-Contains("AC#PPGRQ","feet")
-Global("AC#PPChapter6Quest","GLOBAL",12)
+    Contains("AC#PPGRQ","feet")  // Green Rose of Mythrien
+    Global("AC#PPChapter6Quest","GLOBAL",12)
 THEN
-RESPONSE #100
-SetGlobal("AC#PPChapter6Quest","GLOBAL",13)
-DestroyItem("AC#PPGRQ")
-StartCutScene("AC#PP6C3")
+    RESPONSE #100
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",13)
+        DestroyItem("AC#PPGRQ")  // Green Rose of Mythrien
+        ContainerEnable("Feet",FALSE)
+        StartCutScene("AC#PP6C3")
 END
+

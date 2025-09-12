@@ -30,6 +30,19 @@ THEN
 END
 
 IF
+    Global("AC#PPChapter6Quest","GLOBAL",24)
+    Global("C6_OpenDoorAgain","ACPP70",0)
+    PartyHasItem("AC#PPBR")
+THEN
+    RESPONSE #100
+        OpenDoor("DOOR01")
+        AmbientActivate("Ac#ppblc",FALSE) 
+        TriggerActivation("TrACPP71",TRUE) 
+        AmbientActivate("AC#PPPP",FALSE)
+        SetGlobal("C6_OpenDoorAgain","ACPP70",1)
+END
+
+IF
     Global("ActivatePortal","ACPP70",1)
     PartyHasItem("AC#PPBR")
 THEN

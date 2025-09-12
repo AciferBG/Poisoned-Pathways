@@ -16,16 +16,14 @@ THEN
         ActionOverride(Player4,JumpToPoint([775.509]))
         ActionOverride(Player5,JumpToPoint([519.530]))
         ActionOverride(Player6,JumpToPoint([622.544]))
-        ActionOverride("AC#PPMYT",JumpToPoint([697.397]))
         SmallWait(1)
-        FaceObject("AC#PPMYT")  // Mythrien Serath
+        FaceObject("AC#PPMYT")  // Mythrien Sarath
         SmallWait(1)
-        ActionOverride(Player2,FaceObject("AC#PPMYT"))  // Mythrien Serath
-        ActionOverride(Player3,FaceObject("AC#PPMYT"))  // Mythrien Serath
-        ActionOverride(Player4,FaceObject("AC#PPMYT"))  // Mythrien Serath
-        ActionOverride(Player5,FaceObject("AC#PPMYT"))  // Mythrien Serath
-        ActionOverride(Player6,FaceObject("AC#PPMYT"))  // Mythrien Serath
-        ActionOverride("AC#PPMYT",FaceObject(Player1))
+        ActionOverride(Player2,FaceObject("AC#PPMYT"))  // Mythrien Sarath
+        ActionOverride(Player3,FaceObject("AC#PPMYT"))  // Mythrien Sarath
+        ActionOverride(Player4,FaceObject("AC#PPMYT"))  // Mythrien Sarath
+        ActionOverride(Player5,FaceObject("AC#PPMYT"))  // Mythrien Sarath
+        ActionOverride(Player6,FaceObject("AC#PPMYT"))  // Mythrien Sarath
         CreateCreature("AC#PPHEL",[780.397],S)  // Elven Spirit
         Wait(2)
         FadeFromColor([20.0],0)
@@ -34,5 +32,6 @@ THEN
         SmallWait(1)
         MultiPlayerSync()
         EndCutSceneMode()
+        ActionOverride("AC#PPMYT",StartDialogueNoSet([PC]))
 END
 

@@ -329,144 +329,80 @@ DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9) CreateVisualEffect("AC#PPBUR",[22
 BEGIN AC#PPMYT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",14)~ THEN AC#PPMYT 01.00
-~^0xFF8FAD5DYour summons echoes through veils long closed… and I have come. But what shadow clings here? ^-~
-==AC#PPMYT IF ~Race(Player1,ELF)~ THEN ~^0xFF8FAD5DA child of my people calls me to broken Unnohyr. Ages have passed since such voices reached me. ^-~
-==AC#PPMYT IF ~!Race(Player1,ELF)~ THEN ~^0xFF8FAD5DA bold <PRO_RACE>, daring to touch the frayed skein of a fallen Mythal. ^-~
-==AC#PPMYT ~^0xFF8FAD5DThese stones once thrummed with glory. Now they writhe with mockery—wards unbound, oaths sundered. ^-~
+~^0xFF8FAD5DI heard your calling and I came. But—what is this? ^-~
+==AC#PPMYT IF ~Race(Player1,ELF)~ THEN ~^0xFF8FAD5DIt's been a while since any elf summoned me here. To Myth Unnohyr. ^-~
+==AC#PPMYT IF ~!Race(Player1,ELF)~ THEN ~^0xFF8FAD5DYou must be quite a bold <PRO_RACE> to call me here, to Myth Unnohyr! ^-~
+==AC#PPMYT ~^0xFF8FAD5DJust look at this place. Once a place of true glory, of powerful Mythal, but now? Now it all feels like an twisted joke, made by one of a truly dark heart! ^-~
 END
-IF~~THEN REPLY ~I called you for a purpose.~ EXTERN AC#PPMYT 01.02
-IF~~THEN REPLY ~We need your strength, Mythrien.~ EXTERN AC#PPMYT 01.02
-IF~~THEN REPLY ~You dwell on ruin, yet spirits still cling to you. Do you not see?~ EXTERN AC#PPMYT 01.01
+IF~~THEN REPLY ~I summoned you for a reason.~ EXTERN AC#PPMYT 01.02
+IF~~THEN REPLY ~Yes. And that's why I called you here, Mythrien. We need you help.~ EXTERN AC#PPMYT 01.02
+IF~~THEN REPLY ~Is that all you've got to say? Elves that lived here cared about you, and it looks like that some of them remained, as ghosts, bound with this soild, and they still believe in you. But you focus on the past, not the presence. How foolish.~ EXTERN AC#PPMYT 01.01
 
 CHAIN AC#PPMYT 01.01
-~^0xFF8FAD5DTo chastise the Seldarine is folly… yet your words hold more than rebuke. Speak then. ^-~
+~^0xFF8FAD5DIs that how you want to spend your time? On scolding one of the Seldarine? You must be a fool, and—no. There must be another reason. ^-~
 EXTERN AC#PPMYT 01.02
 
 CHAIN AC#PPMYT 01.02
-~^0xFF8FAD5DAh. The Rose… not by chance. Who guided your hand? For what end? ^-~
+~^0xFF8FAD5DYou offered me the Rose. Someone must have told you to do that. And there must be some reason for that. Speak!  ^-~
 END
-IF~~THEN REPLY ~This city’s Mythal is shattered. A wyrd has seized your champion’s body. We must end it, and give these souls peace.~ EXTERN AC#PPMYT myth_unnohyr_not_forgotten
-IF~~THEN REPLY ~Elv-Esster Aened, your faithful, is defiled. The wyrd twists spirit and magic alike. We cannot prevail without you.~ EXTERN AC#PPMYT 01.03
-IF~~THEN REPLY ~I want to leave this place as soon as possible. For that, I need your help.~ EXTERN AC#PPMYT myth_unnohyr_not_forgotten
+IF~~THEN REPLY ~Myth Unnohyr lost its Mythal. All sorts of creatures roam this place, ghost, and now, a powerful wyrd. It took the body of your faithrul commander. Elv-Esster Aened. We need to stop this creature. We need to save people and—maybe we can even save this place and help all those that praised your name, Mythrien Sarath! So please, help us. Let us bring some peace to Myth Unnohyr. this place deserves some peace.~ EXTERN AC#PPMYT 01.03
+IF~~THEN REPLY ~Myth Unnohyr lost its Mythal. All sorts of creatures roam this place, ghost, and now, a powerful wyrd. It took the body of your faithrul commander. Elv-Esster Aened. Maybe you remember her name. Now, it has all became even worse. Elven spirits were changed. This place's magic got all wrong. We must defeat the wyrd and—no matter I like it or not, we may need to together.~ EXTERN AC#PPMYT 01.03
 
 CHAIN AC#PPMYT 01.03
-~^0xFF8FAD5DElv-Esster Aened… yes. I recall her vow. ^-~
+~^0xFF8FAD5DElv-Esster Aened. I remember that name... ^-~
+==AC#PPMYT ~^0xFF8FAD5DI thought this place is long gone. Dead. Changed beyond recognition. But you brought the Rose. And if there was a spirit here, able to remember our little rites, then perhaps it's worth some of my attention. ^-~
+==AC#PPMYT ~^0xFF8FAD5DIt's interesting that a wyrd managed to cause all that trouble. They aren't that powerful. Usually. Before I do anything, I need to ask you something. ^-~
+==AC#PPMYT ~^0xFF8FAD5DI can tell you are not a simple <PRO_RACE>. I can see the scars, even those that no moral eye can see. That means you've seen much and your opinion may be important. Maybe. So tell me: is this place truly worth it? ^-~
 END
-IF~~THEN EXTERN AC#PPMYT myth_unnohyr_not_forgotten
-
-
-CHAIN AC#PPMYT myth_unnohyr_not_forgotten 
-~^0xFF8FAD5DI thought Unnohyr forgotten, its Weave dissolved. Yet the Rose still breathes, and rites yet whispered… perhaps not wholly forsaken. ^-~
-==AC#PPMYT ~^0xFF8FAD5DA wyrd, swelling on broken currents… strange, for such a thing is weak without the wound of a Mythal to feed it. Before I act, tell me: Is this ruin still worth salvation? ^-~
-END
-IF~~THEN REPLY ~Yes. It must be.~ EXTERN AC#PPMYT 01.04
-IF~Race(Player1,ELF)~THEN REPLY ~Yes. It is our home, Mythrien.~ EXTERN AC#PPMYT 01.04
-IF~~THEN REPLY ~No. Ruins only. But the wyrd must fall.~ EXTERN AC#PPMYT 01.05
+IF~~THEN REPLY ~Yes! Of course it is!~ EXTERN AC#PPMYT 01.04
+IF~Race(Player1,ELF)~THEN REPLY ~Yes. It used to be home for our people, Mythrien. So thousand times, yes.~ EXTERN AC#PPMYT 01.04
+IF~~THEN REPLY ~You want to know what I think? No. These are just some old ruins, and I don't see why anyone would care about this place. I was sent here and I fail to see why. But I cannot leave until the wyrd is gone.~ EXTERN AC#PPMYT 01.05
 
 CHAIN AC#PPMYT 01.04
-~^0xFF8FAD5DSo be it. ^-~
+~^0xFF8FAD5DI see. ^-~
 EXTERN AC#PPMYT 01.06
 
 CHAIN AC#PPMYT 01.05
-~^0xFF8FAD5DYet even in dismissal, I hear Eldath's and Khalreshaar’s breath among these woods. Not all seems lost. ^-~
+~^0xFF8FAD5DAHmm. Khalreshaar... It seems that someone does care. ^-~
 EXTERN AC#PPMYT 01.06
 
 CHAIN AC#PPMYT 01.06
-~^0xFF8FAD5DKnow this: I cannot descend with sword in hand. My essence is too frayed, my avatar bound. ^-~
-==AC#PPMYT ~^0xFF8FAD5DYours must be the struggle. Yet I shall unbind the flow that fattens the wyrd—no longer shall this broken Mythal lend it strength. ^-~
-==AC#PPMYT ~^0xFF8FAD5DThe Weave here will remain wild or dead to gentle touch, perilous to all… but no more shall the corruption swell against you. ^-~
+~^0xFF8FAD5DWell, <PRO_RACE>, it looks like you will have a chance to fight arm in arm with Mythrien Sarath. But I shall do more than grand you and Myth Unnohyr my blade! ^-~
+==AC#PPMYT ~^0xFF8FAD5DPeace does not urge the sword, but tranquility. So I shall give this place something else. I should give it some time of peace! ^-~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",15) StartCutScene("AC#PP6C4")~ EXIT
 
+//Healed
 
-/*
-BEGIN AC#PPMYT
-
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",14)~ THEN AC#PPMYT 01.00
-~^0xFF8FAD5DYour voices pierced the veils… and I have come. But what shadow lingers here? ^-~
-==AC#PPMYT IF ~Race(Player1,ELF)~ THEN ~^0xFF8FAD5DA child of my people dares summon me to fallen Myth Unnohyr. Long has it been. ^-~
-==AC#PPMYT IF ~!Race(Player1,ELF)~ THEN ~^0xFF8FAD5DA bold <PRO_RACE>, calling me into this place of broken wards. ^-~
-==AC#PPMYT ~^0xFF8FAD5DOnce, these stones were enwoven in glory. Now they echo with mockery—twisted, profaned. ^-~
-END
-IF~~THEN REPLY ~I called you for a purpose.~ EXTERN AC#PPMYT 01.02
-IF~~THEN REPLY ~We need your strength, Mythrien.~ EXTERN AC#PPMYT 01.02
-IF~~THEN REPLY ~You dwell on ruin, yet spirits still cling to you. Do you not see?~ EXTERN AC#PPMYT 01.01
-
-CHAIN AC#PPMYT 01.01
-~^0xFF8FAD5DTo scold one of the Seldarine… folly. And yet—I sense more in your words. Speak then. ^-~
-EXTERN AC#PPMYT 01.02
-
-CHAIN AC#PPMYT 01.02
-~^0xFF8FAD5DAh. You bring the Rose. Not by chance. Who counseled you? For what design? ^-~
-END
-IF~~THEN REPLY ~This city’s Mythal is lost. A wyrd has seized your champion’s body. We must end it, and give these souls peace.~ EXTERN AC#PPMYT 01.03
-IF~~THEN REPLY ~Elv-Esster Aened, your faithful, is defiled. The wyrd twists spirit and magic alike. We cannot prevail without you.~ EXTERN AC#PPMYT 01.03
-
-CHAIN AC#PPMYT 01.03
-~^0xFF8FAD5DElv-Esster Aened… yes, I recall. ^-~
-==AC#PPMYT ~^0xFF8FAD5DI thought Unnohyr long beyond all memory. Yet the Rose endures, and rites still whispered… Perhaps it is not wholly forsaken. ^-~
-==AC#PPMYT ~^0xFF8FAD5DA wyrd, to cause such blight? Strange. Yet before I bend my will, I would hear your heart. Tell me: is this ruin still worth salvation? ^-~
-END
-IF~~THEN REPLY ~Yes. It must be.~ EXTERN AC#PPMYT 01.04
-IF~Race(Player1,ELF)~THEN REPLY ~Yes. It is our home, Mythrien.~ EXTERN AC#PPMYT 01.04
-IF~~THEN REPLY ~No. Ruins only. But the wyrd must fall.~ EXTERN AC#PPMYT 01.05
-
-CHAIN AC#PPMYT 01.04
-~^0xFF8FAD5DSo be it. ^-~
-EXTERN AC#PPMYT 01.06
-
-CHAIN AC#PPMYT 01.05
-~^0xFF8FAD5DAh, yet even in dismissal, I hear Khalreshaar’s breath upon these woods. Not all is lost. ^-~
-EXTERN AC#PPMYT 01.06
-
-CHAIN AC#PPMYT 01.06
-~^0xFF8FAD5DThen let it be so. You shall stand with Mythrien Sarath. But I grant more than blade alone. ^-~
-==AC#PPMYT ~^0xFF8FAD5DI will weave a moment’s peace into these shattered wards—a breath of stillness before the storm. ^-~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",15) StartCutScene("AC#PP6C4")~ EXIT
-*/
-
-//Mythal fixed against wyrd
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",16)~ THEN AC#PPMYT 02.00
-~^0xFF8FAD5DThe price is paid… may it not be in vain. ^-~
+~^0xFF8FAD5DI hope the price I needed to pay won't go to waste. ^-~
 END
 IF~~THEN REPLY ~What happened?~ EXTERN AC#PPMYT 02.01
 IF~~THEN REPLY ~Have you—~ EXTERN AC#PPMYT 02.01
 
 CHAIN AC#PPMYT 02.01
-~^0xFF8FAD5DI have not mended this Mythal. Its wounds run deeper than my hands may reach. ^-~
-==AC#PPMYT ~^0xFF8FAD5DBut I poured a fragment of my essence into its breach, and the wyrd shall drink here no longer. The broken weave will still twist, will still fall dead at times… yet its corruption shall not rise to feed your foe. ^-~
-==AC#PPMYT ~^0xFF8FAD5DWhat I grant is not wholeness, but respite: a year in which the monster’s stolen strength is severed. ^-~
+~^0xFF8FAD5DI provided this place with a year of peace. ^-~
+==AC#PPMYT ~^0xFF8FAD5DI offered a spark of my power to negate the twisted echoes of the catastrophe. This spark of Mythal won't bring it to it's glory, but it shall negate the unpredictable effects of the anomalies that seem to have taken over this place. You will be able to use your magic, and it won't fail you, nor it won't result in all these surges. ^-~
+==AC#PPMYT ~^0xFF8FAD5DThat same blessing will prevent the wyrd from sucking energy from this area. ^-~
 END
-IF~~THEN REPLY ~Hah! I’d love to see the wyrd’s face—if it had one.~ EXTERN AC#PPMYT 02.02
-IF~~THEN REPLY ~Will that be enough?~ EXTERN AC#PPMYT 02.02
-IF~~THEN REPLY ~So… you only weakened it?~ EXTERN AC#PPMYT 02.03
+IF~~THEN REPLY ~Hah! Oh, I want to see the wyrd's face. That monster must have felt this.~ EXTERN AC#PPMYT 02.02
+IF~~THEN REPLY ~Mhm. Well, I wonder if that's going to be enough...~ EXTERN AC#PPMYT 02.02
+IF~~THEN REPLY ~And that's it? You just fixed it?~ EXTERN AC#PPMYT 02.03
 
 CHAIN AC#PPMYT 02.02
-~^0xFF8FAD5DIt is all that can be given. It will suffice. ^-~
+~^0xFF8FAD5DIt should help you defeat the monster. ^-~
 EXTERN AC#PPMYT 02.04
 
 CHAIN AC#PPMYT 02.03
-~^0xFF8FAD5DNo god should unmake the labors of mortals. I did not heal—only stilled the excess. The rest lies in your hands, as it ever must. ^-~
+~^0xFF8FAD5DI just gave this place some time, it's not fixing it. No god should just come and do things for the living. How else will they know how precious some things truly are? ^-~
 EXTERN AC#PPMYT 02.04
 
 CHAIN AC#PPMYT 02.04
-~^0xFF8FAD5DGo now. Find the creature. End its theft. Return to me when justice is wrought. ^-~
+~^0xFF8FAD5DBut worry not. I will assist you. I want to see this place free. I want peace to come. ^-~
+==AC#PPMYT ~^0xFF8FAD5DNow go. Find that creature and I will come when the time is right. ^-~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",17) 
-SetGlobal("AC#PPFixMagic","GLOBAL",1)~ EXIT
-
-// Waiting for the defeat of the wyrd
-CHAIN IF ~GlobalGT("AC#PPChapter6Quest","GLOBAL",16)
-GlobalLT("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT hello_all_fixed
-~^0xFF8FAD5DHave you brought the wyrd to its end? ^-~
-END
-//IF~Dead("AC#PPWYR")~THEN REPLY ~Yes. The wyrd is no more.~ EXTERN AC#PPMYT FINALE.00
-IF~~THEN REPLY ~Yes. The wyrd is no more.~ EXTERN AC#PPMYT FINALE.00
-IF~~THEN REPLY ~No, not yet.~ EXTERN AC#PPMYT wait_wyrd_defeat_bye
-
-CHAIN AC#PPMYT wait_wyrd_defeat_bye
-~^0xFF8FAD5DThen I shall wait here until your return. ^-~
-EXIT
-
-
+SetGlobal("AC#PPFixMagic","GLOBAL",1) 
+CreateVisualEffect("SPPORTAL",[710.705]) 
+DestroySelf()~ EXIT
 
 //WYRD 2nd Meeting
 
@@ -494,12 +430,9 @@ DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",22) ApplySpell(Myself,CLERIC_HEAL) D
 
 //MYTHRIEN
 
-CHAIN AC#PPMYT FINALE.00
-~^0xFF8FAD5DSo it's done. The wyrd is gone, and... mayhap this land will finally rest from all the chaos... ^-~
-DO ~StartCutScene("AC#PP6C7")~ EXIT
-
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT wyrd_dead_02
-~^0xFF8FAD5DI must admit, you are a powerful adventurer, <CHARNAME>. I'm not surprised more and more gods turn their head in your direction. And for your help, I will grand you a special gift. ^-~
+CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT FINALE.00
+~^0xFF8FAD5DAnd it's done. The wyrd is gone, and... perhaps this land will finally rest from all the chaos. ^-~
+==AC#PPMYT ~^0xFF8FAD5DI must admit, you are a powerful adventurer, <CHARNAME>. I'm not surprised more and more gods turn their head in your direction. And for your help, I will grand you a special gift. ^-~
 ==AC#PPMYT ~^0xFF8FAD5DA spark of new power. It looks like you fight truly powerful beings so I shall aid you. This new power will allow you to call a faint breeze of Mythal. It shall protect you and help those around you, by healing their wounds. ^-~
 ==AC#PPHEL ~I... I wish to thank you... What was left of my wife and my son is now cradled by the earth of our home. Thanks you...~
 ==AC#PPMYT ~^0xFF8FAD5DIt must be you, who helped our hero. Thank you, spirit. You and your family should rest now. ^-~
@@ -507,6 +440,13 @@ CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT wyrd_dead_02
 ==AC#PPMYT ~^0xFF8FAD5DAnd now, <CHARNAME>, let me return to my duties. You should rest. And rejoice, as you have brought at least some peace to Myth Unnohyr. ^-~
 END
 IF~~THEN REPLY ~And won't it stay that way? Or will the curse of wild and dead magic return?~ EXTERN AC#PPMYT FINALE.02
+IF~~THEN REPLY ~So this is our farewell? Perhaps you want to join my group? We could let our tale continue!~ EXTERN AC#PPMYT FINALE.01
+
+CHAIN AC#PPMYT FINALE.01
+~^0xFF8FAD5DHahaha! Who would have thought you are such a joker. No. I won't join your group. ^-~
+END
+IF~~THEN REPLY ~Well, I had to try.~ EXTERN AC#PPMYT FINALE.01a
+IF~~THEN REPLY ~You do not know what you're missing.~ EXTERN AC#PPMYT FINALE.01b
 
 CHAIN AC#PPMYT FINALE.01a
 ~^0xFF8FAD5DOf course. ^-~
@@ -524,7 +464,7 @@ CHAIN AC#PPMYT FINALE.02
 ~^0xFF8FAD5DMyth Unnohyr receinved a gift of temporal peace. I shall leave to my kin the decision if they want to save this place. If they want to try to erect true Mythal again. ^-~
 ==AC#PPMYT ~^0xFF8FAD5DI will not make this decision for them. ^-~
 ==AC#PPMYT ~^0xFF8FAD5DFarewell, <CHARNAME>. Good luck with the fights that still await you. ^-~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) CreateVisualEffect("SPPORTAL",[900.400]) DestroySelf()~ EXIT
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) OpenDoor("DOOR01") AmbientActivate("Ac#ppblc",FALSE) TriggerActivation("TrACPP71",TRUE) AmbientActivate("AC#PPPP",FALSE) CreateVisualEffect("SPPORTAL",[3800.460]) DestroySelf()~ EXIT
 
 //FINALE 
 
