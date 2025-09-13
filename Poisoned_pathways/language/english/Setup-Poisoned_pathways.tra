@@ -6,7 +6,7 @@
 @13 = ~Alatoasz Berendim~
 @14 = ~Peacefang~
 @15 = ~Quietbrook~
-@16 = ~Sharga Gentleswarm~
+@16 = ~Brother Gentleswarm~
 @17 = ~Sylvae, Handmaiden of the Sacred Grotto~
 @18 = ~Zombie Treant~
 @19 = ~Sister Irinwe~
@@ -75,6 +75,11 @@
 @326 = ~As leaves fall, so too may your burdens.~ [AC#PPELM]
 @327 = ~Peace be upon you, traveler.~ [AC#PPELN]
 @328 = ~I hope to bring peace... someday.~ [AC#PPELO]
+
+@350 = ~...~ [AC#PPHO0]
+@351 = ~Welcome to my humble honeycomb.~ [AC#PPHO1]
+@352 = ~Life is sweeter when you find your honey-comb-ination.~ [AC#PPHO2]
+@353 = ~A drop of honey can heal where a torrent of salt only wounds.~ [AC#PPHO3]
 
 // spl files
 @900 = ~Water Divination~

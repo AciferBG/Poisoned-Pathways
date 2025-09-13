@@ -563,19 +563,50 @@ END
   IF ~~ THEN REPLY ~Could I see your services?~ EXTERN AC#PPEL8 1
   IF ~~ THEN REPLY ~I see. I shall be going.~ EXTERN AC#PPEL8 3
 
-// honey-making orc in area acpp07:
+// honey-maker in area acpp07:
 BEGIN ~AC#PPON2~
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPON2 hello_00
+~Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!~
+== AC#PPON2 ~Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.~ 
+END 
+IF ~~ THEN DO ~CreateVisualEffectObject("SPFLESHS",Myself)
+Polymorph(MONK)
+SetGlobal("BearChange","ACPP07",1)~
+EXIT
+
+CHAIN IF ~Global("BearChange","ACPP07",1)~ THEN AC#PPON2 hello_sorry
+~Ah, that is much better. Forgive me. I sometimes take the form of a bear when the craving grows too great. Honey tastes sweeter when gathered with a muzzle and tongue, or so I tell myself.~ 
+END
+IF~~THEN DO ~SetGlobal("BearChange","ACPP07",2)~ EXTERN AC#PPON2 human_form
+
+CHAIN AC#PPON2 human_form
+~Now that I stand before you in my own skin again... what service might a humble monk of Eldath offer you?~
+END
+IF~~THEN REPLY ~What are you doing here?~ EXTERN AC#PPON2 what_do_you_do
+IF~~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
+
+	CHAIN AC#PPON2 what_do_you_do
+	~What am I doing? Why, I tend the bees, of course! Together we weave harmony into honeycomb, turning blossoms into liquid sunlight. It is not just honey that we make here, but peace itself—thick and golden, sweet upon the tongue. Many wanderers pass by with burdens heavy on their shoulders, and I give them a spoonful. You would be surprised how many quarrels melt away when lips are sticky with honey.~ 
+	END
+	IF~~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
+	
+	CHAIN AC#PPON2 bye
+	~Goodbye! Stay calm and honey-comb along.~ 
+	EXIT
+
+
 
 CHAIN IF ~RandomNum(4,1)~ THEN AC#PPON2 hello_01
 ~Hive teaches us: Work in silence, guard the sweet, sting only when you must.~ 
 EXIT
 
 CHAIN IF ~RandomNum(4,2)~ THEN AC#PPON2 hello_02
-~War leaves wounds. Honey heals 'em. Eldath knew what she was doin’ when she made bees.~ 
+~May your anger melt like wax before the flame, and may every word that leaves your lips be as gentle and sweet as the summer’s honey. Go in peace, stranger, and carry a little sweetness into the world.~ 
 EXIT
 
 CHAIN IF ~RandomNum(4,3)~ THEN AC#PPON2 hello_03
-~Takes patience to make peace... just like good honey. Can’t rush the bees, can’t rush the fighters.~ 
+~It takes patience to make peace... just like good honey. You can’t rush the bees, you can’t rush the fighters.~ 
 EXIT
 
 CHAIN IF ~RandomNum(4,4)~ THEN AC#PPON2 hello_04
