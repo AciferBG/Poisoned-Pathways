@@ -580,6 +580,61 @@ CHAIN IF ~Global("BearChange","ACPP07",1)~ THEN AC#PPON2 hello_sorry
 END
 IF~~THEN DO ~SetGlobal("BearChange","ACPP07",2)~ EXTERN AC#PPON2 human_form
 
+// Rückkehr zum Honigmönch nach dem Verkauf in den Five Flagons
+CHAIN IF ~True()~ THEN AC#PPON2 hello_again
+~Greetings again, lover of honey! What sweetness brings you back to me this day?~ 
+END
+IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",0)
+GlobalLT("AC#PP_HoneyQuest","GLOBAL",10)~THEN REPLY ~It is about the mead...~ EXTERN AC#PPON2 about_mead
+IF~~THEN REPLY ~I shall not keep you from your honey. Farewell.~ EXTERN AC#PPON2 bye
+
+
+CHAIN AC#PPON2 about_mead
+~Oh! Do you bring good news, I hope?~ 
+END
+IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",1)
+GlobalLT("AC#PP_HoneyQuest","GLOBAL",10)~THEN REPLY ~I delivered the cask to the innkeeper of the Five Flagons.~ EXTERN AC#PPON2 about_mead_02
+IF~~THEN REPLY ~No, there is nothing to report yet.~ EXTERN AC#PPON2 bye
+
+
+CHAIN AC#PPON2 about_mead_02
+~And? Did he pay you a proper price for it? A year’s labor went into that nectar.~ 
+END
+IF~~THEN REPLY ~He gave me one hundred gold pieces.~ EXTERN AC#PPON2 about_mead_100
+IF~~THEN REPLY ~He gave me five hundred gold pieces.~ EXTERN AC#PPON2 about_mead_500
+IF~~THEN REPLY ~He gave me seven hundred and fifty gold pieces.~ EXTERN AC#PPON2 about_mead_750
+IF~~THEN REPLY ~He gave me a thousand gold pieces.~ EXTERN AC#PPON2 about_mead_1000
+IF~~THEN REPLY ~No, there is nothing to report yet.~ EXTERN AC#PPON2 bye
+
+
+// Spieler meldet nur 100 Gold
+CHAIN AC#PPON2 about_mead_100
+~Only a hundred? That is… disappointing. Samuel must think Eldath’s peace worth less than a common ale. Still, what is done is done. I shall make do, though my heart is heavy.~ 
+DO ~SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+EXIT
+
+
+// Spieler meldet 500 Gold
+CHAIN AC#PPON2 about_mead_500
+~Ahh, five hundred gold! That is fair recompense for a year’s tending. Eldath’s gardens will bloom brighter for it. Here, take a hundred coins for your trouble—peace is sweet, but labor must not go unrewarded.~ 
+DO ~GiveGoldForce(100) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+EXIT
+
+
+// Spieler meldet 750 Gold
+CHAIN AC#PPON2 about_mead_750
+~Seven hundred and fifty! Ha! More than fair, more than I dared hope! Truly, Eldath smiles upon us today. Take these 250 gold for yourself, and know that your words have bought more than coin—they have bought respect. May your name be blessed as honey on the tongue.~ 
+DO ~GiveGoldForce(250) ReputationInc(1) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+EXIT
+
+
+// Spieler meldet 1000 Gold
+CHAIN AC#PPON2 about_mead_1000
+~A thousand gold? That is beyond generous—nay, it is wondrous! Samuel must have seen not only the worth of the mead, but the worth of peace itself. Take these 500 coins, and accept this gift as well—a cloak woven with Eldath’s blessing, proof against stings both great and small.~ 
+DO ~GiveGoldForce(500) GiveItemCreate("AC#PPIMK",Player1,1,0,0) ReputationInc(1) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+EXIT
+
+
 CHAIN AC#PPON2 human_form
 ~Now that I stand before you in my own skin again... what service might a humble monk of Eldath offer you?~
 END
@@ -589,13 +644,49 @@ IF~~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 
 	CHAIN AC#PPON2 what_do_you_do
 	~What am I doing? Why, I tend the bees, of course! Together we weave harmony into honeycomb, turning blossoms into liquid sunlight. It is not just honey that we make here, but peace itself—thick and golden, sweet upon the tongue. Many wanderers pass by with burdens heavy on their shoulders, and I give them a spoonful. You would be surprised how many quarrels melt away when lips are sticky with honey.~ 
 	END
-	IF~~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
+	IF~~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 five_flagons_quest_start
+	
+// Einstieg: erkennt den Spieler
+CHAIN AC#PPON2 five_flagons_quest_start
+~Oh, now that you stand before me, I recognize you. You are the <PRO_RACE> from Athkatla, are you not? I would have a task for you, should you return to the City of Coin.~ 
+END
+    IF~~THEN REPLY ~Why would a priest of Eldath concern himself with the City of Coin?~ EXTERN AC#PPON2 five_flagons_quest
+    IF~~THEN REPLY ~What is it you ask of me?~ EXTERN AC#PPON2 five_flagons_quest
+    IF~~THEN REPLY ~I am no errand runner for monks and mead. Find another to carry your casks.~ EXTERN AC#PPON2 five_flagons_refuse
+
+
+// Start: Questangebot
+CHAIN AC#PPON2 five_flagons_quest
+~In Athkatla there stands a house of laughter and song, the Five Flagons Inn. Its master, Samuel, is a man of wit and words—yet even such a stage may be gladdened by sweetness. Would you carry a cask of my honeymead to him? Negotiate a fair price in Eldath’s name, that the Quiet One’s temples and gardens may share in the coin.~ 
+END
+  IF~~THEN REPLY ~Very well. I will deliver your honeymead to Samuel of the Five Flagons.~ DO ~SetGlobal("AC#PP_HoneyQuest","GLOBAL",1)~ EXTERN AC#PPON2 five_flagons_accept
+  IF~~THEN REPLY ~What do you mean by negotiating a fair price?~ EXTERN AC#PPON2 five_flagons_quest_02
+  IF~~THEN REPLY ~I am no errand runner for monks and mead. Find another to carry your casks.~ EXTERN AC#PPON2 five_flagons_refuse
+
+
+// Nachfrage: fairer Preis
+CHAIN AC#PPON2 five_flagons_quest_02
+~You likely know the ways of trade better than I. Ask for a sum that honors the worth of the mead, then return to me with the payment. With those coins, we shall purchase fresh candles and herbs for Eldath’s sanctuary here in the Dell, so that peace may be tended as carefully as the hive.~ 
+END
+  IF~~THEN REPLY ~Very well. I will deliver your honeymead to Samuel of the Five Flagons.~  DO ~SetGlobal("AC#PP_HoneyQuest","GLOBAL",1)~  EXTERN AC#PPON2 five_flagons_accept
+  IF~~THEN REPLY ~I am no errand runner for monks and mead. Find another to carry your casks.~ EXTERN AC#PPON2 five_flagons_refuse
+
+
+// Spieler akzeptiert
+CHAIN AC#PPON2 five_flagons_accept
+~My thanks flow as freely as the hive’s nectar. May your words in that tavern be as smooth as honey, and may Samuel see wisdom in fair trade. Return to me with the payment, and I shall grant you a share, for even those who serve peace must taste a little sweetness for their labor.~ 
+DO ~GiveItemCreate("AC#PPHYM",Player1,1,0,0)~ 
+EXIT
+
+
+// Spieler lehnt ab
+CHAIN AC#PPON2 five_flagons_refuse
+~Then let it be so. The hive teaches patience; perhaps another day another person will carry Eldath’s sweetness into the world.~ 
+EXIT
 	
 	CHAIN AC#PPON2 bye
 	~Goodbye! Stay calm and honey-comb along.~ 
 	EXIT
-
-
 
 CHAIN IF ~RandomNum(4,1)~ THEN AC#PPON2 hello_01
 ~Hive teaches us: Work in silence, guard the sweet, sting only when you must.~ 
@@ -612,6 +703,59 @@ EXIT
 CHAIN IF ~RandomNum(4,4)~ THEN AC#PPON2 hello_04
 ~May your anger melt like wax, and may your words be sweet as summer honey.~ 
 EXIT
+
+// Samuel Thunderburp – Erweiterung für den Five Flagons-Dialog
+EXTEND_BOTTOM ~FFBART~ 0
+IF ~PartyHasItem("AC#PPHYM")~ THEN REPLY ~I have here a cask of honeymead from a monk of Eldath of Duskwood Dell.~ 
+  EXTERN FFBART samuel_mead_duskwood_dell_01 
+END
+
+// Spieler übergibt den Met
+CHAIN FFBART samuel_mead_duskwood_dell_01
+~By the gods, look at that golden glow! If the taste matches the hue, this is no mere peasant’s brew. A monk of Eldath, you say? How quaint—and how clever. Peace in a bottle, sweetness in a cask! My patrons will toast to harmony, and quarrels will dissolve before the first jug is empty.~ 
+END
+  IF~~THEN REPLY ~The monk asked that you pay a fair price, that the Quiet One’s temples might share in the profit.~ EXTERN FFBART samuel_mead_duskwood_dell_price
+  IF~~THEN REPLY ~Such mead deserves no ordinary price. What will you offer for it, Samuel?~  EXTERN FFBART samuel_mead_duskwood_dell_price
+
+
+// Price depending on Charisma
+CHAIN FFBART samuel_mead_duskwood_dell_price
+~Ah, a reasonable request—and I am no miser when it comes to quality. How much would you ask for the mead?~ 
+END
+  IF ~~ THEN REPLY ~I ask one hundred gold pieces.~ EXTERN FFBART samuel_mead_duskwood_dell_pay100
+  IF ~CheckStatGT(LastTalkedToBy,10,CHR)
+  CheckStatLT(LastTalkedToBy,15,CHR)~ THEN REPLY ~I ask five hundred gold pieces.~ EXTERN FFBART samuel_mead_duskwood_dell_pay500
+  IF ~CheckStatGT(LastTalkedToBy,14,CHR) CheckStatLT(LastTalkedToBy,18,CHR)~ THEN REPLY ~I ask seven hundred and fifty gold pieces.~ EXTERN FFBART samuel_mead_duskwood_dell_pay750
+  IF ~CheckStatGT(LastTalkedToBy,17,CHR)~ THEN REPLY ~I ask one thousand gold pieces.~ EXTERN FFBART samuel_mead_duskwood_dell_pay1000
+
+
+// Purchase
+CHAIN FFBART samuel_mead_duskwood_dell_pay100
+~What a bargain! The priests of Eldath seem not to know the true worth of their drink. Here, take your hundred gold pieces.~ 
+END
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(100) SetGlobal("AC#PP_HoneyQuest","GLOBAL",2)~ EXTERN FFBART bye_mead
+
+CHAIN FFBART samuel_mead_duskwood_dell_pay500
+~Very well! Here, five hundred gold. A fair sum for a fair cask—tell your monk it shall bring peace to both tavern and temple.~ 
+END
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(500) SetGlobal("AC#PP_HoneyQuest","GLOBAL",2)~ EXTERN FFBART bye_mead
+
+CHAIN FFBART samuel_mead_duskwood_dell_pay750
+~Agreed! Seven hundred and fifty gold! The nectar is fine, the cause is finer still. May Eldath smile on my generosity—and on my patrons’ thirst!~ 
+END
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(750) SetGlobal("AC#PP_HoneyQuest","GLOBAL",3)~ EXTERN FFBART bye_mead
+
+CHAIN FFBART samuel_mead_duskwood_dell_pay1000
+~A king’s ransom! Yet such sweetness cannot truly be measured in coin. Still—take a thousand gold. Let it be said that Samuel Thunderburp rewards excellence in both brew and deed!~ 
+END
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(1000) SetGlobal("AC#PP_HoneyQuest","GLOBAL",4)~ EXTERN FFBART bye_mead
+
+// Samuel dismisses the player
+CHAIN FFBART bye_mead
+~Do give the Eldathyn my regards. I never thought they were capable of anything quite so... useful!~ 
+EXIT
+
+
 
 // Ondonti orcs in pumpkin area acpp05:
 BEGIN ~AC#PPON1~

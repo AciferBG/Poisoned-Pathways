@@ -1290,6 +1290,22 @@ Equipped abilities:
 – While Silenced: Immunity to Suggestion, Charm, Domination, Command, Sleep, Maze, Stun, Confusion and Psionic Blast.
 
 Weight: 1~
+@1203 = ~Honeymead of Duskwood Dell~
+@1204 = ~This heavy cask is filled with golden mead brewed by an Eldathyn monk in Duskwood Dell. The nectar carries the fragrance of wild blossoms and the patient work of countless bees.
+
+The monk has entrusted you with this cask, asking that you deliver it to Samuel Thunderburp, proprietor of the Five Flagons in Athkatla. Once you have received payment, you are to return the gold to the monk so that it may serve the temples and gardens of Eldath.
+
+Weight: 1~
+@1205 = ~Cloak of Thousand Stings~
+@1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells faintly of smoke, wax, and honey.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1 vs. missiles and piercing weapons
+– Immunity to "Summon Insects" and "Insect Plague"
+
+Weight: 3~
 
 
 // script strings
