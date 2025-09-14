@@ -1,0 +1,9 @@
+IF
+	Global("Prep","ACPP70",0)
+THEN
+RESPONSE #100
+	SetMusic(NIGHT,%AC#PP77%)
+	SetMusic(DAY,%AC#PP77%)
+  HideAreaOnMap("ACPP70")
+  SetGlobal("Prep","ACPP70",1)
+END

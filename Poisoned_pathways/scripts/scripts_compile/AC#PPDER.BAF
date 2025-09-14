@@ -1,0 +1,47 @@
+IF
+    See([GOODCUTOFF])
+    Range([GOODCUTOFF],16)
+    Global("Firsttime","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("Firsttime","LOCALS",1)
+        RunAwayFrom(LastSeenBy(Myself),100)
+END
+
+IF
+    See([GOODCUTOFF])
+    Range([GOODCUTOFF],16)
+THEN
+    RESPONSE #100
+        RunAwayFrom(LastSeenBy(Myself),100)
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),150)
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        RunAwayFrom(LastAttackerOf(Myself),150)
+END
+
+IF
+    Global("Firsttime","LOCALS",1)
+THEN
+    RESPONSE #100
+        RandomWalk()
+END
+
