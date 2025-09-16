@@ -351,14 +351,6 @@ RESPONSE #100
 StartCutScene("AC#PP6C5")
 END
 
-IF
-Global("AC#PPChapter6Quest","GLOBAL",24)
-THEN
-RESPONSE #100
-ActionOverride(Player1,AddSpecialAbility("AC#PPXX"))
-SetGlobal("AC#PPChapter6Quest","GLOBAL",25)
-END
-
 /////////////////////////////////////////////
 /////////////////////////////////////////////
 

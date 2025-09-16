@@ -6,27 +6,23 @@ THEN
         StartCutSceneMode()
         ClearAllActions()
         Wait(1)
-        FadeToColor([20.0],0)
+        CreateVisualEffect("SPSTRENH",[710.705])
         Wait(2)
-        JumpToPoint([642.480])
-        SmallWait(1)
-        MoveViewPoint([642.480],INSTANT)
-        ActionOverride(Player2,JumpToPoint([548.455]))
-        ActionOverride(Player3,JumpToPoint([593.533]))
-        ActionOverride(Player4,JumpToPoint([775.509]))
-        ActionOverride(Player5,JumpToPoint([519.530]))
-        ActionOverride(Player6,JumpToPoint([622.544]))
-        SmallWait(1)
-        FaceObject("AC#PPMYT")  // Mythrien Sarath
-        SmallWait(1)
-        ActionOverride(Player2,FaceObject("AC#PPMYT"))  // Mythrien Sarath
-        ActionOverride(Player3,FaceObject("AC#PPMYT"))  // Mythrien Sarath
-        ActionOverride(Player4,FaceObject("AC#PPMYT"))  // Mythrien Sarath
-        ActionOverride(Player5,FaceObject("AC#PPMYT"))  // Mythrien Sarath
-        ActionOverride(Player6,FaceObject("AC#PPMYT"))  // Mythrien Sarath
-        CreateCreature("AC#PPHEL",[780.397],S)  // Elven Spirit
+        CreateVisualEffect("SPSDIMPA",[590.470])
+        CreateVisualEffect("SPSDIMPA",[1000.640])
+        CreateVisualEffect("SPSDIMPA",[400.770])
+        CreateVisualEffect("SPSDIMPA",[820.930])
         Wait(2)
-        FadeFromColor([20.0],0)
+        CreateVisualEffect("SPSTRENH",[590.470])
+        CreateVisualEffect("SPSTRENH",[1000.640])
+        CreateVisualEffect("SPSTRENH",[400.770])
+        CreateVisualEffect("SPSTRENH",[820.930])
+        Wait(1)
+        CreateVisualEffect("SPUSEANY",[710.705])
+        CreateVisualEffect("SPUSEANY",[590.470])
+        CreateVisualEffect("SPUSEANY",[1000.640])
+        CreateVisualEffect("SPUSEANY",[400.770])
+        CreateVisualEffect("SPUSEANY",[820.930])
         Wait(3)
         SetGlobal("AC#PPChapter6Quest","GLOBAL",23)
         SmallWait(1)

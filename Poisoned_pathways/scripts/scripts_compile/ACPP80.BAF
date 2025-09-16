@@ -4,9 +4,32 @@ THEN
     RESPONSE #100
         SpawnPtDeactivate("Spawnpoint01")
         AmbientActivate("Mythrien_eye",FALSE)
+        TriggerActivation("Tracpp90",FALSE)
         SoundActivate("Mythrien_eye_sound_01",FALSE)
         SetGlobal("Prep","ACPP80",1)
 END
+
+IF
+    Global("City_healed","ACPP80",0)
+    GlobalGT("AC#PPChapter6Quest","GLOBAL",23)
+THEN
+    RESPONSE #100
+        TriggerActivation("TrACPP70",FALSE)
+        TriggerActivation("Tracpp90",TRUE)
+        AmbientActivate("Mythrien_eye",FALSE)
+        SoundActivate("Mythrien_eye_sound_01",FALSE)
+        SetGlobal("City_healed","ACPP80",1)
+END
+
+/*
+IF
+    Global("AC#PPChapter6Quest","GLOBAL",24)
+THEN
+    RESPONSE #100
+        ActionOverride(Player1,AddSpecialAbility("AC#PPXX"))  // Brief Glimmer of Mythal
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",25)
+END
+*/
 
 IF
     Global("Prep","ACPP80",1)
@@ -33,14 +56,4 @@ THEN
     RESPONSE #100
         ContainerEnable("Feet",TRUE)
         SetGlobal("AC#PPChapter6Quest","GLOBAL",12)
-END
-
-IF
-    Global("AC#PPChapter6Quest","GLOBAL",24)
-    Global("Bye_Mythrien","ACPP80",0)
-THEN
-    RESPONSE #100
-        AmbientActivate("Mythrien_eye",FALSE)
-        SoundActivate("Mythrien_eye_sound_01",FALSE)
-        SetGlobal("Bye_Mythrien","ACPP80",1)
 END
