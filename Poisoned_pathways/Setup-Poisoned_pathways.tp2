@@ -302,6 +302,13 @@ COPY ~Poisoned_pathways/bam/bam_item_BG2EE~         ~override~
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1030.pvrz~
  END
  END
+ 
+   COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPMYD.bam~ ~override~ // green rose of Mythrien desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1031.pvrz~
+ END
+ END
 ///////////////////////////////////////////////////////////////////////
 // VVC files
 //
@@ -423,7 +430,7 @@ LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 0 parameter2 = ic
 COPY ~Poisoned_pathways/spl/AC#PPDM.spl~         ~override~  // NEW dead magic area effect
 
 //FINAL SPELL
-
+/*
 COPY ~Poisoned_pathways/spl/AC#PPXX.spl~ ~override~
   SAY NAME1 ~Brief Glimmer of Mythal~
   SAY NAME2 ~Brief Glimmer of Mythal~
@@ -431,7 +438,7 @@ COPY ~Poisoned_pathways/spl/AC#PPXX.spl~ ~override~
 This ability is a gift from Mythrien Serath himself. It allows the caster to call a brief gust of Mythal, powerful elven energy. when called, the caster gains +1 Luck and +6 Saving Throws vs. Spell and Saving Throws vs. Death for 1 turn. The spell cures poison and disease, as well as restores all lost levels. Furthermore, all allies in a close distance from the caster heal 4d4 Hit Points (6d4 if the ally is is an elf or half-elf) and removes all fatigue. Lastly, there is a 10% chance that allies will regain 1 first level spell (arcane and divine) while their fatigue is being removed.
 
 This spell however, has a minor price, which should be taken into consideration. When the turn passes, the caster's visual range will be lowered by 4 and the fatigue that was removed from from the caster and the allies will be transfered to the caster.~
-
+*/
 COPY ~Poisoned_pathways/spl/AC#PPXXB.spl~ ~override~
   SAY NAME1 ~~
   SAY NAME2 ~~

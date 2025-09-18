@@ -1306,6 +1306,16 @@ Equipped abilities:
 – Immunity to "Summon Insects" and "Insect Plague"
 
 Weight: 3~
+@1207 = ~This emerald-hued crystal rose is said to be a gift from Mythrien Sarath, the Watcher over Mythals. Each of its fragile petals glimmers with a light not of this world, as though echoing the lost wards of ancient elven cities.
+When a petal is plucked, a translucent sphere surrounds the bearer, shielding <PRO_HIMHER> from spells of lesser potency. Yet the gift is fleeting—no one can know how many petals remain, and when the last one falls, the rose will crumble to dust.
+
+STATISTICS:
+
+Charge abilities:
+– Pluck a Petal: Grants immunity to spells of up to 5th level for 3 rounds
+– Limited number of uses (unknown to the bearer); the rose vanishes when depleted
+
+Weight: 0~
 
 
 // script strings

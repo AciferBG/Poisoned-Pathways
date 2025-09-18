@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPMYR.itm~         ~override~    //  Green Rose of Mythrien (gift from Mythrien himself)
+  SAY NAME2 @1155
+  SAY DESC  @1207
+
 COPY ~%MOD_FOLDER%/itm/AC#PPIMK.itm~         ~override~    //  cloak of 1000 stings
   SAY NAME2 @1205
   SAY DESC  @1206

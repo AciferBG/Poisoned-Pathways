@@ -465,7 +465,12 @@ DO ~StartCutScene("AC#PP6C7")~ EXIT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT FINALE.02
 ~^0xFF8FAD5DA year of quiet is all I can grant. Beyond that, it rests with my kin—if they choose to weave anew, to raise a true Mythal here once more. ^-~
-==AC#PPMYT ~^0xFF8FAD5DYou have done what few dared dream. Farewell, <CHARNAME>... may the paths ahead bow to your courage. ^-~
+==AC#PPMYT ~^0xFF8FAD5DAs my thanks, I return to you the rose you placed at my feet when you called me forth. May it shield you against the malice of hostile spells. Yet remember—its power, too, shall one day fade into silence. ^-~
+END
+IF~~THEN DO ~GiveItemCreate("AC#PPMYR",Player1,1,0,0)~ EXTERN AC#PPMYT bye_final
+
+CHAIN AC#PPMYT bye_final
+~^0xFF8FAD5DFarewell, <CHARNAME>. May the paths ahead bow to your courage. ^-~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) CreateVisualEffect("SPPORTAL",[900.400]) DestroySelf()~ EXIT
 
 
