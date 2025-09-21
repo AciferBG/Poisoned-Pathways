@@ -52,7 +52,7 @@ IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 	IF~Global("TellPrice","LOCALS",1)~THEN REPLY ~How much did you say the price was again?~ EXTERN AC#PPSKD pay_gold_01
 	IF~Global("TellPrice","LOCALS",0)~THEN REPLY ~Everyone has a price. What’s yours?~ DO ~SetGlobal("TellPrice","LOCALS",1)~ EXTERN AC#PPSKD pay_gold_start
 	IF~CheckStatGT(LastTalkedToBy,17,STR)~THEN REPLY ~My strength isn’t for show. Do I really have to beat the answer out of you? Choose wisely which side of my fists you’d like to be on.~ EXTERN AC#PPSKD tell_supplier
-	IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN REPLY ~Minsc, perhaps Skann would feel more cooperative if you showed him your muscles. Would you be so kind?~ EXTERN MinscJ Minsc_show_muscles
+	IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID) Global("AC#PP_MinscMuscles","GLOBAL",0)~ THEN REPLY ~Minsc, perhaps Skann would feel more cooperative if you showed him your muscles. Would you be so kind?~ EXTERN MinscJ Minsc_show_muscles
 	IF~ReputationLT(Player1,6)~THEN REPLY ~I'm <CHARNAME>. People call me notorious. Ask around what happens to those who cross me.~ EXTERN AC#PPSKD threat_rep
 	IF~Dead("maevar")~THEN REPLY ~I helped bring down Mae’Var. So unless you want to follow him, you’ll start talking.~ EXTERN AC#PPSKD threat_rep
 	IF~ReputationGT(Player1,16)~THEN REPLY ~You might have heard of me— I'm <CHARNAME>. I've brought down worse than you, and I don't need poison to do it. So tell me what I want to know!~ EXTERN AC#PPSKD threat_rep
@@ -332,7 +332,7 @@ IF~~THEN REPLY ~Find someone else for your troubles.~ EXTERN AC#PPEL1 bye
 	IF~~THEN REPLY ~Find someone else for your troubles.~ EXTERN AC#PPEL1 bye
 
 CHAIN IF ~~ THEN AC#PPEL1 job
-~Allow me to introduce myself. I am Merethan, devoted servant of Eldath, the Mother Guardian of Groves.~ 
+~Allow me to introduce myself. I am Merethan, devoted servant of Eldath, the goddess of peace and groves.~ 
 == JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Eldath’s servants are rare in times like these. I hope his words carry more than peaceful pleasantries.~
 == CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~An Eldathyn! A gentle presence in a world far too fond of thunder.~
 	END
@@ -439,7 +439,7 @@ EscapeArea()~ EXIT
 APPEND ~MINSCJ~
 IF ~~ THEN BEGIN Minsc_show_muscles
    SAY ~Muscles? Nay! But behold—BOO! The fury of righteousness!~
-   IF ~~ THEN EXTERN ~AC#PPSKD~ Minsc_show_muscles_02
+   IF ~~ THEN DO ~SetGlobal("AC#PP_MinscMuscles","GLOBAL",1)~ EXTERN ~AC#PPSKD~ Minsc_show_muscles_02
 END
 END
 

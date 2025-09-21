@@ -76,6 +76,10 @@
 @327 = ~Peace be upon you, traveler.~ [AC#PPELN]
 @328 = ~I hope to bring peace... someday.~ [AC#PPELO]
 
+@330 = ~I guard what little remains.~ [AC#PPMYB]
+@331 = ~Fragments of glory still linger.~ [AC#PPMYA]
+@332 = ~Mythahls broken, not forgotten.~ [AC#PPMYC]
+
 @350 = ~...~ [AC#PPHO0]
 @351 = ~Welcome to my humble honeycomb.~ [AC#PPHO1]
 @352 = ~Life is sweeter when you find your honey-comb-ination.~ [AC#PPHO2]
@@ -1341,7 +1345,7 @@ Weight: 0~
 @2019 = ~Rose... it must be safe!~
 @2020 = ~Take it to Mythrien! Place it under his feet and reach for his helping hand!~
 @2021 = ~When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.~  
-@2022 = ~A statue of a young elven woman, red roses blooming at her feet — the only plants untouched by the corrupted Mythal.~
+@2022 = ~A statue of a young elven warrior-maiden, red roses blooming at her feet — the only plants untouched by the corrupted Mythal.~
 @2023 = ~By the power of the wardstone, the throng of undead trees is banished.~
 @2024 = ~Blood... All I can see is blood!~
 @2025 = ~Free me! Please!~

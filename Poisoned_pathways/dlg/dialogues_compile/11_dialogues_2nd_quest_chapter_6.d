@@ -324,12 +324,12 @@ CHAIN AC#PPHEL HELPER.2.08
 ==AC#PPHEL ~...and I shall return to dark earth I died in...~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9) CreateVisualEffect("AC#PPBUR",[2230.800]) DestroySelf()~ EXIT
 
-//SUMMONED
+//MYTHRIEN SUMMONED
 
 BEGIN AC#PPMYT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",14)~ THEN AC#PPMYT 01.00
-~^0xFF8FAD5DYour summons echoes through veils long closed… and I have come. But what shadow clings here? ^-~
+~^0xFF8FAD5DYour summons echoes through veils long closed... and I have come. But what shadow clings here? ^-~
 ==AC#PPMYT IF ~Race(Player1,ELF)~ THEN ~^0xFF8FAD5DA child of my people calls me to broken Unnohyr. Ages have passed since such voices reached me. ^-~
 ==AC#PPMYT IF ~!Race(Player1,ELF)~ THEN ~^0xFF8FAD5DA bold <PRO_RACE>, daring to touch the frayed skein of a fallen Mythal. ^-~
 ==AC#PPMYT ~^0xFF8FAD5DThese stones once thrummed with glory. Now they writhe with mockery—wards unbound, oaths sundered. ^-~
@@ -454,14 +454,19 @@ EXTERN AC#PPMYT wyrd_dead_02
 CHAIN AC#PPMYT wyrd_dead_02
 ~^0xFF8FAD5DMortal, your strength has carried what even I could not. The echo of your deed reaches beyond these broken wards—yes, even the gods turn their gaze toward you. You have given Myth Unnohyr a fragment of peace. For that, I thank you. ^-~
 END
-IF~~THEN REPLY ~Will it endure? Or shall the curse of wild and dead magic linger on?~ EXTERN AC#PPMYT restore_mythal
-IF~~THEN REPLY ~Then what will become of this place now?~ EXTERN AC#PPMYT restore_mythal
+IF~~THEN REPLY ~Perhaps you could show your gratitude in a more... tangible way?~ EXTERN AC#PPMYT show_grateful
+IF~~THEN REPLY ~Will the curse of wild and dead magic linger on forever?~ EXTERN AC#PPMYT restore_mythal
+IF~~THEN REPLY ~What will become of this place now?~ EXTERN AC#PPMYT restore_mythal
 IF~~THEN REPLY ~I’ll be glad once I can leave this place behind.~ EXTERN AC#PPMYT restore_mythal
 
+CHAIN AC#PPMYT show_grateful
+~^0xFF8FAD5DThat I shall do soon enough. But first, allow me to mend the Mythal of this place—if only in part. ^-~
+EXTERN AC#PPMYT restore_mythal
 
 CHAIN AC#PPMYT restore_mythal
-~^0xFF8FAD5DThis Mythal cannot be remade by my hand. Yet I shall pour into it a breath of my essence, enough to still its raving for a single year. During that span, no corruption shall rise to feed upon it. ^-~
+~^0xFF8FAD5DI do not possess the strength to renew this Mythal in full. Yet for a brief span I can steady it—enough to still its raving for a single year. During that time, no corruption shall rise to feed upon it. ^-~
 DO ~StartCutScene("AC#PP6C7")~ EXIT
+
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT FINALE.02
 ~^0xFF8FAD5DA year of quiet is all I can grant. Beyond that, it rests with my kin—if they choose to weave anew, to raise a true Mythal here once more. ^-~
