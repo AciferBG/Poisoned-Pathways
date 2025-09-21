@@ -710,6 +710,11 @@ IF ~PartyHasItem("AC#PPHYM")~ THEN REPLY ~I have here a cask of honeymead from a
   EXTERN FFBART samuel_mead_duskwood_dell_01 
 END
 
+EXTEND_BOTTOM ~FFBART~ 8
+IF ~PartyHasItem("AC#PPHYM")~ THEN REPLY ~I have here a cask of honeymead from a monk of Eldath of Duskwood Dell.~ 
+  EXTERN FFBART samuel_mead_duskwood_dell_01 
+END
+
 // Spieler übergibt den Met
 CHAIN FFBART samuel_mead_duskwood_dell_01
 ~By the gods, look at that golden glow! If the taste matches the hue, this is no mere peasant’s brew. A monk of Eldath, you say? How quaint—and how clever. Peace in a bottle, sweetness in a cask! My patrons will toast to harmony, and quarrels will dissolve before the first jug is empty.~ 

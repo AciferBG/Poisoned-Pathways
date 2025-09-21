@@ -1339,7 +1339,7 @@ Weight: 0~
 @2013 = ~Magic seems to function normally within this area.~
 @2014 = ~This statue depicts an elven deity, but you find it difficult to recognize it.~
 @2015 = ~This statue portrays Mythrien Sarath, a nearly forgotten god once revered for his guardianship over Mythals.~
-@2016 = ~As an elf, you recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
+@2016 = ~You recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
 @2017 = ~I AM THE POISON AND I SHALL DEVOUR YOU!~
 @2018 = ~(You can hear some sound coming from the cauldron. It looks like with the death of the creature an antidote was created.)~
 @2019 = ~Rose... it must be safe!~
@@ -1365,6 +1365,28 @@ Weight: 0~
 @2039 = ~If anyone is to win this battle, it's you.~
 @2040 = ~The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
 @2041 = ~The entrance to this tower is shrouded in an unnatural mist. Without the proper means, you will not be able to enter.~
+
+// ACPP 77 strings
+@2042 = ~A proud elven warrior-maiden stands joyfully before her city.~
+@2043 = ~She fights against numerous beasts.~
+@2044 = ~The elven warrior-maiden appears to be stabilizing some magic.~
+@2045 = ~An elven community mourns at a coffin.~
+
+@2046 = ~You recognize Elv-Esster Aened, commander of the guard of Myth Unnohyr. She stands before the city – young, proud, and filled with hope.~
+@2047 = ~She fights against numerous beasts – it seems the god Malar has a hand in this. Elv-Esster faces them alone – unyielding, without fear.~
+@2048 = ~You realize she is trying to stabilize the failing mythal with her own essence – an act of sacrifice and magic.~
+@2049 = ~The mourning elves in this image are not just witnesses to death, but to divine failure. Some lower their heads – others gaze accusingly at the sky.~
+
+@2050 = ~An undead creature appears to be possessing an elf.~
+@2051 = ~The elven warrior-maiden tries to drive back the undead.~
+@2052 = ~The elven warrior-maiden seems to be torn apart by a blinding magical light.~
+
+@2053 = ~Elv-Esster Aened's tomb~
+
+@2054 = ~A ghostly entity cloaked in shadows appears to invade the mind of an elven defender – the Wyrd has come.~
+@2055 = ~Elv-Esster Aened and her kin stand against the encroaching Wyrd, their spells lashing out in desperation.~
+@2056 = ~A surge of wild magic erupts as the mythal shatters—Elv-Esster vanishes within the blinding light.~
+
 
 
 

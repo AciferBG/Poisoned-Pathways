@@ -1,0 +1,17 @@
+IF
+    Clicked([ANYONE])
+    OR(2)
+        Race(LastTrigger,ELF)
+        CheckStatGT(LastTrigger,49,LORE)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2048) 
+END
+
+IF
+    Clicked([ANYONE])
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2044) 
+END
+

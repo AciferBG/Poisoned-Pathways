@@ -1,0 +1,15 @@
+IF
+    Clicked([ANYONE])
+    GlobalGT("AC#PP_CH6_ENEMIES","ACPP77",0)   
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2054) 
+END
+
+IF
+    Clicked([ANYONE])
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2050) 
+END
+

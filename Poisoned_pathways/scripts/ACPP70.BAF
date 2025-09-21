@@ -2,8 +2,8 @@ IF
 	Global("Prep","ACPP70",0)
 THEN
 RESPONSE #100
-	SetMusic(NIGHT,%AC#PP77%)
-	SetMusic(DAY,%AC#PP77%)
+	SetMusic(NIGHT,%AC#PP70%)
+	SetMusic(DAY,%AC#PP70%)
   OpenDoor("DOOR01")
   OpenDoor("DOOR03")  
   ContainerEnable("Roses",FALSE)
@@ -130,6 +130,7 @@ IF
 THEN
     RESPONSE #100
     OpenDoor("DOOR02")
+    AddMapNote([3980.200],@2053)
     SetGlobal("OpenDoor03","ACPP70",1)
 END
 

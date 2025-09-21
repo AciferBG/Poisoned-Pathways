@@ -9,6 +9,14 @@ THEN
 END
 
 IF
+    Global("AC#PPHelpZombie","GLOBAL",1)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWY2",[643.493],NNE)  // Zombie
+        SetGlobal("AC#PPHelpZombie","GLOBAL",2)
+END
+
+IF
     Global("AC#PP_CH6_ENEMIES","ACPP77",0)
     Global("AC#PP_MythUnnohyr","GLOBAL",10)
 THEN
@@ -18,16 +26,16 @@ THEN
 END
 
 IF
-    Global("CreateWyrd2","ACPP77",0)    
+    Global("CreateWyrd2","ACPP77",0)
     Global("AC#PPChapter6Quest","GLOBAL",18)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPWYR",[650.490],SSW)
+        CreateCreature("AC#PPWYR",[650.490],SSW)  // Wild Wyrd
         SetGlobal("CreateWyrd2","ACPP77",1)
 END
 
 IF
-    Dead("AC#PPWYR")
+    Dead("AC#PPWYR")  // Wild Wyrd
     CombatCounter(0)
     Global("AC#PPChapter6Quest","GLOBAL",22)
 THEN
