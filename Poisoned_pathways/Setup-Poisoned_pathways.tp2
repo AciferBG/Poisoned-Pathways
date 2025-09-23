@@ -457,6 +457,7 @@ COPY ~Poisoned_pathways/spl/AC#PPXXP.spl~ ~override~
 INCLUDE ~Poisoned_pathways/lib/add_music_acpp01.tph~
 INCLUDE ~Poisoned_pathways/lib/add_music_acpp70.tph~
 INCLUDE ~Poisoned_pathways/lib/add_music_acpp77.tph~
+INCLUDE ~Poisoned_pathways/lib/add_music_acpp90.tph~
 
 ///////////////////////////////////////////////////////////////////////
 //sound files

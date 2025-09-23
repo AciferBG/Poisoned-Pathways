@@ -1,14 +1,57 @@
 IF
-    IsOverMe([PC])
-    HasItem("AC#PP77W",LastTrigger)  // Elven Wardstone
+    Clicked([ANYONE])
+    PartyHasItem("AC#PP77W")  // Elven Wardstone
+    Range(LastTrigger,12)
     Global("OpenTreeDoor","ACPP70",0)
 THEN
     RESPONSE #100
         SetGlobal("OpenTreeDoor","ACPP70",1)
         CreateVisualEffectObject("FIRECOLD",LastTrigger)
         CreateVisualEffect("AC#PPBLM",[4096.1232])
-        DisplayString(Myself,@2023)
-        TakePartyItem("AC#PP77W")
-        DestroyItem("AC#PP77W")
+        DisplayString(Myself,@2060)
+        TakePartyItem("AC#PP77W")  // Elven Wardstone
+        DestroyItem("AC#PP77W")  // Elven Wardstone
 END
 
+IF
+    Clicked([ANYONE])
+    !PartyHasItem("AC#PP77W")  // Elven Wardstone
+    Range(LastTrigger,12)
+    Global("OpenTreeDoor","ACPP70",0)
+    Global("TreeDoorInfo","ACPP70",0)
+THEN
+    RESPONSE #100
+        SetGlobal("TreeDoorInfo","ACPP70",1)
+        DisplayString(Myself,@2061) 
+END
+
+IF
+    Clicked([ANYONE])
+    !PartyHasItem("AC#PP77W")  // Elven Wardstone
+    Range(LastTrigger,12)
+    Global("OpenTreeDoor","ACPP70",0)
+    CheckStatGT(LastTrigger,23,STR)
+THEN
+    RESPONSE #100
+        FadeToColor([15.0],0)
+        Wait(2)
+        SetGlobal("OpenTreeDoor","ACPP70",1)
+        FadeFromColor([15.0],0)
+        DisplayString(Myself,@2062)  
+END
+
+IF
+    Clicked([ANYONE])
+    Range(LastTrigger,12)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2063)  
+END
+
+IF
+    Clicked([ANYONE])
+    !Range(LastTrigger,12)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,14702)  // You are too far away to use that.
+END

@@ -1346,7 +1346,7 @@ Weight: 0~
 @2020 = ~Take it to Mythrien! Place it under his feet and reach for his helping hand!~
 @2021 = ~When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.~  
 @2022 = ~A statue of a young elven warrior-maiden, red roses blooming at her feet — the only plants untouched by the corrupted Mythal.~
-@2023 = ~By the power of the wardstone, the throng of undead trees is banished.~
+
 @2024 = ~Blood... All I can see is blood!~
 @2025 = ~Free me! Please!~
 @2026 = ~(The yuan-ti is nowhere to be seen, but he couldn't have left Myth Unnohyr, he was too wounded for that.)~
@@ -1386,6 +1386,14 @@ Weight: 0~
 @2054 = ~A ghostly entity cloaked in shadows appears to invade the mind of an elven defender – the Wyrd has come.~
 @2055 = ~Elv-Esster Aened and her kin stand against the encroaching Wyrd, their spells lashing out in desperation.~
 @2056 = ~A surge of wild magic erupts as the mythal shatters—Elv-Esster vanishes within the blinding light.~
+
+// ACPP70 strings - the tree obstacle
+@2060 = ~By the power of the wardstone, the throng of undead trees is banished.~
+@2061 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
+@2062 = ~With sheer force, you actually manage to shift the tree aside.~
+@2063 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
+
+
 
 
 

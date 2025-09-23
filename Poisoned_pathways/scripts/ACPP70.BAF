@@ -13,6 +13,7 @@ RESPONSE #100
   TriggerActivation("Info_no_way_back",FALSE)
   SoundActivate("Portal01",FALSE)
   SoundActivate("Portal02",FALSE)
+  TriggerActivation("Trigger_wardstone",FALSE)
 	SetGlobal("Prep","ACPP70",1)
 	Continue()
 END
@@ -110,6 +111,7 @@ IF
 THEN
     RESPONSE #100
         OpenDoor("DOOR03")
+        TriggerActivation("Trigger_wardstone",FALSE)
         SetGlobal("OpenTreeDoor","ACPP70",2)
 END
 
@@ -121,6 +123,7 @@ THEN
     CloseDoor("DOOR03")
     CreateCreature("AC#PPANN",[744.2498],S)
     CreateCreature("AC#PPWY1",[4108.1050],NW)
+    TriggerActivation("Trigger_wardstone",TRUE)
     SetGlobal("SecondVisit","ACPP70",1)
 END
 

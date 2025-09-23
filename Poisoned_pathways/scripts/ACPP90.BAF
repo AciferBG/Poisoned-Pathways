@@ -2,8 +2,8 @@ IF
     Global("Prep","ACPP90",0)
 THEN
     RESPONSE #100
-        SetMusic(NIGHT,%AC#PP70%)
-	    SetMusic(DAY,%AC#PP70%)
+        SetMusic(NIGHT,%AC#PP90%)
+	    SetMusic(DAY,%AC#PP90%)
         Explore()
         HideAreaOnMap("ACPP70")
         SetGlobal("Prep","ACPP90",1)
