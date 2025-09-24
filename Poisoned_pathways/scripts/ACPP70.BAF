@@ -2,13 +2,13 @@ IF
 	Global("Prep","ACPP70",0)
 THEN
 RESPONSE #100
-	SetMusic(NIGHT,%AC#PP70%)
+	//SetMusic(NIGHT,%AC#PP70%)
 	SetMusic(DAY,%AC#PP70%)
   OpenDoor("DOOR01")
   OpenDoor("DOOR03")  
   ContainerEnable("Roses",FALSE)
   SpawnPtDeactivate("Spawn_gibberlings")
-  SpawnPtDeactivate("Spawn_wisps01")
+  //SpawnPtDeactivate("Spawn_wisps01")
   SpawnPtDeactivate("Spawn_spiders01")  
   TriggerActivation("Info_no_way_back",FALSE)
   SoundActivate("Portal01",FALSE)
@@ -67,7 +67,7 @@ IF
 THEN
     RESPONSE #100
         SpawnPtDeactivate("Spawn_gibberlings")
-        SpawnPtDeactivate("Spawn_wisps01")
+        //SpawnPtDeactivate("Spawn_wisps01")
         SpawnPtDeactivate("Spawn_spiders01")
         SpawnPtDeactivate("Mud_zombies")
         SpawnPtDeactivate("Spawn_ankhegs_entry")
@@ -82,6 +82,9 @@ THEN
         SpawnPtDeactivate("Spawn_undead03")
         SpawnPtDeactivate("Spawn_undead04")
         TriggerActivation("Info_no_way_back",TRUE)
+        CreateCreature("AC#PPEEA",[3210.2140],NE)  // Elv-Esster Aened: Banshee (former elven warrior maiden)
+        CreateCreature("AC#PPMI6",[2647.2693],SSE)  // High Ranger: leading to Myth Unnohyr
+        CreateCreature("AC#PPMI7",[3272.2043],SW)  // High Ranger: wyrd confrontation
         SetGlobal("Ch6ChangeSpawns","ACPP70",1)
 END
 
@@ -116,15 +119,26 @@ THEN
 END
 
 IF
-    PartyHasItem("AC#PPWA")  
+    PartyHasItem("AC#PP77W")  // Elven Wardstone
+    GlobalGT("OpenTreeDoor","ACPP70",0)
+THEN
+    RESPONSE #100
+        DisplayStringHeadOwner("AC#PP77W",@2067)
+        TakePartyItem("AC#PP77W")  // Elven Wardstone
+        DestroyItem("AC#PP77W")  // Elven Wardstone
+END
+
+IF
+    PartyHasItem("AC#PPWA")  // Singing Water of Eldath
     Global("SecondVisit","ACPP70",0)
 THEN
     RESPONSE #100
-    CloseDoor("DOOR03")
-    CreateCreature("AC#PPANN",[744.2498],S)
-    CreateCreature("AC#PPWY1",[4108.1050],NW)
-    TriggerActivation("Trigger_wardstone",TRUE)
-    SetGlobal("SecondVisit","ACPP70",1)
+        CloseDoor("DOOR03")
+        CreateCreature("AC#PPANN",[744.2498],S)  // Mesmerized Ankheg
+        CreateCreature("AC#PPWY1",[4108.1050],NW)  // Zombie
+        CreateCreatureImpassableAllowOverlap("AC#PP70Z",[4117.1196],N)  // Fallen Tree
+        TriggerActivation("Trigger_wardstone",TRUE)
+        SetGlobal("SecondVisit","ACPP70",1)
 END
 
 IF
@@ -193,7 +207,7 @@ IF
   GlobalLT("ActivateSpawnPoints02","ACPP70",2)
 THEN
 RESPONSE #100
-  SpawnPtDeactivate("Spawn_wisps01")
+  //SpawnPtDeactivate("Spawn_wisps01")
   SpawnPtDeactivate("Spawn_spiders01")   
 	SetGlobal("ActivateSpawnPoints02","ACPP70",2)
 END
@@ -212,7 +226,7 @@ IF
   Global("ActivateSpawnPoints02","ACPP70",0)
 THEN
 RESPONSE #100
-  SpawnPtActivate("Spawn_wisps01")
+  //SpawnPtActivate("Spawn_wisps01")
   SpawnPtActivate("Spawn_spiders01")  
 	SetGlobal("ActivateSpawnPoints02","ACPP70",1)
 END

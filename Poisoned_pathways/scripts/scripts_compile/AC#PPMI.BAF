@@ -1,0 +1,7 @@
+IF
+    GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
+THEN
+    RESPONSE #100
+        DestroySelf()
+END
+

@@ -50,6 +50,8 @@
 @57 = ~Poison Incarnation~
 @58 = ~Chasme~
 @59 = ~Poison Weird~
+@60 = ~Fallen Tree~
+@61 = ~Elv-Esster Aened~
 
 
 // cre soundfiles
@@ -1392,6 +1394,12 @@ Weight: 0~
 @2061 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
 @2062 = ~With sheer force, you actually manage to shift the tree aside.~
 @2063 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
+@2064 = ~The tree collapses under the fire and dissolves.~
+@2065 = ~The fire seems to slowly destroy the fallen tree.~
+@2066 = ~The fire seems to have some effect on the fallen tree.~
+@2067 = ~Now that the passage is clear, the wardstone crumbles to dust.~
+
+
 
 
 

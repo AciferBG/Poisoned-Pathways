@@ -55,7 +55,7 @@ IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPWY1 who_are_you_zombie
 	CHAIN IF ~~ THEN AC#PPWY1 how_help
     ~There is a tomb nearby... its seal repels the undead. Undead like me! I need to reach that tomb. You must take the seal, so that I can finally rest.~
     END
-    IF~~THEN DO ~SetGlobal("AC#PPOpenTomb","GLOBAL",1)~ EXTERN AC#PPWY1 how_help_02
+    IF~~THEN DO ~SetGlobal("AC#PPOpenTomb","GLOBAL",1) DestroyItem("MINHP1")~ EXTERN AC#PPWY1 how_help_02
     
     CHAIN IF ~~ THEN AC#PPWY1 how_help_02
     ~With the seal in your hands, you can banish the undead trees. And I... I will at last reach my destination and know peace.~

@@ -1,0 +1,49 @@
+IF
+    Global("OpenTreeDoor","ACPP70",1)
+THEN
+    RESPONSE #100
+        DestroySelf()
+END
+
+IF
+    OR(2)
+        Died(Myself)
+        HPPercentLT(Myself,10)
+    Global("KillTRee","ACPP70",2)
+    Global("OpenTreeDoor","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("ICMAGICH",Myself)
+        ActionOverride("Trigger_wardstone",DisplayStringHead(Myself,@2064))   // The tree collapses under the fire and dissolves.
+        ScreenShake([353.302],30)
+        SetGlobal("KillTRee","ACPP70",3)
+        SetGlobal("OpenTreeDoor","ACPP70",1)
+        DestroySelf()
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Global("KillTRee","ACPP70",1)
+THEN
+    RESPONSE #100
+        SetGlobal("KillTRee","ACPP70",2)
+        CreateVisualEffectObject("ICMAGICH",Myself)
+        Wait(1)
+        DisplayStringHead(Myself,@2065)  // The fire seems to slowly destroy the fallen tree.
+END
+
+IF
+    OR(2)
+        HitBy([ANYONE],FIRE)
+        HitBy([ANYONE],MAGICFIRE)
+    Global("KillTRee","ACPP70",0)
+THEN
+    RESPONSE #100
+        SetGlobal("KillTRee","ACPP70",1)
+        CreateVisualEffectObject("ICMAGICH",Myself)
+        Wait(1)
+        DisplayStringHead(Myself,@2066)  // The fire seems to have some effect on the fallen tree.
+        CreateCreature("AC#PPZOZ",[3900.964],E)  // Zombie Treant
+        CreateCreature("AC#PPZOZ",[4107.863],W)  // Zombie Treant
+END
+

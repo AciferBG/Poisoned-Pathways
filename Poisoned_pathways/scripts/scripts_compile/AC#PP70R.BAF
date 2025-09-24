@@ -1,0 +1,8 @@
+IF
+    Entered([ANYONE])
+THEN
+    RESPONSE #100
+        CreateVisualEffect("SPFLESHS",[698.602])
+        CreateCreature("AC#PPRAK",[698.602],SE)  // Rakshasa
+END
+

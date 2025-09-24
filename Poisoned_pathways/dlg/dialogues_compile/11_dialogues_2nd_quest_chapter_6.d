@@ -37,7 +37,6 @@ CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",8)~ THEN AC#PPEL4 C6.QUEST.01.00
 END
 IF ~~ THEN REPLY ~You sound troubled.~ EXTERN AC#PPMI C6.QUEST.01.01
 IF ~~ THEN REPLY ~Simple matters are rarely laid at my feet either.~ EXTERN AC#PPMI C6.QUEST.01.01
-IF ~~ THEN REPLY ~Actually, Alatoasz, I was hoping to ask something of you.~ EXTERN AC#PPEL4 C6.QUEST.01.02
 
 CHAIN AC#PPMI C6.QUEST.01.01
 ~Aye, I am troubled by this matter, and not without cause.~  
@@ -46,17 +45,13 @@ IF ~~ THEN REPLY ~Then tell me more.~ EXTERN AC#PPMI C6.QUEST.01.03
 IF ~~ THEN REPLY ~Go on. What is this about?~ EXTERN AC#PPMI C6.QUEST.01.03
 IF ~~ THEN REPLY ~We all must bear our share of burdens.~ EXTERN AC#PPMI C6.QUEST.01.03
 
-CHAIN AC#PPEL4 C6.QUEST.01.02
-~Your questions will be answered soon enough. But first, let Mismal speak of what we have been discussing at length.~  
-EXTERN AC#PPMI C6.QUEST.01.03
-
 CHAIN AC#PPMI C6.QUEST.01.03
 ~I will not cloak this in fair speech. You know Myth Unnohyr, you have walked its ruins. You know how strange it is, caught between life and death. But since your last battle there, the place has worsened.~  
 END
 IF ~~ THEN REPLY ~Worsened? How so? The Talonite is dead.~ EXTERN AC#PPMI C6.QUEST.01.04a
 IF ~~ THEN REPLY ~That happens often enough. Wherever I pass, the place seems worse off after.~ EXTERN AC#PPMI C6.QUEST.01.04a
 IF ~~ THEN REPLY ~That is no longer my concern.~ EXTERN AC#PPMI C6.QUEST.01.04a
-IF ~~ THEN REPLY ~I had hoped that ordeal was finished. Why, in all the gods’ names, does everyone always want something from me?~ EXTERN AC#PPMI C6.QUEST.01.04a
+IF ~~ THEN REPLY ~I had hoped that ordeal was finished. Why, in all the gods’ names, does everyone always want something else from me?~ EXTERN AC#PPMI C6.QUEST.01.04a
 
 CHAIN AC#PPMI C6.QUEST.01.04a
 ~The events at Myth Unnohyr roused something ancient.~  
@@ -73,14 +68,39 @@ END
 IF ~~ THEN EXTERN AC#PPMI about_wyrd
 
 CHAIN AC#PPMI about_wyrd
-~We suspect a mighty Wyrd, a spirit that seizes the husks of dead elves, has possessed the corpse of Commander Elv-Esster Aened, once leader of Myth Unnohyr’s guard. She was interred within a sealed sarcophagus—but the ward stone was taken, and the Wyrd slipped within to claim her body.~  
-=  
-~It feeds on the rotten magic of the place to raise further undead. It will not be long before these beings spill into the surrounding lands. You must put an end to that creature.~  
+~We suspect a mighty Wyrd, a spirit that seizes the husks of dead elves, has possessed the corpse of Commander Elv-Esster Aened, once leader of Myth Unnohyr’s guard. She was interred within a sealed sarcophagus. But someone removed the wardstone, and the Wyrd slipped within to claim her body.~ 
 END
-IF ~~ THEN REPLY ~Right...~ EXTERN AC#PPMI C6.QUEST.01.04c
+IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",0)
+Global("AC#PP_RemovedWardstone","GLOBAL",1)~ THEN REPLY ~That may well have been me.~ EXTERN AC#PPMI wyrd_player_guilty
+IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN REPLY ~How could such a thing happen?~ EXTERN AC#PPEL4 wyrd_guilt_not_important
+IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN REPLY ~I knew this was a trap! It certainly wasn’t me.~ EXTERN AC#PPEL4 wyrd_eldathyn_guilty
+IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN REPLY ~How could something so foolish have happened?~ EXTERN AC#PPEL4 wyrd_eldathyn_guilty
+
+	CHAIN AC#PPMI wyrd_player_guilty
+	~You aided this creature? How so?~ 
+	END
+	IF ~~ THEN REPLY ~I removed the wardstone to continue my search.~ EXTERN AC#PPEL4 wyrd_guilt_not_important
+	IF ~~ THEN REPLY ~Perhaps I was mistaken after all.~ EXTERN AC#PPEL4 wyrd_guilt_not_important
+	
+	CHAIN AC#PPEL4 wyrd_eldathyn_guilty
+	~One of my priests set out for Myth Unnohyr after your success. It seems he wished to help a desperate zombie find final rest with his beloved—and in doing so, removed the seal. But that no longer matters. What matters now is containing this creature without delay!~ 
+	END
+	IF ~~ THEN EXTERN AC#PPMI wyrd_cont
+	
+	CHAIN AC#PPEL4 wyrd_guilt_not_important
+	~That no longer matters. What matters now is containing this creature.~ 
+	END
+	IF ~~ THEN EXTERN AC#PPMI wyrd_cont
+
+
+CHAIN AC#PPMI wyrd_cont 
+~This creature feeds on the rotting magic of this place to raise further undead. It will not be long before these beings spill into the surrounding lands. We must put an end to that threat by killing the creature.~  
+END
+IF ~~ THEN REPLY ~By "we" I assume you mean me?~ EXTERN AC#PPMI C6.QUEST.01.04c
 IF ~~ THEN REPLY ~I will gladly help. Perhaps the trouble at Myth Unnohyr grew worse because of me.~ EXTERN AC#PPMI C6.QUEST.01.04c
 IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I will try to help.~ EXTERN AC#PPMI C6.QUEST.01.04c
 IF ~~ THEN REPLY ~Myth Unnohyr? Not ten rothé could drag me back there.~ EXTERN AC#PPMI C6.QUEST.01.04c
+
 
 CHAIN AC#PPMI C6.QUEST.01.04c
 ~You have fought similar foes before. Undead, I have heard—under their mistress Bodhi. You may face them again. And Duskwood Dell holds a weapon that could aid against such foes.~   
@@ -149,33 +169,75 @@ DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",9)~ THEN AC#PPEL4 c6.2nd.c.00
 ~I know it may seem strange for someone like you that I am not very optimistic about any of this, but I've seen enough suffering. I will do what I must, but I won't rise my hand. I hope you understand.~
 END
-IF~~THEN REPLY ~I do.~ EXIT
-IF~~THEN REPLY ~I will never understand how you can allow such battles happen while you're here, in your little hideout. Goodbye.~ EXIT
+IF~~THEN REPLY ~I do.~ EXTERN AC#PPEL4 c6.2nd.c.00_bye
+IF~~THEN REPLY ~I will never understand how you can allow such battles happen while you're here. Goodbye.~ EXTERN AC#PPEL4 c6.2nd.c.00_bye
+
+CHAIN AC#PPEL4 c6.2nd.c.00_bye
+~Farewell, <CHARNAME>.~
+EXIT
+
 
 //HIGH RANGER
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",9)~ THEN AC#PPMI C6.QUEST.02.00
 ~Are you prepared to face the Wyrd?~
 END 
-IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ THEN EXTERN AC#PPMI depart_with_sword
-IF ~Global("AC#PP_GiveBlade","GLOBAL",0)~ THEN EXTERN AC#PPMI depart_without_sword
+IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ EXTERN AC#PPMI depart_with_sword
+IF ~Global("AC#PP_GiveBlade","GLOBAL",0)~ EXTERN AC#PPMI depart_without_sword
 
 CHAIN IF ~~ THEN AC#PPMI depart_with_sword
 ~If you have taken up the sword entrusted to you by the High Priest, then I can send you into Myth Unnohyr.~  
 END
 IF ~~ THEN REPLY ~I am ready.~ EXTERN AC#PPMI C6.QUEST.02.01
-IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXIT
+IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXTERN AC#PPMI C6.QUEST.02.01_bye
 
 CHAIN IF ~~ THEN AC#PPMI depart_without_sword
 ~I shall send you into Myth Unnohyr if you are ready.~  
 END
 IF ~~ THEN REPLY ~I am ready.~ EXTERN AC#PPMI C6.QUEST.02.01
-IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXIT
+IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXTERN AC#PPMI C6.QUEST.02.01_bye 
 
+CHAIN AC#PPMI C6.QUEST.02.01_bye
+~I will wait for you here.~
+EXIT
 
 CHAIN AC#PPMI C6.QUEST.02.01
 ~Good. Follow me.~
 DO ~StartCutScene("AC#PP6CA")~ EXIT
+
+// High Ranger in Myth Unnohyr
+BEGIN AC#PPMI6
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPMI6 hello_01
+~We're in Myth Unnohyr again! The path behind us is sealed by a wall of tangled growth. Our only escape lies ahead, through the heart of the shattered city.~
+= ~Something unsettling stirs in the north. To reach it, we must pass through the sanctuary once claimed by the priest of Talona.~
+= ~We’ll split up. I’ll scout ahead and survey the area. Let’s meet on the other side of the tower. Take care of yourselves!~
+DO ~EscapeArea()~ EXIT
+
+
+// Wyrd in banshee form
+BEGIN AC#PPEEA
+BEGIN AC#PPMI7
+BEGIN AC#PPWY7
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPEEA hello_0
+~I am Elv-Esster Aened. By death and duty, I claim this place. Turn back, for thou art no longer welcome here.~ //– or what remains. Another fool steps forth to join my army of the dead!~
+== AC#PPMI7 ~You are not Elv-Esster. She died with honor – you wear her face like a mask!~
+== AC#PPEEA ~I am more than Elv-Esster – I am what was born of her sacrifice. Her scream echoes within me.~
+== AC#PPMI7 ~No. You are the echo of failure. You feed on sorrow and broken vows. I will see you silenced.~
+== AC#PPEEA ~Thou shalt behold this world no longer. The forest hath spoken thy end.~
+== AC#PPMI7 ~Wha—?~
+== AC#PPEEA ~Silence, fool. She hears only me now!~
+DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",1) Kill("AC#PPMI7") ChangeAnimation("AC#PPWY7")~ EXIT
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWY7 hello_0
+~Another fool come to join my army of the dead! But who are you?~
+== AC#PPWY7 IF ~Global("AC#PP_RemovedWardstone","GLOBAL",1)
+Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN ~Oh, I remember you! You were so kind to remove the wardstone for me.~
+== AC#PPWY7 IF ~Global("AC#PP_RemovedWardstone","GLOBAL",0)
+Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN ~Oh, I remember you! You struck me down in that miserable zombie form!~
+== AC#PPWY7 ~But that no longer matters. You survived the scream of the fool Elv-Esster... but my servants will tear you apart!~
+DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",2) CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
+
 
 BEGIN AC#PPWYR
 
@@ -482,37 +544,29 @@ DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) CreateVisualEffect("SPPORTAL",[9
 //FINALE 
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",25)~ THEN AC#PPEL4 C6.QUEST.0X.00
-~It's good to see you in one piece. Go on. Talk to the High Ranger.~
-EXIT
-
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",25)~ THEN AC#PPMI C6.QUEST.FINALE.00
-~It's you! And that means you've defeated the enemy!~
+~It's you! That means you've defeated the enemy!~
 END
-IF~~THEN REPLY ~Yes, but it required more effort than we thought. But with some divine intervention, Myth Unnohyr is now safe.~ EXTERN AC#PPMI C6.QUEST.FINALE.01
-IF~~THEN REPLY ~You're surprised? Well, you should be! It's all been some sort of nightmare! But the wyrd is gone now. And Myth Unnohyr should be safer from now on. I won't lie, though, you've teleported me right into some... nighmare! I expect some grand reward!~ EXTERN AC#PPMI C6.QUEST.FINALE.01
+IF~~THEN REPLY ~Yes, but it required more effort than we thought. But with some divine intervention, Myth Unnohyr is now safe.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
+IF~~THEN REPLY ~You're surprised? Well, you should be! It's all been some sort of nightmare! But the wyrd is gone now. And Myth Unnohyr should be safer from now on. I won't lie, though, you've teleported me right into some... nighmare! I expect some grand reward!~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
 
-CHAIN AC#PPMI C6.QUEST.FINALE.01
+CHAIN AC#PPEL4 C6.QUEST.FINALE.01
 ~Wait—are you saying that the ruins are safe now?~
-==AC#PPEL4 ~What would be very good news.~
 END
-IF~~THEN REPLY ~Yes. Mythrien himself helped me. He did something and Myth Unnohyr will be free of its strange curse for a year. I'd say it's a perfect moment for you to do something to keep it that way.~ EXTERN AC#PPMI C6.QUEST.FINALE.02
-IF~~THEN REPLY ~You will need to check the details on your own. I'm done with that place.~ EXTERN AC#PPMI C6.QUEST.FINALE.03
+IF~~THEN REPLY ~Yes. Mythrien appeared me. Myth Unnohyr will be free of its strange curse for a year. I'd say it's a perfect moment for you to do something to keep it that way.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.02
+IF~~THEN REPLY ~You will need to check the details on your own. I'm done with that place.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.03
 
-CHAIN AC#PPMI C6.QUEST.FINALE.02
-~This is wonderful news! And Mythrien helped you... This is big. I'll need to tell this to others.~
-EXTERN AC#PPMI C6.QUEST.FINALE.04
+CHAIN AC#PPEL4 C6.QUEST.FINALE.02
+~This is wonderful news! And Mythrien helped you... This is big.~
+EXTERN AC#PPEL4 C6.QUEST.FINALE.04
 
-CHAIN AC#PPMI C6.QUEST.FINALE.03
+CHAIN AC#PPEL4 C6.QUEST.FINALE.03
 ~Of course!~
-EXTERN AC#PPMI C6.QUEST.FINALE.04
+EXTERN AC#PPEL4 C6.QUEST.FINALE.04
 
-CHAIN AC#PPMI C6.QUEST.FINALE.04
+CHAIN AC#PPEL4 C6.QUEST.FINALE.04
 ~What you did is more than any of us could ever dream. Thank you. We will never forget what you did.~
-==AC#PPMI ~Here. Your reward. And know that I will always think of you as of my friend.~
-==AC#PPEL4 ~Let's hope this is end of our problems and we'll be able to focus on finding peace within ourselves.~
-==AC#PPEL4 ~I know that you might have expected more from me, but know that I agreed to give you another gift. the Hight Ranger said it may be a good idea.~
-==AC#PPMI ~Yes. And again. Thank you for everything! And whoever is going to stand on your way: I pity them already.~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",26) AddXPObject(Player1,29000) AddXPObject(Player2,29000) AddXPObject(Player3,29000) AddXPObject(Player4,29000) AddXPObject(Player5,29000) AddXPObject(Player6,29000) GiveItemCreate("AC#PPSTA",Player1,1,1,1) GiveGoldForce(10000) EscapeArea()~ EXIT
+==AC#PPMI ~Here. Your reward. Thank you for everything! And whoever is going to stand on your way: I pity them already.~
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",26) AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) GiveItemCreate("AC#PPSTA",Player1,1,1,1) GiveGoldForce(1000)~ EXIT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",26)~ THEN AC#PPEL4 C6.QUEST.0X.01
 ~I'll pray for you to find peace.~

@@ -1,0 +1,9 @@
+IF
+    Die()
+    Global("AC#PP_ZombieWyrdDead","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PP_ZombieWyrdDead","GLOBAL",1)
+        CreateCreatureObjectEffect("GASFORM4","SPFLESHS",Myself)  // Gaseous Form
+END
+
