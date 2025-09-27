@@ -28,6 +28,26 @@ THEN
 END
 
 IF
+Global("AC#PPChapter6Quest","GLOBAL",3) 
+Global("WyrdSpawnCreatures","ACPP77",0)
+THEN
+    RESPONSE #100
+    SetGlobal("WyrdSpawnCreatures","ACPP77",1)
+CreateCreature("AC#PPSPI",[522.378],0) 
+CreateVisualEffect("SPFLESHS",[522.378]) 
+CreateCreature("AC#PPSPI",[825.491],2) 
+CreateVisualEffect("SPFLESHS",[825.491]) 
+CreateCreature("AC#PPMUM",[476.394],SE) 
+CreateVisualEffect("SPFLESHS",[476.394])
+CreateCreature("AC#PPMUM",[337.595],SE) 
+CreateVisualEffect("SPFLESHS",[337.595])
+CreateCreature("AC#PPMUM",[841.519],SE) 
+CreateVisualEffect("SPFLESHS",[841.519]) 
+CreateCreature("AC#PPMUM",[752.640],SE) 
+CreateVisualEffect("SPFLESHS",[752.640]) 
+END
+
+IF
     Global("CreateWyrd2","ACPP77",0)
     Global("AC#PPChapter6Quest","GLOBAL",18)
 THEN

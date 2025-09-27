@@ -244,10 +244,10 @@ BEGIN AC#PPWYR
 //1ST FIGHT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",2)~ THEN AC#PPWYR 1.00
-~I sensed someone meddling with my minions, in my stronghold!~
+~You are still meddling with my minions, in my stronghold!~
 END
 IF~~THEN REPLY ~Your stronghold? You are just making it more dangerous. More... dead.~ EXTERN AC#PPWYR 1.01
-IF~~THEN REPLY ~You must be the wyrd I heard about. You took over the body of an elf; of a hero that did all she could to defend this place.~ EXTERN AC#PPWYR 1.01
+IF~~THEN REPLY ~You must be the one I'm looking for. You took over the body of the elven maiden that did all she could to defend this place.~ EXTERN AC#PPWYR 1.01
 IF~~THEN REPLY ~Well, I heard there is some new monster trying to turn this place into its base, so I came. I wouldn't want to miss all the fun.~ EXTERN AC#PPWYR 1.01
 
 CHAIN AC#PPWYR 1.01
@@ -280,12 +280,8 @@ CHAIN AC#PPWYR 1.05
 EXTERN AC#PPWYR 1.06
 
 CHAIN AC#PPWYR 1.06
-~** Some here. Let's test your weapons and will. Hahaha! **~
+~Let's test your weapons and your will!~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",3) 
-CreateCreature("AC#PPSPI",[522.378],0) 
-CreateVisualEffect("SPFLESHS",[522.378]) 
-CreateCreature("AC#PPSPI",[825.491],2) 
-CreateVisualEffect("SPFLESHS",[825.491]) 
 Enemy()~ EXIT
 
 //2ND TALK - HURT 

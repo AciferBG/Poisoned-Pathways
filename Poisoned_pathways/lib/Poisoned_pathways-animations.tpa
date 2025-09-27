@@ -1,6 +1,6 @@
 
   // Dark treant animation - copy bams only
-  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Treant_IWD2~         ~override~
+  //COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Treant_IWD2~         ~override~
   
   // Animation - will-o'-wisp
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/WISP_BGEE~         ~override~

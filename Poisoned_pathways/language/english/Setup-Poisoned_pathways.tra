@@ -38,7 +38,7 @@
 @45 = ~Mismal Al'Visalle~
 @46 = ~Wild Wyrd~
 @47 = ~Blood-Soaked Spirit~
-@48 = ~Blood-Soaked Spirit~
+@48 = ~Gruesome Symbiote~
 @49 = ~Elven Spirit~
 @50 = ~Bone Weirdling~
 @51 = ~Mythrien Sarath~
@@ -100,6 +100,7 @@
 @909 = ~^0xFF22B4E6has gained +1% resistance to slashing, piercing, crushing, and missile damage. ^-~
 @910 = ~Talona's Kiss~
 @911 = ~Sleep Drone~
+@912 = ~Death Shroud~
 
 //sto files
 @950 = ~Temple of Eldath~
