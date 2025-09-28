@@ -313,6 +313,7 @@ COPY ~%MOD_FOLDER%/cre/AC#PPSPI.cre~ ~override~ // Blood-Soaked Spirit
   
 COPY ~%MOD_FOLDER%/cre/AC#PPSYM.cre~ ~override~ // Gruesome Symbiote
   SAY NAME1 @48 SAY NAME2 @48
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#SYMBIONT_STATIC~))
   
 COPY ~%MOD_FOLDER%/cre/AC#PPHEL.cre~ ~override~ // Vaxh Aened - Elven Spirit
   SAY NAME1 @49 SAY NAME2 @49
