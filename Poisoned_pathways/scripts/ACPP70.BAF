@@ -2,7 +2,7 @@ IF
 	Global("Prep","ACPP70",0)
 THEN
 RESPONSE #100
-	//SetMusic(NIGHT,%AC#PP70%)
+	SetMusic(NIGHT,8)
 	SetMusic(DAY,%AC#PP70%)
   OpenDoor("DOOR01")
   OpenDoor("DOOR03")  
@@ -86,6 +86,31 @@ THEN
         CreateCreature("AC#PPMI6",[2647.2693],SSE)  // High Ranger: leading to Myth Unnohyr
         CreateCreature("AC#PPMI7",[3272.2043],SW)  // High Ranger: wyrd confrontation
         SetGlobal("Ch6ChangeSpawns","ACPP70",1)
+END
+
+IF
+    Global("Ch6ChangeSpawns","ACPP70",1)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPSM2",[3173.2203],NNE)  // Skeleton Mage
+        CreateCreature("AC#PPSKF",[3072.2111],NE)  // Skeleton
+        CreateCreature("AC#PPSKF",[3293.2203],N)  // Skeleton
+        CreateCreature("AC#PPSKF",[3051.2067],NE)  // Skeleton
+        CreateCreature("AC#PPSKF",[3317.2209],N)  // Skeleton
+        CreateCreature("AC#PPSKA",[3072.2111],NE)  // Skeleton Archer
+        CreateCreature("AC#PPSKA",[3293.2203],N)  // Skeleton Archer
+        CreateCreature("AC#PPSKA",[3051.2067],NE)  // Skeleton Archer
+        CreateCreature("AC#PPSKA",[3317.2209],N)  // Skeleton Archer
+        CreateCreature("AC#PPSKK",[4124.1500],S)  // Skeleton
+        CreateCreature("AC#PPSKK",[4176.1469],S)  // Skeleton
+        CreateCreature("AC#PPSKK",[4081.1387],S)  // Skeleton
+        CreateCreature("AC#PPSKK",[4148.1379],S)  // Skeleton
+        CreateCreature("AC#PPSA2",[4118.1305],S)  // Skeleton Archer
+        CreateCreature("AC#PPSA2",[4176.1272],S)  // Skeleton Archer
+        CreateCreature("AC#PPSA2",[4224.1252],S)  // Skeleton Archer
+        CreateCreature("AC#PPSA2",[4056.1199],S)  // Skeleton Archer
+        CreateCreature("AC#PPSM2",[4176.1249],NNE)  // Skeleton Mage
+        SetGlobal("Ch6ChangeSpawns","ACPP70",2)
 END
 
 IF

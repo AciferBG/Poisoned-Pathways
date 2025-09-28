@@ -52,6 +52,8 @@
 @59 = ~Poison Weird~
 @60 = ~Fallen Tree~
 @61 = ~Elv-Esster Aened~
+@62 = ~Will O'Dead~
+@63 = ~Will-O'-Wild~
 
 
 // cre soundfiles
@@ -913,7 +915,9 @@ The Mythal that once protected Myth Unnohyr is shattered beyond recognition, a f
 
 Yet not all is chaos. Certain beings—Will-o'-Wisps among them—seem curiously untouched by the Mythal's corruptive reach. Their resilience hints at the possibility that immunity is not beyond mortal grasp.
 
-Before my strength failed me, I theorized that an artifact could be fashioned—one woven with echoes of the original Mythal's purity—to shield its bearer from these wild tides. Whether such a talisman can truly be made, I shall not live to see.
+Before my strength failed me, I theorized that an artifact could be fashioned—one woven with echoes of the original Mythal's purity—to shield its bearer from its tides. I suspect that the very essences of the Wisps themselves, those born of wild magic and those spawned from dead magic, may serve as the heart of such a talisman.
+
+Whether such a talisman can truly be made, I shall not live to see.
 
 May you fare better than I.~
 @1147 = ~Peacewalker's stories I~
@@ -1323,6 +1327,25 @@ Charge abilities:
 – Limited number of uses (unknown to the bearer); the rose vanishes when depleted
 
 Weight: 0~
+@1208 = ~Elminster's Ecologies: Appendix IVa~
+@1209 = ~Elminster's Ecologies: Appendix IVa
+
+This time-worn tome is written by the sage Elminster, and apparently part of a much larger body of work containing detailed studies of most of the strange creatures from around Faerûn. 
+
+The appendix seems to refer to newly-discovered variations on normal breeds of creatures. Of particular interest:
+
+"Will-o’-the-Wisps (Common)
+These pale, floating lights haunt marshes and ruins, feeding on fear. They lure travelers astray and strike with crackling bursts of lightning. Hard to harm with steel or spell, they remain among the most treacherous of minor undead."
+
+"Will-o’Wild
+A mutation born of unstable magic. Flickering in ever-changing flashes, these lights twist spells around them—wards collapse, surges erupt, enchantments go awry. They are most often found drifting in regions of wild magic."
+
+"Will-o’Dead
+Spawn of lifeless Weave. These wan globes feed not on fear but on power: They sap prepared spells and drain charges from wands and staves. They linger where magic itself has failed, in the barren zones known as dead magic."~
+@1210 = ~Essence of the Will-o’Dead~
+@1211 = ~A faintly glowing mote of pallid light, cold to the touch and unnervingly silent. Within it lingers the hollow hunger of dead magic, a force that drains spell and staff alike. Lore-whispers suggest that such an essence could one day serve to counter the emptiness where the Weave has failed.~
+@1212 = ~Essence of the Will-o’Wild~
+@1213 = ~This shimmering fragment pulses with chaotic hues, shifting from emerald to amber in an instant. It carries within it the untamed spark of wild magic, unpredictable yet potent. Some claim that such essence, properly bound, might shield its bearer from the turbulence of unstable Weave-fields.~ 
 
 
 // script strings
@@ -1349,6 +1372,7 @@ Weight: 0~
 @2020 = ~Take it to Mythrien! Place it under his feet and reach for his helping hand!~
 @2021 = ~When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.~  
 @2022 = ~A statue of a young elven warrior-maiden, red roses blooming at her feet — the only plants untouched by the corrupted Mythal.~
+@2023 = ~It seems you require something else to forge an amulet that shields you from the Mythal—apparently, an essence.~
 
 @2024 = ~Blood... All I can see is blood!~
 @2025 = ~Free me! Please!~

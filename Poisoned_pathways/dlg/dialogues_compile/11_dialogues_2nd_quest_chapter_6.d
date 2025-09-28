@@ -227,7 +227,9 @@ CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPEEA hello_0
 == AC#PPEEA ~Thou shalt behold this world no longer. The forest hath spoken thy end.~
 == AC#PPMI7 ~Wha—?~
 == AC#PPEEA ~Silence, fool. She hears only me now!~
-DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",1) Kill("AC#PPMI7") ChangeAnimation("AC#PPWY7")~ EXIT
+DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",1)
+StartCutScene("AC#PP6CR")
+~ EXIT
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWY7 hello_0
 ~Another fool come to join my army of the dead! But who are you?~

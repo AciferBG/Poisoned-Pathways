@@ -48,8 +48,24 @@ IF
     Clicked([ANYONE])
     Range(LastTrigger,10)
     Global("ForgeAmulet","ACPP79",0)
+    Contains("AC#PPCO1","Anvil")  // Amulet (1st Part)
+    Contains("AC#PPCO2","Anvil")  // chain (2nd Part)
+       OR(2)
+        !Contains("AC#PPWIW","Anvil")  // Essence of a Will-O'-Wild
+        !Contains("AC#PPWOD","Anvil")  // Essence of a Will-O'-Dead
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2023)  
+END
+
+IF
+    Clicked([ANYONE])
+    Range(LastTrigger,10)
+    Global("ForgeAmulet","ACPP79",0)
     Contains("AC#PPCO1","Anvil") // Amulet (1st Part)
     Contains("AC#PPCO2","Anvil") // chain (2nd Part)
+    Contains("AC#PPWIW","Anvil")  // Essence of a Will-O'-Wild
+    Contains("AC#PPWOD","Anvil")  // Essence of a Will-O'-Dead
 THEN
     RESPONSE #100
         DisplayString(Myself,@2006)  // ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~

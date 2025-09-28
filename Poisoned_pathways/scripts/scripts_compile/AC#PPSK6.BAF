@@ -1,0 +1,17 @@
+IF
+    See("AC#PPMI7")  // Mismal Al'Visalle
+    Global("FaceChief","LOCALS",0)
+THEN
+    RESPONSE #100
+        FaceObject("AC#PPMI7")  // Mismal Al'Visalle
+        SetGlobal("FaceChief","LOCALS",1)
+END
+
+IF
+    Global("AC#PP_Ch6RangerDead","GLOBAL",2)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+

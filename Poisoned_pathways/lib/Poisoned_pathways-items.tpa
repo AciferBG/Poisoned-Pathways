@@ -2,6 +2,18 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPWIW.itm~         ~override~    //  Essence of a Will-O'-Wild
+  SAY NAME2 @1212
+  SAY DESC  @1213
+
+COPY ~%MOD_FOLDER%/itm/AC#PPWOD.itm~         ~override~    //  Essence of a Will-O'-Dead
+  SAY NAME2 @1210
+  SAY DESC  @1211
+
+COPY ~%MOD_FOLDER%/itm/AC#PPBEE.itm~         ~override~    //  Elminster's Ecologies: Appendix IVa
+  SAY NAME2 @1208
+  SAY DESC  @1209
+
 COPY ~%MOD_FOLDER%/itm/AC#PPMYR.itm~         ~override~    //  Green Rose of Mythrien (gift from Mythrien himself)
   SAY NAME2 @1155
   SAY DESC  @1207

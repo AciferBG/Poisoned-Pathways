@@ -1,0 +1,17 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("AC#PPEEA")  // Elv-Esster Aened
+        StartCutSceneMode()
+        ClearAllActions()
+        Wait(1)
+        ActionOverride("AC#PPMI7",Attack("AC#PPEEA"))  // Elv-Esster Aened
+        ForceSpell("AC#PPMI7",WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE)  // Mismal Al'Visalle
+        Kill("AC#PPMI7")  // Mismal Al'Visalle
+        CreateVisualEffectObject("SPFLESHS",Myself)
+        SmallWait(15)
+        ChangeAnimation("AC#PPWY7")  // Wild Wyrd
+        EndCutSceneMode()
+END
+
