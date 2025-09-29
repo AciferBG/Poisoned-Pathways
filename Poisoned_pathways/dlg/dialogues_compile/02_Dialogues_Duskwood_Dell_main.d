@@ -245,28 +245,29 @@ IF~~THEN REPLY ~Then Myth Unnohyr must be the one.~ EXTERN AC#PPEL4 right_myth_u
 CHAIN IF ~~ THEN AC#PPEL4 right_myth_unnohyr
 ~Yes... Myth Unnohyr. That must be the place. Listen to this passage: 'When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.'~
 =
-~That explains why our spells fail, and why this poison defies all healing—it carries the essence of Myth Unnohyr’s broken mythal, steeped in dead magic!~
+~That explains why our healing spells fail, and why this poison defies all curing—it carries the essence of Myth Unnohyr’s broken mythal, steeped in dead magic!~
 END
 IF~~THEN REPLY ~If you say so.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 IF~~THEN REPLY ~If that’s where the plant grows, that’s where we go.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 IF~~THEN REPLY ~Not exactly a pleasant destination.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+IF~~THEN REPLY ~You mean the plant feeds on dead magic? Wicked.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03  
 
 CHAIN AC#PPEL4 hello_03x
 ~I'll wait here, then.~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
-~Myth Unnohyr seems to have been an important stronghold, of great significance to those that studied Mythal, elven culture and words of the Seldarine that cared most about magic. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dead magic zone by night.~
+~Myth Unnohyr seems to have been an important stronghold, of great significance to those that weaved Mythals. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dead magic zone by night.~
 == NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic?! Gods, yes! Or no. Or maybe! I love it when even reality can’t make up its mind.~
 ==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN ~Elven ruins or not, this Mythal was never meant for mortal hands. And now it bleeds its vengeance into the land.~
 == HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~Creepy ruins, cursed mythals, shattered relics—these elves had a real sense of drama.~
 ==HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~When gods fall silent, the poison sings.~
-== AC#PPEL4 ~By day, it's chaos. By night, magic doesn’t seem to exist at all—not in any conventional sense. Maybe some innate metamagic from creatures or enchanted items still functions... but honestly? I’m not sure. It's a theory. And I wouldn't depend on untested ideas.~
+== AC#PPEL4 ~By day it’s chaos, by night magic vanishes. Maybe innate gifts or items still work—but I wouldn’t count on it.~
 END
 IF~~THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_areab
 IF~~THEN REPLY ~So we’ll have to rely on steel and wits.~ EXTERN AC#PPEL4 dead_magic_areab
 IF~~THEN REPLY ~I assume I fight your battles for you while you stay clean and speak of still waters?~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
-IF~~THEN REPLY ~Let me guess—I get to face the poisoned arrows and monsters and traps, and you get to write a prayer about it.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
+//IF~~THEN REPLY ~Let me guess—I get to face the poisoned arrows and monsters and traps, and you get to write a prayer about it.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
 IF~~THEN REPLY ~Easy to preach peace from the safety of a grove, while I wade through blood in your name.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
 IF~~THEN REPLY ~Magic or no magic, death still listens when I speak.~ EXTERN AC#PPEL4 dead_magic_areab
 
@@ -277,7 +278,7 @@ IF~~THEN REPLY ~Magic or no magic, death still listens when I speak.~ EXTERN AC#
 	IF~~THEN EXTERN AC#PPEL4 dead_magic_areab
 
 CHAIN AC#PPEL4 dead_magic_areab
-~The plants that produce the poison must grow there—twisted by the wild magic and infused with the remnants of that dead magic itself. Our healing spells fail because the poison carries that same dead magic into the body of the victim. The poison isn’t just toxic—it’s magically inert. A wound that resists both blade and blessing. This is why this poison cannot be healed!~
+~The plants that produce the poison must grow there—twisted by the wild magic and infused with the remnants of that dead magic itself. Our healing spells fail because the poison carries that same dead magic into the body of the victim.~
 END
 IF~~THEN REPLY ~That’s an interesting theory.~ EXTERN AC#PPEL4 dead_magic_area_02
 IF~~THEN REPLY ~Alright. To cure the victims, we’d have to unravel the magic itself. Or what's left of it...~ EXTERN AC#PPEL4 dead_magic_area_02
@@ -295,7 +296,6 @@ IF~~THEN REPLY ~He called himself Malagent.~ EXTERN AC#PPEL4 malagent
 	~Think back. Did he give you any name that might help us?~
 	END
 	IF~~THEN REPLY ~Not really. He said something like Mal... Malar...~ EXTERN AC#PPEL4 malagent_what
-	IF~~THEN REPLY ~Hättet Ihr mich das nicht früher fragen können? Jetzt hab ich es wieder vergessen.~ EXTERN AC#PPEL4 malagent_forgotten
 	IF~~THEN REPLY ~Strange fellow with a strange name. Something like Mala-something.~ EXTERN AC#PPEL4 malagent_what
 	IF~~THEN REPLY ~He called himself Malagent.~ EXTERN AC#PPEL4 malagent
 
@@ -307,7 +307,7 @@ IF~~THEN REPLY ~Maybe?~ EXTERN AC#PPEL4 malagent
 IF~~THEN REPLY ~I don't know and I don't care.~ EXTERN AC#PPEL4 malagent
 
 CHAIN IF ~~ THEN AC#PPEL4 malagent
-~A Malagent! Of course. That fits perfectly. That’s what the unholy agents of Talona call themselves—poisoners, corrupters, bringers of decay. Do you know who Talona is?~
+~A Malagent! That fits perfectly. That’s what the unholy agents of Talona call themselves—poisoners, corrupters, bringers of decay. Do you know who Talona is?~
 END
 IF~~THEN REPLY ~Yes.~ EXTERN AC#PPEL4 talona_yes
 IF~~THEN REPLY ~No.~ EXTERN AC#PPEL4 talona_no
@@ -320,14 +320,13 @@ IF~~THEN EXTERN AC#PPEL4 talona_yes
 CHAIN IF ~~ THEN AC#PPEL4 talona_yes
 ~Then it all makes sense. The incurable poison, the corrupted magic... it all bears Talona's mark. We now know that our enemy serves none other than the Lady of Poisons herself. This Malagent is working as her hand, spreading poison everywhere. We have the answers. Now we seek the source.~
 END
-IF~~THEN REPLY ~And I’m the one to enter this desolate elven ruin?~ EXTERN AC#PPEL4 travel_ruin_b
+IF~~THEN REPLY ~Let me guess—I get to face the poisoned arrows and monsters and traps, and you get to write a prayer about it.~ EXTERN AC#PPEL4 travel_ruin_b
 IF~~THEN REPLY ~His poison lingers. So will our blade.~ EXTERN AC#PPEL4 travel_ruin_b
 IF~~THEN REPLY ~Then let’s not waste time.~ EXTERN AC#PPEL4 travel_ruin
 IF~~THEN REPLY ~The path is clear. Faith and steel shall see us through.~ EXTERN AC#PPEL4 travel_ruin
 IF~~THEN REPLY ~Fine. But I expect at least one uneventful day after this.~ EXTERN AC#PPEL4 travel_ruin
 IF~~THEN REPLY ~Seeking answer’s the easy part. What comes after tends to get messy.~ EXTERN AC#PPEL4 travel_ruin
 IF ~~ THEN REPLY ~One question, though... are any fights allowed under Eldath’s rules? Or is all violence forbidden?~ GOTO allowed_to_fight_01
-IF~~THEN REPLY ~A devotee of Talona is brewing his poison within a dead magic zone in Myth Unnohyr, that's all?~ EXTERN AC#PPEL4 travel_ruin_b
 
 	CHAIN IF ~~ THEN AC#PPEL4 allowed_to_fight_01
 	~Some things have strayed too far from nature's balance, there are afflictions no prayer can cleanse, only removal.~
@@ -335,15 +334,15 @@ IF~~THEN REPLY ~A devotee of Talona is brewing his poison within a dead magic zo
 	== AC#PPEL4 ~Some beings are twisted by foul magic—poisoned roots, cursed beasts, unholy revenants. If they cannot be saved... they must be stilled.~
 	== AC#PPEL4 ~To protect life from such corruption is not to betray peace. But violence must always be the last word, not the first.~
 	END
-	  IF ~~ THEN REPLY ~Seems even your goddess allows for a bit of steel when things go bad.~ GOTO travel_ruin_b
+	  IF ~~ THEN REPLY ~Seems even your goddess allows for a bit of bloodshed when things go bad.~ GOTO travel_ruin_b
 	  IF ~~ THEN REPLY ~Phew. For a moment, I thought I'd have to hug a ghul.~ GOTO travel_ruin_b
 	  IF ~~ THEN REPLY ~Great news. I'd hate to throw all my weapons into a pond.~ GOTO travel_ruin_b
 	  IF ~~ THEN REPLY ~So I can still defend myself, if it’s truly needed. I’ll take that.~ GOTO travel_ruin_b
-	  IF ~~ THEN REPLY ~I can live with that. Peace when possible, strength when required.~ GOTO travel_ruin_b
+	  IF ~~ THEN REPLY ~I can live with that. Peace when possible, power when required.~ GOTO travel_ruin_b
 	  IF ~~ THEN REPLY ~That’s all I needed to know.~ GOTO travel_ruin_b
 
 	CHAIN IF ~~ THEN AC#PPEL4 travel_ruin_b
-	~Eldath has shown you the path—but now you must walk it on your own.~ 
+	~Eldath has shown you the path—now you must walk it on your own.~ 
 	END 
 	IF~~THEN EXTERN AC#PPEL4 travel_ruin
 
