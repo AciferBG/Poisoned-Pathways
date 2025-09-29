@@ -177,6 +177,15 @@ THEN
 END
 
 IF
+    Global("AC#PPChapter6Quest","GLOBAL",7)
+    Global("AddMapMythrien","ACPP70",0)
+THEN
+    RESPONSE #100
+    AddMapNote([2503.1278],@2068)
+    SetGlobal("AddMapMythrien","ACPP70",1)
+END
+
+IF
   Global("AC#PPAnkhegs","GLOBAL",0)
 THEN
   RESPONSE #100

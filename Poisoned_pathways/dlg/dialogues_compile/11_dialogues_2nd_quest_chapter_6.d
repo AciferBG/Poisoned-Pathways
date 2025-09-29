@@ -318,35 +318,37 @@ DestroySelf()~ EXIT
 BEGIN AC#PPHEL
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",6)~ THEN AC#PPHEL HELPER.1.00
-~Yes...! Destroy these things...!~
-==AC#PPHEL ~That... creature—the one that took the body of our dear commander...! It wants you to think none of this matters, that killing these mawed growths doesn't matter... But it does!~
-==AC#PPHEL ~Find me where earth devoured our precious towers... and there I shall aid you! I know how to kill this thing! Find me...! Please!~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",7) DestroySelf()~ EXIT
+~You have destroyed the symbiotes!~
+== AC#PPHEL ~That abomination—the one that defiled the body of our beloved commander—wants you to believe none of this matters, that slaying its gnawing mouths means nothing... But it does!~
+== AC#PPHEL ~Seek me beneath the sacred temple of Mythrien... there I shall aid you. I know how to end the nemesis of our city once more. We did it once—we shall do it again. Come, and I will tell you more when you find me.~
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",7) CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
+
 
 //HELPER 2
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",8)~ THEN AC#PPHEL HELPER.2.00
-~You're here... I'm... glad.~
+~You came... I am... glad.~
 END
 IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPHEL HELPER.2.02
-IF~~THEN REPLY ~I do not have much choice, truth be told.~ EXTERN AC#PPHEL HELPER.2.01
+IF~~THEN REPLY ~Truth be told, I had little choice.~ EXTERN AC#PPHEL HELPER.2.01
 
 CHAIN AC#PPHEL HELPER.2.01
-~I'm sorry, but... that may be true. But I know how to fix it. All of this...!~
+~Perhaps so... yet even so, there is a way to set this right. All of it.~
 EXTERN AC#PPHEL HELPER.2.02
 
 CHAIN AC#PPHEL HELPER.2.02
-~I am Vaxh Aened. Commander Elv-Esster Aened was my wife... That creature you fight took what remained of my wife and treats her bones as something it can wear...!~
-==AC#PPHEL ~We must stop that wyrd... For her. For Myth Unnohyr, and the world you come from...! World of the living...!~
+~I am Vaxh Aened. Commander Elv-Esster Aened was my wife... That abomination you face has clad itself in her very bones, defiling all that remained of her.~
+== AC#PPHEL ~We must end this wyrd— for her, for Myth Unnohyr, and for the world of the living you still walk in.~
 END
-IF~~THEN REPLY ~You mentioned you know how to stop that creature.~ EXTERN AC#PPHEL HELPER.2.03
-IF~~THEN REPLY ~Yes. yes. I know it needs to be stopped. That's why I came here! Tell me something I *don't* know!~ EXTERN AC#PPHEL HELPER.2.03
+IF~~THEN REPLY ~You said you know how to stop that creature.~ EXTERN AC#PPHEL HELPER.2.03
+IF~~THEN REPLY ~Yes, yes... I know it must be stopped. That’s why I’m here! Tell me something I *don’t* know.~ EXTERN AC#PPHEL HELPER.2.03
 
 CHAIN AC#PPHEL HELPER.2.03
-~This creature—wyrd—these things don't become so powerful... This one is old. And it came from the soil that was cursed with both dead and wild magic! But... what if that can be fixed? What if magic can be fixed...?~
+~Such a creature does not gain its strength by chance. This wyrd is ancient, born of soil tainted by both dead and wild magic. But what is broken can be mended. Even magic. Even here.~
 END
-IF~~THEN REPLY ~You know what may be able to fix this place?!~ EXTERN AC#PPHEL HELPER.2.04
-IF~~THEN REPLY ~What sort of balderdash is that?~ EXTERN AC#PPHEL HELPER.2.05
+IF~~THEN REPLY ~You believe this place can be restored?~ EXTERN AC#PPHEL HELPER.2.04
+IF~~THEN REPLY ~What nonsense is this?~ EXTERN AC#PPHEL HELPER.2.05
+
 
 CHAIN AC#PPHEL HELPER.2.04
 ~Not *what*, but... who.~
@@ -357,32 +359,31 @@ CHAIN AC#PPHEL HELPER.2.05
 EXTERN AC#PPHEL HELPER.2.06
 
 CHAIN AC#PPHEL HELPER.2.06
-~The fall of this place is one big mystery... Even most of us do not know what exactly happened. It felt like a disaster, both natural and arcane one...! To us, it felt as if our word shattered.~
-==AC#PPHEL ~Our stronghold—it's been a true sanctuary, place where many of us practiced, where we would study culture, magic and nature... We wanted to protect what was most precious to us. But there was an attack... so long ago. I can't even remember who—but I remember the explosion. As if something was destroyed.~
-==AC#PPHEL ~And then, an even bigger one. It was our Mythal. Our most sacred magic we erected with a blassing of Mythrien Sarath...! Oh, the pain...! And the fear...! I can almost feel all of this...! All the dread!!!~
+~The fall of this place remains a mystery... even to us. Few truly know what befell Myth Unnohyr. It was like a disaster both natural and arcane, as if the very fabric of our world had shattered.~
+== AC#PPHEL ~Our stronghold had been a sanctuary—where we studied art, magic, and nature, striving to protect all we held most dear. But then came the attack... so long ago I cannot recall by whom. Only the memory of the blast endures—something was torn apart.~
+== AC#PPHEL ~And then... a greater one still. Our Mythal. The most sacred of all magics, woven by the blessing of Mythrien Sarath. When it broke, there was only pain... fear... and a terror that still lingers. I feel it even now... the dread, unending!~
 END
 IF~~THEN REPLY ~It's in the past. I'm here. Please, tell me what happened next.~ EXTERN AC#PPHEL HELPER.2.07
-IF~~THEN REPLY ~Stop shouting! Someone can hear us! There are these red spirits all around this place!~ EXTERN AC#PPHEL HELPER.2.07
+IF~~THEN REPLY ~Stop shouting! Someone might hear us! There are red spirits all around this place!~ EXTERN AC#PPHEL HELPER.2.07
+
 
 CHAIN AC#PPHEL HELPER.2.07
-~I... I'm sorry. To me, it feels so real... But I feel better now.~
-==AC#PPHEL ~During the cataclysm, part of our home fell right into earthy maw behind me... My home was one of those buildings. Now, surrounded by the darkness.~
-==AC#PPHEL ~Elv-Esster tried to save us, but she failed. Her magic became unpredictable. We knew we had to ask Mythrien for help, so we sent our son for this... relic... The Green Rose of Mythrien.~
-==AC#PPHEL ~It wasn't required for the Mythal to function, but... it was the symbol of our loyalty. Of our hope... We wanted to enter the House of Mythrien with it, but—my son...~
-==AC#PPHEL ~He also died... just like his mother. And just like... me.~
-==AC#PPHEL ~But the rose is still there...! I can feel it. You might have missed it, most did... but the roses still blossom to this dark day~
-==AC#PPHEL ~Find the rose and take it to the temple of Mythrien, in the very heart of our city, near the magic passage that brought you here. You had to walk through that place.~
-==AC#PPHEL ~Then, place the rose under Mythrien's feet... He will answer. I know it.~
-==AC#PPHEL ~Ask him for help. Destroy the wyrd. Heal this place. And let peace inside these walls...~
+~Forgive me. To me it still feels so real...~
+== AC#PPHEL ~We must call upon Mythrien—find the Green Rose of Mythrien! The rose yet endures... I can feel it. Most overlook it, but even in this darkness, its blossoms remain.~
+== AC#PPHEL ~Seek the rose and carry it to the temple, into the very heart of our city. Lay it at Mythrien’s feet... and he will answer. I know he will.~
+== AC#PPHEL ~Ask for his aid. Banish the wyrd. Heal this place. And let peace return within these walls...~
 END
 IF~~THEN REPLY ~I'll do my best.~ EXTERN AC#PPHEL HELPER.2.08
 IF~~THEN REPLY ~It sounds difficult...~ EXTERN AC#PPHEL HELPER.2.08
 
+
 CHAIN AC#PPHEL HELPER.2.08
-~I can see more than your flesh... I know you can do wonders. You walk the path of death... but also that of life.~
-==AC#PPHEL ~That's why I know you may be able to fix this... And I... I belong with the earth. With death. Good luck, my friend. May Mythrien watch over you...~
-==AC#PPHEL ~...and I shall return to dark earth I died in...~
+~My sight reaches deeper than flesh... I know there is greatness within you. Yours is not the road of death, but the path of life.~
+== AC#PPHEL ~I, however... I am bound to to silence and to endings. May Mythrien’s light guide your steps where mine can no longer follow.~
+== AC#PPHEL ~Now I sink back into the soil that claimed me... into the darkness where I fell...~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9) CreateVisualEffect("AC#PPBUR",[2230.800]) DestroySelf()~ EXIT
+
+
 
 //MYTHRIEN SUMMONED
 
