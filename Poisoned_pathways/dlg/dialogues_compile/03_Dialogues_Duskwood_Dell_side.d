@@ -491,35 +491,45 @@ END
 BEGIN ~AC#PPMYS~
 
 IF ~True()~ THEN BEGIN 0
-  SAY ~Magic. Memory. Meaning. All pass through here, as do you. Shall we speak of what lingers?~ 
+  SAY ~*Cough, cough*! Pardon the haze! Too many wicks burning. Still... welcome! Looking for candles, plain or powerful?~ 
   IF ~~ THEN REPLY ~What exactly do you offer?~ GOTO chain_about_shop
+  IF ~~ THEN REPLY ~Candles?~ GOTO 2
   IF ~~ THEN REPLY ~Not today. Perhaps another time.~ GOTO 1
+  IF ~~ THEN REPLY ~Let me see what you have.~ DO ~StartStore("AC#PPMYS",LastTalkedToBy())~ EXIT
+  IF ~~ THEN REPLY ~Aren’t you afraid all these candles might set the whole tree ablaze?~ GOTO fire_question
+END
+
+IF ~~ THEN BEGIN fire_question
+  SAY ~Oh, no... *cough*! The smoke keeps the bugs away, and Eldath watches the flames. Besides... I only set one branch aflame last year, and my brothers and sisters were quick with their rain spells.~
+  IF ~~ THEN REPLY ~What exactly do you offer?~ GOTO chain_about_shop
+  IF ~~ THEN REPLY ~I'll take my leave.~ GOTO 1
   IF ~~ THEN REPLY ~Let me see what you have.~ DO ~StartStore("AC#PPMYS",LastTalkedToBy())~ EXIT
 END
 
+
 IF ~~ THEN BEGIN 1
-  SAY ~Then walk in balance, and may no veil cloud your vision.~
+  SAY ~Then walk in peace... *cough*... and may your flame never falter.~ 
   IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN 2
-  SAY ~Magic, drawn from the currents of arcane and divine thought.~ 
-  IF ~~ THEN REPLY ~Let me see what knowledge you've gathered.~ GOTO shop
+  SAY ~Candles, yes... poured with blessing and prayer. And sometimes with a touch of magic, if I’m honest.~ 
+  IF ~~ THEN REPLY ~Let me see what you have.~ GOTO shop
   IF ~~ THEN REPLY ~I’ll pass, for now.~ GOTO 1
 END
 
 IF ~~ THEN BEGIN shop
-  SAY ~Then gaze with care. Some knowledge glows to guide—but some burns if held too tightly.~
+  SAY ~Here, here... *sniff*... some candles are for warmth, some for light, and a few... oh, they’re special. Careful with the drippings, though!~
   IF ~~ THEN DO ~StartStore("AC#PPMYS",LastTalkedToBy())~ EXIT
 END
 
 
 CHAIN IF ~~ THEN AC#PPMYS chain_about_shop
-~I offer scrolls—threads of arcane thought inked by steady hands. Spells, yes, but more than that: intentions given form, memory made fire.~ 
-==AC#PPMYS ~And for those attuned to subtler currents... I offer candles. Crafted with sigils, wax, and prayer. They burn with purpose—some to soothe the spirit, others to sharpen the mind, or hold back what creeps in the dark.~
-==AC#PPMYS ~They call it candle-magic. I call it quiet power.~
+~I do have a few scrolls, but more important are the candles. Some simple, others woven with prayer. They can soothe the heart... sharpen the mind... or hold back creeping shadows.~ 
+==AC#PPMYS ~Some call it candle-magic. I... eh... call it just a quiet flame.~ 
+==AC#PPMYS ~And see here—this scroll explains how to pour a magical candle yourself. Not too hard, really, so long as you don’t forget the wick. Heh!~
 END  
-  IF ~~ THEN REPLY ~I’ll look, then. Words have power, and so does flame.~ EXTERN AC#PPMYS shop
+  IF ~~ THEN REPLY ~All right, let me have a look. Words carry power... and so does flame.~ EXTERN AC#PPMYS shop
   IF ~~ THEN REPLY ~I’ll pass, for now.~ EXTERN AC#PPMYS 1
 
 // priest of Eldath, store in area ACPP02
@@ -585,7 +595,7 @@ CHAIN IF ~True()~ THEN AC#PPON2 hello_again
 ~Greetings again, lover of honey! What sweetness brings you back to me this day?~ 
 END
 IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",0)
-GlobalLT("AC#PP_HoneyQuest","GLOBAL",10)~THEN REPLY ~It is about the mead...~ EXTERN AC#PPON2 about_mead
+GlobalLT("AC#PP_HoneyQuest","GLOBAL",10)~THEN REPLY ~It is about the mead.~ EXTERN AC#PPON2 about_mead
 IF~~THEN REPLY ~I shall not keep you from your honey. Farewell.~ EXTERN AC#PPON2 bye
 
 

@@ -21,7 +21,7 @@
 @28 = ~Poison Manifestation~
 @29 = ~Char~
 @30 = ~Aunt Pesca~
-@31 = ~Mannatarv~
+@31 = ~Brother Calmfire~
 @32 = ~Blightspawn Ankheg~
 @33 = ~Novice~
 @34 = ~Peaceman~
@@ -89,6 +89,10 @@
 @352 = ~Life is sweeter when you find your honey-comb-ination.~ [AC#PPHO2]
 @353 = ~A drop of honey can heal where a torrent of salt only wounds.~ [AC#PPHO3]
 
+@360 = ~*cough*~ [AC#PPCH1]
+@361 = ~*cough*~ [AC#PPCH2]
+@362 = ~*cough*~ [AC#PPCH3]
+
 // spl files
 @900 = ~Water Divination~
 @901 = ~~
@@ -106,7 +110,7 @@
 
 //sto files
 @950 = ~Temple of Eldath~
-@951 = ~Wax and Wonder~
+@951 = ~Calmfire's Creations~
 @952 = ~The Leaves' Embrace~
 @953 = ~Debbie's Undoubtful Weapons & Goods~
 
@@ -1308,7 +1312,7 @@ The monk has entrusted you with this cask, asking that you deliver it to Samuel 
 
 Weight: 1~
 @1205 = ~Cloak of Thousand Stings~
-@1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells faintly of smoke, wax, and honey.
+@1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells of smoke, wax, and honey.
 
 STATISTICS:
 

@@ -267,8 +267,15 @@ COPY ~%MOD_FOLDER%/cre/AC#PPCHA.cre~ ~override~ // Char
 COPY ~%MOD_FOLDER%/cre/AC#PPCAA.cre~ ~override~ // Aunt Pesca
   SAY NAME1 @30 SAY NAME2 @30
   
-COPY ~%MOD_FOLDER%/cre/AC#PPMYS.cre~ ~override~ // Mystic mage
+COPY ~%MOD_FOLDER%/cre/AC#PPMYS.cre~ ~override~ // Mystic coughing
   SAY NAME1 @31 SAY NAME2 @31
+  SAY INITIAL_MEETING @360
+  SAY SELECT_COMMON1 @361
+  SAY SELECT_COMMON2 @362
+  SAY SELECT_COMMON3 @360
+  SAY SELECT_COMMON4 @361
+  SAY SELECT_COMMON5 @362
+  SAY SELECT_COMMON6 @360
   
 COPY ~%MOD_FOLDER%/cre/AC#PPBJA.cre~ ~override~ // Blightjaw ankheg in area ACPP70
   SAY NAME1 @32 SAY NAME2 @32

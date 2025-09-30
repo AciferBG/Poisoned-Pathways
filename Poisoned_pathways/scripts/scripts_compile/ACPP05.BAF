@@ -16,3 +16,12 @@ THEN
         SetGlobal("CreateWorm","ACPP05",1)
 END
 
+IF
+    Global("AC#PP_Helped_Orcs","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PP_Helped_Orcs","GLOBAL",2)
+        CreateCreature("AC#PPON1",[219.250],SE)  // Quietbrook
+        CreateCreature("AC#PPON3",[305.232],S)  // Peacefang
+END
+
