@@ -1,0 +1,17 @@
+IF
+    NumberOfTimesTalkedTo(0)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogueNoSet([PC])
+END
+
+IF
+    Global("AttackOrcs","ACPP97",1)
+    Global("AttackOrcsGo","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AttackOrcsGo","LOCALS",1)
+        Attack("AC#PPON4")  // Quietbrook
+END
+

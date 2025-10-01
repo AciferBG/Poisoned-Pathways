@@ -2,6 +2,11 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PP971.cre~ ~override~       // random encounter anti-orc thug
+COPY ~%MOD_FOLDER%/cre/AC#PP972.cre~ ~override~       // random encounter anti-orc thug
+COPY ~%MOD_FOLDER%/cre/AC#PP973.cre~ ~override~       // random encounter anti-orc thug
+COPY ~%MOD_FOLDER%/cre/AC#PP974.cre~ ~override~       // random encounter anti-orc thug
+
 COPY ~%MOD_FOLDER%/cre/AC#PPWIW.cre~ ~override~       // Will-O'-Wild
   SAY NAME1 @63 SAY NAME2 @63
 
@@ -185,7 +190,13 @@ COPY ~%MOD_FOLDER%/cre/AC#PPEL4.cre~ ~override~ // Eldath priest #4: Alatoasz Be
 COPY ~%MOD_FOLDER%/cre/AC#PPON3.cre~ ~override~ // Ondonti orc#1: Peacefang in pumpkin area
   SAY NAME1 @14 SAY NAME2 @14
   
+COPY ~%MOD_FOLDER%/cre/AC#PPON5.cre~ ~override~ // Ondonti orc#1: Peacefang in random encounter area
+  SAY NAME1 @14 SAY NAME2 @14
+  
 COPY ~%MOD_FOLDER%/cre/AC#PPON1.cre~ ~override~ // Ondonti orc#1: Quietbrook in pumpkin area
+  SAY NAME1 @15 SAY NAME2 @15
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPON4.cre~ ~override~ // Ondonti orc#1: Quietbrook in random encounter area
   SAY NAME1 @15 SAY NAME2 @15
   
 COPY ~%MOD_FOLDER%/cre/AC#PPON2.cre~ ~override~ // Honeymaker: Brother Gentleswarm

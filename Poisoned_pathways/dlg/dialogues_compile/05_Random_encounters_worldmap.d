@@ -71,65 +71,79 @@ END
 IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
 IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
 
+// Ondonti orcs in random encounter area acpp97:
 
-/*
-CHAIN IF ~NumTimesTalkedTo(0) AreaCheck("ACPP99")~ THEN AC#PPTME 000
-~Hello! It looks like you're coming from Duskwood Dell's direction.~
+BEGIN AC#PP971
+BEGIN AC#PP972
+BEGIN AC#PP973
+BEGIN AC#PPON4
+BEGIN AC#PPON5
+
+CHAIN IF ~True()~ THEN AC#PP971 hello_thank_you
+~Peace-loving orcs! Ha! Don’t make me laugh!~
+== AC#PP972 ~I say we finish them quick and move on.~
+== AC#PP973 ~Quick? Why quick? Let the beasts squeal a bit.~
+== AC#PPON4 ~Please, humans... no! We orcs of Eldath. We no fight, no war.~
+== AC#PPON5 ~We walk pilgrimage... Eldath’s holy place we seek.~
+== AC#PP971 ~Eldath? You pray to that bitch goddess of still waters?~
+== AC#PPON4 ~Please... do not spit on name of our goddess!~
+== AC#PP972 ~Enough chatter. Let’s take their heads and be done!~
 END
-IF~~THEN REPLY ~Yes, that's true. I've been there.~ EXTERN AC#PPTME 001
-IF~~THEN REPLY ~Duskwood Dell? I don't know what you are talking about.~ EXTERN AC#PPTME 002
+IF~~THEN REPLY ~This will be fun!~ EXTERN AC#PP971 orcs_go_on_fight
+IF~~THEN REPLY ~Hold a moment. What’s going on here?~ EXTERN AC#PP971 orcs_not_fight
 
-CHAIN AC#PPTME 001
-~Rigth. Well, at least they let SOMEONE in.~
-EXTERN AC#PPTME 003
-
-CHAIN AC#PPTME 002
-~No need to lie, really. I think I saw you there.~
-EXTERN AC#PPTME 003
-
-CHAIN AC#PPTME 003
-~I'm Debbie Gobblebubble. Yes. There are five b letters in my surname and I don't mind it. With my name, that's seven of these.~
-==AC#PPTME ~You see I wanted to sell a few things in Duskwood Dell, but the priests and druids weren't really happy, because I, and this is a quote, "have too many weapons". Phew! These guys are WEIRD.~
-==AC#PPTME ~Anyway, I am on my way... well... somewhere else. I'm still deciding where should I go.~
+CHAIN IF ~~ THEN AC#PP971 orcs_not_fight
+~What’s going on? We’re making Faerûn a better place, that’s what!~
+== AC#PP972 ~Two less orcs stinking up these woods!~
+== AC#PPON4 ~Please, my <LADYLORD>... we beg you. We only walk in peace. Orcs of Eldath, nothing more.~
 END
-IF~~THEN REPLY ~Right...~ EXTERN AC#PPTME 004
-IF~~THEN REPLY ~Maybe you should go to Athkatla. There is this huge Promenade there?~ DO ~SetGlobal("AC#PPMerSugAth","GLOBAL",1)~ EXTERN AC#PPTME 005
-IF~OR(3) Global("TMAcceptance","GLOBAL",1) Global("ShTrade","GLOBAL",1) Global("MazzyHappy","GLOBAL",1)~THEN REPLY ~Maybe you should go to Trademeet. It sounds like a fine place to, well... trade!~ DO ~SetGlobal("AC#PPMerSugTra","GLOBAL",1)~ EXTERN AC#PPTME 005
+IF~~THEN REPLY ~Go on then, kill them.~ EXTERN AC#PP971 orcs_go_on_fight
+IF~~THEN REPLY ~Peaceful orcs? Never heard such a thing.~ EXTERN AC#PP971 orcs_not_fight_02
 
-CHAIN AC#PPTME 004
-~...~
-EXTERN AC#PPTME 006
-
-CHAIN AC#PPTME 005
-~I'll think about this.~
-EXTERN AC#PPTME 006
-
-CHAIN AC#PPTME 006
-~Anyway, I'm making some goulash, you can have some if you want. And... since we are both here, and adventurers like yourself need all sorts of things, we can also trade, if you want.~
+CHAIN IF ~~ THEN AC#PP971 orcs_not_fight_02
+~See? Even this <PRO_RACE> doesn’t believe it. Time to set things right.~
 END
-IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
-IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+IF~~THEN REPLY ~Then do it!~ EXTERN AC#PP971 orcs_go_on_fight
+IF~~THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP972 orcs_not_fight_03
 
-CHAIN AC#PPTME 007
-~Sure, have a good one!~
-EXIT
-
-CHAIN IF ~AreaCheck("AR0700")~ THEN AC#PPTME 00A
-~Oh! It's you! Well, of course it's you. It's me: Debbie! Debbie Gobblebubble! You suggested that I should see Athkatla so... here I am! Would you like to buy something? I've got something new since we met on the road.~
+CHAIN IF ~~ THEN AC#PP972 orcs_not_fight_03
+~What? You're serious?~
+== AC#PP971 ~Listen, smart-mouth. You take our fun from us, we’ll gladly gut a few more bodies instead.~
 END
-IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
-IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+IF~~THEN REPLY ~Just joking. Kill the orcs.~ EXTERN AC#PP971 orcs_go_on_fight
+IF~~THEN REPLY ~Touch them and you deal with me.~ EXTERN AC#PP971 orcs_no_fight_bye
 
-CHAIN IF ~AreaCheck("AR2000")~ THEN AC#PPTME 00T
-~Oh! It's you! Well, of course it's you. It's me: Debbie! Debbie Gobblebubble! You suggested that I should see Trademeet so... here I am! I heard the place had few problems, but I was told you handled them! Nice! I've got something new since we met on the road. Would you like to take a look?~
+CHAIN IF ~~ THEN AC#PP971 orcs_go_on_fight
+~Come on, lads! Orcs, do us a favor—at least try to fight back, eh?~
+DO ~SetGlobal("AttackOrcs","ACPP97",1)~ EXIT
+
+CHAIN IF ~~ THEN AC#PP971 orcs_no_fight_bye
+~Looks like the orcs found themselves some friends! Fine by me. Then you can all die together!~
+DO ~SetGlobal("OrcsGood","ACPP97",1) Enemy()~ EXIT
+
+CHAIN IF ~Global("OrcsGood","ACPP97",2)~ THEN AC#PPON4 hello_thank_you
+~You save us. We thank.~
 END
-IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
-IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+IF~~THEN REPLY ~You could've at least helped defend your heads!~ EXTERN AC#PPON4 orc_want_no_fight
+IF~~THEN REPLY ~Where will you go now?~ EXTERN AC#PPON4 duskwood_dell
 
-
-CHAIN IF ~NumTimesTalkedToGT(0)~ THEN AC#PPTME 00X
-~Hello again! You remember me? It's Debbie! Debbie Gobblebubble! Maybe you'd like to buy something?~
+CHAIN IF ~~ THEN AC#PPON4 orc_want_no_fight
+~No… we not fight. Eldath say peace only.~
 END
-IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
-IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
-*/
+IF~~THEN EXTERN AC#PPON4 duskwood_dell
+
+CHAIN IF ~~ THEN AC#PPON4 duskwood_dell
+~We go Duskwood Dell. Maybe we meet again there.~
+END
+IF~~THEN REPLY ~You know where this place is?~ EXTERN AC#PPON4 know_duskwood_dell
+IF~~THEN REPLY ~Then go. We’ll see you there.~ EXTERN AC#PPON4 bye
+
+CHAIN IF ~~ THEN AC#PPON4 know_duskwood_dell
+~Yes. Eldath show in dreams... again and again.~
+END
+IF~~THEN EXTERN AC#PPON4 bye
+
+CHAIN IF ~~ THEN AC#PPON4 bye
+~We see you in Duskwood Dell. Farewell.~
+DO ~ActionOverride("AC#PPON5",EscapeArea())
+EscapeArea()~ EXIT

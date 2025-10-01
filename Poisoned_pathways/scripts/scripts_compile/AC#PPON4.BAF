@@ -1,0 +1,31 @@
+IF
+    CombatCounter(0)
+    Global("OrcsGood","ACPP97",1)
+    !See(Player1)
+THEN
+    RESPONSE #100
+        MoveToObject(Player1)
+END
+
+IF
+    Global("OrcsGood","ACPP97",1)
+    See(Player1)
+    !See([ENEMY])
+    CombatCounter(0)
+    Dead("AC#PP971")  // Fighter
+    Dead("AC#PP972")  // Fighter
+    Dead("AC#PP973")  // Mage
+    Dead("AC#PP974")  // Archer
+THEN
+    RESPONSE #100
+        SetGlobal("OrcsGood","ACPP97",2)
+        StartDialogueNoSet(Player1)
+END
+
+IF
+    Global("AC#PP_Helped_Orcs","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+

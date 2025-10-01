@@ -1,0 +1,9 @@
+IF
+    Global("AttackOrcs","ACPP97",1)
+    Global("AttackOrcsGo","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AttackOrcsGo","LOCALS",1)
+        Attack("AC#PPON5")  // Peacefang
+END
+
