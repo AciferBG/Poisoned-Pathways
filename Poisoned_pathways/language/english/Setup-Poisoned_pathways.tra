@@ -54,6 +54,9 @@
 @61 = ~Elv-Esster Aened~
 @62 = ~Will O'Dead~
 @63 = ~Will-O'-Wild~
+@64 = ~Maddlethorpe Jarn~
+@65 = ~Wimpley Ormath~
+@66 = ~Edvarr Nolthune~
 
 
 // cre soundfiles
@@ -1350,7 +1353,21 @@ Spawn of lifeless Weave. These wan globes feed not on fear but on power: They sa
 @1211 = ~A faintly glowing mote of pallid light, cold to the touch and unnervingly silent. Within it lingers the hollow hunger of dead magic, a force that drains spell and staff alike. Lore-whispers suggest that such an essence could one day serve to counter the emptiness where the Weave has failed.~
 @1212 = ~Essence of the Will-o’Wild~
 @1213 = ~This shimmering fragment pulses with chaotic hues, shifting from emerald to amber in an instant. It carries within it the untamed spark of wild magic, unpredictable yet potent. Some claim that such essence, properly bound, might shield its bearer from the turbulence of unstable Weave-fields.~ 
+@1214 = ~Manual of Peaceful Living~
+@1215 = ~Manual of Peaceful Living
+This contemplative tome  offers guidance on living a life of serenity and restraint. By learning to set aside violence, the reader loses one attack per round. Yet in return, <PRO_HESHE> gains a permanent boon of calm resilience: +1 to all saving throws, and a natural grace that grants +1 to Armor Class.
 
+As with all such rare works, the book vanishes after a single use.
+
+STATISTICS:
+
+Attacks per Round: Reduced by 1 (permanently)
+Armor Class: Improved by 1 (permanently)
+Saving Throws: +1 bonus (permanently)
+Special: The book is consumed upon use
+Usage: Place into quick item slot
+
+Weight: 25~
 
 // script strings
 @2000 = ~Duskwood Dell~

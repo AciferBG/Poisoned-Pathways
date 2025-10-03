@@ -7,3 +7,14 @@ THEN
         Attack("AC#PPON5")  // Peacefang
 END
 
+IF
+    Global("AttackOrcs","ACPP97",1)
+    Dead("AC#PP971")  // Fighter
+    Dead("AC#PPON4")  // Quietbrook
+    Dead("AC#PPON5")  // Peacefang
+THEN
+    RESPONSE #100
+        SetGlobal("AttackOrcs","ACPP97",2)
+        StartDialogueNoSet([PC])
+END
+

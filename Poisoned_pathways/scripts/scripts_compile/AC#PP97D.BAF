@@ -6,3 +6,21 @@ THEN
         Enemy()
 END
 
+IF
+    Global("AttackOrcs","ACPP97",1)
+    Dead("AC#PP971")  // Fighter
+    Dead("AC#PP972")  // Fighter
+    Dead("AC#PPON4")  // Quietbrook
+    Dead("AC#PPON5")  // Peacefang
+THEN
+    RESPONSE #100
+        SetGlobal("AttackOrcs","ACPP97",10)
+END
+
+IF
+    Global("AttackOrcs","ACPP97",10)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+

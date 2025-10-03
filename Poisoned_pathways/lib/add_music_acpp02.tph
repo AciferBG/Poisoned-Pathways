@@ -28,6 +28,7 @@ END
 	
 ADD_MUSIC ~AC#PP02~ ~%MOD_FOLDER%/music/AC#PP02.mus~
 COPY ~%MOD_FOLDER%/music/AC#PP02A.acm~ ~MUSIC/AC#PP02/AC#PP02A.acm~
+COPY ~%MOD_FOLDER%/music/AC#PP02B.acm~ ~MUSIC/AC#PP02/AC#PP02B.acm~
 
 COPY_EXISTING ~SONGLIST.2da~ ~override~
 	LPF GET_2DA_ROW INT_VAR numcolumns=3 match_column=2 STR_VAR match=~AC#PP02.mus~ RET therow=matched END

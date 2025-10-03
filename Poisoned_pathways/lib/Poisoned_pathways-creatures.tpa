@@ -2,10 +2,16 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
-COPY ~%MOD_FOLDER%/cre/AC#PP971.cre~ ~override~       // random encounter anti-orc thug
-COPY ~%MOD_FOLDER%/cre/AC#PP972.cre~ ~override~       // random encounter anti-orc thug
-COPY ~%MOD_FOLDER%/cre/AC#PP973.cre~ ~override~       // random encounter anti-orc thug
-COPY ~%MOD_FOLDER%/cre/AC#PP974.cre~ ~override~       // random encounter anti-orc thug
+COPY ~%MOD_FOLDER%/cre/AC#PP971.cre~ ~override~       // Maddlethorpe Jarn, random encounter anti-orc thug
+SAY NAME1 @64 SAY NAME2 @64
+
+COPY ~%MOD_FOLDER%/cre/AC#PP972.cre~ ~override~       // Wimpley Ormath, random encounter anti-orc thug
+SAY NAME1 @65 SAY NAME2 @65
+
+COPY ~%MOD_FOLDER%/cre/AC#PP973.cre~ ~override~       // Edvarr Nolthune, mage random encounter anti-orc thug
+SAY NAME1 @66 SAY NAME2 @66
+
+COPY ~%MOD_FOLDER%/cre/AC#PP974.cre~ ~override~       // random encounter anti-orc archer
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWIW.cre~ ~override~       // Will-O'-Wild
   SAY NAME1 @63 SAY NAME2 @63

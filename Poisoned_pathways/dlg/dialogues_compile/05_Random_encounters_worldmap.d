@@ -79,6 +79,16 @@ BEGIN AC#PP973
 BEGIN AC#PPON4
 BEGIN AC#PPON5
 
+CHAIN IF ~Global("AttackOrcs","ACPP97",2)~ THEN AC#PP971 after_kill
+~So much for peaceful orcs! Hah! Let Eldath weep over the carcasses! Come on, lads, we’re done here.~
+DO ~SetGlobal("AttackOrcs","ACPP97",10)
+EscapeArea()~ EXIT
+
+CHAIN IF ~Global("AttackOrcs","ACPP97",2)~ THEN AC#PP972 after_kill
+~So much for peaceful orcs! Hah! Let Eldath weep over the carcasses! Come on, lads, we’re done here.~
+DO ~SetGlobal("AttackOrcs","ACPP97",10)
+EscapeArea()~ EXIT
+
 CHAIN IF ~True()~ THEN AC#PP971 hello_thank_you
 ~Peace-loving orcs! Ha! Don’t make me laugh!~
 == AC#PP972 ~I say we finish them quick and move on.~
@@ -98,20 +108,36 @@ CHAIN IF ~~ THEN AC#PP971 orcs_not_fight
 == AC#PPON4 ~Please, my <LADYLORD>... we beg you. We only walk in peace. Orcs of Eldath, nothing more.~
 END
 IF~~THEN REPLY ~Go on then, kill them.~ EXTERN AC#PP971 orcs_go_on_fight
-IF~~THEN REPLY ~Peaceful orcs? Never heard such a thing.~ EXTERN AC#PP971 orcs_not_fight_02
+IF~~THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_03
+IF~~THEN REPLY ~Peaceful orcs? Never heard such a thing.~ EXTERN AC#PP972 orcs_not_fight_02
 
-CHAIN IF ~~ THEN AC#PP971 orcs_not_fight_02
+CHAIN IF ~~ THEN AC#PP972 orcs_not_fight_02
 ~See? Even this <PRO_RACE> doesn’t believe it. Time to set things right.~
 END
 IF~~THEN REPLY ~Then do it!~ EXTERN AC#PP971 orcs_go_on_fight
-IF~~THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP972 orcs_not_fight_03
+IF~~THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_03
 
-CHAIN IF ~~ THEN AC#PP972 orcs_not_fight_03
-~What? You're serious?~
-== AC#PP971 ~Listen, smart-mouth. You take our fun from us, we’ll gladly gut a few more bodies instead.~
+CHAIN IF ~~ THEN AC#PP971 orcs_not_fight_03
+~What? You're serious? I am Maddlethorpe Jarn, son of Lord Pompabrace Jarn of Esmeltaran!~
+== AC#PP972 ~And I am Wimpley Ormath, heir of House Ormath of Murann!~
+== AC#PP973 ~You'd best step aside, rabble, and leave this decision to the nobility.~
+== AC#PP971 ~Yep. Listen, smart-mouth: You take our fun from us, we’ll gladly gut a few more bodies instead.~
 END
 IF~~THEN REPLY ~Just joking. Kill the orcs.~ EXTERN AC#PP971 orcs_go_on_fight
 IF~~THEN REPLY ~Touch them and you deal with me.~ EXTERN AC#PP971 orcs_no_fight_bye
+IF~~THEN REPLY ~And I am <CHARNAME>, son of the lord of murder.~ EXTERN AC#PP972 orcs_no_fight_son_murder
+IF~~THEN REPLY ~Big titles... but I see little men hiding behind them.~ EXTERN AC#PP971 orcs_no_fight_bye
+IF~~THEN REPLY ~There’s no honor in butchering pilgrims. Walk away while you can.~ EXTERN AC#PP971 orcs_no_fight_bye
+
+	CHAIN IF ~~ THEN AC#PP972 orcs_no_fight_son_murder
+	~Haha! What? So you plan to skin the orcs, then?~
+	== AC#PP971 ~Uh... I don't think <PRO_HESHE> wants that... something about <PRO_HIMHER> seems off. Let's get out of here.~
+	== AC#PP972 ~Nonsense! I won't be cowed by some random <PRO_RACE>!~
+	END
+	IF~~THEN REPLY ~Just joking. Kill the orcs.~ EXTERN AC#PP971 orcs_go_on_fight
+	IF~~THEN REPLY ~Touch them and you deal with me.~ EXTERN AC#PP971 orcs_no_fight_bye
+
+
 
 CHAIN IF ~~ THEN AC#PP971 orcs_go_on_fight
 ~Come on, lads! Orcs, do us a favor—at least try to fight back, eh?~
@@ -145,5 +171,6 @@ IF~~THEN EXTERN AC#PPON4 bye
 
 CHAIN IF ~~ THEN AC#PPON4 bye
 ~We see you in Duskwood Dell. Farewell.~
-DO ~ActionOverride("AC#PPON5",EscapeArea())
+DO ~SetGlobal("AC#PP_Helped_Orcs","GLOBAL",1)
+ActionOverride("AC#PPON5",EscapeArea())
 EscapeArea()~ EXIT

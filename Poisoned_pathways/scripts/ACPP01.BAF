@@ -10,6 +10,29 @@ THEN
         SetGlobal("EnteredArea","ACPP01",1)  
 END
 
+// new no fight workaround - working
+IF
+    !CombatCounter(0)
+THEN
+    RESPONSE #100
+        ClearActions(Player1)
+        ClearActions(Player2)
+        ClearActions(Player3)
+        ClearActions(Player4)
+        ClearActions(Player5)
+        ClearActions(Player6)
+        Continue()
+END
+
+IF
+    GlobalGT("AC#PP_Oghma","GLOBAL",0)
+    Global("OndontiOrcsEncounter","ACPP01",0)
+THEN
+    RESPONSE #100
+        ForceRandomEncounterEntry("ACPP97","Entrys")
+        SetGlobal("OndontiOrcsEncounter","ACPP01",1)
+END
+
 IF
     GlobalGT("AC#PPFlowerDelivery","GLOBAL",0)
     Global("AC#PPTravellingMerchant","GLOBAL",0)
@@ -19,6 +42,8 @@ IF
     SetGlobal("AC#PPTravellingMerchant","GLOBAL",1)
     END
 
+    // old no fight workaround - too buggy
+/*    
 IF
     !GlobalTimerNotExpired("NoFightTimer","ACPP01")
 THEN
@@ -26,6 +51,7 @@ THEN
         ApplySpellRES("AC#PPNF",Player1)  // No such index
         SetGlobalTimer("NoFightTimer","ACPP01",14)
 END
+*/
 
 IF
 Global("AC#PP_MythUnnohyr","GLOBAL",7)

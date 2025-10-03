@@ -772,40 +772,86 @@ EXIT
 
 
 
-// Ondonti orcs in pumpkin area acpp05:
 BEGIN ~AC#PPON1~
-CHAIN IF ~True()~ THEN AC#PPON1 hello_again
-~Peace be your weapon.~ 
-EXIT
-
 BEGIN ~AC#PPON3~
 
 CHAIN IF ~True()~ THEN AC#PPON3 hello_again
-~Quiet hands, quiet heart, <RACE>.~ 
+~Ah, friend! We thank you still. You saved our lives on the road.~
+== AC#PPON1 ~Now our axe only split pumpkin, not heads. Better work. Better life.~
 END
-IF~~THEN REPLY ~An orc! I’ll take your head off!~ EXTERN AC#PPON3 orc_fight
-IF~~THEN REPLY ~Didn’t expect to see someone like you here.~ EXTERN AC#PPON3 orc_not_expecting
-IF~~THEN REPLY ~I think I’ll leave you to your work.~ EXTERN AC#PPON3 bye
 
-	CHAIN IF ~~ THEN AC#PPON3 orc_fight
-	~No! Don’t fight!~ 
+IF~~THEN REPLY ~An orc! I’ll take your head off!~ EXTERN AC#PPON3 orc_hostile
+IF~~THEN REPLY ~I don’t believe you for a moment.~ EXTERN AC#PPON3 orc_skeptical
+IF~~THEN REPLY ~Good to see you alive. Glad you found peace.~ EXTERN AC#PPON3 orc_friendly
+IF~~THEN REPLY ~Why pumpkins, of all things?~ EXTERN AC#PPON3 orc_why_pumpkin
+IF~~THEN REPLY ~Need any help with those?~ EXTERN AC#PPON3 orc_offer_help
+IF~~THEN REPLY ~I’ll leave you to your pumpkins.~ EXTERN AC#PPON3 bye
+
+    CHAIN IF ~~ THEN AC#PPON3 orc_hostile
+    ~No! No fight! Please, we only split pumpkin now. They not scream.~
+    == AC#PPON1 ~If you strike, Eldath frown. We beg you, do not make us fight.~
+    EXIT
+
+    CHAIN IF ~~ THEN AC#PPON3 orc_skeptical
+    ~You not believe? That fine. We were like you once. Listen—~
+    == AC#PPON3 ~I am Peacefang. Orc of Eldath. My clan left old gods, left blood. Now we tend land, split harvest.~
+    == AC#PPON1 ~Me Quietbrook. ~
 	END
-	IF~~THEN EXTERN AC#PPON3 orc_not_expecting
+	IF~~THEN EXTERN AC#PPON3 orc_friendly
 
-	CHAIN IF ~~ THEN AC#PPON3 orc_not_expecting
-	~I am Peacefang. I follow Eldath. Left behind the wicked gods of my kin. I live in peace—with others, with the land.~ 
-	END
-	IF~~THEN REPLY ~And I’m supposed to believe that?~ EXTERN AC#PPON3 orc_believe
-	IF~~THEN REPLY ~Then I’ll let you get back to your work.~ EXTERN AC#PPON3 bye
+    CHAIN IF ~~ THEN AC#PPON3 orc_friendly
+    ~You kind. We thank again. You made new life for us.~
+    == AC#PPON3 ~You come to Duskwood Dell, we sing small thanks and share stew.~
+    END
+	IF~~THEN REPLY ~I may stop by.~ EXTERN AC#PPON3 orc_invite_accept
+    IF~~THEN REPLY ~Keep your songs for yourselves.~ EXTERN AC#PPON3 orc_invite_decline
+	
+        CHAIN IF ~~ THEN AC#PPON3 orc_invite_accept
+        ~Good. You welcome. Eldath bless road that brought you.~
+        EXIT
+		
+        CHAIN IF ~~ THEN AC#PPON3 orc_invite_decline
+        ~As you wish. Still you saved us. We remember.~
+        EXIT
 
-	CHAIN IF ~~ THEN AC#PPON3 orc_believe
-	~Yes. I only lift axe to split pumpkin now. Pumpkin harder to split than human head! But Peacefang doesn’t mind the work.~ 
-	END
-	IF~~THEN REPLY ~Then I’ll let you get back to your work.~ EXTERN AC#PPON3 bye
+    CHAIN IF ~~ THEN AC#PPON3 orc_why_pumpkin
+    ~Pumpkin give food. Pumpkin fells like head, not bring blood. Eldath say tend land, be gentle.~
+    == AC#PPON1 ~Axe still heavy, but heart lighter. Pumpkins need split — we very busy and happy.~
+    END
+	IF~~THEN REPLY ~Sounds peaceful enough.~ EXTERN AC#PPON3 orc_why_ok
+    IF~~THEN REPLY ~You could be lying to hide something.~ EXTERN AC#PPON3 orc_why_suspicious
+	
+        CHAIN IF ~~ THEN AC#PPON3 orc_why_ok
+        ~Yes. Peace good. Thank you.~
+        EXIT
+		
+        CHAIN IF ~~ THEN AC#PPON3 orc_why_suspicious
+        ~We not hide. You watch. If we fight, you see. If we not, you see also.~
+        EXIT
 
-	CHAIN IF ~~ THEN AC#PPON3 bye
-	~Keep axe sharp! For chopping pumpkin.~ 
-	DO ~~ EXIT
+
+    CHAIN IF ~~ THEN AC#PPON3 orc_offer_help
+    ~Help? No help, we happy. Many pumpkins, many hands make work quick.~
+    == AC#PPON1 ~If you help, we share stew and seeds. Eldath smiles on those who feed the land.~
+    END
+	IF~~THEN REPLY ~All right, show me how to split one.~ EXTERN AC#PPON3 orc_show_split
+    IF~~THEN REPLY ~No thanks — you two seem fine.~ EXTERN AC#PPON3 orc_decline_help
+        
+		CHAIN IF ~~ THEN AC#PPON3 orc_show_split
+        ~Good! Here, take small axe. Hold steady, strike top, then drive through. We teach.~
+        EXIT
+		
+        CHAIN IF ~~ THEN AC#PPON3 orc_decline_help
+        ~That fine. You safe now. We grateful always.~
+        EXIT
+
+    CHAIN IF ~~ THEN AC#PPON3 bye
+    ~Farewell then. Keep axe sharp, friend — but for pumpkin now!~
+    EXIT
+
+CHAIN IF ~True()~ THEN AC#PPON1 hello_again
+~Now our axe only split pumpkin, not heads. Better work. Better life.~
+EXIT
 
 	
 ////////////////////////////////////////////////////////
