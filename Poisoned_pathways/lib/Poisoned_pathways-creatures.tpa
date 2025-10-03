@@ -2,6 +2,15 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPILL.cre~ ~override~       // Mannatarv, the dying man in ACPP01
+SAY NAME1 @68 SAY NAME2 @68
+
+COPY ~%MOD_FOLDER%/cre/AC#PPIL2.cre~ ~override~       // Mannatarv, the dying man in ACPP01
+SAY NAME1 @68 SAY NAME2 @68
+
+COPY ~%MOD_FOLDER%/cre/AC#PPWOC.cre~ ~override~       // Craven, woodcarver in ACPP09
+SAY NAME1 @67 SAY NAME2 @67
+
 COPY ~%MOD_FOLDER%/cre/AC#PP971.cre~ ~override~       // Maddlethorpe Jarn, random encounter anti-orc thug
 SAY NAME1 @64 SAY NAME2 @64
 

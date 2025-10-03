@@ -1,0 +1,16 @@
+IF
+    Global("DyingMan","ACPP01",1)
+    See([PC])
+THEN
+    RESPONSE #100
+        SetGlobal("DyingMan","ACPP01",2)
+        Dialogue([PC])
+END
+
+IF
+    GlobalGT("DyingMan","ACPP01",2)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+

@@ -25,6 +25,15 @@ THEN
 END
 
 IF
+    GlobalGT("AC#PP_MythUnnohyr","GLOBAL",0)
+    Global("DyingMan","ACPP01",0)
+THEN
+    RESPONSE #100
+        SetGlobal("DyingMan","ACPP01",1)
+        CreateCreature("AC#PPIL2",[491.1049],N)  // Mannatarv
+END
+
+IF
     GlobalGT("AC#PP_Oghma","GLOBAL",0)
     Global("OndontiOrcsEncounter","ACPP01",0)
 THEN

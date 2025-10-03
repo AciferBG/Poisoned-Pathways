@@ -501,6 +501,9 @@ COPY ~Poisoned_pathways/sto/AC#PPPBG.sto~ ~override~  // potion case
 
 COPY ~%MOD_FOLDER%/sto/ac#pptme.sto~  ~override~ // Debbie's Undoubtful Weapons & Goods
   SAY 0xc @953
+  
+COPY ~Poisoned_pathways/sto/AC#PPWOC.sto~ ~override~ // temple of Eldath
+SAY 0xc @954
 
 
 ///////////////////////////////////////////////////////////////////////

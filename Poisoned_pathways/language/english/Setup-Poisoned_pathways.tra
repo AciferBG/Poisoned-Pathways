@@ -57,6 +57,8 @@
 @64 = ~Maddlethorpe Jarn~
 @65 = ~Wimpley Ormath~
 @66 = ~Edvarr Nolthune~
+@67 = ~Craven~
+@68 = ~Mannatarv~
 
 
 // cre soundfiles
@@ -116,6 +118,7 @@
 @951 = ~Calmfire's Creations~
 @952 = ~The Leaves' Embrace~
 @953 = ~Debbie's Undoubtful Weapons & Goods~
+@954 = ~Woodcarver~
 
 // itm files
 @1000 = ~Poisoned Arrow~
@@ -1178,9 +1181,7 @@ Requires:
 Weight: 1~
 
 @1184 = ~Face of the Forest~
-@1185 = ~This mask, woven from living leaves and supple vines, seems to shift gently with every breath of wind. Its features resemble a serene face—neither elf nor human, but something older, wilder. Druids of the High Forest assume that it was once worn by a guardian spirit of the woods, a being that walked unseen among beasts and boughs.
-
-By donning the mask, the wearer feels the quiet strength of the forest. In daylight, when the sun touches leaf and root, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
+@1185 = ~This mask seems to shift gently with every breath of wind. Its features resemble a serene face—neither elf nor human, but something older, wilder. By donning the mask, the wearer feels the quiet strength of the forest. In daylight, when the sun touches leaf and root, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
 
 Another power, when invoked, is the way certain mammals respond to the wearer—with unexpected calm, even trust. From field mouse to forest bear, creatures of fur and fang seem to ignore the being behind the mask.
 

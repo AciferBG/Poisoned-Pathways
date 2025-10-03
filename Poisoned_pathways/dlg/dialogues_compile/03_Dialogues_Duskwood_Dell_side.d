@@ -83,7 +83,7 @@ CHAIN IF ~RandomNum(3,3)~ THEN AC#PP06B story_04
 ==AC#PP06B ~But the giant did not step. He listened. And in his stillness, the world grew a little kinder.~
 EXIT
 
-// Dialogue Mannatarv 
+// Eldathyn that can be angered
 BEGIN ~AC#PPMAN~
 
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN hello_0
@@ -451,6 +451,111 @@ EXIT
 CHAIN IF ~RandomNum(8,8)~ THEN AC#PPELR hello_08
 ~Not all healing comes through herbs. Sometimes, a quiet place and the scent of blooming things are enough.~
 EXIT
+/************************************************
+// Mannatarv, the dying man
+*******************************************************************/
+
+BEGIN AC#PPILL
+
+//3rd encounter: Mannatarv's request after Alatoasz' quest has started
+	CHAIN IF ~Global("DyingMan","ACPP01",3)~ THEN AC#PPILL hello_waiting_poison
+	~Have you found the plant yet?~ 
+	END
+	IF ~~ THEN REPLY ~No, not yet.~ EXTERN AC#PPILL farewell
+	IF ~PartyHasItem("AC#PPPUB")~ THEN REPLY ~I have the plant here with me.~ EXTERN AC#PPILL yes_have_plant
+	IF ~~ THEN REPLY ~I'm not going to help you after all.~ EXTERN AC#PPILL not_help_02
+
+CHAIN IF ~Global("DyingMan","ACPP01",2)~ THEN AC#PPILL request
+~You’ve spoken with the High One, haven’t you? Alatoasz sent you after the Talona priest... and the flower. The Groveglove. Everyone whispers of it. A poison so pure even the gentle hands of Eldath cannot undo it.~
+== AC#PPILL IF ~NumTimesTalkedTo(0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But they won't let me.~ 
+== AC#PPILL IF ~NumTimesTalkedToGT(1)~ THEN ~We've met before. My name is Mannatarv. You know I am old and sick, very sick. All I want is to die. But they won't let me.~ 
+== AC#PPILL ~The priests heal me every day. They pour their light into me, knit my wounds, call me back when I slip away. But I am tired. My bones rot, my breath burns. Each day they gift me is another day of pain. I want no more gifts.~  
+== AC#PPILL ~I beg you: Bring me a fragment of that flower before they make an antidote. Just a single leaf. Let me ingest its venom and be done. Let me leave this world in silence, not in their endless chants.~
+==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~A soul begging for the kiss of death. I would grant it gladly… but not swiftly.~
+==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~We must not meddle with the path of nature. Life and death are not ours to grant.~
+==HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~Why waste words? If he wants death, let’s grant it. No need for some poisoned flowers, though.~
+==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN ~Some burdens may be heavier than any man can carry.~
+==CerndJ IF ~InParty("cernd") !StateCheck("cernd",CD_STATE_NOTVALID)~ THEN ~If his time has come, the river of life will claim him. We should not hasten its current, nor hold it back.~
+== KeldorJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Mercy and murder walk a fine line here. I could not in good conscience aid him.~
+== AnomenJ  IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Such thoughts are blasphemy. It is not for us to grant an easy death.~
+== DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~Life is suffering. If he craves the end, I’ll cut it short for him gladly.~
+== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~His misery is not our concern. Just keep him from delaying us.~ 
+==KorganJ IF ~InParty("korgan") !StateCheck("korgan",CD_STATE_NOTVALID)~ THEN ~If the old fool wants to croak, hand him the bloody weed.~   
+END
+IF ~~ THEN REPLY ~You want to kill yourself with this plant?~ EXTERN AC#PPILL kill_plant
+IF ~~ THEN REPLY ~No. I won’t be party to your death.~ EXTERN AC#PPILL refuse
+IF ~~ THEN REPLY ~If this is your wish, I will bring it to you.~ EXTERN AC#PPILL accept
+IF ~~ THEN REPLY ~Perhaps there is another way.~ EXTERN AC#PPILL alternative
+IF ~~ THEN REPLY ~Why wait for the plant? I can give you a quick death myself.~ EXTERN AC#PPILL kill_instantly
+	
+// 1st encounter
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPILL hello
+~Huh... another visitor. Spare me your cheer, stranger. Words are heavy, and I have little strength left to carry them.~  
+== AC#PPILL ~The priests fuss enough over me already. Let an old man keep his silence, if silence is all he has left.~  
+END
+IF ~~ THEN REPLY ~I meant no harm.~ EXTERN AC#PPILL farewell
+IF ~~ THEN REPLY ~You sound unwell. Can I do something for you?~ EXTERN AC#PPILL brush_off
+
+	CHAIN AC#PPILL brush_off
+	~Hmph. No, nothing you can mend. My flesh betrays me, my bones gnaw at me, and still they will not let me go. Better to leave me be, before you waste your pity here.~  
+	END
+	IF ~~ THEN REPLY ~As you wish. Farewell.~ EXTERN AC#PPILL farewell
+
+	CHAIN AC#PPILL farewell
+	~Enough words… each one wears me thinner. Farewell.~  
+	EXIT
+	
+	CHAIN IF ~NumTimesTalkedToGT(0)~ THEN AC#PPILL again
+	~Still here? Hm. I've no fresh words for you... only the same old pain. Go on, stranger. Let the wind carry your steps elsewhere.~  
+	END
+	IF ~~ THEN REPLY ~Very well. Farewell.~ EXTERN AC#PPILL farewell
+
+	CHAIN AC#PPILL yes_have_plant
+	~You're actually bringing it to me? You're a good <PRO_RACE>! Let me see...~
+	== AC#PPILL ~So beautiful and yet so deadly... here, I'll just take one leaf. Everyone else should get the antidote, just not me...~
+	== AC#PPILL ~Ugh, that tastes bitter! I didn't think that...~
+	DO ~SetGlobal("DyingMan","ACPP01",10)
+	Kill(Myself)~
+	EXIT
+	
+	CHAIN AC#PPILL not_help_02
+	~Then leave me to my torment. The priests will be pleased.~
+	EXIT
+
+	// Mannatarv lehnt entschieden ab
+	CHAIN AC#PPILL kill_instantly
+	~No! Not here, not in the sanctuary of Eldath. No blood must be spilled on this sacred ground. If you truly mean me mercy, let it be without violence.~  
+	END
+	IF ~~ THEN REPLY ~You want to kill yourself with this plant?~ EXTERN AC#PPILL kill_plant
+	IF ~~ THEN REPLY ~No. I won’t be party to your death.~ EXTERN AC#PPILL refuse
+	IF ~~ THEN REPLY ~If this is your wish, I will bring it to you.~ EXTERN AC#PPILL accept
+	IF ~~ THEN REPLY ~Perhaps there is another way.~ EXTERN AC#PPILL alternative
+
+
+CHAIN AC#PPILL kill_plant
+~If you wish to see it that way, yes. I see it as a release.~ 
+END
+IF ~~ THEN REPLY ~No. I won’t be party to your death.~ EXTERN AC#PPILL refuse
+IF ~~ THEN REPLY ~If this is your wish, I will bring it to you.~ EXTERN AC#PPILL accept
+IF ~~ THEN REPLY ~Perhaps there is another way.~ EXTERN AC#PPILL alternative
+
+CHAIN AC#PPILL refuse
+~Then leave me to my torment. The priests will be pleased. Farewell~
+DO ~EscapeArea()~ EXIT
+
+CHAIN AC#PPILL accept
+~You... you would truly do this for me? I thank you already for even considering it. You may think me mad, but you have shown mercy where others offered only healing. I will wait for you by the stump in the water. Remember: you must give me a leaf of the plant before you bring it to Alatoasz! Once he crafts an antidote, I will have no hope left of passing peacefully from this world.~ 
+== AC#PPILL ~Good luck with your search, <PRO_RACE>. I’m counting on you and will be waiting for you.~   
+DO ~SetGlobal("DyingMan","ACPP01",3)
+EscapeArea()~ EXIT
+
+CHAIN AC#PPILL alternative
+~Another way? No. I’ve tried everything. Even pleaded with the High Priest himself. Nothing helps. That's why I need your help.~  
+END
+IF ~~ THEN REPLY ~No. I won’t be party to your death.~ EXTERN AC#PPILL refuse
+IF ~~ THEN REPLY ~If this is your wish, I will bring it to you.~ EXTERN AC#PPILL accept
+
+
 
 // "Leaves' Embrace", tavern in area ACPP11 
 BEGIN ~AC#PPELS~
@@ -770,8 +875,82 @@ CHAIN FFBART bye_mead
 ~Do give the Eldathyn my regards. I never thought they were capable of anything quite so... useful!~ 
 EXIT
 
+// Woodcarver Craven – in Area ACPP09 
+BEGIN ~AC#PPWOC~
+
+// Erstes Treffen
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWOC FirstMeet
+~Welcome, friend. Name’s Craven. I carve beasts and little figures to bring folk some joy.~
+== AC#PPWOC ~At times, I also shape masks, armor, or gloves of wood — useful things, if you need them.~
+== AC#PPWOC ~Would you like to see my work?~
+END
+++ ~Show me what you’ve made.~ DO ~StartStore("AC#PPWOC",LastTalkedToBy())~ EXIT
+IF ~RandomNum(4,1)~ THEN REPLY ~Not now.~ EXTERN AC#PPWOC Farewell_1
+IF ~RandomNum(4,2)~ THEN REPLY ~Not now.~ EXTERN AC#PPWOC Farewell_2
+IF ~RandomNum(4,3)~ THEN REPLY ~Not now.~ EXTERN AC#PPWOC Farewell_3
+IF ~RandomNum(4,4)~ THEN REPLY ~Not now.~ EXTERN AC#PPWOC Farewell_4
+++ ~Why do you carve wood?~ EXTERN AC#PPWOC WhyCarve
+++ ~Don’t you ever run out of trees here?~ EXTERN AC#PPWOC Trees
+++ ~Do folk truly value your work?~ EXTERN AC#PPWOC Value
+
+// Wiederholtes Ansprechen
+CHAIN IF ~NumTimesTalkedToGT(0)~ THEN AC#PPWOC Again
+~Back again? The wood keeps me busy. Do you wish to look over my work?~
+END
+++ ~Yes, let me see.~ DO ~StartStore("AC#PPWOC",LastTalkedToBy())~ EXIT
+IF ~RandomNum(4,1)~ THEN REPLY ~Not today.~ EXTERN AC#PPWOC Farewell_1
+IF ~RandomNum(4,2)~ THEN REPLY ~Not today.~ EXTERN AC#PPWOC Farewell_2
+IF ~RandomNum(4,3)~ THEN REPLY ~Not today.~ EXTERN AC#PPWOC Farewell_3
+IF ~RandomNum(4,4)~ THEN REPLY ~Not today.~ EXTERN AC#PPWOC Farewell_4
+++ ~Why do you carve wood?~ EXTERN AC#PPWOC WhyCarve
+++ ~Don’t you ever run out of trees here?~ EXTERN AC#PPWOC Trees
+++ ~Do folk truly value your work?~ EXTERN AC#PPWOC Value
+
+// Zusatzfragen -> führen zu Hub
+CHAIN AC#PPWOC WhyCarve
+~It steadies the hands and the heart. A small carving can carry more comfort than coin.~
+== AC#PPWOC ~If you like, I can show you what I’ve made.~
+EXTERN AC#PPWOC Hub
+
+CHAIN AC#PPWOC Trees
+~I never cut living wood. Stormfall and time leave more than enough for willing hands.~
+== AC#PPWOC ~Would you care to look?~
+EXTERN AC#PPWOC Hub
+
+CHAIN AC#PPWOC Value
+~Enough do. A smile paid in full is fair trade.~
+== AC#PPWOC ~Shall I lay out my work?~
+EXTERN AC#PPWOC Hub
+
+// Hub: Store oder Verabschieden
+CHAIN AC#PPWOC Hub
+~What will it be?~
+END
+++ ~Show me your work.~ DO ~StartStore("AC#PPWOC",LastTalkedToBy())~ EXIT
+IF ~RandomNum(4,1)~ THEN REPLY ~Another time.~ EXTERN AC#PPWOC Farewell_1
+IF ~RandomNum(4,2)~ THEN REPLY ~Another time.~ EXTERN AC#PPWOC Farewell_2
+IF ~RandomNum(4,3)~ THEN REPLY ~Another time.~ EXTERN AC#PPWOC Farewell_3
+IF ~RandomNum(4,4)~ THEN REPLY ~Another time.~ EXTERN AC#PPWOC Farewell_4
+
+// Verschiedene Abschiede
+CHAIN AC#PPWOC Farewell_1
+~Very well. The wood will wait.~
+EXIT
+
+CHAIN AC#PPWOC Farewell_2
+~As you wish. I’ll keep the shavings tidy.~
+EXIT
+
+CHAIN AC#PPWOC Farewell_3
+~Come back when the grain calls to you.~
+EXIT
+
+CHAIN AC#PPWOC Farewell_4
+~Another day, another carving. Safe paths.~
+EXIT
 
 
+// Ondonti orcs in area ACPP05
 BEGIN ~AC#PPON1~
 BEGIN ~AC#PPON3~
 
