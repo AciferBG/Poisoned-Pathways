@@ -172,5 +172,6 @@ IF~~THEN EXTERN AC#PPON4 bye
 CHAIN IF ~~ THEN AC#PPON4 bye
 ~We see you in Duskwood Dell. Farewell.~
 DO ~SetGlobal("AC#PP_Helped_Orcs","GLOBAL",1)
+AddexperienceParty(500)
 ActionOverride("AC#PPON5",EscapeArea())
 EscapeArea()~ EXIT

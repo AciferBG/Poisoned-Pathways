@@ -2,7 +2,15 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
-COPY ~%MOD_FOLDER%/cre/AC#PPFAE.cre~ ~override~       // Mannatarv, the dying man in ACPP01
+COPY ~%MOD_FOLDER%/cre/AC#PPFAE.cre~ ~override~       // the dewlight twins
+SAY NAME1 @69 SAY NAME2 @69
+  SAY INITIAL_MEETING @371
+  SAY SELECT_COMMON1 @372
+  SAY SELECT_COMMON2 @373
+  SAY SELECT_COMMON3 @374
+  SAY SELECT_COMMON4 @375
+  SAY SELECT_COMMON5 @373
+  SAY SELECT_COMMON6 @372
 
 COPY ~%MOD_FOLDER%/cre/AC#PPC6E.cre~ ~override~ // Eldath priest: AR2500 (after Elhan talk)
   SAY NAME1 @12 SAY NAME2 @12
@@ -360,7 +368,13 @@ COPY ~%MOD_FOLDER%/cre/AC#PPSYM.cre~ ~override~ // Gruesome Symbiote
   SAY NAME1 @48 SAY NAME2 @48
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#SYMBIONT_STATIC~))
   
-COPY ~%MOD_FOLDER%/cre/AC#PPHEL.cre~ ~override~ // Vaxh Aened - Elven Spirit
+COPY ~%MOD_FOLDER%/cre/AC#PPHEL.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP70
+  SAY NAME1 @49 SAY NAME2 @49
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPHE2.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP90
+  SAY NAME1 @49 SAY NAME2 @49
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPHE3.cre~ ~override~ // Elven Spirit in area ACPP90
   SAY NAME1 @49 SAY NAME2 @49
   
 COPY ~%MOD_FOLDER%/cre/AC#PPSON.cre~ ~override~ // Son

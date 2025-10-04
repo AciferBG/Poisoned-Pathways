@@ -580,6 +580,15 @@ CHAIN AC#PPMYT bye_final
 ~^0xFF8FAD5DFarewell, <CHARNAME>. May the paths ahead bow to your courage. ^-~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) CreateVisualEffect("SPPORTAL",[900.400]) DestroySelf()~ EXIT
 
+BEGIN AC#PPHE2
+CHAIN IF ~True()~ THEN AC#PPHE2 hello_thank_you
+~You have done what we could not. The silence is lifted. The Mythal breathes again – if only for a time.~
+== AC#PPHE2 ~Its strength may fade with the turning of the seasons, but even a single year of peace is more than we dared hope for.~
+== AC#PPHE2 ~Myth Unnohyr is no longer a place of sorrow. Thanks to you, its name may be spoken with pride once more!~
+== AC#PPHE2 ~Our spirits may rest. Yours... must journey on. But know this: the song of your deed will echo in the roots of this forest for ages to come.~
+DO ~SetGlobal("Elves_ByeBye","ACPP90",1)
+CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
+
 
 //FINALE 
 

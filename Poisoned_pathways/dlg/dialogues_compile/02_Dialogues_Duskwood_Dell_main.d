@@ -175,6 +175,27 @@ IF~~THEN REPLY ~Back to Athkatla, then.~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~I just arrived here from Athkatla, and you're already sending me back?~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~I don’t usually run errands for books... but fine.~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~If you say it helps, I’ll fetch your book.~ EXTERN AC#PPEL4 to_oghma
+IF~GlobalGT("ElvenCityTree","GLOBAL",0)~THEN REPLY ~What about Suldanesselar? Perhaps we should seek answers there?~ EXTERN AC#PPEL4 suldanesselar  
+IF~GlobalGT("AC#SK_MythRhynn_Visit","GLOBAL",0)~THEN REPLY ~I have already been to Myth Rhynn, searching for the ancient prophecies of Calim and Memnon. Perhaps that is where we should begin our search?~ EXTERN AC#PPEL4 skyfire_myth_rhynn  
+
+CHAIN IF ~~ THEN AC#PPEL4 suldanesselar  
+~Suldanesselar? I know the place. They have many troubles, but none that connect to ours.~  
+END
+IF~~THEN EXTERN AC#PPEL4 need_search_elven_cities  
+
+CHAIN IF ~~ THEN AC#PPEL4 skyfire_myth_rhynn  
+~Myth Rhynn, the elven city of the dead? No, I do not believe our answers lie there.~  
+END
+IF~~THEN EXTERN AC#PPEL4 need_search_elven_cities  
+
+CHAIN IF ~~ THEN AC#PPEL4 need_search_elven_cities  
+~There’s no way around it—you must seek the Temple of Oghma in Athkatla. They keep many tomes, including some that speak of the old elven cities. If I can find even a single clue, I may be able to narrow our search considerably.~  
+END  
+IF~~THEN REPLY ~Back to Athkatla, then.~ EXTERN AC#PPEL4 to_oghma  
+IF~~THEN REPLY ~I just came from Athkatla, and now you’re sending me back?~ EXTERN AC#PPEL4 to_oghma  
+IF~~THEN REPLY ~I don’t usually run errands for books... but fine.~ EXTERN AC#PPEL4 to_oghma  
+IF~~THEN REPLY ~If you think it’ll help, I’ll fetch your book.~ EXTERN AC#PPEL4 to_oghma  
+
 
 CHAIN IF ~~ THEN AC#PPEL4 to_oghma
 ~In the meantime, I shall reflect further on the nature of this poison. You were kind enough to bring me a sample... though it came at the cost of a good priest’s life.~
@@ -223,7 +244,7 @@ CHAIN AC#PPEL4 emblem_montrassa_bye
 EXIT
 
 CHAIN IF ~~ THEN AC#PPEL4 read_book
-~Interesting... A well-crafted tome, with valuable insights. Ah—three Mythal-cities are mentioned explicitly here: Myth Rhynn, Myth Unnohyr, and Myth Tellaren. Hmm. Oh! This is promising—mayhap even a true lead.~
+~Interesting... A well-crafted tome, with valuable insights. Three Mythal-cities are mentioned explicitly here: Myth Rhynn, Myth Unnohyr, and Myth Tellaren. Hmm. Oh! This is promising—mayhap even a true lead.~
 =
 ~Of the three cities, which calls to you as the source? Where do you feel the trail leads?~
 END
@@ -235,15 +256,17 @@ IF~~THEN REPLY ~I’m not sure.~ EXTERN AC#PPEL4 right_myth_unnohyr
 CHAIN IF ~~ THEN AC#PPEL4 wrong_myth_rhynn
 ~Myth Rhynn—the elven necropolis? An intriguing thought, but no... I don’t believe that’s where we’ll find our answer.~
 END
+IF~~THEN REPLY ~Maybe Myth Tellaren?~ EXTERN AC#PPEL4 wrong_myth_tellaren
 IF~~THEN REPLY ~Then it must be Myth Unnohyr.~ EXTERN AC#PPEL4 right_myth_unnohyr
 
 CHAIN IF ~~ THEN AC#PPEL4 wrong_myth_tellaren
 ~Myth Tellaren, buried in the sands of Calimshan? We’ll not find a single living plant there—certainly not the one we’re seeking. I’m afraid that can’t be it.~
 END
+IF~~THEN REPLY ~Myth Rhynn?~ EXTERN AC#PPEL4 wrong_myth_rhynn
 IF~~THEN REPLY ~Then Myth Unnohyr must be the one.~ EXTERN AC#PPEL4 right_myth_unnohyr
 
 CHAIN IF ~~ THEN AC#PPEL4 right_myth_unnohyr
-~Yes... Myth Unnohyr. That must be the place. Listen to this passage: 'When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.'~
+~Myth Unnohyr! That must be the place. Listen to this passage: 'When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.'~
 =
 ~That explains why our healing spells fail, and why this poison defies all curing—it carries the essence of Myth Unnohyr’s broken mythal, steeped in dead magic!~
 END

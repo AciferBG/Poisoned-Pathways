@@ -1,0 +1,9 @@
+IF
+    Global("Elves_ByeBye","ACPP90",1)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("SPFLESHS",Myself)
+        Wait(1)
+        DestroySelf()
+END
+

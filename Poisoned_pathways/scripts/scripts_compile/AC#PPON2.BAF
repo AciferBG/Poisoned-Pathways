@@ -12,16 +12,20 @@ THEN
         SmallWait(15)
         CreateVisualEffectObject("SPFLESHS",Myself)
         Polymorph(MONK)
+        Wait(1)
+        SmallWait(30)
         SetGlobal("BearChange","ACPP07",1)
-        EndCutSceneMode()
+        StartDialogueNoSet([PC])
+        //EndCutSceneMode()
 END
 
+/*
 IF
     Global("BearChange","ACPP07",1)
     See([PC])
 THEN
     RESPONSE #100
-        Wait(1)
         StartDialogueNoSet([PC])
 END
+*/
 

@@ -1145,7 +1145,7 @@ EXTERN AC#PPCHA 02.03
 CHAIN AC#PPCHA 02.03
 ~Thank you for doing this. It means more than I can say. Now that she knows I’m safe, I can truly begin focusing on what matters.~
 ==AC#PPCHA ~Whatever that is, exactly. Still figuring that out. But thanks. Really. You’re alright.~
-DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",4) AddExperienceParty(1800)~ EXIT
+DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",4) AddExperienceParty(500)~ EXIT
 
 // After
 
@@ -1376,7 +1376,7 @@ IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL"
 IF~Global("AC#PPSymbolQuest","GLOBAL",2) Global("AC#PP_AlaAgreesSymbol","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I have spoken with Alatoasz. He agrees—you are worthy to bear Merethan’s emblem.~ EXTERN AC#PPMON 01.04
 IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem somewhat sad. Is something wrong?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
 IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
-IF~~THEN REPLY ~This isn't my  . Goodbye.~ EXTERN AC#PPMON bye
+IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye
 IF~~THEN REPLY ~I hope your heart finds calm soon. Farewell.~ EXTERN AC#PPMON bye  
 
 CHAIN AC#PPMON 01.01
