@@ -1,0 +1,9 @@
+IF
+    GlobalGT("ElhanFinishedSpeaking","GLOBAL",0)
+    Global("AC#PPCreateEldathyn","AR2500",0)  // Elven Temple at Underdark Exit
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPCreateEldathyn","AR2500",1)  // Elven Temple at Underdark Exit
+        CreateCreature("AC#PPC6E",[395.981],SW)  // Priest of Eldath
+END
+

@@ -1,5 +1,57 @@
 // Dialogue sidechars in Duskwood Dell
 
+// the two faeries
+BEGIN AC#PPFAE
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPFAE hello
+~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A tall one!~   
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's a traveler, silly! You can always tell by the big eyes and the bigger feet.~  
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Welcome to Duskwood Dell, wanderer of ripples! We are the Dewlight Twins, keepers of the night giggles and guardians of… well, nothing terribly important.~  
+== AC#PPFAE ~Lilafern: Unless you count frogs. We guard frogs sometimes. They’re terrible conversationalists, though.~  
+== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^-Have you come to make a wish, or to chase the moonlight?~  
+END
+IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dewlight_Pass  
+IF~~THEN REPLY ~Guardians of frogs? Truly a sacred calling.~ EXTERN AC#PPFAE Dewlight_Frog  
+IF~~THEN REPLY ~A wish, perhaps… can you really grant one?~ EXTERN AC#PPFAE Dewlight_Wish  
+IF~~THEN REPLY ~Stop sparkling near my face, please.~ EXTERN AC#PPFAE Dewlight_Grumpy
+
+	CHAIN AC#PPFAE Dewlight_Grumpy
+	~^0xE3B0FFTippledew: ^-Near your face? But your face is so *unsparkly*!~
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-It needs help! Urgent sparkle intervention!~  
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Come, Tippledew — initiate sparkle retreat protocol!~  
+	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Careful, wanderer… if we stop sparkling near your face, who will keep your dreams from fading?~  
+	DO ~ReallyForceSpell(Myself,DO_NOTHING)
+	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
+
+	CHAIN AC#PPFAE Dewlight_Wish
+	~A wish?! Did you hear that, Lilafern? A *wish*!~
+	== AC#PPFAE ~Quick, where did we put the paperwork? The forms? The regulations on improbable miracles?!~
+	== AC#PPFAE ~Shh! We’re off duty tonight. Last wish we granted turned a toad into... a slimy toad.~
+	== AC#PPFAE ~Very confusing for everyone involved.~  
+	== AC#PPFAE ~But! If you wish for laughter or moonlight, we can manage those. They’re in surplus.~  
+	== AC#PPFAE ~Anything bigger, and you’ll have to speak with Management. That’s Eldath, obviously. She’s terrible with scheduling, though.~  
+	DO ~ReallyForceSpell(Myself,DO_NOTHING)
+	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
+	
+	CHAIN AC#PPFAE Dewlight_Frog
+	~Oh yes! Very sacred! Very slimy!~  
+	== AC#PPFAE ~We protect them from… well, mostly from needing to kiss the wrong people.~
+	== AC#PPFAE ~One tried it once. He wrote poetry. Terrible poetry. Lots of croaking rhymes.~
+	== AC#PPFAE ~Now we just keep an eye on them. Someone has to make sure they don’t start a revolution.~
+	== AC#PPFAE ~You’d be surprised how militant a frog can get once it learns to count to three.~  
+	== AC#PPFAE ~Anyway, sacred work. No pay, but excellent splashing privileges.~  
+	DO ~ReallyForceSpell(Myself,DO_NOTHING)
+	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
+
+	CHAIN AC#PPFAE Dewlight_Pass
+	~Passing through? Through what? Through *our night*? Through *our perfectly arranged starlight*?~  
+	== AC#PPFAE ~We spent *hours* polishing those reflections on the pond!~  
+	== AC#PPFAE ~But fine, pass. Tread softly, tall one — the grass remembers footsteps.~  
+	== AC#PPFAE ~And if you find a dream on the way out, tell it we miss it terribly.~  
+	== AC#PPFAE ~Come back when you’re not in such a hurry. We like conversations that wander in circles.~  
+	DO ~ReallyForceSpell(Myself,DO_NOTHING)
+	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
+
 // Bear telling stories in area ACPP08
 BEGIN AC#PP06B // Bear
 
@@ -467,8 +519,8 @@ BEGIN AC#PPILL
 
 CHAIN IF ~Global("DyingMan","ACPP01",2)~ THEN AC#PPILL request
 ~You’ve spoken with the High One, haven’t you? Alatoasz sent you after the Talona priest... and the flower. The Groveglove. Everyone whispers of it. A poison so pure even the gentle hands of Eldath cannot undo it.~
-== AC#PPILL IF ~NumTimesTalkedTo(0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But they won't let me.~ 
-== AC#PPILL IF ~NumTimesTalkedToGT(1)~ THEN ~We've met before. My name is Mannatarv. You know I am old and sick, very sick. All I want is to die. But they won't let me.~ 
+== AC#PPILL IF ~Global("MetMannatarv","ACPP01",0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But they won't let me.~ 
+== AC#PPILL IF ~GlobalGT("MetMannatarv","ACPP01",0)~ THEN ~We've met before. My name is Mannatarv. You know I am old and sick, very sick. All I want is to die. But they won't let me.~ 
 == AC#PPILL ~The priests heal me every day. They pour their light into me, knit my wounds, call me back when I slip away. But I am tired. My bones rot, my breath burns. Each day they gift me is another day of pain. I want no more gifts.~  
 == AC#PPILL ~I beg you: Bring me a fragment of that flower before they make an antidote. Just a single leaf. Let me ingest its venom and be done. Let me leave this world in silence, not in their endless chants.~
 ==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~A soul begging for the kiss of death. I would grant it gladly… but not swiftly.~
@@ -490,11 +542,15 @@ IF ~~ THEN REPLY ~Why wait for the plant? I can give you a quick death myself.~ 
 	
 // 1st encounter
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPILL hello
-~Huh... another visitor. Spare me your cheer, stranger. Words are heavy, and I have little strength left to carry them.~  
-== AC#PPILL ~The priests fuss enough over me already. Let an old man keep his silence, if silence is all he has left.~  
-END
-IF ~~ THEN REPLY ~I meant no harm.~ EXTERN AC#PPILL farewell
-IF ~~ THEN REPLY ~You sound unwell. Can I do something for you?~ EXTERN AC#PPILL brush_off
+~Huh... another visitor. Spare me your cheer, stranger. Words are heavy, and I have little strength left to carry them.~ 
+DO ~SetGlobal("MetMannatarv","ACPP01",1)~ EXTERN AC#PPILL priests_fuss
+
+  
+	CHAIN AC#PPILL priests_fuss
+	~The priests fuss enough over me already. Let an old man keep to himself, for I have no life left worth speaking of. Better leave me to the scraps of existence that remain.~  
+	END
+	IF ~~ THEN REPLY ~I meant no harm.~ EXTERN AC#PPILL farewell
+	IF ~~ THEN REPLY ~You sound unwell. Can I do something for you?~ EXTERN AC#PPILL brush_off
 
 	CHAIN AC#PPILL brush_off
 	~Hmph. No, nothing you can mend. My flesh betrays me, my bones gnaw at me, and still they will not let me go. Better to leave me be, before you waste your pity here.~  
@@ -681,6 +737,8 @@ END
 // honey-maker in area acpp07:
 BEGIN ~AC#PPON2~
 
+//old- now with cutscene
+/*
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPON2 hello_00
 ~Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!~
 == AC#PPON2 ~Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.~ 
@@ -689,6 +747,7 @@ IF ~~ THEN DO ~CreateVisualEffectObject("SPFLESHS",Myself)
 Polymorph(MONK)
 SetGlobal("BearChange","ACPP07",1)~
 EXIT
+*/
 
 CHAIN IF ~Global("BearChange","ACPP07",1)~ THEN AC#PPON2 hello_sorry
 ~Ah, that is much better. Forgive me. I sometimes take the form of a bear when the craving grows too great. Honey tastes sweeter when gathered with a muzzle and tongue, or so I tell myself.~ 
@@ -1317,7 +1376,7 @@ IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL"
 IF~Global("AC#PPSymbolQuest","GLOBAL",2) Global("AC#PP_AlaAgreesSymbol","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I have spoken with Alatoasz. He agrees—you are worthy to bear Merethan’s emblem.~ EXTERN AC#PPMON 01.04
 IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem somewhat sad. Is something wrong?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
 IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
-IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye
+IF~~THEN REPLY ~This isn't my  . Goodbye.~ EXTERN AC#PPMON bye
 IF~~THEN REPLY ~I hope your heart finds calm soon. Farewell.~ EXTERN AC#PPMON bye  
 
 CHAIN AC#PPMON 01.01
@@ -1352,18 +1411,15 @@ CHAIN AC#PPMON talk_high_fallskeeper
 ~That would be a kindness beyond measure. If you could speak a good word for me, it would warm the heart of this old priestess.~
 DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",2)~ EXIT
 
-CHAIN AC#PPMON 01.04
-~The High Fallskeeper grants me the honor of carrying Merethan’s emblem? I am humbled beyond words.~
-==AC#PPMON ~You have shown compassion in a world that often forgets it. Such kindness is rare—and sacred.~
-==AC#PPMON ~Please, take this in gratitude. I have kept this necklace for many years. Its light is gentle, yet enduring... much like the path you now walk.~
-==AC#PPMON ~May it strengthen your heart when shadows gather, and remind you that even the smallest kindness can ripple far beyond your sight.~
-==AC#PPMON ~Let mercy be your shield, and compassion your guide. Farewell, traveler.~
-DO ~GiveItemCreate("AC#PPAM",Player1,1,0,0) TakePartyItem("AC#PPSYM") AddExperienceParty(4000) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) EscapeArea()~ EXIT
+CHAIN AC#PPMON 01.04  
+~The High Fallskeeper grants me the honor of carrying Merethan’s emblem? I am humbled beyond words.~  
+==AC#PPMON ~You have shown compassion in a world that often forgets it. Such kindness is rare—and sacred.~  
+==AC#PPMON ~I have nothing but my sincere gratitude to offer you, yet know that I shall always include you in my prayers to the Lady of the Still Waters!~  
+DO ~TakePartyItem("AC#PPSYM") AddExperienceParty(400) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) ReputationInc(1)~ EXIT  
 
-CHAIN IF ~Global("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 02.00
-~I told our High Fallskeeper how grateful I am for the emblem you gave me. He has offered to teach me further, and I have gladly accepted.~
-==AC#PPMON ~I feel... proud of myself. I am glad I chose this path. And I am grateful to have met you, my friend.~
-EXIT
+CHAIN IF ~Global("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 02.00  
+~Thanks to you, I may walk the path of peace once more—not in haste, but with patient, steadfast steps.~  
+EXIT  
 
 CHAIN AC#PPMON bye
 ~Farewell, then. May calm guide your hand. Mine tremble too much these days—but you are young. Use your strength to plant seeds of peace, wherever you walk.~

@@ -29,6 +29,9 @@ EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334.baf~ // Cromwell
 // create Skann Delth poison seller
 EXTEND_TOP ~ar0400.bcs~ ~%MOD_FOLDER%/scripts/_AR0400.baf~
 
+// create priest of Eldath in area AR2500 (Exit underdark after talk with Elhan)
+EXTEND_TOP ~WARSAGE.bcs~ ~%MOD_FOLDER%/scripts/_AR2500.baf~
+
 EXTEND_TOP ~ar0020.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 EXTEND_TOP ~ar0300.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 EXTEND_TOP ~ar0400.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric

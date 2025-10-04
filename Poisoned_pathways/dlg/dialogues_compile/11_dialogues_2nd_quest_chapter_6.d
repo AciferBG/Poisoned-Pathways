@@ -1,26 +1,67 @@
 // Messenger in Elhan'S area
-/*
+
 BEGIN AC#PPC6E
-CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",8)~ THEN AC#PPC6E hello_01
-~<CHARNAME>! Ja, Ihr seid es~    
-== AC#PPEL4 ~Allow me to present Mismal Al’Visalle, once a ranger of Gwaeron’s Slumber, now serving among the Mielikkians of Amn.~  
-== AC#PPMI ~A gracious introduction, but we are not gathered here to trade titles, alas. I wish it were so. Yet this is no simple matter.~  
+
+// Priest of Eldath – first contact in AR2500
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPC6E hello_01
+~<CHARNAME>! Yes, it must be you!~
+== AC#PPC6E ~I am a faithful servant of Eldath, bringing important news from Duskwood Dell.~    
 END
-IF ~~ THEN REPLY ~You sound troubled.~ EXTERN AC#PPMI C6.QUEST.01.01
-*/
-//ELHAN
+IF ~~ THEN EXTERN AC#PPC6E seek_charname_02
+
+CHAIN AC#PPC6E seek_charname_02
+~We had been searching for you, but it was as if you had vanished from the face of Faerûn!~    
+END
+
+IF ~~ THEN REPLY ~In a manner of speaking, I suppose I did.~ EXTERN AC#PPC6E seek_charname_03
+IF ~~ THEN REPLY ~You were looking for me? That usually means trouble.~ EXTERN AC#PPC6E seek_charname_03
+IF ~~ THEN REPLY ~And yet, here I stand.~ EXTERN AC#PPC6E seek_charname_03
+
+
+CHAIN AC#PPC6E seek_charname_03
+~I travelled into the Forest of Tethir to ask the elves of Suldanessellar for aid, but they seem... preoccupied with other matters at the moment.~    
+END
+IF ~~ THEN REPLY ~That’s putting it mildly.~ EXTERN AC#PPC6E problems_unnohyr
+IF ~~ THEN REPLY ~I’ve seen what they’re facing. No wonder they have no time for others.~ EXTERN AC#PPC6E problems_unnohyr
+IF ~~ THEN REPLY ~Then you’ve heard of the chaos there. But what troubles you?~ EXTERN AC#PPC6E problems_unnohyr
+
+
+CHAIN AC#PPC6E problems_unnohyr
+~There are… problems in Myth Unnohyr. I cannot tell you more, but I beg you to make your way to Duskwood Dell. Most Exalted Fallskeeper Alatoasz Berendim will surely explain everything.~    
+END
+IF ~~ THEN REPLY ~Ah yes, how I missed that name.~ EXTERN AC#PPC6E seek_charname_bye
+IF ~~ THEN REPLY ~Of course. I’ll make a visit when I can.~ EXTERN AC#PPC6E seek_charname_bye
+IF ~~ THEN REPLY ~I have quite a few other problems right now.~ EXTERN AC#PPC6E another_problems
+
+CHAIN AC#PPC6E another_problems
+~You needn’t leave at once. It’s not that urgent—yet. But at least stop by the Dell and hear what the Fallskeeper has to say.~    
+END
+IF ~~ THEN EXTERN AC#PPC6E seek_charname_bye
+
+CHAIN AC#PPC6E seek_charname_bye
+~You remember the way to Duskwood Dell, I trust. I thank Eldath that I’ve finally found you!~    
+DO ~SetGlobal("AC#PP_NewProblemsUnnohyr","GLOBAL",1)
+EscapeArea()~ EXIT
+
+
+
+// ELHAN extension
 
 EXTEND_BOTTOM ~c6elhan2~ 47
-IF~Global("AC#PP_MythUnnohyr","GLOBAL",7)~THEN REPLY ~I aided Eldath’s faithful in Duskwood Dell against a great evil in Myth Unnohyr. Perhaps they will aid us now, if they learn we face vampires threatening the elves of Tethir.~ EXTERN c6elhan2 elhan_myth_unnohyr 
+IF ~Global("AC#PP_MythUnnohyr","GLOBAL",7)~ THEN REPLY
+~I aided Eldath’s faithful in Duskwood Dell against a great evil in Myth Unnohyr. Perhaps they will aid us now, if they learn we face vampires threatening the elves of Tethir.~ 
+EXTERN c6elhan2 elhan_myth_unnohyr 
 END
 
 CHAIN c6elhan2 elhan_myth_unnohyr
-~Myth Unnohyr! Long has it been since I heard that name. A city wholly cursed, said to have brought about its own downfall through great tragedy. And the priests of Eldath sent you there? Then surely they are in your debt.~  
+~That was you? I have already heard that someone freed our ancient ancestral site from great corruption. In fact, a priest from Duskwood Dell told me of it only recently.~  
 END
 IF ~~ THEN EXTERN c6elhan2 AC#PP.ELHAN
 
 CHAIN c6elhan2 AC#PP.ELHAN
-~But mark this: You know the priests of Duskwood Dell. They are pacifists, and I doubt they will take up arms in your cause. Yet mayhap they possess draughts and balms that may aid you in the struggle ahead. If you are on good terms with them, speak with those Eldathyn and see what help they may offer. Keep my counsel in mind.~  
+~It seems, however, that the Eldathyn have troubles of their own—they wished to ask for our help in cleansing something within Myth Unnohyr. Needless to say, we have no time for that now. The priest should still be somewhere nearby; perhaps it would do no harm to speak with him.~  
+  
 END
 IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~Can you help with special supplies? Holy water and stakes come to mind.~ DO ~AddJournalEntry(57714,INFO) EraseJournalEntry(97341) EraseJournalEntry(97340) AddJournalEntry(97342,QUEST) SetGlobal("ElhanWater","LOCALS",1) SetGlobal("AskedElhanForHolyWater","GLOBAL",1)~ EXTERN c6elhan2 48
 IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~I will do what I can, though Bodhi is very strong. Have you holy water and stakes?~ DO ~AddJournalEntry(57714,INFO) EraseJournalEntry(97341) EraseJournalEntry(97340) AddJournalEntry(97342,QUEST) SetGlobal("ElhanWater","LOCALS",1) SetGlobal("ToldElhanAboutBodhi","GLOBAL",1) SetGlobal("AskedElhanForHolyWater","GLOBAL",1)~ EXTERN c6elhan2 48

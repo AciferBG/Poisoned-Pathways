@@ -59,6 +59,7 @@
 @66 = ~Edvarr Nolthune~
 @67 = ~Craven~
 @68 = ~Mannatarv~
+@69 = ~Dewlight Twins~
 
 
 // cre soundfiles
@@ -89,7 +90,6 @@
 @331 = ~Fragments of glory still linger.~ [AC#PPMYA]
 @332 = ~Mythahls broken, not forgotten.~ [AC#PPMYC]
 
-@350 = ~...~ [AC#PPHO0]
 @351 = ~Welcome to my humble honeycomb.~ [AC#PPHO1]
 @352 = ~Life is sweeter when you find your honey-comb-ination.~ [AC#PPHO2]
 @353 = ~A drop of honey can heal where a torrent of salt only wounds.~ [AC#PPHO3]
@@ -1445,7 +1445,10 @@ Weight: 25~
 @2065 = ~The fire seems to slowly destroy the fallen tree.~
 @2066 = ~The fire seems to have some effect on the fallen tree.~
 @2067 = ~Now that the passage is clear, the wardstone crumbles to dust.~
+
 @2068 = ~Temple of Mythrien~
+@2069 = ~Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!~ [AC#PPHO0]
+@2070 = ~Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.~
 
 
 

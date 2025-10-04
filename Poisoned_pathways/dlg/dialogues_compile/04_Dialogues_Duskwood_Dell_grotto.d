@@ -148,7 +148,8 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 
 	CHAIN IF ~~ THEN AC#PPDR1 what_place
-	~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
+	~This is Eldath’s sacred grotto, where absolute peace prevails.~
+	=~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
 	== AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~All these weapons just thrown aside? So much steel, wasted... I can’t decide if it’s inspiring or foolish.~
 	== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Peace is well and good—until the next pack of bandits shows up. Then what? Sing them to death?~
 	== DORNJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~A sword keeps you alive. Giving it up? That’s as good as digging your own grave.~
@@ -157,7 +158,8 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 	IF~~THEN DO ~SetGlobal("NPC_ThrowWeapon","ACPP06",1)~ EXTERN AC#PPDR1 throw_weapon_too
 	
 		CHAIN IF ~~ THEN AC#PPDR1 what_place_2
-	~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
+	~This is Eldath’s sacred grotto, where absolute peace prevails.~
+	= ~Here, many brave warriors have chosen to abandon their trade and follow the path of peace instead. Do you see the many weapons? Each one once belonged to a soul whose life was shaped by war and bloodshed—until they laid down their arms here and chose a different path.~
 	END
 	IF~~THEN EXTERN AC#PPDR1 throw_weapon_too
 

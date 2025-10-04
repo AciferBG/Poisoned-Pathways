@@ -6,6 +6,7 @@ THEN
         SetGlobal("AC#PPSpellCheckPoison","GLOBAL",3)
 END
 
+/*
 IF
     Global("AC#PPSymbolQuest","GLOBAL",10)
     Global("AC#PPSymbolQuest_C","GLOBAL",0)
@@ -14,6 +15,7 @@ THEN
         CreateCreature("AC#PPMON",[200.350],S)  // Montrassa
         SetGlobal("AC#PPSymbolQuest_C","GLOBAL",1)
 END
+*/
 
 IF
 GlobalLT("CHAPTER","GLOBAL",6)

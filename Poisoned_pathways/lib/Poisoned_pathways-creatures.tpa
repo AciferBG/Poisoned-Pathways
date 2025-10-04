@@ -2,6 +2,18 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPFAE.cre~ ~override~       // Mannatarv, the dying man in ACPP01
+
+COPY ~%MOD_FOLDER%/cre/AC#PPC6E.cre~ ~override~ // Eldath priest: AR2500 (after Elhan talk)
+  SAY NAME1 @12 SAY NAME2 @12
+  SAY INITIAL_MEETING @301
+  SAY SELECT_COMMON1 @302
+  SAY SELECT_COMMON2 @303
+  SAY SELECT_COMMON3 @304
+  SAY SELECT_COMMON4 @305
+  SAY SELECT_COMMON5 @306
+  SAY SELECT_COMMON6 @307
+
 COPY ~%MOD_FOLDER%/cre/AC#PPILL.cre~ ~override~       // Mannatarv, the dying man in ACPP01
 SAY NAME1 @68 SAY NAME2 @68
 
@@ -216,7 +228,7 @@ COPY ~%MOD_FOLDER%/cre/AC#PPON4.cre~ ~override~ // Ondonti orc#1: Quietbrook in 
   
 COPY ~%MOD_FOLDER%/cre/AC#PPON2.cre~ ~override~ // Honeymaker: Brother Gentleswarm
   SAY NAME1 @16 SAY NAME2 @16
-   SAY INITIAL_MEETING @350
+   SAY INITIAL_MEETING @351
   SAY SELECT_COMMON1 @351
   SAY SELECT_COMMON2 @352
   SAY SELECT_COMMON3 @353

@@ -1,9 +1,19 @@
 IF
-    NumberOfTimesTalkedTo(0)
+    Global("BearHoney","ACPP07",0)
     See([PC])
 THEN
     RESPONSE #100
-        StartDialogueNoSet([PC])
+        SetGlobal("BearHoney","ACPP07",1)
+        StartCutSceneMode()
+        DisplayStringHead(Myself,@2069)  // Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!
+        Wait(5)
+        DisplayStringHead(Myself,@2070)  // Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.
+        Wait(3)
+        SmallWait(15)
+        CreateVisualEffectObject("SPFLESHS",Myself)
+        Polymorph(MONK)
+        SetGlobal("BearChange","ACPP07",1)
+        EndCutSceneMode()
 END
 
 IF
