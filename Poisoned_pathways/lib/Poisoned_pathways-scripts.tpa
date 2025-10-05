@@ -29,6 +29,12 @@ EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334.baf~ // Cromwell
 // create Skann Delth poison seller
 EXTEND_TOP ~ar0400.bcs~ ~%MOD_FOLDER%/scripts/_AR0400.baf~
 
+// Patch prey script to affect wearer of Eldath's cloak
+EXTEND_TOP ~PREY.bcs~ ~%MOD_FOLDER%/scripts/_PREY.baf~
+
+// Patch prey script to affect wearer of Eldath's cloak
+EXTEND_TOP ~HUNTER.bcs~ ~%MOD_FOLDER%/scripts/_PREY.baf~
+
 // create priest of Eldath in area AR2500 (Exit underdark after talk with Elhan)
 EXTEND_TOP ~WARSAGE.bcs~ ~%MOD_FOLDER%/scripts/_AR2500.baf~
 
@@ -43,8 +49,31 @@ EXTEND_TOP ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: fi
 
 EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334_02.baf~
 
-EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/scripts/baldur.baf~
+// Patching GENSHY script to prevent running away
+COPY_EXISTING ~GENSHY.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(!Race(LastSeenBy(Myself),ELF)\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!HasItemEquiped("AC#PPRE",LastSeenBy(Myself))\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
 
+    // Patching Hunter script to prevent attacking prey
+COPY_EXISTING ~HUNTER.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(!Range(LastSeenBy(Myself),15)\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!HasItemEquiped("AC#PPRE",LastSeenBy(Myself))\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
 
 COPY_EXISTING ~BALDUR.BCS~ ~override~
     // Patching thieves guild failure in baldurs.bcs

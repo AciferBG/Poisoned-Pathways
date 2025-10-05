@@ -1,0 +1,12 @@
+IF
+  See([PC])
+  HasItemEquiped("AC#PPRE",LastSeenBy(Myself))
+  Range([PC],15)
+  !GlobalTimerNotExpired("AC#PP_PeaceBuff","GLOBAL")
+THEN
+  RESPONSE #100
+    ApplySpellRES("AC#PPPE",LastSeenBy(Myself))
+    SetGlobalTimer("AC#PP_PeaceBuff","GLOBAL",6) 
+END
+
+
