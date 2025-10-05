@@ -957,16 +957,15 @@ CHAIN FFBART bye_mead
 ~Do give the Eldathyn my regards. I never thought they were capable of anything quite so... useful!~ 
 EXIT
 
-// Woodcarver Craven – in Area ACPP09 
+// Woodcarver – in Area ACPP09 
 BEGIN ~AC#PPWOC~
 
 // Erstes Treffen
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWOC FirstMeet
-~Welcome, friend. Name’s Craven. I carve beasts and little figures to bring folk some joy.~
-== AC#PPWOC ~At times, I also shape masks, armor, or gloves of wood — useful things, if you need them.~
-== AC#PPWOC ~Would you like to see my work?~
+~Greetings. I am Carven, the woodworker of Duskwood Dell—though, truth be told, I am a druid first. The grove guides my hands; I only follow its grain.~
+== AC#PPWOC ~From fallen boughs I carve small beasts and cheerful trinkets, and from time to time I gather druidic wooden gear that finds its way to me. I even craft armor from Duskwood itself—light, sturdy, and touched by the forest’s calm. Would you like to see my wares?~
 END
-++ ~Show me what you’ve made.~ DO ~StartStore("AC#PPWOC",LastTalkedToBy())~ EXIT
+++ ~Show me what you’ve got.~ DO ~StartStore("AC#PPWOC",LastTalkedToBy())~ EXIT
 IF ~RandomNum(4,1)~ THEN REPLY ~Not now.~ EXTERN AC#PPWOC Farewell_1
 IF ~RandomNum(4,2)~ THEN REPLY ~Not now.~ EXTERN AC#PPWOC Farewell_2
 IF ~RandomNum(4,3)~ THEN REPLY ~Not now.~ EXTERN AC#PPWOC Farewell_3
