@@ -4,6 +4,7 @@ IF
 THEN
   RESPONSE #100
       SetGlobal("AC#PPHasMap","GLOBAL",1)
+      AddJournalEntry(@12002,QUEST)
       RevealAreaOnMap("ACPP30")
 END
 

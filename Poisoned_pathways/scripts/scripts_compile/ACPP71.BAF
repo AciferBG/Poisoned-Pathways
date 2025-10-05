@@ -1,4 +1,12 @@
 IF
+    Global("JournalUpdate","ACPP71",0)
+THEN
+    RESPONSE #100
+        AddJournalEntry(@12008,QUEST)
+        SetGlobal("JournalUpdate","ACPP71",1)
+END
+
+IF
     !GlobalTimerNotExpired("AntimagicTimer","ACPP71")
 THEN
     RESPONSE #100

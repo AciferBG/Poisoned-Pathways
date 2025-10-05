@@ -17,6 +17,15 @@ THEN
 END
 
 IF
+    PartyHasItem("AC#PPANT")
+    Global("JournalUpdateFinal","ACPP72",0)
+THEN
+    RESPONSE #100
+        AddJournalEntry(@12110,QUEST)
+        SetGlobal("JournalUpdateFinal","ACPP72",1)
+END
+
+IF
     Global("AC#PPFinalBossPrepare","GLOBAL",2)
     Difficulty(EASIEST)
 THEN

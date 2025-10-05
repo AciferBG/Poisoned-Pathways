@@ -243,6 +243,7 @@ CHAIN IF ~~ THEN AC#PPEL2 bye_death
 ==KorganJ IF ~InParty("korgan") !StateCheck("korgan",CD_STATE_NOTVALID)~ THEN ~If I ever die like that—flat on me back in a pile o’ birdshite, starin’ up at leaves—ye’d best throw me on a pyre quick, else I’ll rise from the grave, ‘fore the shame kills me twice!~ 
 == AC#PPEL2 ~Peace... finally...~
 DO ~SetGlobal("Die_Eldath","ACPP30",1)
+AddJournalEntry(@12004,QUEST)
 Kill(Myself)~ EXIT
 
 CHAIN IF ~Global("CutsceneAmbush","ACPP30",1)~ THEN AC#PPEL2 hello_talonite
@@ -286,7 +287,7 @@ CHAIN IF ~Global("AC#PP_PlotStart","GLOBAL",3)~ THEN AC#PPEL1 hello_02
 ~Good to see you again! Were you able to make Skann Delth talk? Do you know where he’s meeting the poison supplier?~
 END
 IF~Global("AC#PPHasMap","GLOBAL",1)
-PartyHasItem("AC#PPMP1") ~THEN REPLY ~Yes, I managed to get the information. I’ve got a document that mentions the location.~ DO ~SetGlobal("AC#PPHasMap","GLOBAL",10) TakePartyItem("AC#PPMP1") DestroyItem("AC#PPMP1")~ EXTERN AC#PPEL1 about_glade
+PartyHasItem("AC#PPMP1") ~THEN REPLY ~Yes, I managed to get the information. I’ve got a document that mentions the location.~ DO ~SetGlobal("AC#PPHasMap","GLOBAL",10) TakePartyItem("AC#PPMP1") DestroyItem("AC#PPMP1") AddJournalEntry(@12003,QUEST)~ EXTERN AC#PPEL1 about_glade
 IF~~THEN REPLY ~No, I haven’t found anything yet.~ EXTERN AC#PPEL1 bye_wait
 
 CHAIN IF ~~ THEN AC#PPEL1 about_glade
@@ -351,7 +352,7 @@ CHAIN IF ~~ THEN AC#PPEL1 about_renfeld_01
 == AC#PPEL1 ~I do not know where he is now, nor how he fares. What I do know, however, is that the toxin which struck him down is cause for grave concern.~
 == AC#PPEL1 ~Most types of poison can be cured—or at least delayed—with clerical spells or common antidotes. But none of them worked on poor Renfeld. Whatever was used on him resists all attempts to purge it. And there’s even more to worry about.~
 END
-IF~~THEN EXTERN AC#PPEL1 about_poison
+IF~~THEN DO ~AddJournalEntry(@12000,QUEST)~ EXTERN AC#PPEL1 about_poison
 
 CHAIN IF ~~ THEN AC#PPEL1 about_poison
 ~The truly troubling part is: This wasn’t the first time this kind of poison has been used—immune to all magic, beyond any known cure. Such occurrences are becoming disturbingly frequent.~
@@ -420,7 +421,8 @@ IF~~THEN EXTERN AC#PPEL1 wait_bye
 
 CHAIN IF ~~ THEN AC#PPEL1 wait_bye
 ~I will wait for you at the temple of Ilmater in the Slums. His priests offer me shelter whenever I need it. Find me there once you’ve learned anything—so we know where to continue the search for the source of this mysterious poison.~
-DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",3)
+DO ~AddJournalEntry(@12001,QUEST)
+SetGlobal("AC#PP_PlotStart","GLOBAL",3)
 EscapeArea()
 ~ EXIT
 
@@ -433,7 +435,8 @@ IF~~THEN REPLY ~Yes, I'm sure. Find someone else.~ EXTERN AC#PPEL1 bye_definitve
 CHAIN IF ~~ THEN AC#PPEL1 bye_definitve
 ~Alright, I shall have to seek help elsewhere.~
 END
-IF~~THEN DO ~SetGlobal("AC#PP_PlotStart","GLOBAL",20)
+IF~~THEN DO ~EraseJournalEntry(@12000)
+SetGlobal("AC#PP_PlotStart","GLOBAL",20)
 EscapeArea()~ EXIT
 
 APPEND ~MINSCJ~

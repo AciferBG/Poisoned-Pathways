@@ -1,4 +1,160 @@
 // Journal strings
-//@10000 = ~~
+
+//Quest start
+@12000 = ~The Perfect Poison
+
+In the Slums of Athkatla, an Eldathyn named Merethan approached me about an incurable toxin spreading through the lands. He believes a shadowy poison supplier is behind it and asked for my help to trace the source.~
+
+@12001 = ~The Perfect Poison
+
+Merethan pointed me to Skann Delth, a small-time poison peddler who loiters on the Copper Coronet’s rooftop. I’m to press him for the origin of his deadliest wares. Merethan is waiting for me at the Temple of Ilmater in the Slums of Athkatla.~
+
+@12002 = ~The Perfect Poison
+
+I confronted Skann Delth and forced his hand. I obtained a map to a secluded site called Toadstool Hollow in the Snakewood. I must bring this map to Merethan, who awaits me at the Temple of Ilmater in the slums of Athkatla.~
+
+@12003 = ~The Perfect Poison
+
+Merethan wishes me to accompany him to Toadstool Hollow to see whether the poisoner will reveal himself. He awaits me at the Temple of Ilmater in the Slums so that we may depart together.~
+
+@12004 = ~The Perfect Poison
+
+At Toadstool Hollow, a supposed exchange turned into an ambush. The mysterious poisoner’s servant struck down Merethan, yet one of the arrows remained laced with the toxin. Before passing, he entrusted the arrow to me and urged that it be taken to Fallskeeper Alatoasz Berendim in Duskwood Dell, Eldath's sanctuary.~
+
+@12005 = ~The Perfect Poison
+
+Fallskeeper Alatoasz believes that the key to understanding the poison lies within the ruins of an ancient elven city. He suspects the rare plant used to create it may grow there. To narrow our search, he has asked me to visit the Temple of Oghma in Athkatla and consult their tomes on the lost kingdom of Keltormir.~
+
+@12006 = ~The Perfect Poison
+
+I returned the tome from the Temple of Oghma to Fallskeeper Alatoasz. Its passages point to Myth Unnohyr: a ruined elven city whose shattered mythal breeds wild magic by day and dead magic by night. The taint has seeped into a rare plant used to craft the incurable poison. He marked the ruins on my map. I must travel to Myth Unnohyr, find the poisoner—a Malagent of Talona—and bring back a blossom of the corrupted plant so the Fallskeeper can attempt an antidote.~
+
+@12007 = ~The Perfect Poison
+
+I confronted the Malagent deep within the ruins of Myth Unnohyr. He confessed to fusing corrupt mythal magic into a novel toxin and boasted that multiple batches had already been distributed across Amn. He vowed to turn Myth Unnohyr into his lady’s toxic domain—but I put an end to his schemes. I must now bring a sample of the corrupted plant back to Fallskeeper Alatoasz Berendim in Duskwood Dell so that an antidote can be created.~
+
+@12008 = ~The Perfect Poison
+
+I have found the corrupted plant known as Groveglove—the source of the perfect poison. After defeating the Malagent, I must bring this sample to Fallskeeper Alatoasz Berendim in Duskwood Dell, so he can attempt to cleanse its essence and brew an antidote.~
+
+@12009 = ~The Perfect Poison
+
+The Malagent is dead, and his vile work lies in ruins. I brought the Groveglove plant to Fallskeeper Alatoasz Berendim in Duskwood Dell, who believes an antidote can be created to counter the poison already spread across Amn. Yet to purify the tainted flower and craft the cure, further aid from other faiths will be required.~
+
+// The antidote
+
+@12100 = ~The Antidote
+
+Fallskeeper Alatoasz believes the Groveglove flower can be cleansed and turned into an antidote. To succeed, the flower must be blessed three times—with the divine aspects of Life, Compassion, and Renewal. Alatoasz has granted me the first blessing himself, but I must seek out the other two.~
+
+@12101 = ~The Antidote: Ilmater's Blessing of Compassion
+
+I am to travel to the Temple of Ilmater in the Slums of Athkatla and request the Blessing of Compassion. The Fallskeeper believes the Ilmateri will aid our cause without hesitation.~
+
+@12102 = ~The Antidote: Lathander's Blessing of Renewal
+
+I must visit the Church of Lathander in Athkatla to receive the Blessing of Renewal.~
+
+@12103 = ~The Antidote: Eldath’s singing water
+
+Alatoasz has instructed me to collect a carafe of Eldath’s singing water from the grotto in Duskwood Dell. One of the handmaidens tending the sacred pool will provide it. The water will serve as the final medium through which the blessings must be combined.~
+
+@12104 = ~The Antidote: Ilmater's Blessing of Compassion
+
+I have received the Blessing of Compassion from the Ilmateri in the Slums. Their prayer imbued the Groveglove with a faint warmth—as if the flower itself responded to mercy.~
+
+@12105 = ~The Antidote: Lathander's Blessing of Renewal
+
+The priests of Lathander have bestowed the Blessing of Renewal. Bathed in sunlight, the Groveglove seemed to stir, its dark hue paling ever so slightly under the Morninglord’s grace.~
+
+@12106 = ~The Antidote: Eldath’s singing water
+
+I have obtained a jug of Eldath’s singing water from the grotto in Duskwood Dell. Its surface hums softly, reflecting every breath of the forest. Now all that remains is to return to Fallskeeper Alatoasz with the blessed flower and the sacred water.~
+
+@12107 = ~The Antidote
+
+All three blessings have been gathered—Life, Compassion, and Renewal—and I have secured Eldath’s singing water. I must now return to Fallskeeper Alatoasz in Duskwood Dell so that the antidote can finally be created and the corruption of the Groveglove purged once and for all.~
+
+@12108 = ~The Antidote
+
+I have gathered all that was required: the Groveglove flower, the blessings, and a carafe of Eldath’s singing water. Fallskeeper Alatoasz believes that to forge the antidote, the sanctified flower and the sacred water must be placed within the Malagent’s cauldron in the ruins of Myth Unnohyr—the very place where the poison was first brewed.~
+
+@12110 = ~The Antidote
+
+The ritual succeeded. From the Malagent’s corrupted cauldron rose a monstrous Poison Incarnation—an embodiment of the toxin’s final wrath. I destroyed it, and the Groveglove’s corruption was purged. The antidote has taken shape, shimmering with a calm, emerald light. I must bring it back to Fallskeeper Alatoasz Berendim in Duskwood Dell.~
+
+@12111 = ~The Antidote
+
+Fallskeeper Alatoasz has received the antidote and completed the ritual of purification. The venom that once threatened Amn and beyond can no longer spread. Peace returns to the waters, and the shadow of the poison has lifted.~
+
+// chapter 6 Quest
+@12200 = ~Undead in Myth Unnohyr
+
+An Eldathyn messenger found me near Suldanessellar. He bears news from Duskwood Dell and asked me to meet Fallskeeper Alatoasz Berendim there regarding new troubles in Myth Unnohyr. The messenger said the matter is not yet urgent, but I should visit Duskwood Dell and hear the Fallskeeper’s request when I can.~
+
+@12202 = ~Undead in Myth Unnohyr
+
+In Duskwood Dell I was introduced to Mismal Al’Visalle, serving among the Mielikkians. He and the Fallskeeper fear that Myth Unnohyr has worsened since my last battle there. Mismal believes an ancient wyrd has possessed the corpse of Commander Elv-Esster Aened and is feeding on Myth Unnohyr’s broken magic. If left unchecked, its undead will spill into the surrounding lands. Mismal will lead me to Myth Unnohyr.~
+
+@12207 = ~Undead in Myth Unnohyr
+
+We entered Myth Unnohyr. The way back was sealed by tangled growth—our only path runs forward through the heart of the ruins. Mismal will scout ahead; we are to meet beyond the tower.~
+
+@12208 = ~Undead in Myth Unnohyr
+
+The wyrd manifested first as a banshee wearing Elv-Esster’s face. With a scream it struck down Mismal’s form and tightened its hold over the city. There will be no retreat.~
+
+@12209 = ~Undead in Myth Unnohyr
+
+I confronted the wyrd. It boasted of ancient hunger and of binding itself to the city. The battle is joined. Wounded, the wyrd admitted that symbiotes anchor its power to Myth Unnohyr. If I destroy these nodes, I can weaken it.~
+
+@12211 = ~Undead in Myth Unnohyr
+
+I destroyed the symbiotes. An elven spirit bade me meet him beneath Mythrien’s temple; he claims to know how to end the wyrd.~
+
+@12212 = ~Undead in Myth Unnohyr
+
+In the crypts below, I met the elven spirit again. He urged me to find the Green Rose of Mythrien and bear it to the temple’s heart to call upon the god’s aid.~
+
+@12213 = ~Undead in Myth Unnohyr
+
+I found the Green Rose of Mythrien. Its petals still breathe through the city’s sorrow. With it, I can attempt the summoning at the temple.~
+
+@12214 = ~Undead in Myth Unnohyr
+
+I summoned Mythrien Sarath. He cannot mend the Mythal in full, but he will sever the currents that feed the wyrd so I may face it on more equal ground. Mythrien has stilled the worst excess of the broken weave: the wyrd can no longer draw strength from the city’s wound. I must hunt it down and end it.~
+
+@12216 = ~Undead in Myth Unnohyr
+
+The wyrd is defeated. Its hunger is silenced and Myth Unnohyr—at last—can breathe. I should speak to Mythrien again.~
+
+@12217 = ~Undead in Myth Unnohyr
+
+Mythrien cannot restore the Mythal, but he has steadied it for a single year; during that time no corruption shall rise to feed upon it. As thanks he returned the Green Rose, now bearing a ward against hostile sorcery.~
+
+@12218 = ~Undead in Myth Unnohyr
+
+An elven spirit thanked me: the silence is lifted, and Myth Unnohyr’s name may be spoken with pride once more.~
+
+@12219 = ~Undead in Myth Unnohyr
+
+I returned to Duskwood Dell. Fallskeeper Alatoasz received the news and rewarded my efforts. With divine aid, Myth Unnohyr will know a year of quiet.~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

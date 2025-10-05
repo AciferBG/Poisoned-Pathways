@@ -49,7 +49,31 @@ REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~ && FILE_EXISTS ~engine.lua~) ~Requires BG
 INCLUDE ~Poisoned_pathways/lib/extra_regexp_vars.tph~
 INCLUDE ~Poisoned_pathways/lib/functions.tph~
 
-//ADD_JOURNAL  USING ~Poisoned_pathways/language/%LANGUAGE%/Poisoned_pathways_Journal.tra~
+ADD_JOURNAL 
+@12000
+@12001
+@12002
+@12003
+@12004
+@12005
+@12006
+@12007
+@12008
+@12009
+@12100
+@12101
+@12102
+@12103
+@12104
+@12105
+@12106
+@12107
+@12108
+
+@12110
+@12111
+
+USING ~Poisoned_pathways/language/%LANGUAGE%/Poisoned_pathways_Journal.tra~
 
 ///////////////////////////////////////////////////////////////////////
 // Patching IDS files

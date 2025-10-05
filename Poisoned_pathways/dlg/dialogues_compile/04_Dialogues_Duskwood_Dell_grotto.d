@@ -136,7 +136,8 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 	CHAIN IF ~~ THEN AC#PPDR1 need_singing_water
 	~The singing water? Of course. Here it is — handle it with care, for it is as precious as the peace it brings.~
 	DO ~SetGlobal("AC#PP_HolyWater","GLOBAL",10)
-	GiveItemCreate("AC#PPWA",Player1,1,0,0)~ EXIT
+	GiveItemCreate("AC#PPWA",Player1,1,0,0)
+	AddJournalEntry(@12106,QUEST_DONE)~ EXIT
 
 
 	CHAIN IF ~~ THEN AC#PPDR1 who_are_you

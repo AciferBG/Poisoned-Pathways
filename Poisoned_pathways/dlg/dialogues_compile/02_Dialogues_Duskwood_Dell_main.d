@@ -217,6 +217,7 @@ IF~~THEN DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_o
 CHAIN IF ~~ THEN AC#PPEL4 to_oghma_bye
 ~I shall send a dove ahead to the Temple of Oghma, so their scribes may ready the proper volume. Return to me once you have the book. I shall be waiting below, on the lower level of this tree. May Eldath's blessings guide your steps.~
 DO ~SetGlobal("AC#PPSpellCheckPoison","GLOBAL",2)
+AddJournalEntry(@12005,QUEST)
 SetGlobal("AC#PP_Oghma","GLOBAL",1)
 EscapeAreaDestroy(2)~ EXIT
 
@@ -381,6 +382,7 @@ CHAIN IF ~~ THEN AC#PPEL4 travel_ruin
 =
 ~Go now, and put an end to the servant of Talona. May the blessings of Eldath guide your next steps.~
 DO ~RevealAreaOnMap("ACPP70")
+AddJournalEntry(@12006,QUEST)
 SetGlobal("AC#PPSpellCheckPoison","GLOBAL",10)
 SetGlobal("AC#PP_MythUnnohyr","GLOBAL",1)~ EXIT
 
@@ -411,7 +413,7 @@ EXIT
 CHAIN IF ~~ THEN AC#PPEL4 malagent_dead
 ~That is heartening news! Though I am no friend to violence, at times it is better that a wrongdoer troubles another realm rather than this one.~
 == AC#PPEL4 ~You are most deserving of a reward for what you have done—for us, for Amn, and for all who might have fallen prey to that vile toxin. Here, I have gathered as much gold as I could for you.~
-DO ~GiveGoldForce(6500) AddXPObject(Player1,6200) AddXPObject(Player2,6200) AddXPObject(Player3,6200) AddXPObject(Player4,6200) AddXPObject(Player5,6200) AddXPObject(Player6,6200)~
+DO ~GiveGoldForce(6500) AddXPObject(Player1,6200) AddXPObject(Player2,6200) AddXPObject(Player3,6200) AddXPObject(Player4,6200) AddXPObject(Player5,6200) AddXPObject(Player6,6200) AddJournalEntry(@12009,QUEST_DONE)~
 == AC#PPEL4 ~You have rendered us a great service, and for that I thank you! Yet the matter may still be set to greater rights.~
 END
 IF ~~ THEN EXTERN AC#PPEL4 antidote_quest_01
@@ -483,7 +485,12 @@ CHAIN AC#PPEL4 cnt.01.03
 == DORNJ IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~Compassion is for the meek. Renewal is for the broken. Neither are for me.~
 == BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~If I wanted sermons, I would have stayed in Thay—at least there they come with necromancy and a sacrifice.~
 == AC#PPEL4 ~As for the third part, I shall bestow upon you the Blessing of Life myself.~
-DO ~StartCutSceneMode() ForceSpell(Myself,DO_NOTHING) SmallWait(2) CreateVisualEffectObject("AC#PPRAI",Player1) CreateVisualEffectObject("AC#PPRAI",Player2) CreateVisualEffectObject("AC#PPRAI",Player3) CreateVisualEffectObject("AC#PPRAI",Player4) CreateVisualEffectObject("AC#PPRAI",Player5) CreateVisualEffectObject("AC#PPRAI",Player6) Wait(2) SetGlobal("AC#PP_MythUnnohyr","GLOBAL",4) SmallWait(1) EndCutSceneMode()~ EXIT
+DO ~StartCutSceneMode() ForceSpell(Myself,DO_NOTHING) SmallWait(2) CreateVisualEffectObject("AC#PPRAI",Player1) CreateVisualEffectObject("AC#PPRAI",Player2) CreateVisualEffectObject("AC#PPRAI",Player3) CreateVisualEffectObject("AC#PPRAI",Player4) CreateVisualEffectObject("AC#PPRAI",Player5) CreateVisualEffectObject("AC#PPRAI",Player6) Wait(2) SetGlobal("AC#PP_MythUnnohyr","GLOBAL",4) SmallWait(1) EndCutSceneMode()
+AddJournalEntry(@12100,QUEST)
+AddJournalEntry(@12101,QUEST)
+AddJournalEntry(@12102,QUEST)
+AddJournalEntry(@12103,QUEST)
+~ EXIT
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",4) Global("AC#PP_BonusBlessing","GLOBAL",0)~ THEN AC#PPEL4 cnt.01.04
 ~Done. These blessings should rest upon you as well, so that should the flower resist even prayer, your own hands may yet bear the grace to pass them on.~
@@ -548,7 +555,8 @@ CHAIN SLILMAT AC#IL.BLESS
 ~Ah… yes. I had thought they would send one of their own, yet it matters not. You have come, and you shall not be denied my blessing.~  
 == SLILMAT ~Hear me, Ilmater, Crying God, Endurer of all torments. Look with pity upon those who suffer and grant them the strength to endure. Let their burdens be eased, if only for a moment, and let their pain be mine to bear. Weep for the wounded, shield the broken, and clothe us all in patience and mercy. In your compassion lies our only hope—so let that hope flow now into this flower, that it may carry solace where poison once was sown.~  
 == SLILMAT ~The blessing is given. Take it, my child, and let your heart weep for others, as my god has ever wept for you.~
-DO ~SetGlobal("AC#PP_IlmaterBlessing","GLOBAL",1) CreateVisualEffectObject("AC#PPARM",Player1) CreateVisualEffectObject("AC#PPARM",Player2) CreateVisualEffectObject("AC#PPARM",Player3) CreateVisualEffectObject("AC#PPARM",Player4) CreateVisualEffectObject("AC#PPARM",Player5) CreateVisualEffectObject("AC#PPARM",Player6)~ EXIT
+DO ~SetGlobal("AC#PP_IlmaterBlessing","GLOBAL",1) CreateVisualEffectObject("AC#PPARM",Player1) CreateVisualEffectObject("AC#PPARM",Player2) CreateVisualEffectObject("AC#PPARM",Player3) CreateVisualEffectObject("AC#PPARM",Player4) CreateVisualEffectObject("AC#PPARM",Player5) CreateVisualEffectObject("AC#PPARM",Player6)
+AddJournalEntry(@12104,QUEST_DONE)~ EXIT
 
 //LATHANDER
 
@@ -560,7 +568,8 @@ CHAIN DAWNMAS AC#DM.BLESS
 ~Yes, yes—I did receive the letter, and of course I shall grant you my blessing, that you may continue your quest with the Morninglord’s light at your side.~  
 == DAWNMAS ~Lathander, Bringer of the Dawn, Herald of Renewal, grant this <PRO_RACE> your blessing. Fill <PRO_HIMHER> with the warmth of the rising sun, that <PRO_HESHE> may carry its light even into the coldest shadows and darkest dens.~
 == DAWNMAS ~The blessing is bestowed. Go now with the Morninglord’s light upon you—may his dawn ever rise within your heart, and may each step you take carry the promise of renewal.~
-DO ~SetGlobal("AC#PP_LathanderBlessing","GLOBAL",1) CreateVisualEffectObject("SPHOLYMT",Player1) CreateVisualEffectObject("SPHOLYMT",Player2) CreateVisualEffectObject("SPHOLYMT",Player3) CreateVisualEffectObject("SPHOLYMT",Player4) CreateVisualEffectObject("SPHOLYMT",Player5) CreateVisualEffectObject("SPHOLYMT",Player6)~ EXIT
+DO ~SetGlobal("AC#PP_LathanderBlessing","GLOBAL",1) CreateVisualEffectObject("SPHOLYMT",Player1) CreateVisualEffectObject("SPHOLYMT",Player2) CreateVisualEffectObject("SPHOLYMT",Player3) CreateVisualEffectObject("SPHOLYMT",Player4) CreateVisualEffectObject("SPHOLYMT",Player5) CreateVisualEffectObject("SPHOLYMT",Player6)
+AddJournalEntry(@12105,QUEST_DONE)~ EXIT
 
 //BLESSING
 
@@ -617,7 +626,8 @@ CHAIN AC#PPEL4 cnt.03.02
 == AC#PPEL4 ~With this antidote, we shall answer whenever word reaches us of one stricken by a poison or ailment untouched by magic. Through it, lives will be spared, and suffering eased.~  
 == AC#PPEL4 ~For all you have done—for the people of Amn, and for Duskwood Dell—I offer my deepest thanks. And as I promised, I have something for you. May it aid you in the trials and journeys yet before you.~  
 == AC#PPEL4 ~And know this: Whenever you are in need of shelter or rest, Duskwood Dell shall welcome you with open arms, under the peace of Eldath’s embrace.~  
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",7) GiveItemCreate("AC#PPRE",Player1,1,0,0) AddXPObject(Player1,4200) AddXPObject(Player2,4200) AddXPObject(Player3,4200) AddXPObject(Player4,4200) AddXPObject(Player5,4200) AddXPObject(Player6,4200)~ EXIT
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",7) GiveItemCreate("AC#PPRE",Player1,1,0,0) AddXPObject(Player1,4200) AddXPObject(Player2,4200) AddXPObject(Player3,4200) AddXPObject(Player4,4200) AddXPObject(Player5,4200) AddXPObject(Player6,4200)
+AddJournalEntry(@12111,QUEST_DONE)~ EXIT
 
 
 //FINISHED

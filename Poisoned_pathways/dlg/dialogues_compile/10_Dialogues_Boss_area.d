@@ -60,4 +60,5 @@ CHAIN AC#PPTA2 hello_04
 ~Even if you succeed, several batches of the poison are already being distributed throughout Amn. And who’s to say some of those vials won’t find their way beyond the borders of the Lands of Intrigue?~
 ==AC#PPTA2 ~I managed to make this happen. I managed to merge light and pox! I tested my wonderful creation on pathetic little creatures! And with all that knowledge, I am going to turn Myth Unnohyr into my lady's toxic domain!~
 ==AC#PPTA2 ~You’ve stepped into the temple of decay—let’s see if you bloom like a blight or wither like a leaf!~
-DO ~SetGlobal("AC#PPFinalBossPrepare","GLOBAL",2)~ EXIT
+DO ~AddJournalEntry(@12007,QUEST)
+SetGlobal("AC#PPFinalBossPrepare","GLOBAL",2)~ EXIT

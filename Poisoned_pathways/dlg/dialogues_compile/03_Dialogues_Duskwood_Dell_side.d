@@ -17,7 +17,7 @@ IF~~THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hell
 	IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pass
 
 CHAIN AC#PPFAE who_are_you
-~^0xFFE3B0FF Lilafern: ^-We are the Dusklight Twins, keepers of night giggles and guardians of… well, nothing terribly important.~  
+~^0xFFE3B0FF Lilafern: ^-We are the Dell-Light Twins, keepers of night giggles and guardians of… well, nothing terribly important.~  
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Unless you count frogs. We guard frogs sometimes. They’re dreadful conversationalists, though.~  
 END
 IF~~THEN REPLY ~Guardians of frogs? Truly a sacred calling.~ EXTERN AC#PPFAE Dusklight_Frog
@@ -26,8 +26,8 @@ IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pa
 
 
 CHAIN AC#PPFAE what_are_you_really
-~^0xFFE3B0FF Lilafern: ^–We’re faeries, silly! Too small for your eyes, too quick for your hands.~  
-== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^–We’ve settled here for a while… until the wind tells us to move on again.~  
+~^0xFFE3B0FF Lilafern: ^-We’re faeries, silly! Too small for your eyes, too quick for your hands.~  
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-We’ve settled here for a while… until the wind tells us to move on again.~  
 END
 IF~~THEN EXTERN AC#PPFAE hub
 	
