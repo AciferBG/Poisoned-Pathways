@@ -25,6 +25,18 @@ THEN
 END
 
 IF
+    !InMyArea("AC#PPFAE")  // Dewlight Twins
+        OR(2)
+        TimeOfDay(DUSK)
+        TimeOfDay(NIGHT)
+    Global("FairyTwins","ACPP01",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPFAE",[810.952],S)  // Dewlight Twins
+        SetGlobal("FairyTwins","ACPP01",1)
+END
+
+IF
     GlobalGT("AC#PP_MythUnnohyr","GLOBAL",0)
     Global("DyingMan","ACPP01",0)
 THEN

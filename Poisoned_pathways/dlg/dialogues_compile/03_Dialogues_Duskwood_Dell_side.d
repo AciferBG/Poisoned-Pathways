@@ -3,19 +3,43 @@
 // the two faeries
 BEGIN AC#PPFAE
 
-CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPFAE hello
-~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A tall one!~   
-== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's a traveler, silly! You can always tell by the big eyes and the bigger feet.~  
-== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Welcome to Duskwood Dell, wanderer of ripples! We are the Dewlight Twins, keepers of the night giggles and guardians of… well, nothing terribly important.~  
-== AC#PPFAE ~Lilafern: Unless you count frogs. We guard frogs sometimes. They’re terrible conversationalists, though.~  
-== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^-Have you come to make a wish, or to chase the moonlight?~  
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPFAE hello_monster
+~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A tall monster!~
 END
-IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dewlight_Pass  
-IF~~THEN REPLY ~Guardians of frogs? Truly a sacred calling.~ EXTERN AC#PPFAE Dewlight_Frog  
-IF~~THEN REPLY ~A wish, perhaps… can you really grant one?~ EXTERN AC#PPFAE Dewlight_Wish  
-IF~~THEN REPLY ~Stop sparkling near my face, please.~ EXTERN AC#PPFAE Dewlight_Grumpy
+IF~~THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hello_monster_cont
 
-	CHAIN AC#PPFAE Dewlight_Grumpy
+	CHAIN AC#PPFAE hello_monster_cont  
+	~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's a traveler, silly! You can always tell by the big ears and the bigger feet.~  
+	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Welcome to Duskwood Dell, wanderer of ripples!~
+	END
+	IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPFAE who_are_you 
+	IF~~THEN REPLY ~Who's speaking there?~ EXTERN AC#PPFAE who_are_you 
+	IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pass
+
+CHAIN AC#PPFAE who_are_you
+~^0xFFE3B0FF Lilafern: ^-We are the Dusklight Twins, keepers of night giggles and guardians of… well, nothing terribly important.~  
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Unless you count frogs. We guard frogs sometimes. They’re dreadful conversationalists, though.~  
+END
+IF~~THEN REPLY ~Guardians of frogs? Truly a sacred calling.~ EXTERN AC#PPFAE Dusklight_Frog
+IF~~THEN REPLY ~Yes, but what are you? Two glowing dots?~ EXTERN AC#PPFAE what_are_you_really
+IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pass
+
+
+CHAIN AC#PPFAE what_are_you_really
+~^0xFFE3B0FF Lilafern: ^–We’re faeries, silly! Too small for your eyes, too quick for your hands.~  
+== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^–We’ve settled here for a while… until the wind tells us to move on again.~  
+END
+IF~~THEN EXTERN AC#PPFAE hub
+	
+  
+CHAIN AC#PPFAE hub
+~^0xFF9ADCE3 Tippledew: ^-Anyway. Have you come to make a wish, or to chase the moonlight?~ 
+END
+IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pass    
+IF~~THEN REPLY ~A wish, perhaps… can you really grant one?~ EXTERN AC#PPFAE Dusklight_Wish  
+IF~~THEN REPLY ~Stop sparkling near my face, please.~ EXTERN AC#PPFAE Dusklight_Grumpy
+
+	CHAIN AC#PPFAE Dusklight_Grumpy
 	~^0xE3B0FFTippledew: ^-Near your face? But your face is so *unsparkly*!~
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-It needs help! Urgent sparkle intervention!~  
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Come, Tippledew — initiate sparkle retreat protocol!~  
@@ -23,32 +47,31 @@ IF~~THEN REPLY ~Stop sparkling near my face, please.~ EXTERN AC#PPFAE Dewlight_G
 	DO ~ReallyForceSpell(Myself,DO_NOTHING)
 	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
 
-	CHAIN AC#PPFAE Dewlight_Wish
-	~A wish?! Did you hear that, Lilafern? A *wish*!~
-	== AC#PPFAE ~Quick, where did we put the paperwork? The forms? The regulations on improbable miracles?!~
-	== AC#PPFAE ~Shh! We’re off duty tonight. Last wish we granted turned a toad into... a slimy toad.~
-	== AC#PPFAE ~Very confusing for everyone involved.~  
-	== AC#PPFAE ~But! If you wish for laughter or moonlight, we can manage those. They’re in surplus.~  
-	== AC#PPFAE ~Anything bigger, and you’ll have to speak with Management. That’s Eldath, obviously. She’s terrible with scheduling, though.~  
+	CHAIN AC#PPFAE Dusklight_Wish
+	~^0xFF9ADCE3Tippledew: ^-A wish?! Did you hear that, Lilafern? A *wish*!~
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Quick, where did we put the paperwork? The forms? The regulations on improbable miracles?!~
+	== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^-Shh! We’re off duty tonight. Last wish we granted turned a toad into... a slimy toad.~
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Very confusing for everyone involved.~  
+	== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^-But! If you wish for laughter or moonlight, we can manage those. They’re in surplus.~  
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Anything bigger, and you’ll have to speak with our superior. That’s Eldath, obviously. She’s terrible with scheduling, though.~  
 	DO ~ReallyForceSpell(Myself,DO_NOTHING)
 	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
 	
-	CHAIN AC#PPFAE Dewlight_Frog
-	~Oh yes! Very sacred! Very slimy!~  
-	== AC#PPFAE ~We protect them from… well, mostly from needing to kiss the wrong people.~
-	== AC#PPFAE ~One tried it once. He wrote poetry. Terrible poetry. Lots of croaking rhymes.~
-	== AC#PPFAE ~Now we just keep an eye on them. Someone has to make sure they don’t start a revolution.~
-	== AC#PPFAE ~You’d be surprised how militant a frog can get once it learns to count to three.~  
-	== AC#PPFAE ~Anyway, sacred work. No pay, but excellent splashing privileges.~  
+	CHAIN AC#PPFAE Dusklight_Frog
+	~^0xFFE3B0FF Lilafern: ^-Oh yes! Very sacred! Very slimy!~  
+	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-We protect them from… well, mostly from needing to kiss the wrong people.~
+	== AC#PPFAE ~One traveler tried it once. He wrote poetry. Terrible poetry. Lots of croaking rhymes.~
+	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Now we just keep an eye on them. Someone has to make sure they don’t start a frogolution.~ 
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Anyway, sacred work. No pay, but excellent splashing privileges.~  
 	DO ~ReallyForceSpell(Myself,DO_NOTHING)
 	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
 
-	CHAIN AC#PPFAE Dewlight_Pass
-	~Passing through? Through what? Through *our night*? Through *our perfectly arranged starlight*?~  
-	== AC#PPFAE ~We spent *hours* polishing those reflections on the pond!~  
-	== AC#PPFAE ~But fine, pass. Tread softly, tall one — the grass remembers footsteps.~  
-	== AC#PPFAE ~And if you find a dream on the way out, tell it we miss it terribly.~  
-	== AC#PPFAE ~Come back when you’re not in such a hurry. We like conversations that wander in circles.~  
+	CHAIN AC#PPFAE Dusklight_Pass
+	~^0xFFE3B0FF Lilafern: ^-Passing through? Through what? Through *our night*? Through *our perfectly arranged starlight*?~  
+	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-We spent *hours* polishing those reflections on the pond!~  
+	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-But fine, pass. Tread softly, tall one — the grass remembers footsteps.~  
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-And if you find a dream on the way out, tell it we miss it terribly.~  
+	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Come back when you’re not in such a hurry. We like conversations that wander in circles.~  
 	DO ~ReallyForceSpell(Myself,DO_NOTHING)
 	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
 

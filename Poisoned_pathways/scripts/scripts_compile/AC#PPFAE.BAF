@@ -1,6 +1,16 @@
 IF
+    OR(2)
+        TimeOfDay(MORNING)
+        TimeOfDay(DAY)
+THEN
+    RESPONSE #100
+        SetGlobal("FairyTwins","ACPP01",0)
+        DestroySelf()
+END
+
+IF
     ActionListEmpty()
-    NumTimesTalkedToGT(0)
+    GlobalGT("AC#PP_TalkedToFaeries","GLOBAL",0)
 THEN
     RESPONSE #100
         MoveToPoint([705.411])
@@ -13,24 +23,24 @@ THEN
         Wait(10)
     RESPONSE #100
         MoveToPoint([553.611])
-        VerbalConstant(Myself,SELECT_COMMON2)
+        VerbalConstant(Myself,INITIAL_MEETING)
         Wait(10)
     RESPONSE #100
         MoveToPoint([542.576])
         Wait(2)
-        ActionOverride("AC#PPMAN",DisplayStringHead(Myself,@2100))  // If you must sparkle, do it over there!
+        ActionOverride("AC#PPMAN",DisplayStringHead(Myself,111409))  // If you must sparkle, do it over there!
         SmallWait(15)
-        DisplayStringHead(Myself,@2101)  // But over there is boring!
+        DisplayStringHead(Myself,111410)  // But over there is boring!
         Wait(2)
     RESPONSE #100
         MoveToPoint([542.576])
         Wait(2)
-        ActionOverride("AC#PPMAN",DisplayStringHead(Myself,@2102))  // Stop tugging my robe!
+        ActionOverride("AC#PPMAN",DisplayStringHead(Myself,111411))  // Stop tugging my robe!
         SmallWait(15)
-        DisplayStringHead(Myself,@2103)  // Fine, fine! We’ll tug your hair instead. Happy now?
+        DisplayStringHead(Myself,111412)  // Fine, fine! We’ll tug your hair instead. Happy now?
         Wait(2)
     RESPONSE #100
-        DisplayStringHead(Myself,@2104)  // Don’t trust fireflies. They’re just show-offs with no style.
+        DisplayStringHead(Myself,111413)  // Don’t trust fireflies. They’re just show-offs with no style.
         MoveToPoint([695.1170])
     RESPONSE #100
         MoveToPoint([495.838])
