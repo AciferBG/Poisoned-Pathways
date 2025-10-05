@@ -77,6 +77,29 @@ APPEND ~ENTRIES.2DA~
 ~ACPP73		1965.1990   1236.1311           *          *         *         *         *         *        *~
 UNLESS ~ACPP73~
 
+APPEND ~splprot.2da~ ~AC#FOREST_AREA%TAB%0x106%TAB%0x0010%TAB%8~ UNLESS ~AC#FOREST_AREA~
+/*
+  COPY_EXISTING ~splprot.2da~ ~override~
+    COUNT_2DA_COLS cols
+    READ_2DA_ENTRIES_NOW rows cols
+    FOR (i = 1; i < rows; ++i) BEGIN
+      READ_2DA_ENTRY_FORMER rows i 0 ~id~
+      PATCH_IF (~id~ STRING_EQUAL_CASE ~AC#FOREST_AREA~) BEGIN
+        SET forest_row = i
+      END
+    END
+  BUT_ONLY
+*/
+COPY_EXISTING ~splprot.2da~ ~override~
+   COUNT_2DA_COLS cols // amount of columns
+   READ_2DA_ENTRIES_NOW rows cols // read all file into memory  
+   FOR (row = 1; row < rows; ++row) BEGIN // iterate over rows
+      READ_2DA_ENTRY_FORMER rows row 0 ~stat~ // read column value
+      PATCH_IF ~%stat%~ STRING_EQUAL_CASE ~AC#FOREST_AREA~ BEGIN
+         SET forest_row = %row%
+      END
+   END
+BUT_ONLY
 
 ///////////////////////////////////////////////////////////////////////
 // ARE files
@@ -347,6 +370,15 @@ COPY ~Poisoned_pathways/vvc/copy~         ~override~
 ///////////////////////////////////////////////////////////////////////
 
 COPY ~Poisoned_pathways/spl/copy~         ~override~
+
+// copy spell and make forest area work:
+COPY ~Poisoned_pathways/spl/AC#PPRF.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR
+    match_opcode = 326
+    parameter2 = %forest_row%
+  END
+
+
 
 COPY ~Poisoned_pathways/spl/AC#PP43.spl~          ~override~
 SAY NAME1 @912
