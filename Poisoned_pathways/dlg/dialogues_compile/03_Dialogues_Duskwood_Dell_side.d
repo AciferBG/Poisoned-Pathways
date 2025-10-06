@@ -962,7 +962,7 @@ BEGIN ~AC#PPWOC~
 
 // Erstes Treffen
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWOC FirstMeet
-~Greetings. I am Carven, the woodworker of Duskwood Dell—though, truth be told, I am a druid first. The grove guides my hands; I only follow its grain.~
+~Greetings. I am the woodworker of Duskwood Dell—though, truth be told, I am a druid first. The grove guides my hands; I only follow its grain.~
 == AC#PPWOC ~From fallen boughs I carve small beasts and cheerful trinkets, and from time to time I gather druidic wooden gear that finds its way to me. I even craft armor from Duskwood itself—light, sturdy, and touched by the forest’s calm. Would you like to see my wares?~
 END
 ++ ~Show me what you’ve got.~ DO ~StartStore("AC#PPWOC",LastTalkedToBy())~ EXIT
@@ -1392,6 +1392,66 @@ EXIT
 BEGIN AC#PPMON
 
 CHAIN IF ~GlobalLT("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 01.00
+~Eldath watch over you, my friend. It is a blessing to meet another soul who walks in peace.~
+END
+IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL",0) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
+IF~Global("AC#PPSymbolQuest","GLOBAL",2) Global("AC#PP_AlaAgreesSymbol","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I have spoken with Alatoasz. He agrees—you are worthy to bear Merethan’s emblem.~ EXTERN AC#PPMON 01.04
+IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem calm and content. Have you lived here long, priestess?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
+IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
+IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye
+IF~~THEN REPLY ~May peace flow with you, sister. Farewell.~ EXTERN AC#PPMON bye  
+
+CHAIN AC#PPMON 01.01
+~Oh yes, I have been here for many years, surrounded by gentle souls and the endless murmur of the waters.~
+==AC#PPMON ~I once spent my days carving the emblem of our Lady into wood and stone... but my hands no longer obey me as they once did.~
+==AC#PPMON ~Oh, how I wish I could carve one of the beautiful symbols of Eldath myself again, just as I once did! Still, I do not mourn what time has taken.~
+==AC#PPMON ~Now I teach the younger ones to carve instead. Their hands are my hands, and through them, the Lady’s symbols continue to bloom. I also taught Merethan how to carve his emblem. It is a pity he could not bring more peace into the world before the Goddess called him home.~
+==AC#PPMON ~Well then, tell me—have you come seeking something, or simply resting your spirit for a while?~
+END
+IF~Global("AC#PPSymbolQuest","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
+IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
+IF~~THEN REPLY ~No. I need to go, I'm done listening to your babbling.~ EXTERN AC#PPMON bye
+IF~~THEN REPLY ~No, I only wished you a peaceful day, my friend.~ EXTERN AC#PPMON bye
+
+CHAIN AC#PPMON 01.02
+~Yes... this place is peace made visible. After all this noise and haste, it is a gift to listen to silence.~
+==AC#PPMON ~The river never hurries, and yet it reaches the sea. There is wisdom in that, I think.~
+END
+IF~Global("AC#PPSymbolQuest","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
+IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~Your words are peaceful, yet they carry a hint of reflection. Do you miss your old duties?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
+IF~~THEN REPLY ~Right. Whatever. I need to go.~ EXTERN AC#PPMON bye
+IF~~THEN REPLY ~Thank you for sharing that peace with me.~ EXTERN AC#PPMON bye  
+
+CHAIN AC#PPMON 01.03
+~You would offer me Merethan's emblem? That is a great honor... but I cannot accept it lightly. Such a decision must come from the High Fallskeeper himself.~
+END
+IF~~THEN REPLY ~Shall I speak to the High Fallskeeper on your behalf?~ EXTERN AC#PPMON talk_high_fallskeeper
+IF~Global("AC#PP_AlaAgreesSymbol","GLOBAL",1)~THEN REPLY ~I have already spoken with him. He wishes for you to carry it.~ EXTERN AC#PPMON 01.04
+IF~~THEN REPLY ~It was only an idea. I have other matters to attend to.~ EXTERN AC#PPMON bye
+
+CHAIN AC#PPMON talk_high_fallskeeper
+~That would be a kindness beyond measure. Still, know that even if he refuses, I will not feel less blessed. The Lady teaches that peace lies in acceptance.~
+DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",2)~ EXIT
+
+CHAIN AC#PPMON 01.04  
+~The High Fallskeeper grants me the honor of carrying Merethan’s emblem? Then peace truly circles back upon itself. Such kindness ripples farther than any river.~
+==AC#PPMON ~I have nothing but gratitude to offer, yet know that I shall carry your name in prayer to the Lady of Still Waters.~  
+DO ~TakePartyItem("AC#PPSYM") AddExperienceParty(400) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) ReputationInc(1)~ EXIT  
+
+CHAIN IF ~Global("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 02.00  
+~Thanks to you, I walk in peace once more—slowly, yes, but each step is a prayer.~
+EXIT  
+
+CHAIN AC#PPMON bye
+~Farewell, then. My hands may tremble, but my heart is steady. May yours be likewise, wherever your path flows.~
+EXIT
+
+
+//OLD:
+/*
+BEGIN AC#PPMON
+
+CHAIN IF ~GlobalLT("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 01.00
 ~Eldath watch over you, my friend... though my soul drifts heavy, like water burdened by storm.~
 END
 IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL",0) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
@@ -1446,6 +1506,7 @@ EXIT
 CHAIN AC#PPMON bye
 ~Farewell, then. May calm guide your hand. Mine tremble too much these days—but you are young. Use your strength to plant seeds of peace, wherever you walk.~
 EXIT
+*/
 
 
 ////////////////////////////////////////////////////////

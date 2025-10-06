@@ -138,25 +138,14 @@ END
 IF~~THEN EXTERN AC#PPEL4 poison_investigate_06
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_06
-~The plant used to create this poison grows only near the ruins of ancient elven cities, where the land still remembers the old magic and the soft melodies sung by those who no longer walk this world.~
+~The plant used to create this poison grows near the ruins of ancient elven cities, where the land still remembers its old magic. That must be where the poison is being produced. We need to focus on one of the old elven ruins scattered throughout these lands. But there are many. Finding the right one will be our first task.~
 END
-IF~~THEN REPLY ~So what’s next?~ EXTERN AC#PPEL4 poison_investigate_further
-IF~~THEN REPLY ~How many possible ancient elven ruins are we talking about?~ EXTERN AC#PPEL4 poison_investigate_further
-IF~~THEN REPLY ~Elven cities, old magic, mysterious poison plants—this keeps getting better and better.~ EXTERN AC#PPEL4 poison_investigate_further
-IF~~THEN REPLY ~Your knowledge is impressive.~ EXTERN AC#PPEL4 poison_investigate_further
-
-CHAIN IF ~~ THEN AC#PPEL4 poison_investigate_further
-~Surely the plant we are looking for grows in an old elven ruin. That must be where the poison was produced. In addition, we should consider who is behind all this. Every clue could be important!~
-END
-IF~~THEN REPLY ~So let's start looking for the right ruins.~ EXTERN AC#PPEL4 start_looking_ruins
-
-	CHAIN IF ~~ THEN AC#PPEL4 start_looking_ruins
-	~We need to focus on one of the old elven ruins scattered throughout these lands. But there are many. Finding the right one will be our first task.~
-	END
-	IF~~THEN EXTERN AC#PPEL4 about_keltormir
+IF~~THEN REPLY ~How many possible ancient elven ruins are we talking about?~ EXTERN AC#PPEL4 about_keltormir
+IF~~THEN REPLY ~Elven cities, old magic, mysterious poison plants—this keeps getting better and better.~ EXTERN AC#PPEL4 about_keltormir
+IF~~THEN REPLY ~Your knowledge is impressive.~ EXTERN AC#PPEL4 about_keltormir
 
 CHAIN IF ~~ THEN AC#PPEL4 about_keltormir
-~This region, as you may know, was once blanketed by a vast and unbroken forest—the ancient heart of the elven kingdom of Keltormir.~
+~This region, as you may know, was once blanketed by a vast and unbroken forest—the ancient heart of the elven kingdom of Keltormir. The elves built many splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Keltormir? Sure, Candlekeep had stuff on it. All leaves and legends. Elves love their trees, don’t they?~
 END
 IF~Race(Player1,ELF)~THEN REPLY ~The tale of Keltormir is well known among my people. It is our lost heritage... but all that remains are memories.~ EXTERN AC#PPEL4 about_keltormir_02
@@ -165,11 +154,9 @@ IF~~THEN REPLY ~And where should I begin the search?~ EXTERN AC#PPEL4 about_kelt
 IF~~THEN REPLY ~Time to uncover what’s left of Keltormir.~ EXTERN AC#PPEL4 about_keltormir_02
 
 CHAIN IF ~~ THEN AC#PPEL4 about_keltormir_02
-~The elves built many splendid cities within those woods, and though their time has passed, ruins remain... and so do rare plants. Plants that may lead us to the right place.~
+~Unfortunately, I am no scholar of ancient history. My expertise lies in nature. But fortunately, I know someone who is.~
 =
-~However, I am no scholar of ancient history. My expertise lies in nature. But... fortunately, I know someone who is.~
-=
-~I ask you to visit the Temple of Oghma in Athkatla. They keep many tomes, including some that speak of the old elven cities. If I can get even a general clue, I may be able to narrow our search considerably.~
+~I ask you to visit the Temple of Oghma in Athkatla. They keep many ancient tomes there, including some that speak of the old elven cities. If I can obtain even a single clue, I may be able to narrow our search considerably.~
 END
 IF~~THEN REPLY ~Back to Athkatla, then.~ EXTERN AC#PPEL4 to_oghma
 IF~~THEN REPLY ~I just arrived here from Athkatla, and you're already sending me back?~ EXTERN AC#PPEL4 to_oghma
@@ -253,6 +240,7 @@ IF~~THEN REPLY ~Myth Rhynn.~ EXTERN AC#PPEL4 wrong_myth_rhynn
 IF~~THEN REPLY ~Myth Unnohyr.~ EXTERN AC#PPEL4 right_myth_unnohyr
 IF~~THEN REPLY ~Myth Tellaren.~ EXTERN AC#PPEL4 wrong_myth_tellaren
 IF~~THEN REPLY ~I’m not sure.~ EXTERN AC#PPEL4 right_myth_unnohyr
+IF~~THEN REPLY ~I’ve only examined the book’s cover.~ EXTERN AC#PPEL4 right_myth_unnohyr
 
 CHAIN IF ~~ THEN AC#PPEL4 wrong_myth_rhynn
 ~Myth Rhynn—the elven necropolis? An intriguing thought, but no... I don’t believe that’s where we’ll find our answer.~
@@ -266,55 +254,54 @@ END
 IF~~THEN REPLY ~Myth Rhynn?~ EXTERN AC#PPEL4 wrong_myth_rhynn
 IF~~THEN REPLY ~Then Myth Unnohyr must be the one.~ EXTERN AC#PPEL4 right_myth_unnohyr
 
+
 CHAIN IF ~~ THEN AC#PPEL4 right_myth_unnohyr
-~Myth Unnohyr! That must be the place. Listen to this passage: 'When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.'~
-=
-~That explains why our healing spells fail, and why this poison defies all curing—it carries the essence of Myth Unnohyr’s broken mythal, steeped in dead magic!~
+~It's Myth Unnohyr! That must be the place. Listen to this passage: 'When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.'~
+= ~That explains why our attempts at healing fail—it carries the essence of Myth Unnohyr’s broken mythal!~
 END
-IF~~THEN REPLY ~If you say so.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
-IF~~THEN REPLY ~If that’s where the plant grows, that’s where we go.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
-IF~~THEN REPLY ~Not exactly a pleasant destination.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
-IF~~THEN REPLY ~You mean the plant feeds on dead magic? Wicked.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03  
+IF ~~ THEN REPLY ~If you say so.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+IF ~~ THEN REPLY ~If that’s where the plant grows, that’s where we’ll go.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+IF ~~ THEN REPLY ~Not exactly a pleasant destination.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
+IF ~~ THEN REPLY ~You mean the plant feeds on dead magic? Wicked.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03  
 
 CHAIN AC#PPEL4 hello_03x
 ~I'll wait here, then.~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
-~Myth Unnohyr seems to have been an important stronghold, of great significance to those that weaved Mythals. But one day, a mysterious catastrophe caused the Mythal that protected the city to implode, leaving behind nothing but a magical abomination. It's a wild magic zone by day, and a dead magic zone by night.~
-== NeeraJ  IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic?! Gods, yes! Or no. Or maybe! I love it when even reality can’t make up its mind.~
-==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN ~Elven ruins or not, this Mythal was never meant for mortal hands. And now it bleeds its vengeance into the land.~
-== HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~Creepy ruins, cursed mythals, shattered relics—these elves had a real sense of drama.~
-==HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~When gods fall silent, the poison sings.~
-== AC#PPEL4 ~By day it’s chaos, by night magic vanishes. Maybe innate gifts or items still work—but I wouldn’t count on it.~
+~Myth Unnohyr seems to have once been a glorious, mythal-shrouded elven city. But one day, a mysterious catastrophe caused that mythal to implode, leaving behind a vast magical abomination: a wild magic zone by day and a dead magic zone by night.~
+== NEERAJ IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic?! Gods, yes! Or no. Or maybe! I love it when even reality can’t make up its mind.~
+== VALYGARJ IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Elven ruins or not, this mythal was never meant for mortal hands. And now it bleeds its vengeance into the land.~
+== HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~Creepy ruins, cursed mythals, shattered relics—these elves had a real flair for drama.~
+== HEXXATJ IF ~InParty("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN ~When gods fall silent, the poison sings.~
+== AC#PPEL4 ~Since that time, magic there has been unstable—at least the kind that relies on spellcraft. Whether innate gifts or enchanted items still function, I cannot say.~
 END
-IF~~THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_areab
-IF~~THEN REPLY ~So we’ll have to rely on steel and wits.~ EXTERN AC#PPEL4 dead_magic_areab
-IF~~THEN REPLY ~I assume I fight your battles for you while you stay clean and speak of still waters?~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
-//IF~~THEN REPLY ~Let me guess—I get to face the poisoned arrows and monsters and traps, and you get to write a prayer about it.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
-IF~~THEN REPLY ~Easy to preach peace from the safety of a grove, while I wade through blood in your name.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
-IF~~THEN REPLY ~Magic or no magic, death still listens when I speak.~ EXTERN AC#PPEL4 dead_magic_areab
+IF ~~ THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_areab
+IF ~~ THEN REPLY ~So we’ll have to rely on steel and wits.~ EXTERN AC#PPEL4 dead_magic_areab
+IF ~~ THEN REPLY ~I suppose I fight the battles while you stay clean and speak of stillness?~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
+IF ~~ THEN REPLY ~Easy to preach peace from the safety of a grove, while I wade through blood in your name.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_conflict_01
+IF ~~ THEN REPLY ~Magic or no magic, death still listens when I speak.~ EXTERN AC#PPEL4 dead_magic_areab
 
-
-	CHAIN AC#PPEL4 poison_myth_unnhoyr_conflict_01
-	~If I could take your burden, I would. But I am no warrior—only a voice that tries to guide the blade toward mercy. Do not mistake stillness for blindness. I know what I ask of you—and I do not ask it lightly. But: Even the dirtiest task can plant a seed. Let us hope something better grows from it.~
-	END
-	IF~~THEN EXTERN AC#PPEL4 dead_magic_areab
+CHAIN AC#PPEL4 poison_myth_unnhoyr_conflict_01
+~I am no warrior—only a voice that tries to guide the blade toward mercy. Do not mistake stillness for blindness. I know what I ask of you, and I do not ask it lightly. But even the dirtiest task can plant a seed. Let us hope something better grows from it.~
+END
+IF ~~ THEN EXTERN AC#PPEL4 dead_magic_areab
 
 CHAIN AC#PPEL4 dead_magic_areab
-~The plants that produce the poison must grow there—twisted by the wild magic and infused with the remnants of that dead magic itself. Our healing spells fail because the poison carries that same dead magic into the body of the victim.~
+~The poisonous plant must grow there—twisted by wild magic and infused with death magic. Its venom carries that same warped magic into the body of its victims.~
 END
-IF~~THEN REPLY ~That’s an interesting theory.~ EXTERN AC#PPEL4 dead_magic_area_02
-IF~~THEN REPLY ~Alright. To cure the victims, we’d have to unravel the magic itself. Or what's left of it...~ EXTERN AC#PPEL4 dead_magic_area_02
-IF~~THEN REPLY ~Then we’ve solved the riddle!~ EXTERN AC#PPEL4 dead_magic_area_02
+IF ~~ THEN REPLY ~That’s an interesting theory.~ EXTERN AC#PPEL4 dead_magic_area_02
+IF ~~ THEN REPLY ~Alright. To cure the victims, we’d have to cure magic itself—or what’s left of it.~ EXTERN AC#PPEL4 dead_magic_area_02
+IF ~~ THEN REPLY ~Then we’ve half-solved the problem already.~ EXTERN AC#PPEL4 dead_magic_area_02
 
 CHAIN IF ~~ THEN AC#PPEL4 dead_magic_area_02
 ~The only remaining question is who is crafting the poison. Did you catch a glimpse of Merethan’s killer?~
 END
-IF~~THEN REPLY ~Not really. He said something like Mal... Malar...~ EXTERN AC#PPEL4 malagent_what
-IF~~THEN REPLY ~Couldn't you have asked me that earlier? Now I've forgotten it again.~ EXTERN AC#PPEL4 malagent_forgotten
-IF~~THEN REPLY ~Strange fellow with a strange name. Something like Mala-something.~ EXTERN AC#PPEL4 malagent_what
-IF~~THEN REPLY ~He called himself Malagent.~ EXTERN AC#PPEL4 malagent
+IF ~~ THEN REPLY ~Not really. He said something like Mal... Malar...~ EXTERN AC#PPEL4 malagent_what
+IF ~~ THEN REPLY ~Couldn't you have asked me that earlier? Now I’ve forgotten it again.~ EXTERN AC#PPEL4 malagent_forgotten
+IF ~~ THEN REPLY ~Strange fellow with a strange name. Something like Mala-something.~ EXTERN AC#PPEL4 malagent_what
+IF ~~ THEN REPLY ~He called himself Malagent.~ EXTERN AC#PPEL4 malagent
+
 
 	CHAIN IF ~~ THEN AC#PPEL4 malagent_forgotten
 	~Think back. Did he give you any name that might help us?~
@@ -396,6 +383,22 @@ END
 IF~Dead("AC#PPTA2")~THEN REPLY ~The Malagent is dead.~ EXTERN AC#PPEL4 malagent_dead
 IF~~THEN REPLY ~I have nothing to report yet.~ EXTERN AC#PPEL4 no_news
 IF ~~ THEN REPLY ~One thing keeps bugging me: Are there any creatures I'm actually allowed to fight in your name?~ GOTO allowed_to_fight
+IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem_03
+
+CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem_03
+~Such emblems are usually passed from one priest to another. Yet at this moment, I know no one to whom it should be given. Hold onto it for now—perhaps we shall find a fitting bearer.~
+END
+IF~Global("AC#PPSymbolQuest","GLOBAL",2)~THEN REPLY ~I believe I know someone—Montrassa, the elder priestess, whose hands can no longer craft her own.~ EXTERN AC#PPEL4 emblem_montrassa_03
+IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 no_news
+
+CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_03
+~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
+END
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_03
+
+CHAIN AC#PPEL4 emblem_montrassa_bye_03
+~Do so. She will surely be uplifted by your kindness.~
+EXIT
 
 	CHAIN IF ~~ THEN AC#PPEL4 allowed_to_fight
 	~We do not seek battle—but there are things that no longer belong in this world.~
@@ -454,6 +457,22 @@ END
 IF~PartyHasItem("AC#PPPUB")~THEN REPLY ~Yes, I have it with me.~ EXTERN AC#PPEL4 cnt.01.01
 IF~!PartyHasItem("AC#PPPUB")~THEN REPLY ~No, not yet.~ EXTERN AC#PPEL4 cnt.01.02
 IF~~THEN REPLY ~Give me a moment. I’ll be back shortly.~ EXIT
+IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem_04
+
+CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem_04
+~Such emblems are usually passed from one priest to another. Yet at this moment, I know no one to whom it should be given. Hold onto it for now—perhaps we shall find a fitting bearer.~
+END
+IF~Global("AC#PPSymbolQuest","GLOBAL",2)~THEN REPLY ~I believe I know someone—Montrassa, the elder priestess, whose hands can no longer craft her own.~ EXTERN AC#PPEL4 emblem_montrassa_04
+IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 no_news
+
+CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_04
+~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
+END
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_04
+
+CHAIN AC#PPEL4 emblem_montrassa_bye_04
+~Do so. She will surely be uplifted by your kindness.~
+EXIT
 
 CHAIN AC#PPEL4 cnt.01.02
 ~You don’t have it? That is most unfortunate.~
@@ -615,6 +634,22 @@ IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Here—freshly wrought, and hard-won.~
 IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~It is done, and no small thanks to your guidance. Here is the remedy.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~This little vial cost me blood, sweat, and more than a few corpses. Take it, before I change my mind.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~~ THEN REPLY ~Not yet.~ EXTERN AC#PPEL4 cnt.03.01
+IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem_05
+
+CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem_05
+~Such emblems are usually passed from one priest to another. Yet at this moment, I know no one to whom it should be given. Hold onto it for now—perhaps we shall find a fitting bearer.~
+END
+IF~Global("AC#PPSymbolQuest","GLOBAL",2)~THEN REPLY ~I believe I know someone—Montrassa, the elder priestess, whose hands can no longer craft her own.~ EXTERN AC#PPEL4 emblem_montrassa_05
+IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 no_news
+
+CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_05
+~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
+END
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_05
+
+CHAIN AC#PPEL4 emblem_montrassa_bye_05
+~Do so. She will surely be uplifted by your kindness.~
+EXIT
 
 CHAIN AC#PPEL4 cnt.03.01
 ~I understand. Return to me as soon as it is complete. This is of great import, and we are close now.~
@@ -635,7 +670,29 @@ AddJournalEntry(@12111,QUEST_DONE)~ EXIT
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",7)~ THEN AC#PPEL4 cnt.04.00
 ~It gladdens me to see you again, <CHARNAME>. As I have said before, Duskwood Dell shall ever welcome you in peace.~  
 END
-IF~~THEN EXIT
+IF~~THEN REPLY ~Thank you, I appreciate that.~ EXTERN AC#PPEL4 bye_finished
+IF~~THEN REPLY ~I must be going.~ EXTERN AC#PPEL4 bye_finished
+IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem_06
+
+CHAIN IF ~~ THEN AC#PPEL4 Merethan_emblem_06
+~Such emblems are usually passed from one priest to another. Yet at this moment, I know no one to whom it should be given. Hold onto it for now—perhaps we shall find a fitting bearer.~
+END
+IF~Global("AC#PPSymbolQuest","GLOBAL",2)~THEN REPLY ~I believe I know someone—Montrassa, the elder priestess, whose hands can no longer craft her own.~ EXTERN AC#PPEL4 emblem_montrassa_06
+IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 bye_finished
+
+CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_06
+~Montrassa? She never spoke of such hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
+END
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_06
+
+CHAIN AC#PPEL4 emblem_montrassa_bye_06
+~Do so. She will surely be uplifted by your kindness.~
+EXIT
+
+CHAIN AC#PPEL4 bye_finished
+~May the blessing of Eldath be with you.~
+EXIT
+
 /*
 IF~~THEN REPLY ~Thank you.~ EXIT
 IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PPSymbolAskNow","GLOBAL",0)~THEN REPLY ~One of your sisters has been trying to make this Eldath emblem, but she cannot succeed. She is suffering from serious numbness in her hands. Perhaps you have some emblem, or a symbol I could give her. I think she deserves it.~ DO ~SetGlobal("AC#PPSymbolAskNow","GLOBAL",1)~ EXTERN AC#PPEL4 cnt.04.01
