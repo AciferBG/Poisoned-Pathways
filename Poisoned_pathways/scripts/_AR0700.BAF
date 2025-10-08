@@ -6,6 +6,15 @@ AddStoreItem("ac#pptme","AC#PPBOW",1,1)
 AddStoreItem("ac#pptme","AC#PPFLL",1,1)
 AddStoreItem("ac#pptme","AC#PPHME",1,1)
 AddStoreItem("ac#pptme","AC#PPMRN",1,1)
-CreateCreature("ac#pptme",[700.2400],13)
+//CreateCreature("ac#pptme",[700.2400],13)
+CreateCreature("ac#pptme",[1732.2144],13)
 SetGlobal("AC#PPMerSugAth","GLOBAL",2)
+END
+
+IF
+Global("AC#PP_RakshasaQuest","GLOBAL",0)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPZAR",[255.2195],13)
+SetGlobal("AC#PP_RakshasaQuest","GLOBAL",1)
 END

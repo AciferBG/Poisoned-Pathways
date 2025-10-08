@@ -60,6 +60,7 @@
 @67 = ~Carven~
 @68 = ~Mannatarv~
 @69 = ~Dell-Light Twins~
+@70 = ~Zar’khaan~
 
 
 // cre soundfiles
@@ -135,6 +136,7 @@
 @952 = ~The Leaves' Embrace~
 @953 = ~Debbie's Undoubtful Weapons & Goods~
 @954 = ~Woodcarver~
+@955 = ~Zar’khaan's wonders~
 
 // itm files
 @1000 = ~Poisoned Arrow~
@@ -315,9 +317,9 @@ STATISTICS:
 
 Weight: 1~
 @1047 = ~Cloak~
-@1048 = ~Cloak of Calm~
-@1049 = ~This enchanted cloak once belonged to Daraniel of the Still Waters, a reclusive priest of Eldath who wandered the groves of Wealdath in ages past. Birds would nest in his hands, wolves guarded his sleep, and even the most skittish beasts would draw near to bask in his tranquil presence.
-When he passed from the world, it is said the trees wove this mantle from the leaves that had fallen around his resting place. Those who wear it walk in quiet grace—and the wild things of the world walk beside them.
+@1048 = ~Eldath's Embrace~
+@1049 = ~This enchanted cloak dates back to Daraniel of the Still Waters, a reclusive priest of Eldath who wandered the groves of Wealdath in ages past. Birds would nest in his hands, wolves guarded his sleep, and even the most skittish beasts would draw near to bask in his tranquil presence.
+When he passed from the world, it is said dryads wove this mantle from the leaves that had fallen around his resting place. Those who wear it walk in quiet grace—and the wild things of the world walk beside them.
 
 When animals are near, the cloak responds with gentle magic. Its wearer becomes more grounded, harder to frighten, and more difficult to strike.
   
@@ -1392,6 +1394,12 @@ Special: The book is consumed upon use
 Usage: Place into quick item slot
 
 Weight: 25~
+@1216 = ~Fairy Jar~
+@1217 = ~This crystal jar contains two tiny winged creatures - the Dell-Light Twins, the two fairies from Duskwood Dell, apparently. They appear fully conscious, peering out with curious eyes, their lips moving as if in constant conversation — though no sound escapes. The jar’s lid refuses to move, sealed by a magic older and subtler than any lock. Occasionally, one of the twins presses her hands against the inside, mouthing words the glass will not let through. Whether plea or mischief, it’s impossible to tell.
+
+The seal cannot be opened or broken by physical or magical means. The faeries within are alive but imprisoned, their magic suppressed by the vessel’s binding.
+
+Weight: 1~
 
 // script strings
 @2000 = ~Duskwood Dell~

@@ -366,6 +366,20 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPIMD.bam~ ~override~ // amulet of
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1034.pvrz~
  END
  END
+ 
+COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPRED.bam~ ~override~ // Eldath's Embrace desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1035.pvrz~
+ END
+ END
+ 
+COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPFYD.bam~ ~override~ // Eldath's Embrace desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1036.pvrz~
+ END
+ END
 ///////////////////////////////////////////////////////////////////////
 // VVC files
 //
@@ -569,8 +583,11 @@ COPY ~Poisoned_pathways/sto/AC#PPPBG.sto~ ~override~  // potion case
 COPY ~%MOD_FOLDER%/sto/ac#pptme.sto~  ~override~ // Debbie's Undoubtful Weapons & Goods
   SAY 0xc @953
   
-COPY ~Poisoned_pathways/sto/AC#PPWOC.sto~ ~override~ // temple of Eldath
+COPY ~Poisoned_pathways/sto/AC#PPWOC.sto~ ~override~ // woodcarver
 SAY 0xc @954
+
+COPY ~Poisoned_pathways/sto/AC#PPZAR.sto~ ~override~ // Rakshasa
+SAY 0xc @955
 
 
 ///////////////////////////////////////////////////////////////////////

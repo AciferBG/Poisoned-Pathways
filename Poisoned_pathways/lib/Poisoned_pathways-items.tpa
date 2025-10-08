@@ -2,6 +2,12 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPWIS.itm~         ~override~    //  Fake wish scroll
+
+COPY ~%MOD_FOLDER%/itm/AC#PPFYG.itm~         ~override~    //  Fairy Bottle
+  SAY NAME2 @1216
+  SAY DESC  @1217
+
 COPY ~%MOD_FOLDER%/itm/AC#PPBKE.itm~         ~override~    //  Manual of Peaceful Living
   SAY NAME2 @1214
   SAY DESC  @1215
