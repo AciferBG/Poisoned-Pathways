@@ -8,6 +8,26 @@ THEN
         SetGlobal("RakshasaChange","LOCALS",1)
 END
 
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+    Global("AC#PPRakAttack","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPRakAttack","GLOBAL",1)
+        StartDialogueNoSet([PC])
+END
+
+IF
+    PartyHasItem("AC#PPWIS")
+    Global("AC#PPRakScroll","GLOBAL",0)
+THEN
+    RESPONSE #30
+        SetGlobal("AC#PPRakScroll","GLOBAL",1)
+        StartDialogueNoSet([PC])
+END
+
 IF
     SpellCastInnateRES("AC#PPWS",[PC])  // Imprisonment
     Global("AC#PPRakPrison","GLOBAL",0)
@@ -89,14 +109,6 @@ IF
 THEN
     RESPONSE #100
         AttackReevaluate(NearestEnemyOf(Myself),15)
-END
-
-IF
-    AttackedBy([GOODCUTOFF],DEFAULT)
-    !Allegiance(Myself,ENEMY)
-THEN
-    RESPONSE #100
-        Enemy()
 END
 
 IF

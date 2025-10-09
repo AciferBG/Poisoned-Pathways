@@ -1400,6 +1400,15 @@ Weight: 25~
 The seal cannot be opened or broken by physical or magical means. The faeries within are alive but imprisoned, their magic suppressed by the vessel’s binding.
 
 Weight: 1~
+@1218 = ~Miragefang~
+@1219 = ~Jede erfolgreiche Attacke hat 10% Chance, Mislead oder Invisibility auf den Träger zu wirken.
+Dafür: 5% Chance, dass der Träger Feeblemind erleidet (verliert sich in seinen eigenen Lügen).
+Verflucht: wenn der Träger einen speziellen Zauber wirkt, trifft er sich selbst (Selbsttäuschung).~
+@1220 = ~Wish
+
+Wish will fulfill literally the utterance of the caster. Thus, the actuality of the past, present, or future might be altered in some limited manner. The greater the wish, the greater the strain upon the fabric of reality, and the greater the chance of unwanted consequences.
+
+Curiously, this particular scroll may be read by anyone — not merely those trained in the arcane arts. Its words are written in a language so simple, so clear, that even the unlearned might speak them aloud with ease. Almost too simple, in fact... too easy to believe.~
 
 // script strings
 @2000 = ~Duskwood Dell~
