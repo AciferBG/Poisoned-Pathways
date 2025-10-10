@@ -424,7 +424,11 @@ COPY ~Poisoned_pathways/spl/AC#PPH2.spl~          ~override~
 SAY 0xfe @908
 
 COPY ~Poisoned_pathways/spl/AC#PPGR.spl~          ~override~
-SAY 0x18e @909
+SAY 0x1be @920
+SAY 0x1ee @921
+SAY 0x21e @922
+SAY 0x24e @923
+SAY 0x27e @924
 
 COPY ~Poisoned_pathways/spl/AC#PPS1.spl~          ~override~
 SAY NAME1 @900

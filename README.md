@@ -44,7 +44,9 @@ Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core g
 
 ## Credits
 
-**Mod Authors:** Acifer, Lava 
+**Acifer** – Writing, Area Art, Item Graphics & Design, Quest Design, Scripting, Music  
+**Lava** – Writing, Additional Area Art, Item Graphics & Design, Quest Design, Scripting, Worldmap Icons
+
 
 ---
 

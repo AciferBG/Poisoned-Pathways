@@ -8,8 +8,8 @@ When you hand a weapon to her, you receive Eldath’s blessing:
 
 • Lesser (normal) weapon  →  +1 permanent maximum Hit Point (AC#PPH1).
 • Legendary weapon        →  +2 permanent maximum Hit Points (AC#PPH2)
-                             +1% permanent resistance to ALL physical damage types
-                             (slashing, piercing, crushing, missile) (AC#PPGR).
+                             +1% permanent resistance to one physical damage type
+                             (slashing, piercing, crushing, missile) or +1% permanent magic resistance (AC#PPGR).
 
 No gold is paid. The weapon is removed from your inventory and “laid to rest”
 Bonuses stack with each offering
@@ -107,8 +107,7 @@ MOD: CALL OF THE LOST GODDESS (lesser)
 
 Notes
 -----
-• “Legendary” vs. “Lesser” classification determines the blessing: +2 HP & +1% all physical resists vs. +1 HP.
-• Drizzt’s blades (Icingdeath, Twinkle) appear only if legitimately acquired in your run/install. :-)
+• “Legendary” vs. “Lesser” classification determines the blessing: +2 HP & +1% physical resists vs. +1 HP.
 
 Note to myself:
 • If I change a weapon’s tier later, update the dialog node to swap AC#PPH1/AC#PPH2 and add/remove AC#PPGR accordingly.

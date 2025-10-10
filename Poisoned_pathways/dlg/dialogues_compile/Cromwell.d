@@ -5,7 +5,7 @@ END
 APPEND WSMITH01
 
   IF ~~ THEN BEGIN AC#PPBuckler
-    SAY ~What be this, hmm? Ah! I may have heard about this little thing. It looks like a part of this old elven buckler, The Leafrunner. Give me both pieces, and I should be able to make it work well again. The cost: 7500 gp. It ain't cheap, but we're talking about providing you with nice and strong toy here.~
+    SAY ~Eh? What’s this? Hah! I’ve heard tell o’ such a trinket before. Looks like it fits that old elven buckler, the Leafrunner. A fine piece, that. Hand me both bits, and I’ll see it made whole again — strong as ever. Won’t come cheap, mind ye: 7500 gold. But you’ll be gettin’ a right sturdy toy for yer coin!~
     IF ~Global("AC#PPForgeBuckler","GLOBAL",0)
         PartyGoldGT(7499)
         PartyHasItem("AC#PPEL1")

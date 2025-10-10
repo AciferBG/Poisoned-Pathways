@@ -1,0 +1,65 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    // Skullcrusher +3
+    GiveItemCreate("BLUN18",Player1,1,0,0)
+    // Hammer of Thunderbolts +3
+    GiveItemCreate("HAMM07",Player1,1,0,0)
+    // Dwarven Thrower +3
+    GiveItemCreate("HAMM06",Player1,1,0,0)
+    // Boneblade +4
+    GiveItemCreate("DAGG14",Player1,1,0,0)
+    // Blackblood +3
+    GiveItemCreate("BLUN22",Player1,1,0,0)
+    // Blade of Searing +3
+    GiveItemCreate("SW1H39",Player1,1,0,0)
+    // Azuredge +3
+    GiveItemCreate("AX1H10",Player1,1,0,0)
+    // Heartseeker +3
+    GiveItemCreate("BOW10",Player1,1,0,0)
+    // Elven Court Bow
+    GiveItemCreate("BOW12",Player1,1,0,0)
+    // Impaler +3
+    GiveItemCreate("SPER08",Player1,1,0,0)
+    // Spear of Withering
+    GiveItemCreate("SPER10",Player1,1,0,0)
+    // Frostreaver +3
+    GiveItemCreate("AX1H13",Player1,1,0,0)
+    // Blade of Roses
+    GiveItemCreate("SW1H40",Player1,1,0,0)
+    // Stonefire Axe
+    GiveItemCreate("AX1H12",Player1,1,0,0)
+    // Rifthome Axe
+    GiveItemCreate("AX1H09",Player1,1,0,0)
+    // Dragon’s Bane (Dragon’s Breath Halberd)
+    GiveItemCreate("HALB04",Player1,1,0,0)
+    // Wave Halberd
+    GiveItemCreate("HALB09",Player1,1,0,0)
+    // Ras
+    GiveItemCreate("SW1H33",Player1,1,0,0)
+    // Pixie Prick
+    GiveItemCreate("DAGG13",Player1,1,0,0)
+    // Cutthroat
+    GiveItemCreate("SW1H33",Player1,1,0,0)
+    // Spectral Brand
+    GiveItemCreate("SW1H68",Player1,1,0,0)
+    // Adjatha the Drinker
+    GiveItemCreate("SW1H35",Player1,1,0,0)
+    // Sword of Chaos
+    GiveItemCreate("SW2H16",Player1,1,0,0)
+    // Albruin
+    GiveItemCreate("SW1H34",Player1,1,0,0)
+    // Sword of Flame +1/+2
+    GiveItemCreate("SW1H53",Player1,1,0,0)
+    // Daystar
+    GiveItemCreate("SW1H31",Player1,1,0,0)
+    // Short Sword of Backstabbing
+    GiveItemCreate("SW1H10",Player1,1,0,0)
+    // Belm
+    GiveItemCreate("SW1H30",Player1,1,0,0)
+    // Dagger of Venom
+    GiveItemCreate("MISC75",Player1,1,0,0)
+    // Jhor the Bleeder
+    GiveItemCreate("SW1H38",Player1,1,0,0)
+END

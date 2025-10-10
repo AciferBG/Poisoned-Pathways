@@ -7,7 +7,7 @@
 @14 = ~Peacefang~
 @15 = ~Quietbrook~
 @16 = ~Brother Gentleswarm~
-@17 = ~Sylvae, Handmaiden of the Sacred Grotto~
+@17 = ~Maiden of the Grotto~
 @18 = ~Zombie Treant~
 @19 = ~Sister Irinwe~
 @20 = ~Will-o'-wisp~
@@ -124,11 +124,17 @@
 @906 = ~Eldath's Silence~
 @907 = ~^0xFF22B4E6has gained +1 maximum Hit Point. ^-~
 @908 = ~^0xFF22B4E6has gained +2 maximum Hit Points. ^-~
-@909 = ~^0xFF22B4E6has gained +1% resistance to slashing, piercing, crushing, and missile damage. ^-~
+
 @910 = ~Talona's Kiss~
 @911 = ~Sleep Drone~
 @912 = ~Death Shroud~
 @913 = ~Eldath’s Soothing Presence~
+
+@920 = ~^0xFF22B4E6has gained +1% resistance to slashing damage. ^-~
+@921 = ~^0xFF22B4E6has gained +1% resistance to missile damage. ^-~
+@922 = ~^0xFF22B4E6has gained +1% resistance to piercing damage. ^-~
+@923 = ~^0xFF22B4E6has gained +1% resistance to crushing damage. ^-~
+@924 = ~^0xFF22B4E6has gained +1% magic resistance. ^-~
 
 //sto files
 @950 = ~Temple of Eldath~
@@ -384,19 +390,16 @@ STATISTICS:
 Weight: 0~
 @1062 = ~Buckler~
 @1063 = ~The Leafrunner +3~
-@1064 = ~This buckler is known as The Leafrunner. It was once used by a druid-protector known as Blasanna Leafrunner, and the item was named after her family name. One day, she had to defent her beloved grove and her family from a group of a gnoll army. The tales say that during the fight, she moved as quickly as a lightning, and she defeated half of the army herself. Rest of the gnolls run away, but she became a local hero.
-  
-Some suggest that her rapid moves were a result of holding this powerful buckler. Others say that it was nature that had her back, pushing her forward, no matter what. Some also say that those that wield this weapon can protect themselves fith wall of energy.
+@1064 = ~This elegant buckler once belonged to a druid-guardian named Blasanna Leafrunner, from whom it takes its name. When a gnoll warband threatened her grove and kin, Blasanna stood alone before them. Legends tell that she moved with the swiftness of a storm wind, striking down half the invaders before the rest fled in terror.
+
+Some claim her speed came from the buckler itself, its magic lending her the grace of the wild. Others believe it was the forest’s own spirit that bore her onward, unwilling to see its protector fall.
 
 STATISTICS:
 
-Charge abilities:
-– May cast Sanctuary once per day (on self)
-
 Equipped abilities:
 – Armor Class: +4
-– Grants only half of the Armor Class bonus vs. missiles and piercing attacks
-– Doubles movement rate
+– No protection against missile and piercing attacks
+– Movement rate increased by 2
 – Saving Throws vs. Ivocation School: +2
 
 Requires:

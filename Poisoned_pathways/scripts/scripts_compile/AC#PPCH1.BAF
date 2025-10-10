@@ -1,0 +1,33 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    // Equalizer
+    GiveItemCreate("SW1H54",Player1,1,0,0) // The Equalizer
+    // Carsomyr
+    GiveItemCreate("SW2H10",Player1,1,0,0) // Carsomyr +5
+    // Flail of Ages
+    GiveItemCreate("BLUN14",Player1,1,0,0) // Flail of Ages
+    // Crom Faeyr
+    GiveItemCreate("HAMM09",Player1,1,0,0) // Crom Faeyr
+    // Soul Reaver
+    GiveItemCreate("SW2H08",Player1,1,0,0) // Soul Reaver
+    // Blackrazor
+    GiveItemCreate("MISCBC",Player1,1,0,0) // Blackrazor
+    // Lilarcor
+    GiveItemCreate("SW2H14",Player1,1,0,0) // Lilarcor
+    // Celestial Fury
+    GiveItemCreate("SW1H51",Player1,1,0,0) // Celestial Fury
+    // Warblade
+    GiveItemCreate("SW2H09",Player1,1,0,0) // Warblade +4
+    // Silver Sword
+    GiveItemCreate("SW2H15",Player1,1,0,0) // Silver Sword
+    // Shortbow of Gesen
+    GiveItemCreate("BOW19",Player1,1,0,0) // Gesen Shortbow
+    // Icingdeath
+    GiveItemCreate("SW1H15",Player1,1,0,0) // Icingdeath +3
+    // Twinkle
+    GiveItemCreate("SW1H16",Player1,1,0,0) // Twinkle +3
+    // Staff of the Magi
+    GiveItemCreate("STAF11",Player1,1,0,0) // Staff of the Magi
+END

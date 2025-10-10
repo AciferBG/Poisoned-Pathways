@@ -1,6 +1,16 @@
 // dryad in area acpp06 (Eldath's Peace Grotto):
 BEGIN ~AC#PPDR1~ //Dryad
 BEGIN ~AC#PPFI1~ //Fighter
+BEGIN ~AC#PPCHT~ // Cheat code creature for testing the grotto system
+
+CHAIN
+IF ~true()~ THEN AC#PPCHT AC#PPCHT_intro
+~Greetings. What treasures do you seek? I can offer you all legendary weapons—or the common relics of battle.~
+END
+IF ~~ THEN REPLY ~Give me the legendary weapons.~ DO ~StartCutScene("AC#PPCH1")~ EXIT
+IF ~~ THEN REPLY ~Give me the other weapons.~ DO ~StartCutScene("AC#PPCH2")~ EXIT
+IF ~~ THEN REPLY ~Nothing today.~ EXIT
+
 
 // Dialogue in Eldath’s Grotto – between a dryad (AC#PPDR1) and a repentant warrior (AC#PPFI1)
 
@@ -25,6 +35,7 @@ CHAIN IF ~Global("AC#PP_TradeWeapons","GLOBAL",1)~ THEN AC#PPDR1 hello_trade_wea
 END
 IF ~~ THEN REPLY ~What do you mean by that?~ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~ EXTERN AC#PPDR1 trade_weapons_02
 IF ~~ THEN REPLY ~Could you perhaps be a little less cryptic?~ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~ EXTERN AC#PPDR1 trade_weapons_02
+IF ~~ THEN REPLY ~That sounds interesting.~ DO ~SetGlobal("AC#PP_TradeWeapons","GLOBAL",2)~ EXTERN AC#PPDR1 trade_weapons_02
 IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#PPDR1 bye_trade_weapons
 
 CHAIN IF ~~ THEN AC#PPDR1 bye_trade_weapons
@@ -43,10 +54,11 @@ END
 IF ~~ THEN EXTERN AC#PPDR1 trade_weapons_04
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_04
-~If you were to bring such weapons here instead, they would harm no one again. Here, in Eldath’s embrace, they would be kept safe. It costs you nothing—you still keep your own arms. But those you no longer need, leave them here.~
+~If you were to bring all the weapons you have gathered here, they would harm no one again. In Eldath’s embrace, they shall be kept safe. It costs you nothing—you will still keep your own arms. But those you no longer need, leave them here.~
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Hah! Strip myself of spoils after battle? Ye ask a warrior’s folly.~ 
 END
 IF ~~ THEN REPLY ~You want to take all the weapons I find from my enemies?~ EXTERN AC#PPDR1 trade_weapons_05
+IF ~~ THEN REPLY ~What do I get in return?~ EXTERN AC#PPDR1 trade_weapons_what_do_i_get
 IF ~~ THEN REPLY ~I have no interest in this conversation. Farewell.~ EXTERN AC#PPDR1 bye_trade_weapons
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_05
@@ -73,6 +85,7 @@ CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_hub
 ~One less weapon, more life for you—that is Eldath’s bargain.~
 END
 IF ~~ THEN REPLY ~Which weapons exactly are we talking about?~ EXTERN AC#PPDR1 trade_weapons_which_weapons
+IF ~~ THEN REPLY ~You want to take all the weapons I find from my enemies?~ EXTERN AC#PPDR1 trade_weapons_05
 IF ~~ THEN REPLY ~You must be clearer about what I gain from this trade.~ EXTERN AC#PPDR1 trade_weapons_exact_benefit
 
 	CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_exact_benefit
@@ -86,7 +99,7 @@ CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_which_weapons
 =  
 ~And those that have already become legend will grant you even greater vitality. So, what do you say?~
 END
-IF ~~ THEN REPLY ~Do I have any such weapons with me?~ EXTERN AC#PPDR1 trade_root
+IF ~~ THEN REPLY ~Let's see if I have any weapons to offer Eldath.~ EXTERN AC#PPDR1 trade_root
 IF ~~ THEN REPLY ~You must be clearer about what I gain from this trade.~ EXTERN AC#PPDR1 trade_weapons_exact_benefit
 IF ~~ THEN REPLY ~I will think on it.~ EXTERN AC#PPDR1 trade_think_about_it
 IF ~~ THEN REPLY ~If this brings honor to Eldath, I shall gladly leave a blade or two behind.~ EXTERN AC#PPDR1 trade_think_about_it
@@ -243,16 +256,16 @@ IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#P
 
 // ---------- ROOT ----------
 CHAIN IF ~~ THEN AC#PPDR1 trade_root
-~You would surrender a magic weapon here? Very well—Eldath’s waters shall receive it. Will you trade a weapon for a touch more life within you?~
+~So, you wish to trade a weapon for a bit more of your life? Eldath accepts all offerings.~
 END
-		IF ~~ THEN REPLY ~I’d like to surrender a legendary magical weapon.~ EXTERN AC#PPDR1 trade_legend_menu
-		IF ~~ THEN REPLY ~I’d like to surrender a magical weapon.~ EXTERN AC#PPDR1 trade_lesser_menu
+		IF ~~ THEN REPLY ~I’d like to give you a famous weapon.~ EXTERN AC#PPDR1 trade_lesser_menu
+		IF ~~ THEN REPLY ~I’d like to give you a legendary weapon.~ EXTERN AC#PPDR1 trade_legend_menu
 		IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 no_trade_bye
 		IF ~~ THEN REPLY ~Not now.~ EXTERN AC#PPDR1 no_trade_bye
 		IF ~~ THEN REPLY ~What do I gain from this?~ EXTERN AC#PPDR1 trade_gain
 
 	CHAIN IF ~~ THEN AC#PPDR1 trade_gain
-	~You shall receive a blessing of Eldath—one that will help you bear the weight of life a little more lightly.~
+	~You shall receive Eldath’s blessing — your life will grow a little stronger.~
 	END
 	IF ~~ THEN REPLY ~Could you be a bit more specific?~ EXTERN AC#PPDR1 trade_gain_02
 	IF ~~ THEN REPLY ~That’s all I wanted to know.~ EXTERN AC#PPDR1 trade_root
@@ -260,8 +273,7 @@ END
 
 	  
 	  CHAIN IF ~~ THEN AC#PPDR1 trade_gain_02
-    ~Parting with a weapon grants you vitality.~
-	= ~With each weapon surrendered, you’ll feel your life grow—just a little for a lesser blade, more for a legendary one. Only Eldath knows the true worth of each weapon that vanishes from the world.~
+    ~With each weapon surrendered, you’ll feel your life grow—just a little for a lesser blade, more for a legendary one. Only Eldath knows the true worth of each weapon that vanishes from the world.~
 	END
 	IF ~~ THEN REPLY ~That’s all I wanted to know.~ EXTERN AC#PPDR1 trade_root
 	IF ~~ THEN REPLY ~I’ve changed my mind and will be on my way now.~ EXTERN AC#PPDR1 no_trade_bye
@@ -271,7 +283,7 @@ END
 // =====================================================
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_legend_menu
-~Many legendary blades have stirred armies and sundered vows. Which of these weapons will you lay down?~
+~Legendary blades have stirred armies and sundered vows. Which of these weapons will you lay down?~
 END
 	//Equalizer
   IF ~PartyHasItem("SW1H54") Global("AC#TradeEqualizer","GLOBAL",0)~
@@ -338,12 +350,8 @@ IF ~PartyHasItem("AC#MGFL") Global("AC#TradeFlayerSlayer","GLOBAL",0)~
   THEN REPLY ~The Flayer Slayer has cleaved through horrors best left forgotten. Let Eldath’s waters wash its memory away.~ EXTERN AC#PPDR1 trade_legend_flayerslayer
   
 IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 trade_root  
-IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
+IF ~~ THEN REPLY ~Perhaps we should start over, then.~ EXTERN AC#PPDR1 trade_root
 IF ~~ THEN REPLY ~I changed my mind and will leave. Farewell.~ EXTERN AC#PPDR1 no_trade_bye 
-
-// ----- Legendary turn-ins (apply AC#PPH2 + AC#PPGR) -----
-
-// MadGod items
 
 CHAIN AC#PPDR1 trade_legend_flayerslayer
 ~Some battles leave wounds that no healer can close—save time and stillness.~
@@ -354,8 +362,6 @@ DO ~TakePartyItem("AC#MGFL")
    AddexperienceParty(1000)
 ~ EXIT
 
-//Godcall weapons
-
 CHAIN AC#PPDR1 trade_legend_doomedloser
 ~By Eldath… a sword that flees after failure. What a cruel jest of the Abyss. Let it trouble no hands again.~
 DO ~TakePartyItem("AC#WSW50")
@@ -365,7 +371,6 @@ DO ~TakePartyItem("AC#WSW50")
    AddexperienceParty(1000)
 ~ EXIT
 
-// Vanilla items
 CHAIN AC#PPDR1 trade_legend_silversword
 ~A gleam that severed thought and fate; let it fade beneath still waters.~
 DO ~TakePartyItem("SW2H15")
@@ -509,7 +514,6 @@ DO ~TakePartyItem("SW2H14")
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT 
 
-// Legend refresh: loop if more legendary remain; else back to root
 CHAIN IF ~~ THEN AC#PPDR1 trade_legend_refresh
 ~The pool is ready for another burden of legend.~
 END
@@ -713,7 +717,7 @@ IF ~PartyHasItem("AC#MGHMA") Global("AC#TradeAirHammer","GLOBAL",0)~
 THEN REPLY ~The Air Hammer has cleared enough storms. Let the winds settle here.~ EXTERN AC#PPDR1 trade_lesser_airhammer
 
 IF ~~ THEN REPLY ~It seems I carry no weapon that I could leave here.~ EXTERN AC#PPDR1 trade_root  
-IF ~~ THEN REPLY ~Never mind—back to the start.~ EXTERN AC#PPDR1 trade_root
+IF ~~ THEN REPLY ~Perhaps we should start over, then.~ EXTERN AC#PPDR1 trade_root
 IF ~~ THEN REPLY ~I changed my mind and will leave. Farewell.~ EXTERN AC#PPDR1 no_trade_bye 
 
 
