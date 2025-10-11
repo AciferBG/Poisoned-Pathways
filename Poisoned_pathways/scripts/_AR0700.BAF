@@ -25,6 +25,7 @@ IF
     Global("FairyTwinsKidnapQuest","GLOBAL",5)
     THEN
         RESPONSE #100
+    AddJournalEntry(@13002,QUEST)
     SetGlobal("FairyTwinsKidnapQuest","GLOBAL",6)
 END
 
@@ -33,5 +34,6 @@ IF
     Global("FairyTwinsKidnapQuest","GLOBAL",6)
     THEN
         RESPONSE #100
+    AddJournalEntry(@13003,QUEST)
     SetGlobal("FairyTwinsKidnapQuest","GLOBAL",7)
 END

@@ -19,7 +19,7 @@ APPEND WSMITH01
   END
 
   IF ~~ THEN BEGIN AC#PPBucklerNo
-    SAY ~Hmm, I can have another look.~
+    SAY ~Aye, I’ll look at it again, if ye insist.~
     COPY_TRANS WSMITH01 13
   END
 

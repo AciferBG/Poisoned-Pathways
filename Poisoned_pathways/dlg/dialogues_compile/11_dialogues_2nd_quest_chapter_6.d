@@ -42,6 +42,7 @@ IF ~~ THEN EXTERN AC#PPC6E seek_charname_bye
 CHAIN AC#PPC6E seek_charname_bye
 ~You remember the way to Duskwood Dell, I trust. I thank Eldath that I’ve finally found you!~    
 DO ~SetGlobal("AC#PP_NewProblemsUnnohyr","GLOBAL",1)
+AddJournalEntry(@12200,QUEST)
 EscapeArea()~ EXIT
 
 
@@ -198,11 +199,13 @@ IF ~~ THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that
 
 CHAIN AC#PPMI wyrd_wait_for_start_bye
 ~We shall wait for you here.~  
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)
+AddJournalEntry(@12202,QUEST)~ EXIT
 
 CHAIN AC#PPMI C6.QUEST.01.07
 ~If you change your mind, come to me and let me know. We truly need your aid.~  
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)~ EXIT
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)
+AddJournalEntry(@12202,QUEST)~ EXIT
 
 
 //DUSKWOOD DELL CH6 -- 2ND TALK (CLERIC)
@@ -252,7 +255,8 @@ CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPMI6 hello_01
 ~We're in Myth Unnohyr again! The path behind us is sealed by a wall of tangled growth. Our only escape lies ahead, through the heart of the shattered city.~
 = ~Something unsettling stirs in the north. To reach it, we must pass through the sanctuary once claimed by the priest of Talona.~
 = ~We’ll split up. I’ll scout ahead and survey the area. Let’s meet on the other side of the tower. Take care of yourselves!~
-DO ~EscapeArea()~ EXIT
+DO ~AddJournalEntry(@12207,QUEST)
+EscapeArea()~ EXIT
 
 
 // Wyrd in banshee form
@@ -279,7 +283,9 @@ Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN ~Oh, I remember you! You were so
 == AC#PPWY7 IF ~Global("AC#PP_RemovedWardstone","GLOBAL",0)
 Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN ~Oh, I remember you! You struck me down in that miserable zombie form!~
 == AC#PPWY7 ~But that no longer matters. You survived the scream of the fool Elv-Esster... but my servants will tear you apart!~
-DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",2) CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
+DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",2)
+AddJournalEntry(@12208,QUEST)
+CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
 
 
 BEGIN AC#PPWYR
@@ -347,6 +353,7 @@ EXTERN AC#PPWYR 2.03
 CHAIN AC#PPWYR 2.03
 ~I shall watch how you struggle. Remember that. Go. Do you best. And let me enjoy the spectacle, little one.~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",5) 
+AddJournalEntry(@12209,QUEST)
 StartCutSceneMode() 
 Wait(1) 
 ScreenShake([20.45],15) 
@@ -362,13 +369,15 @@ CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",6)~ THEN AC#PPHEL HELPER.1.00
 ~You have destroyed the symbiotes!~
 == AC#PPHEL ~That abomination—the one that defiled the body of our beloved commander—wants you to believe none of this matters, that slaying its gnawing mouths means nothing... But it does!~
 == AC#PPHEL ~Seek me beneath the sacred temple of Mythrien... there I shall aid you. I know how to end the nemesis of our city once more. We did it once—we shall do it again. Come, and I will tell you more when you find me.~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",7) CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",7)
+AddJournalEntry(@12211,QUEST)
+ CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
 
 
 //HELPER 2
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",8)~ THEN AC#PPHEL HELPER.2.00
-~You came... I am... glad.~
+~You have come... I am... glad.~
 END
 IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPHEL HELPER.2.02
 IF~~THEN REPLY ~Truth be told, I had little choice.~ EXTERN AC#PPHEL HELPER.2.01
@@ -422,7 +431,9 @@ CHAIN AC#PPHEL HELPER.2.08
 ~My sight reaches deeper than flesh... I know there is greatness within you. Yours is not the road of death, but the path of life.~
 == AC#PPHEL ~I, however... I am bound to to silence and to endings. May Mythrien’s light guide your steps where mine can no longer follow.~
 == AC#PPHEL ~Now I sink back into the soil that claimed me... into the darkness where I fell...~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9) CreateVisualEffect("AC#PPBUR",[2230.800]) DestroySelf()~ EXIT
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9)
+AddJournalEntry(@12212,QUEST)
+ CreateVisualEffect("AC#PPBUR",[2230.800]) DestroySelf()~ EXIT
 
 
 
@@ -506,7 +517,8 @@ EXTERN AC#PPMYT 02.04
 CHAIN AC#PPMYT 02.04
 ~^0xFF8FAD5DGo now. Find the creature. End its theft. Return to me when justice is wrought. ^-~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",17) 
-SetGlobal("AC#PPFixMagic","GLOBAL",1)~ EXIT
+SetGlobal("AC#PPFixMagic","GLOBAL",1)
+AddJournalEntry(@12214,QUEST)~ EXIT
 
 // Waiting for the defeat of the wyrd
 CHAIN IF ~GlobalGT("AC#PPChapter6Quest","GLOBAL",16)
@@ -578,7 +590,9 @@ IF~~THEN DO ~GiveItemCreate("AC#PPMYR",Player1,1,0,0)~ EXTERN AC#PPMYT bye_final
 
 CHAIN AC#PPMYT bye_final
 ~^0xFF8FAD5DFarewell, <CHARNAME>. May the paths ahead bow to your courage. ^-~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) CreateVisualEffect("SPPORTAL",[900.400]) DestroySelf()~ EXIT
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) 
+AddJournalEntry(@12217,QUEST)
+CreateVisualEffect("SPPORTAL",[900.400]) DestroySelf()~ EXIT
 
 BEGIN AC#PPHE2
 CHAIN IF ~True()~ THEN AC#PPHE2 hello_thank_you
@@ -587,6 +601,7 @@ CHAIN IF ~True()~ THEN AC#PPHE2 hello_thank_you
 == AC#PPHE2 ~Myth Unnohyr is no longer a place of sorrow. Thanks to you, its name may be spoken with pride once more!~
 == AC#PPHE2 ~Our spirits may rest. Yours... must journey on. But know this: the song of your deed will echo in the roots of this forest for ages to come.~
 DO ~SetGlobal("Elves_ByeBye","ACPP90",1)
+AddJournalEntry(@12218,QUEST)
 CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
 
 
@@ -615,7 +630,9 @@ EXTERN AC#PPEL4 C6.QUEST.FINALE.04
 CHAIN AC#PPEL4 C6.QUEST.FINALE.04
 ~What you did is more than any of us could ever dream. Thank you. We will never forget what you did.~
 ==AC#PPMI ~Here. Your reward. Thank you for everything! And whoever is going to stand on your way: I pity them already.~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",26) AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) GiveItemCreate("AC#PPSTA",Player1,1,1,1) GiveGoldForce(1000)~ EXIT
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",26)
+AddJournalEntry(@12219,QUEST)
+ AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) GiveItemCreate("AC#PPSTA",Player1,1,1,1) GiveGoldForce(1000)~ EXIT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",26)~ THEN AC#PPEL4 C6.QUEST.0X.01
 ~I'll pray for you to find peace.~

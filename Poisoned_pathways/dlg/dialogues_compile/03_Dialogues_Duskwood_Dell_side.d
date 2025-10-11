@@ -194,7 +194,8 @@ IF ~~ THEN REPLY ~Those two faeries were delightful! Please don’t tell me some
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_05
 	~Thank you for taking this upon yourself. Please, bring the twins back safely to Duskwood Dell. It would feel... emptier without their pranks and laughter.~
 	END
-	IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",4)~ EXIT
+	IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",4)
+	AddJournalEntry(@13000,QUEST)~ EXIT
 
 
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_decline_bye

@@ -184,7 +184,7 @@ IF~~THEN REPLY ~That arrow may point us straight to the bastard responsible.~ EX
 IF~~THEN REPLY ~Meaning?~ EXTERN AC#PPEL2 bring_arrow_duskwood_dell
 
 CHAIN IF ~~ THEN AC#PPEL2 bring_arrow_duskwood_dell
-~With the poison in hand, we can study it! Well... not me anymore. Eldath's still waters await me. I can feel Her pull already... So the task falls to you now!~ 
+~With the poison in hand, we can study it! Well... not me anymore. Eldath's still waters await me. I can feel her pull already... So the task falls to you now!~ 
 == AC#PPEL2~You must... must bring this arrow, poison and all, to Most Exalted Fallskeeper Alatoasz Berendim, high priest of my order, in Duskwood Dell. He’ll know how to proceed.~
 END
 IF~~THEN REPLY ~That's a very long title your high priest is holding.~ EXTERN AC#PPEL2 what_about_title
@@ -223,7 +223,7 @@ END
 IF~~THEN EXTERN AC#PPEL2 bye_death
 
 CHAIN IF ~~ THEN AC#PPEL2 bye_death
-~No more words... Let this forest cradle my breath, and Her breeze carry me to the still waters...~
+~No more words... Let this forest cradle my breath, and her breeze carry me to the still waters...~
 == AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~He was so kind... I wish we could have done more.~
 ==RasaadJ IF ~InParty("rasaad") !StateCheck("rasaad",CD_STATE_NOTVALID)~ THEN ~Your path ends in stillness, as all must. May your soul merge with the quiet waters you served so faithfully.~
 ==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~How touching. The weak always love to pretend their end has meaning.~
@@ -366,7 +366,7 @@ CHAIN IF ~~ THEN AC#PPEL1 about_poison
 == KeldorJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~If there is a power behind this plague of venom, then it must be cast down, for the sake of all decent folk.~
 == NaliaJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN  ~As always, those who suffer most are the ones without coin. No bodyguards. No tasters. Just trust in their water—and death in their cups.~
 == DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN ~A poison beyond the reach of your pitiful prayers? Perhaps your gods are simply not listening.~
-== AC#PPEL1 ~By the will of the Church of Eldath, I have been tasked to uncover the secret behind this poison. Even the calmest waters ripple when danger approaches!~
+== AC#PPEL1 ~Even the calmest waters ripple when danger approaches. By the will of the Church of Eldath, I have been tasked to uncover the secret behind this poison.~
 END
 IF~~THEN REPLY ~I'm curious. Tell me more.~ EXTERN AC#PPEL1 about_poison_02
 IF~~THEN REPLY ~That's horrifying! Who could be responsible for this?~ EXTERN AC#PPEL1 about_poison_02
@@ -377,7 +377,7 @@ IF~~THEN REPLY ~Sounds useful, this toxin.~ EXTERN AC#PPEL1 about_poison_02
 CHAIN IF ~~ THEN AC#PPEL1 about_poison_02
 ~I initially suspected that one of Faerûn’s more malevolent groups had devised this terrible poison. But my search uncovered something troubling: The poison has been used by unrelated factions, with no alliance or shared interest between them. No shared ambition—only the same deadly means.~
 == AC#PPEL1 ~That can only mean a different power is behind this—one that acts on his own, working in the shadows. Someone who delights in the death this poison leaves behind.~
-== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Silent but violent... This stuff’s like a rogue fart at a turnip banquet: You don’t know who did it, but someone’s definitely going to suffer.~
+== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Silent but violent... This stuff’s like a flatulence at a turnip banquet: You don’t know who did it, but someone’s definitely going to suffer.~
 END
 IF~~THEN REPLY ~So you want me to face this poison-maker?~ EXTERN AC#PPEL1 about_person
 IF~~THEN REPLY ~And just how are we meant to find this mysterious mastermind?~ EXTERN AC#PPEL1 about_person

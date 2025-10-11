@@ -132,6 +132,7 @@ THEN
         Kill("AC#PPSON")  // Elven Spirit
         Wait(3)
         EndCutSceneMode()
+        AddJournalEntry(@12213,QUEST)
 END
 
 IF

@@ -159,7 +159,7 @@ Found only in elven groves under the influence of strong nature magic.~
 @1004 = ~Fungal Key~
 @1005 = ~This key is overgrown with grime and strange spores. It appears to open a very particular kind of door.~
 @1006 = ~Supplier's Note~
-@1007 = ~Skann, I need you to deliver a large shipment of my work to several interested parties. Meet me at the marked location near the edge of the Snakewood, at Toadstool Hollow. Destroy this note so it doesn’t fall into the wrong hands.
+@1007 = ~Skann, I need you to deliver a large shipment of my work to several interested parties. Meet me at the marked location at Toadstool Hollow. Destroy this note so it doesn’t fall into the wrong hands.
 
 Delgorth~
 @1008 = ~Keltormir, the Fallen Empire~
@@ -373,17 +373,17 @@ Equipped abilities:
 
 Weight: 1~
 @1058 = ~Shield Fragment~
-@1059 = ~This looks like a central part of some shield. Without the other half, however, it's unusable.
+@1059 = ~This appears to be the central piece of a shield. Without the outer frame, however, it is unusable.
   
 STATISTICS:
 
 Weight: 0~
-@1060 = ~This looks like a central part of some shield. Without the other half, however, it's unusable.
+@1060 = ~This appears to be the central piece of a shield. Without the outer frame, however, it is unusable.
   
 STATISTICS:
 
 Weight: 0~
-@1061 = ~This looks like frame of some shield. Without the central part of it, however, it's unusable.
+@1061 = ~This appears to be the outer frame of a shield. Without its central component, however, it is unusable.
   
 STATISTICS:
 
@@ -608,21 +608,17 @@ Requires:
 
 Weight: 6~
 @1095 = ~Hide Armor~
-@1096 = ~4th Beast's Hide +3~
-@1097 = ~This magic hide armor was created from scraps of different scraps of animals: pelt of a winter wold, strengthened with parts of ankheg shell and wyvern scales. While the hide is the main part of the armor, and the other two seem to be used for the sake of it's durability and look, it's all been merged together with raw magic. 
+@1096 = ~Hide of the Tamed Wild +3~
+@1097 = ~Forged by Cromwell from the remnants of fierce beasts, this armor has been tamed by ancient runes. It no longer rages with primal fury—but it remembers. The winter wolf’s chill, the ankheg’s armored carapace, and the wyvern’s venomous legacy all linger beneath the surface, held in quiet tension.
 
-What is the fourth beast, if it's made mostly with parts of three different creatures? Well, the fourth beast is the one that wears it, as only such a person would be eager to wear this prmitive and somewhat bloody armor made of different scraps. No matter how powerful it is.
+It is said that only one who walks the line between nature and civilization can bear the hide without losing <PRO_HIMHER>self.
 
 STATISTICS:
 
-Charge abilities:
-– Once per day may summon one random creature (winter wolf, ankheg or baby wyvern)
-
-Combat abilities:
-– Physical damage resistance: +5%
-– Each succeful hit made against the wearer of the armor has 40% chance to apply +1 THAC0 bonus for 1 round (cumulative)
-
 Equipped abilities:
+– Cold Resistance: +10% 
+– Acid Resistance: +10% 
+– Saving Throws vs. Death: +2
 – Open Locks: -10%
 – Find Traps: -10%
 – Pick Pockets: -10%

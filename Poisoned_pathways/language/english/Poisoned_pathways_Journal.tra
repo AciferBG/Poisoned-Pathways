@@ -11,7 +11,7 @@ Merethan pointed me to Skann Delth, a small-time poison peddler who loiters on t
 
 @12002 = ~The Perfect Poison
 
-I confronted Skann Delth and forced his hand. I obtained a map to a secluded site called Toadstool Hollow in the Snakewood. I must bring this map to Merethan, who awaits me at the Temple of Ilmater in the slums of Athkatla.~
+I confronted Skann Delth and obtained a map to a secluded site called Toadstool Hollow. I must bring this map to Merethan, who awaits me at the Temple of Ilmater in the slums of Athkatla.~
 
 @12003 = ~The Perfect Poison
 
@@ -94,15 +94,15 @@ An Eldathyn messenger found me near Suldanessellar. He bears news from Duskwood 
 
 @12202 = ~Undead in Myth Unnohyr
 
-In Duskwood Dell I was introduced to Mismal Al’Visalle, serving among the Mielikkians. He and the Fallskeeper fear that Myth Unnohyr has worsened since my last battle there. Mismal believes an ancient wyrd has possessed the corpse of Commander Elv-Esster Aened and is feeding on Myth Unnohyr’s broken magic. If left unchecked, its undead will spill into the surrounding lands. Mismal will lead me to Myth Unnohyr.~
+In Duskwood Dell I was introduced to the ranger Mismal Al’Visalle. He and the Fallskeeper fear that Myth Unnohyr has worsened since my last battle there. Mismal believes an ancient undead evil he named 'wyrd' has possessed the corpse of the former elven commander and is feeding on Myth Unnohyr’s broken magic. If left unchecked, its undead will spill into the surrounding lands. Mismal will lead me to Myth Unnohyr.~
 
 @12207 = ~Undead in Myth Unnohyr
 
-We entered Myth Unnohyr. The way back was sealed by tangled growth—our only path runs forward through the heart of the ruins. Mismal will scout ahead; we are to meet beyond the tower.~
+I entered Myth Unnohyr. The way back was sealed by tangled growth—my only path runs forward through the heart of the ruins. Mismal will scout ahead; we are to meet beyond the tower.~
 
 @12208 = ~Undead in Myth Unnohyr
 
-The wyrd manifested first as a banshee wearing Elv-Esster’s face. With a scream it struck down Mismal’s form and tightened its hold over the city. There will be no retreat.~
+The wyrd manifested first as an undead wearing Elv-Esster’s face. It killed Mismal and tightened its hold over the city. There will be no retreat.~
 
 @12209 = ~Undead in Myth Unnohyr
 
@@ -114,11 +114,11 @@ I destroyed the symbiotes. An elven spirit bade me meet him beneath Mythrien’s
 
 @12212 = ~Undead in Myth Unnohyr
 
-In the crypts below, I met the elven spirit again. He urged me to find the Green Rose of Mythrien and bear it to the temple’s heart to call upon the god’s aid.~
+In the crypts below, I met the elven spirit again. He urged me to find the Green Rose of Mythrien and bear it to the temple’s heart to call upon the god’s aid. I should be able to find the rose among the ones still blooming in Myth Unnohyr.~
 
 @12213 = ~Undead in Myth Unnohyr
 
-I found the Green Rose of Mythrien. Its petals still breathe through the city’s sorrow. With it, I can attempt the summoning at the temple.~
+I found the Green Rose of Mythrien. With it, I can attempt the summoning at Mythrien's old temple.~
 
 @12214 = ~Undead in Myth Unnohyr
 
@@ -130,7 +130,7 @@ The wyrd is defeated. Its hunger is silenced and Myth Unnohyr—at last—can br
 
 @12217 = ~Undead in Myth Unnohyr
 
-Mythrien cannot restore the Mythal, but he has steadied it for a single year; during that time no corruption shall rise to feed upon it. As thanks he returned the Green Rose, now bearing a ward against hostile sorcery.~
+I have informed Mythrien of the wyrd’s destruction. As thanks he returned the Green Rose, now bearing a ward against hostile sorcery. He cannot restore the Mythal, but he has steadied it for a single year; during that time no corruption shall rise to feed upon it.~
 
 @12218 = ~Undead in Myth Unnohyr
 
@@ -139,6 +139,36 @@ An elven spirit thanked me: the silence is lifted, and Myth Unnohyr’s name may
 @12219 = ~Undead in Myth Unnohyr
 
 I returned to Duskwood Dell. Fallskeeper Alatoasz received the news and rewarded my efforts. With divine aid, Myth Unnohyr will know a year of quiet.~
+
+/******************************
+SIDE quest journal entries
+******************************/
+// Duskwood Dell – Missing Faerie Twins Quest
+
+@13000 = ~The Missing Faerie Twins
+
+The faeries of Duskwood Dell are missing. Brother Edrim has asked me to look into their disappearance. The twins were last seen speaking with a merchant dressed in bright red silk. The merchant continued west, toward Athkatla. He may be hiding among the traders of Waukeen’s Promenade. If he truly traffics in magical curiosities, someone there will have noticed him.~
+
+@13001 = ~The Missing Faerie Twins
+
+Among the stalls of Waukeen’s Promenade, I have encountered a curious merchant who fits Brother Edrim’s description — a man in red silk, dealing in peculiar items and speaking with a strange, almost hypnotic charm. Something about him feels... wrong.~
+
+@13002 = ~The Missing Faerie Twins
+
+The merchant calling himself Zar’khaan is no merchant at all, but a Rakshasa in disguise. I must find out if he carries the Dell-Light Twins with him — perhaps sealed within some kind of small vessel or enchanted trinket.~
+
+
+@13003 = ~The Missing Faerie Twins
+
+I have found the Dell-Light Twins. The Rakshasa imprisoned them within a magical vessel sealed by powerful enchantment. Though the faeries seem unharmed, the jar refuses to open. I should return it to Brother Edrim in Duskwood Dell — perhaps he will know how to break the seal.~
+
+
+@13004 = ~The Missing Faerie Twins
+
+I have brought the faerie glass back to Brother Edrim in Duskwood Dell. He was able to brake the seal, and the Dell-Light Twins have emerged unharmed. Their laughter once again dances through Duskwood Dell. Peace — and some mischief — have returned to this quiet corner of the world.~
+
+
+
 
 
 

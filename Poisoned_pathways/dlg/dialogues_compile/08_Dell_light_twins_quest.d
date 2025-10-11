@@ -26,6 +26,7 @@ CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",8)~ THEN AC#PPFAE hello_free
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Thank you! A hundred blessings and a hundred sparkles upon you, <CHARNAME>! We’d have kissed your boots if they weren’t so terribly muddy.~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Thank you, <CHARNAME> — truly. You’ve given us back the wind, the light, and the laughter. We’ll never forget the sound of your voice breaking that dreadful silence.~  
 DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",10)
+AddJournalEntry(@13004,QUEST_DONE)
 EscapeArea()~
 EXIT
 
@@ -351,7 +352,7 @@ CHAIN AC#PPZAR store_strange
 ~Unusual? I prefer selective. Every item here has a story, and some stories simply... refuse to end.~
 == AC#PPZAR ~Strangeness sells, my friend. Ordinary things have such dull appetites. Still, I admire your eye — most pass by without noticing that my curiosities notice them back.~
 END
-IF~~THEN EXTERN AC#PPZAR hub
+IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
 
 
 CHAIN AC#PPZAR start_store
@@ -377,7 +378,7 @@ CHAIN AC#PPZAR wish_doubt
 ~Too good to be true? But truth has never been the measure of value, has it? What matters is that it works.~
 == AC#PPZAR ~You doubt, yet you’re still listening. That’s the mark of a wise buyer. Tell you what — take a look at the script yourself. The words are simple, almost childlike. Even fate enjoys a good jest now and then.~
 END
-IF~~THEN EXTERN AC#PPZAR hub
+IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
 
 
 
