@@ -1,4 +1,13 @@
 IF
+    Global("FairyTwinsKidnapQuest","GLOBAL",8)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogueNoSet([PC])
+END
+
+IF
+    !Global("FairyTwinsKidnapQuest","GLOBAL",8)
     OR(2)
         TimeOfDay(MORNING)
         TimeOfDay(DAY)

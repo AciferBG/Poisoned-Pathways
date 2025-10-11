@@ -83,10 +83,11 @@ CHAIN IF ~RandomNum(3,3)~ THEN AC#PP06B story_04
 ==AC#PP06B ~But the giant did not step. He listened. And in his stillness, the world grew a little kinder.~
 EXIT
 
-// Eldathyn that can be angered
+// Brother Edrim, name prank; Dell-Light Twins quest
 BEGIN ~AC#PPMAN~
 
-IF ~NumTimesTalkedTo(0)~ THEN BEGIN hello_0
+IF ~NumTimesTalkedTo(0)
+!Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello_0
   SAY ~Welcome, traveler. Few arrive in Duskwood Dell by chance. What brings you beneath these boughs?~
   IF ~~ THEN REPLY ~What is this place?~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
@@ -101,15 +102,19 @@ IF ~NumTimesTalkedTo(0)~ THEN BEGIN hello_0
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
 END
 
-IF ~Global("WrongHighPriestName","ACPP01",10)~ THEN BEGIN hello__10
+IF ~Global("WrongHighPriestName","ACPP01",10)
+!Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello__10
   SAY ~Before you're asking: You'll find the Most Exalted Fallskeeper Alatoasz Berendim in the northeastern treehouse, near the water. Anything else?~
   IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
   IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
+  IF ~GlobalGT("FairyTwinsKidnapQuest","GLOBAL",3)
+  GlobalLT("FairyTwinsKidnapQuest","GLOBAL",10)~ THEN REPLY ~It’s about the Dell-Light Twins.~ GOTO chain_about_dell_light_twins_kidnapped
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
 END
 
-IF ~True()~ THEN BEGIN hello_1
+IF ~True()
+!Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello_1
   SAY ~Greetings again. What can I do for you, seeker of peace?~
   IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
@@ -121,6 +126,9 @@ IF ~True()~ THEN BEGIN hello_1
   IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~My search continues for the Most Inflated Fartsleeper Analoss Bladderbim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
   IF~Global("AC#PPSpellCheckPoison","GLOBAL",0)~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPMAN looking_for_highpriest
   IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
+  IF ~GlobalGT("FairyTwinsKidnapQuest","GLOBAL",3)
+  GlobalLT("FairyTwinsKidnapQuest","GLOBAL",10)~ THEN REPLY ~It’s about the Dell-Light Twins.~ GOTO chain_about_dell_light_twins_kidnapped
+
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
 END
 
@@ -128,6 +136,71 @@ IF ~~ THEN BEGIN bye
   SAY ~May your path be soft beneath your feet, and your spirit undisturbed.~
   IF ~~ THEN EXIT
 END
+
+// Brother Edrim – reports the missing faeries two days later
+CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN AC#PPMAN hello_twins_kidnapped
+~A word, <CHARNAME>. You spoke not long ago with the two little faeries who call themselves the Dell-Light Twins.~
+END
+IF ~~ THEN REPLY ~You mean those two little nuisances that keep laughing and glowing all the time?~ EXTERN AC#PPMAN twins_kidnapped_01
+IF ~~ THEN REPLY ~Ah, yes — the cheerful pair who light up the Dell at night. What about them?~ EXTERN AC#PPMAN twins_kidnapped_01
+IF ~~ THEN REPLY ~The Dell-Light Twins? They seemed harmless enough — a bit talkative, perhaps.~ EXTERN AC#PPMAN twins_kidnapped_01
+IF ~~ THEN REPLY ~Those two faeries were delightful! Please don’t tell me something’s happened to them.~ EXTERN AC#PPMAN twins_kidnapped_01
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_01
+	~They can be a little tiresome at times, yes, but they’ve long been part of life here in Duskwood Dell. I fear something has happened to them — they’ve vanished without a trace.~
+	END
+	IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",3)~ EXTERN AC#PPMAN twins_kidnapped_02
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_02
+	~I fear they’ve come to harm... or worse — they may have been taken.~
+	END
+	IF ~~ THEN REPLY ~Taken?~ EXTERN AC#PPMAN twins_kidnapped_03
+	IF ~~ THEN REPLY ~I don’t have time for this. Ask someone else to look for them.~ EXTERN AC#PPMAN twins_kidnapped_decline_bye
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_03
+	~Taken, yes. They left the Dell at dusk, saying they wished to have an adventure. I sent an owl to keep watch — just in case.~
+	=	
+	~The bird followed them along the Eshpurta Road leading toward Athkatla. It saw them speaking with a merchant, and then... they simply vanished. The merchant continued west, alone.~
+	=
+	~My owl lost sight of him, distracted by a family of mice on the roadside — she’s easily tempted. But tell me, <CHARNAME>, what kind of merchant travels that road at night, without guards? And why have the twins not returned or sent a sign since?~
+	END
+	IF ~~ THEN REPLY ~Perhaps they turned invisible out of fear and are hiding somewhere?~ EXTERN AC#PPMAN twins_kidnapped_turned_invisible
+	IF ~~ THEN REPLY ~If this is another one of their pranks, I’m not falling for it.~ EXTERN AC#PPMAN twins_kidnapped_turned_invisible
+	IF ~~ THEN REPLY ~I’ll look for them.~ EXTERN AC#PPMAN twins_kidnapped_04
+	IF ~~ THEN REPLY ~I don’t have time for this. Ask someone else.~ EXTERN AC#PPMAN twins_kidnapped_decline_bye
+
+		CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_turned_invisible
+		~I doubt it. They’ve never stayed away this long before.~
+		END
+		IF ~~ THEN REPLY ~I’ll look for them.~ EXTERN AC#PPMAN twins_kidnapped_04
+		IF ~~ THEN REPLY ~I don’t have time for this.~ EXTERN AC#PPMAN twins_kidnapped_decline_bye
+
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_04
+	~Thank you! As I said, the merchant was headed toward Athkatla. Where he might be within that vast city, I cannot guess — but surely you know your way around better than I. Mayhap a place where merchants gather would be the best place to begin.~
+	END
+	IF ~~ THEN REPLY ~There’s a large marketplace there — Waukeen’s Promenade.~ EXTERN AC#PPMAN twins_kidnapped_05
+	IF ~~ THEN REPLY ~Do you have any description of this merchant?~ EXTERN AC#PPMAN twins_kidnapped_any_clue
+	IF ~~ THEN REPLY ~I don’t have time for this.~ EXTERN AC#PPMAN twins_kidnapped_decline_bye
+
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_any_clue
+	~He was dressed in bright red silk — quite extravagant, really. He must have been wealthy, which makes it all the stranger that he walked the Eshpurta Road alone, and at night, without any guards. Otherwise, there was nothing unusual about him... to an owl's eye, at least.~
+	END
+	IF ~~ THEN REPLY ~There’s a large marketplace in Athkatla — Waukeen’s Promenade. I’ll start my search there and look for the merchant in red silk.~ EXTERN AC#PPMAN twins_kidnapped_05
+	IF ~~ THEN REPLY ~I don’t have time for this.~ EXTERN AC#PPMAN twins_kidnapped_decline_bye
+
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_05
+	~Thank you for taking this upon yourself. Please, bring the twins back safely to Duskwood Dell. It would feel... emptier without their pranks and laughter.~
+	END
+	IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",4)~ EXIT
+
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_decline_bye
+	~I see. I had hoped you might lend us your aid, but I shall seek help elsewhere then.~
+	EXIT
+
 
 CHAIN IF ~~ THEN AC#PPMAN looking_for_highpriest
 ~Oh, you're looking for Most Exalted Fallskeeper Alatoasz Berendim? He can be found in one of the trees — the northeastern one, near the water. You'll most likely find him in the canopy, where he discusses difficult matters with the birds of the forest.~
@@ -182,7 +255,34 @@ END
 	~Do that. He’ll be glad to meet you.~
 	EXIT
 
+// Player returns to speak about the missing faeries
+CHAIN IF ~~ THEN AC#PPMAN chain_about_dell_light_twins_kidnapped
+~Oh! Have you found them?~
+END
+  IF ~PartyHasItem("AC#PPFYG")~ THEN REPLY ~The merchant had captured them. They’re inside this glass jar — alive and unharmed, but... it won’t open.~ GOTO twins_jar
+  IF ~~ THEN REPLY ~Not yet, I’m still searching.~ GOTO twins_search_bye
 
+CHAIN IF ~~ THEN AC#PPMAN twins_jar
+~By the gods, what luck! Let me see that...~
+END
+  IF ~~ THEN DO ~TakePartyItem("AC#PPFYG") DestroyItem("AC#PPFYG")~ GOTO twins_jar_02
+
+CHAIN IF ~~ THEN AC#PPMAN twins_jar_02
+~They are safe! Eldath be praised.~
+END
+  IF ~~ THEN REPLY ~The jar still won’t open.~ GOTO twins_jar_03
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_jar_03
+	~Not outside Duskwood Dell, no — but here, in this place of peace, nothing living can remain imprisoned.  Watch closely... the seal yields as easily as water parts for light.~
+	END
+	 IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",8)
+	CreateCreature("AC#PPFAE",[-1.-1],S)~ EXIT
+
+	CHAIN IF ~~ THEN AC#PPMAN twins_search_bye 
+	~Please, keep searching. I fear for them with every passing day.~
+	EXIT
+
+  
 CHAIN IF ~~ THEN AC#PPMAN seek_worm
 ~Earthworms? You’d have to dig up the whole sacred ground to find one. No, I’m afraid I can’t help you there.~
 END

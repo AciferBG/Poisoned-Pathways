@@ -25,14 +25,38 @@ THEN
 END
 
 IF
+    GlobalTimerExpired("FairyTwinsKidnapped","GLOBAL")
+    Global("FairyTwinsKidnapQuest","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("FairyTwinsKidnapQuest","GLOBAL",2)
+END
+
+IF
+    GlobalGT("AC#PP_TalkedToFaeries","GLOBAL",0)
+    Global("FairyTwinsKidnapQuest","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("FairyTwinsKidnapped","GLOBAL",TWO_DAYS)
+        SetGlobal("FairyTwinsKidnapQuest","GLOBAL",1)
+END
+
+IF
     !InMyArea("AC#PPFAE")  // Dewlight Twins
         OR(2)
         TimeOfDay(DUSK)
         TimeOfDay(NIGHT)
     Global("FairyTwins","ACPP01",0)
+    !Global("FairyTwinsKidnapQuest","GLOBAL",2)
+    !Global("FairyTwinsKidnapQuest","GLOBAL",3)
+    !Global("FairyTwinsKidnapQuest","GLOBAL",4)
+    !Global("FairyTwinsKidnapQuest","GLOBAL",5)
+    !Global("FairyTwinsKidnapQuest","GLOBAL",6) //Rakshasa dead
+    !Global("FairyTwinsKidnapQuest","GLOBAL",7) //party has jar w/ fairies
+    !Global("FairyTwinsKidnapQuest","GLOBAL",8) //jar opened
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPFAE",[810.952],S)  // Dewlight Twins
+        CreateCreature("AC#PPFAE",[810.952],S)  // Dell-light Twins
         SetGlobal("FairyTwins","ACPP01",1)
 END
 

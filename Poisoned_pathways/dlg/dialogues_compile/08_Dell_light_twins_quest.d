@@ -2,7 +2,35 @@
 // the Dell-Light Twins
 BEGIN AC#PPFAE
 
-CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPFAE hello_0
+CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",10)~ THEN AC#PPFAE hello_saviour
+~^0xFFE3B0FF Lilafern: ^-<CHARNAME>! The world feels wide again — the air, the light, even the sound of your footsteps!~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-If we could bottle freedom, it would sound just like that — and sparkle twice as bright!~
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-No more bottles, Tippledew — ever. I’d rather sleep in a dragon’s mouth than in another jar!~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Have you come to make a wish, or to solve some riddles?~
+END   
+IF~~THEN REPLY ~A wish, perhaps… can you really grant one?~ EXTERN AC#PPFAE Dusklight_Wish  
+IF~~THEN REPLY ~You want to ask riddles? Go ahead.~ EXTERN AC#PPFAE Dusklight_riddles 
+IF~~THEN REPLY ~Stop sparkling near my face, please.~ EXTERN AC#PPFAE Dusklight_Grumpy
+IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pass 
+
+// The faeries are freed in Duskwood Dell
+CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",8)~ THEN AC#PPFAE hello_free
+~^0xFFE3B0FF Lilafern: ^-We’re free!~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-The hero <CHARNAME> has freed us!~
+== AC#PPMAN ~Oh, it’s so wonderful to see you both again!~
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Brother Edrim! You won’t be angry if we start tugging at your robe again, will you?~
+== AC#PPMAN ~No, certainly not. You may tease me as much as you like — I’m just glad you’re safe.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-I tell you, that was *quite* an adventure!~
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-And all that adventuring makes one terribly sleepy!~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Yes, Lilafern. Let’s rest — but not before we thank our rescuer properly.~
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Thank you! A hundred blessings and a hundred sparkles upon you, <CHARNAME>! We’d have kissed your boots if they weren’t so terribly muddy.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Thank you, <CHARNAME> — truly. You’ve given us back the wind, the light, and the laughter. We’ll never forget the sound of your voice breaking that dreadful silence.~  
+DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",10)
+EscapeArea()~
+EXIT
+
+
+CHAIN IF ~Global("AC#PP_TalkedToFaeries","GLOBAL",0)~ THEN AC#PPFAE hello_0
 ~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A tall monster!~
 END
 IF~~THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hello_monster_cont
@@ -17,7 +45,7 @@ IF~~THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hell
 
 CHAIN IF ~True()~ THEN AC#PPFAE hello_again
 ~^0xFFE3B0FF Lilafern: ^-The tall one returns — and still unsparkly, I see!~
-~^0xFF9ADCE3 Tippledew: ^-Have you come to make a wish, or to solve some riddles?~ 
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Have you come to make a wish, or to solve some riddles?~ 
 END
 IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPFAE who_are_you    
 IF~~THEN REPLY ~A wish, perhaps… can you really grant one?~ EXTERN AC#PPFAE Dusklight_Wish  
@@ -43,7 +71,8 @@ IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pa
 
 CHAIN AC#PPFAE what_are_you_really
 ~^0xFFE3B0FF Lilafern: ^-We’re faeries, silly! Too small for your eyes, too quick for your hands.~  
-== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Duskwood Dell is our home! Someone has to keep this peace-loving crowd from dozing off.~  
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Duskwood Dell is our home! Someone has to keep this peace-loving crowd from dozing off.~ 
+== AC#PPFAE ~^0xFF9ADCE3 Lilafern: ^-It’s called Duskwood Dell, after all — not Duskwood *Dull*!~    
 END
 IF~~THEN EXTERN AC#PPFAE hub
 	
@@ -57,7 +86,7 @@ IF~~THEN REPLY ~You want to ask riddles? Go ahead.~ EXTERN AC#PPFAE Dusklight_ri
 IF~~THEN REPLY ~Stop sparkling near my face, please.~ EXTERN AC#PPFAE Dusklight_Grumpy
 IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pass 
 
-// Faerie Riddle Scene – Dell-Lightful Twins
+// Faerie Riddle Scene
 CHAIN AC#PPFAE Dusklight_riddles
 ~^0xFFE3B0FF Lilafern: ^-A riddle! A game! Let’s test the tall one’s brain!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Oh yes! Riddles are like sparkles – they reveal who’s dull!~
@@ -268,14 +297,16 @@ EXIT
 BEGIN AC#PPZAR
 
 CHAIN IF ~Global("AC#PPRakAttack","GLOBAL",1)~ THEN AC#PPZAR hello_attack
-~Youdare to attack me? ME?~
+~You dare to attack me? ME?~
 DO ~SetGlobal("AC#PPRakAttack","GLOBAL",2)
+SetGlobal("FairyTwinsKidnapQuest","GLOBAL",5)
 Polymorph(RAKSHASA)
 Enemy()~ EXIT
 
 CHAIN IF ~Global("AC#PPRakPrison","GLOBAL",1)~ THEN AC#PPZAR hello_prison
 ~Foolish mortal! Another soul in my collection!~
 DO ~SetGlobal("AC#PPRakPrison","GLOBAL",2)
+SetGlobal("FairyTwinsKidnapQuest","GLOBAL",5)
 Enemy()~ EXIT
 
 // Zar'khaan urges the player to use the scroll immediately

@@ -1,20 +1,37 @@
 IF
-Global("AC#PPMerSugAth","GLOBAL",1)
-THEN
-RESPONSE #100
-AddStoreItem("ac#pptme","AC#PPBOW",1,1)
-AddStoreItem("ac#pptme","AC#PPFLL",1,1)
-AddStoreItem("ac#pptme","AC#PPHME",1,1)
-AddStoreItem("ac#pptme","AC#PPMRN",1,1)
-//CreateCreature("ac#pptme",[700.2400],13)
-CreateCreature("ac#pptme",[1732.2144],13)
-SetGlobal("AC#PPMerSugAth","GLOBAL",2)
+    Global("AC#PPMerSugAth","GLOBAL",1)
+    THEN
+        RESPONSE #100
+    AddStoreItem("ac#pptme","AC#PPBOW",1,1)
+    AddStoreItem("ac#pptme","AC#PPFLL",1,1)
+    AddStoreItem("ac#pptme","AC#PPHME",1,1)
+    AddStoreItem("ac#pptme","AC#PPMRN",1,1)
+    //CreateCreature("ac#pptme",[700.2400],13)
+    CreateCreature("ac#pptme",[1732.2144],13)
+    SetGlobal("AC#PPMerSugAth","GLOBAL",2)
 END
 
 IF
-Global("AC#PP_RakshasaQuest","GLOBAL",0)
-THEN
-RESPONSE #100
-CreateCreature("AC#PPZAR",[255.2195],13)
-SetGlobal("AC#PP_RakshasaQuest","GLOBAL",1)
+    Global("AC#PP_RakshasaQuest","GLOBAL",0)
+    Global("FairyTwinsKidnapQuest","GLOBAL",4)
+    THEN
+        RESPONSE #100
+    CreateCreature("AC#PPZAR",[255.2195],13)
+    SetGlobal("AC#PP_RakshasaQuest","GLOBAL",1)
+END
+
+IF
+    Dead("AC#PPZAR")
+    Global("FairyTwinsKidnapQuest","GLOBAL",5)
+    THEN
+        RESPONSE #100
+    SetGlobal("FairyTwinsKidnapQuest","GLOBAL",6)
+END
+
+IF
+    PartyHasItem("AC#PPFYG")
+    Global("FairyTwinsKidnapQuest","GLOBAL",6)
+    THEN
+        RESPONSE #100
+    SetGlobal("FairyTwinsKidnapQuest","GLOBAL",7)
 END

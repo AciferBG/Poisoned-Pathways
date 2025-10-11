@@ -1,0 +1,8 @@
+IF
+    Global("FairyTwinsKidnapQuest","GLOBAL",2)
+    See([PC])
+THEN
+    RESPONSE #100
+        StartDialogueNoSet([PC])
+END
+
