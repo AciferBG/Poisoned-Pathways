@@ -287,7 +287,7 @@ CHAIN IF ~Global("AC#PP_PlotStart","GLOBAL",3)~ THEN AC#PPEL1 hello_02
 ~Good to see you again! Were you able to make Skann Delth talk? Do you know where he’s meeting the poison supplier?~
 END
 IF~Global("AC#PPHasMap","GLOBAL",1)
-PartyHasItem("AC#PPMP1") ~THEN REPLY ~Yes, I managed to get the information. I’ve got a document that mentions the location.~ DO ~SetGlobal("AC#PPHasMap","GLOBAL",10) TakePartyItem("AC#PPMP1") DestroyItem("AC#PPMP1") AddJournalEntry(@12003,QUEST)~ EXTERN AC#PPEL1 about_glade
+PartyHasItem("AC#PPMP1") ~THEN REPLY ~Yes, I managed to get the information. I’ve got a document that mentions the location.~ DO ~SetGlobal("AC#PPHasMap","GLOBAL",10) TakePartyItem("AC#PPMP1") DestroyItem("AC#PPMP1")~ EXTERN AC#PPEL1 about_glade
 IF~~THEN REPLY ~No, I haven’t found anything yet.~ EXTERN AC#PPEL1 bye_wait
 
 CHAIN IF ~~ THEN AC#PPEL1 about_glade
@@ -312,7 +312,7 @@ StartCutScene("AC#PPCT1")~ EXIT
 
 CHAIN AC#PPEL1 bye_wait
 ~Then I shall remain here and wait for you.~
-EXIT
+DO ~AddJournalEntry(@12003,QUEST)~ EXIT
 
 // Dialogue Eldath priest #1 in Athkatla
 

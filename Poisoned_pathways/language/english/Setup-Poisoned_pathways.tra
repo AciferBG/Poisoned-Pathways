@@ -36,7 +36,7 @@
 @43 = ~Blood Puddle~
 @44 = ~Mesmerized Ankheg~
 @45 = ~Mismal Al'Visalle~
-@46 = ~Wild Wyrd~
+@46 = ~The Wyrd of Myth Unnohyr~
 @47 = ~Blood-Soaked Spirit~
 @48 = ~Gruesome Symbiote~
 @49 = ~Elven Spirit~
@@ -129,6 +129,7 @@
 @911 = ~Sleep Drone~
 @912 = ~Death Shroud~
 @913 = ~Eldath’s Soothing Presence~
+@914 = ~Wild Magic Eruption~
 
 @920 = ~^0xFF22B4E6has gained +1% resistance to slashing damage. ^-~
 @921 = ~^0xFF22B4E6has gained +1% resistance to missile damage. ^-~

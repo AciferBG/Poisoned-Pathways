@@ -23,7 +23,9 @@ IF
 THEN
     RESPONSE #100
         ActionOverride("Anvil",DestroyItem("AC#PPCO1"))  
-        ActionOverride("Anvil",DestroyItem("AC#PPCO2"))  
+        ActionOverride("Anvil",DestroyItem("AC#PPCO2")) 
+        ActionOverride("Anvil",DestroyItem("AC#PPWIW"))
+        ActionOverride("Anvil",DestroyItem("AC#PPWOD")) 
         SetGlobal("AnvilAmulet","ACPP79",1)
         ScreenShake([20.45],15)
         ActionOverride("Anvil",CreateItem("AC#PPCO3",0,0,0))  // Amulet
