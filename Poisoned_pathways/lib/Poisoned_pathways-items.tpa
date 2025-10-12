@@ -102,6 +102,18 @@ COPY ~%MOD_FOLDER%/itm/AC#PPNT2.itm~ ~override~ // note #2, regarding the mythal
 ///////// CANDLES AND SPELLS///////////////
 ///////////////////////////////////////////
 
+// cleric spell scroll
+COPY ~%MOD_FOLDER%/itm/AC#PPCCC.itm~ ~override~
+  SAY NAME1 @1098
+  SAY NAME2 @1098
+  SAY DESC @1099
+  SAY 0xde @1096
+// mage spell scroll
+COPY ~%MOD_FOLDER%/itm/AC#PPCCM.itm~ ~override~
+  SAY NAME1 @1095
+  SAY NAME2 @1095
+  SAY DESC @1099
+  SAY 0xde @1097
 COPY ~%MOD_FOLDER%/itm/AC#PPCC.itm~ ~override~
   SAY NAME1 @1098
   SAY NAME2 @1098
@@ -250,11 +262,6 @@ COPY ~%MOD_FOLDER%/itm/AC#PPXBO.itm~ ~override~
   SAY NAME1 @1092
   SAY NAME2 @1093
   SAY DESC @1094
-
-COPY ~%MOD_FOLDER%/itm/AC#PPBEA.itm~ ~override~
-  SAY NAME1 @1095
-  SAY NAME2 @1096
-  SAY DESC @1097
 
 COPY ~%MOD_FOLDER%/itm/AC#PPNT1.itm~         ~override~    // Delgorth's note
   SAY NAME2 @1067

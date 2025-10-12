@@ -47,7 +47,6 @@ EXTEND_TOP ~ar0800.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: fi
 EXTEND_TOP ~ar0900.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 EXTEND_TOP ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 
-EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334_02.baf~
 
 // Patching GENSHY script to prevent running away
 COPY_EXISTING ~GENSHY.BCS~ ~override~

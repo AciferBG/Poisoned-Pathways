@@ -4,28 +4,21 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("BearHoney","ACPP07",1)
-        StartCutSceneMode()
+        SetInterrupt(FALSE)
+        DialogInterrupt(FALSE)
         DisplayStringHead(Myself,@2069)  // Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!
-        Wait(5)
+        Wait(3)
         DisplayStringHead(Myself,@2070)  // Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.
         Wait(3)
         SmallWait(15)
         CreateVisualEffectObject("SPFLESHS",Myself)
         Polymorph(MONK)
-        Wait(1)
         SmallWait(30)
         SetGlobal("BearChange","ACPP07",1)
+        SetInterrupt(TRUE)
+        DialogInterrupt(TRUE)
         StartDialogueNoSet([PC])
-        //EndCutSceneMode()
 END
 
-/*
-IF
-    Global("BearChange","ACPP07",1)
-    See([PC])
-THEN
-    RESPONSE #100
-        StartDialogueNoSet([PC])
-END
-*/
+
 

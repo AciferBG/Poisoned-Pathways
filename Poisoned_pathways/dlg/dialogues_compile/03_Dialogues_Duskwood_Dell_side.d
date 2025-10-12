@@ -809,6 +809,7 @@ CHAIN IF ~True()~ THEN AC#PPON2 hello_again
 END
 IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",0)
 GlobalLT("AC#PP_HoneyQuest","GLOBAL",10)~THEN REPLY ~It is about the mead.~ EXTERN AC#PPON2 about_mead
+IF~~THEN REPLY ~What are you doing here?~ EXTERN AC#PPON2 what_do_you_do
 IF~~THEN REPLY ~I shall not keep you from your honey. Farewell.~ EXTERN AC#PPON2 bye
 
 
@@ -862,12 +863,16 @@ CHAIN AC#PPON2 human_form
 ~Now that I stand before you in my own skin again... what service might a humble monk of Eldath offer you?~
 END
 IF~~THEN REPLY ~What are you doing here?~ EXTERN AC#PPON2 what_do_you_do
-IF~~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
+IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",1)~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
+IF~Global("AC#PP_HoneyQuest","GLOBAL",0)~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 five_flagons_quest_start
 
 	CHAIN AC#PPON2 what_do_you_do
-	~What am I doing? Why, I tend the bees, of course! Together we weave harmony into honeycomb, turning blossoms into liquid sunlight. It is not just honey that we make here, but peace itself—thick and golden, sweet upon the tongue. Many wanderers pass by with burdens heavy on their shoulders, and I give them a spoonful. You would be surprised how many quarrels melt away when lips are sticky with honey.~ 
+	~What am I doing? Why, I tend the bees, of course! Together we weave harmony into honeycomb, turning blossoms into liquid sunlight. It is not just honey that we make here, but peace itself—thick and golden, sweet upon the tongue.~ 
+	=
+	~Many wanderers pass by with burdens heavy on their shoulders, and I give them a spoonful. You would be surprised how many quarrels melt away when lips are sticky with honey.~ 
 	END
-	IF~~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 five_flagons_quest_start
+	IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",1)~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
+	IF~Global("AC#PP_HoneyQuest","GLOBAL",0)~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 five_flagons_quest_start
 	
 // Einstieg: erkennt den Spieler
 CHAIN AC#PPON2 five_flagons_quest_start

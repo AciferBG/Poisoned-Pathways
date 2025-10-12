@@ -480,8 +480,8 @@ COPY ~%MOD_FOLDER%/spl/AC#PPBLO.spl~ ~override~
   
 // candle spells:
 COPY ~%MOD_FOLDER%/spl/AC#PPCC.spl~ ~override~
-  SAY NAME1 @1098
-  SAY NAME2 @1098
+  SAY NAME1 @1095
+  SAY NAME2 @1095
   SAY UNIDENTIFIED_DESC @1100
 
 COPY ~%MOD_FOLDER%/spl/AC#PPCCX.spl~ ~override~

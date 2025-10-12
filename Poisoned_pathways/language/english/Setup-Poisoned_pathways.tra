@@ -607,29 +607,10 @@ Requires:
  8 Strength
 
 Weight: 6~
-@1095 = ~Hide Armor~
-@1096 = ~Hide of the Tamed Wild +3~
-@1097 = ~Forged by Cromwell from the remnants of fierce beasts, this armor has been tamed by ancient runes. It no longer rages with primal fury—but it remembers. The winter wolf’s chill, the ankheg’s armored carapace, and the wyvern’s venomous legacy all linger beneath the surface, held in quiet tension.
-
-It is said that only one who walks the line between nature and civilization can bear the hide without losing <PRO_HIMHER>self.
-
-STATISTICS:
-
-Equipped abilities:
-– Cold Resistance: +10% 
-– Acid Resistance: +10% 
-– Saving Throws vs. Death: +2
-– Open Locks: -10%
-– Find Traps: -10%
-– Pick Pockets: -10%
-– Move Silently: -20%
-
-Armor Class: 3 (5 vs. piercing and missile)
-Requires:
- 6 Strength
-
-Weight: 35~
-@1098 = ~Create Mystic Candle~
+@1095 = ~Create Mystic Candle (Mage)~
+@1096 = ~Create Mystic Candle (Level 5) has been added to your priest spellbook.~
+@1097 = ~Create Mystic Candle (Level 5) has been added to your mage spellbook.~
+@1098 = ~Create Mystic Candle (Priest)~
 @1099 = ~Create Mystic Candle
 (Evocation)
 
@@ -640,7 +621,7 @@ Casting Time: 8
 Area of Effect: The caster
 Saving Throw: None
 
-This spell allows the caster to create one Mystic Candle that is able to hold special enchantment which may be trigger when the candle it used. That means the caster may use some power and other ingredients to store it in a form of a candle for later use. Each color candle has different effects:
+This spell allows the caster to create a Mystic Candle capable of holding a special enchantment, which may be triggered when the candle is used. The caster can channel magical power and certain ingredients into the candle, storing the spell for later use. Each color of candle produces a different effect:
 
 Red - Charm Person or Mammal
 Blue - Protection from Evil, 10' radius
@@ -652,12 +633,7 @@ White - Neutralize Poison
 Silver - Draw Upon Holy Might
 Black - Doom
 
-The candle may be used by the caster or another character, provided they have at least 12 or more Wisdom. After twenty four hours passes, the candle is destroyed.
-
-* * *
-
-Note: This spell may be learned by mages, clerics and druids. Clerics and druids can learn it by using it through quick slot items. This spell cannot be cast from a scroll.
-~
+The candle may be used by the caster or another character, provided they have at least 12 or more Wisdom. After twenty four hours passes, the candle is destroyed.~
 @1100 = ~Create Mystic Candle
 (Evocation)
 
