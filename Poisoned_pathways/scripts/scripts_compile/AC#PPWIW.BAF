@@ -2,14 +2,7 @@ IF
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Prismatic Spray
-    RESPONSE #100
-        AttackReevaluate(NearestEnemyOf(Myself),6)
-END
-
-IF
-    See(NearestEnemyOf(Myself))
-THEN
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
     RESPONSE #100
         AttackReevaluate(NearestEnemyOf(Myself),6)
 END

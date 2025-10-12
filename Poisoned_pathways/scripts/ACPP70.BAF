@@ -2,7 +2,7 @@ IF
 	Global("Prep","ACPP70",0)
 THEN
 RESPONSE #100
-	SetMusic(NIGHT,8)
+	SetMusic(NIGHT,27)
 	SetMusic(DAY,%AC#PP70%)
   OpenDoor("DOOR01")
   OpenDoor("DOOR03")  

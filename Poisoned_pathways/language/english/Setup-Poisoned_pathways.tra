@@ -359,20 +359,17 @@ STATISTICS:
 
 Weight: 0~
 @1054 = ~Emblem~
-@1055 = ~Emblem of Eldath~
-@1056 = ~This is a simple emblem. It's not as strong as holy symbols, but it also seem to have some power.
-  
-STATISTICS:
-
-Weight: 0~
-@1057 = ~This emblem of Eldath was enchanted with subtle protection magic. It seems to protect those that have it from poison.
+@1055 = ~Holy Symbol of Eldath~
+@1057 = ~This is a simple emblem depicting Eldath's symbol, carved with care and reverence. Though unassuming in appearance, it seems to offer quiet protection to those who honor the goddess of peace. Its influence subtly guides the bearer away from aggression—enhancing defense while diminishing the drive to strike.
   
 STATISTICS:
 
 Equipped abilities:
-– Immunity to Poison
+– Armor Class: +1
+– Saving Throws: +1
+– THAC0: -2
 
-Weight: 1~
+Weight: 0~
 @1058 = ~Shield Fragment~
 @1059 = ~This appears to be the central piece of a shield. Without the outer frame, however, it is unusable.
   
@@ -400,7 +397,7 @@ STATISTICS:
 Equipped abilities:
 – Armor Class: +4
 – No protection against missile and piercing attacks
-– Movement rate increased by 2
+– Movement rate increased by 1; increased by 2 in forests
 – Saving Throws vs. Ivocation School: +2
 
 Requires:
@@ -555,11 +552,11 @@ Requires:
 Weight: 3
 ~
 @1087 = ~Rose of Eldath~
-@1088 = ~This is a rose blossom, blessed by a priest of Eldath. Those that consume this flower are healed from the horrible effects of all usual poisons and heals over time.
-  
+@1088 = ~This is a rose blossom blessed by a priest of Eldath. When consumed, it gently restores the life energy of the afflicted, reversing any previous level drain caused by unnatural forces or undead creatures. Its petals hum with quiet mercy—offering peace not through strength, but through renewal.
+
 STATISTICS:
 
-Special: Cures poison and heals 6 Hit Points over 1 round
+Special: Removes all level drain effects from the target
 
 Weight: 1~
 @1089 = ~Two-Handed Sword~
@@ -1363,7 +1360,7 @@ As with all such rare works, the book vanishes after a single use.
 
 STATISTICS:
 
-Attacks per Round: Reduced by 1 (permanently)
+Attacks per Round: Reduced by 0.5 (permanently)
 Armor Class: Improved by 1 (permanently)
 Saving Throws: +1 bonus (permanently)
 Special: The book is consumed upon use

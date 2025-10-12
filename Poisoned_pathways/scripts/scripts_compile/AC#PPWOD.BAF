@@ -1,0 +1,8 @@
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),12)
+END
+
