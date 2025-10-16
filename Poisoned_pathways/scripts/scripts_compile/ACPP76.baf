@@ -1,8 +1,8 @@
 IF
-    Global("EnteredArea","ACPP7A",0)  
+    Global("EnteredArea","ACPP76",0)  
 THEN
     RESPONSE #100
         DisplayString(Myself,@2008)
         DisplayStringHead(Player1,@2008)
-        SetGlobal("EnteredArea","ACPP7A",1)  
+        SetGlobal("EnteredArea","ACPP76",1)  
 END

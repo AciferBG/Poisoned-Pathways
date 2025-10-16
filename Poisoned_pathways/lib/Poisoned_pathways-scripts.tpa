@@ -14,10 +14,10 @@ COMPILE ~%MOD_FOLDER%/scripts/ACPP90.baf~  EVAL
 // Append scripts in ACPP74-76 to make corrupted mythal work
 EXTEND_BOTTOM ~ACPP70.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
 //EXTEND_BOTTOM ~ACPP73.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
-EXTEND_BOTTOM ~ACPP74.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
-EXTEND_BOTTOM ~ACPP75.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
-EXTEND_BOTTOM ~ACPP76.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
-EXTEND_BOTTOM ~ACPP7A.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
+//EXTEND_BOTTOM ~ACPP74.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
+//EXTEND_BOTTOM ~ACPP75.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
+//EXTEND_BOTTOM ~ACPP76.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
+//EXTEND_BOTTOM ~ACPP7A.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
 EXTEND_BOTTOM ~ACPP80.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
 
 EXTEND_TOP ~ar0408.bcs~ ~%MOD_FOLDER%/scripts/_ar0408.baf~ // plot start: 2nd encounter of eldathyn cleric in temple of ilmater in the slums
@@ -34,6 +34,9 @@ EXTEND_TOP ~PREY.bcs~ ~%MOD_FOLDER%/scripts/_PREY.baf~
 
 // Patch prey script to affect wearer of Eldath's cloak
 EXTEND_TOP ~HUNTER.bcs~ ~%MOD_FOLDER%/scripts/_PREY.baf~
+
+// Will-O'-Wisp script
+COMPILE ~%MOD_FOLDER%/scripts/AC#PPWOW.baf~  EVAL
 
 // create priest of Eldath in area AR2500 (Exit underdark after talk with Elhan)
 EXTEND_TOP ~WARSAGE.bcs~ ~%MOD_FOLDER%/scripts/_AR2500.baf~

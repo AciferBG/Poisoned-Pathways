@@ -1,17 +1,9 @@
 IF
-Global("AC#PPChapter6Quest","GLOBAL",5)
-Global("AC#PPCreateWeirdling","ACPP79",0)
-THEN
-RESPONSE #100
-CreateCreature("AC#PPSYM",[440.350],1)
-SetGlobal("AC#PPCreateWeirdling","ACPP79",1)
-END
-
-IF
     Global("EnteredArea","ACPP79",0)  
 THEN
     RESPONSE #100
         DisplayString(Myself,@2008)
+        DisplayStringHead(Player1,@2008)
         SetGlobal("EnteredArea","ACPP79",1)  
 END
 
@@ -32,4 +24,15 @@ THEN
         Wait(2)
         AddExperienceParty(1000)
 END
+
+/*
+IF
+Global("AC#PPChapter6Quest","GLOBAL",5)
+Global("AC#PPCreateWeirdling","ACPP79",0)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPSYM",[440.350],1)
+SetGlobal("AC#PPCreateWeirdling","ACPP79",1)
+END
+*/
 

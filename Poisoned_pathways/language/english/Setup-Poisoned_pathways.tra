@@ -10,7 +10,7 @@
 @17 = ~Maiden of the Grotto~
 @18 = ~Zombie Treant~
 @19 = ~Sister Irinwe~
-@20 = ~Will-o'-wisp~
+@20 = ~Will-O'-Wisp~
 @21 = ~Erlavanas Myth'yalv~
 @22 = ~Will-o'-pox~
 @23 = ~Wadal Hrun~
@@ -921,9 +921,11 @@ Weight: 1~
 
 The Mythal that once protected Myth Unnohyr is shattered beyond recognition, a festering wound in the Weave itself. Within these ruins, magic frays and collapses without warning—prayers go unanswered, spells twist or wither to dust.
 
-Yet not all is chaos. Certain beings—Will-o'-Wisps among them—seem curiously untouched by the Mythal's corruptive reach. Their resilience hints at the possibility that immunity is not beyond mortal grasp.
+Yet not all is lost. Certain beings—Will-o'-Wisps among them—seem to have adapted to the Mythal’s corruption. Their resilience hints at the possibility that immunity is not beyond mortal grasp.
 
-Before my strength failed me, I theorized that an artifact could be fashioned—one woven with echoes of the original Mythal's purity—to shield its bearer from its tides. I suspect that the very essences of the Wisps themselves, those born of wild magic and those spawned from dead magic, may serve as the heart of such a talisman.
+Before my strength failed me, I theorized that an ancient elven relic might be restored—one capable of channeling the original power of the Mythal to shield its bearer from the effects of its corruption. Perhaps then, spellcasting within these ruins could once again be possible without peril.
+
+I suspect that the essences of wisps born of both wild and dead magic, combined with the elven talisman itself, might yield such an effect. If such rare wisps truly dwell within these ruins, and if one could forge an ancient elven talisman once more, life here would be far less precarious.
 
 Whether such a talisman can truly be made, I shall not live to see.
 
@@ -1392,7 +1394,7 @@ Curiously, this particular scroll may be read by anyone — not merely those tra
 @2005 = ~You must place both pieces of a necklace upon the anvil to reforge them into one.~
 @2006 = ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
 @2007 = ~Could it be you... my beloved, at last?~
-@2008 = ~A quiet relief washes over you—the corrupted mythal’s grip does not reach this place.~
+@2008 = ~The corrupted mythal does not reach this place.~
 @2009 = ~(You feel the pull of the berry-shaped Ioun stone towards the tower. It may be a sign you are now able to enter its walls.)~
 @2010 = ~(You do not have the berry-shaped Ioun stone. You can no longer enter the tower. Without the stone, the barrier is erected.)~
 @2011 = ~A small jeweler’s anvil rests atop a larger one. Fragments of fine chains lie scattered nearby, as though many necklaces were once forged here. Strangely, the anvil radiates strong magic that seems untouched by the corrupted mythal.~

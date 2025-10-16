@@ -1,4 +1,13 @@
 IF
+    Global("EnteredArea","ACPP77",0)  
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2008)
+        DisplayStringHead(Player1,@2008)
+        SetGlobal("EnteredArea","ACPP77",1)  
+END
+
+IF
     Global("HasWardstone","ACPP77",0)
     PartyHasItem("AC#PP77W")  // Elven Wardstone
 THEN

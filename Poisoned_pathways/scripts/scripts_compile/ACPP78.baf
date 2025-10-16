@@ -1,4 +1,13 @@
 IF
+    Global("EnteredArea","ACPP78",0)  
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2008)
+        DisplayStringHead(Player1,@2008)
+        SetGlobal("EnteredArea","ACPP78",1)  
+END
+/*
+IF
 Global("AC#PPChapter6Quest","GLOBAL",5)
 Global("AC#PPCreateWeirdling","ACPP78",0)
 THEN
@@ -6,3 +15,4 @@ RESPONSE #100
 CreateCreature("AC#PPSYM",[440.350],1)
 SetGlobal("AC#PPCreateWeirdling","ACPP78",1)
 END
+*/

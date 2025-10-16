@@ -69,8 +69,8 @@ IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 		==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~Maybe keep the hamster in reserve until we’ve mastered the art of intimidation.~
 		==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Perhaps we ought to rehearse that little act before attempting it again.~
 		==HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~A valiant effort... but perhaps best refined before an encore.~
-		== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~A bold attempt. Still, timing and delivery are everything.~
-		== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~Well, that certainly didn’t go as planned. Next time, let’s try cruelty paired with intelligence.~ 
+		== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~A bold attempt. Still, timing and delivery are everything.~
+		== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~That certainly didn’t go as planned. Next time, try cruelty paired with intelligence.~ 
 		==KorganJ IF ~InParty("korgan") !StateCheck("korgan",CD_STATE_NOTVALID)~ THEN ~Showin' off muscles? I’d rather show him his own bowels spillin’ out. That gets the chatter started, I tell ya!~
 		EXIT
 

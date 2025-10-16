@@ -145,8 +145,8 @@ IF ~Global("AC#PP_RiddleWon","GLOBAL",4)~ THEN EXTERN AC#PPFAE Riddle_finished
 
 	// Riddle bye
 	CHAIN AC#PPFAE Riddle_bye
-	~^0xFFE3B0FFLilafern:^– Oh! No more riddles? How tragic!~
-	== AC#PPFAE ~^0xFFE3B0FFLilafern:^– Come, Tippledew — let’s find someone who appreciates confusion!~  
+	~^0xFFE3B0FF Lilafern: ^-Oh! No more riddles? How tragic!~
+	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Come, Tippledew — let’s find someone who appreciates confusion!~  
 	EXIT
 
 // Riddle #2: – mimic

@@ -1,0 +1,83 @@
+IF
+    TimeOfDay(NIGHT)
+    Global("Polymorph","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("Polymorph","LOCALS",1)
+        Polymorph(AC#WILL_O_DEAD)
+END
+
+IF
+    OR(3)
+        TimeOfDay(MORNING)
+        TimeOfDay(DAY)
+        TimeOfDay(DUSK)
+    Global("Polymorph","LOCALS",1)
+THEN
+    RESPONSE #100
+        SetGlobal("Polymorph","LOCALS",0)
+        Polymorph(WILL_O_WISP)
+END
+
+IF
+    RandomNum(5,1)
+    !TimeOfDay(NIGHT)
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPWispAttackWithSpells","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
+END
+
+IF
+    RandomNum(5,2)
+    See(NearestEnemyOf(Myself))
+    !TimeOfDay(NIGHT)
+    Global("AC#PPWispAttackWithSpells","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
+END
+
+IF
+    RandomNum(5,3)
+    See(NearestEnemyOf(Myself))
+    !TimeOfDay(NIGHT)
+    Global("AC#PPWispAttackWithSpells","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
+END
+
+IF
+    RandomNum(5,4)
+    See(NearestEnemyOf(Myself))
+    !TimeOfDay(NIGHT)
+    Global("AC#PPWispAttackWithSpells","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)  // SPWI308.SPL (Lightning Bolt)
+END
+
+IF
+    RandomNum(5,5)
+    See(NearestEnemyOf(Myself))
+    !TimeOfDay(NIGHT)
+    Global("AC#PPWispAttackWithSpells","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_EMOTION_HOPELESSNESS)  // SPWI411.SPL (Emotion: Hopelessness)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),10)
+END
+
