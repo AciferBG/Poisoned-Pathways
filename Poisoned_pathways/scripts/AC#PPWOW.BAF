@@ -25,9 +25,11 @@ IF
     See(NearestEnemyOf(Myself))
     Global("AC#PPWispAttackWithSpells","LOCALS",0)
 THEN
-    RESPONSE #100
+    RESPONSE #50
         SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
         ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
+    RESPONSE #100
+        Continue()
 END
 
 IF
@@ -36,9 +38,11 @@ IF
     !TimeOfDay(NIGHT)
     Global("AC#PPWispAttackWithSpells","LOCALS",0)
 THEN
-    RESPONSE #100
+    RESPONSE #50
         SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
         ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
+    RESPONSE #100
+        Continue()
 END
 
 IF
@@ -47,9 +51,11 @@ IF
     !TimeOfDay(NIGHT)
     Global("AC#PPWispAttackWithSpells","LOCALS",0)
 THEN
-    RESPONSE #100
+    RESPONSE #50
         SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
         ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
+    RESPONSE #100
+        Continue()
 END
 
 IF
@@ -58,9 +64,11 @@ IF
     !TimeOfDay(NIGHT)
     Global("AC#PPWispAttackWithSpells","LOCALS",0)
 THEN
-    RESPONSE #100
+    RESPONSE #50
         SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
         ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)  // SPWI308.SPL (Lightning Bolt)
+    RESPONSE #100
+        Continue()
 END
 
 IF
@@ -69,9 +77,22 @@ IF
     !TimeOfDay(NIGHT)
     Global("AC#PPWispAttackWithSpells","LOCALS",0)
 THEN
-    RESPONSE #100
+    RESPONSE #50
         SetGlobal("AC#PPWispAttackWithSpells","LOCALS",1)
         ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_EMOTION_HOPELESSNESS)  // SPWI411.SPL (Emotion: Hopelessness)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    TookDamage()
+    See(NearestEnemyOf(Myself))
+    RandomNum(10,1)
+    GlobalLT("WispInvisible","LOCALS",3)
+THEN
+    RESPONSE #100
+        ForceSpell(Myself,WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)
+        IncrementGlobal("WispInvisible","LOCALS",1)
 END
 
 IF

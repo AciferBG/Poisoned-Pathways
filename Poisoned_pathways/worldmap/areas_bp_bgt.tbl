@@ -1,7 +1,7 @@
 
 SHORT_NAME  CONTENT  LONG_NAME  FLAGS  BAM_ANIM  X_POS   Y_POS  NAME         TOOLTIP  LOAD_IM
 
-ACPP01      ACPP01   ACPP01     0      18        1230    0     @ACPP01      N        N
-ACPP30      ACPP30   ACPP30     0      17        966     149    @ACPP30      N        N
-ACPP70      ACPP70   ACPP70     0      10        1266    492    @ACPP70      N        N
+ACPP01      ACPP01   ACPP01     0      18        2435    3483   @ACPP01      N        N
+ACPP30      ACPP30   ACPP30     0      17        1933    3457   @ACPP30      N        N
+ACPP70      ACPP70   ACPP70     0      10        2191    4023   @ACPP70      N        N
 

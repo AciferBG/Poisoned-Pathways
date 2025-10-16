@@ -19,6 +19,65 @@ RESPONSE #100
 END
 
 IF
+    Global("DiffAdjust","ACPP70",0)
+    Difficulty(EASIEST)
+THEN
+    RESPONSE #100
+        SetGlobal("DiffAdjust","ACPP70",1)
+END
+
+IF
+    Global("DiffAdjust","ACPP70",0)
+    Difficulty(EASY)
+THEN
+    RESPONSE #100
+        SetGlobal("DiffAdjust","ACPP70",1)
+END
+
+IF
+    Global("DiffAdjust","ACPP70",0)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWOW",[1161.1294],S)  // Will-o-wisp
+        CreateCreature("AC#PPWOW",[1079.1215],S)  // Will-o-wisp
+        CreateCreature("AC#PPWOW",[1372.1235],S)  // Will-o-wisp
+        CreateCreature("AC#PPZOT",[1405.1553],S) // Zombie Treant
+        SetGlobal("DiffAdjust","ACPP70",1)
+END
+
+IF
+    Global("DiffAdjust","ACPP70",0)
+    Difficulty(NORMAL)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWOW",[1079.1215],S)  // Will-o-wisp
+        //CreateCreature("AC#PPWOW",[1372.1235],S)  // Will-o-wisp
+        SetGlobal("DiffAdjust","ACPP70",1)
+END
+
+IF
+    Global("DiffAdjust","ACPP70",0)
+    Difficulty(HARD)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWOW",[1079.1215],S)  // Will-o-wisp
+        CreateCreature("AC#PPWOW",[1372.1235],S)  // Will-o-wisp
+        SetGlobal("DiffAdjust","ACPP70",1)
+END
+
+IF
+    Global("DiffAdjust","ACPP70",0)
+    Difficulty(HARDEST)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWOW",[1161.1294],S)  // Will-o-wisp
+        CreateCreature("AC#PPWOW",[1079.1215],S)  // Will-o-wisp
+        CreateCreature("AC#PPWOW",[1372.1235],S)  // Will-o-wisp
+        SetGlobal("DiffAdjust","ACPP70",1)
+END
+
+IF
     GlobalGT("AC#PPTowerGuardian","GLOBAL",2)
     Global("ActivatePortal","ACPP70",0)
 THEN
