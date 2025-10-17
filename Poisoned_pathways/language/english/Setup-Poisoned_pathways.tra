@@ -61,6 +61,7 @@
 @68 = ~Mannatarv~
 @69 = ~Dell-Light Twins~
 @70 = ~Zar’khaan~
+@71 = ~Lhiannan Shee~
 
 
 // cre soundfiles
@@ -130,6 +131,7 @@
 @912 = ~Death Shroud~
 @913 = ~Eldath’s Soothing Presence~
 @914 = ~Wild Magic Eruption~
+@915 = ~Shadow Veil~
 
 @920 = ~^0xFF22B4E6has gained +1% resistance to slashing damage. ^-~
 @921 = ~^0xFF22B4E6has gained +1% resistance to missile damage. ^-~

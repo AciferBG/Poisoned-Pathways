@@ -1,4 +1,24 @@
 IF
+    OR(3)
+        TimeOfDay(DUSK)
+        TimeOfDay(DAY)
+        TimeOfDay(MORNING)
+THEN
+    RESPONSE #100
+        SetGlobal("Will_O_Dead","ACPP70",0)
+        DestroySelf()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("WispBlindness","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Blindness
+        SetGlobal("WispBlindness","LOCALS",1)
+END
+
+IF
     ActionListEmpty()
     See(NearestEnemyOf(Myself))
 THEN

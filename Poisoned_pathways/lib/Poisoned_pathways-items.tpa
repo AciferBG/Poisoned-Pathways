@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+ADD_PROJECTILE      ~Poisoned_pathways/pro/AC#PPWWD.PRO~ // Will-o-deads shadow energy drain
+COPY ~%MOD_FOLDER%/itm/AC#PPWWD.itm~          ~override~  // Will-o-deads shadow energy drain
+WRITE_SHORT   0x9c ~%AC#PPWWD%~
+
 COPY ~%MOD_FOLDER%/itm/AC#PPWIS.itm~         ~override~    //  Fake wish scroll
   SAY DESC  @1220
 

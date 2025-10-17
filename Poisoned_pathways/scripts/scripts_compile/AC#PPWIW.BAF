@@ -1,9 +1,26 @@
 IF
+    TimeOfDay(NIGHT)
+THEN
+    RESPONSE #100
+        SetGlobal("Will_O_Wild","ACPP70",0)
+        DestroySelf()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("WIW_Eruption","LOCALS")
+    RandomNum(2,1)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+END
+
+IF
+    ActionListEmpty()
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
-        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
-    RESPONSE #100
-        AttackReevaluate(NearestEnemyOf(Myself),6)
+        AttackReevaluate(NearestEnemyOf(Myself),30)
 END
 

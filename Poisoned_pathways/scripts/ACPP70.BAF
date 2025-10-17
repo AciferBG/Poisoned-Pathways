@@ -19,6 +19,31 @@ RESPONSE #100
 END
 
 IF
+    !InMyArea("AC#PPWIW")  // Will-O'-Wild
+    !Dead("AC#PPWIW")  // Will-O'-Wild
+    OR(3)
+        TimeOfDay(DUSK)
+        TimeOfDay(DAY)
+        TimeOfDay(MORNING)
+    Global("Will_O_Wild","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWIW",[3849.432],S)  // Will-O'-Wild
+        SetGlobal("Will_O_Wild","ACPP70",1)
+END
+
+IF
+    !InMyArea("AC#PPWOD")  // Will O'Dead
+    !Dead("AC#PPWOD")  // Will O'Dead
+    TimeOfDay(NIGHT)
+    Global("Will_O_Dead","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPWOD",[3849.432],S)  // Will O'Dead
+        SetGlobal("Will_O_Dead","ACPP70",1)
+END
+
+IF
     Global("DiffAdjust","ACPP70",0)
     Difficulty(EASIEST)
 THEN
