@@ -2,7 +2,7 @@
 // the Dell-Light Twins
 BEGIN AC#PPFAE
 
-CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",10)~ THEN AC#PPFAE hello_saviour
+CHAIN IF ~Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)~ THEN AC#PPFAE hello_saviour
 ~^0xFFE3B0FF Lilafern: ^-<CHARNAME>! The world feels wide again — the air, the light, even the sound of your footsteps!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-If we could bottle freedom, it would sound just like that — and sparkle twice as bright!~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-No more bottles, Tippledew — ever. I’d rather sleep in a dragon’s mouth than in another jar!~
@@ -14,7 +14,7 @@ IF~~THEN REPLY ~Stop sparkling near my face, please.~ EXTERN AC#PPFAE Dusklight_
 IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pass 
 
 // The faeries are freed in Duskwood Dell
-CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",8)~ THEN AC#PPFAE hello_free
+CHAIN IF ~Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",8)~ THEN AC#PPFAE hello_free
 ~^0xFFE3B0FF Lilafern: ^-We’re free!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-The hero <CHARNAME> has freed us!~
 == AC#PPMAN ~Oh, it’s so wonderful to see you both again!~
@@ -23,22 +23,41 @@ CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",8)~ THEN AC#PPFAE hello_free
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-I tell you, that was *quite* an adventure!~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-And all that adventuring makes one terribly sleepy!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Yes, Lilafern. Let’s rest — but not before we thank our rescuer properly.~
-== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Thank you! A hundred blessings and a hundred sparkles upon you, <CHARNAME>! We’d have kissed your boots if they weren’t so terribly muddy.~
-== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Thank you, <CHARNAME> — truly. You’ve given us back the wind, the light, and the laughter. We’ll never forget the sound of your voice breaking that dreadful silence.~  
-DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",10)
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Thank you! A hundred blessings and a hundred sparkles upon you, <CHARNAME>! We’d have kissed your feet if they weren’t so terribly smelly.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Thank you, <CHARNAME> — truly. You’ve given us back the wind, the light, and the laughter. We’ll never forget the sound of your voice breaking that dreadful silence.~
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Wait! We can’t just let <PRO_HIMHER> go without a wish! That would be... ungrateful, or possibly unlucky — or both!~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Exactly right, Lilafern! A small gift, a little sparkle to keep the dark away. What will you have, <CHARNAME>?~
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-So! One wish, <CHARNAME>. Only one — we’re not genies, you know? You can pick your sparkle: Resistance to poisons, shields against spells, a shimmer of luck against hostile wands, a charm against awkward transformations, or maybe... a little fortitude against very bad dragon breath? Choose wisely, <CHARNAME> — even tiny wishes have echoes.~  
+END
+IF~~THEN REPLY ~I’d rather be safe from poison and disease.~ DO ~ReallyForceSpellRES("AC#PPF1",Player1)~ EXTERN AC#PPFAE fairy_bless_end
+IF~~THEN REPLY ~Perhaps something to resist spells.~ DO ~ReallyForceSpellRES("AC#PPF2",Player1)~ EXTERN AC#PPFAE fairy_bless_end
+IF~~THEN REPLY ~A little resistance to wands and magical devices wouldn’t hurt.~ DO ~ReallyForceSpellRES("AC#PPF3",Player1)~ EXTERN AC#PPFAE fairy_bless_end
+IF~~THEN REPLY ~I could use a safeguard against being turned into something unnatural.~ DO ~ReallyForceSpellRES("AC#PPF4",Player1)~ EXTERN AC#PPFAE fairy_bless_end
+IF~~THEN REPLY ~Maybe something to help me get through danger — like dragon’s breath.~ DO ~ReallyForceSpellRES("AC#PPF5",Player1)~ EXTERN AC#PPFAE fairy_bless_end
+
+
+// Twins react to the chosen blessing
+CHAIN AC#PPFAE fairy_bless_end
+~^0xFFE3B0FF Lilafern: ^-A wise choice! Hold still — this won’t sparkle much... or maybe it will.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-There! A touch of moonlight, a pinch of laughter, and a dusting of please-don’t-die.~
+DO ~SetGlobal("AC#PPFaerieBlessing","GLOBAL",1)
+ReallyForceSpell(Myself,FLASHY_2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)
 AddJournalEntry(@13004,QUEST_DONE)
 EscapeArea()~
 EXIT
 
 
-CHAIN IF ~Global("AC#PP_TalkedToFaeries","GLOBAL",0)~ THEN AC#PPFAE hello_0
-~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A tall monster!~
-END
-IF~~THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hello_monster_cont
 
-	CHAIN AC#PPFAE hello_monster_cont  
-	~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's a traveler, silly! You can always tell by the big ears and the bigger feet.~  
-	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Welcome to Duskwood Dell, wanderer of ripples!~
+// First meeting with the Dell-Light Twins
+CHAIN IF ~Global("AC#PP_TalkedToFaeries","GLOBAL",0)~ THEN AC#PPFAE hello_0
+~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A tall hooman!~
+END
+IF ~~ THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hello_monster_cont
+
+CHAIN AC#PPFAE hello_monster_cont  
+~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's an adventurer, silly! You can always tell by the big ears... and the even bigger feet.~  
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Welcome to Duskwood Dell, tall one!~
 	END
 	IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPFAE who_are_you 
 	IF~~THEN REPLY ~Who's speaking there?~ EXTERN AC#PPFAE who_are_you 
@@ -298,16 +317,155 @@ EXIT
 BEGIN AC#PPZAR
 
 CHAIN IF ~Global("AC#PPRakAttack","GLOBAL",1)~ THEN AC#PPZAR hello_attack
+~You darrre to attack me? Me?~
+DO ~SetGlobal("AC#PPRakAttack","GLOBAL",2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
+Polymorph(RAKSHASA)
+Enemy()~ EXIT
+
+CHAIN IF ~Global("AC#PPRakPrison","GLOBAL",1)~ THEN AC#PPZAR hello_prison
+~Foolish morrrtal! Another soul forrr my collection!~
+DO ~SetGlobal("AC#PPRakPrison","GLOBAL",2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
+Enemy()~ EXIT
+
+
+// Zar'khaan urges the player to use the scroll immediately
+CHAIN IF ~Global("AC#PPRakScroll","GLOBAL",1)~ THEN AC#PPZAR sell_wish_followup
+~You purrrchased the wish scroll! My congrrratulations on such a rrrrare acquisition. Before you go, a small detail — and a currrrious one at that.~
+== AC#PPZAR ~The scrrroll’s ink is... volatile, shall we say. It holds its powerrr only forrr a shorrrt while afterrr purrrchase. Forrrgive me, I may have forrrgotten to mention that. Call me grrreedy, but I am a merrrchant after all, yes? Best to use it while the magic is still awake. What is the point of a wish unspoken?~
+== AC#PPZAR ~Go on, trrry it right here, at once! Simple worrrds, clear intent — that’s all it takes. And should you find yourrrself strrruck speechless by joy... do rrremember who made it possible: me!~
+END
+IF~~THEN REPLY ~You deceived me. You should have told me that before!~ EXTERN AC#PPZAR sell_scroll_fooled_me
+IF~~THEN REPLY ~If you say so...~ EXTERN AC#PPZAR sell_scroll_alright
+
+
+CHAIN AC#PPZAR sell_scroll_fooled_me
+~Oh, no deceit, my frrriend! The scrrroll worrrks exactly as you imagine it does. I merrrely... omitted a minorrr detail. Forgive a merrrchant his little secrrrets.~
+END
+IF~~THEN REPLY ~If you say so...~ EXTERN AC#PPZAR sell_scroll_alright
+
+
+// Player agrees to try the scroll
+CHAIN AC#PPZAR sell_scroll_alright
+~But of courrrse! Why would a successful merrrchant such as myself everrr deceive you?~
+EXIT
+
+
+// First greeting
+CHAIN IF ~True()~ THEN AC#PPZAR hello_0
+~A trrravelerrr of taste and coin apprrroaches! A thousand welcomes to you. I trrrade in currriosities and comforrrts, trrrinkets and temptations — all perrrfectly harrrmless, of courrrse.~
+END
+IF~Global("AC#PP_RakStoreVisit","GLOBAL",0)~THEN REPLY ~Show me what you have for sale.~ DO ~SetGlobal("AC#PP_RakStoreVisit","GLOBAL",1)~ EXTERN AC#PPZAR start_store
+IF~Global("AC#PP_RakStoreVisit","GLOBAL",1)~THEN REPLY ~Show me what you have for sale.~ EXTERN AC#PPZAR start_store
+IF~Global("AC#PP_RakAccent","GLOBAL",0)~THEN REPLY ~You have a strange accent.~ EXTERN AC#PPZAR strange_accent
+IF ~Global("AC#PP_RakStoreVisit","GLOBAL",1)~ THEN REPLY ~You keep some rather unusual things in your shop.~ EXTERN AC#PPZAR store_strange
+IF~~THEN REPLY ~What do you sell?~ EXTERN AC#PPZAR what_items
+IF~~THEN REPLY ~No thanks, I’m just passing through.~ EXTERN AC#PPZAR Farewell
+
+
+CHAIN AC#PPZAR hub
+~So then, will you be buying something afterrr all?~ 
+END
+IF~Global("AC#PP_RakStoreVisit","GLOBAL",0)~THEN REPLY ~Show me what you have for sale.~ DO ~SetGlobal("AC#PP_RakStoreVisit","GLOBAL",1)~ EXTERN AC#PPZAR start_store
+IF~Global("AC#PP_RakStoreVisit","GLOBAL",1)~THEN REPLY ~Show me what you have for sale.~ EXTERN AC#PPZAR start_store
+IF ~Global("AC#PP_RakStoreVisit","GLOBAL",1)~ THEN REPLY ~You keep some rather unusual things in your shop.~ EXTERN AC#PPZAR store_strange
+IF~~THEN REPLY ~What do you sell?~ EXTERN AC#PPZAR what_items
+IF~~THEN REPLY ~No thanks, I’m just passing through.~ EXTERN AC#PPZAR Farewell
+
+
+// Zar'khaan reacts to comment about strange wares
+CHAIN AC#PPZAR store_strange
+~Unusual? I prrreferrr selective. Everrry item here has a storrry — and some storrries simply... rrrefuse to end.~
+== AC#PPZAR ~Strrrangeness sells, my frrriend. Orrrdinarrry things have such dull appetites. Still, I admirrre yourrr eye — most pass by without noticing that my currriosities notice them back.~
+END
+IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
+
+
+CHAIN AC#PPZAR start_store
+~With delight! Step closerrr, do not be shy. In the marrrketplace of destiny, hesitation is the costliest of habits.~  
+DO ~StartStore("AC#PPZAR",LastTalkedToBy())~ EXIT
+
+
+CHAIN AC#PPZAR Farewell
+~As you wish, wandererrr. The rrroad forrrgets no footstep — and my warrres, no gaze.~  
+EXIT
+
+
+// Zar'khaan offers his wares, especially the cursed scroll
+CHAIN AC#PPZAR what_items
+~A question most welcome! I trrrade in the currrrious and the uncommon — things you neverrr knew you needed until you see them.~
+== AC#PPZAR ~But among such trrrifles, there is one trrreasurrre of trrrue legend — a scrrroll of *Wish*!~
+== AC#PPZAR ~Yesss, you hearrrd it rrright: *Wish*! The spell that bends the earrr of fate itself. I came by it thrrrough a barrrgain with a Djinn of the Calim Desert.~
+== AC#PPZAR ~He told me it would answerrr any voice that darrred to command it. No tedious study, no cirrrcles of rrrunes — only the courrrage to speak one’s hearrrt aloud. Of courrrse, the scroll carrres a prrrice — I must have my sharrre as well! But surrrely a herrro such as yourrrself deserrrves to tempt destiny once, no?~
+END
+IF~~THEN REPLY ~A scroll of Wish, you say? Sounds too good to be true.~ EXTERN AC#PPZAR wish_doubt
+IF~~THEN REPLY ~Let me see that scroll.~ EXTERN AC#PPZAR start_store
+IF~~THEN REPLY ~No thanks. I’ll stick to bottled laughter.~ EXTERN AC#PPZAR Farewell
+
+
+CHAIN AC#PPZAR wish_doubt
+~Too good to be trrrue? But trrruth has never been the measurrre of value, has it? What matterrrs is that it worrrks.~
+== AC#PPZAR ~You doubt, yet you’rrre still listening. That’s the marrrk of a wise buyerrr. Tell you what — take a look at the scrrript yourself. The worrrds are simple, almost childlike. Even fate enjoys a good jest now and then.~
+END
+IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
+
+// accent
+CHAIN AC#PPZAR strange_accent
+~Rrreally? You noticed? A trrrade tongue frrrom the South — a blend of Calimshan courrrt and deserrrt wind. Some call it exotic... otherrrs, disconcerrrting. But accents, like faces, are only masks, my frrriend.~
+DO ~SetGlobal("AC#PP_RakAccent","GLOBAL",1)~ EXTERN AC#PPZAR wares_not_words
+
+// After Zar’khaan dismisses the accent question
+CHAIN AC#PPZAR wares_not_words
+~Now, shall we talk of warrres, not worrrds?~
+END
+IF~~THEN REPLY ~That accent... I’ve heard it mentioned before. A merchant with your voice took two faeries from the forest.~ EXTERN AC#PPZAR twins_accusation
+IF~~THEN REPLY ~Fine, let’s see your wares then.~ EXTERN AC#PPZAR start_store
+IF~~THEN REPLY ~No thanks, I’m just passing through.~ EXTERN AC#PPZAR Farewell
+
+
+CHAIN AC#PPZAR twins_accusation
+~Fairrries? How quaint. You trrravel farrr, and yourrr tales trrravel even farrrtherrr. Surrrely, you don’t mean to accuse *me* of... collecting insects in jarrrs?~ 
+DO ~SetGlobal("AC#PP_RakAccused","GLOBAL",1)~ EXTERN AC#PPZAR twins_accusation_02
+
+// Player accuses Zar’khaan directly
+CHAIN AC#PPZAR twins_accusation_02
+~But if you find any such trrreaturrres, brrring them to me! I pay well for rrrarrrities.~
+END
+IF~~THEN REPLY ~It was you! Hand over the faeries — now!~ EXTERN AC#PPZAR accused_direct
+IF~~THEN REPLY ~Fine, let’s see your wares then.~ EXTERN AC#PPZAR start_store
+IF~~THEN REPLY ~Very well, if you say so. I’ll be on my way, then.~ EXTERN AC#PPZAR Farewell  
+
+// Zar’khaan drops the act
+CHAIN AC#PPZAR accused_direct
+~So the act is overrr, then. Such a pity — I was enjoying the charrrade. You morrrtals always prrreach of justice and compassion... yet yourrr eyes gleam with the same grrreedy light as mine.~
+== AC#PPZAR ~Verrrry well. Come, then — claim your rrreward in claws and flame!~
+DO ~SetGlobal("AC#PPRakAttack","GLOBAL",2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
+Polymorph(RAKSHASA)
+Enemy()~ EXIT
+
+
+
+
+
+// OLD - without the "rrr":
+/*
+	
+// Zar’khaan – the Rakshasa disguised as a merchant
+BEGIN AC#PPZAR
+
+CHAIN IF ~Global("AC#PPRakAttack","GLOBAL",1)~ THEN AC#PPZAR hello_attack
 ~You dare to attack me? ME?~
 DO ~SetGlobal("AC#PPRakAttack","GLOBAL",2)
-SetGlobal("FairyTwinsKidnapQuest","GLOBAL",5)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
 Polymorph(RAKSHASA)
 Enemy()~ EXIT
 
 CHAIN IF ~Global("AC#PPRakPrison","GLOBAL",1)~ THEN AC#PPZAR hello_prison
 ~Foolish mortal! Another soul in my collection!~
 DO ~SetGlobal("AC#PPRakPrison","GLOBAL",2)
-SetGlobal("FairyTwinsKidnapQuest","GLOBAL",5)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
 Enemy()~ EXIT
 
 // Zar'khaan urges the player to use the scroll immediately
@@ -330,7 +488,8 @@ CHAIN AC#PPZAR sell_scroll_alright
 EXIT
 
 CHAIN IF ~True()~ THEN AC#PPZAR hello_0
-~A traveler of taste and coin approaches! A thousand welcomes to you. I trade in curiosities and comforts, trinkets and temptations — all perfectly harmless, of course.~
+~A trrravelerrr of taste and coin apprrroaches! A thousand welcomes to you. I trrrade in currriosities and comforrrts, trrrinkets and temptations — all perrrfectly harrrmless, of courrrse.~
+
 END
 IF~Global("AC#PP_RakStoreVisit","GLOBAL",0)~THEN REPLY ~Show me what you have for sale.~ DO ~SetGlobal("AC#PP_RakStoreVisit","GLOBAL",1)~ EXTERN AC#PPZAR start_store
 IF~Global("AC#PP_RakStoreVisit","GLOBAL",1)~THEN REPLY ~Show me what you have for sale.~ EXTERN AC#PPZAR start_store
@@ -379,8 +538,6 @@ CHAIN AC#PPZAR wish_doubt
 == AC#PPZAR ~You doubt, yet you’re still listening. That’s the mark of a wise buyer. Tell you what — take a look at the script yourself. The words are simple, almost childlike. Even fate enjoys a good jest now and then.~
 END
 IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
-
-
-
+*/
 
 	

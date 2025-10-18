@@ -26,19 +26,19 @@ END
 
 IF
     GlobalTimerExpired("FairyTwinsKidnapped","GLOBAL")
-    Global("FairyTwinsKidnapQuest","GLOBAL",1)
+    Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",1)
 THEN
     RESPONSE #100
-        SetGlobal("FairyTwinsKidnapQuest","GLOBAL",2)
+        SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",2)
 END
 
 IF
     GlobalGT("AC#PP_TalkedToFaeries","GLOBAL",0)
-    Global("FairyTwinsKidnapQuest","GLOBAL",0)
+    Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",0)
 THEN
     RESPONSE #100
         SetGlobalTimer("FairyTwinsKidnapped","GLOBAL",TWO_DAYS)
-        SetGlobal("FairyTwinsKidnapQuest","GLOBAL",1)
+        SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",1)
 END
 
 IF
@@ -47,13 +47,13 @@ IF
         TimeOfDay(DUSK)
         TimeOfDay(NIGHT)
     Global("FairyTwins","ACPP01",0)
-    !Global("FairyTwinsKidnapQuest","GLOBAL",2)
-    !Global("FairyTwinsKidnapQuest","GLOBAL",3)
-    !Global("FairyTwinsKidnapQuest","GLOBAL",4)
-    !Global("FairyTwinsKidnapQuest","GLOBAL",5)
-    !Global("FairyTwinsKidnapQuest","GLOBAL",6) //Rakshasa dead
-    !Global("FairyTwinsKidnapQuest","GLOBAL",7) //party has jar w/ fairies
-    !Global("FairyTwinsKidnapQuest","GLOBAL",8) //jar opened
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",2)
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",3)
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",4)
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",6) //Rakshasa dead
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",7) //party has jar w/ fairies
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",8) //jar opened
 THEN
     RESPONSE #100
         CreateCreature("AC#PPFAE",[810.952],S)  // Dell-light Twins

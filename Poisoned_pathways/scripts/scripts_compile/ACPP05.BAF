@@ -17,6 +17,15 @@ THEN
 END
 
 IF
+    Global("WormJournal","ACPP05",0)
+    PartyHasItem("AC#PPWRM")
+THEN
+    RESPONSE #100
+        AddJournalEntry(@13041,QUEST)
+        SetGlobal("WormJournal","ACPP05",1)
+END
+
+IF
     Global("AC#PP_Helped_Orcs","GLOBAL",1)
 THEN
     RESPONSE #100

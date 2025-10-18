@@ -108,6 +108,24 @@ ADD_JOURNAL
 @13022
 @13023
 
+@13030
+@13032
+@13033
+@13034
+@13035
+@13036
+@13037
+@13038
+@13039
+
+@13040
+@13041
+@13042
+@13043
+
+@13050
+@13051
+@13052
 
 USING ~Poisoned_pathways/language/%LANGUAGE%/Poisoned_pathways_Journal.tra~
 
@@ -417,6 +435,13 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPFYD.bam~ ~override~ // Eldath's 
  END
  END
  
+COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPBLD.bam~ ~override~ // Witherbranch desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1037.pvrz~
+ END
+ END
+ 
 COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPROD.bam~ ~override~ // Rose of Eldath desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
@@ -479,7 +504,22 @@ COPY ~Poisoned_pathways/spl/AC#HEZR.spl~            ~override~  // Hezrou stench
   SAY 0xce @931
        WRITE_SHORT   0x98 ~%AC#HEZRU%~
 
-COPY ~Poisoned_pathways/spl/AC#GLDRK.spl~            ~override/AC#GLDRK.spl~
+COPY ~Poisoned_pathways/spl/AC#PPF1.spl~            ~override~ // Faeries Save vs. death bonus
+  SAY NAME1 @941
+  
+COPY ~Poisoned_pathways/spl/AC#PPF2.spl~            ~override~ // Faeries Save vs. spell bonus
+  SAY NAME1 @942
+  
+COPY ~Poisoned_pathways/spl/AC#PPF3.spl~            ~override~ // Faeries Save vs. wand bonus
+  SAY NAME1 @943
+
+COPY ~Poisoned_pathways/spl/AC#PPF4.spl~            ~override~ // Faeries Save vs. ploymorph bonus
+  SAY NAME1 @944
+  
+COPY ~Poisoned_pathways/spl/AC#PPF5.spl~            ~override~ // Faeries Save vs. breath bonus
+  SAY NAME1 @945
+
+COPY ~Poisoned_pathways/spl/AC#GLDRK.spl~            ~override~
   SAY NAME1 @917
 
 COPY ~Poisoned_pathways/spl/AC#ALLI.spl~          ~override~

@@ -199,7 +199,7 @@ IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 to_oghma_bye
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa
 ~Montrassa? She never spoke of such difficulty... but it makes perfect sense. A thoughtful suggestion! Give her the emblem, with my blessing. And afterward, please proceed to the Temple of Oghma in Athkatla, as we discussed.~
 END
-IF~~THEN DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 to_oghma_bye
+IF~~THEN DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1) AddJournalEntry(@13051,QUEST)~ EXTERN AC#PPEL4 to_oghma_bye
 
 CHAIN IF ~~ THEN AC#PPEL4 to_oghma_bye
 ~I shall send a dove ahead to the Temple of Oghma, so their scribes may ready the proper volume. Return to me once you have the book. I shall be waiting below, on the lower level of this tree. May Eldath's blessings guide your steps.~
@@ -225,7 +225,7 @@ IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 hello_03x
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_02
 ~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
 END
-IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1) AddJournalEntry(@13051,QUEST)~ EXTERN AC#PPEL4 emblem_montrassa_bye
 
 CHAIN AC#PPEL4 emblem_montrassa_bye
 ~Do so. She will surely be uplifted by your kindness.~
@@ -394,7 +394,7 @@ IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 no_news
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_03
 ~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
 END
-IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_03
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1) AddJournalEntry(@13051,QUEST)~ EXTERN AC#PPEL4 emblem_montrassa_bye_03
 
 CHAIN AC#PPEL4 emblem_montrassa_bye_03
 ~Do so. She will surely be uplifted by your kindness.~
@@ -468,7 +468,7 @@ IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 no_news
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_04
 ~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
 END
-IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_04
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1) AddJournalEntry(@13051,QUEST)~ EXTERN AC#PPEL4 emblem_montrassa_bye_04
 
 CHAIN AC#PPEL4 emblem_montrassa_bye_04
 ~Do so. She will surely be uplifted by your kindness.~
@@ -645,7 +645,7 @@ IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 no_news
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_05
 ~Montrassa? She never spoke of such a hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
 END
-IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_05
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1) AddJournalEntry(@13051,QUEST)~ EXTERN AC#PPEL4 emblem_montrassa_bye_05
 
 CHAIN AC#PPEL4 emblem_montrassa_bye_05
 ~Do so. She will surely be uplifted by your kindness.~
@@ -683,7 +683,7 @@ IF~~THEN REPLY ~I’ll be on my way, then.~ EXTERN AC#PPEL4 bye_finished
 CHAIN IF ~~ THEN AC#PPEL4 emblem_montrassa_06
 ~Montrassa? She never spoke of such hardship, but... yes. It is a sound suggestion. Give her the emblem with my blessing.~
 END
-IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1)~ EXTERN AC#PPEL4 emblem_montrassa_bye_06
+IF~~THEN REPLY ~I shall be honored to deliver your blessing to her.~ DO ~SetGlobal("AC#PP_AlaAgreesSymbol","GLOBAL",1) AddJournalEntry(@13051,QUEST)~ EXTERN AC#PPEL4 emblem_montrassa_bye_06
 
 CHAIN AC#PPEL4 emblem_montrassa_bye_06
 ~Do so. She will surely be uplifted by your kindness.~

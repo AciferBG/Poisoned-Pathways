@@ -146,6 +146,12 @@
 @930 = ~Stench~
 @931 = ~THAC0 reduced~
 
+@941 = ~Save vs. death bonus~
+@942 = ~Save vs. spell bonus~
+@943 = ~Save vs. wand bonus~
+@944 = ~Save vs. polymorph bonus~
+@945 = ~Save vs. breath bonus~
+
 //sto files
 @950 = ~Temple of Eldath~
 @951 = ~Calmfire's Creations~

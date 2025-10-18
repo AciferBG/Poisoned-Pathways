@@ -87,7 +87,7 @@ EXIT
 BEGIN ~AC#PPMAN~
 
 IF ~NumTimesTalkedTo(0)
-!Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello_0
+!Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello_0
   SAY ~Welcome, traveler. Few arrive in Duskwood Dell by chance. What brings you beneath these boughs?~
   IF ~~ THEN REPLY ~What is this place?~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
@@ -103,18 +103,19 @@ IF ~NumTimesTalkedTo(0)
 END
 
 IF ~Global("WrongHighPriestName","ACPP01",10)
-!Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello__10
+Global("HighPriestDirection","ACPP01",0)
+!Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello__10
   SAY ~Before you're asking: You'll find the Most Exalted Fallskeeper Alatoasz Berendim in the northeastern treehouse, near the water. Anything else?~
-  IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
-  IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
-  IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
-  IF ~GlobalGT("FairyTwinsKidnapQuest","GLOBAL",3)
-  GlobalLT("FairyTwinsKidnapQuest","GLOBAL",10)~ THEN REPLY ~It’s about the Dell-Light Twins.~ GOTO chain_about_dell_light_twins_kidnapped
-  IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
+  IF ~~ THEN REPLY ~Tell me about this place.~ DO ~SetGlobal("HighPriestDirection","ACPP01",1)~ GOTO chain_place
+  IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ DO ~SetGlobal("HighPriestDirection","ACPP01",1)~ GOTO chain_church
+  IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ DO ~SetGlobal("HighPriestDirection","ACPP01",1)~ EXTERN AC#PPMAN seek_worm
+  IF ~GlobalGT("AC#PPFairyTwinsKidnapQuest","GLOBAL",3)
+  GlobalLT("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)~ THEN REPLY ~It’s about the Dell-Light Twins.~ DO ~SetGlobal("HighPriestDirection","ACPP01",1)~ GOTO chain_about_dell_light_twins_kidnapped
+  IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ DO ~SetGlobal("HighPriestDirection","ACPP01",1)~ GOTO bye
 END
 
 IF ~True()
-!Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello_1
+!Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",2)~ THEN BEGIN hello_1
   SAY ~Greetings again. What can I do for you, seeker of peace?~
   IF ~~ THEN REPLY ~Tell me about this place.~ GOTO chain_place
   IF ~~ THEN REPLY ~I would like to know more about the Church of Eldath here.~ GOTO chain_church
@@ -126,8 +127,8 @@ IF ~True()
   IF~Global("WrongHighPriestName","ACPP01",4)~THEN REPLY ~My search continues for the Most Inflated Fartsleeper Analoss Bladderbim.~ DO ~SetGlobal("WrongHighPriestName","ACPP01",5)~ EXTERN AC#PPMAN seek_highpriest_wrong_name_5
   IF~Global("AC#PPSpellCheckPoison","GLOBAL",0)~THEN REPLY ~I'm looking for the Most Exalted Fallskeeper Alatoasz Berendim.~ EXTERN AC#PPMAN looking_for_highpriest
   IF ~Global("AC#PPWormQuest","GLOBAL",1) Global("AC##PPWormQuestOrc","GLOBAL",0)~THEN REPLY ~I'm searching for an earthworm. Have you seen one by chance?~ EXTERN AC#PPMAN seek_worm
-  IF ~GlobalGT("FairyTwinsKidnapQuest","GLOBAL",3)
-  GlobalLT("FairyTwinsKidnapQuest","GLOBAL",10)~ THEN REPLY ~It’s about the Dell-Light Twins.~ GOTO chain_about_dell_light_twins_kidnapped
+  IF ~GlobalGT("AC#PPFairyTwinsKidnapQuest","GLOBAL",3)
+  GlobalLT("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)~ THEN REPLY ~It’s about the Dell-Light Twins.~ GOTO chain_about_dell_light_twins_kidnapped
 
   IF ~~ THEN REPLY ~This is not the moment for quiet reflection.~ GOTO bye
 END
@@ -138,7 +139,7 @@ IF ~~ THEN BEGIN bye
 END
 
 // Brother Edrim – reports the missing faeries two days later
-CHAIN IF ~Global("FairyTwinsKidnapQuest","GLOBAL",2)~ THEN AC#PPMAN hello_twins_kidnapped
+CHAIN IF ~Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",2)~ THEN AC#PPMAN hello_twins_kidnapped
 ~A word, <CHARNAME>. You spoke not long ago with the two little faeries who call themselves the Dell-Light Twins.~
 END
 IF ~~ THEN REPLY ~You mean those two little nuisances that keep laughing and glowing all the time?~ EXTERN AC#PPMAN twins_kidnapped_01
@@ -149,7 +150,7 @@ IF ~~ THEN REPLY ~Those two faeries were delightful! Please don’t tell me some
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_01
 	~They can be a little tiresome at times, yes, but they’ve long been part of life here in Duskwood Dell. I fear something has happened to them — they’ve vanished without a trace.~
 	END
-	IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",3)~ EXTERN AC#PPMAN twins_kidnapped_02
+	IF ~~ THEN DO ~SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",3)~ EXTERN AC#PPMAN twins_kidnapped_02
 
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_02
 	~I fear they’ve come to harm... or worse — they may have been taken.~
@@ -185,7 +186,7 @@ IF ~~ THEN REPLY ~Those two faeries were delightful! Please don’t tell me some
 
 
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_any_clue
-	~He was dressed in bright red silk — quite extravagant, really. He must have been wealthy, which makes it all the stranger that he walked the Eshpurta Road alone, and at night, without any guards. Otherwise, there was nothing unusual about him... to an owl's eye, at least.~
+	~He was dressed in bright red silk — quite extravagant, really. He must have been wealthy, which makes it all the stranger that he walked the Eshpurta Road alone, and at night, without any guards. He also spoke with a peculiar accent, rolling his "r"s quite distinctly. Otherwise, there was nothing unusual about him... to an owl’s eye, at least.~
 	END
 	IF ~~ THEN REPLY ~There’s a large marketplace in Athkatla — Waukeen’s Promenade. I’ll start my search there and look for the merchant in red silk.~ EXTERN AC#PPMAN twins_kidnapped_05
 	IF ~~ THEN REPLY ~I don’t have time for this.~ EXTERN AC#PPMAN twins_kidnapped_decline_bye
@@ -194,7 +195,7 @@ IF ~~ THEN REPLY ~Those two faeries were delightful! Please don’t tell me some
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_05
 	~Thank you for taking this upon yourself. Please, bring the twins back safely to Duskwood Dell. It would feel... emptier without their pranks and laughter.~
 	END
-	IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",4)
+	IF ~~ THEN DO ~SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",4)
 	AddJournalEntry(@13000,QUEST)~ EXIT
 
 
@@ -260,7 +261,7 @@ END
 CHAIN IF ~~ THEN AC#PPMAN chain_about_dell_light_twins_kidnapped
 ~Oh! Have you found them?~
 END
-  IF ~PartyHasItem("AC#PPFYG")~ THEN REPLY ~The merchant had captured them. They’re inside this glass jar — alive and unharmed, but... it won’t open.~ GOTO twins_jar
+  IF ~PartyHasItem("AC#PPFYG")~ THEN REPLY ~The merchant was a disguised Rakshasa. He had captured the twins. They’re inside this glass jar — alive and unharmed, but it won’t open.~ GOTO twins_jar
   IF ~~ THEN REPLY ~Not yet, I’m still searching.~ GOTO twins_search_bye
 
 CHAIN IF ~~ THEN AC#PPMAN twins_jar
@@ -269,14 +270,18 @@ END
   IF ~~ THEN DO ~TakePartyItem("AC#PPFYG") DestroyItem("AC#PPFYG")~ GOTO twins_jar_02
 
 CHAIN IF ~~ THEN AC#PPMAN twins_jar_02
-~They are safe! Eldath be praised.~
+~They look safe! Eldath be praised. Are they trapped inside that bottle?~
 END
-  IF ~~ THEN REPLY ~The jar still won’t open.~ GOTO twins_jar_03
+  IF ~~ THEN REPLY ~The jar won’t open.~ GOTO twins_jar_03
+  IF ~~ THEN REPLY ~Try shaking it. Maybe that helps.~ GOTO twins_jar_03
+  IF ~~ THEN REPLY ~Shall I smash it with a hammer?~ GOTO twins_jar_03
+  IF ~~ THEN REPLY ~Let them stay in there. The quiet suits them.~ GOTO twins_jar_03
+
 
 	CHAIN IF ~~ THEN AC#PPMAN twins_jar_03
-	~Not outside Duskwood Dell, no — but here, in this place of peace, nothing living can remain imprisoned.  Watch closely... the seal yields as easily as water parts for light.~
+	~The jar is sealed outside Duskwood Dell — but here, in this place of peace, nothing living can remain imprisoned.  Watch closely... the seal yields as easily as water parts for light.~
 	END
-	 IF ~~ THEN DO ~SetGlobal("FairyTwinsKidnapQuest","GLOBAL",8)
+	 IF ~~ THEN DO ~SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",8)
 	CreateCreature("AC#PPFAE",[-1.-1],S)~ EXIT
 
 	CHAIN IF ~~ THEN AC#PPMAN twins_search_bye 
@@ -786,18 +791,6 @@ END
 // honey-maker in area acpp07:
 BEGIN ~AC#PPON2~
 
-//old- now with cutscene
-/*
-CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPON2 hello_00
-~Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!~
-== AC#PPON2 ~Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.~ 
-END 
-IF ~~ THEN DO ~CreateVisualEffectObject("SPFLESHS",Myself)
-Polymorph(MONK)
-SetGlobal("BearChange","ACPP07",1)~
-EXIT
-*/
-
 CHAIN IF ~Global("BearChange","ACPP07",1)~ THEN AC#PPON2 hello_sorry
 ~Ah, that is much better. Forgive me. I sometimes take the form of a bear when the craving grows too great. Honey tastes sweeter when gathered with a muzzle and tongue, or so I tell myself.~ 
 END
@@ -834,28 +827,28 @@ IF~~THEN REPLY ~No, there is nothing to report yet.~ EXTERN AC#PPON2 bye
 // Spieler meldet nur 100 Gold
 CHAIN AC#PPON2 about_mead_100
 ~Only a hundred? That is… disappointing. Samuel must think Eldath’s peace worth less than a common ale. Still, what is done is done. I shall make do, though my heart is heavy.~ 
-DO ~SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+DO ~SetGlobal("AC#PP_HoneyQuest","GLOBAL",10) AddJournalEntry(@13036,QUEST_DONE)~ 
 EXIT
 
 
 // Spieler meldet 500 Gold
 CHAIN AC#PPON2 about_mead_500
 ~Ahh, five hundred gold! That is fair recompense for a year’s tending. Eldath’s gardens will bloom brighter for it. Here, take a hundred coins for your trouble—peace is sweet, but labor must not go unrewarded.~ 
-DO ~GiveGoldForce(100) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+DO ~GiveGoldForce(100) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10) AddJournalEntry(@13037,QUEST_DONE)~ 
 EXIT
 
 
 // Spieler meldet 750 Gold
 CHAIN AC#PPON2 about_mead_750
 ~Seven hundred and fifty! Ha! More than fair, more than I dared hope! Truly, Eldath smiles upon us today. Take these 250 gold for yourself, and know that your words have bought more than coin—they have bought respect. May your name be blessed as honey on the tongue.~ 
-DO ~GiveGoldForce(250) ReputationInc(1) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+DO ~GiveGoldForce(250) ReputationInc(1) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10) AddJournalEntry(@13038,QUEST_DONE)~ 
 EXIT
 
 
 // Spieler meldet 1000 Gold
 CHAIN AC#PPON2 about_mead_1000
 ~A thousand gold? That is beyond generous—nay, it is wondrous! Samuel must have seen not only the worth of the mead, but the worth of peace itself. Take these 500 coins, and accept this gift as well—a cloak woven with Eldath’s blessing, proof against stings both great and small.~ 
-DO ~GiveGoldForce(500) GiveItemCreate("AC#PPIMK",Player1,1,0,0) ReputationInc(1) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10)~ 
+DO ~GiveGoldForce(500) GiveItemCreate("AC#PPIMK",Player1,1,0,0) ReputationInc(1) SetGlobal("AC#PP_HoneyQuest","GLOBAL",10) AddJournalEntry(@13039,QUEST_DONE)~ 
 EXIT
 
 
@@ -903,7 +896,7 @@ END
 // Spieler akzeptiert
 CHAIN AC#PPON2 five_flagons_accept
 ~My thanks flow as freely as the hive’s nectar. May your words in that tavern be as smooth as honey, and may Samuel see wisdom in fair trade. Return to me with the payment, and I shall grant you a share, for even those who serve peace must taste a little sweetness for their labor.~ 
-DO ~GiveItemCreate("AC#PPHYM",Player1,1,0,0)~ 
+DO ~GiveItemCreate("AC#PPHYM",Player1,1,0,0) AddJournalEntry(@13030,QUEST)~ 
 EXIT
 
 
@@ -966,22 +959,22 @@ END
 CHAIN FFBART samuel_mead_duskwood_dell_pay100
 ~What a bargain! The priests of Eldath seem not to know the true worth of their drink. Here, take your hundred gold pieces.~ 
 END
-IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(100) SetGlobal("AC#PP_HoneyQuest","GLOBAL",2)~ EXTERN FFBART bye_mead
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(100) SetGlobal("AC#PP_HoneyQuest","GLOBAL",2) AddJournalEntry(@13032,QUEST)~ EXTERN FFBART bye_mead
 
 CHAIN FFBART samuel_mead_duskwood_dell_pay500
 ~Very well! Here, five hundred gold. A fair sum for a fair cask—tell your monk it shall bring peace to both tavern and temple.~ 
 END
-IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(500) SetGlobal("AC#PP_HoneyQuest","GLOBAL",2)~ EXTERN FFBART bye_mead
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(500) SetGlobal("AC#PP_HoneyQuest","GLOBAL",2) AddJournalEntry(@13033,QUEST)~ EXTERN FFBART bye_mead
 
 CHAIN FFBART samuel_mead_duskwood_dell_pay750
 ~Agreed! Seven hundred and fifty gold! The nectar is fine, the cause is finer still. May Eldath smile on my generosity—and on my patrons’ thirst!~ 
 END
-IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(750) SetGlobal("AC#PP_HoneyQuest","GLOBAL",3)~ EXTERN FFBART bye_mead
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(750) SetGlobal("AC#PP_HoneyQuest","GLOBAL",3) AddJournalEntry(@13034,QUEST)~ EXTERN FFBART bye_mead
 
 CHAIN FFBART samuel_mead_duskwood_dell_pay1000
 ~A king’s ransom! Yet such sweetness cannot truly be measured in coin. Still—take a thousand gold. Let it be said that Samuel Thunderburp rewards excellence in both brew and deed!~ 
 END
-IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(1000) SetGlobal("AC#PP_HoneyQuest","GLOBAL",4)~ EXTERN FFBART bye_mead
+IF ~~ THEN DO ~TakePartyItem("AC#PPHYM") GiveGoldForce(1000) SetGlobal("AC#PP_HoneyQuest","GLOBAL",4) AddJournalEntry(@13035,QUEST)~ EXTERN FFBART bye_mead
 
 // Samuel dismisses the player
 CHAIN FFBART bye_mead
@@ -1379,7 +1372,8 @@ EXTERN AC#PPBOY what_about_worms
 CHAIN AC#PPBOY 01.03
 ~I REALLY want to catch some good fish and show everyone what a good fisher-boy I can be! But I need a nice fat worm to do that! Let me know if you find one!~
 ==AC#PPBOY ~There must be some worm around here...~
-DO ~SetGlobal("AC#PPWormQuest","GLOBAL",1)~ EXIT
+DO ~SetGlobal("AC#PPWormQuest","GLOBAL",1)
+AddJournalEntry(@13040,QUEST)~ EXIT
 
 //2nd 
 
@@ -1400,17 +1394,19 @@ CHAIN AC#PPBOY 02.01
 ==AC#PPBOY ~You were supposed to be a fish food!~
 END
 IF~~THEN REPLY ~It looks like you just like him too much.~ EXTERN AC#PPBOY 02.02
-IF~~THEN REPLY ~Ugh, I'm tired with this. (take the worm and throw it into the water)~ EXTERN AC#PPBOY 02.03
+IF~~THEN REPLY ~Ugh, I'm tired with this. (Take the worm and throw it into the water)~ EXTERN AC#PPBOY 02.03
 
 CHAIN AC#PPBOY 02.02
 ~I kinda do.~
 ==AC#PPBOY ~Eh, I suppose I won't become a fisher-boy, then. But you know what? I can become a worm-trainer!~
 ==AC#PPBOY ~Thanks for bringing him to me. I think we're gonna be good friends.~
-DO ~SetGlobal("AC#PPWormQuest","GLOBAL",2) AddExperienceParty(800) ReputationInc(1)~ EXIT
+DO ~SetGlobal("AC#PPWormQuest","GLOBAL",2) AddExperienceParty(100) ReputationInc(1) AddJournalEntry(@13042,QUEST_DONE)~ EXIT
 
 CHAIN AC#PPBOY 02.03
 ~What?! What have you done! You are sooo stupid and I'm gonna tell everyone you're horrible and that you wanted to hit me! And no one is going to like you! EVER!~
-DO ~SetGlobal("AC#PPWormQuest","GLOBAL",3) AddExperienceParty(800) ReputationInc(-1) EscapeArea()~ EXIT
+DO ~SetGlobal("AC#PPWormQuest","GLOBAL",3) AddExperienceParty(100) 
+AddJournalEntry(@13043,QUEST_DONE)
+ReputationInc(-1) EscapeArea()~ EXIT
 
 //3rd
 
@@ -1427,7 +1423,7 @@ CHAIN IF ~GlobalLT("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 01.00
 END
 IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL",0) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
 IF~Global("AC#PPSymbolQuest","GLOBAL",2) Global("AC#PP_AlaAgreesSymbol","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I have spoken with Alatoasz. He agrees—you are worthy to bear Merethan’s emblem.~ EXTERN AC#PPMON 01.04
-IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem calm and content. Have you lived here long, priestess?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
+IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem calm and content. Have you lived here long, priestess?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1) AddJournalEntry(@13050,QUEST)~ EXTERN AC#PPMON 01.01
 IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
 IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye
 IF~~THEN REPLY ~May peace flow with you, sister. Farewell.~ EXTERN AC#PPMON bye  
@@ -1467,7 +1463,7 @@ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",2)~ EXIT
 CHAIN AC#PPMON 01.04  
 ~The High Fallskeeper grants me the honor of carrying Merethan’s emblem? Then peace truly circles back upon itself. Such kindness ripples farther than any river.~
 ==AC#PPMON ~I have nothing but gratitude to offer, yet know that I shall carry your name in prayer to the Lady of Still Waters.~  
-DO ~TakePartyItem("AC#PPSYM") AddExperienceParty(400) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) ReputationInc(1)~ EXIT  
+DO ~TakePartyItem("AC#PPSYM") AddExperienceParty(400) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) AddJournalEntry(@13052,QUEST) ReputationInc(1)~ EXIT  
 
 CHAIN IF ~Global("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 02.00  
 ~Thanks to you, I walk in peace once more—slowly, yes, but each step is a prayer.~

@@ -1,3 +1,12 @@
+// Hezrou in Area ACPP71
+
+BEGIN ~AC#PPHEZ~
+
+CHAIN IF ~True()~ THEN AC#PPHEZ hello_00
+~You mewling mortals dare to enter the chamber of the master of poisons? You will fail miserably! No spell you so dearly rely upon will work here! But unlike you pitiful worms, I can still wield my innate magic!~
+DO ~Enemy()~ EXIT
+
+
 BEGIN ~AC#PPOR2~
 
 //1st

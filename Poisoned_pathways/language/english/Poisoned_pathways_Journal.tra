@@ -147,7 +147,7 @@ SIDE quest journal entries
 
 @13000 = ~The Missing Faerie Twins
 
-The faeries of Duskwood Dell are missing. Brother Edrim has asked me to look into their disappearance. The twins were last seen speaking with a merchant dressed in bright red silk. The merchant continued west, toward Athkatla. He may be hiding among the traders of Waukeen’s Promenade. If he truly traffics in magical curiosities, someone there will have noticed him.~
+The faeries of Duskwood Dell are missing. Brother Edrim has asked me to look into their disappearance. The twins were last seen speaking with a merchant dressed in bright red silk, who spoke with a strange accent — a rolling "r". He continued west toward Athkatla and may be hiding among the traders of Waukeen’s Promenade. If he truly traffics in magical curiosities, I’ll find him there.~
 
 @13001 = ~The Missing Faerie Twins
 
@@ -155,13 +155,11 @@ Among the stalls of Waukeen’s Promenade, I have encountered a curious merchant
 
 @13002 = ~The Missing Faerie Twins
 
-The merchant calling himself Zar’khaan is no merchant at all, but a Rakshasa in disguise. I must find out if he carries the Dell-Light Twins with him — perhaps sealed within some kind of small vessel or enchanted trinket.~
-
+The merchant calling himself Zar’khaan was no merchant at all, but a Rakshasa in disguise. I must find out if he carries the Dell-Light Twins with him — perhaps sealed within some kind of small vessel or enchanted trinket.~
 
 @13003 = ~The Missing Faerie Twins
 
 I have found the Dell-Light Twins. The Rakshasa imprisoned them within a magical vessel sealed by powerful enchantment. Though the faeries seem unharmed, the jar refuses to open. I should return it to Brother Edrim in Duskwood Dell — perhaps he will know how to break the seal.~
-
 
 @13004 = ~The Missing Faerie Twins
 
@@ -216,6 +214,81 @@ I returned the head of her beloved to the banshee. She whispered a final sigh an
 @13023 = ~Lament of the Lost
 
 I destroyed a banshee haunting a ruined tower in Myth Unnohyr. Her wail has fallen silent, and her grief will trouble this place no more.~
+
+// Honeymead Quest
+@13030 = ~The Eldathyn Honeymead
+
+In Duskwood Dell I met an Eldathyn beekeeper who produces a rare honeymead. He asked me to take a single bottle to the Five Flagons Inn in Athkatla and sell it to Samuel Thunderburp for a fair price.~
+
+@13032 = ~The Eldathyn Honeymead
+
+I sold the bottle of Honeymead to Samuel Thunderburp for one hundred gold pieces. He seemed content enough with the deal.~
+
+@13033 = ~The Eldathyn Honeymead
+
+I sold the bottle of Honeymead to Samuel Thunderburp for five hundred gold pieces. A fair exchange for such a refined brew.~
+
+@13034 = ~The Eldathyn Honeymead
+
+I sold the bottle of Honeymead to Samuel Thunderburp for seven hundred and fifty gold pieces. The innkeeper praised its quality and generosity flowed as freely as his coin.~
+
+@13035 = ~The Eldathyn Honeymead
+
+I sold the bottle of Honeymead to Samuel Thunderburp for one thousand gold pieces. He called it a nectar beyond price—and paid accordingly.~
+
+@13036 = ~The Eldathyn Honeymead
+
+I returned to the beekeeper in Duskwood Dell and brought him one hundred gold pieces for the honeymead. He accepted the payment with quiet disappointment.~
+
+@13037 = ~The Eldathyn Honeymead
+
+I returned to the beekeeper in Duskwood Dell and delivered five hundred gold pieces for the honeymead. He smiled faintly, grateful for my honesty.~
+
+@13038 = ~The Eldathyn Honeymead
+
+I brought the beekeeper seven hundred and fifty gold pieces for the honeymead. He was pleasantly surprised, murmuring that Eldath’s blessings come in many forms.~
+
+@13039 = ~The Eldathyn Honeymead
+
+I returned to the beekeeper with one thousand gold pieces for the honeymead. He was astonished by my generosity and offered a heartfelt prayer in my name.~
+
+// Boy and worm
+
+@13040 = ~The Little Angler
+
+A boy by the pier in Duskwood Dell asked me to help him find a worm for fishing. He said he wants to prove to everyone that he can catch a real fish all by himself.~
+
+@13041 = ~The Little Angler
+
+I found a worm wriggling in the soft soil of Duskwood Dell. Perhaps this is the lucky catch the boy was looking for.~
+
+@13042 = ~The Little Angler
+
+I gave the worm to the boy by the pier. Instead of using it as bait, he decided to keep it as a pet and named it Noodle. The two seem rather happy together.~
+
+@13043 = ~The Little Angler
+
+I threw the worm into the water instead of giving it to the boy. He burst into tears, called me horrible names, and ran off. I doubt I’ll be welcome by the pier again.~
+
+// Montrassa - emblem
+@13050 = ~The Emblem of Eldath
+
+In Duskwood Dell I met an elderly Eldathyn named Montrassa. Her hands tremble with age, and she can no longer carve the holy emblems she once made for her temple. She spoke fondly of Merethan but humbly refused to take his emblem, saying that such a gift should be granted only with the blessing of the High Fallskeeper. Perhaps I should speak with Alatoasz Berendim about it.~
+
+@13051 = ~The Emblem of Eldath
+
+Alatoasz agreed that Montrassa is worthy to carry Merethan’s emblem. I should deliver it to her in Duskwood Dell so she may hold the symbol of her goddess once more.~
+
+@13052 = ~The Emblem of Eldath
+
+I gave Merethan’s emblem to Montrassa. Her gratitude was quiet yet profound—she said she would carry my name in her prayers to the Lady of Still Waters.~
+
+
+
+
+
+
+
 
 
 

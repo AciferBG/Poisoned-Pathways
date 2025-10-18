@@ -1,5 +1,5 @@
 IF
-    Global("FairyTwinsKidnapQuest","GLOBAL",8)
+    Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",8)
     See([PC])
 THEN
     RESPONSE #100
@@ -7,7 +7,15 @@ THEN
 END
 
 IF
-    !Global("FairyTwinsKidnapQuest","GLOBAL",8)
+    Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",2)
+THEN
+    RESPONSE #100
+        SetGlobal("FairyTwins","ACPP01",0)
+        DestroySelf()
+END
+
+IF
+    !Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",8)
     OR(2)
         TimeOfDay(MORNING)
         TimeOfDay(DAY)

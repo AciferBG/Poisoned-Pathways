@@ -13,7 +13,7 @@ END
 
 IF
     Global("AC#PP_RakshasaQuest","GLOBAL",0)
-    Global("FairyTwinsKidnapQuest","GLOBAL",4)
+    Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",4)
     THEN
         RESPONSE #100
     CreateCreature("AC#PPZAR",[255.2195],13)
@@ -22,18 +22,18 @@ END
 
 IF
     Dead("AC#PPZAR")
-    Global("FairyTwinsKidnapQuest","GLOBAL",5)
+    Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
     THEN
         RESPONSE #100
     AddJournalEntry(@13002,QUEST)
-    SetGlobal("FairyTwinsKidnapQuest","GLOBAL",6)
+    SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",6)
 END
 
 IF
     PartyHasItem("AC#PPFYG")
-    Global("FairyTwinsKidnapQuest","GLOBAL",6)
+    Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",6)
     THEN
         RESPONSE #100
     AddJournalEntry(@13003,QUEST)
-    SetGlobal("FairyTwinsKidnapQuest","GLOBAL",7)
+    SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",7)
 END
