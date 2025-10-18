@@ -62,6 +62,8 @@
 @69 = ~Dell-Light Twins~
 @70 = ~Zar’khaan~
 @71 = ~Lhiannan Shee~
+@72 = ~Allip~
+@73 = ~Hezrou~
 
 
 // cre soundfiles
@@ -132,12 +134,17 @@
 @913 = ~Eldath’s Soothing Presence~
 @914 = ~Wild Magic Eruption~
 @915 = ~Shadow Veil~
+@916 = ~Maniacal Laughter~
+@917 = ~Globe of Darkness~
 
 @920 = ~^0xFF22B4E6has gained +1% resistance to slashing damage. ^-~
 @921 = ~^0xFF22B4E6has gained +1% resistance to missile damage. ^-~
 @922 = ~^0xFF22B4E6has gained +1% resistance to piercing damage. ^-~
 @923 = ~^0xFF22B4E6has gained +1% resistance to crushing damage. ^-~
 @924 = ~^0xFF22B4E6has gained +1% magic resistance. ^-~
+
+@930 = ~Stench~
+@931 = ~THAC0 reduced~
 
 //sto files
 @950 = ~Temple of Eldath~
@@ -1386,6 +1393,7 @@ Verflucht: wenn der Träger einen speziellen Zauber wirkt, trifft er sich selbst
 Wish will fulfill literally the utterance of the caster. Thus, the actuality of the past, present, or future might be altered in some limited manner. The greater the wish, the greater the strain upon the fabric of reality, and the greater the chance of unwanted consequences.
 
 Curiously, this particular scroll may be read by anyone — not merely those trained in the arcane arts. Its words are written in a language so simple, so clear, that even the unlearned might speak them aloud with ease. Almost too simple, in fact... too easy to believe.~
+@1221 = ~Wisdom point lost~
 
 // script strings
 @2000 = ~Duskwood Dell~

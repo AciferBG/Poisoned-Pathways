@@ -11,6 +11,8 @@ IF
     Global("ForgeAmulet","ACPP79",1)
     Contains("AC#PPCO1","Anvil")  
     Contains("AC#PPCO2","Anvil")  
+    Contains("AC#PPWIW","Anvil") 
+    Contains("AC#PPWOD","Anvil") 
     Global("AnvilAmulet","ACPP79",0)
 THEN
     RESPONSE #100
@@ -22,6 +24,7 @@ THEN
         ScreenShake([20.45],15)
         ActionOverride("Anvil",CreateItem("AC#PPCO3",0,0,0))  // Amulet
         Wait(2)
+        AddJournalEntry(@13017,QUEST_DONE)
         AddExperienceParty(1000)
 END
 

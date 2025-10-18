@@ -13,7 +13,8 @@ IF
     Global("AmuletInfo","ACPP79",0)
 THEN
     RESPONSE #100
-        DisplayString(Myself,@2011)  
+        DisplayString(Myself,@2011) 
+        AddJournalEntry(@13011,QUEST) 
         SetGlobal("AmuletInfo","ACPP79",1)
 END
 
@@ -71,7 +72,7 @@ THEN
         DisplayString(Myself,@2006)  // ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
         CreateVisualEffect("spcrtwpn",[401.348])
         Wait(2)
-        SetGlobal("ForgeAmulet","ACPP79",1)
+        SetGlobal("ForgeAmulet","ACPP79",1)        
         TriggerActivation("Forgetrigger",FALSE)
 END
 

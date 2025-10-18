@@ -147,7 +147,8 @@ IF~~THEN REPLY ~Mhm. Right. Whatever. I need to go.~ EXTERN AC#PPBA1 search_head
 
 CHAIN AC#PPBA1 search_head_bye
 ~Find him... and I shall finally rest.~  
-DO ~SetGlobal("AC#PPBansheeHead","GLOBAL",1)~ EXIT
+DO ~AddJournalEntry(@13020,QUEST)
+SetGlobal("AC#PPBansheeHead","GLOBAL",1)~ EXIT
 
 CHAIN AC#PPBA1 have_head
 ~You have it! His head... oh, you have it! At last, I can sleep... I can let go...~
@@ -156,6 +157,7 @@ CreateVisualEffectObject("SPDEATH3",Myself)
 TakePartyItem("AC#PPHD1")
 DestroyItem("AC#PPHD1")
 AddexperienceParty(4000)
+AddJournalEntry(@13022,QUEST)
 DropItem("AC#PPCO1",[-1.-1])
 DestroySelf()~ EXIT
 

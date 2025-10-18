@@ -1,4 +1,22 @@
 IF
+    Global("CreateEnemy","ACPP71",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPHEZ",[342.308],S) 
+        SetGlobal("CreateEnemy","ACPP71",1)
+END
+
+IF
+    PartyHasItem("AC#PPWA")
+    Global("CreateEnemy","ACPP71",1)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PP71V",[342.308],S) 
+        SetGlobal("CreateEnemy","ACPP71",2)
+END
+
+IF
+    PartyHasItem("AC#PPPUB")
     Global("JournalUpdate","ACPP71",0)
 THEN
     RESPONSE #100

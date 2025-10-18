@@ -44,6 +44,45 @@ THEN
 END
 
 IF
+    Global("AmuletJournal01","ACPP70",0)
+    PartyHasItem("AC#PPNT2")
+THEN
+    RESPONSE #100
+        AddJournalEntry(@13010,QUEST)
+        SetGlobal("AmuletJournal01","ACPP70",1)
+END
+
+IF
+    Global("AmuletJournalWild","ACPP70",0)
+    PartyHasItem("AC#PPWIW")
+THEN
+    RESPONSE #100
+        AddJournalEntry(@13014,QUEST)
+        SetGlobal("AmuletJournalWild","ACPP70",1)
+END
+
+IF
+    Global("AmuletJournalDead","ACPP70",0)
+    PartyHasItem("AC#PPWOD")
+THEN
+    RESPONSE #100
+        AddJournalEntry(@13015,QUEST)
+        SetGlobal("AmuletJournalDead","ACPP70",1)
+END
+
+IF
+    Global("AC#PPAmuletJournalAll","GLOBAL",0)
+    PartyHasItem("AC#PPWOD")
+    PartyHasItem("AC#PPWIW")
+    PartyHasItem("AC#PPCO1")
+    PartyHasItem("AC#PPCO2")
+THEN
+    RESPONSE #100
+        AddJournalEntry(@13016,QUEST)
+        SetGlobal("AC#PPAmuletJournalAll","GLOBAL",1)
+END
+
+IF
     Global("DiffAdjust","ACPP70",0)
     Difficulty(EASIEST)
 THEN

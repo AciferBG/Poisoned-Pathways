@@ -1,7 +1,25 @@
 IF
-GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
+    GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
 THEN
-RESPONSE #100
-DestroySelf()
+    RESPONSE #100
+        DestroySelf()
+END
+
+IF
+    Global("Stronger","LOCALS",0)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",1)
+END
+
+IF
+    Global("Stronger","LOCALS",1)
+    LevelPartyGT(15)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",2)
 END
 

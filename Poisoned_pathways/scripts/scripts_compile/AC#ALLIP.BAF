@@ -1,0 +1,32 @@
+IF
+    StateCheck(NearestEnemyOf(Myself),STATE_STUNNED)
+    !StateCheck(SecondNearestEnemyOf(Myself),STATE_STUNNED)
+THEN
+    RESPONSE #50
+        AttackReevaluate(SecondNearestEnemyOf(Myself),5)
+    RESPONSE #50
+        AttackReevaluate(NearestEnemyOf(Myself),5)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),30)
+    Global("StartTheHorror","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("StartTheHorror","LOCALS",1)
+        SetGlobalTimer("TheHorrorContinues","GLOBAL",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#ALLI",Myself)  // Wahnsinniges Gelächter
+END
+
+IF
+    GlobalTimerExpired("TheHorrorContinues","GLOBAL")
+    Global("StartTheHorror","LOCALS",1)
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),30)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("TheHorrorContinues","GLOBAL",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#ALLI",Myself)  // Wahnsinniges Gelächter
+END
+

@@ -8,6 +8,33 @@
   // Animation - green abishai
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/GAbi_BGEE~         ~override~
  
+    // Hezrou
+  LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7f15 slotMax = slotMin + 0xff RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% HEZROU_ACIFER~ UNLESS ~HEZROU_ACIFER~
+  CLEAR_IDS_MAP
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Hezrou/exxx.ini~ ~override/%hexNumber%.ini~
+  ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Hezrou~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Hezrou/Hezrou-sounds~ ~override~
+  END
+  
+ // NWN Allip animation
+  LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7f35 slotMax = slotMin + 0xff RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% AC#NWN_ALLIP~ UNLESS ~AC#NWN_ALLIP~
+  CLEAR_IDS_MAP
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/NWN_Allip/exxx.ini~ ~override/%hexNumber%.ini~
+  ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/NWN_Allip~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
    // Symbiont static animation
   LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xb000 slotMax = slotMin + 0xff RET slot END
   ACTION_IF (slot <= 0) BEGIN

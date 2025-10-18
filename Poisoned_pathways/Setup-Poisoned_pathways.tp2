@@ -94,6 +94,21 @@ ADD_JOURNAL
 @13003
 @13004
 
+@13010
+@13011
+@13012
+@13013
+@13014
+@13015
+@13016
+@13017
+
+@13020
+@13021
+@13022
+@13023
+
+
 USING ~Poisoned_pathways/language/%LANGUAGE%/Poisoned_pathways_Journal.tra~
 
 ///////////////////////////////////////////////////////////////////////
@@ -401,6 +416,27 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPFYD.bam~ ~override~ // Eldath's 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1036.pvrz~
  END
  END
+ 
+COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPROD.bam~ ~override~ // Rose of Eldath desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1040.pvrz~
+ END
+ END
+ 
+COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPHYD.bam~ ~override~ // Honeymead desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1041.pvrz~
+ END
+ END
+ 
+COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWXD.bam~ ~override~ // Will-o-wild and -dead desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1042.pvrz~
+ END
+ END
 ///////////////////////////////////////////////////////////////////////
 // VVC files
 //
@@ -436,6 +472,18 @@ COPY ~Poisoned_pathways/spl/AC#PPHB.spl~ ~override~
     match_opcode = 326
     parameter2 = %forest_row%
   END
+
+ADD_PROJECTILE      ~Poisoned_pathways/pro/AC#HEZRU.PRO~ // Hezrou stench projectile
+COPY ~Poisoned_pathways/spl/AC#HEZR.spl~            ~override~  // Hezrou stench
+  SAY NAME1 @930
+  SAY 0xce @931
+       WRITE_SHORT   0x98 ~%AC#HEZRU%~
+
+COPY ~Poisoned_pathways/spl/AC#GLDRK.spl~            ~override/AC#GLDRK.spl~
+  SAY NAME1 @917
+
+COPY ~Poisoned_pathways/spl/AC#ALLI.spl~          ~override~
+SAY NAME1 @916
 
 COPY ~Poisoned_pathways/spl/AC#PPWX.spl~          ~override~
 SAY NAME1 @915

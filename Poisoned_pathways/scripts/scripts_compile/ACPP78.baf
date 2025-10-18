@@ -6,6 +6,15 @@ THEN
         DisplayStringHead(Player1,@2008)
         SetGlobal("EnteredArea","ACPP78",1)  
 END
+
+IF
+    Global("AmuletJournal01","ACPP78",0)
+    PartyHasItem("AC#PPCO2")
+THEN
+    RESPONSE #100
+        AddJournalEntry(@13012,QUEST)
+        SetGlobal("AmuletJournal01","ACPP78",1)
+END
 /*
 IF
 Global("AC#PPChapter6Quest","GLOBAL",5)
