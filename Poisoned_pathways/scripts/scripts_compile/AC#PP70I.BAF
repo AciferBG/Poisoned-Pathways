@@ -1,5 +1,13 @@
 IF
     Clicked([ANYONE])
+    GlobalGT("AC#PP_CH6_ENEMIES","ACPP77",0)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2071)  // @2071 = ~From all you’ve learned, this statue appears to depict Commander Elv-Esster Aened, once the leader of Myth Unnohyr’s guard.~
+END
+
+IF
+    Clicked([ANYONE])
 THEN
     RESPONSE #100
         DisplayString(Myself,@2022)  // ~A statue of a young elven woman, red roses blooming at her feet — the only plants untouched by the corrupted Mythal.~

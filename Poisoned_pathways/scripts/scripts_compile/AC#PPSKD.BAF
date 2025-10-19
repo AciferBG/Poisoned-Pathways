@@ -4,12 +4,12 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("Fight","LOCALS",1)
-        CreateCreatureObjectOffset("AC#PPSCR",Player1,[1.1])
-        CreateCreatureObjectOffset("AC#PPSCR",Player2,[1.1])
-        CreateCreatureObjectOffset("AC#PPSCR",Player3,[1.1])
-        CreateCreatureObjectOffset("AC#PPSCR",Player4,[1.1])
-        CreateCreatureObjectOffset("AC#PPSCR",Player5,[1.1])
-        CreateCreatureObjectOffset("AC#PPSCR",Player6,[1.1])
+        CreateCreatureObjectOffset("AC#PPSCR",Player1,[1.1])  // Scorpion
+        CreateCreatureObjectOffset("AC#PPSCR",Player2,[1.1])  // Scorpion
+        CreateCreatureObjectOffset("AC#PPSCR",Player3,[1.1])  // Scorpion
+        CreateCreatureObjectOffset("AC#PPSCR",Player4,[1.1])  // Scorpion
+        CreateCreatureObjectOffset("AC#PPSCR",Player5,[1.1])  // Scorpion
+        CreateCreatureObjectOffset("AC#PPSCR",Player6,[1.1])  // Scorpion
 END
 
 IF
@@ -23,15 +23,24 @@ THEN
 END
 
 IF
-    See(NearestEnemyOf(Myself))
     OR(2)
-    StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
-    StateCheck(Myself,STATE_INVISIBLE)
+        GlobalGT("AC#PP_PlotStart","GLOBAL",3)
+        Global("AC#PPHasMap","GLOBAL",10)
 THEN
     RESPONSE #100
- RandomWalk()
-     RESPONSE #100
- Continue()
+        EscapeArea()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    OR(2)
+        StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+        StateCheck(Myself,STATE_INVISIBLE)
+THEN
+    RESPONSE #100
+        RandomWalk()
+    RESPONSE #100
+        Continue()
 END
 
 IF
@@ -103,6 +112,4 @@ THEN
         EquipMostDamagingMelee()
         AttackReevaluate(NearestEnemyOf(Myself),30)
 END
-
-
 

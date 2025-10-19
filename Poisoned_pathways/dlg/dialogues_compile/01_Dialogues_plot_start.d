@@ -4,11 +4,20 @@ BEGIN ~AC#PPSKD~
 
 CHAIN IF ~StateCheck(Myself,STATE_CHARMED)~ THEN AC#PPSKD hello_charmed
 ~Hey there, friends! Friends, right? You wanted to know where the nastiest poison comes from, didn’t you? Well—lucky you! I've got a map right here. It shows the spot where I usually meet the fella who brews the real stuff. But, listen—just a word of advice, friend to friend: don’t mess around with that guy—smile at him wrong, and you’ll be coughing blood.~ 
-=
-~Anyway... here's the map. Farewell for now. I’m feeling kinda dizzy all of a sudden. Think I’ll head to the tavern, get something strong to clear my head.~
-DO ~GiveItem("AC#PPMP1",LastTalkedToBy())
-ChangeEnemyAlly(Myself,NEUTRAL)
-EscapeAreaDestroy(2)~ EXIT
+END
+IF~Global("AC#PPHasMap","GLOBAL",1)~THEN EXTERN AC#PPSKD wheres_my_map
+IF~Global("AC#PPHasMap","GLOBAL",0)~THEN EXTERN AC#PPSKD give_map_charmed
+
+	CHAIN IF ~~ THEN AC#PPSKD wheres_my_map
+	~Where's my map? I’m feeling kinda dizzy all of a sudden. Think I’ll head to the tavern, get something strong to clear my head.~
+	DO ~ChangeEnemyAlly(Myself,NEUTRAL)
+	EscapeAreaDestroy(2)~ EXIT
+	
+	CHAIN IF ~~ THEN AC#PPSKD give_map_charmed
+	~Anyway... here's the map. Farewell for now. I’m feeling kinda dizzy all of a sudden. Think I’ll head to the tavern, get something strong to clear my head.~
+	DO ~GiveItem("AC#PPMP1",LastTalkedToBy())
+	ChangeEnemyAlly(Myself,NEUTRAL)
+	EscapeAreaDestroy(2)~ EXIT
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPSKD hello_00
 ~Well now, what do we have here? You lookin’ for something that makes problems disappear... real quiet-like? I’ve got potions, powders, and little drips of doom—if your coin’s honest and your conscience ain’t too fussy.~
@@ -21,15 +30,15 @@ CHAIN IF ~True()~ THEN AC#PPSKD hello_02
 END
 IF~~THEN REPLY ~You disgust me. The world needs less filth like you!~ EXTERN AC#PPSKD fight
 IF~~THEN REPLY ~That does sound interesting. What exactly are you offering?~ EXTERN AC#PPSKD interest
-IF~Global("TellSupplier","LOCALS",1)~THEN REPLY ~Tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
+IF~Global("TellSupplier","LOCALS",1) Global("AC#PPHasMap","GLOBAL",0)~THEN REPLY ~Tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
 IF~~THEN REPLY ~I’m not ready to deal just yet.~ EXTERN AC#PPSKD bye
 
 	CHAIN IF ~~ THEN AC#PPSKD interest
 	~Oh, a bit of this and that—venoms to silence a snitch, brews to slow a soldier, drops that’ll send a man coughing up his liver. Handy little tools to make your life easier... and theirs shorter.~
 	END
 	IF~~THEN REPLY ~You're a blight on this city—I should end you right here!~ EXTERN AC#PPSKD fight
-	IF~Global("TellSupplier","LOCALS",0)~THEN REPLY ~I’m looking for something truly powerful.~ DO ~SetGlobal("TellSupplier","LOCALS",1)~ EXTERN AC#PPSKD special_poison
-	IF~Global("TellSupplier","LOCALS",1)~THEN REPLY ~Tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
+	IF~Global("TellSupplier","LOCALS",0) Global("AC#PPHasMap","GLOBAL",0)~THEN REPLY ~I’m looking for something truly powerful.~ DO ~SetGlobal("TellSupplier","LOCALS",1)~ EXTERN AC#PPSKD special_poison
+	IF~Global("TellSupplier","LOCALS",1) Global("AC#PPHasMap","GLOBAL",0)~THEN REPLY ~Tell me where you get the real good stuff from.~ EXTERN AC#PPSKD tell_me
 	IF~~THEN REPLY ~Not now. I need to think it through.~ EXTERN AC#PPSKD bye
 
 	CHAIN IF ~~ THEN AC#PPSKD special_poison

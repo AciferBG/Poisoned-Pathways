@@ -16,3 +16,23 @@ THEN
         AddJournalEntry(@13021,QUEST)
         SetGlobal("HeadJournal01","ACPP7A",1)
 END
+
+IF
+    Global("DiffAdjust","ACPP7A",0)
+    LevelPartyGT(13)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPMSP",[422.221],S)  // Mutated Spider
+        CreateCreature("AC#PPMSP",[624.289],S)  // Mutated Spider
+        SetGlobal("DiffAdjust","ACPP7A",1)
+END
+
+IF
+    Global("DiffAdjust","ACPP7A",0)
+    LevelPartyGT(9)
+THEN
+    RESPONSE #100
+        CreateCreature("SPIDPH01",[422.221],S)  // Phase Spider
+        CreateCreature("SPIDPH01",[624.289],S)  // Phase Spider
+        SetGlobal("DiffAdjust","ACPP7A",1)
+END

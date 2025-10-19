@@ -1,0 +1,25 @@
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #50
+        ForceSpell(NearestEnemyOf(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
+        ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
+        AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("TANARIPARALYZE","LOCALS",0)
+THEN
+    RESPONSE #100
+        ForceSpell(NearestEnemyOf(Myself),TANARI_PARALYZE)  // SPIN999.SPL (Paralyze)
+        SetGlobal("TANARIPARALYZE","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+

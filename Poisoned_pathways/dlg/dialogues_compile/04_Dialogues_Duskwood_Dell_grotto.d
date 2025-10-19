@@ -119,7 +119,6 @@ IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPDR1 who_are_you
 IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~I have weapons I’d like to lay to rest here.~ EXTERN AC#PPDR1 trade_root
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~Remind me, how was it again with the weapons I was to give you?~ EXTERN AC#PPDR1 trade_weapons_hub
-IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
 IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY ~Your High Priest has sent me. I am to collect a carafe of Eldath’s sacred singing water.~ EXTERN AC#PPDR1 need_singing_water
 IF ~Global("AC#PP_GiveBlade","GLOBAL",1) !Dead("AC#PPWYR")~ THEN REPLY ~I was told to collect a weapon here, one said to aid me against the undead.~ EXTERN AC#PPDR1 need_blade_01
 
@@ -159,7 +158,7 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 	IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place
 	IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY ~What is this place?~ EXTERN AC#PPDR1 what_place_2
 	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+	
 
 	CHAIN IF ~~ THEN AC#PPDR1 what_place
 	~This is Eldath’s sacred grotto, where absolute peace prevails.~
@@ -180,7 +179,7 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 	CHAIN IF ~~ THEN AC#PPDR1 throw_weapon_too
 	~Have you come to lay down your weapons here as well, in the name of peace?~
 	END
-	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+	
 	IF~~THEN REPLY ~Tempus forbid, no!~ EXTERN AC#PPDR1 weapon_01
 	IF~~THEN REPLY ~To each their own, but I prefer keeping my weapon close at hand.~ EXTERN AC#PPDR1 weapon_01
 	IF~~THEN REPLY ~If I could, I would... but I’m not ready yet.~ EXTERN AC#PPDR1 weapon_01
@@ -192,7 +191,7 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 	~Peace is never forced here. Whether you hold a blade or set it down, only your heart can choose its path.~ 
 	END
 	IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-	IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+	
 	
 		CHAIN IF ~~ THEN AC#PPDR1 take_some_weapons
 		~These weapons have already tasted blood. Whether they lie here or in your hands makes little difference to the past. Peace cannot be forced on the unwilling.~ 
@@ -200,14 +199,14 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 		IF~~THEN REPLY ~Do you perhaps keep any special weapons here—ones I might put to use?~ EXTERN AC#PPDR1 spectral_blade
 		IF~~THEN REPLY ~Then I’ll take a look around, see if anything’s worth keeping.~ EXTERN AC#PPDR1 bye
 		IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-		IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+		
 		
 		CHAIN IF ~~ THEN AC#PPDR1 spectral_blade
 		~A single blade among these still hums with ancient grief. It carries the weight of old vows, sworn in battles long past. If you are truly set on walking a path against the dead, it may answer your call. Perhaps it waits for someone bold enough to wield it once more.~ 
 		END
 		IF~~THEN REPLY ~Could you give it to me?~ EXTERN AC#PPDR1 give_spectral_blade
 		IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-		IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+		
 		
 			CHAIN IF ~~ THEN AC#PPDR1 give_spectral_blade
 			~No, not yet. You are not ready for such a burden. If fate wills it, it will one day rest in your grasp. Be patient... perhaps, in time, you'll be chosen to wield the blade.~ 
@@ -215,34 +214,11 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 			IF~~THEN REPLY ~Then I’ll prove myself, no matter what trials lie ahead.~ EXTERN AC#PPDR1 bye
 			IF~~THEN REPLY ~If it’s waiting for someone bold and handsome, I think I’m already the best candidate, but let's wait.~ EXTERN AC#PPDR1 bye
 			IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
-			IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine outside, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPDR1 hello_s_00
+			
 
 	CHAIN IF ~~ THEN AC#PPDR1 bye
 	~Peace to you, traveler. May your path be soft beneath your feet.~
-	EXIT
-	
-	CHAIN AC#PPDR1 hello_s_00
-	~My sister of the tides wanders lost in her fury, unable to hear the whispers of still water?~
-	END
-	IF~~THEN EXTERN AC#PPDR1 hello_s_01
-
-CHAIN IF ~~ THEN AC#PPDR1 hello_s_01
-~Bring her this. Blessed water mingled with chamomile, wild honey, blackberry, and lavender—each a whisper of calm from the grove. May it melt her wrath like morning sun on winter frost, leaving only quiet within.~
-== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID) InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Perhaps we could offer some of that brew to our angry dwarf here as well?~
-== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Ha! Very funny, half-elf! My rage bows to no potion—and that’s the way I like it! Now shut yer mouth before I find a new reason to get truly mad!~
-END
-IF~~THEN DO ~SetGlobal("AC#PPSirineQuest_d","GLOBAL",1) GiveItemCreate("AC#PPTEA",Player1,1,1,0)~ EXTERN AC#PPDR1 hello_s_02
-
-CHAIN IF ~~ THEN AC#PPDR1 hello_s_02
-~Let my siren sister drink this potion beneath the open sky. If her spirit is willing, Eldath’s calm will seep through the anger like sunlight thawing frozen waters.~
-END
-IF~~THEN REPLY ~Thank you, this will help her.~ EXTERN AC#PPDR1 hello_s_bye
-IF~~THEN REPLY ~Hopefully this will work.~ EXTERN AC#PPDR1 hello_s_bye
-IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#PPDR1 hello_s_bye
-
-	CHAIN IF ~~ THEN AC#PPDR1 hello_s_bye
-	~Carry calm as your shield, and kindness as your blade.~
-	EXIT
+	EXIT	
 	
 	CHAIN IF ~~ THEN AC#PPDR1 no_trade_bye
 	~Return when you have weapons you wish to lay to rest.~ 

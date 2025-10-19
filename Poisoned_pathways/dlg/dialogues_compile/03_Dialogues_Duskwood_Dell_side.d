@@ -1418,7 +1418,7 @@ EXIT
 ////////////////////////////////////////////////////////
 BEGIN AC#PPMON
 
-CHAIN IF ~GlobalLT("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 01.00
+CHAIN IF ~True()~ THEN AC#PPMON 01.00  // former: GlobalLT("AC#PPSymbolQuest","GLOBAL",10)
 ~Eldath watch over you, my friend. It is a blessing to meet another soul who walks in peace.~
 END
 IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL",0) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
@@ -1427,6 +1427,7 @@ IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem calm and content. 
 IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
 IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye
 IF~~THEN REPLY ~May peace flow with you, sister. Farewell.~ EXTERN AC#PPMON bye  
+IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPMON hello_s_00
 
 CHAIN AC#PPMON 01.01
 ~Oh yes, I have been here for many years, surrounded by gentle souls and the endless murmur of the waters.~
@@ -1473,71 +1474,28 @@ CHAIN AC#PPMON bye
 ~Farewell, then. My hands may tremble, but my heart is steady. May yours be likewise, wherever your path flows.~
 EXIT
 
+	CHAIN AC#PPMON hello_s_00
+	~My sister of the tides wanders lost in her fury, unable to hear the whispers of still water?~
+	END
+	IF~~THEN EXTERN AC#PPMON hello_s_01
 
-//OLD:
-/*
-BEGIN AC#PPMON
-
-CHAIN IF ~GlobalLT("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 01.00
-~Eldath watch over you, my friend... though my soul drifts heavy, like water burdened by storm.~
+CHAIN IF ~~ THEN AC#PPMON hello_s_01
+~Bring her this. Blessed water mingled with chamomile, wild honey, blackberry, and lavender—each a whisper of calm from the grove. May it melt her wrath like morning sun on winter frost, leaving only quiet within.~
+== JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID) InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Perhaps we could offer some of that brew to our angry dwarf here as well?~
+== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~Ha! Very funny, half-elf! My rage bows to no potion—and that’s the way I like it! Now shut yer mouth before I find a new reason to get truly mad!~
 END
-IF~Global("AC#PPSymbolQuest","GLOBAL",1) Global("AC#PP_AlaAgreesSymbol","GLOBAL",0) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
-IF~Global("AC#PPSymbolQuest","GLOBAL",2) Global("AC#PP_AlaAgreesSymbol","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I have spoken with Alatoasz. He agrees—you are worthy to bear Merethan’s emblem.~ EXTERN AC#PPMON 01.04
-IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem somewhat sad. Is something wrong?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
-IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
-IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye
-IF~~THEN REPLY ~I hope your heart finds calm soon. Farewell.~ EXTERN AC#PPMON bye  
+IF~~THEN DO ~SetGlobal("AC#PPSirineQuest_d","GLOBAL",1) GiveItemCreate("AC#PPTEA",Player1,1,1,0) AddJournalEntry(@13061,QUEST)~ EXTERN AC#PPMON hello_s_02
 
-CHAIN AC#PPMON 01.01
-~It’s just... Well, I have lived here for some months now, among the brothers, sisters, and travelers who find shelter beneath Eldath’s peace. I truly believe this is where I am meant to be.~
-==AC#PPMON ~The next step in my spiritual journey was to carve the emblem of Eldath myself... but my hands have grown unsteady with age.~
-==AC#PPMON ~Despite my best efforts, an old ailment leaves my fingers numb and clumsy. I have tried, again and again, yet I fail each time.~
-==AC#PPMON ~I will keep trying... but sometimes I wonder if this task is simply beyond me. Forgive me—you must have heard such tales a thousand times before.~
-==AC#PPMON ~Now, tell me—is there anything else you require?~
+CHAIN IF ~~ THEN AC#PPMON hello_s_02
+~Let my siren sister drink this potion beneath the open sky. If her spirit is willing, Eldath’s calm will seep through the anger like sunlight thawing frozen waters.~
 END
-IF~Global("AC#PPSymbolQuest","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
-IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
-IF~~THEN REPLY ~No. I need to go, I'm done listening to your babbling.~ EXTERN AC#PPMON bye
-IF~~THEN REPLY ~No. Have a wonderful day, my friend.~ EXTERN AC#PPMON bye  
+IF~~THEN REPLY ~Thank you, this will help her.~ EXTERN AC#PPMON hello_s_bye
+IF~~THEN REPLY ~Hopefully this will work.~ EXTERN AC#PPMON hello_s_bye
+IF~~THEN REPLY ~Alright. I'll bring your brew to your salty sister.~ EXTERN AC#PPMON hello_s_bye
 
-CHAIN AC#PPMON 01.02
-~Yes... this place is so quiet. After the endless noise of the cities, it feels like a forgotten dream.~
-==AC#PPMON ~Here, you hear the song of the waters, the whisper of leaves, the creak of trees dancing in the wind.~
-END
-IF~Global("AC#PPSymbolQuest","GLOBAL",1) PartyHasItem("AC#PPSYM")~THEN REPLY ~I think you deserve this. This is the emblem of Eldath that Merethan carried when he passed. I believe he would have wanted it to be used again.~ EXTERN AC#PPMON 01.03
-IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~Yet I hear a shade of sadness in your voice. Is something wrong?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1)~ EXTERN AC#PPMON 01.01
-IF~~THEN REPLY ~Right. Whatever. I need to go.~ EXTERN AC#PPMON bye
-IF~~THEN REPLY ~Thank you for sharing this. May your heart find peace.~ EXTERN AC#PPMON bye  
-
-CHAIN AC#PPMON 01.03
-~You would offer me the emblem of a fallen Freewalker of Eldath? That is a great honor... but I cannot accept it lightly. Such a decision must come from the High Fallskeeper himself.~
-END
-IF~~THEN REPLY ~Shall I speak to the High Fallskeeper on your behalf?~ EXTERN AC#PPMON talk_high_fallskeeper
-IF~Global("AC#PP_AlaAgreesSymbol","GLOBAL",1)~THEN REPLY ~I have already spoken with him. He wishes for you to carry it.~ EXTERN AC#PPMON 01.04
-IF~~THEN REPLY ~It was only an idea. I have other matters to attend to.~ EXTERN AC#PPMON bye
-
-CHAIN AC#PPMON talk_high_fallskeeper
-~That would be a kindness beyond measure. If you could speak a good word for me, it would warm the heart of this old priestess.~
-DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",2)~ EXIT
-
-CHAIN AC#PPMON 01.04  
-~The High Fallskeeper grants me the honor of carrying Merethan’s emblem? I am humbled beyond words.~  
-==AC#PPMON ~You have shown compassion in a world that often forgets it. Such kindness is rare—and sacred.~  
-==AC#PPMON ~I have nothing but my sincere gratitude to offer you, yet know that I shall always include you in my prayers to the Lady of the Still Waters!~  
-DO ~TakePartyItem("AC#PPSYM") AddExperienceParty(400) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) ReputationInc(1)~ EXIT  
-
-CHAIN IF ~Global("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 02.00  
-~Thanks to you, I may walk the path of peace once more—not in haste, but with patient, steadfast steps.~  
-EXIT  
-
-CHAIN AC#PPMON bye
-~Farewell, then. May calm guide your hand. Mine tremble too much these days—but you are young. Use your strength to plant seeds of peace, wherever you walk.~
-EXIT
-*/
-
-
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
+	CHAIN IF ~~ THEN AC#PPMON hello_s_bye
+	~Carry calm as your shield, and kindness as your blade.~
+	EXIT
 
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
@@ -1545,7 +1503,7 @@ EXIT
 BEGIN AC#PPSIR
 
 CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",0)~ THEN AC#PPSIR 01.00
-~Argh!~
+~Argh!~ [SIRIN03]
 END
 IF~~THEN REPLY ~Well, it looks like someone's angry.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
 IF~~THEN REPLY ~You’re the only one in this place who does not show harmony.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
@@ -1569,49 +1527,22 @@ IF~~THEN REPLY ~I don’t think I care about this. I think I’ll just go.~ EXTE
 
 CHAIN AC#PPSIR 01.02
 ~My heart mourns, truly it does... but the fury howls within me like a rising tide.~
-DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
+DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1) AddJournalEntry(@13060,QUEST)~ EXIT
 
 CHAIN AC#PPSIR 01.03
 ~Then go. Leave. The sooner you're gone, the quieter it gets.~
-DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
+DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1) AddJournalEntry(@13060,QUEST)~ EXIT
 
 CHAIN AC#PPSIR bye
 ~Then go. Leave. The sooner you're gone, the quieter it gets.~
 EXIT
 
-/*
-CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",0)~ THEN AC#PPSIR 01.00
-~Argh!!!~
-END
-IF~~THEN REPLY ~Well, it looks like someone's angry.~ DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXTERN AC#PPSIR 01.01
-IF~~THEN REPLY ~I... I think I'll leave you be.~ EXIT
-
-CHAIN AC#PPSIR 01.01
-~Well, of course I'm angry! Haven't yu realized that this is all like some huge mess?!~
-==AC#PPSIR ~People are killing each other. Or they are killing themselves. There are wars, people act like—like they were just a bunch of fools!~
-==AC#PPSIR ~I came here, because my people were fighting pirates lately. I've seen so much death, so much blood. And I feel so angry all the time. I want to take another arrow and just do whatever it takes to finally feel peace!~
-==AC#PPSIR ~But I also know I cannot just kill in the name of peace. It feels wrong. That's why I came here, but the anger doesn't leave me. It's still there and I just don't know how to let it go. It's always there, pulsing, drilling, grasping my heart and soul and mind. An I want this to end.~
-END
-IF~~THEN REPLY ~I'm really sorry to hear that.~ EXTERN AC#PPSIR 01.02
-IF~~THEN REPLY ~I don't think I care about this. I think I'll just go.~ EXTERN AC#PPSIR 01.03
-
-CHAIN AC#PPSIR 01.02
-~Believe me, I feel sorry, too. And I'm feeling so damn... angry.~
-DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
-
-CHAIN AC#PPSIR 01.03
-~Go then. Leave. The sooner, the better.~
-DO ~SetGlobal("AC#PPSirineQuest","GLOBAL",1)~ EXIT
-*/
-
-//2nd 
-
 CHAIN IF ~Global("AC#PPSirineQuest","GLOBAL",1)~ THEN AC#PPSIR 02.00
 ~Argh!~
 END
 IF~~THEN REPLY ~I'll just leave you be.~ EXIT
-IF~PartyHasItem("AC#PPTEA")~THEN REPLY ~I spoke with the dryad in Eldath’s grotto. She believes you should accept that some anger will remain. She gave me this herbal brew to calm you down.~ EXTERN AC#PPSIR 02.01
-IF ~PartyHasItem("AC#PPTEA")~ THEN REPLY ~Here — a mouthful of this herbal brew, and your troubles will be gone. Or so the dryad claims.~ EXTERN AC#PPSIR 02.01
+IF~PartyHasItem("AC#PPTEA")~THEN REPLY ~I spoke with an old Eldathyn priestess. She believes you must accept that some anger will remain. She gave me this herbal brew to help you find calm.~ EXTERN AC#PPSIR 02.01
+IF ~PartyHasItem("AC#PPTEA")~ THEN REPLY ~Here — a mouthful of this herbal brew, and your troubles will be gone. Or so the old lady claims.~ EXTERN AC#PPSIR 02.01
 
 
 CHAIN AC#PPSIR 02.01
@@ -1619,7 +1550,7 @@ CHAIN AC#PPSIR 02.01
 END
 IF ~~ THEN REPLY ~Well, it might be worth a try.~ EXTERN AC#PPSIR 02.02
 IF ~~ THEN REPLY ~Do you have a better idea?~ EXTERN AC#PPSIR 02.02
-IF ~~ THEN REPLY ~To be honest: no.~ EXTERN AC#PPSIR 02.02
+IF ~~ THEN REPLY ~To be honest: No.~ EXTERN AC#PPSIR 02.02
 IF ~~ THEN REPLY ~Do as you wish. I tried to help, but perhaps you're not ready to feel better.~ EXTERN AC#PPSIR 02.02
 
 
@@ -1646,6 +1577,7 @@ END
 IF ~~ THEN DO ~GiveItemCreate("AC#PPARO",LastTalkedToBy,10,0,0)
 GiveItemCreate("AROW05",LastTalkedToBy,10,0,0)
 SetGlobal("AC#PPSirineQuest","GLOBAL",2) 
+AddJournalEntry(@13062,QUEST_DONE)
 AddexperienceParty(300)~ EXIT
 
 
