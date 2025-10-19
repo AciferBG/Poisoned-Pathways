@@ -32,16 +32,28 @@ CHAIN AC#PPTME which_direction
 ~So now I'm off... somewhere. Still mullin’ it over. North? South? East by bellybutton?~
 END
 IF~~THEN REPLY ~Right...~ EXTERN AC#PPTME 004
-IF~~THEN REPLY ~Maybe you should go to Athkatla. There's this huge Promenade there.~ DO ~SetGlobal("AC#PPMerSugAth","GLOBAL",1)~ EXTERN AC#PPTME 005
-IF~OR(3) Global("TMAcceptance","GLOBAL",1) Global("ShTrade","GLOBAL",1) Global("MazzyHappy","GLOBAL",1)~THEN REPLY ~Maybe you should try Trademeet. Sounds like your kind o’ crowd!~ DO ~SetGlobal("AC#PPMerSugTra","GLOBAL",1)~ EXTERN AC#PPTME 005
+IF~~THEN REPLY ~Maybe you should go to Athkatla. There's this huge Promenade there.~ DO ~SetGlobal("AC#PPMerSugAth","GLOBAL",1)~ EXTERN AC#PPTME waukeens_promenade
+IF ~GlobalGT("AC#_WaukeenMessage","GLOBAL",1)~ THEN REPLY ~You could travel to the Abbey of the Goldspires — the sacred haven of merchants outside of Athkatla.~ DO ~SetGlobal("AC#PPMerSugGold","GLOBAL",1)~ EXTERN AC#PPTME Goldspires  
+IF~OR(3) Global("TMAcceptance","GLOBAL",1) Global("ShTrade","GLOBAL",1) Global("MazzyHappy","GLOBAL",1)~THEN REPLY ~Maybe you should try Trademeet. Sounds like your kind o’ crowd!~ DO ~SetGlobal("AC#PPMerSugTra","GLOBAL",1)~ EXTERN AC#PPTME trademeet
 
 CHAIN AC#PPTME 004
 ~You’re not much of a talker, huh? That’s all right. I talk enough for two! ‘Course, unless my belly starts hollerin’ for some goulash.~
 EXTERN AC#PPTME 006
 
-CHAIN AC#PPTME 005
-~Huh! Big city or bustling market... sounds promising. I’ll give it a think between spoonfuls o’ goulash.~
-EXTERN AC#PPTME 006
+CHAIN AC#PPTME trademeet
+~Huh! Bustling market... sounds promising. I’ll give it a think between spoonfuls o’ goulash.~
+END 
+IF ~~ THEN DO ~AddJournalEntry(@13072,INFO)~ EXTERN AC#PPTME 006
+
+CHAIN AC#PPTME waukeens_promenade
+~Huh! Bustling market... sounds promising. I’ll give it a think between spoonfuls o’ goulash.~
+END 
+IF ~~ THEN DO ~AddJournalEntry(@13073,INFO)~ EXTERN AC#PPTME 006
+
+CHAIN AC#PPTME Goldspires
+~Goldspires? Sounds like a fine name for a merchant’s refuge! All right, I’ll head there.~
+END 
+IF ~~ THEN DO ~AddJournalEntry(@13074,INFO)~ EXTERN AC#PPTME 006
 
 CHAIN AC#PPTME 006
 ~Speaking o’ stew—goulash’s almost done! Spiced with Corm Orp herbs, kissed by halfling hands, and stirred with a spoon older than my auntie's gossip. You’re welcome to a bowl, and hey, while we’re both here and breathin’, wanna trade a few trinkets? You never know what treasure hides in a halfling’s rumblin’ belly or a humble halfling’s pouch!~
@@ -175,3 +187,13 @@ DO ~SetGlobal("AC#PP_Helped_Orcs","GLOBAL",1)
 AddexperienceParty(500)
 ActionOverride("AC#PPON5",EscapeArea())
 EscapeArea()~ EXIT
+
+CHAIN IF ~Global("OrcsGood","ACPP97",1)
+CombatCounterGT(0)~ THEN AC#PPON4 hello_thank_you
+~Me no fight!~
+EXIT
+
+CHAIN IF ~Global("OrcsGood","ACPP97",1)
+CombatCounterGT(0)~ THEN AC#PPON5 hello_thank_you
+~Me no fight!~
+EXIT

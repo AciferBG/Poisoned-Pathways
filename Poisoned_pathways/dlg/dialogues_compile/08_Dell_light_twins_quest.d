@@ -23,24 +23,69 @@ CHAIN IF ~Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",8)~ THEN AC#PPFAE hello_f
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-I tell you, that was *quite* an adventure!~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-And all that adventuring makes one terribly sleepy!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Yes, Lilafern. Let’s rest — but not before we thank our rescuer properly.~
-== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Thank you! A hundred blessings and a hundred sparkles upon you, <CHARNAME>! We’d have kissed your feet if they weren’t so terribly smelly.~
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-A hundred blessings and a hundred sparkles upon you, <CHARNAME>! We’d have kissed your feet if they weren’t so terribly smelly.~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Thank you, <CHARNAME> — truly. You’ve given us back the wind, the light, and the laughter. We’ll never forget the sound of your voice breaking that dreadful silence.~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Wait! We can’t just let <PRO_HIMHER> go without a wish! That would be... ungrateful, or possibly unlucky — or both!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Exactly right, Lilafern! A small gift, a little sparkle to keep the dark away. What will you have, <CHARNAME>?~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-So! One wish, <CHARNAME>. Only one — we’re not genies, you know? You can pick your sparkle: Resistance to poisons, shields against spells, a shimmer of luck against hostile wands, a charm against awkward transformations, or maybe... a little fortitude against very bad dragon breath? Choose wisely, <CHARNAME> — even tiny wishes have echoes.~  
 END
-IF~~THEN REPLY ~I’d rather be safe from poison and disease.~ DO ~ReallyForceSpellRES("AC#PPF1",Player1)~ EXTERN AC#PPFAE fairy_bless_end
-IF~~THEN REPLY ~Perhaps something to resist spells.~ DO ~ReallyForceSpellRES("AC#PPF2",Player1)~ EXTERN AC#PPFAE fairy_bless_end
-IF~~THEN REPLY ~A little resistance to wands and magical devices wouldn’t hurt.~ DO ~ReallyForceSpellRES("AC#PPF3",Player1)~ EXTERN AC#PPFAE fairy_bless_end
-IF~~THEN REPLY ~I could use a safeguard against being turned into something unnatural.~ DO ~ReallyForceSpellRES("AC#PPF4",Player1)~ EXTERN AC#PPFAE fairy_bless_end
-IF~~THEN REPLY ~Maybe something to help me get through danger — like dragon’s breath.~ DO ~ReallyForceSpellRES("AC#PPF5",Player1)~ EXTERN AC#PPFAE fairy_bless_end
+IF~~THEN REPLY ~I’d rather be safe from poison and disease.~ EXTERN AC#PPFAE fairy_bless_death
+IF~~THEN REPLY ~Perhaps something to resist spells.~ EXTERN AC#PPFAE fairy_bless_spell
+IF~~THEN REPLY ~A little resistance to wands and magical devices wouldn’t hurt.~ EXTERN AC#PPFAE fairy_bless_wand
+IF~~THEN REPLY ~I could use a safeguard against being turned into something unnatural.~ EXTERN AC#PPFAE fairy_bless_polymorph
+IF~~THEN REPLY ~Maybe something to help me get through danger — like dragon’s breath.~ EXTERN AC#PPFAE fairy_bless_breath
 
 
 // Twins react to the chosen blessing
-CHAIN AC#PPFAE fairy_bless_end
+CHAIN AC#PPFAE fairy_bless_death
 ~^0xFFE3B0FF Lilafern: ^-A wise choice! Hold still — this won’t sparkle much... or maybe it will.~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-There! A touch of moonlight, a pinch of laughter, and a dusting of please-don’t-die.~
 DO ~SetGlobal("AC#PPFaerieBlessing","GLOBAL",1)
+ReallyForceSpellRES("AC#PPF1",Player1)
+ReallyForceSpell(Myself,FLASHY_2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)
+AddJournalEntry(@13004,QUEST_DONE)
+EscapeArea()~
+EXIT
+
+CHAIN AC#PPFAE fairy_bless_spell
+~^0xFFE3B0FF Lilafern: ^-A wise choice! Hold still — this won’t sparkle much... or maybe it will.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-There! A touch of moonlight, a pinch of laughter, and a dusting of please-don’t-die.~
+DO ~SetGlobal("AC#PPFaerieBlessing","GLOBAL",1)
+ReallyForceSpellRES("AC#PPF2",Player1)
+ReallyForceSpell(Myself,FLASHY_2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)
+AddJournalEntry(@13004,QUEST_DONE)
+EscapeArea()~
+EXIT
+
+CHAIN AC#PPFAE fairy_bless_wand
+~^0xFFE3B0FF Lilafern: ^-A wise choice! Hold still — this won’t sparkle much... or maybe it will.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-There! A touch of moonlight, a pinch of laughter, and a dusting of please-don’t-die.~
+DO ~SetGlobal("AC#PPFaerieBlessing","GLOBAL",1)
+ReallyForceSpellRES("AC#PPF3",Player1)
+ReallyForceSpell(Myself,FLASHY_2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)
+AddJournalEntry(@13004,QUEST_DONE)
+EscapeArea()~
+EXIT
+
+CHAIN AC#PPFAE fairy_bless_polymorph
+~^0xFFE3B0FF Lilafern: ^-A wise choice! Hold still — this won’t sparkle much... or maybe it will.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-There! A touch of moonlight, a pinch of laughter, and a dusting of please-don’t-die.~
+DO ~SetGlobal("AC#PPFaerieBlessing","GLOBAL",1)
+ReallyForceSpellRES("AC#PPF4",Player1)
+ReallyForceSpell(Myself,FLASHY_2)
+SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)
+AddJournalEntry(@13004,QUEST_DONE)
+EscapeArea()~
+EXIT
+
+CHAIN AC#PPFAE fairy_bless_breath
+~^0xFFE3B0FF Lilafern: ^-A wise choice! Hold still — this won’t sparkle much... or maybe it will.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-There! A touch of moonlight, a pinch of laughter, and a dusting of please-don’t-die.~
+DO ~SetGlobal("AC#PPFaerieBlessing","GLOBAL",1)
+ReallyForceSpellRES("AC#PPF5",Player1)
 ReallyForceSpell(Myself,FLASHY_2)
 SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",10)
 AddJournalEntry(@13004,QUEST_DONE)

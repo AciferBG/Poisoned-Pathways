@@ -9,13 +9,22 @@ END
 
 IF
     Global("OrcsGood","ACPP97",1)
-    See(Player1)
     !See([ENEMY])
+    CombatCounter(0)
+THEN
+    RESPONSE #100
+        Wait(1)
+        SetGlobal("OrcsGood","ACPP97",2)
+        Dialogue(Player1)
+END
+
+IF
     CombatCounter(0)
     Dead("AC#PP971")  // Maddlethorpe Jarn
     Dead("AC#PP972")  // Wimpley Ormath
     Dead("AC#PP973")  // Edvarr Nolthune
     Dead("AC#PP974")  // Archer
+    Dead("AC#PP975")  // Archer
 THEN
     RESPONSE #100
         Wait(1)

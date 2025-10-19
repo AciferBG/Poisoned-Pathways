@@ -146,11 +146,17 @@
 @930 = ~Stench~
 @931 = ~THAC0 reduced~
 
-@941 = ~Save vs. death bonus~
-@942 = ~Save vs. spell bonus~
-@943 = ~Save vs. wand bonus~
-@944 = ~Save vs. polymorph bonus~
-@945 = ~Save vs. breath bonus~
+@932 = ~Permanent +1 bonus to Saving Throws vs. Death~
+@933 = ~Permanent +1 bonus to Saving Throws vs. Spells~
+@934 = ~Permanent +1 bonus to Saving Throws vs. Wands~
+@935 = ~Permanent +1 bonus to Saving Throws vs. Polymorph~
+@936 = ~Permanent +1 bonus to Saving Throws vs. Breath Attacks~
+
+@941 = ~Whisper Against Death~ //~Save vs. death bonus~
+@942 = ~Glimmer Against Magic~ //~Save vs. spell bonus~
+@943 = ~Shimmerstep Against Wands~ // ~Save vs. wand bonus~
+@944 = ~Neverfrog Blessing~ // ~Save vs. polymorph bonus~
+@945 = ~Breeze Against Dragon’s Cough~ // ~Save vs. breath bonus~
 
 //sto files
 @950 = ~Temple of Eldath~
@@ -451,24 +457,22 @@ May all who breathe know suffering—and in their final, gasping moments, know H
 ~
 @1071 = ~Longsword~
 @1072 = ~The Memory of the Myths +5~
-@1073 = ~This blade once belonged to the elven knight Telva, a renowned hunter of the undead. Legends tell that it was carried through countless battles, its edge striking true against the armored husks of skeletal warriors, rending the wards of liches, and even drawing the blood of vampires. In one desperate struggle it was turned against a dracolich itself.
-It was in that battle, however, that the creature summoned all its foul strength and shattered the weapon. Yet the faith and enchantments bound within the steel did not perish. Instead, they flared forth, reshaping the weapon into a spectral blade.
-From that day, the sword could no longer wound the living. Against the undead, though, its power grew even keener—able to pierce both flesh and phantasm, striking at any being tainted by undeath.
+@1073 = ~This blade once belonged to Telva, an elven knight. Tales tell of its edge striking true through the armored husks of skeletal warriors, unraveling the wards of liches, and even drawing blood from the veins of vampires. In one final, desperate struggle, the weapon was turned against a dracolich itself.
+Though the dracolich summoned all its foul might and shattered the sword, the enchantments and faith bound within the steel did not perish. Instead, they flared outward—reshaping the weapon into a spectral blade of unwavering purpose.
+
+Since that day, the sword can no longer harm the living. But against the undead, its power has only grown—capable of piercing both decaying flesh and incorporeal forms alike. Any creature tainted by undeath should fear its ghostly edge.
 
 STATISTICS:
 
-Equipped abilities:
-– Armor Class vs. Undead: +2
-– Saving Throws vs. Undead: +2
-
 Combat abilities:
-– Cannot harm any living creature, only the undead
-– Does not receive bonus damage from strength and critical hits does not deal any bonus damage
-– Has a 20% chance that an undead enemy hit by this weapon will suffer additional 2d8+5 fire damage (Save vs. Spells -5 to halve the damage)
-– Has a 10% chance that an undead enemy hit by this weapon will be instantly destroyed 
+– Can only harm undead creatures
+– Does not receive bonus damage from Strength
+– Critical hits do not deal bonus damage
+– 20% chance on hit to deal 2d8+5 additional fire damage to undead (Save vs. Spells at –5 to halve)
+– 10% chance on hit to instantly destroy undead target
 
 THAC0: +5
-Damage: 2d8+5 (magic)
+Damage: 2d8+5 (magic, vs. undead only)
 Speed Factor: 3
 Proficiency Type: Long Sword
 Type: One-handed
@@ -1390,10 +1394,24 @@ Weight: 25~
 The seal cannot be opened or broken by physical or magical means. The faeries within are alive but imprisoned, their magic suppressed by the vessel’s binding.
 
 Weight: 1~
-@1218 = ~Miragefang~
-@1219 = ~Jede erfolgreiche Attacke hat 10% Chance, Mislead oder Invisibility auf den Träger zu wirken.
-Dafür: 5% Chance, dass der Träger Feeblemind erleidet (verliert sich in seinen eigenen Lügen).
-Verflucht: wenn der Träger einen speziellen Zauber wirkt, trifft er sich selbst (Selbsttäuschung).~
+@1218 = ~Mirage’s Edge~
+@1219 = ~Forged by genies who sought to weave illusion and motion into one, this blade is said to cut not only through flesh, but through certainty itself. Once each day, it can wrap its wielder in shimmering reflections — turning the swordsman into a living mirage.
+
+STATISTICS:
+
+Charge abilities:
+– Mirror Image once per day
+  Duration: 1 turn
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 1~
 @1220 = ~Wish
 
 Wish will fulfill literally the utterance of the caster. Thus, the actuality of the past, present, or future might be altered in some limited manner. The greater the wish, the greater the strain upon the fabric of reality, and the greater the chance of unwanted consequences.
@@ -1489,6 +1507,13 @@ Curiously, this particular scroll may be read by anyone — not merely those tra
 @2102 = ~Stop tugging my robe!~
 @2103 = ~Fine, fine! We’ll tug your hair instead. Happy now?~
 @2104 = ~Don’t trust fireflies. They’re just show-offs with no style.~
+
+@2105 = ~Now that you're safe, please— no more vanishing without a word!~
+@2106 = ~But then who would you worry about, Brother Edrim? We keep your heart healthy!~
+@2107 = ~It’s truly wonderful to have you back!~
+@2108 = ~Oh really? We’ll remind you of that next time we’re tugging on your robe!~
+
+
 
 
 

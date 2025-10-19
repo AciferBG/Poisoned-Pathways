@@ -131,6 +131,10 @@ ADD_JOURNAL
 @13061
 @13062
 
+@13072
+@13073
+@13074
+
 USING ~Poisoned_pathways/language/%LANGUAGE%/Poisoned_pathways_Journal.tra~
 
 ///////////////////////////////////////////////////////////////////////
@@ -510,18 +514,23 @@ COPY ~Poisoned_pathways/spl/AC#HEZR.spl~            ~override~  // Hezrou stench
 
 COPY ~Poisoned_pathways/spl/AC#PPF1.spl~            ~override~ // Faeries Save vs. death bonus
   SAY NAME1 @941
+  SAY 0xce @932
   
 COPY ~Poisoned_pathways/spl/AC#PPF2.spl~            ~override~ // Faeries Save vs. spell bonus
   SAY NAME1 @942
+  SAY 0x9e @933
   
 COPY ~Poisoned_pathways/spl/AC#PPF3.spl~            ~override~ // Faeries Save vs. wand bonus
   SAY NAME1 @943
+  SAY 0x9e @934
 
 COPY ~Poisoned_pathways/spl/AC#PPF4.spl~            ~override~ // Faeries Save vs. ploymorph bonus
   SAY NAME1 @944
+  SAY 0x9e @935
   
 COPY ~Poisoned_pathways/spl/AC#PPF5.spl~            ~override~ // Faeries Save vs. breath bonus
   SAY NAME1 @945
+  SAY 0x9e @936
 
 COPY ~Poisoned_pathways/spl/AC#GLDRK.spl~            ~override~
   SAY NAME1 @917

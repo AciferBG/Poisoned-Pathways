@@ -602,6 +602,7 @@ CHAIN IF ~True()~ THEN AC#PPHE2 hello_thank_you
 == AC#PPHE2 ~Our spirits may rest. Yours... must journey on. But know this: the song of your deed will echo in the roots of this forest for ages to come.~
 DO ~SetGlobal("Elves_ByeBye","ACPP90",1)
 AddJournalEntry(@12218,QUEST)
+GiveItemCreate("AC#PPBE",Player1,1,0,0)
 CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
 
 
