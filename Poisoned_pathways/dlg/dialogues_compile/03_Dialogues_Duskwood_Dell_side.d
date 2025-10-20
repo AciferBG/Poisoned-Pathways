@@ -180,7 +180,7 @@ IF ~~ THEN REPLY ~Those two faeries were delightful! Please don’t tell me some
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_04
 	~Thank you! As I said, the merchant was headed toward Athkatla. Where he might be within that vast city, I cannot guess — but surely you know your way around better than I. Mayhap a place where merchants gather would be the best place to begin.~
 	END
-	IF ~~ THEN REPLY ~There’s a large marketplace there — Waukeen’s Promenade.~ EXTERN AC#PPMAN twins_kidnapped_05
+	IF ~~ THEN REPLY ~There’s a large marketplace there — Waukeen’s Promenade.~ EXTERN AC#PPMAN twins_kidnapped_any_clue
 	IF ~~ THEN REPLY ~Do you have any description of this merchant?~ EXTERN AC#PPMAN twins_kidnapped_any_clue
 	IF ~~ THEN REPLY ~I don’t have time for this.~ EXTERN AC#PPMAN twins_kidnapped_decline_bye
 
@@ -378,11 +378,11 @@ Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST1 hello_korgan
 ==AC#PPST1 ~Tell us, brother—what is your name?~
 ==KORGANJ ~Korgan. BLOOD-Axe.~
 ==AC#PPST2 ~Ah. So tell us, brother—when was the last time you truly felt peace?~
-==KORGANJ ~When I chopped off Timble’s ugly head.~
+==KORGANJ ~When I chopped off that human’s ugly head.~
 ==AC#PPST1 ~Uh... and when did you last hear the eternal silence?~
-==KORGANJ ~When I cut out Larry’s jabbering tongue.~
-==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
-==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==KORGANJ ~When I cut out that halfling’s jabbering tongue.~
+==AC#PPST2 ~With such an attitude you’ll have a hard time getting anyone to lend you their ears!~
+==KORGANJ ~Never had trouble with that! Kept their ears. Made a fine necklace, that.~
 ==AC#PPST2 ~By Eldath, you have problems with your temper!~
 ==KORGANJ ~No, *you* have problems with your delusions!~
 ==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
@@ -399,11 +399,11 @@ Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST2 hello_korgan
 ==AC#PPST1 ~Tell us, brother—what is your name?~
 ==KORGANJ ~Korgan. BLOOD-Axe.~
 ==AC#PPST2 ~Ah. So tell us, brother—when was the last time you truly felt peace?~
-==KORGANJ ~When I chopped off Timble’s ugly head.~
+==KORGANJ ~When I chopped off that human’s ugly head.~
 ==AC#PPST1 ~Uh... and when did you last hear the eternal silence?~
-==KORGANJ ~When I cut out Larry’s jabbering tongue.~
-==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
-==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==KORGANJ ~When I cut out that halfling’s jabbering tongue.~
+==AC#PPST2 ~With such an attitude you’ll have a hard time getting anyone to lend you their ears!~
+==KORGANJ ~Never had trouble with that! Kept their ears. Made a fine necklace, that.~
 ==AC#PPST2 ~By Eldath, you have problems with your temper!~
 ==KORGANJ ~No, *you* have problems with your delusions!~
 ==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
@@ -467,11 +467,11 @@ CHAIN IF ~~ THEN AC#PPST1 hello_korgan
 ==AC#PPST1 ~Tell us, brother—what is your name?~
 ==KORGANJ ~Korgan. BLOOD-Axe.~
 ==AC#PPST2 ~Ah. So tell us, brother—when was the last time you truly felt peace?~
-==KORGANJ ~When I chopped off Timble’s bloody head.~
+==KORGANJ ~When I chopped off that human’s ugly head.~
 ==AC#PPST1 ~Uh... and when did you last hear the eternal silence?~
-==KORGANJ ~When I cut out Larry’s jabbering tongue.~
-==AC#PPST2 ~Erm... a-and when, brother, did you last listen through another’s ears?~
-==KORGANJ ~Last time I wore that nice necklace o’ cut-off ears. Lost it in battle. Real shame.~
+==KORGANJ ~When I cut out that halfling’s jabbering tongue.~
+==AC#PPST2 ~With such an attitude you’ll have a hard time getting anyone to lend you their ears!~
+==KORGANJ ~Never had trouble with that! Kept their ears. Made a fine necklace, that.~
 ==AC#PPST2 ~By the Green Goddess! He’s beyond reach.~
 ==KORGANJ ~Aye. And proud of it!~
 EXIT
@@ -481,26 +481,50 @@ CHAIN IF ~~ THEN AC#PPST1 stillness
 ~Stillness is the essence of Eldath’s teaching. In silence, we find truth.~
 ==AC#PPST2 ~Silence, yes—but not passivity. Even the river flows, though it makes no noise in the deep.~
 ==AC#PPST1 ~And yet, a still pool reflects more clearly than rushing water. Action must come only after reflection.~
-==AC#PPST2 ~Reflection without movement is stagnation. Peace must walk the land, not only dream beneath it.~
+END 
+IF ~~ THEN REPLY ~Uh, excuse me—~ EXTERN AC#PPST2 stillness_02
+IF ~~ THEN REPLY ~I'll be on my way.~ EXTERN AC#PPST2 stillness_02
+
+CHAIN IF ~~ THEN AC#PPST2 stillness_02
+~Reflection without movement is stagnation. Peace must walk the land, not only dream beneath it.~
 ==AC#PPST1 ~Then we are agreed, perhaps: peace is not the absence of motion, but its guidance.~
 ==AC#PPST2 ~Well said. May our steps remain light, and our purpose rooted.~
+END 
+IF ~~ THEN REPLY ~Hello? Are you even listening?~ EXTERN AC#PPST1 stillness_03
+
+CHAIN IF ~~ THEN AC#PPST1 stillness_03
+~Ah—by Eldath’s grace, there’s someone here! Forgive us, traveler, we're busy reflecting.~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPST1 war
 ~War is the great wound of the world. Wherever it passes, peace must struggle to grow again.~
 ==AC#PPST2 ~True—but some say without war, peace would have no meaning. What do we tell them?~
 ==AC#PPST1 ~That peace is not the absence of pain, but the healing that follows. War is a fire; peace is the rain.~
-==AC#PPST2 ~And yet some rains come too late. I have seen fields scorched beyond all tending.~
+END 
+IF ~~ THEN REPLY ~Sorry to interrupt, but—~ EXTERN AC#PPST2 war_02
+ 
+CHAIN IF ~~ THEN AC#PPST2 war_02
+~And yet some rains come too late. I have seen fields scorched beyond all tending.~
 ==AC#PPST1 ~Even the blackest earth may bloom again, if given time and care. Eldath does not give up on any soil.~
-==AC#PPST2 ~And in time, may flowers grow where banners once stood.~
-== KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~If I hear "peace" again, I swear I’ll start chopping trees. Then people. In that order.~
+END 
+IF ~~ THEN REPLY ~I think I’ll wait until you’re done.~ EXTERN AC#PPST2 war_03 
+
+CHAIN IF ~~ THEN AC#PPST2 war_03
+~And in time, may flowers grow where banners once stood.~
+==AC#PPST1 ~Oh! Eldath preserve us—someone was listening this whole time!~
+==AC#PPST2 ~Then may <PRO_HESHE> carry peace in <PRO_HISHER> heart... and patience in <PRO_HISHER> ears.~
 EXIT
 
 CHAIN IF ~~ THEN AC#PPST1 water
 ~Water is the voice of Eldath. It sings in streams and whispers in the mist.~
 ==AC#PPST2 ~And yet it has no shape of its own. It takes the form of all things, and resists none.~
-==AC#PPST1 ~That is its strength. In yielding, it endures. In softness, it wears down stone.~
+END 
+IF ~~ THEN REPLY ~Beautiful words, but I only wanted to ask—~  EXTERN AC#PPST1 water_02
+
+CHAIN IF ~~ THEN AC#PPST1 water_02
+~That is its strength. In yielding, it endures. In softness, it wears down stone.~
 ==AC#PPST2 ~And when troubled, it reflects nothing. It reminds us to still our thoughts.~
+==AC#PPST1 ~Ah—Eldath’s blessings! We didn’t notice you there, friend. You haven’t been waiting long, I hope. Now, where were we?~
 EXIT
 
 // honey making Eldathyn in area ACPP01:
@@ -770,6 +794,7 @@ END
 
   CHAIN AC#PPEL8 eldath_once
   ~Eldath is the goddess of peace, still waters, and quiet groves. We offer sanctuary to those seeking harmony, far from the clamor of the world. No blade is drawn where her blessing lingers.~
+  == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~If I hear "peace" again, I swear I’ll start chopping trees. Then heads. In that order.~
   == MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN ~No sword? No smashing? Even not a little butt-kicking? How confusing...~
   == ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~A goddess of peace... How quaint. If she exists, she’ll be the first to bleed.~
   == AC#PPEL8 ~Many laughed at us when we planted the first saplings here. Yet now you stand in their shade.~

@@ -403,7 +403,7 @@ CHAIN IF ~True()~ THEN AC#PPZAR hello_0
 END
 IF~Global("AC#PP_RakStoreVisit","GLOBAL",0)~THEN REPLY ~Show me what you have for sale.~ DO ~SetGlobal("AC#PP_RakStoreVisit","GLOBAL",1)~ EXTERN AC#PPZAR start_store
 IF~Global("AC#PP_RakStoreVisit","GLOBAL",1)~THEN REPLY ~Show me what you have for sale.~ EXTERN AC#PPZAR start_store
-IF~Global("AC#PP_RakAccent","GLOBAL",0)~THEN REPLY ~You have a strange accent.~ EXTERN AC#PPZAR strange_accent
+IF~~THEN REPLY ~You have a strange accent.~ EXTERN AC#PPZAR strange_accent
 IF ~Global("AC#PP_RakStoreVisit","GLOBAL",1)~ THEN REPLY ~You keep some rather unusual things in your shop.~ EXTERN AC#PPZAR store_strange
 IF~~THEN REPLY ~What do you sell?~ EXTERN AC#PPZAR what_items
 IF~~THEN REPLY ~No thanks, I’m just passing through.~ EXTERN AC#PPZAR Farewell
@@ -458,7 +458,8 @@ IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
 // accent
 CHAIN AC#PPZAR strange_accent
 ~Rrreally? You noticed? A trrrade tongue frrrom the South — a blend of Calimshan courrrt and deserrrt wind. Some call it exotic... otherrrs, disconcerrrting. But accents, like faces, are only masks, my frrriend.~
-DO ~SetGlobal("AC#PP_RakAccent","GLOBAL",1)~ EXTERN AC#PPZAR wares_not_words
+END
+IF ~~ THEN EXTERN AC#PPZAR wares_not_words
 
 // After Zar’khaan dismisses the accent question
 CHAIN AC#PPZAR wares_not_words
@@ -470,8 +471,10 @@ IF~~THEN REPLY ~No thanks, I’m just passing through.~ EXTERN AC#PPZAR Farewell
 
 
 CHAIN AC#PPZAR twins_accusation
-~Fairrries? How quaint. You trrravel farrr, and yourrr tales trrravel even farrrtherrr. Surrrely, you don’t mean to accuse *me* of... collecting insects in jarrrs?~ 
-DO ~SetGlobal("AC#PP_RakAccused","GLOBAL",1)~ EXTERN AC#PPZAR twins_accusation_02
+~Fairrries? How quaint. You trrravel farrr, and yourrr tales trrravel even farrrtherrr. Surrrely, you don’t mean to accuse *me* of... collecting insects in jarrrs?~
+END 
+IF ~~ THEN EXTERN AC#PPZAR twins_accusation_02
+// DO ~SetGlobal("AC#PP_RakAccused","GLOBAL",1)~ EXTERN AC#PPZAR twins_accusation_02
 
 // Player accuses Zar’khaan directly
 CHAIN AC#PPZAR twins_accusation_02
