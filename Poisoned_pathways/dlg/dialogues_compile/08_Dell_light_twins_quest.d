@@ -96,12 +96,12 @@ EXIT
 
 // First meeting with the Dell-Light Twins
 CHAIN IF ~Global("AC#PP_TalkedToFaeries","GLOBAL",0)~ THEN AC#PPFAE hello_0
-~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A tall hooman!~
+~^0xFFE3B0FF Lilafern: ^-Look, Tippledew! A clumsy hooman!~
 END
 IF ~~ THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hello_monster_cont
 
 CHAIN AC#PPFAE hello_monster_cont  
-~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's an adventurer, silly! You can always tell by the big ears... and the even bigger feet.~  
+~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's an adventurer, silly! You can always tell by <PRO_HIMHER> fierce look.~  
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Welcome to Duskwood Dell, tall one!~
 	END
 	IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPFAE who_are_you 
@@ -137,7 +137,7 @@ IF~~THEN REPLY ~Just passing through, little ones.~ EXTERN AC#PPFAE Dusklight_Pa
 CHAIN AC#PPFAE what_are_you_really
 ~^0xFFE3B0FF Lilafern: ^-We’re faeries, silly! Too small for your eyes, too quick for your hands.~  
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Duskwood Dell is our home! Someone has to keep this peace-loving crowd from dozing off.~ 
-== AC#PPFAE ~^0xFF9ADCE3 Lilafern: ^-It’s called Duskwood Dell, after all — not Duskwood *Dull*!~    
+== AC#PPFAE ~^0xFF9ADCE3 Lilafern: ^-It’s called Duskwood Dell, after all — not Deskwood Dull!~    
 END
 IF~~THEN EXTERN AC#PPFAE hub
 	

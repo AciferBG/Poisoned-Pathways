@@ -384,8 +384,8 @@ Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST1 hello_korgan
 ==AC#PPST2 ~With such an attitude you’ll have a hard time getting anyone to lend you their ears!~
 ==KORGANJ ~Never had trouble with that! Kept their ears. Made a fine necklace, that.~
 ==AC#PPST2 ~By Eldath, you have problems with your temper!~
-==KORGANJ ~No, *you* have problems with your delusions!~
-==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
+==KORGANJ ~No, you have problems with your delusions!~
+==AC#PPST1 ~He’s beyond reach.~
 ==KORGANJ ~Aye. And proud of it!~
 END
 IF ~~ THEN DO ~SetGlobal("DebatingKorgan","ACPP01",1)~ EXIT
@@ -405,11 +405,57 @@ Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST2 hello_korgan
 ==AC#PPST2 ~With such an attitude you’ll have a hard time getting anyone to lend you their ears!~
 ==KORGANJ ~Never had trouble with that! Kept their ears. Made a fine necklace, that.~
 ==AC#PPST2 ~By Eldath, you have problems with your temper!~
-==KORGANJ ~No, *you* have problems with your delusions!~
-==AC#PPST1 ~By the Green Goddess! He’s beyond reach.~
+==KORGANJ ~No, you have problems with your delusions!~
+==AC#PPST1 ~He’s beyond reach.~
 ==KORGANJ ~Aye. And proud of it!~
 END
 IF ~~ THEN DO ~SetGlobal("DebatingKorgan","ACPP01",1)~ EXIT
+
+// Jan und Eldathyns
+CHAIN IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID) Global("DebatingJan","ACPP01",0)~ 
+THEN AC#PPST1 hello_jan
+~Peace is a gift easily overlooked, gnomish philosopher. Wouldn’t you rather sit quietly and listen to the forest breathe?~
+==JANJ ~Ah, breathing! Folk never give it the credit it deserves. You breathe without thinkin’, and the moment you do think about it, you start worrying—Am I doing it right? Too shallow? Too deep? What if I forget? My Aunt Belka tried holding her breath to stay young once. Turned blue, she did, but she claimed it worked—looked twenty years younger when they buried her.~
+==JANJ ~By the way, listening to breathing’s how I found out my cousin Jaffin wasn’t dead after all. Terrified the undertaker. Whole business went under. Literally—he dug himself in.~
+==AC#PPST2 ~I see… even air is not safe from your stories.~
+DO ~SetGlobal("DebatingJan","ACPP01",1)~
+EXIT
+
+// Jan und Eldathyns
+CHAIN IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID) Global("DebatingJan","ACPP01",0)~ 
+THEN AC#PPST2 hello_jan
+~Peace is a gift easily overlooked, gnomish philosopher. Wouldn’t you rather sit quietly and listen to the forest breathe?~
+==JANJ ~Ah, breathing! Folk never give it the credit it deserves. You breathe without thinkin’, and the moment you do think about it, you start worrying—Am I doing it right? Too shallow? Too deep? What if I forget? My Aunt Belka tried holding her breath to stay young once. Turned blue, she did, but she claimed it worked—looked twenty years younger when they buried her.~
+==JANJ ~By the way, listening to breathing’s how I found out my cousin Jaffin wasn’t dead after all. Terrified the undertaker. Whole business went under. Literally—he dug himself in.~
+==AC#PPST1 ~I see… even air is not safe from your stories.~
+DO ~SetGlobal("DebatingJan","ACPP01",1)~
+EXIT
+
+// Neera and the Eldathyn
+CHAIN IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) Global("DebatingNeera","ACPP01",0)~
+THEN AC#PPST1 hello_neera
+~Greetings, spellcasting elf.~
+==NEERAJ ~*Half*-elf.~
+==AC#PPST1 ~Your magic seems to flow gently, like water over stone.~
+==NEERAJ ~Mine’s more like water over cliff. With steam. And screaming.~
+==AC#PPST2 ~We... see. Perhaps Eldath tests our patience through you.~
+==NEERAJ ~Hey, that makes two of us!~
+DO ~SetGlobal("DebatingNeera","ACPP01",1)~
+EXIT
+
+// Neera and the Eldathyn
+CHAIN IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) Global("DebatingNeera","ACPP01",0)~
+THEN AC#PPST2 hello_neera
+~Greetings, spellcasting elf.~
+==NEERAJ ~*Half*-elf.~
+==AC#PPST2 ~Your magic seems to flow gently, like water over stone.~
+==NEERAJ ~Mine’s more like water over cliff. With steam. And screaming.~
+==AC#PPST1 ~We... see. Perhaps Eldath tests our patience through you.~
+==NEERAJ ~Hey, that makes two of us!~
+DO ~SetGlobal("DebatingNeera","ACPP01",1)~
+EXIT
+
+
 
 
 // Eldathyn #1
@@ -472,7 +518,7 @@ CHAIN IF ~~ THEN AC#PPST1 hello_korgan
 ==KORGANJ ~When I cut out that halfling’s jabbering tongue.~
 ==AC#PPST2 ~With such an attitude you’ll have a hard time getting anyone to lend you their ears!~
 ==KORGANJ ~Never had trouble with that! Kept their ears. Made a fine necklace, that.~
-==AC#PPST2 ~By the Green Goddess! He’s beyond reach.~
+==AC#PPST2 ~He’s beyond reach.~
 ==KORGANJ ~Aye. And proud of it!~
 EXIT
 

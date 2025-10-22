@@ -450,13 +450,27 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPBLD.bam~ ~override~ // Witherbra
  END
  END
  
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPTED.bam~ ~override~ // herbal tea desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1038.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWDD.bam~ ~override~ // wand of goodberry desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1039.pvrz~
+ END
+ END
+ 
 COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPROD.bam~ ~override~ // Rose of Eldath desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1040.pvrz~
  END
  END
- 
+
 COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPHYD.bam~ ~override~ // Honeymead desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
@@ -468,6 +482,20 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWXD.bam~ ~override~ // Will-o-wi
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1042.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPPTD.bam~ ~override~ // potion attunement desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1043.pvrz~
+ END
+ END
+ 
+  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWAD.bam~ ~override~ // spring water desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1044.pvrz~
  END
  END
 ///////////////////////////////////////////////////////////////////////
