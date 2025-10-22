@@ -1,0 +1,238 @@
+IF
+    TimeOfDay(NIGHT)
+    Entered([ANYONE])
+THEN
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,@2072)  // ~The dead magic zone prevents the trap from triggering properly.~
+END
+
+IF
+    OR(3)
+        TimeOfDay(MORNING)
+        TimeOfDay(DAY)
+        TimeOfDay(DUSK)
+    Entered([ANYONE])
+THEN
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,315)  // Wild color changes
+        ForceSpellRES("SPWM102",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,316)  // Squirrels... Everywhere squirrels!
+        ForceSpellRES("SPWM103",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,317)  // I'm so itchy!
+        ForceSpellRES("SPWM104",LastTrigger)  // Squirrels
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,318)  // It's so bright!
+        ForceSpellRES("SPWM105",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,320)  // Sex change
+        ForceSpellRES("SPWM107",LastTrigger)  // Squirrels
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,321)  // Color change
+        ForceSpellRES("SPWM108",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,322)  // What was that? Over there!
+        ForceSpellRES("SPWM109",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,332)  // Explosion?
+        ForceSpellRES("SPWM110",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,334)  // Entangled
+        ForceSpellRES("SPWM111",LastTrigger)  // Entangle
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,335)  // Slowed
+        ForceSpellRES("SPWM112",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,339)  // Polymorphed
+        ForceSpellRES("SPWM113",LastTrigger)  // Polymorph Other
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,340)  // Held
+        ForceSpellRES("SPWM114",LastTrigger)  // Polymorph Other
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,349)  // Hastened
+        ForceSpellRES("SPWM115",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,351)  // Polymorphed
+        ForceSpellRES("SPWM183",LastTrigger)  // Polymorph Other
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,359)  // Gold Destroyed!
+        ForceSpellRES("SPWM117",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,360)  // Weakened
+        ForceSpellRES("SPWM118",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,381)  // Legs... so... heavy.
+        ForceSpellRES("SPWM120",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,384)  // Held
+        ForceSpellRES("SPWM122",LastTrigger)  // Hold Person
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,388)  // Fear
+        ForceSpellRES("SPWM123",LastTrigger)  // Symbol, Fear
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,390)  // Area explored
+        ForceSpellRES("SPWM125",LastTrigger)  // Minor Globe of Invulnerability
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,391)  // Globe of Invulnerability
+        ForceSpellRES("SPWM126",LastTrigger)  // Minor Globe of Invulnerability
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,395)  // Dizzy
+        ForceSpellRES("SPWM128",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,397)  // Pretty sparkles
+        ForceSpellRES("SPWM130",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,405)  // I've always said that bird magic is the most difficult.
+        ForceSpellRES("SPWM134",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,408)  // Gems!
+        ForceSpellRES("SPWM136",LastTrigger)  // Goodberry
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,420)  // What's this in my pocket?
+        ForceSpellRES("SPWM141",LastTrigger)  // Goodberry
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,421)  // Combat ready!
+        ForceSpellRES("SPWM142",LastTrigger)  // Hold Person
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,454)  // *hiccup*... *hic*...
+        ForceSpellRES("SPWM145",LastTrigger)  // Polymorph Other
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,867)  // Double Hit Points
+        ForceSpellRES("SPWM153",LastTrigger)  // Repulsion, caster
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,874)  // Oops, a gate... Is that a demon?!
+        ForceSpellRES("SPWM154",LastTrigger)  // Cacofiend
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,875)  // What's with the noise?
+        ForceSpellRES("SPWM155",LastTrigger)  // Cacofiend
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,877)  // Swirly things
+        ForceSpellRES("SPWM157",LastTrigger)  // Cacofiend
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,890)  // Weapons glow
+        ForceSpellRES("SPWM159",LastTrigger)  // Cacofiend
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,917)  // Detect magic
+        ForceSpellRES("SPWM162",LastTrigger)  // Charm Person
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,1446)  // Slowed
+        ForceSpellRES("SPWM164",LastTrigger)  // Slow
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,1452)  // Strengthened
+        ForceSpellRES("SPWM167",LastTrigger)  // Polymorph Other
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,1453)  // Heal
+        ForceSpellRES("SPWM168",LastTrigger)  // Heal
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,1474)  // Blinded
+        ForceSpellRES("SPWM178",LastTrigger)  // Blindness
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,1476)  // Charmed
+        ForceSpellRES("SPWM179",LastTrigger)  // Polymorph Other
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,1487)  // Explosion?
+        ForceSpellRES("SPWM186",LastTrigger)  // Charm Person
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,8694)  // Stinking cloud
+        ForceSpellRES("SPWM187",LastTrigger)  // Stinking Cloud
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,8695)  // COW!
+        ForceSpellRES("SPWM188",LastTrigger)  // Summon Cow
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,8795)  // Itchy
+        ForceSpellRES("SPWM191",LastTrigger)  // Polymorph Other
+    RESPONSE #100
+        DisplayString(LastTrigger,14381)  // Trap Sprung
+        DisplayString(LastTrigger,52260)  // Wild Surge:
+        DisplayString(LastTrigger,8827)  // My gold!
+        ForceSpellRES("SPWM199",LastTrigger)  // You... you are the one I am to meet? I know of no one else that would approach me. Show me the note if you are who you appear to be.
+END
+

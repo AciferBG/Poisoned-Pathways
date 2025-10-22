@@ -101,7 +101,7 @@ END
 IF ~~ THEN DO ~SetGlobal("AC#PP_TalkedToFaeries","GLOBAL",1)~ EXTERN AC#PPFAE hello_monster_cont
 
 CHAIN AC#PPFAE hello_monster_cont  
-~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's an adventurer, silly! You can always tell by <PRO_HIMHER> fierce look.~  
+~^0xFF9ADCE3 Tippledew: ^-Oh hush, Lilafern! It's an adventurer, silly! You can always tell by <PRO_HISHER> fierce look.~  
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Welcome to Duskwood Dell, tall one!~
 	END
 	IF~~THEN REPLY ~Who are you?~ EXTERN AC#PPFAE who_are_you 

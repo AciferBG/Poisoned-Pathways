@@ -643,7 +643,7 @@ BEGIN AC#PPILL
 
 CHAIN IF ~Global("DyingMan","ACPP01",2)~ THEN AC#PPILL request
 ~You’ve spoken with the High One, haven’t you? Alatoasz sent you after the Talona priest... and the flower. The Groveglove. Everyone whispers of it. A poison so pure even the gentle hands of Eldath cannot undo it.~
-== AC#PPILL IF ~Global("MetMannatarv","ACPP01",0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But they won't let me.~ 
+== AC#PPILL IF ~Global("MetMannatarv","ACPP01",0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But the Eldathyns won't let me.~ 
 == AC#PPILL IF ~GlobalGT("MetMannatarv","ACPP01",0)~ THEN ~We've met before. My name is Mannatarv. You know I am old and sick, very sick. All I want is to die. But they won't let me.~ 
 == AC#PPILL ~The priests heal me every day. They pour their light into me, knit my wounds, call me back when I slip away. But I am tired. My bones rot, my breath burns. Each day they gift me is another day of pain. I want no more gifts.~  
 == AC#PPILL ~I beg you: Bring me a fragment of that flower before they make an antidote. Just a single leaf. Let me ingest its venom and be done. Let me leave this world in silence, not in their endless chants.~
@@ -888,10 +888,10 @@ IF~~THEN REPLY ~No, there is nothing to report yet.~ EXTERN AC#PPON2 bye
 CHAIN AC#PPON2 about_mead_02
 ~And? Did he pay you a proper price for it? A year’s labor went into that nectar.~ 
 END
-IF~~THEN REPLY ~He gave me one hundred gold pieces.~ EXTERN AC#PPON2 about_mead_100
-IF~~THEN REPLY ~He gave me five hundred gold pieces.~ EXTERN AC#PPON2 about_mead_500
-IF~~THEN REPLY ~He gave me seven hundred and fifty gold pieces.~ EXTERN AC#PPON2 about_mead_750
-IF~~THEN REPLY ~He gave me a thousand gold pieces.~ EXTERN AC#PPON2 about_mead_1000
+IF~~THEN REPLY ~He gave me one hundred gold pieces.~ DO ~TakePartyGold(100)~ EXTERN AC#PPON2 about_mead_100
+IF~~THEN REPLY ~He gave me five hundred gold pieces.~ DO ~TakePartyGold(500)~ EXTERN AC#PPON2 about_mead_500
+IF~~THEN REPLY ~He gave me seven hundred and fifty gold pieces.~ DO ~TakePartyGold(750)~ EXTERN AC#PPON2 about_mead_750
+IF~~THEN REPLY ~He gave me a thousand gold pieces.~ DO ~TakePartyGold(1000)~ EXTERN AC#PPON2 about_mead_1000
 IF~~THEN REPLY ~No, there is nothing to report yet.~ EXTERN AC#PPON2 bye
 
 
@@ -1535,7 +1535,7 @@ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",2)~ EXIT
 CHAIN AC#PPMON 01.04  
 ~The High Fallskeeper grants me the honor of carrying Merethan’s emblem? Then peace truly circles back upon itself. Such kindness ripples farther than any river.~
 ==AC#PPMON ~I have nothing but gratitude to offer, yet know that I shall carry your name in prayer to the Lady of Still Waters.~  
-DO ~TakePartyItem("AC#PPSYM") AddExperienceParty(400) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) AddJournalEntry(@13052,QUEST) ReputationInc(1)~ EXIT  
+DO ~TakePartyItem("AC#PPSYM") AddExperienceParty(400) SetGlobal("AC#PPSymbolQuest","GLOBAL",10) AddJournalEntry(@13052,QUEST_DONE) ReputationInc(1)~ EXIT  
 
 CHAIN IF ~Global("AC#PPSymbolQuest","GLOBAL",10)~ THEN AC#PPMON 02.00  
 ~Thanks to you, I walk in peace once more—slowly, yes, but each step is a prayer.~
