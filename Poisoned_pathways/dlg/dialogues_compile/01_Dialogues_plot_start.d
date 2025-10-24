@@ -129,7 +129,7 @@ IF~~THEN EXTERN AC#PPSKD tell_supplier_02
 CHAIN IF ~~ THEN AC#PPSKD tell_supplier_02
 ~You’re lookin’ for the one behind the real nasty poison? Sure. He’s got a name... and probably more blood on his hands than most!~ 
 =
-~His name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the Snakewood. That’s all I know of him, swear on the gutter gods. I’ll give you his instructions.~
+~His name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the wood. That’s all I know of him, swear on the gutter gods. I’ll give you his instructions.~
 END
 IF~~THEN REPLY ~Smart choice.~ EXTERN AC#PPSKD map_bye
 IF~~THEN REPLY ~That’s all I needed.~ EXTERN AC#PPSKD map_bye

@@ -135,6 +135,11 @@ ADD_JOURNAL
 @13073
 @13074
 
+@13080
+@13081
+@13082
+@13083
+
 USING ~Poisoned_pathways/language/%LANGUAGE%/Poisoned_pathways_Journal.tra~
 
 ///////////////////////////////////////////////////////////////////////

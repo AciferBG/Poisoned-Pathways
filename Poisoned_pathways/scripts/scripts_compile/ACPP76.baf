@@ -1,10 +1,9 @@
 IF
-    Global("EnteredArea","ACPP76",0)  
+    OnCreation()
 THEN
     RESPONSE #100
-        DisplayString(Myself,@2008)
-        DisplayStringHead(Player1,@2008)
-        SetGlobal("EnteredArea","ACPP76",1)  
+        ApplySpellRES("AC#PPRM",Player1)  // No such index
+        Continue()
 END
 
 IF

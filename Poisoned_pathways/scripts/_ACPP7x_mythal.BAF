@@ -10,6 +10,7 @@ THEN
       ApplySpellRES("AC#PPDM",Player1) 
       //AddAreaFlag(DEADMAGICZONE)
       SetGlobalTimer("AC#PP_AntimagicTimer","GLOBAL",6)
+      Continue()
 END
 
 IF
@@ -24,4 +25,5 @@ THEN
       ApplySpellRES("AC#PPWI",Player1)  
       //RemoveAreaFlag(DEADMAGICZONE)
       SetGlobalTimer("AC#PP_WildMagicTimer","GLOBAL",6)
+      Continue()
 END

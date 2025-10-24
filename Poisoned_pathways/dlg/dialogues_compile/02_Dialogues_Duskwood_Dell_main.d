@@ -241,6 +241,7 @@ IF~~THEN REPLY ~Myth Unnohyr.~ EXTERN AC#PPEL4 right_myth_unnohyr
 IF~~THEN REPLY ~Myth Tellaren.~ EXTERN AC#PPEL4 wrong_myth_tellaren
 IF~~THEN REPLY ~I’m not sure.~ EXTERN AC#PPEL4 right_myth_unnohyr
 IF~~THEN REPLY ~I’ve only examined the book’s cover.~ EXTERN AC#PPEL4 right_myth_unnohyr
+IF~~THEN REPLY ~I don’t read stupid books.~ EXTERN AC#PPEL4 right_myth_unnohyr
 
 CHAIN IF ~~ THEN AC#PPEL4 wrong_myth_rhynn
 ~Myth Rhynn—the elven necropolis? An intriguing thought, but no... I don’t believe that’s where we’ll find our answer.~

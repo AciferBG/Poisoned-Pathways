@@ -174,28 +174,30 @@ EXIT
 BEGIN AC#PPBLO
 
 CHAIN IF ~True()~ THEN AC#PPBLO BLOOD.000
-~Arghhh—another vessel. Sack of Blood. We can hear it beat and flow inside your veins. Red rivers. Gahhh! Yours is especially... dark. Hahaha. Mmm.~
+~Arghhh—another vessel... another sack of blood. We can hear it beat and flow inside your veins. Red rivers... gahhh! Yours is especially... dark. Hahaha... mmm.~
 END
-IF~~THEN REPLY ~What are you?~ EXTERN AC#PPBLO BLOOD.002
-IF~~THEN REPLY ~Ah. I had a feeling I should have swam here...~ EXTERN AC#PPBLO BLOOD.001
+IF ~~ THEN REPLY ~What are you?~ EXTERN AC#PPBLO BLOOD.002
+IF ~~ THEN REPLY ~Ah. I had a feeling I should’ve swum here...~ EXTERN AC#PPBLO BLOOD.001
 
 CHAIN AC#PPBLO BLOOD.001
-~It's too late to turn back now, mhhh.~
+~Too late to turn back now... mhhh.~
 EXTERN AC#PPBLO BLOOD.002
 
 CHAIN AC#PPBLO BLOOD.002
-~We are the blood of those that bled on this ground. We are their plasma and their ichor and their precious scarlet claret.~
-==AC#PPBLO ~We were called blood amniote by other blood sacks that came here. Only one left. One they called Elv-Esster Aened. She imprissoned me here, this damned place...! Aghhh. But at least we took life of those she loved.~
+~We are the blood of those who bled upon this ground. We are their plasma, their ichor, their precious scarlet claret.~
+== AC#PPBLO ~They called us blood amniote, those other sacks of flesh who came here. Only one remains... one they called Elv-Esster Aened. She imprisoned us in this cursed place—aghhh! But at least we took the lives of those she loved.~
 END
-IF~~THEN REPLY ~You killed them? When was it?~ EXTERN AC#PPBLO BLOOD.003
-IF~~THEN REPLY ~I don't understand any of your babbling, monster.~ EXTERN AC#PPBLO BLOOD.003
+IF ~~ THEN REPLY ~You killed them? When was that?~ EXTERN AC#PPBLO BLOOD.003
+IF ~~ THEN REPLY ~I don’t understand a word of your babbling, monster.~ EXTERN AC#PPBLO BLOOD.003
 
 CHAIN AC#PPBLO BLOOD.003
-~Many years ago. When this place was still ruled by elves. Hah. Their city started to crumble. Of their towers were claimed by earth. Elves... were smashed! Many died. Many fed the earth. And through with their blood, we were born.~
-==AC#PPBLO ~Their blood all gathered in the soil—and the fear, and the despair, and—pain. When they realized that I was born, they called their commander. She came when I was devouring her brothers and sisters and children! Mmm.~
-==AC#PPBLO ~She couldn't stop me then, she had to stop the fall of her little enclave. But we waited. We grew. With each death, we became better. Stronger.~
-==AC#PPBLO ~And now you came. Mhhh. And we want you to become part of us. We want you. We want your precious claret.~
-==AC#PPBLO ~We cannot leave. But it doesn't matter. Because you came to us!~
-DO ~Enemy()~ EXIT
+~Many years ago... when this place was still ruled by elves. Hah! Their city crumbled; their towers sank into the earth. Elves... were smashed! Many died, many fed the soil—and through their blood, we were born.~
+== AC#PPBLO ~All their blood seeped into the ground—along with their fear, their despair, their pain. When they realized what had risen, they called their commander. She came while we devoured her brothers, her sisters, her children... mmm.~
+== AC#PPBLO ~She could not stop us then; she had to save what remained of her little enclave. But we waited. We grew. With each death, we became better... stronger.~
+== AC#PPBLO ~And now you have come. Mhhh. We want you to join us—to become part of us. We want you. We want your precious claret.~
+== AC#PPBLO ~We cannot leave... but it no longer matters. Because you came to us!~
+DO ~Enemy()~
+EXIT
+
 
 

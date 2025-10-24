@@ -307,17 +307,17 @@ Weight: 4~
 STATISTICS:
 
 Weight: 0~
-@1040 = ~This Ioun stone was most likely created by a powerful cleric of Talona. It's shaped like a green berry and even has a sour scent that can remind some people of an unripe fruit.
+@1040 = ~This Ioun stone is believed to have been created by a powerful cleric of Talona. Shaped like a sour green berry, it carries a sharp, unripe scent that lingers unpleasantly in the air.
 
-Some say that selected clerics of Talona used this Ioun stone when they planned on attacking other clerics in order to "get them out of their way". It's not surprising that good characters are unable to use this item.
-  
+Whispers among the faithful claim that certain Talonites used stones like this to deal with rival priests—especially those who stood in the way of their poison-laced ambitions. Unsurprisingly, the stone refuses to attune to those of a good-aligned nature.
+
 STATISTICS:
 
 Combat abilities:
 – THAC0 vs. Clerics: +3
 
 Special abilities:
-– When in carried in the inventory or when equipped, this Ioun stone dispels fumes at the entrance to Myth Unnohyr's tower that prevent others from entering
+– When carried or equipped, this Ioun stone dispels the poisonous fumes blocking the entrance to the tower in Myth Unnohyr
 
 Weight: 0~
 @1041 = ~Studded Leather~

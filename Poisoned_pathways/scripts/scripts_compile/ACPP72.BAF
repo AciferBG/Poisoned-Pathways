@@ -1,8 +1,18 @@
 IF
+   OnCreation()
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPRM",Player1)  // No such index
+        Continue()
+END
+
+IF
     Global("AC#PPFinalBossPrepare","GLOBAL",0)
     Global("AC#PPFinalBossDialog","ACPP72",1)
 THEN
     RESPONSE #100
+        SpawnPtDeactivate("Spawn_undead01")
+        SpawnPtDeactivate("Spawn_undead02")
         StartCutScene("AC#PPCT6")
 END
 
@@ -13,6 +23,8 @@ THEN
     RESPONSE #100
         Unlock("DOOR01")
         OpenDoor("DOOR01")
+        SpawnPtActivate("Spawn_undead01")
+        SpawnPtActivate("Spawn_undead02")
         SetGlobal("Ch6Changes","ACPP72",1)
 END
 

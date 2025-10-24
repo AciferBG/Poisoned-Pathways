@@ -251,7 +251,7 @@ END
 
    CHAIN IF ~~ THEN AC#PPMAN seek_highpriest_wrong_name_5
 	~That’s enough. You’d do well to use the stillness of this grove to reflect on your behavior!~
-	DO ~SetGlobal("WrongHighPriestName","ACPP01",10) ReallyForceSpellRES("AC#PPSC",LastTalkedToBy())~ EXIT
+	DO ~SetGlobal("WrongHighPriestName","ACPP01",10) ReputationInc(-1) ReallyForceSpellRES("AC#PPSC",LastTalkedToBy())~ EXIT
 	
 	CHAIN IF ~~ THEN AC#PPMAN looking_for_highpriest_bye
 	~Do that. He’ll be glad to meet you.~
@@ -645,8 +645,11 @@ CHAIN IF ~Global("DyingMan","ACPP01",2)~ THEN AC#PPILL request
 ~You’ve spoken with the High One, haven’t you? Alatoasz sent you after the Talona priest... and the flower. The Groveglove. Everyone whispers of it. A poison so pure even the gentle hands of Eldath cannot undo it.~
 == AC#PPILL IF ~Global("MetMannatarv","ACPP01",0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But the Eldathyns won't let me.~ 
 == AC#PPILL IF ~GlobalGT("MetMannatarv","ACPP01",0)~ THEN ~We've met before. My name is Mannatarv. You know I am old and sick, very sick. All I want is to die. But they won't let me.~ 
-== AC#PPILL ~The priests heal me every day. They pour their light into me, knit my wounds, call me back when I slip away. But I am tired. My bones rot, my breath burns. Each day they gift me is another day of pain. I want no more gifts.~  
-== AC#PPILL ~I beg you: Bring me a fragment of that flower before they make an antidote. Just a single leaf. Let me ingest its venom and be done. Let me leave this world in silence, not in their endless chants.~
+== AC#PPILL ~The priests heal me every day. They pour their light into me, knit my wounds, call me back when I slip away. But I am tired. My bones rot, my breath burns. Each day they gift me is another day of pain. I want no more gifts.~
+DO ~AddJournalEntry(@13080,QUEST)~ EXTERN AC#PPILL request_02
+
+CHAIN AC#PPILL request_02
+~I beg you: Bring me a fragment of that flower before they make an antidote. Just a single leaf. Let me ingest its venom and be done. Let me leave this world in silence, not in their endless chants.~
 ==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN ~A soul begging for the kiss of death. I would grant it gladly… but not swiftly.~
 ==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN ~We must not meddle with the path of nature. Life and death are not ours to grant.~
 ==HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN ~Why waste words? If he wants death, let’s grant it. No need for some poisoned flowers, though.~
@@ -695,6 +698,7 @@ DO ~SetGlobal("MetMannatarv","ACPP01",1)~ EXTERN AC#PPILL priests_fuss
 	== AC#PPILL ~So beautiful and yet so deadly... here, I'll just take one leaf. Everyone else should get the antidote, just not me...~
 	== AC#PPILL ~Ugh, that tastes bitter! I didn't think that...~
 	DO ~SetGlobal("DyingMan","ACPP01",10)
+	AddJournalEntry(@13082,QUEST_DONE)
 	Kill(Myself)~
 	EXIT
 	
@@ -721,12 +725,14 @@ IF ~~ THEN REPLY ~Perhaps there is another way.~ EXTERN AC#PPILL alternative
 
 CHAIN AC#PPILL refuse
 ~Then leave me to my torment. The priests will be pleased. Farewell~
-DO ~EscapeArea()~ EXIT
+DO ~AddJournalEntry(@13083,QUEST_DONE)
+EscapeArea()~ EXIT
 
 CHAIN AC#PPILL accept
 ~You... you would truly do this for me? I thank you already for even considering it. You may think me mad, but you have shown mercy where others offered only healing. I will wait for you by the stump in the water. Remember: you must give me a leaf of the plant before you bring it to Alatoasz! Once he crafts an antidote, I will have no hope left of passing peacefully from this world.~ 
 == AC#PPILL ~Good luck with your search, <PRO_RACE>. I’m counting on you and will be waiting for you.~   
 DO ~SetGlobal("DyingMan","ACPP01",3)
+AddJournalEntry(@13081,QUEST)
 EscapeArea()~ EXIT
 
 CHAIN AC#PPILL alternative
@@ -1474,7 +1480,7 @@ CHAIN AC#PPBOY 02.02
 DO ~SetGlobal("AC#PPWormQuest","GLOBAL",2) AddExperienceParty(100) ReputationInc(1) AddJournalEntry(@13042,QUEST_DONE)~ EXIT
 
 CHAIN AC#PPBOY 02.03
-~What?! What have you done! You are sooo stupid and I'm gonna tell everyone you're horrible and that you wanted to hit me! And no one is going to like you! EVER!~
+~What?! What have you done! You are sooo stupid and I'm gonna tell everyone you're horrible and that you're awful! And no one is going to like you! EVER!~
 DO ~SetGlobal("AC#PPWormQuest","GLOBAL",3) AddExperienceParty(100) 
 AddJournalEntry(@13043,QUEST_DONE)
 ReputationInc(-1) EscapeArea()~ EXIT

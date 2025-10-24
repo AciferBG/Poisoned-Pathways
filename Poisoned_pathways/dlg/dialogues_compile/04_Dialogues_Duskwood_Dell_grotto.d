@@ -9,7 +9,29 @@ IF ~true()~ THEN AC#PPCHT AC#PPCHT_intro
 END
 IF ~~ THEN REPLY ~Give me the legendary weapons.~ DO ~StartCutScene("AC#PPCH1")~ EXIT
 IF ~~ THEN REPLY ~Give me the other weapons.~ DO ~StartCutScene("AC#PPCH2")~ EXIT
+IF ~~ THEN REPLY ~Give me the useful stuff.~ EXTERN AC#PPCHT stuff
 IF ~~ THEN REPLY ~Nothing today.~ EXIT
+
+CHAIN AC#PPCHT stuff
+~The world trembles for a heartbeat as small objects appear in your pack.~ 
+ DO ~GiveItemCreate("WAND02",Player1,5,0,0)
+    GiveItemCreate("WAND03",Player1,5,0,0)
+    GiveItemCreate("WAND04",Player1,5,0,0)
+    GiveItemCreate("WAND10",Player1,5,0,0)
+    GiveItemCreate("WAND11",Player1,5,0,0)
+    GiveItemCreate("RING02",Player1,5,0,0)
+    GiveItemCreate("RING07",Player1,5,0,0)
+    GiveItemCreate("RING09",Player1,5,0,0)
+    GiveItemCreate("RING05",Player1,5,0,0)
+    GiveItemCreate("RING20",Player1,5,0,0)
+    GiveItemCreate("RING27",Player1,5,0,0)
+    GiveItemCreate("RING31",Player1,5,0,0)
+    GiveItemCreate("RING33",Player1,5,0,0)
+    GiveItemCreate("BLUN19",Player1,5,0,0)
+    GiveItemCreate("BLUN25",Player1,5,0,0)
+    GiveItemCreate("AMUL21",Player1,5,0,0)
+    GiveItemCreate("AMUL22",Player1,5,0,0)~ EXIT
+
 
 
 // Dialogue in Eldath’s Grotto – between a dryad (AC#PPDR1) and a repentant warrior (AC#PPFI1)

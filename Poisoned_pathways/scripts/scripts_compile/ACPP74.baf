@@ -1,4 +1,12 @@
 IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPRM",Player1)  // No such index
+        Continue()
+END
+
+IF
     Global("EnteredArea","ACPP74",0)  
 THEN
     RESPONSE #100

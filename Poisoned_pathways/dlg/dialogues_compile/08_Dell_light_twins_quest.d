@@ -335,13 +335,14 @@ EXIT
 	CHAIN AC#PPFAE Dusklight_Wish
 	~^0xFF9ADCE3Tippledew: ^-A wish?! Did you hear that, Lilafern? A *wish*!~
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Quick, where did we put the paperwork? The forms? The regulations on improbable miracles?!~
-	== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^-Shh! We’re off duty tonight. Last wish we granted turned a toad into... a slimy toad.~
+	== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^-Shh! We’re off duty tonight. Last wish we granted turned a toad into... a slimy smaller toad.~
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Very confusing for everyone involved.~  
 	== AC#PPFAE ~^0xFF9ADCE3Tippledew: ^-But! If you wish for laughter or moonlight, we can manage those. They’re in surplus.~  
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Anything bigger, and you’ll have to speak with our superior. That’s Eldath, obviously. She’s terrible with scheduling, though.~  
 	END
 	IF~~THEN EXTERN AC#PPFAE hub
-	
+
+/*	
 	CHAIN AC#PPFAE Dusklight_Frog
 	~^0xFFE3B0FF Lilafern: ^-Oh yes! Very sacred! Very slimy!~  
 	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-We protect them from… well, mostly from needing to kiss the wrong people.~
@@ -350,7 +351,7 @@ EXIT
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Anyway, sacred work. No pay, but excellent splashing privileges.~  
 	DO ~ReallyForceSpell(Myself,FLASHY_2)
 	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
-
+*/
 	CHAIN AC#PPFAE Dusklight_Pass
 	~^0xFFE3B0FF Lilafern: ^-Fine, pass. Tread softly, tall one — the grass remembers footsteps.~   
 	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Come back when you’re not in such a hurry. We like conversations that wander in circles.~  
