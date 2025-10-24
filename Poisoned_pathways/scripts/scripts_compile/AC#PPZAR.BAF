@@ -30,6 +30,7 @@ END
 
 IF
     SpellCastInnateRES("AC#PPWS",[PC])  // Imprisonment
+    GlobalGT("AC#PPRakScroll","GLOBAL",1)
     Global("AC#PPRakPrison","GLOBAL",0)
 THEN
     RESPONSE #30

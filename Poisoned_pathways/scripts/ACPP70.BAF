@@ -150,6 +150,7 @@ THEN
         AmbientActivate("PORTALBAM",TRUE)
         SoundActivate("Portal01",TRUE)
         SoundActivate("Portal02",TRUE)
+        AddJournalEntry(@13090,QUEST)
         SetGlobal("ActivatePortal","ACPP70",1)
 END
 
@@ -398,6 +399,7 @@ RESPONSE #100
 TriggerActivation("TrACPP71",TRUE) 
 AmbientActivate("AC#PPPP",FALSE)
 DisplayStringHead(Player1,@2009)
+AddJournalEntry(@13091,QUEST_DONE)
 SetGlobal("AC#PPOpenTowerNow","ACPP70",1)
 END
 

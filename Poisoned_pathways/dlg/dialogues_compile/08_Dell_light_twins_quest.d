@@ -379,7 +379,10 @@ Enemy()~ EXIT
 // Zar'khaan urges the player to use the scroll immediately
 CHAIN IF ~Global("AC#PPRakScroll","GLOBAL",1)~ THEN AC#PPZAR sell_wish_followup
 ~You purrrchased the wish scroll! My congrrratulations on such a rrrrare acquisition. Before you go, a small detail — and a currrrious one at that.~
-== AC#PPZAR ~The scrrroll’s ink is... volatile, shall we say. It holds its powerrr only forrr a shorrrt while afterrr purrrchase. Forrrgive me, I may have forrrgotten to mention that. Call me grrreedy, but I am a merrrchant after all, yes? Best to use it while the magic is still awake. What is the point of a wish unspoken?~
+DO ~SetGlobal("AC#PPRakScroll","GLOBAL",2)~ EXTERN AC#PPZAR sell_wish_followup_02
+
+CHAIN AC#PPZAR sell_wish_followup_02
+~The scrrroll’s ink is... volatile, shall we say. It holds its powerrr only forrr a shorrrt while afterrr purrrchase. Forrrgive me, I may have forrrgotten to mention that. Call me grrreedy, but I am a merrrchant after all, yes? Best to use it while the magic is still awake. What is the point of a wish unspoken?~
 == AC#PPZAR ~Go on, trrry it right here, at once! Simple worrrds, clear intent — that’s all it takes. And should you find yourrrself strrruck speechless by joy... do rrremember who made it possible: me!~
 END
 IF~~THEN REPLY ~You deceived me. You should have told me that before!~ EXTERN AC#PPZAR sell_scroll_fooled_me
@@ -493,100 +496,5 @@ DO ~SetGlobal("AC#PPRakAttack","GLOBAL",2)
 SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
 Polymorph(RAKSHASA)
 Enemy()~ EXIT
-
-
-
-
-
-// OLD - without the "rrr":
-/*
-	
-// Zar’khaan – the Rakshasa disguised as a merchant
-BEGIN AC#PPZAR
-
-CHAIN IF ~Global("AC#PPRakAttack","GLOBAL",1)~ THEN AC#PPZAR hello_attack
-~You dare to attack me? ME?~
-DO ~SetGlobal("AC#PPRakAttack","GLOBAL",2)
-SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
-Polymorph(RAKSHASA)
-Enemy()~ EXIT
-
-CHAIN IF ~Global("AC#PPRakPrison","GLOBAL",1)~ THEN AC#PPZAR hello_prison
-~Foolish mortal! Another soul in my collection!~
-DO ~SetGlobal("AC#PPRakPrison","GLOBAL",2)
-SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",5)
-Enemy()~ EXIT
-
-// Zar'khaan urges the player to use the scroll immediately
-CHAIN IF ~Global("AC#PPRakScroll","GLOBAL",1)~ THEN AC#PPZAR sell_wish_followup
-~You purchased the wish scroll! My congratulations on such a rare acquisition. Before you go, a small detail — and a curious one at that.~
-== AC#PPZAR ~The scroll’s ink is... volatile, shall we say. It holds its power only for a short while after purchase. Forgive me, I may have forgotten to mention that. Call me greedy, but I am a merchant after all, yes? Best to use it while the magic is still awake. What is the point of a wish unspoken?~
-== AC#PPZAR ~Go on, try it right here, at once! Simple words, clear intent — that’s all it takes. And should you find yourself struck speechless by joy... do remember who made it possible: me!~
-END
-IF~~THEN REPLY ~You deceived me. You should have told me that before!~ EXTERN AC#PPZAR sell_scroll_fooled_me
-IF~~THEN REPLY ~If you say so...~ EXTERN AC#PPZAR sell_scroll_alright
-
-CHAIN AC#PPZAR sell_scroll_fooled_me
-~Oh, no deceit, my friend! The scroll works exactly as you imagine it does. I merely... omitted a minor detail. Forgive a merchant his little secrets.~
-END
-IF~~THEN REPLY ~If you say so...~ EXTERN AC#PPZAR sell_scroll_alright
-
-// Player agrees to try the scroll
-CHAIN AC#PPZAR sell_scroll_alright
-~But of course! Why would a successful merchant such as myself ever deceive you?~
-EXIT
-
-CHAIN IF ~True()~ THEN AC#PPZAR hello_0
-~A trrravelerrr of taste and coin apprrroaches! A thousand welcomes to you. I trrrade in currriosities and comforrrts, trrrinkets and temptations — all perrrfectly harrrmless, of courrrse.~
-
-END
-IF~Global("AC#PP_RakStoreVisit","GLOBAL",0)~THEN REPLY ~Show me what you have for sale.~ DO ~SetGlobal("AC#PP_RakStoreVisit","GLOBAL",1)~ EXTERN AC#PPZAR start_store
-IF~Global("AC#PP_RakStoreVisit","GLOBAL",1)~THEN REPLY ~Show me what you have for sale.~ EXTERN AC#PPZAR start_store
-IF ~Global("AC#PP_RakStoreVisit","GLOBAL",1)~ THEN REPLY ~You keep some rather unusual things in your shop.~ EXTERN AC#PPZAR store_strange
-IF~~THEN REPLY ~What do you sell?~ EXTERN AC#PPZAR what_items
-IF~~THEN REPLY ~No thanks, I’m just passing through.~ EXTERN AC#PPZAR Farewell
-
-CHAIN  AC#PPZAR hub
-~So then, will you be buying something after all?~ 
-END
-IF~Global("AC#PP_RakStoreVisit","GLOBAL",0)~THEN REPLY ~Show me what you have for sale.~ DO ~SetGlobal("AC#PP_RakStoreVisit","GLOBAL",1)~ EXTERN AC#PPZAR start_store
-IF~Global("AC#PP_RakStoreVisit","GLOBAL",1)~THEN REPLY ~Show me what you have for sale.~ EXTERN AC#PPZAR start_store
-IF ~Global("AC#PP_RakStoreVisit","GLOBAL",1)~ THEN REPLY ~You keep some rather unusual things in your shop.~ EXTERN AC#PPZAR store_strange
-IF~~THEN REPLY ~What do you sell?~ EXTERN AC#PPZAR what_items
-IF~~THEN REPLY ~No thanks, I’m just passing through.~ EXTERN AC#PPZAR Farewell
-
-// Zar'khaan reacts to comment about strange wares
-CHAIN AC#PPZAR store_strange
-~Unusual? I prefer selective. Every item here has a story, and some stories simply... refuse to end.~
-== AC#PPZAR ~Strangeness sells, my friend. Ordinary things have such dull appetites. Still, I admire your eye — most pass by without noticing that my curiosities notice them back.~
-END
-IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
-
-
-CHAIN AC#PPZAR start_store
-~With delight! Step closer, do not be shy. In the marketplace of destiny, hesitation is the costliest of habits.~  
-DO ~StartStore("AC#PPZAR",LastTalkedToBy())~ EXIT
-
-CHAIN AC#PPZAR Farewell
-~As you will, wanderer. The road forgets no footstep, and my wares forget no gaze.~  
-EXIT
-
-// Zar'khaan offers his wares, especially the cursed scroll
-CHAIN AC#PPZAR what_items
-~A question most welcome! I trade in the curious and the uncommon — things you never knew you needed until you see them.~
-== AC#PPZAR ~But among such trifles, there is one treasure of true legend — a scroll of *Wish*!~
-== AC#PPZAR ~Yes, you heard it right: *Wish*! The spell that bends the ear of fate itself. I came by it through a bargain with a Djinn of the Calim Desert.~
-== AC#PPZAR ~He told me it would answer any voice that dared to command it. No tedious study, no circles of runes — only the courage to speak one’s heart aloud. Of course, the scroll carries a price — I must have my share as well! But surely a hero such as yourself deserves to tempt destiny once, no?~
-END
-IF~~THEN REPLY ~A scroll of Wish, you say? Sounds too good to be true.~ EXTERN AC#PPZAR wish_doubt
-IF~~THEN REPLY ~Let me see that scroll.~ EXTERN AC#PPZAR start_store
-IF~~THEN REPLY ~No thanks. I’ll stick to bottled laughter.~ EXTERN AC#PPZAR Farewell
-
-CHAIN AC#PPZAR wish_doubt
-~Too good to be true? But truth has never been the measure of value, has it? What matters is that it works.~
-== AC#PPZAR ~You doubt, yet you’re still listening. That’s the mark of a wise buyer. Tell you what — take a look at the script yourself. The words are simple, almost childlike. Even fate enjoys a good jest now and then.~
-END
-IF~~THEN DO ~AddJournalEntry(@13001,QUEST)~ EXTERN AC#PPZAR hub
-*/
 
 	
