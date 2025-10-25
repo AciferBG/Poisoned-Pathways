@@ -1,0 +1,41 @@
+IF
+    Range(NearestEnemyOf(Myself),8)
+    !GlobalTimerNotExpired("Stench","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("Stench","LOCALS",ONE_ROUND)
+        ReallyForceSpellRES("AC#HEZR",Myself)  // Stench
+        Continue()
+END
+
+IF
+    Global("Insects","LOCALS",0)
+    OR(4)
+        See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+        See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+        See(NearestEnemyOfType([0.0.0.BARD_ALL]))
+        See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+    !GlobalTimerNotExpired("BD_Cast","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+        ForceSpellRES("AC#HEZI",LastSeenBy(Myself))  // Summon Insects
+        SetGlobal("Insects","LOCALS",1)
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),6)
+END
+

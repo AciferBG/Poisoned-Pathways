@@ -1030,8 +1030,8 @@ But in Stillgrove, where lilies bloom thick as grass, the children tell his stor
 @1152 = ~This is a finely crafted elven wardstone.~
 @1153 = ~Branch Key~
 @1154 = ~This key is crafted from interwoven branches and appears to open a particular kind of door.~
-@1155 = ~Green Rose of Mythrien~
-@1156 = ~This crystal rose is known as Green Rose of Mythrien. If legends are to be believed this rose is truly alive, even though it has a structure of a crystal. Some say it's thanks to some unusual kind of Mythal that was used to create this item.
+@1155 = ~Rose of Mythrien~
+@1156 = ~This flower is known as the Rose of Mythrien. Some say it is a wonder that it has endured all the centuries since the fall of Myth Unnohyr, for the lingering touch of the broken Mythal should have withered it long ago — but it did not.
   
 STATISTICS:
 
@@ -1418,6 +1418,32 @@ Wish will fulfill literally the utterance of the caster. Thus, the actuality of 
 
 Curiously, this particular scroll may be read by anyone — not merely those trained in the arcane arts. Its words are written in a language so simple, so clear, that even the unlearned might speak them aloud with ease. Almost too simple, in fact... too easy to believe.~
 @1221 = ~Wisdom point lost~
+@1222 = ~Torn Page I~
+@1223 = ~These torn and faded pages appear to be fragments from a much larger chronicle concerning the history of Myth Unnohyr. The ink is elven, the script elegant yet frayed by time:
+
+"From the Days of Founding - Year of the First Flowering
+
+And so was the City of Quiet Radiance laid upon the forest glade, where seven ley-lines met and the breeze whispered in the tongue of the ancients. The High Mages of Unnohyr bound the first stones with silver word and living root, and the skies turned blue and deep in their blessing.
+
+Mythrien Sarath, Lord of Wards, cast down his gaze and was pleased. His touch fell like dew upon the high towers, and from that day forward the Mythal shielded the city with light and serenity. May all conflict break and wash away before our walls, the Founding Oath proclaimed.
+
+And for a time, so it was."
+
+Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
+@1224 = ~Torn Page II~
+@1225 = ~These torn and faded pages appear to be fragments from a much larger chronicle concerning the history of Myth Unnohyr. The ink is elven, the script elegant yet frayed by time:
+
+"Of the Final Watch – The Year of the Shattered Rings
+
+When the outer glades burned and the stars fell dark behind smoke, Elv-Esster Aened, last Commander of the Guard, stood alone upon the high terrace.
+
+It is said she spoke not to her warriors, but to the soil beneath her feet and the sky above. Some claim she called out to Mythrien Sarath, others that she offered her breath to the Mythal itself. What followed cannot be described with ink.
+
+The wards did not fail – they turned. The city did not fall – it changed.
+
+And Elv-Esster’s name has not been spoken in song since."
+
+Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
 
 // script strings
 @2000 = ~Duskwood Dell~

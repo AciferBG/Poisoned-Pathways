@@ -124,10 +124,22 @@ IF~~THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_03
 IF~~THEN REPLY ~Peaceful orcs? Never heard such a thing.~ EXTERN AC#PP972 orcs_not_fight_02
 
 CHAIN IF ~~ THEN AC#PP972 orcs_not_fight_02
-~See? Even this <PRO_RACE> doesn’t believe it. Time to set things right.~
+~See? Even this <PRO_RACE> doesn’t believe you. Your goddess seems to be doing you a fine service—by remaining silent. Time to set things right.~
+== AC#PPON4 ~No! Eldath watches. Even in silence.~
 END
-IF~~THEN REPLY ~Then do it!~ EXTERN AC#PP971 orcs_go_on_fight
-IF~~THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_03
+IF ~~ THEN REPLY ~Alright, kill them.~ EXTERN AC#PP971 orcs_go_on_fight
+IF ~~ THEN REPLY ~They actually said something priests of Eldath often say.~ EXTERN AC#PPON5 orcs_not_eldath
+IF ~~ THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_03
+
+CHAIN IF ~~ THEN AC#PPON5 orcs_not_eldath
+~The <PRO_RACE> is right! Peace guides our hand, not bloodlust.~
+== AC#PP971 ~Oh? Then why do you both wield axes?~
+== AC#PPON4 ~For the pumpkins.~
+== AC#PP971 ~Hahaha! I have never heard such nonsense. Time to tear out your black tongue for that!~
+END
+IF ~~ THEN REPLY ~Very well. Kill them!~ EXTERN AC#PP971 orcs_go_on_fight
+IF ~~ THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_03
+
 
 CHAIN IF ~~ THEN AC#PP971 orcs_not_fight_03
 ~What? You're serious? I am Maddlethorpe Jarn, son of Lord Pompabrace Jarn of Esmeltaran!~
@@ -138,9 +150,18 @@ END
 IF~~THEN REPLY ~Just joking. Kill the orcs.~ EXTERN AC#PP971 orcs_go_on_fight
 IF~~THEN REPLY ~Touch them and you deal with me.~ EXTERN AC#PP971 orcs_no_fight_bye
 IF~~THEN REPLY ~And I am <CHARNAME>, son of the lord of murder.~ EXTERN AC#PP972 orcs_no_fight_son_murder
+IF ~~ THEN REPLY ~Don’t you know it brings misfortune to slay a follower of Eldath?~ EXTERN AC#PP972 orcs_misfortune
 IF~~THEN REPLY ~Big titles... but I see little men hiding behind them.~ EXTERN AC#PP971 orcs_no_fight_bye
 IF~~THEN REPLY ~There’s no honor in butchering pilgrims. Walk away while you can.~ EXTERN AC#PP971 orcs_no_fight_bye
 
+	CHAIN IF ~~ THEN AC#PP972 orcs_misfortune
+	~Misfortune? Hah! The only misfortune here is that these beasts still draw breath.~
+	== AC#PP971 ~You sound like one of those soft-hearted druids from the north. Do you plan to pray the monsters into submission?~
+	== AC#PP972 ~Come now, spare us your sermons. Gold and steel rule Amn — not pity.~
+	END
+	IF~~THEN REPLY ~Just joking. Kill the orcs.~ EXTERN AC#PP971 orcs_go_on_fight
+	IF~~THEN REPLY ~Touch them and you deal with me.~ EXTERN AC#PP971 orcs_no_fight_bye
+	
 	CHAIN IF ~~ THEN AC#PP972 orcs_no_fight_son_murder
 	~Haha! What? So you plan to skin the orcs, then?~
 	== AC#PP971 ~Uh... I don't think <PRO_HESHE> wants that... something about <PRO_HIMHER> seems off. Let's get out of here.~

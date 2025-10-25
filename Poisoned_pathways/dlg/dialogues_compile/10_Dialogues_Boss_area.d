@@ -3,7 +3,7 @@
 BEGIN ~AC#PPHEZ~
 
 CHAIN IF ~True()~ THEN AC#PPHEZ hello_00
-~You mewling mortals dare to enter the chamber of the master of poisons? You will fail miserably! No spell you so dearly rely upon will work here! But unlike you pitiful worms, I can still wield my innate magic!~
+~You mewling mortals dare to enter the chamber of the master? You will fail miserably! This is the heart of dead magic in this cursed place. No spell you so dearly rely upon will work here! But unlike you pitiful worms, I still have my stench with which I will destroy you!~
 DO ~Enemy()~ EXIT
 
 

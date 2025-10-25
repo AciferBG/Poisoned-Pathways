@@ -2,6 +2,14 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPTP2.itm~         ~override~    //  page elven chronic 2
+  SAY NAME2 @1224
+  SAY DESC  @1225
+
+COPY ~%MOD_FOLDER%/itm/AC#PPTP1.itm~         ~override~    //  page elven chronic 1
+  SAY NAME2 @1222
+  SAY DESC  @1223
+
 COPY ~%MOD_FOLDER%/itm/AC#PPSC1.itm~         ~override~  // Chaos shield scroll
 
 ADD_PROJECTILE      ~Poisoned_pathways/pro/AC#PPWWD.PRO~ // Will-o-deads shadow energy drain

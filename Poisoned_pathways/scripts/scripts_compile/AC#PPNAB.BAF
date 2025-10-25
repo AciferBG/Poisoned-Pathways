@@ -1,5 +1,6 @@
 IF
     See(NearestEnemyOf(Myself))
+    !TimeOfDay(NIGHT)
 THEN
     RESPONSE #50
         ForceSpell(NearestEnemyOf(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
@@ -10,6 +11,7 @@ END
 IF
     See(NearestEnemyOf(Myself))
     Global("TANARIPARALYZE","LOCALS",0)
+    !TimeOfDay(NIGHT)
 THEN
     RESPONSE #100
         ForceSpell(NearestEnemyOf(Myself),TANARI_PARALYZE)  // SPIN999.SPL (Paralyze)
