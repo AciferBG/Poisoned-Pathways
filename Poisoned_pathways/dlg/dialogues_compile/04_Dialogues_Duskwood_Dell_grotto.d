@@ -129,7 +129,7 @@ IF ~~ THEN REPLY ~Not a chance!~ EXTERN AC#PPDR1 bye_trade_weapons
 
 CHAIN IF ~~ THEN AC#PPDR1 trade_think_about_it
 ~I ask no more of you. Whenever you find a blade you will not wield yourself, think of Eldath—and take the chance to carry peace into the world. Farewell, <PRO_RACE>.~
-EXIT
+DO ~AddJournalEntry(@13110,QUEST)~ EXIT
 
 
 CHAIN IF ~True()~ THEN AC#PPDR1 hello_01
@@ -357,7 +357,8 @@ DO ~TakePartyItem("AC#MGFL")
    SetGlobal("AC#TradeFlayerSlayer","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_doomedloser
@@ -366,7 +367,8 @@ DO ~TakePartyItem("AC#WSW50")
    SetGlobal("AC#TradeDoomedLoser","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_silversword
@@ -375,7 +377,8 @@ DO ~TakePartyItem("SW2H15")
    SetGlobal("AC#TradeSilverSword","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -386,7 +389,8 @@ DO ~TakePartyItem("BOW19")
    SetGlobal("AC#TradeGesen","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -396,7 +400,8 @@ DO ~TakePartyItem("SW1H15")
    SetGlobal("AC#TradeIcingdeath","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -406,7 +411,8 @@ DO ~TakePartyItem("SW1H16")
    SetGlobal("AC#TradeTwinkle","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -416,7 +422,8 @@ DO ~TakePartyItem("STAF11")
    SetGlobal("AC#TradeSotM","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -426,7 +433,8 @@ DO ~TakePartyItem("SW2H09")
    SetGlobal("AC#TradeWarblade","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -436,7 +444,8 @@ DO ~TakePartyItem("SW1H54")
    SetGlobal("AC#TradeEqualizer","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -446,7 +455,8 @@ DO ~TakePartyItem("SW2H10")
    SetGlobal("AC#TradeCarsomyr","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -456,7 +466,8 @@ DO ~TakePartyItem("BLUN14")
    SetGlobal("AC#TradeFoA","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -466,7 +477,8 @@ DO ~TakePartyItem("HAMM09")
    SetGlobal("AC#TradeCrom","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -476,7 +488,8 @@ DO ~TakePartyItem("SW2H08")
    SetGlobal("AC#TradeSoulReaver","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -486,7 +499,8 @@ DO ~TakePartyItem("MISCBC")
    SetGlobal("AC#TradeBlackrazor","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -496,7 +510,8 @@ DO ~TakePartyItem("SW1H51")
    SetGlobal("AC#TradeCelFury","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
-   AddexperienceParty(1000)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -506,9 +521,10 @@ DO ~TakePartyItem("SW2H14")
    SetGlobal("AC#TradeLilarcor","GLOBAL",1)
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
    //DisplayString(Player1,@908)
    //DisplayString(Player1,@909)
-   AddexperienceParty(1000)
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT 
 
@@ -635,6 +651,10 @@ THEN REPLY ~Take Frostreaver—its cold bite ends here.~ EXTERN AC#PPDR1 trade_l
 IF ~PartyHasItem("AC#PPSW") Global("AC#TradeMycologistBlade","GLOBAL",0)~
 THEN REPLY ~The Blade of the Elven Mycologist… its edge smells faintly of damp earth. May it return to the soil.~ EXTERN AC#PPDR1 trade_lesser_mycologist_blade
 
+// Mirage’s Edge – Spielerantwort:
+IF ~PartyHasItem("AC#PPSCI") Global("AC#TradeMirageEdge","GLOBAL",0)~
+THEN REPLY ~Mirage’s Edge—its shimmer cuts through more than steel. Let its illusions fade into peace.~ EXTERN AC#PPDR1 trade_lesser_mirageedge
+
 // Scolopendra's Spit +3
 IF ~PartyHasItem("AC#PPSCO") Global("AC#TradeScolopendra","GLOBAL",0)~
 THEN REPLY ~Scolopendra's Spit… venomous, patient, and silent. I will not miss its company.~ EXTERN AC#PPDR1 trade_lesser_scolopendra
@@ -726,7 +746,8 @@ CHAIN AC#PPDR1 trade_legend_skullcrusher
 DO ~TakePartyItem("BLUN18")
    SetGlobal("AC#TradeSkullcrusher","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)   
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -736,7 +757,8 @@ CHAIN AC#PPDR1 trade_legend_thunderbolts
 DO ~TakePartyItem("HAMM07")
    SetGlobal("AC#TradeThunderbolts","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -746,7 +768,8 @@ CHAIN AC#PPDR1 trade_legend_dwarventhrower
 DO ~TakePartyItem("HAMM06")
    SetGlobal("AC#TradeDwarvenThrower","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -756,7 +779,8 @@ CHAIN AC#PPDR1 trade_legend_boneblade
 DO ~TakePartyItem("DAGG14")
    SetGlobal("AC#TradeBoneblade","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -766,7 +790,8 @@ CHAIN AC#PPDR1 trade_legend_blackblood
 DO ~TakePartyItem("BLUN22")
    SetGlobal("AC#TradeBlackblood","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -776,7 +801,8 @@ CHAIN AC#PPDR1 trade_legend_searing
 DO ~TakePartyItem("SW1H39")
    SetGlobal("AC#TradeSearing","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -786,7 +812,8 @@ CHAIN AC#PPDR1 trade_legend_azuredge
 DO ~TakePartyItem("AX1H10")
    SetGlobal("AC#TradeAzuredge","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -795,16 +822,18 @@ CHAIN AC#PPDR1 trade_legend_falsepride
 ~Pride cuts deeper than steel. The pool will teach this blade to be still.~
 DO ~TakePartyItem("AC#W75SW")
    SetGlobal("AC#TradeFalsePride","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)  
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)    
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_skullmace
 ~A fallen paladin’s skull profaned… what horrors mortals make. Let mercy close its teeth forever.~
 DO ~TakePartyItem("AC#WSKCL")
    SetGlobal("AC#TradeSkullMace","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)   
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_fleshboils
@@ -812,56 +841,63 @@ CHAIN AC#PPDR1 trade_legend_fleshboils
 DO ~TakePartyItem("AC#WFLBO")
    SetGlobal("AC#TradeFleshBoils","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
   
-   AddexperienceParty(500)
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_meatshaper
 ~Sinew threaded with cruelty. Peace will not abide such stitching.~
 DO ~TakePartyItem("AC#WMSHP")
    SetGlobal("AC#TradeMeatshaper","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)   
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_heads
 ~Wealth twisted into death… may the water cool its greed.~
 DO ~TakePartyItem("AC#W901")
    SetGlobal("AC#TradeHeads","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1) 
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)   
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_tails
 ~Two halves of one greed. Both will sink, and none shall drown by them again.~
 DO ~TakePartyItem("AC#W902")
    SetGlobal("AC#TradeTails","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)  
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)    
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_venomslicer
 ~Tharzax’s poison has no voice in this grove. The waters will silence its sting.~
 DO ~TakePartyItem("AC#W90SC")
    SetGlobal("AC#TradeVenomSlicer","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)   
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_bloodblade
 ~Sap that keeps wounds from closing… abominations upon healing. Peace will close what this opened.~
 DO ~TakePartyItem("AC#W90DG")
    SetGlobal("AC#TradeBloodblade","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)   
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_rustspreader
 ~A blade that gnaws even its wielder… such misery belongs to the depths.~
 DO ~TakePartyItem("AC#WRUSP")
    SetGlobal("AC#TradeRustSpreader","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)   
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
+   AddexperienceParty(300)
 ~ EXIT
 
 
@@ -869,8 +905,9 @@ CHAIN AC#PPDR1 trade_legend_heartrazor
 ~‘You cannot crush the heart that’s already missing’… such cruelty shall not echo here.~
 DO ~TakePartyItem("AC#WHSRZ")
    SetGlobal("AC#TradeHeartRazor","GLOBAL",1)
-   ApplySpellRES("AC#PPH1",Player1)   
-   AddexperienceParty(500)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_heartseeker
@@ -878,7 +915,8 @@ CHAIN AC#PPDR1 trade_legend_heartseeker
 DO ~TakePartyItem("BOW10")
    SetGlobal("AC#TradeHeartseeker","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -887,7 +925,8 @@ CHAIN AC#PPDR1 trade_legend_courtbow
 DO ~TakePartyItem("BOW12")
    SetGlobal("AC#TradeCourtBow","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -897,7 +936,8 @@ CHAIN AC#PPDR1 trade_legend_impaler
 DO ~TakePartyItem("SPER08")
    SetGlobal("AC#TradeImpaler","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -907,7 +947,8 @@ CHAIN AC#PPDR1 trade_legend_withering
 DO ~TakePartyItem("SPER10")
    SetGlobal("AC#TradeWithering","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -917,7 +958,8 @@ CHAIN AC#PPDR1 trade_legend_frostreaver
 DO ~TakePartyItem("AX1H13")
    SetGlobal("AC#TradeFrostreaver","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -926,7 +968,8 @@ CHAIN AC#PPDR1 trade_lesser_blackbite
 DO ~TakePartyItem("AC#MGSP1")
    SetGlobal("AC#TradeBlackbite","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_bonefang
@@ -934,7 +977,8 @@ CHAIN AC#PPDR1 trade_lesser_bonefang
 DO ~TakePartyItem("AC#MGMS1")
    SetGlobal("AC#TradeBonefang","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_astralmace
@@ -942,7 +986,8 @@ CHAIN AC#PPDR1 trade_lesser_astralmace
 DO ~TakePartyItem("AC#MGAMB")
    SetGlobal("AC#TradeAstralMace","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_clockworkblade
@@ -950,7 +995,8 @@ CHAIN AC#PPDR1 trade_lesser_clockworkblade
 DO ~TakePartyItem("AC#CLKBL")
    SetGlobal("AC#TradeClockworkBlade","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_grubnuk
@@ -958,7 +1004,8 @@ CHAIN AC#PPDR1 trade_lesser_grubnuk
 DO ~TakePartyItem("AC#MGTRH")
    SetGlobal("AC#TradeGrubnuksHand","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_prismaticscimitar
@@ -966,7 +1013,8 @@ CHAIN AC#PPDR1 trade_lesser_prismaticscimitar
 DO ~TakePartyItem("AC#MGSCI")
    SetGlobal("AC#TradePrismaticScimitar","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_airhammer
@@ -974,7 +1022,8 @@ CHAIN AC#PPDR1 trade_lesser_airhammer
 DO ~TakePartyItem("AC#MGHMA")
    SetGlobal("AC#TradeAirHammer","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(500)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_mycologist_blade
@@ -982,7 +1031,17 @@ CHAIN AC#PPDR1 trade_lesser_mycologist_blade
 DO ~TakePartyItem("AC#PPSW")
    SetGlobal("AC#TradeMycologistBlade","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(750)~
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)~
+EXIT
+
+CHAIN AC#PPDR1 trade_lesser_mirageedge
+~Even mirages must rest when the light grows gentle. I will guard this blade until it dreams of battle no more.~
+DO ~TakePartyItem("AC#PPSCI")
+   SetGlobal("AC#TradeMirageEdge","GLOBAL",1)
+   ApplySpellRES("AC#PPH1",Player1)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_scolopendra
@@ -990,7 +1049,8 @@ CHAIN AC#PPDR1 trade_lesser_scolopendra
 DO ~TakePartyItem("AC#PPSCO")
    SetGlobal("AC#TradeScolopendra","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(750)~
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)~
 EXIT
 
 
@@ -999,7 +1059,8 @@ CHAIN AC#PPDR1 trade_lesser_honeysuckle
 DO ~TakePartyItem("AC#PP2HA")
    SetGlobal("AC#TradeHoneysuckle","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(750)~
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_loveletter
@@ -1007,7 +1068,8 @@ CHAIN AC#PPDR1 trade_lesser_loveletter
 DO ~TakePartyItem("AC#PPBOW")
    SetGlobal("AC#TradeLoveLetter","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(750)~
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_unlikelyhammer
@@ -1015,7 +1077,8 @@ CHAIN AC#PPDR1 trade_lesser_unlikelyhammer
 DO ~TakePartyItem("AC#PPHME")
    SetGlobal("AC#TradeUnlikelyHammer","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(750)~
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_jhor
@@ -1023,7 +1086,8 @@ CHAIN AC#PPDR1 trade_lesser_jhor
 DO ~TakePartyItem("SW1H38")
    SetGlobal("AC#TradeL_Jhor","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1032,7 +1096,8 @@ CHAIN AC#PPDR1 trade_lesser_bladeroses
 DO ~TakePartyItem("SW1H40")
    SetGlobal("AC#TradeL_BladeRoses","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1041,7 +1106,8 @@ CHAIN AC#PPDR1 trade_lesser_stonefire
 DO ~TakePartyItem("AX1H12")
    SetGlobal("AC#TradeL_Stonefire","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1050,7 +1116,8 @@ CHAIN AC#PPDR1 trade_lesser_rifthome
 DO ~TakePartyItem("AX1H09")
    SetGlobal("AC#TradeL_Rifthome","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1059,7 +1126,8 @@ CHAIN AC#PPDR1 trade_lesser_dragonsbreath
 DO ~TakePartyItem("HALB04")
    SetGlobal("AC#TradeL_DragBreath","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1068,7 +1136,8 @@ CHAIN AC#PPDR1 trade_lesser_wave
 DO ~TakePartyItem("HALB09")
    SetGlobal("AC#TradeL_WaveHalb","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1077,7 +1146,8 @@ CHAIN AC#PPDR1 trade_lesser_ras
 DO ~TakePartyItem("SW1H33")
    SetGlobal("AC#TradeL_Ras","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1086,7 +1156,8 @@ CHAIN AC#PPDR1 trade_lesser_pixie
 DO ~TakePartyItem("DAGG13")
    SetGlobal("AC#TradeL_PixiePrick","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1095,7 +1166,8 @@ CHAIN AC#PPDR1 trade_lesser_cutthroat
 DO ~TakePartyItem("SW1H33")
    SetGlobal("AC#TradeL_Cutthroat","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1104,7 +1176,8 @@ CHAIN AC#PPDR1 trade_lesser_spectral
 DO ~TakePartyItem("SW1H68")
    SetGlobal("AC#TradeL_SpectralBrand","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1113,7 +1186,8 @@ CHAIN AC#PPDR1 trade_lesser_adjatha
 DO ~TakePartyItem("SW1H35")
    SetGlobal("AC#TradeL_Adjatha","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1122,7 +1196,8 @@ CHAIN AC#PPDR1 trade_lesser_chaos
 DO ~TakePartyItem("SW2H16")
    SetGlobal("AC#TradeL_SwordChaos","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1131,7 +1206,8 @@ CHAIN AC#PPDR1 trade_lesser_albruin
 DO ~TakePartyItem("SW1H34")
    SetGlobal("AC#TradeL_Albruin","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1140,7 +1216,8 @@ CHAIN AC#PPDR1 trade_lesser_flame
 DO ~TakePartyItem("SW1H53")
    SetGlobal("AC#TradeL_SwordFlame","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1149,7 +1226,8 @@ CHAIN AC#PPDR1 trade_lesser_daystar
 DO ~TakePartyItem("SW1H31")
    SetGlobal("AC#TradeL_Daystar","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1158,7 +1236,8 @@ CHAIN AC#PPDR1 trade_lesser_ssbackstab
 DO ~TakePartyItem("SW1H10")
    SetGlobal("AC#TradeL_SSBackstab","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1167,7 +1246,8 @@ CHAIN AC#PPDR1 trade_lesser_belm
 DO ~TakePartyItem("SW1H30")
    SetGlobal("AC#TradeL_Belm","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1176,7 +1256,8 @@ CHAIN AC#PPDR1 trade_lesser_dagvenom
 DO ~TakePartyItem("MISC75")
    SetGlobal("AC#TradeL_DagVenom","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
-   AddexperienceParty(800)
+   IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
+   AddexperienceParty(300)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 

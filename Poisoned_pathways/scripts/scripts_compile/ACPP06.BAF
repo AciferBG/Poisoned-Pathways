@@ -6,3 +6,12 @@ THEN
         SetGlobal("EldathBless","ACPP06",0)
 END
 
+IF
+    GlobalGT("AC#PPTradeItems","GLOBAL",0)
+    Global("EldathWeaponJournal","ACPP06",0)
+THEN
+    RESPONSE #100
+    AddJournalEntry(@13111,QUEST_DONE)        
+        SetGlobal("EldathWeaponJournal","ACPP06",1)
+END
+

@@ -484,9 +484,9 @@ Weight: 2
 
 @1075 = ~Headband~
 @1076 = ~Halo of Corrosive Blood~
-@1077 = ~This powerful halo is a crown made of congealed blood. It was previously worn by a powerful monster imprisoned under Myth Unnohyr - an elder blood amniote.
-  
-This magical halo may be used to spread a "gift" of corrosion, resulting in great pain and... to some it may be nothing less than a gift of death.
+@1077 = ~This sinister halo is fashioned from congealed, darkened blood. Once worn by an ancient creature imprisoned beneath Myth Unnohyr—an elder blood amniote—it still pulses faintly, as if remembering the rhythm of a long-forgotten heart.
+
+Those who don the halo may channel its corrosive essence, spreading decay and agony in equal measure. To some, such pain is a curse... to others, a final and perfect gift.
 
 STATISTICS:
 
@@ -494,10 +494,10 @@ Charge abilities:
 – May cast Dolorous Decay once per day
 
 Equipped abilities:
-– Charisma: -1
+– Charisma: –1
 – Acid Resistance: +10%
-– There is a 25% chance that an attacker that succefully hits the wearer of this item will suffer 1d2 acid damage (Death Save -2 to negate)
-– May only be removed with a Remove Curse spell
+– 25% chance that an attacker striking the wearer suffers 1d2 acid damage (Save vs. Death at –2 negates)
+– Can only be removed with a Remove Curse spell
 
 Weight: 1
 ~

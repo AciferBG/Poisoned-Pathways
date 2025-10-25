@@ -1140,18 +1140,12 @@ CHAIN IF ~True()~ THEN AC#PPON3 hello_again
 ~Ah, friend! We thank you still. You saved our lives on the road.~
 == AC#PPON1 ~Now our axe only split pumpkin, not heads. Better work. Better life.~
 END
-
-IF~~THEN REPLY ~An orc! I’ll take your head off!~ EXTERN AC#PPON3 orc_hostile
 IF~~THEN REPLY ~I don’t believe you for a moment.~ EXTERN AC#PPON3 orc_skeptical
 IF~~THEN REPLY ~Good to see you alive. Glad you found peace.~ EXTERN AC#PPON3 orc_friendly
 IF~~THEN REPLY ~Why pumpkins, of all things?~ EXTERN AC#PPON3 orc_why_pumpkin
-IF~~THEN REPLY ~Need any help with those?~ EXTERN AC#PPON3 orc_offer_help
+IF~~THEN REPLY ~Need any help with those pumpkins?~ EXTERN AC#PPON3 orc_offer_help
 IF~~THEN REPLY ~I’ll leave you to your pumpkins.~ EXTERN AC#PPON3 bye
 
-    CHAIN IF ~~ THEN AC#PPON3 orc_hostile
-    ~No! No fight! Please, we only split pumpkin now. They not scream.~
-    == AC#PPON1 ~If you strike, Eldath frown. We beg you, do not make us fight.~
-    EXIT
 
     CHAIN IF ~~ THEN AC#PPON3 orc_skeptical
     ~You not believe? That fine. We were like you once. Listen—~

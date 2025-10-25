@@ -54,6 +54,6 @@ IF
     Global("AC#PPChapter6Quest","GLOBAL",11)
 THEN
     RESPONSE #100
-        ContainerEnable("Feet",TRUE)
+        //ContainerEnable("Feet",TRUE)
         SetGlobal("AC#PPChapter6Quest","GLOBAL",12)
 END
