@@ -142,8 +142,8 @@ IF ~~ THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_
 
 
 CHAIN IF ~~ THEN AC#PP971 orcs_not_fight_03
-~What? You're serious? I am Maddlethorpe Jarn, son of Lord Pompabrace Jarn of Esmeltaran!~
-== AC#PP972 ~And I am Wimpley Ormath, heir of House Ormath of Murann!~
+~What? You're serious? I am Maddlethorpe Vemmil, son of Lord Pompabrace Vemmil of Esmeltaran!~
+== AC#PP972 ~And I am Wimpley Ulvax, member of the Ulvax family!~
 == AC#PP973 ~You'd best step aside, rabble, and leave this decision to the nobility.~
 == AC#PP971 ~Yep. Listen, smart-mouth: You take our fun from us, we’ll gladly gut a few more bodies instead.~
 END

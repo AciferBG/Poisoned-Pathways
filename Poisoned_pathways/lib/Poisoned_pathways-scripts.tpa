@@ -72,7 +72,7 @@ COPY_EXISTING ~HUNTER.BCS~ ~override~
             REPLACE_TEXTUALLY ~%textToReplace%~ ~!HasItemEquiped("AC#PPRE",LastSeenBy(Myself))\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
         END ELSE BEGIN
-            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+            //PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
         END
     END
 
