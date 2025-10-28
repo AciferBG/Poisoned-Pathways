@@ -4,7 +4,7 @@
 
 *Have you ever wondered why Renfeld couldn't be cured? Here's the answer.*
 
-**Poisoned Pathways** is a quest mod for *Baldur’s Gate II: Enhanced Edition (BG2EE)* and *Enhanced Edition Trilogy (EET)*. It adds new content to the game after a pivotal moment in the early chapters of the Shadows of Amn storyline.
+**Poisoned Pathways** is a quest mod for *Baldur’s Gate II: Enhanced Edition (BG2EE)* and *Enhanced Edition Trilogy (EET)*. It adds new content to the game after a pivotal moment in the early chapters of the Shadows of Amn storyline. The mod is inspired by the module "Into the Nest of Vipers" by Matthew G. Adkins, published in Dungeon magazine #75.
 
 ## Features
 - New quest content continuing after the Renfeld encounter in the Docks District  

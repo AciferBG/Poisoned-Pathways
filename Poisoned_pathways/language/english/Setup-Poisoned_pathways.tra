@@ -1444,6 +1444,33 @@ The wards did not fail – they turned. The city did not fall – it changed.
 And Elv-Esster’s name has not been spoken in song since."
 
 Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
+@1226 = ~Signet Ring of House Vemmil~
+@1227 = ~This opulent signet ring bears the crest of the Vemmil family, an ancient Amnian merchant line known for its wealth, political maneuvering, and staggering lack of humility. The ring hums faintly with enchantment, as if every insult bounced off its golden sheen like rain off polished marble. Among Amnian elites, its wearer is often greeted with smiles – genuine or not – and a careful counting of silverware.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+
+Charge abilities:
+– Cast Friends once per day
+  Area of Effect: self
+
+Weight: 1~
+@1228 = ~Day- and Nightblade~
+@1229 = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. This is a magical bastard sword.
+
+STATISTICS:
+
+THAC0: +3
+Damage: 2d4+3 (slashing)
+Speed Factor: 5
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
 
 // script strings
 @2000 = ~Duskwood Dell~

@@ -45,10 +45,10 @@ SAY NAME1 @68 SAY NAME2 @68
 COPY ~%MOD_FOLDER%/cre/AC#PPWOC.cre~ ~override~       // Craven, woodcarver in ACPP09
 SAY NAME1 @67 SAY NAME2 @67
 
-COPY ~%MOD_FOLDER%/cre/AC#PP971.cre~ ~override~       // Maddlethorpe Jarn, random encounter anti-orc thug
+COPY ~%MOD_FOLDER%/cre/AC#PP971.cre~ ~override~       // Maddlethorpe Vemmil, random encounter anti-orc thug
 SAY NAME1 @64 SAY NAME2 @64
 
-COPY ~%MOD_FOLDER%/cre/AC#PP972.cre~ ~override~       // Wimpley Ormath, random encounter anti-orc thug
+COPY ~%MOD_FOLDER%/cre/AC#PP972.cre~ ~override~       // Wimpley Ulvax, random encounter anti-orc thug
 SAY NAME1 @65 SAY NAME2 @65
 
 COPY ~%MOD_FOLDER%/cre/AC#PP973.cre~ ~override~       // Edvarr Nolthune, mage random encounter anti-orc thug
