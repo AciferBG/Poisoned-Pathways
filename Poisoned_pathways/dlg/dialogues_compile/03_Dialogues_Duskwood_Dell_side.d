@@ -455,7 +455,34 @@ THEN AC#PPST2 hello_neera
 DO ~SetGlobal("DebatingNeera","ACPP01",1)~
 EXIT
 
+// Eldathyn and Viconia – the fading enthusiasm of faith
+CHAIN IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) Global("DebatingViconia","ACPP01",0)~
+THEN AC#PPST1 hello_viconia
+~Blessed be the still waters! A drow who has turned from darkness — what a wondrous thing to behold!~
+==VICONIJ ~I turned from one darkness only to find another, rivvil.~
+==AC#PPST2 ~Still, to walk beneath the sun and live... you must feel peace at last?~
+==VICONIJ ~Peace? The sun burns my skin, the surf grates my ears, and every fool priest wishes to wash my soul. I endure, I do not rejoice.~
+==AC#PPST1 ~Mayhap in time, the surface will embrace you as surely as Eldath would.~
+==VICONIJ ~The surface embraces nothing. It tolerates. Much like your goddess, I suspect.~
+==AC#PPST2 ~I... see. Mayhap not all rivers seek the same sea.~
+==VICONIJ ~Or perhaps some waters run black for a reason.~
+==AC#PPST1 ~May Eldath’s peace find you yet, even if she must search long.~
+DO ~SetGlobal("DebatingViconia","ACPP01",1)~ EXIT
 
+
+// Eldathyn and Viconia – the fading enthusiasm of faith
+CHAIN IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) Global("DebatingViconia","ACPP01",0)~
+THEN AC#PPST2 hello_viconia
+~Blessed be the still waters! A drow who has turned from darkness — what a wondrous thing to behold!~
+==VICONIJ ~I turned from one darkness only to find another, rivvil.~
+==AC#PPST1 ~Still, to walk beneath the sun and live... you must feel peace at last?~
+==VICONIJ ~Peace? The sun burns my skin, the surf grates my ears, and every fool priest wishes to wash my soul. I endure, I do not rejoice.~
+==AC#PPST2 ~Mayhap in time, the surface will embrace you as surely as Eldath would.~
+==VICONIJ ~The surface embraces nothing. It tolerates. Much like your goddess, I suspect.~
+==AC#PPST1 ~I... see. Mayhap not all rivers seek the same sea.~
+==VICONIJ ~Or perhaps some waters run black for a reason.~
+==AC#PPST2 ~May Eldath’s peace find you yet, even if she must search long.~
+DO ~SetGlobal("DebatingViconia","ACPP01",1)~ EXIT
 
 
 // Eldathyn #1
@@ -698,6 +725,7 @@ DO ~SetGlobal("MetMannatarv","ACPP01",1)~ EXTERN AC#PPILL priests_fuss
 	== AC#PPILL ~So beautiful and yet so deadly... here, I'll just take one leaf. Everyone else should get the antidote, just not me...~
 	== AC#PPILL ~Ugh, that tastes bitter! I didn't think that...~
 	DO ~SetGlobal("DyingMan","ACPP01",10)
+	AddexperienceParty(300)
 	AddJournalEntry(@13082,QUEST_DONE)
 	Kill(Myself)~
 	EXIT
@@ -1236,7 +1264,7 @@ IF~~THEN REPLY ~That’s your problem, not mine.~ EXTERN AC#PPCHA 01.02
 CHAIN AC#PPCHA 01.03
 ~Truly? Thank you. Here—take it. She rarely leaves the District; she always said the City of Coins was all she needed.~
 ==AC#PPCHA ~Let me know once you’ve given it to her. I’d really appreciate it.~
-DO ~GiveItemCreate("AC#PPFLW",Player1,1,1,0) SetGlobal("AC#PPFlowerDelivery","GLOBAL",1)~ EXIT
+DO ~GiveItemCreate("AC#PPFLW",Player1,1,1,0) SetGlobal("AC#PPFlowerDelivery","GLOBAL",1) AddJournalEntry(@13120,QUEST)~ EXIT
 
 CHAIN AC#PPCHA 01.02
 ~R-right... I’m sorry to have bothered you.~
@@ -1262,67 +1290,13 @@ EXTERN AC#PPCHA 02.03
 CHAIN AC#PPCHA 02.03
 ~Thank you for doing this. It means more than I can say. Now that she knows I’m safe, I can truly begin focusing on what matters.~
 ==AC#PPCHA ~Whatever that is, exactly. Still figuring that out. But thanks. Really. You’re alright.~
-DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",4) AddExperienceParty(500)~ EXIT
+DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",4) AddJournalEntry(@13122,QUEST_DONE) AddexperienceParty(500)~ EXIT
 
 // After
 
 CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",4)~ THEN AC#PPCHA 03.00
 ~Peace be with you! You carry the scent of earth and danger—were you in some ruin or dark place? I’m not sure I’m made for such paths… but I hope the stillness I find here helps someone, too.~ 
 EXIT
-
-/*
-CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",0)~ THEN AC#PPCHA 01.00
-~Excuse me. You are the person that helped our High Priest, yes? I thought that—that maybe you could help me too.~
-END
-IF~~THEN REPLY ~It depends on what do you need.~ EXTERN AC#PPCHA 01.01
-IF~~THEN REPLY ~I have no time on helping boys that do not even shave themselves yet. Get lost.~ EXTERN AC#PPCHA 01.02
-
-CHAIN AC#PPCHA 01.01
-~You see, it was recently that I run away from home. I... I just couldn't live the life I was expected to live! My parents—they're dead, and I've been living with my Aunt Pesca, and she's just so—demanding! Agh!~
-==AC#PPCHA ~I'm sorry, as you can see, it's still very difficult to me. The thing is that I realized that I should have left her a note or something. I dislike that life she prepared for me, but running away without telling her anything... well, that's somewhat harsh, isn't it? Perhaps even unfair.~
-==AC#PPCHA ~I cannot return there, she would try to keep me, so I would like someone to take this flower and deliver it to her and tell her that I am alright, and maybe we will see again, when I am grown man and I find my own path I would like to follow.~
-==AC#PPCHA ~She's living in Athkatla. In the Government District. She usually goes on a walks. Could you do me a favor and give her this flower and pass her the message? Please?~
-END
-IF~~THEN REPLY ~Fine. I'll do it.~ EXTERN AC#PPCHA 01.03
-IF~~THEN REPLY ~I don't have time for such things. Get lost.~ EXTERN AC#PPCHA 01.02
-
-CHAIN AC#PPCHA 01.03
-~Oh, thank you so much! Here! Give it to her. She usually goes on the walks, but she never leaves the district. She calls it her whole world.~
-==AC#PPCHA ~Please, let me know once you do that. I'd truly appreciate this.~
-DO ~GiveItemCreate("AC#PPFLW",Player1,1,1,0) SetGlobal("AC#PPFlowerDelivery","GLOBAL",1)~ EXIT
-
-CHAIN AC#PPCHA 01.02
-~Y-yes. of course. I'm... I'm sorry I bothered you.~
-DO ~EscapeArea()~ EXIT
-
-//2nd talk
-
-CHAIN IF ~OR(3) Global("AC#PPFlowerDelivery","GLOBAL",1) Global("AC#PPFlowerDelivery","GLOBAL",2) Global("AC#PPFlowerDelivery","GLOBAL",3)~ THEN AC#PPCHA 02.00
-~I really hope my aunt will understand I needed to breath. That I needed something else than she does.~
-END
-IF~Global("AC#PPFlowerDelivery","GLOBAL",2)~THEN REPLY ~I passed your message and gave the flower to your aunt. She suggested that maybe in a while you should give her some flowers on your own.~ EXTERN AC#PPCHA 02.01
-IF~Global("AC#PPFlowerDelivery","GLOBAL",3)~THEN REPLY ~I passed your message and gave the flower to your aunt. I'm not surprised you run away. She is a horrible person.~ EXTERN AC#PPCHA 02.02
-IF~~THEN REPLY ~Right.~ EXIT
-
-CHAIN AC#PPCHA 02.01
-~What?! She really said that? Well, that's... unexpected.~
-EXTERN AC#PPCHA 02.03
-
-CHAIN AC#PPCHA 02.02
-~Well, she's not THAT bad. I mean... she can be nice sometimes.~
-EXTERN AC#PPCHA 02.03
-
-CHAIN AC#PPCHA 02.03
-~Anyway, thank you for helping me! It's really nice of you. Now, that I know she knows I'm alright, it will be easier for me to focus on what's really important! Like... Huh. Well. I still need to figure that out.~
-==AC#PPCHA ~Anyway, thanks! You're cool.~
-DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",4) AddExperienceParty(1800)~ EXIT
-
-//AFTER
-
-CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",4)~ THEN AC#PPCHA 03.00
-~Oh! Hi! You look cool with all that stuff you probably found in some dungeon or something. Maybe I should try something like that one day. But I guess I may need to work out a bit first.~
-EXIT
-*/
 
 ////////////////////////////////////////////
 CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",1)~ THEN AC#PPCAA 01.00
@@ -1332,20 +1306,20 @@ IF~PartyHasItem("AC#PPFLW")~THEN REPLY ~Actually, I believe I do. I spoke to you
 IF~~THEN REPLY ~Right. I'll be leaving then.~ EXIT 
 
 CHAIN AC#PPCAA 01.01
-~He did *what*? He’s alive? I thought… I feared the worst. And yet he runs off, vanishing without so much as a word? The *audacity*!~
+~He did what? He’s alive? I thought… I feared the worst. And yet he runs off, vanishing without so much as a word? The audacity!~
 ==AC#PPCAA ~Ungrateful whelp! I sheltered him, clothed him, educated him, gave him *everything*—and this is how he repays me?~
 END
 IF~~THEN REPLY ~Perhaps that’s exactly the problem.~ EXTERN AC#PPCAA 01.02
 IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
 
 CHAIN AC#PPCAA 01.02
-~How *dare* you imply such a thing?~
+~How dare you imply such a thing?~
 END
 IF~~THEN REPLY ~He wants to live his own life. To make his own mistakes. He knows you meant well—but he needs to find his own way.~ EXTERN AC#PPCAA 01.04
 IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
 
 CHAIN AC#PPCAA 01.04
-~And what, pray tell, did he lack *here*? We have everything—comfort, beauty, security! Look at this district! There’s nothing beyond these walls that could serve him better than what I’ve already provided.~
+~And what, pray tell, did he lack here? We have everything—comfort, beauty, security! Look at this district! There’s nothing beyond these walls that could serve him better than what I’ve already provided.~
 END
 IF~~THEN REPLY ~He’s fine. Just… give him time. Let him stumble. Let him grow.~ EXTERN AC#PPCAA 01.05
 IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
@@ -1353,57 +1327,16 @@ IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You�
 CHAIN AC#PPCAA 01.05
 ~I…~
 END
-IF~~THEN REPLY ~He’s doing well. Try to focus on *that*.~ EXTERN AC#PPCAA 01.06
+IF~~THEN REPLY ~He’s doing well. Try to focus on that.~ EXTERN AC#PPCAA 01.06
 IF~~THEN REPLY ~Look, madam, I’m just delivering a message. He’s safe. You’ll see him again, I’m sure. That’s all you need to know.~ EXTERN AC#PPCAA 01.03
 
 CHAIN AC#PPCAA 01.06
-~Very well… Tell him… tell him that next time, he ought to bring me the flowers himself. Hmph. That impudent, stupid, beloved boy!~
-DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",3) EscapeArea()~ EXIT
+~Very well. Tell him… tell him that next time, he ought to bring me the flowers himself. Hmph. That impudent, stupid, beloved boy!~
+DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",3) AddJournalEntry(@13121,QUEST) EscapeArea()~ EXIT
 
 CHAIN AC#PPCAA 01.03
 ~Hmph! Then begone, meddler, and take your leave from my sight!~
-DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",2) EscapeArea()~ EXIT
-
-/*
-CHAIN IF ~Global("AC#PPFlowerDelivery","GLOBAL",1)~ THEN AC#PPCAA 01.00
-~Who are you? I'm not in the mood for talks with some vagabonds. Leave me be.~
-END
-IF~PartyHasItem("AC#PPFLW")~THEN REPLY ~I think it's you I've been looking for. I talked to your nephew. He run away from you, because he wants to learn what it means to be alive and to make decisions. But he wants you to know that he's fine and he wanted me to give you that flower.~ DO ~TakePartyItem("AC#PPFLW") DestroyItem("AC#PPFLW")~ EXTERN AC#PPCAA 01.01
-IF~~THEN REPLY ~Right. I guess I just won't trouble you then.~ EXIT 
-
-CHAIN AC#PPCAA 01.01
-~What?! He's alive and—I thought he's dead! Like his damn parents! How could he do something like that to me?! That... ungrateful brat!~
-==AC#PPCAA ~I took care of him, gave him everything I could, protected him from everyone!~
-END
-IF~~THEN REPLY ~I see. Well, that may be part of the problem.~ EXTERN AC#PPCAA 01.02
-IF~~THEN REPLY ~Look, lady, I'm just delivering a message. He's fine, and the two of you will probably meet again once. That's all you need to know. Bye.~ EXTERN AC#PPCAA 01.03
-
-CHAIN AC#PPCAA 01.02
-~Excuse me?!~
-END
-IF~~THEN REPLY ~He wants to live. He wants to make decision. He wants to see how it feels. He understands you want what you think is best for him, but he wants to find what's best for him on his own.~ EXTERN AC#PPCAA 01.04
-IF~~THEN REPLY ~Look, lady, I'm just delivering a message. He's fine, and the two of you will probably meet again once. That's all you need to know. Bye.~ EXTERN AC#PPCAA 01.03
-
-CHAIN AC#PPCAA 01.04
-~And can't he dou that here? We've got everything we need in here. Just look at the architecture, and it's safe—well, safer than he will ever be—wherever he is.~
-END
-IF~~THEN REPLY ~He is fine. Just give him some time. Let him grow up. Break his leg. Learn new things.~ EXTERN AC#PPCAA 01.05
-IF~~THEN REPLY ~Look, lady, I'm just delivering a message. He's fine, and the two of you will probably meet again once. That's all you need to know. Bye.~ EXTERN AC#PPCAA 01.03
-
-CHAIN AC#PPCAA 01.05
-~I...~
-END
-IF~~THEN REPLY ~He's doing fine. Focus on that.~ EXTERN AC#PPCAA 01.06
-IF~~THEN REPLY ~Look, lady, I'm just delivering a message. He's fine, and the two of you will probably meet again once. That's all you need to know. Bye.~ EXTERN AC#PPCAA 01.03
-
-CHAIN AC#PPCAA 01.06
-~Fine. But tell him that... that next time he'd better just come on his own and give me some flowers! That... stupid... wonderful brat!~
-DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",3) EscapeArea()~ EXIT
-
-CHAIN AC#PPCAA 01.03
-~Humph! Just... just go already, will you?!~
-DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",2) EscapeArea()~ EXIT
-*/
+DO ~SetGlobal("AC#PPFlowerDelivery","GLOBAL",2) AddJournalEntry(@13123,QUEST) EscapeArea()~ EXIT
 
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////

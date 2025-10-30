@@ -9,6 +9,69 @@ THEN
 END
 
 IF
+    !AreaCheck("ACPP71")
+    !TimeOfDay(NIGHT)
+    Global("Blur","LOCALS",0)
+    HPPercentLT(Myself,50)
+    !GlobalTimerNotExpired("BD_Cast","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobal("Blur","LOCALS",1)
+        SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+        ForceSpell(Myself,WIZARD_BLUR)  // SPWI201.SPL (Blur)
+END
+
+IF
+    !AreaCheck("ACPP71")
+    !TimeOfDay(NIGHT)
+    See(NearestEnemyOf(Myself))
+    Global("Missile","LOCALS",0)
+    !GlobalTimerNotExpired("BD_Cast","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobal("Missile","LOCALS",1)
+        SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+        ForceSpellRES("AC#HEZP",Myself)  // Protection From Normal Missiles
+END
+
+IF
+    !AreaCheck("ACPP71")
+    !TimeOfDay(NIGHT)
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),12)
+    Global("Darkness","LOCALS",0)
+    !GlobalTimerNotExpired("BD_Cast","LOCALS")
+    !GlobalTimerNotExpired("Darkness","LOCALS")
+    !StateCheck(LastSeenBy(Myself),STATE_BLIND)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+        SetGlobalTimer("Darkness","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#GLDRK",NearestEnemyOf(Myself))  // Globe of Darkness
+        SetGlobal("Darkness","LOCALS",1)
+END
+
+IF
+    !AreaCheck("ACPP71")
+    !TimeOfDay(NIGHT)
+    See(NearestEnemyOf(Myself))
+    Global("Darkness","LOCALS",1)
+    !GlobalTimerNotExpired("BD_Cast","LOCALS")
+    !GlobalTimerNotExpired("Darkness","LOCALS")
+    !StateCheck(LastSeenBy(Myself),STATE_BLIND)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+        SetGlobalTimer("Darkness","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#GLDRK",NearestEnemyOf(Myself))  // Globe of Darkness
+        SetGlobal("Darkness","LOCALS",2)
+    RESPONSE #100
+        Continue()
+END
+
+IF
+    !AreaCheck("ACPP71")
+    !TimeOfDay(NIGHT)
     Global("Insects","LOCALS",0)
     OR(4)
         See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
@@ -21,6 +84,28 @@ THEN
         SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
         ForceSpellRES("AC#HEZI",LastSeenBy(Myself))  // Summon Insects
         SetGlobal("Insects","LOCALS",1)
+END
+
+IF
+    !AreaCheck("ACPP71")
+    !TimeOfDay(NIGHT)
+    !GlobalTimerNotExpired("BD_Cast","LOCALS")
+    DifficultyGT(EASY)
+    Global("Word","LOCALS",0)
+    OR(4)
+        Range([GOODCUTOFF.0.0.MAGE_ALL.0.0.MASK_GOOD],12)
+        Range([GOODCUTOFF.0.0.CLERIC_ALL.0.0.MASK_GOOD],12)
+        Range([GOODCUTOFF.0.0.DRUID_ALL.0.0.MASK_GOOD],12)
+        Range([GOODCUTOFF.0.0.BARD_ALL.0.0.MASK_GOOD],12)
+THEN
+    RESPONSE #100
+        SetInterrupt(FALSE)
+        SetGlobal("Word","LOCALS",1)
+        SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+        ForceSpell(Myself,CLERIC_UNHOLY_WORD)  // SPPR715.SPL (Unholy Word)
+        SetInterrupt(TRUE)
+    RESPONSE #100
+        Continue()
 END
 
 IF

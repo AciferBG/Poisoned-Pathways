@@ -65,6 +65,12 @@ CHAIN AC#PPTME 007
 ~Fair winds and fewer bandits to ya!~
 EXIT
 
+CHAIN IF ~AreaCheck("AC#W01")~ THEN AC#PPTME 00A
+~Well jiggle me jam jars—it’s you again! Debbie Gobblebubble, at your service, remember? You said Goldspires, so here I am! Care to browse my wares? Got new things since the woods!~
+END
+IF~~THEN REPLY ~Sure. Let's see what you have.~ DO ~StartStore("AC#PPTME",LastTalkedToBy())~ EXIT
+IF~~THEN REPLY ~Thanks, but I need to go.~ EXTERN AC#PPTME 007
+
 CHAIN IF ~AreaCheck("AR0700")~ THEN AC#PPTME 00A
 ~Well jiggle me jam jars—it’s you again! Debbie Gobblebubble, at your service, remember? You said Athkatla, so here I am! City’s a bit loud, but the snacks are divine. Care to browse my wares? Got new things since the woods!~
 END
@@ -142,7 +148,7 @@ IF ~~ THEN REPLY ~You will not harm these Orcs.~ EXTERN AC#PP971 orcs_not_fight_
 
 
 CHAIN IF ~~ THEN AC#PP971 orcs_not_fight_03
-~What? You're serious? I am Maddlethorpe Vemmil, son of Lord Pompabrace Vemmil of Esmeltaran!~
+~What? You're serious? I am Maddlethorpe Vemmil, son of Lord Pompabrace Vemmil of Amn!~
 == AC#PP972 ~And I am Wimpley Ulvax, member of the Ulvax family!~
 == AC#PP973 ~You'd best step aside, rabble, and leave this decision to the nobility.~
 == AC#PP971 ~Yep. Listen, smart-mouth: You take our fun from us, we’ll gladly gut a few more bodies instead.~

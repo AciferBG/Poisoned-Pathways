@@ -2,6 +2,19 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPDN2.itm~         ~override~    //  day-blade
+  SAY NAME1 @1230
+  SAY NAME2 @1234
+  SAY UNIDENTIFIED_DESC @1232
+  SAY DESC  @1236
+
+
+COPY ~%MOD_FOLDER%/itm/AC#PPDN1.itm~         ~override~    //  night-blade
+  SAY NAME1 @1230
+  SAY NAME2 @1233
+  SAY UNIDENTIFIED_DESC @1231
+  SAY DESC  @1235
+
 COPY ~%MOD_FOLDER%/itm/AC#PPDNB.itm~         ~override~    //  day/night-blade
   SAY NAME2 @1228
   SAY DESC  @1229

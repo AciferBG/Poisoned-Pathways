@@ -20,6 +20,7 @@ EXTEND_TOP ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_ar1000.baf~ // plot: Boy and the 
 EXTEND_TOP ~ar2000.bcs~ ~%MOD_FOLDER%/scripts/_ar2000.baf~ // Debbie in Trademeet
 EXTEND_TOP ~ar0700.bcs~ ~%MOD_FOLDER%/scripts/_ar0700.baf~ // Debbie in Athkatla
 EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334.baf~ // Cromwell
+EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_AR0334_blade.baf~ // Cromwell - daynight blade
 
 ACTION_IF FILE_EXISTS_IN_GAME ~AC#W01.BCS~ THEN BEGIN
 EXTEND_BOTTOM ~AC#W01.bcs~ ~%MOD_FOLDER%/scripts/_AC#W01.baf~ // crossmod: Debbie in Goldspires if "Call of the Lost Goddess" is installed
@@ -255,6 +256,44 @@ COPY_EXISTING ~BALDUR.BCS~ ~override~
     //  Patching druid stronghold stuff #2 in baldurs.bcs
     DECOMPILE_AND_PATCH BEGIN
         SPRINT textToReplace ~\(GlobalTimerExpired("DruidADReturn","GLOBAL")\)~
+        COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+        PATCH_IF (num_matches > 0) BEGIN
+            REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")
+            !AreaCheck("ACPP02")
+            !AreaCheck("ACPP03")
+            !AreaCheck("ACPP05")
+            !AreaCheck("ACPP06")
+            !AreaCheck("ACPP07")
+            !AreaCheck("ACPP08")
+            !AreaCheck("ACPP09")
+            !AreaCheck("ACPP10")
+            !AreaCheck("ACPP11")
+            !AreaCheck("ACPP13")
+            !AreaCheck("ACPP30")
+            !AreaCheck("ACPP70")
+            !AreaCheck("ACPP71")
+            !AreaCheck("ACPP72")
+            !AreaCheck("ACPP73")
+            !AreaCheck("ACPP74")
+            !AreaCheck("ACPP75")
+            !AreaCheck("ACPP76")
+            !AreaCheck("ACPP77")
+            !AreaCheck("ACPP78")
+            !AreaCheck("ACPP79")
+            !AreaCheck("ACPP80")
+            !AreaCheck("ACPP98")
+            !AreaCheck("ACPP99")\1~
+            PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+        END ELSE BEGIN
+            PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+        END
+    END
+BUT_ONLY
+
+// Patching Jan's script to prevent Beeloo Jansen showing up
+COPY_EXISTING ~JAN.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        SPRINT textToReplace ~\(Global("JanLissaPlot","GLOBAL",0)\)~
         COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
         PATCH_IF (num_matches > 0) BEGIN
             REPLACE_TEXTUALLY ~%textToReplace%~ ~!AreaCheck("ACPP01")

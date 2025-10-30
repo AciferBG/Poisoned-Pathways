@@ -25,6 +25,7 @@ END
 
 IF
     Dead("AC#PPTAL")  // Poison Incarnation
+    CombatCounter(0)
     Global("AC#PP_PoisonSummoned","GLOBAL",1)
 THEN
     RESPONSE #100

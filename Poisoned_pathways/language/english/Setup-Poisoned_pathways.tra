@@ -19,7 +19,7 @@
 @26 = ~Brother Edrim~
 @27 = ~Montrassa~
 @28 = ~Poison Manifestation~
-@29 = ~Char~
+@29 = ~Larrin~
 @30 = ~Aunt Pesca~
 @31 = ~Brother Calmfire~
 @32 = ~Blightspawn Ankheg~
@@ -1471,7 +1471,13 @@ Requires:
  11 Strength
 
 Weight: 7~
-
+@1230 = ~Part of a Blade~
+@1231 = ~This is part of a blade. The metal shimmers with a bluish hue, flecked with tiny motes that gleam like stars in the night sky. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+@1232 = ~This is part of a blade. The metal gleams with a radiant golden light, bright as the rays of the sun. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+@1233 = ~Nightblade~
+@1234 = ~Dayblade~
+@1235 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Nightblade. The metal shimmers with a bluish hue, flecked with tiny motes that gleam like stars in the night sky. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+@1236 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Dayblade. The metal gleams with a radiant golden light, bright as the rays of the sun. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
 // script strings
 @2000 = ~Duskwood Dell~
 @2001 = ~Eldath, goddess of peace and calm waters~

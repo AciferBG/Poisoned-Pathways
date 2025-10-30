@@ -1,0 +1,16 @@
+IF
+  Global("AC#PPForgeDayNight","GLOBAL",1) // player decided to craft item
+  Global("ForgeStuff","GLOBAL",1) // crafting cutscene has completed
+THEN
+  RESPONSE #100
+    SetGlobal("AC#PPForgeBuckler","GLOBAL",2)
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    TakePartyItemNum("AC#PPDN1",1) 
+    TakePartyItemNum("AC#PPDN2",1) 
+    DestroyItem("AC#PPDN1") 
+    DestroyItem("AC#PPDN2")
+    GiveItemCreate("AC#PPDNB",Player1,1,0,0) // give completed item
+    SetGlobal("ForgeItem","GLOBAL",1) // will trigger "done crafting" dialogue state 57 from Cromwell
+    ActionOverride("wsmith01",StartDialogueNoSet([PC])) // resume dialogue with Cromwell
+END
+

@@ -632,7 +632,6 @@ END
 IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Yes. Here it is—but it was no easy task.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~The antidote is made. May it spare many lives.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Here—freshly wrought, and hard-won.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
-IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~It is done, and no small thanks to your guidance. Here is the remedy.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~This little vial cost me blood, sweat, and more than a few corpses. Take it, before I change my mind.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~~ THEN REPLY ~Not yet.~ EXTERN AC#PPEL4 cnt.03.01
 IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem_05
@@ -662,7 +661,7 @@ CHAIN AC#PPEL4 cnt.03.02
 == AC#PPEL4 ~With this antidote, we shall answer whenever word reaches us of one stricken by a poison or ailment untouched by magic. Through it, lives will be spared, and suffering eased.~  
 == AC#PPEL4 ~For all you have done—for the people of Amn, and for Duskwood Dell—I offer my deepest thanks. And as I promised, I have something for you. May it aid you in the trials and journeys yet before you.~  
 == AC#PPEL4 ~And know this: Whenever you are in need of shelter or rest, Duskwood Dell shall welcome you with open arms, under the peace of Eldath’s embrace.~  
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",7) GiveItemCreate("AC#PPRE",Player1,1,0,0) AddXPObject(Player1,4200) AddXPObject(Player2,4200) AddXPObject(Player3,4200) AddXPObject(Player4,4200) AddXPObject(Player5,4200) AddXPObject(Player6,4200)
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",7) GiveItemCreate("AC#PPRE",Player1,1,1,1) AddXPObject(Player1,4200) AddXPObject(Player2,4200) AddXPObject(Player3,4200) AddXPObject(Player4,4200) AddXPObject(Player5,4200) AddXPObject(Player6,4200)
 AddJournalEntry(@12111,QUEST_DONE)~ EXIT
 
 

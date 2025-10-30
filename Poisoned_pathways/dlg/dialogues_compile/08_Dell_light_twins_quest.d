@@ -24,7 +24,7 @@ CHAIN IF ~Global("AC#PPFairyTwinsKidnapQuest","GLOBAL",8)~ THEN AC#PPFAE hello_f
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-And all that adventuring makes one terribly sleepy!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Yes, Lilafern. Let’s rest — but not before we thank our rescuer properly.~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-A hundred blessings and a hundred sparkles upon you, <CHARNAME>! We’d have kissed your feet if they weren’t so terribly smelly.~
-== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Thank you, <CHARNAME> — truly. You’ve given us back the wind, the light, and the laughter. We’ll never forget the sound of your voice breaking that dreadful silence.~
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Thank you, <CHARNAME> — truly. You’ve given us back the light, the laughter, and the lovely little chaos we missed. We’ll never forget how you made the world noisy again.~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Wait! We can’t just let <PRO_HIMHER> go without a wish! That would be... ungrateful, or possibly unlucky — or both!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Exactly right, Lilafern! A small gift, a little sparkle to keep the dark away. What will you have, <CHARNAME>?~
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-So! One wish, <CHARNAME>. Only one — we’re not genies, you know? You can pick your sparkle: Resistance to poisons, shields against spells, a shimmer of luck against hostile wands, a charm against awkward transformations, or maybe... a little fortitude against very bad dragon breath? Choose wisely, <CHARNAME> — even tiny wishes have echoes.~  
@@ -311,7 +311,7 @@ CHAIN AC#PPFAE Riddle_No_riddle_left
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Ugh, fine. We give up.~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Yes! The clever <PRO_RACE> wins!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Let’s sprinkle <PRO_HIMHER> with sparks. Or maybe fairy dust.~  
-DO ~SetGlobal("AC#PP_RiddleWon","GLOBAL",4) ReallyForceSpell(Myself,FLASHY_2) RunAwayFrom(LastTalkedToBy(Myself),30)~  
+DO ~SetGlobal("AC#PP_RiddleWon","GLOBAL",4) ReallyForceSpell(Myself,FLASHY_2)~  
 EXIT
 
 	
@@ -329,8 +329,7 @@ EXIT
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-It needs help! Urgent sparkle intervention!~  
 	== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Come, Tippledew — initiate sparkle retreat protocol!~  
 	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Careful, wanderer… if we stop sparkling near your face, who will keep your bad dreams away?~  
-		DO ~ReallyForceSpell(Myself,FLASHY_2)
-	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
+		DO ~~ EXIT
 
 	CHAIN AC#PPFAE Dusklight_Wish
 	~^0xFF9ADCE3Tippledew: ^-A wish?! Did you hear that, Lilafern? A *wish*!~
@@ -355,8 +354,7 @@ EXIT
 	CHAIN AC#PPFAE Dusklight_Pass
 	~^0xFFE3B0FF Lilafern: ^-Fine, pass. Tread softly, tall one — the grass remembers footsteps.~   
 	== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Come back when you’re not in such a hurry. We like conversations that wander in circles.~  
-	DO ~ReallyForceSpell(Myself,FLASHY_1)
-	RunAwayFrom(LastTalkedToBy(Myself),30)~ EXIT
+	DO ~~ EXIT
 	
 	
 // Zar’khaan – the Rakshasa disguised as a merchant
