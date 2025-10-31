@@ -515,10 +515,31 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWXD.bam~ ~override~ // Will-o-wi
  END
  END
  
-   COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPSDI.bam~ ~override~ // spring water desc bam
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPSDI.bam~ ~override~ // spring water desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1045.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPFDW.bam~ ~override~ // redhive pecca flower desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1046.pvrz~
+ END
+ END
+ 
+  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPKSD.bam~ ~override~ // redhive pecca flower desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1047.pvrz~
+ END
+ END
+ 
+   COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPDND.bam~ ~override~ // redhive pecca flower desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1048.pvrz~
  END
  END
 ///////////////////////////////////////////////////////////////////////

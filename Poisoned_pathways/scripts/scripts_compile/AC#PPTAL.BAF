@@ -8,9 +8,11 @@ THEN
 END
 
 IF
+    OR(2)
+        Difficulty(HARDEST)
+        LevelPartyGT(14)
     See(NearestEnemyOf(Myself))
     HPPercentLT(Myself,50)
-    DifficultyGT(EASY)
     Global("Summon_Chasme","LOCALS",0)
 THEN
     RESPONSE #100
@@ -22,6 +24,33 @@ THEN
 END
 
 IF
+    OR(2)
+        LevelPartyGT(12)
+        DifficultyGT(NORMAL)
+    See(NearestEnemyOf(Myself))
+    HPPercentLT(Myself,50)
+    Global("Summon_Chasme","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("Summon_Chasme","LOCALS",1)
+        CreateCreatureEffect("AC#PPCHS","SPSPEV",[693.400],S)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","SPSPEV",[854.754],NNW)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","SPSPEV",[1036.540],SW)  // Chasme
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HPPercentLT(Myself,50)
+    DifficultyGT(EASY)
+    Global("Summon_Chasme","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobal("Summon_Chasme","LOCALS",1)
+        CreateCreatureEffect("AC#PPCHS","SPSPEV",[693.400],S)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","SPSPEV",[854.754],NNW)  // Chasme
+END
+
+IF
     See(NearestEnemyOf(Myself))
     HPPercentLT(Myself,50)
     DifficultyGT(EASIEST)
@@ -30,6 +59,5 @@ THEN
     RESPONSE #100
         SetGlobal("Summon_Chasme","LOCALS",1)
         CreateCreatureEffect("AC#PPCHS","SPSPEV",[693.400],S)  // Chasme
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[854.754],NNW)  // Chasme
 END
 

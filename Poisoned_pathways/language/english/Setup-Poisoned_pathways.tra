@@ -355,12 +355,12 @@ STATISTICS:
 
 Charge abilities:
 – May cast Slow Poison once per day (on self)
-– May cast Zone of Sweet Air once per day (on self)
 
 Equipped abilities:
 – Armor Class: +2
 – Saving Throws: +2
 – Move Silently: +10%
+– 5% chance to cast Sanctuary when the cloak’s wearer is hit in combat.
 – When animals are within 10 feet:
  - Additional +1 to AC
  - Additional +1 to Saving Throws
@@ -368,10 +368,9 @@ Equipped abilities:
 
 Weight: 3~
 @1050 = ~Redhive Flower~
-@1051 = ~This beautiful and sweet-smelling flower is a gift from a boy that lives in Darkwood Dell for his Aunt from Athkatla's Goverment District. He asked you to delived this flower and a message that he's fine and he needs some space.
-  
-STATISTICS: 
+@1051 = ~This beautiful, sweet-scented flower is a gift from a boy living in Duskwood Dell to his aunt in Athkatla’s Government District. He asks you to deliver the flower along with a message: That he is safe, and simply needs some time apart.
 
+STATISTICS:
 Weight: 1~
 @1052 = ~Earthworm~
 @1053 = ~This earthworm smells of wet ground and... pumpkins. It looks very pink and it acts quite lively. Apart from that, there is nothing unusual about it.
@@ -1457,7 +1456,7 @@ Charge abilities:
   Area of Effect: self
 
 Weight: 1~
-@1228 = ~Day- and Nightblade~
+@1228 = ~Blade of Day and Night~
 @1229 = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. This is a magical bastard sword.
 
 STATISTICS:
@@ -1497,7 +1496,7 @@ Weight: 7~
 @2015 = ~This statue portrays Mythrien Sarath, a nearly forgotten god once revered for his guardianship over Mythals.~
 @2016 = ~You recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
 @2017 = ~I AM THE POISON AND I SHALL DEVOUR YOU!~
-@2018 = ~(You can hear some sound coming from the cauldron. It looks like with the death of the creature an antidote was created.)~
+@2018 = ~You hear some sound coming from the cauldron. It looks like with the death of the creature an antidote was created.~
 @2019 = ~Rose... it must be safe!~
 @2020 = ~Take it to Mythrien! Place it under his feet and reach for his helping hand!~
 @2021 = ~When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.~  
