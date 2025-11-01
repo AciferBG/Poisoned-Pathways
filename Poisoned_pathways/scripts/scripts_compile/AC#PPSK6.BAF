@@ -1,5 +1,4 @@
 IF
-    See("AC#PPMI7")  // Mismal Al'Visalle
     Global("FaceChief","LOCALS",0)
 THEN
     RESPONSE #100

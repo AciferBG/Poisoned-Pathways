@@ -1,6 +1,5 @@
 IF
     See([PC])
-    GlobalGT("ElhanFinishedSpeaking","GLOBAL",0)
     Global("AC#PP_NewProblemsUnnohyr","GLOBAL",0)
 THEN
     RESPONSE #100

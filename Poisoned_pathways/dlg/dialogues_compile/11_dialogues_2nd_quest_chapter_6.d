@@ -1,73 +1,43 @@
-// Messenger in Elhan'S area
 
 BEGIN AC#PPC6E
 
-// Priest of Eldath – first contact in AR2500
-
+// Messenger from Duskwood Dell
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPC6E hello_01
-~<CHARNAME>! Yes, it must be you!~
+~<CHARNAME>! You are here!~
 == AC#PPC6E ~I am a faithful servant of Eldath, bringing important news from Duskwood Dell.~    
 END
 IF ~~ THEN EXTERN AC#PPC6E seek_charname_02
 
 CHAIN AC#PPC6E seek_charname_02
-~We had been searching for you, but it was as if you had vanished from the face of Faerûn!~    
+~We’ve been searching for you, but it was as if you had vanished from the face of Faerûn!~    
 END
-
 IF ~~ THEN REPLY ~In a manner of speaking, I suppose I did.~ EXTERN AC#PPC6E seek_charname_03
 IF ~~ THEN REPLY ~You were looking for me? That usually means trouble.~ EXTERN AC#PPC6E seek_charname_03
 IF ~~ THEN REPLY ~And yet, here I stand.~ EXTERN AC#PPC6E seek_charname_03
 
-
 CHAIN AC#PPC6E seek_charname_03
-~I travelled into the Forest of Tethir to ask the elves of Suldanessellar for aid, but they seem... preoccupied with other matters at the moment.~    
+~There are problems. We have asked many others for aid, but it has been difficult. I even travelled into the Forest of Tethir to seek help from the elves, but they seem preoccupied with other matters these days. So I turn to you.~    
 END
-IF ~~ THEN REPLY ~That’s putting it mildly.~ EXTERN AC#PPC6E problems_unnohyr
-IF ~~ THEN REPLY ~I’ve seen what they’re facing. No wonder they have no time for others.~ EXTERN AC#PPC6E problems_unnohyr
-IF ~~ THEN REPLY ~Then you’ve heard of the chaos there. But what troubles you?~ EXTERN AC#PPC6E problems_unnohyr
-
+IF ~~ THEN REPLY ~What kind of problems?~ EXTERN AC#PPC6E problems_unnohyr
 
 CHAIN AC#PPC6E problems_unnohyr
-~There are… problems in Myth Unnohyr. I cannot tell you more, but I beg you to make your way to Duskwood Dell. Most Exalted Fallskeeper Alatoasz Berendim will surely explain everything.~    
+~New troubles have arisen in Myth Unnohyr. I cannot tell you more, but I beg you to make your way to Duskwood Dell. Most Exalted Fallskeeper Alatoasz Berendim will explain everything.~    
 END
-IF ~~ THEN REPLY ~Ah yes, how I missed that name.~ EXTERN AC#PPC6E seek_charname_bye
-IF ~~ THEN REPLY ~Of course. I’ll make a visit when I can.~ EXTERN AC#PPC6E seek_charname_bye
-IF ~~ THEN REPLY ~I have quite a few other problems right now.~ EXTERN AC#PPC6E another_problems
+IF ~~ THEN REPLY ~Ah, how I missed that name.~ EXTERN AC#PPC6E seek_charname_bye
+IF ~~ THEN REPLY ~Of course. I’ll visit when I can.~ EXTERN AC#PPC6E seek_charname_bye
+IF ~~ THEN REPLY ~I’ve quite a few other problems at the moment.~ EXTERN AC#PPC6E another_problems
 
 CHAIN AC#PPC6E another_problems
-~You needn’t leave at once. It’s not that urgent—yet. But at least stop by the Dell and hear what the Fallskeeper has to say.~    
+~You needn’t leave at once. It isn’t that urgent—at least, not yet. But do stop by the Dell when you can and hear what the Fallskeeper has to say.~    
 END
 IF ~~ THEN EXTERN AC#PPC6E seek_charname_bye
 
 CHAIN AC#PPC6E seek_charname_bye
-~You remember the way to Duskwood Dell, I trust. I thank Eldath that I’ve finally found you!~    
+~You remember the way to Duskwood Dell, I trust. May Eldath bless this meeting—at last I have found you!~    
 DO ~SetGlobal("AC#PP_NewProblemsUnnohyr","GLOBAL",1)
 AddJournalEntry(@12200,QUEST)
 EscapeArea()~ EXIT
 
-
-
-// ELHAN extension
-
-EXTEND_BOTTOM ~c6elhan2~ 47
-IF ~Global("AC#PP_MythUnnohyr","GLOBAL",7)~ THEN REPLY
-~I aided Eldath’s faithful in Duskwood Dell against a great evil in Myth Unnohyr. Perhaps they will aid us now, if they learn we face vampires threatening the elves of Tethir.~ 
-EXTERN c6elhan2 elhan_myth_unnohyr 
-END
-
-CHAIN c6elhan2 elhan_myth_unnohyr
-~That was you? I have already heard that someone freed our ancient ancestral site from great corruption. In fact, a priest from Duskwood Dell told me of it only recently.~  
-END
-IF ~~ THEN EXTERN c6elhan2 AC#PP.ELHAN
-
-CHAIN c6elhan2 AC#PP.ELHAN
-~It seems, however, that the Eldathyn have troubles of their own—they wished to ask for our help in cleansing something within Myth Unnohyr. Needless to say, we have no time for that now. The priest should still be somewhere nearby; perhaps it would do no harm to speak with him.~  
-  
-END
-IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~Can you help with special supplies? Holy water and stakes come to mind.~ DO ~AddJournalEntry(57714,INFO) EraseJournalEntry(97341) EraseJournalEntry(97340) AddJournalEntry(97342,QUEST) SetGlobal("ElhanWater","LOCALS",1) SetGlobal("AskedElhanForHolyWater","GLOBAL",1)~ EXTERN c6elhan2 48
-IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~I will do what I can, though Bodhi is very strong. Have you holy water and stakes?~ DO ~AddJournalEntry(57714,INFO) EraseJournalEntry(97341) EraseJournalEntry(97340) AddJournalEntry(97342,QUEST) SetGlobal("ElhanWater","LOCALS",1) SetGlobal("ToldElhanAboutBodhi","GLOBAL",1) SetGlobal("AskedElhanForHolyWater","GLOBAL",1)~ EXTERN c6elhan2 48
-IF~Global("ElhanShame","LOCALS",0)~THEN REPLY ~I will get by without your help, then.~ DO ~SetGlobal("ElhanWater","LOCALS",1)~ EXTERN c6elhan2 51
-IF~Global("ElhanWater","LOCALS",0)~THEN REPLY ~You mentioned some shame before. What shame has Irenicus caused you?~ DO ~SetGlobal("ElhanShame","LOCALS",1)~ EXTERN c6elhan2 50
 
 //DUSKWOOD DELL CH6 -- FIRST TALK
 
@@ -96,22 +66,16 @@ IF ~~ THEN REPLY ~That is no longer my concern.~ EXTERN AC#PPMI C6.QUEST.01.04a
 IF ~~ THEN REPLY ~I had hoped that ordeal was finished. Why, in all the gods’ names, does everyone always want something else from me?~ EXTERN AC#PPMI C6.QUEST.01.04a
 
 CHAIN AC#PPMI C6.QUEST.01.04a
-~The events at Myth Unnohyr roused something ancient.~  
-== AC#PPMI ~It feels as though the land itself is being consumed—trees, ponds, every quiet glade, all drawn into its hunger. Strange beings, remnants of the elven kin, now roam that place. From what I have gathered, the power reeks of elven undeath.~  
+~The events at Myth Unnohyr roused something ancient. Strange beings, remnants of the elven kin, now roam that place. From what I have gathered, the power reeks of elven undeath.~  
 END
-IF ~Global("BodhiDead","GLOBAL",0)~ THEN REPLY ~Truth be told, I need help with another monster: a vampire named Bodhi. She and her brother, Irenicus, must be stopped.~ EXTERN AC#PPMI bodhi_irenicus_mention
-IF ~Global("BodhiDead","GLOBAL",1)~ THEN REPLY ~I have already slain one such monster: the vampire Bodhi. Her brother, Irenicus, shall follow.~ EXTERN AC#PPMI bodhi_irenicus_mention
 IF ~~ THEN REPLY ~What kind of undeath are we speaking of, exactly?~ EXTERN AC#PPMI about_wyrd
 IF ~~ THEN REPLY ~Whatever it is, it should stay there.~ EXTERN AC#PPMI about_wyrd
 
-CHAIN AC#PPMI bodhi_irenicus_mention
-~Bodhi? Irenicus? Aye, I know those names. I have walked in Suldanessellar and spoken with Elhan. And now that you name them—I suspect you know him as well. Perhaps we may aid each other. We can give you something that will help against this creature.~  
-END
-IF ~~ THEN EXTERN AC#PPMI about_wyrd
-
+// About the Wyrd
 CHAIN AC#PPMI about_wyrd
-~We suspect a mighty Wyrd, a spirit that seizes the husks of dead elves, has possessed the corpse of Commander Elv-Esster Aened, once leader of Myth Unnohyr’s guard. She was interred within a sealed sarcophagus. But someone removed the wardstone, and the Wyrd slipped within to claim her body.~ 
+~We believe that an ancient evil—the very one that brought about Myth Unnohyr’s downfall—has begun to stir once more. A creature that seizes the husks of dead elves has crept into the long-sealed sarcophagi. Someone must have removed the wardstones, allowing the being to slip within and claim their bodies.~
 END
+
 IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",0)
 Global("AC#PP_RemovedWardstone","GLOBAL",1)~ THEN REPLY ~That may well have been me.~ EXTERN AC#PPMI wyrd_player_guilty
 IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN REPLY ~How could such a thing happen?~ EXTERN AC#PPEL4 wyrd_guilt_not_important
@@ -135,15 +99,16 @@ IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN REPLY ~How could something s
 	IF ~~ THEN EXTERN AC#PPMI wyrd_cont
 
 
-CHAIN AC#PPMI wyrd_cont 
-~This creature feeds on the rotting magic of this place to raise further undead. It will not be long before these beings spill into the surrounding lands. We must put an end to that threat by killing the creature.~  
+// Continuing about the Wyrd
+CHAIN AC#PPMI wyrd_cont
+~This ancient evil feeds upon the rotting magic that lingers in these ruins, using it to raise more of the dead. It will not be long before such abominations spill into the surrounding lands. We must end this threat by destroying the creature.~
 END
-IF ~~ THEN REPLY ~By "we" I assume you mean me?~ EXTERN AC#PPMI C6.QUEST.01.04c
-IF ~~ THEN REPLY ~I will gladly help. Perhaps the trouble at Myth Unnohyr grew worse because of me.~ EXTERN AC#PPMI C6.QUEST.01.04c
-IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I will try to help.~ EXTERN AC#PPMI C6.QUEST.01.04c
-IF ~~ THEN REPLY ~Myth Unnohyr? Not ten rothé could drag me back there.~ EXTERN AC#PPMI C6.QUEST.01.04c
+IF ~~ THEN REPLY ~By "we" I assume you mean me?~ EXTERN AC#PPMI wyrd_wait_for_start
+IF ~~ THEN REPLY ~I will gladly help. Perhaps the trouble at Myth Unnohyr grew worse because of me.~ EXTERN AC#PPMI wyrd_wait_for_start
+IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I will try to help.~ EXTERN AC#PPMI wyrd_wait_for_start
+IF ~~ THEN REPLY ~Myth Unnohyr? Not ten rothé could drag me back there.~ EXTERN AC#PPMI wyrd_wait_for_start
 
-
+/*
 CHAIN AC#PPMI C6.QUEST.01.04c
 ~You have fought similar foes before. Undead, I have heard—under their mistress Bodhi. You may face them again. And Duskwood Dell holds a weapon that could aid against such foes.~   
 == AC#PPEL4 ~You mean the Memory of the Myths, that fabled blade, Mismal?~  
@@ -188,53 +153,62 @@ IF ~~ THEN DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",1)~ EXTERN AC#PPMI wyrd_wait
 	== AC#PPMI ~When you are ready, go with Alatoasz’s blessing to the grotto where heroes once surrendered their weapons—and claim it.~    
 	END
 	IF ~~ THEN DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",1) SetGlobal("AC#PP_ReturnBlade","GLOBAL",1)~ EXTERN AC#PPMI wyrd_wait_for_start
+*/
 
+// Waiting for the player to begin the Wyrd quest
 CHAIN AC#PPMI wyrd_wait_for_start
-~Myth Unnohyr now lies sealed by a barrier. I can guide you through the thickets to another entrance. Let me know when you are ready.~
-END  
-IF ~~ THEN REPLY ~Wyrd name, wyrd plan, wyrd ending.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
+~In a desperate act, we sealed the approaches to the old elven city. Myth Unnohyr now lies behind a barrier. I can lift the wards and grant us passage into the ruins. Together, we may yet put an end to this creature once and for all.~
+END
 IF ~~ THEN REPLY ~We have a deal.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
-IF ~~ THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
-IF ~~ THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait, so I must leave.~ EXTERN AC#PPMI C6.QUEST.01.07
+IF ~~ THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.07
+IF ~~ THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait.~ EXTERN AC#PPMI C6.QUEST.01.07
 
 CHAIN AC#PPMI wyrd_wait_for_start_bye
-~We shall wait for you here.~  
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)
+~Excellent! I will set out for Myth Unnohyr at once and scout the area ahead. Meet me before the gates—once you arrive, I shall lift the barrier, and together we will enter the city.~
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",10)
+SetGlobal("AC#PPChapter6Quest","GLOBAL",1)
 AddJournalEntry(@12202,QUEST)~ EXIT
+
 
 CHAIN AC#PPMI C6.QUEST.01.07
 ~If you change your mind, come to me and let me know. We truly need your aid.~  
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",9)
-AddJournalEntry(@12202,QUEST)~ EXIT
+DO ~~ EXIT
 
 
-//DUSKWOOD DELL CH6 -- 2ND TALK (CLERIC)
+// Duskwood Dell CH6 -- 2nd Talk (Cleric)
 
-CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",9)~ THEN AC#PPEL4 c6.2nd.c.00
-~I know it may seem strange for someone like you that I am not very optimistic about any of this, but I've seen enough suffering. I will do what I must, but I won't rise my hand. I hope you understand.~
+CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",10)~ THEN AC#PPEL4 c6.2nd.c.00
+~Good fortune out there, <CHARNAME>.~
 END
-IF~~THEN REPLY ~I do.~ EXTERN AC#PPEL4 c6.2nd.c.00_bye
-IF~~THEN REPLY ~I will never understand how you can allow such battles happen while you're here. Goodbye.~ EXTERN AC#PPEL4 c6.2nd.c.00_bye
+IF ~~ THEN REPLY ~Thank you.~ EXTERN AC#PPEL4 c6.2nd.c.00_bye
 
 CHAIN AC#PPEL4 c6.2nd.c.00_bye
-~Farewell, <CHARNAME>.~
+~Farewell.~
 EXIT
 
 
+
 //HIGH RANGER
-
+CHAIN IF ~True()~ THEN AC#PPMI C6.QUEST.02.00
+~Are you prepared to face the danger in Myth Unnohyr once more?~
+END
+IF ~~ THEN REPLY ~I am.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
+IF ~~ THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.07 
+/*
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",9)~ THEN AC#PPMI C6.QUEST.02.00
-~Are you prepared to face the Wyrd?~
+~Are you prepared to face the danger in Myth Unnohyr once more?~
 END 
-IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ EXTERN AC#PPMI depart_with_sword
+//IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ EXTERN AC#PPMI depart_with_sword
 IF ~Global("AC#PP_GiveBlade","GLOBAL",0)~ EXTERN AC#PPMI depart_without_sword
-
+*/
+/*
 CHAIN IF ~~ THEN AC#PPMI depart_with_sword
 ~If you have taken up the sword entrusted to you by the High Priest, then I can send you into Myth Unnohyr.~  
 END
 IF ~~ THEN REPLY ~I am ready.~ EXTERN AC#PPMI C6.QUEST.02.01
 IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXTERN AC#PPMI C6.QUEST.02.01_bye
-
+*/
+/*
 CHAIN IF ~~ THEN AC#PPMI depart_without_sword
 ~I shall send you into Myth Unnohyr if you are ready.~  
 END
@@ -248,15 +222,16 @@ EXIT
 CHAIN AC#PPMI C6.QUEST.02.01
 ~Good. Follow me.~
 DO ~StartCutScene("AC#PP6CA")~ EXIT
+*/
 
 // High Ranger in Myth Unnohyr
 BEGIN AC#PPMI6
+// Entering Myth Unnohyr again
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPMI6 hello_01
-~We're in Myth Unnohyr again! The path behind us is sealed by a wall of tangled growth. Our only escape lies ahead, through the heart of the shattered city.~
-= ~Something unsettling stirs in the north. To reach it, we must pass through the sanctuary once claimed by the priest of Talona.~
-= ~We’ll split up. I’ll scout ahead and survey the area. Let’s meet on the other side of the tower. Take care of yourselves!~
+~We're back in Myth Unnohyr! Let's make our way through the heart of the shattered city. Something stirs in the north—an unsettling presence near the old tomb of the elven commanders.~
+= ~I’ll lift the barrier now. We’ll meet inside the city!~
 DO ~AddJournalEntry(@12207,QUEST)
-EscapeArea()~ EXIT
+StartCutScene("AC#PP6CB")~ EXIT
 
 
 // Wyrd in banshee form
@@ -265,7 +240,7 @@ BEGIN AC#PPMI7
 BEGIN AC#PPWY7
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPEEA hello_0
-~I am Elv-Esster Aened. By death and duty, I claim this place. Turn back, for thou art no longer welcome here.~ //– or what remains. Another fool steps forth to join my army of the dead!~
+~I am Elv-Esster Aened, commander of the elven city. By death and duty, I claim this place. Turn back, for thou art no longer welcome here.~ //– or what remains. Another fool steps forth to join my army of the dead!~
 == AC#PPMI7 ~You are not Elv-Esster. She died with honor – you wear her face like a mask!~
 == AC#PPEEA ~I am more than Elv-Esster – I am what was born of her sacrifice. Her scream echoes within me.~
 == AC#PPMI7 ~No. You are the echo of failure. You feed on sorrow and broken vows. I will see you silenced.~
@@ -277,7 +252,7 @@ StartCutScene("AC#PP6CR")
 ~ EXIT
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWY7 hello_0
-~Another fool come to join my army of the dead! But who are you?~
+~Another fool come to join my army of the dead! Who are you?~
 == AC#PPWY7 IF ~Global("AC#PP_RemovedWardstone","GLOBAL",1)
 Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN ~Oh, I remember you! You were so kind to remove the wardstone for me.~
 == AC#PPWY7 IF ~Global("AC#PP_RemovedWardstone","GLOBAL",0)
@@ -286,6 +261,20 @@ Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN ~Oh, I remember you! You struck 
 DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",2)
 AddJournalEntry(@12208,QUEST)
 CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
+
+//wyrd again in front of tomb
+BEGIN AC#PPWY8
+
+// Confrontation at the tomb entrance
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWY8 hello_0
+~You're still here!~
+END
+IF ~~ THEN REPLY ~I'll leave when you're gone.~ EXTERN AC#PPWY8 wyrd_front_tomb_02
+IF ~~ THEN REPLY ~Don't think for a moment that I like being here.~ EXTERN AC#PPWY8 wyrd_front_tomb_02
+
+CHAIN AC#PPWY8 wyrd_front_tomb_02
+~Then enter my tomb, if you dare!~
+DO ~EscapeAreaObject("Tracpp77")~ EXIT
 
 
 BEGIN AC#PPWYR

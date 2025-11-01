@@ -1,0 +1,22 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("AC#PPMI6")  // Mismal Al'Visalle
+        StartCutSceneMode()
+        ClearAllActions()
+        Face(NE)
+        ForceSpell(Myself,DO_NOTHING)
+        Wait(1)
+        //FadeToColor([20.0],0)
+        OpenDoor("DOOR01")
+        AmbientActivate("Ac#ppblc",FALSE)
+        //FadeFromColor([20.0],0)
+        SmallWait(2)
+        SetGlobal("Gates_open_again","ACPP70",1)
+        DisplayStringHead(Myself,@2073)
+        MoveToPointNoInterrupt([1142.2182])
+        EndCutSceneMode()
+        DestroySelf()
+END
+

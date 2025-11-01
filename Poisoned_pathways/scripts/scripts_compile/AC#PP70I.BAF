@@ -1,6 +1,6 @@
 IF
     Clicked([ANYONE])
-    GlobalGT("AC#PP_CH6_ENEMIES","ACPP77",0)
+    GlobalGT("Ch6ChangeSpawns","ACPP70",0)
 THEN
     RESPONSE #100
         DisplayString(Myself,@2071)  // @2071 = ~From all you’ve learned, this statue appears to depict Commander Elv-Esster Aened, once the leader of Myth Unnohyr’s guard.~

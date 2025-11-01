@@ -44,6 +44,16 @@ THEN
 END
 
 IF
+    GlobalGT("AC#PP_NewProblemsUnnohyr","GLOBAL",0)
+    Global("CloseMainEntry","ACPP70",0)
+THEN
+    RESPONSE #100
+        CloseDoor("DOOR01")
+        AmbientActivate("Ac#ppblc",TRUE)
+        SetGlobal("CloseMainEntry","ACPP70",1)
+END
+
+IF
     Global("AmuletJournal01","ACPP70",0)
     PartyHasItem("AC#PPNT2")
 THEN
@@ -206,9 +216,10 @@ THEN
         SpawnPtDeactivate("Spawn_undead03")
         SpawnPtDeactivate("Spawn_undead04")
         TriggerActivation("Info_no_way_back",TRUE)
-        CreateCreature("AC#PPEEA",[3210.2140],NE)  // Elv-Esster Aened: Banshee (former elven warrior maiden)
-        CreateCreature("AC#PPMI6",[2647.2693],SSE)  // High Ranger: leading to Myth Unnohyr
-        CreateCreature("AC#PPMI7",[3272.2043],SW)  // High Ranger: wyrd confrontation
+        CreateCreature("AC#PPEEA",[1198.2107],SW)  // Elv-Esster Aened: Banshee (former elven warrior maiden)
+        CreateCreature("AC#PPMI6",[896.2571],NE)  // High Ranger: leading to Myth Unnohyr
+        CreateCreature("AC#PPMI7",[1142.2182],NE)  // High Ranger: wyrd confrontation
+        CreateCreature("AC#PPWY8",[3727.547],W)  // wyrd: in front of tomb
         SetGlobal("Ch6ChangeSpawns","ACPP70",1)
 END
 
@@ -216,24 +227,24 @@ IF
     Global("Ch6ChangeSpawns","ACPP70",1)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPSM2",[3173.2203],NNE)  // Skeleton Mage
-        CreateCreature("AC#PPSKF",[3072.2111],NE)  // Skeleton
-        CreateCreature("AC#PPSKF",[3293.2203],N)  // Skeleton
-        CreateCreature("AC#PPSKF",[3051.2067],NE)  // Skeleton
-        CreateCreature("AC#PPSKF",[3317.2209],N)  // Skeleton
-        CreateCreature("AC#PPSKA",[3072.2111],NE)  // Skeleton Archer
-        CreateCreature("AC#PPSKA",[3293.2203],N)  // Skeleton Archer
-        CreateCreature("AC#PPSKA",[3051.2067],NE)  // Skeleton Archer
-        CreateCreature("AC#PPSKA",[3317.2209],N)  // Skeleton Archer
-        CreateCreature("AC#PPSKK",[4124.1500],S)  // Skeleton
-        CreateCreature("AC#PPSKK",[4176.1469],S)  // Skeleton
-        CreateCreature("AC#PPSKK",[4081.1387],S)  // Skeleton
-        CreateCreature("AC#PPSKK",[4148.1379],S)  // Skeleton
-        CreateCreature("AC#PPSA2",[4118.1305],S)  // Skeleton Archer
-        CreateCreature("AC#PPSA2",[4176.1272],S)  // Skeleton Archer
-        CreateCreature("AC#PPSA2",[4224.1252],S)  // Skeleton Archer
-        CreateCreature("AC#PPSA2",[4056.1199],S)  // Skeleton Archer
-        CreateCreature("AC#PPSM2",[4176.1249],NNE)  // Skeleton Mage
+        CreateCreature("AC#PPSM2",[1191.1880],NNE)  // Skeleton Mage
+        CreateCreature("AC#PPSKF",[1134.1907],NE)  // Skeleton
+        CreateCreature("AC#PPSKF",[976.1966],N)  // Skeleton
+        CreateCreature("AC#PPSKF",[1262.1881],NE)  // Skeleton
+        CreateCreature("AC#PPSKF",[1374.1941],N)  // Skeleton
+        CreateCreature("AC#PPSKA",[1438.1991],NE)  // Skeleton Archer
+        CreateCreature("AC#PPSKA",[1158.1808],N)  // Skeleton Archer
+        CreateCreature("AC#PPSKA",[1278.1778],NE)  // Skeleton Archer
+        CreateCreature("AC#PPSKA",[1406.1790],N)  // Skeleton Archer
+        CreateCreature("AC#PPSKK",[940.1883],S)  // Skeleton
+        CreateCreature("AC#PPSKK",[1492.1793],S)  // Skeleton
+        CreateCreature("AC#PPSKK",[1422.1731],S)  // Skeleton
+        CreateCreature("AC#PPSKK",[1469.1772],S)  // Skeleton
+        CreateCreature("AC#PPSA2",[1228.1601],S)  // Skeleton Archer
+        CreateCreature("AC#PPSA2",[1288.1585],S)  // Skeleton Archer
+        CreateCreature("AC#PPSA2",[1378.1618],S)  // Skeleton Archer
+        CreateCreature("AC#PPSA2",[1426.1566],S)  // Skeleton Archer
+        CreateCreature("AC#PPSM2",[1318.1464],NNE)  // Skeleton Mage
         SetGlobal("Ch6ChangeSpawns","ACPP70",2)
 END
 
@@ -453,9 +464,6 @@ CreateCreature("AC#PPSPI",[2000.310],1)
 CreateCreature("AC#PPSPI",[2000.410],1)
 CreateCreature("AC#PPSPI",[3000.380],4)
 CreateCreature("AC#PPSPI",[3000.420],4)
-CreateCreature("AC#PPSPI",[1300.2020],8)
-CreateCreature("AC#PPSPI",[1320.2170],8)
-CreateCreature("AC#PPSPI",[1420.2120],8)
 SetGlobal("AC#PP_CH6_ENEMIES","ACPP70",1)
 END
 
@@ -483,6 +491,9 @@ CreateCreature("AC#PPSPI",[460.1650],14)
 CreateCreature("AC#PPSPI",[1050.550],14)
 CreateCreature("AC#PPSPI",[1050.650],14)
 CreateCreature("AC#PPSPI",[1300.1450],8)
+CreateCreature("AC#PPSPI",[1300.2020],8)
+CreateCreature("AC#PPSPI",[1320.2170],8)
+CreateCreature("AC#PPSPI",[1420.2120],8)
 SetGlobal("AC#PPCreateWeirdling","ACPP70",1)
 END
 

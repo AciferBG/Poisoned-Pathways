@@ -39,7 +39,7 @@ DO ~DestroyItem("MINHP1") SetGlobal("AC#PPTowerGuardian","GLOBAL",5) Enemy()~ EX
 BEGIN ~AC#PPTA2~
 
 CHAIN IF ~Global("FinalBossBreak","ACPP72",1)~ THEN AC#PPTA2 hello_break
-~You cannot defeat me! I have endured this far! I have merged light and pox! My power is far from spent; my life force awakens anew!~
+~You cannot defeat me! I have come too far! Talona, grant me your aid — let my lifeforce surge once more!~
 DO ~DestroyItem("minhp1")
 ApplySpell(Myself,RESTORE_FULL_HEALTH)
 SetGlobal("FinalBossBreak","ACPP72",2)

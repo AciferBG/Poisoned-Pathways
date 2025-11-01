@@ -136,6 +136,7 @@
 @915 = ~Shadow Veil~
 @916 = ~Maniacal Laughter~
 @917 = ~Globe of Darkness~
+@918 = ~Eldath grants you serenity in the presence of peaceful beasts.~
 
 @920 = ~^0xFF22B4E6has gained +1% resistance to slashing damage. ^-~
 @921 = ~^0xFF22B4E6has gained +1% resistance to missile damage. ^-~
@@ -1559,6 +1560,7 @@ Weight: 7~
 
 @2071 = ~From all you’ve learned, this statue appears to depict Commander Elv-Esster Aened, once the leader of Myth Unnohyr’s guard.~
 @2072 = ~The dead magic zone prevents the trap from triggering properly.~
+@2073 = ~Follow me.~
 
 // the two fairies
 @2100 = ~If you must sparkle, do it over there!~
