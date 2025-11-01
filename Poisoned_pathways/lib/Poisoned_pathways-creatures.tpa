@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPDBD.cre~ ~override~       // day skeleton
+
+COPY ~%MOD_FOLDER%/cre/AC#PPDBN.cre~ ~override~       // night skeleton
+
 COPY ~%MOD_FOLDER%/cre/AC#PPHEZ.cre~ ~override~       // Hezrou
 SAY NAME1 @73 SAY NAME2 @73
 WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~HEZROU_ACIFER~))

@@ -43,6 +43,32 @@ THEN
         SetGlobal("Will_O_Dead","ACPP70",1)
 END
 
+// Create the two sword part wielders
+IF
+    !InMyArea("AC#PPDBD")  // daytime blade wielder
+    !Dead("AC#PPDBD")  //  daytime blade wielder
+    OR(3)
+        TimeOfDay(DUSK)
+        TimeOfDay(DAY)
+        TimeOfDay(MORNING)
+    Global("Dayblade_wielder","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPDBD",[1716.261],S)  //  daytime blade wielder
+        SetGlobal("Dayblade_wielder","ACPP70",1)
+END
+
+IF
+    !InMyArea("AC#PPDBN")  // nighttime blade wielder
+    !Dead("AC#PPDBN")  // nighttime blade wielder
+    TimeOfDay(NIGHT)
+    Global("Nightblade_wielder","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPDBN",[1716.261],S)  //  nighttime blade wielder
+        SetGlobal("Nightblade_wielder","ACPP70",1)
+END
+
 IF
     GlobalGT("AC#PP_NewProblemsUnnohyr","GLOBAL",0)
     Global("CloseMainEntry","ACPP70",0)

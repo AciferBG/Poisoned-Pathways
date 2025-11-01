@@ -810,9 +810,8 @@ END
 BEGIN ~AC#PPMYS~
 
 IF ~True()~ THEN BEGIN 0
-  SAY ~*Cough, cough*! Pardon the haze! Too many wicks burning. Still... welcome! Looking for candles, plain or powerful?~ 
+  SAY ~*Cough, cough*! Pardon the haze! Too many wicks burning. Still... welcome! Want to buy something? *Cough*!~ 
   IF ~~ THEN REPLY ~What exactly do you offer?~ GOTO chain_about_shop
-  IF ~~ THEN REPLY ~Candles?~ GOTO 2
   IF ~~ THEN REPLY ~Not today. Perhaps another time.~ GOTO 1
   IF ~~ THEN REPLY ~Let me see what you have.~ DO ~StartStore("AC#PPMYS",LastTalkedToBy())~ EXIT
   IF ~~ THEN REPLY ~Aren’t you afraid all these candles might set the whole tree ablaze?~ GOTO fire_question
@@ -831,24 +830,16 @@ IF ~~ THEN BEGIN 1
   IF ~~ THEN EXIT
 END
 
-IF ~~ THEN BEGIN 2
-  SAY ~Candles, yes... poured with blessing and prayer. And sometimes with a touch of magic, if I’m honest.~ 
-  IF ~~ THEN REPLY ~Let me see what you have.~ GOTO shop
-  IF ~~ THEN REPLY ~I’ll pass, for now.~ GOTO 1
-END
-
 IF ~~ THEN BEGIN shop
-  SAY ~Here, here... *sniff*... some candles are for warmth, some for light, and a few... oh, they’re special. Careful with the drippings, though!~
+  SAY ~*Cough*...~
   IF ~~ THEN DO ~StartStore("AC#PPMYS",LastTalkedToBy())~ EXIT
 END
 
 
 CHAIN IF ~~ THEN AC#PPMYS chain_about_shop
-~I do have a few scrolls, but more important are the candles. Some simple, others woven with prayer. They can soothe the heart... sharpen the mind... or hold back creeping shadows.~ 
-==AC#PPMYS ~Some call it candle-magic. I... eh... call it just a quiet flame.~ 
-==AC#PPMYS ~And see here—this scroll explains how to pour a magical candle yourself. Not too hard, really, so long as you don’t forget the wick. Heh!~
+~I do have a few scrolls. *Cough*! Some simple, others woven with prayer.~ 
 END  
-  IF ~~ THEN REPLY ~All right, let me have a look. Words carry power... and so does flame.~ EXTERN AC#PPMYS shop
+  IF ~~ THEN REPLY ~All right, let me have a look.~ EXTERN AC#PPMYS shop
   IF ~~ THEN REPLY ~I’ll pass, for now.~ EXTERN AC#PPMYS 1
 
 // priest of Eldath, store in area ACPP02

@@ -1,0 +1,11 @@
+IF
+    OR(3)
+        TimeOfDay(DUSK)
+        TimeOfDay(DAY)
+        TimeOfDay(MORNING)
+THEN
+    RESPONSE #100
+        SetGlobal("Nightblade_wielder","ACPP70",0)
+        DestroySelf()
+END
+

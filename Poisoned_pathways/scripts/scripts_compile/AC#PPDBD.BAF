@@ -1,0 +1,8 @@
+IF
+    TimeOfDay(NIGHT)
+THEN
+    RESPONSE #100
+        SetGlobal("Dayblade_wielder","ACPP70",0)
+        DestroySelf()
+END
+

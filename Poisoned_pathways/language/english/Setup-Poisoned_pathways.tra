@@ -161,7 +161,7 @@
 
 //sto files
 @950 = ~Temple of Eldath~
-@951 = ~Calmfire's Creations~
+@951 = ~Calmfire's Scrolls~
 @952 = ~The Leaves' Embrace~
 @953 = ~Debbie's Undoubtful Weapons & Goods~
 @954 = ~Woodcarver~
@@ -497,7 +497,6 @@ Equipped abilities:
 – Charisma: –1
 – Acid Resistance: +10%
 – 25% chance that an attacker striking the wearer suffers 1d2 acid damage (Save vs. Death at –2 negates)
-– Can only be removed with a Remove Curse spell
 
 Weight: 1
 ~
@@ -1211,9 +1210,6 @@ Equipped abilities:
 – Regenerates 3 Hit Points per round while within a forest.
 – Protects against critical hits
 
-Charge abilities:
-– Cast protection from animals once per day: Casting this spell causes all non-magical mammals to disregard the wearer of the mask for one turn.
-
 Weight: 1~
 @1186 = ~Chestnut Bullet +2~
 @1187 = ~These magically hardened sling bullets are made from wild chestnuts—still bearing their natural spines. Originally enchanted by a halfling named Tipple Fernburrow to scare off a pack of hungry goblins, they’ve since found favor with pranksters and wanderers across the Western Heartlands. Despite their humble appearance, they strike with surprising force—and a sting you won’t soon forget.
@@ -1239,19 +1235,16 @@ Then... I shall have a body again. A perfect one. A vessel worthy of my hunger.~
 @1191 = ~Plaguestaff~
 @1192 = ~Carved from the heartwood of a long-dead tree, this staff radiates a faint odor of decay. It is said to have been gifted by Talona herself to a mortal champion whose very touch brought weakness and fever. The Plaguestaff does not strike to kill swiftly; it spreads languor, sickness, and inevitability—until the victim's strength falters entirely.
 
-To wield it is to channel the patient cruelty of disease, and the knowledge that all life withers in time.
-
 STATISTICS:
 
 Equipped abilities:
-– Immunity to disease
 – +2 bonus to Saving Throws vs. Death
 
 Combat abilities:
-– On Hit: 5% chance to inflict Withering Sickness – target must Save vs. Death or lose 1d2 Strength for 4 hours (stacking)
+– On Hit: 5% chance to inflict Withering Sickness – target must Save vs. Death or lose 2 Strength for 1 turn (stacking)
 
 Charge abilities:
-– Poison Strike (1/day): For the next 3 rounds, each hit poisons the target (2d6 damage per round for 3 rounds, Save vs. Death halves duration)
+– Poison Strike (1/day): Target suffers 1 poison damage per second for 6 seconds (Save vs. Death at +1 negates)
 
 THAC0: +3
 Damage: 1d6+3 (crushing)
@@ -1458,9 +1451,17 @@ Charge abilities:
 
 Weight: 1~
 @1228 = ~Blade of Day and Night~
-@1229 = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. This is a magical bastard sword.
+@1229 = ~Forged in the elder days of Myth Unnohyr, this elegant longsword was once a ceremonial weapon of the elven guardians who served the Watcher Over Mythals. Known as the Blade of Day and Night, it was said to embody the balance between vigilance and rest, between the radiance of the sun and the quiet strength of moonlight.
+
+Legends tell that the sword shattered when the city’s protective mythal began to wane, its twin halves cast apart by opposing forces of light and shadow. For centuries, elves spoke of the two fragments — the Dayblade and the Nightblade — resting in distant ruins, awaiting the one who could restore harmony between dawn and dusk.
+
+Now reforged, the sword shifts its nature with the turning of the heavens. In daylight it burns with quiet resolve, keen and strong. Under moon and stars, it softens its radiance, guarding the bearer with calm and patience.
 
 STATISTICS:
+
+Equipped abilities:
+– During day and dawn: +1 THAC0 and +1 Damage
+– During night and dusk: +1 AC and +1 to all Saving Throws
 
 THAC0: +3
 Damage: 2d4+3 (slashing)
