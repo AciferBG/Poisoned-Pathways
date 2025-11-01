@@ -2,6 +2,13 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPCOI.itm~         ~override~    //  old coin
+  SAY NAME2 @1238
+  SAY DESC  @1239
+
+COPY ~%MOD_FOLDER%/itm/AC#PP98N.itm~         ~override~    //  note corpse
+  SAY DESC  @1237
+
 COPY ~%MOD_FOLDER%/itm/AC#PPDN2.itm~         ~override~    //  day-blade
   SAY NAME1 @1230
   SAY NAME2 @1234

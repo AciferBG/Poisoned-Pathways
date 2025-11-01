@@ -1479,6 +1479,11 @@ Weight: 7~
 @1234 = ~Dayblade~
 @1235 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Nightblade. The metal shimmers with a bluish hue, flecked with tiny motes that gleam like stars in the night sky. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
 @1236 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Dayblade. The metal gleams with a radiant golden light, bright as the rays of the sun. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+
+@1237 = ~Marrik, 
+we’re behind the Temple of Helm in the Bridge District after dark, like every night. Bring the token, and you’ll get what you’ve been asking for.~
+@1238 = ~Old Coin~
+@1239 = ~This worn coin bears the faint image of an elderly man with a solemn expression. The details have long since faded — the nose smoothed by countless hands, the edges dulled by time. There are no markings of mint or value, and yet it feels heavier than it should, as if it remembers the years it has passed through. Whoever pressed it into shape is long gone, and whatever purpose it once held has long been forgotten.~
 // script strings
 @2000 = ~Duskwood Dell~
 @2001 = ~Eldath, goddess of peace and calm waters~
