@@ -1,6 +1,18 @@
 IF
     Contains("AC#PPPUB","Cauldron")  // Groveglove
     Contains("AC#PPWA","Cauldron")  // Singing Water of Eldath
+    Global("AC#PP_PoisonSummoned","GLOBAL",0)
+    GlobalLT("AC#PP_MythUnnohyr","GLOBAL",6)
+THEN
+    RESPONSE #100
+        DisplayString(Myself,@2074)
+END
+
+IF
+    Contains("AC#PPPUB","Cauldron")  // Groveglove
+    Contains("AC#PPWA","Cauldron")  // Singing Water of Eldath
+    Global("AC#PP_PoisonSummoned","GLOBAL",0)
+    GlobalGT("AC#PP_MythUnnohyr","GLOBAL",5)
 THEN
     RESPONSE #100
         ClearAllActions()

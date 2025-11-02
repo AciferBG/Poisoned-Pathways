@@ -8,6 +8,24 @@ THEN
 END
 
 IF
+    Global("Stronger","LOCALS",0)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",1)
+END
+
+IF
+    Global("Stronger","LOCALS",1)
+    LevelPartyGT(15)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",2)
+END
+
+IF
     OR(2)
         Difficulty(HARDEST)
         LevelPartyGT(14)

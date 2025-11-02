@@ -1,0 +1,14 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("AC#PPWY7")  // The Wyrd of Myth Unnohyr
+        StartCutSceneMode()
+        ClearAllActions()
+        ForceSpellRES("AC#PP18","AC#PPMI7")  // Animate Dead
+        CreateVisualEffectObject("SPFLESHS",Myself)
+        EndCutSceneMode()
+        Wait(1)
+        DestroySelf()
+END
+

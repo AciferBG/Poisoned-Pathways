@@ -1,9 +1,21 @@
+
 IF
    OnCreation()
 THEN
     RESPONSE #100
         ApplySpellRES("AC#PPRM",Player1)  // No such index
         Continue()
+END
+
+IF
+    GlobalGT("AC#PP_MythUnnohyr","GLOBAL",9)
+    Global("Ch6CreateEldathyns","ACPP75",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPELX",[334.309],S)  // Eldathyn
+        CreateCreature("AC#PPELY",[234.297],S)  // Eldathyn
+        CreateCreature("AC#PPELZ",[390.291],S)  // Eldathyn
+        SetGlobal("Ch6CreateEldathyns","ACPP75",1)
 END
 
 IF

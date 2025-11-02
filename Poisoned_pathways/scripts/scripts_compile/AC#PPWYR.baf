@@ -40,20 +40,18 @@ THEN
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",3)
     Global("AC#PP70FightSpells","LOCALS",0)
 THEN
     RESPONSE #100
-        ApplySpellRES("AC#PP43",Myself)  // Necrotic Shield
+        ApplySpellRES("AC#PP43",Myself)  // Death Shroud
         SetGlobal("AC#PP70FightSpells","LOCALS",1)
         SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",9)
         ForceSpell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)  // SPWI713.SPL (Finger of Death)
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",3)
     Global("AC#PP70FightSpells","LOCALS",1)
@@ -68,14 +66,13 @@ THEN
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",3)
     Global("AC#PP70FightSpells","LOCALS",2)
     GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
 THEN
     RESPONSE #100
-        ApplySpell(Myself,WIZARD_WYVERN_CALL)  // SPWI619.SPL (Wyvern Call)
+        ApplySpell(Myself,WIZARD_SPELL_TURNING)  // SPWI701.SPL (Spell Turning)
         SetGlobal("AC#PP70FightSpells","LOCALS",3)
         ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAIN_LIGHTNING)  // SPWI615.SPL (Chain Lightning)
 END
@@ -95,7 +92,6 @@ THEN
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",20)
     Global("AC#PP70FightSpells_F","LOCALS",0)
@@ -109,7 +105,6 @@ THEN
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",20)
     Global("AC#PP70FightSpells_F","LOCALS",1)
@@ -123,7 +118,6 @@ THEN
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",20)
     Global("AC#PP70FightSpells_F","LOCALS",2)
@@ -137,21 +131,19 @@ THEN
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",20)
     Global("AC#PP70FightSpells_F","LOCALS",3)
     GlobalTimerExpired("AC#PP70FightSpellsTime_F","LOCALS")
 THEN
     RESPONSE #100
-        ApplySpell(Myself,WIZARD_CARRION)  // SPWI623.SPL (Carrion Summons)
+        ApplySpell(Myself,WIZARD_CLOUDKILL)  // SPWI502.SPL (Cloudkill)
         SetGlobal("AC#PP70FightSpells_F","LOCALS",4)
         SetGlobalTimer("AC#PP70FightSpellsTime_F","LOCALS",9)
         ForceSpell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)  // SPWI713.SPL (Finger of Death)
 END
 
 IF
-    AreaCheck("ACPP77")
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",20)
     Global("AC#PP70FightSpells_F","LOCALS",4)

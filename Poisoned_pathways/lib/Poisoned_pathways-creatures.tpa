@@ -2,8 +2,38 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPELZ.cre~ ~override~       // Eldathyn in Myth Unnohyr
+SAY NAME1 @78 SAY NAME2 @78
+  SAY INITIAL_MEETING @307
+  SAY SELECT_COMMON1 @303
+  SAY SELECT_COMMON2 @301
+  SAY SELECT_COMMON3 @304
+  SAY SELECT_COMMON4 @305
+  SAY SELECT_COMMON5 @306
+  SAY SELECT_COMMON6 @307
+
+COPY ~%MOD_FOLDER%/cre/AC#PPELY.cre~ ~override~       // Eldathyn in Myth Unnohyr
+SAY NAME1 @77 SAY NAME2 @77
+  SAY INITIAL_MEETING @307
+  SAY SELECT_COMMON1 @303
+  SAY SELECT_COMMON2 @301
+  SAY SELECT_COMMON3 @304
+  SAY SELECT_COMMON4 @305
+  SAY SELECT_COMMON5 @306
+  SAY SELECT_COMMON6 @307
+
+COPY ~%MOD_FOLDER%/cre/AC#PPELX.cre~ ~override~       // Eldathyn in Myth Unnohyr
+SAY NAME1 @76 SAY NAME2 @76
+  SAY INITIAL_MEETING @307
+  SAY SELECT_COMMON1 @303
+  SAY SELECT_COMMON2 @301
+  SAY SELECT_COMMON3 @304
+  SAY SELECT_COMMON4 @305
+  SAY SELECT_COMMON5 @306
+  SAY SELECT_COMMON6 @307
+
 COPY ~%MOD_FOLDER%/cre/AC#PPMA4.cre~ ~override~       // man waiting behind the temple of ilmater in slums District
-SAY NAME1 @74 SAY NAME2 @74
+SAY NAME1 @75 SAY NAME2 @75
 
 COPY ~%MOD_FOLDER%/cre/AC#PPMA3.cre~ ~override~       // man waiting behind the temple of waukeen in gov District
 SAY NAME1 @74 SAY NAME2 @74
@@ -384,6 +414,9 @@ COPY ~%MOD_FOLDER%/cre/AC#PPANN.cre~ ~override~
   SAY NAME1 @44 SAY NAME2 @44
   
 COPY ~%MOD_FOLDER%/cre/AC#PPMI.cre~ ~override~
+  SAY NAME1 @45 SAY NAME2 @45
+
+COPY ~%MOD_FOLDER%/cre/AC#PPMI3.cre~ ~override~
   SAY NAME1 @45 SAY NAME2 @45
 
 COPY ~%MOD_FOLDER%/cre/AC#PPMI6.cre~ ~override~

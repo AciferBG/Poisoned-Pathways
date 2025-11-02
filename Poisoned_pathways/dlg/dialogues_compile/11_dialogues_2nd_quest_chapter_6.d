@@ -1,3 +1,70 @@
+// Eldathyns hiding in Myth Unnohyr
+
+BEGIN AC#PPELX
+BEGIN AC#PPELY
+BEGIN AC#PPELZ
+
+// First meeting
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPELX hello_charname
+~A friendly face in this blighted place... we did not dare hope for it. Eldath be praised!~
+== AC#PPELY ~Look, brothers — it is <CHARNAME>!~
+== AC#PPELZ ~Then we are not abandoned after all!~
+END
+  IF ~~ THEN REPLY ~Come on, out of there. It’s not safe.~ EXTERN AC#PPELX out_here
+  IF ~~ THEN REPLY ~I’ve been looking for you.~ EXTERN AC#PPELX go_on_01
+  IF ~~ THEN REPLY ~How did you end up here of all places?~ EXTERN AC#PPELX how_get_here
+
+CHAIN AC#PPELX go_on_01
+~Then the Fallskeeper’s word reached you. Good... good. We held to this hollow and waited.~
+END
+  IF ~~ THEN REPLY ~All right, let’s get you out.~ EXTERN AC#PPELX out_here
+  IF ~~ THEN REPLY ~You chose a cursed orchard to hide in...~ EXTERN AC#PPELX out_here
+
+CHAIN AC#PPELX how_get_here
+~We came to cleanse what we could — to make the waters run gentle again and let roots take hold.~
+== AC#PPELY ~But the corruption was stronger than we thought, and then these creatures swarmed the woods.~
+== AC#PPELZ ~So we sealed this little chamber... and prayed someone would pass by.~
+END
+  IF ~~ THEN REPLY ~Then come. I’ll get you out.~ EXTERN AC#PPELX out_here
+  IF ~~ THEN REPLY ~Well... that went thoroughly wrong, didn’t it?~ EXTERN AC#PPELX out_here
+
+
+CHAIN AC#PPELX out_here
+~We would gladly flee this place at once...~
+== AC#PPELY ~...but the wound in the Mythal still festers. If we leave it now, it may swallow more of the ruins.~
+== AC#PPELZ ~And you may yet need us. We are no warriors, but we can mend wounds and soothe poison, should you require it.~
+END
+  IF ~~ THEN REPLY ~Fine. Stay close and help where you can.~ EXTERN AC#PPELX stay_and_help
+  IF ~~ THEN REPLY ~I’ll manage without you. Get yourselves to safety.~ EXTERN AC#PPELX go_away
+
+CHAIN AC#PPELX stay_and_help
+~As you wish. We will keep our wards low and our voices lower. Call, and healing water shall rise for you.~
+DO ~SetGlobal("AC#PP70_Eldathyn_Stay","GLOBAL",1)~
+EXIT
+
+CHAIN AC#PPELX go_away
+~Very well. Eldath teaches us not to hinder the river’s course. We shall follow the quiet path out.~
+== AC#PPELY ~May stillness find you amid all this violence, <CHARNAME>.~
+== AC#PPELZ ~And may the forest remember you kindly.~
+DO ~SetGlobal("AC#PP70_Eldathyn_Leave","GLOBAL",1)
+EscapeArea()~
+EXIT
+
+// Eldathyn blessings if they stay
+
+CHAIN IF ~True()~ THEN AC#PPELX bless_charname
+~Peace follow your steps, <CHARNAME>. Even here, in this wounded grove, the Goddess watches.~
+EXIT
+
+CHAIN IF ~True()~ THEN AC#PPELY bless_charname
+~The waters remember kindness. Should you fall, may they cradle you gently and bear you home.~
+EXIT
+
+CHAIN IF ~True()~ THEN AC#PPELZ bless_charname
+~Be as the still pool, <CHARNAME> — calm above, strong beneath. Eldath’s grace be with you.~
+EXIT
+
+
 
 BEGIN AC#PPC6E
 
@@ -240,27 +307,27 @@ BEGIN AC#PPMI7
 BEGIN AC#PPWY7
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPEEA hello_0
-~I am Elv-Esster Aened, commander of the elven city. By death and duty, I claim this place. Turn back, for thou art no longer welcome here.~ //– or what remains. Another fool steps forth to join my army of the dead!~
+~I am Elv-Esster Aened, commander of the elven city. By death and duty, I claim this place. Turn back, for you are not welcome here.~ //– or what remains. Another fool steps forth to join my army of the dead!~
 == AC#PPMI7 ~You are not Elv-Esster. She died with honor – you wear her face like a mask!~
 == AC#PPEEA ~I am more than Elv-Esster – I am what was born of her sacrifice. Her scream echoes within me.~
 == AC#PPMI7 ~No. You are the echo of failure. You feed on sorrow and broken vows. I will see you silenced.~
-== AC#PPEEA ~Thou shalt behold this world no longer. The forest hath spoken thy end.~
-== AC#PPMI7 ~Wha—?~
-== AC#PPEEA ~Silence, fool. She hears only me now!~
+== AC#PPEEA ~You shall look upon this world no more. The forest has decreed your death.~
+== AC#PPMI7 ~What?~
+== AC#PPEEA ~Die, fool!~
 DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",1)
 StartCutScene("AC#PP6CR")
 ~ EXIT
 
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPWY7 hello_0
-~Another fool come to join my army of the dead! Who are you?~
+~Still more fools come to join my army of the dead?~
 == AC#PPWY7 IF ~Global("AC#PP_RemovedWardstone","GLOBAL",1)
-Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN ~Oh, I remember you! You were so kind to remove the wardstone for me.~
+Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN ~I remember you! You were so kind to remove the wardstone for me.~
 == AC#PPWY7 IF ~Global("AC#PP_RemovedWardstone","GLOBAL",0)
-Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN ~Oh, I remember you! You struck me down in that miserable zombie form!~
-== AC#PPWY7 ~But that no longer matters. You survived the scream of the fool Elv-Esster... but my servants will tear you apart!~
+Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN ~I remember you! You struck me down in that miserable zombie form!~
+== AC#PPWY7 ~That no longer matters. You have survived until now... but my new servant will tear you apart! Rise again, doomed ranger!~
 DO ~SetGlobal("AC#PP_Ch6RangerDead","GLOBAL",2)
 AddJournalEntry(@12208,QUEST)
-CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
+StartCutScene("AC#PP6CS")~ EXIT
 
 //wyrd again in front of tomb
 BEGIN AC#PPWY8
@@ -539,7 +606,7 @@ DO ~StartCutScene("AC#PP6C6")~ EXIT
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",19)~ THEN AC#PPWYR 3.02 //continued
 ~** What is this?! **~
 ==AC#PPMYT ~^0xFF8FAD5DIt's time for you to leave Myth Unnohyr, monster. ^-~
-==AC#PPWYR ~** No! I still have a few tricks I'm not afraid to use! Die! All of you! **~
+==AC#PPWYR ~No! I still have a few tricks I'm not afraid to use! Die! All of you!~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",20) CreateCreature("AC#PPSPI",[3730.420],1) CreateVisualEffect("SPFLESHS",[3730.420]) CreateCreature("AC#PPSPI",[3900.490],1) CreateVisualEffect("SPFLESHS",[3900.490]) CreateCreature("AC#PPBGO",[3350.500],1) CreateVisualEffect("SPFLESHS",[3350.500]) CreateCreature("AC#PPBGO",[3880.790],1) CreateVisualEffect("SPFLESHS",[3880.790]) Enemy()~ EXIT
 
 //WYRD 3rd and final

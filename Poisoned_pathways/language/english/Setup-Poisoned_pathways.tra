@@ -65,6 +65,10 @@
 @72 = ~Allip~
 @73 = ~Hezrou~
 @74 = ~Waiting Man~
+@75 = ~Waiting Man~
+@76 = ~Brother Elonar~
+@77 = ~Brother Meyndel~
+@78 = ~Brother Thalen~
 
 
 // cre soundfiles
@@ -544,19 +548,16 @@ Equipped abilities:
 Weight: 6
 ~
 @1084 = ~Staff~
-@1085 = ~Branch from Duskwood Dell +3~
-@1086 = ~This quarterstaff is a powerful weapon, created for those value balance and life. There still grean leaves grow from it, and while it's somewhat less efficient in fighting than other weapons of this enchantment, it has powerful healing properties.
-
-There are some symbols cut on the branch, which indicates that this weapon has been created as a tribute to Eldath. 
+@1085 = ~Branch of Duskwood Dell +3~
+@1086 = ~This quarterstaff was cut long ago from a living tree within Duskwood Dell. The branch still bears a faint emerald sheen, and when held, it thrums softly with life. It was not made to kill, but to ward and to guide. Those who wield it find their strength tempered by serenity, their hearts anchored in quiet purpose.
 
 STATISTICS:
 
 Charge abilities:
 – May cast Goodberry twice per day 
-– May cast Mass Cure once per day 
 
 Equipped abilities:
-– Regenerates 1 HP / 2 rounds
+– Immune to Entangle and Web
 – Maximum Hit Points: +20%
 – Saving Throws vs. Death: +2
 
@@ -1510,7 +1511,7 @@ The dust’s magic lasts until it is dispelled, willingly ended, or broken by an
 @2015 = ~This statue portrays Mythrien Sarath, a nearly forgotten god once revered for his guardianship over Mythals.~
 @2016 = ~You recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
 @2017 = ~I AM THE POISON AND I SHALL DEVOUR YOU!~
-@2018 = ~You hear some sound coming from the cauldron. It looks like with the death of the creature an antidote was created.~
+@2018 = ~You hear a faint sound rising from the cauldron. It seems that with the creature’s death, an antidote has formed within.~
 @2019 = ~Rose... it must be safe!~
 @2020 = ~Take it to Mythrien! Place it under his feet and reach for his helping hand!~
 @2021 = ~When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.~  
@@ -1574,6 +1575,8 @@ The dust’s magic lasts until it is dispelled, willingly ended, or broken by an
 @2071 = ~From all you’ve learned, this statue appears to depict Commander Elv-Esster Aened, once the leader of Myth Unnohyr’s guard.~
 @2072 = ~The dead magic zone prevents the trap from triggering properly.~
 @2073 = ~Follow me.~
+
+@2074 = ~You need all blessings to perform the ritual required to create the antidote.~
 
 // the two fairies
 @2100 = ~If you must sparkle, do it over there!~

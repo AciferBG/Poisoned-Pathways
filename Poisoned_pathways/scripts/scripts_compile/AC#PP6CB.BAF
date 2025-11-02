@@ -6,16 +6,14 @@ THEN
         StartCutSceneMode()
         ClearAllActions()
         Face(NE)
-        ForceSpell(Myself,DO_NOTHING)
+        ForceSpellRES("AC#PP05",Myself)  // No such index
         Wait(1)
-        //FadeToColor([20.0],0)
         OpenDoor("DOOR01")
         AmbientActivate("Ac#ppblc",FALSE)
-        //FadeFromColor([20.0],0)
         SmallWait(2)
         SetGlobal("Gates_open_again","ACPP70",1)
         DisplayStringHead(Myself,@2073)
-        MoveToPointNoInterrupt([1142.2182])
+        MoveToPointNoInterrupt([1106.2244])
         EndCutSceneMode()
         DestroySelf()
 END
