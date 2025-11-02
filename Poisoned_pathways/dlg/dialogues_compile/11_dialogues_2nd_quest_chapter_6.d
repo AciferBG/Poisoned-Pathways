@@ -54,7 +54,9 @@ EXIT
 
 CHAIN IF ~True()~ THEN AC#PPELX bless_charname
 ~Peace follow your steps, <CHARNAME>. Even here, in this wounded grove, the Goddess watches.~
-EXIT
+END
+  IF ~~ THEN REPLY ~What do you know about this place?~ EXTERN AC#PPELX about_myth_unnohyr_01  
+  IF ~~ THEN REPLY ~I am in need of healing.~ EXTERN AC#PPELX need_healing  
 
 CHAIN IF ~True()~ THEN AC#PPELY bless_charname
 ~The waters remember kindness. Should you fall, may they cradle you gently and bear you home.~
@@ -63,6 +65,49 @@ EXIT
 CHAIN IF ~True()~ THEN AC#PPELZ bless_charname
 ~Be as the still pool, <CHARNAME> — calm above, strong beneath. Eldath’s grace be with you.~
 EXIT
+
+// healing
+CHAIN AC#PPELX need_healing
+~That can be arranged. Remain still... let the quiet waters of Eldath flow through you.~
+DO ~ForceSpell(LastTalkedToBy(),CLERIC_MASS_CURE)
+IncrementGlobal("Eldathyn_Healing","ACPP75",1)~
+EXIT
+
+// about the place:
+// Eldathyn knowledge dialogue
+
+CHAIN AC#PPELX about_myth_unnohyr_01
+~Little enough... and yet too much for peace of mind. This place was once an elven city — Myth Unnohyr, they called it.~
+== AC#PPELY ~A haven of magic and grace, they say, before the ages turned and the Mythal guarding it grew ill.~
+== AC#PPELX ~We came believing we could soothe it... but there is something else here, something that feeds on death.~
+== AC#PPELY ~A spirit, perhaps — or many bound as one. We have seen the dead walk, and heard voices not our own whisper through them.~
+== AC#PPELZ ~It moves among the corpses of elves, wearing them like robes of memory.~
+== AC#PPELY ~We do not know its name, only that it will not rest while the Mythal bleeds.~ 
+== AC#PPELX ~And the Mythal bleeds because the old guardian of this place, Mythrien Sarath, seems to have fallen silent.~  
+END  
+  IF ~~ THEN REPLY ~Mythrien Sarath? Who is that?~ EXTERN AC#PPELX about_mythrien_01  
+  IF ~~ THEN REPLY ~It sounds as if even the earth itself is sick here.~ EXTERN AC#PPELX about_myth_unnohyr_02
+  IF ~~ THEN REPLY ~I’ll see what can be done.~ EXTERN AC#PPELX stay_and_help
+
+
+CHAIN AC#PPELX about_myth_unnohyr_02
+~So it is. The soil trembles with old power, wounded and unhealed. No gentle hand has tended it in centuries.~
+== AC#PPELY ~Where Eldath’s waters should flow clear, they seep black beneath the stones.~
+== AC#PPELZ ~But perhaps, with time... and with courage, it can be cleansed again.~
+END  
+  IF ~~ THEN REPLY ~Mythrien Sarath? Who is that?~ EXTERN AC#PPELX about_mythrien_01  
+  IF ~~ THEN REPLY ~I’ll see what can be done.~ EXTERN AC#PPELX stay_and_help
+
+
+CHAIN AC#PPELX about_mythrien_01
+~Mythrien Sarath is a forgotten elven deity and the ancient protector of the elves, a guardian of their wards.~
+== AC#PPELY ~Some call him the Watcher of Mythals. His touch could weave magic strong enough to shield entire cities.~
+== AC#PPELZ ~If he still watches, he must weep for this place. His wards lie broken, his name almost forgotten.~
+== AC#PPELX ~Whether his light yet reaches these ruins, we cannot say. But perhaps your coming here was no accident.~
+END   
+  IF ~~ THEN REPLY ~It sounds as if even the earth itself is sick here.~ EXTERN AC#PPELX about_myth_unnohyr_02
+  IF ~~ THEN REPLY ~I’ll see what can be done.~ EXTERN AC#PPELX stay_and_help
+
 
 
 
