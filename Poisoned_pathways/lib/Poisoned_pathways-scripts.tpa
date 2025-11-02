@@ -22,6 +22,10 @@ EXTEND_TOP ~ar0700.bcs~ ~%MOD_FOLDER%/scripts/_ar0700.baf~ // Debbie in Athkatla
 EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_ar0334.baf~ // Cromwell
 EXTEND_TOP ~ar0334.bcs~ ~%MOD_FOLDER%/scripts/_AR0334_blade.baf~ // Cromwell - daynight blade
 
+// promise quest
+EXTEND_TOP ~ar0500.bcs~ ~%MOD_FOLDER%/scripts/_AR0500.baf~ // create waiting man behind temple of helm
+EXTEND_BOTTOM ~ar0900.bcs~ ~%MOD_FOLDER%/scripts/_AR0900.baf~ // create waiting man behind temple of helm
+
 ACTION_IF FILE_EXISTS_IN_GAME ~AC#W01.BCS~ THEN BEGIN
 EXTEND_BOTTOM ~AC#W01.bcs~ ~%MOD_FOLDER%/scripts/_AC#W01.baf~ // crossmod: Debbie in Goldspires if "Call of the Lost Goddess" is installed
 END

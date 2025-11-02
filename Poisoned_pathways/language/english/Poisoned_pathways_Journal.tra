@@ -296,6 +296,8 @@ An elderly Eldathyn priestess entrusted me with a mug of herbal brew. She believ
 
 I gave the blessed brew to the siren. In gratitude she offered me her old arrows, saying they had carried her rage for too long.~
 
+
+//HALFLING
 @13072 = ~The halfling merchant
 
 I met a halfling merchant named Debbie Gobblebubble in the wilderness. She decided to travel to Trademeet, where her cooking and wares might find a warmer welcome.~
@@ -359,6 +361,29 @@ I returned to the boy in Duskwood Dell and told him of his aunt’s words. At la
 @13123 = ~The Runaway Nephew
 
 I met the boy’s aunt in the Government District of Athkatla and delivered the flower.~
+
+
+// Coinquest
+@13130 = ~The Promise Unkept
+
+I found a crumpled note on a dead adventurer. It spoke of a nightly meeting behind the Temple of Helm in Athkatla's Bridge District to get what someone has been asking for. The note was addressed to a man named Marrik. I also found a worn coin showing the face of an elderly man. Perhaps the two are connected.~
+
+@13131 = ~The Promise Unkept
+
+Behind the Temple of Helm in the Bridge District, I met a man and showed him the token. He sent me to another meeting place behind the Temple of Lathander in the Temple District — again, after dark. He said I’d get what I came for, though I’ve no idea what that’s supposed to mean.~
+
+@13132 = ~The Promise Unkept
+
+Behind the Temple of Lathander, my presence — and the coin — seemed expected. The man there claimed the next gathering would be at the Temple of Waukeen in the Government District, when night falls. No one has yet explained what I am meant to receive.~
+
+@13133 = ~The Promise Unkept
+
+Atthe Temple of Waukeen, I was sent once more on. They spoke of a final meeting, this time at night behind the Temple of Ilmater in the Slums. Each promise sounds the same: that I will get what I wanted. Yet I am no longer sure what that is.~
+
+@13134 = ~The Promise Unkept
+
+I met the final contact behind the Temple of Ilmater. He asked me what I wanted — and I had no answer. Whatever secret or reward was promised by the coin, it led only to questions. Perhaps that was the point all along.~
+
 
 
 

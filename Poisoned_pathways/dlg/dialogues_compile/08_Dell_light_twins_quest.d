@@ -311,7 +311,9 @@ CHAIN AC#PPFAE Riddle_No_riddle_left
 == AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Ugh, fine. We give up.~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Yes! The clever <PRO_RACE> wins!~
 == AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Let’s sprinkle <PRO_HIMHER> with sparks. Or maybe fairy dust.~  
-DO ~SetGlobal("AC#PP_RiddleWon","GLOBAL",4) ReallyForceSpell(Myself,FLASHY_2)~  
+== AC#PPFAE ~^0xFFE3B0FF Lilafern: ^-Pixie dust, yes! <CHARNAME> deserves a reward for such cleverness!~  
+== AC#PPFAE ~^0xFF9ADCE3 Tippledew: ^-Exactly! Here, take some of our pixie dust — just don’t rub it in your eyes, all right?~  
+DO ~SetGlobal("AC#PP_RiddleWon","GLOBAL",4) GiveItemCreate("AC#PPPXD",Player1,1,0,0) ReallyForceSpell(Myself,FLASHY_2)~  
 EXIT
 
 	

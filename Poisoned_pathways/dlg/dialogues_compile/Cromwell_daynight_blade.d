@@ -1,5 +1,7 @@
 EXTEND_BOTTOM WSMITH01 13
-IF ~OR(2) PartyHasItem("AC#PPDN1") PartyHasItem("AC#PPDN2") PartyHasItem("MISC27") PartyHasItem("MISC18")~ THEN GOTO AC#PPDayNightBlade
+IF ~OR(2) 
+PartyHasItem("AC#PPDN1") 
+PartyHasItem("AC#PPDN2")~ THEN GOTO AC#PPDayNightBlade
 END
 
 APPEND WSMITH01

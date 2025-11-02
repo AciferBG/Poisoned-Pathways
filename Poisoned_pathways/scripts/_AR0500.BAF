@@ -1,0 +1,10 @@
+IF
+    TimeOfDay(NIGHT)
+    !InMyArea("AC#PPMA1")  // waiting man
+    !Dead("AC#PPMA1")  // waiting man
+    Global("AC#PP_MarrikQuest","GLOBAL",1)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPMA1",[955.2484],N)  // waiting man
+        SetGlobal("AC#PP_MarrikQuest","GLOBAL",2) 
+END

@@ -1,0 +1,12 @@
+IF
+    Global("AC#PP_MarrikQuest","GLOBAL",2)
+    OR(3)
+        TimeOfDay(DUSK)
+        TimeOfDay(DAY)
+        TimeOfDay(MORNING)
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PP_MarrikQuest","GLOBAL",1)
+        DestroySelf()
+END
+

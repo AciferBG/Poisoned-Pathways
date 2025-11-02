@@ -6,3 +6,14 @@ RESPONSE #100
 CreateCreature("AC#PPCAA",[3160.1880],0)
 SetGlobal("AC#PP_SummonFlowerKid_A","AR1000",1)
 END
+
+IF
+    TimeOfDay(NIGHT)
+    !InMyArea("AC#PPMA3")  // waiting man
+    !Dead("AC#PPMA3")  // waiting man
+    Global("AC#PP_MarrikQuest","GLOBAL",5)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPMA3",[2195.562],N)  // waiting man
+        SetGlobal("AC#PP_MarrikQuest","GLOBAL",6) 
+END

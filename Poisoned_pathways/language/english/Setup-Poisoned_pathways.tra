@@ -64,6 +64,7 @@
 @71 = ~Lhiannan Shee~
 @72 = ~Allip~
 @73 = ~Hezrou~
+@74 = ~Waiting Man~
 
 
 // cre soundfiles
@@ -1484,6 +1485,12 @@ Weight: 7~
 we’re behind the Temple of Helm in the Bridge District after dark, like every night. Bring the token, and you’ll get what you’ve been asking for.~
 @1238 = ~Old Coin~
 @1239 = ~This worn coin bears the faint image of an elderly man with a solemn expression. The details have long since faded — the nose smoothed by countless hands, the edges dulled by time. There are no markings of mint or value, and yet it feels heavier than it should, as if it remembers the years it has passed through. Whoever pressed it into shape is long gone, and whatever purpose it once held has long been forgotten.~
+
+@1240 = ~Bottle of Pixie Dust~
+@1241 = ~This small bottle contains a handful of shimmering pixie dust that can be tossed into the air. Any ally touched by the dust becomes invisible (the dust spreads in a radius of about 15 ft.). Of course, the invisible creature is not magically silenced, and certain other conditions can still reveal it. Even allies cannot see the invisible creature or its gear unless they are normally able to see invisible things or employ magic to do so. Items dropped or set down by the invisible creature become visible, while items picked up vanish if tucked into the creature’s clothing or pouches.
+
+The dust’s magic lasts until it is dispelled, willingly ended, or broken by an attack. It can also fade naturally after 24 hours. The invisible being may move freely and cast defensive spells, but any offensive action immediately ends the effect — though it still allows the first strike to go unseen.~
+
 // script strings
 @2000 = ~Duskwood Dell~
 @2001 = ~Eldath, goddess of peace and calm waters~

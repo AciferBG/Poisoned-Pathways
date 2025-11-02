@@ -151,6 +151,12 @@ ADD_JOURNAL
 @13122
 @13123
 
+@13130
+@13131
+@13132
+@13133
+@13134
+
 USING ~Poisoned_pathways/language/%LANGUAGE%/Poisoned_pathways_Journal.tra~
 
 ///////////////////////////////////////////////////////////////////////
@@ -547,6 +553,13 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWXD.bam~ ~override~ // Will-o-wi
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1049.pvrz~
+ END
+ END
+ 
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPCOD.bam~ ~override~ // token from area acpp98 desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1050.pvrz~
  END
  END
 ///////////////////////////////////////////////////////////////////////

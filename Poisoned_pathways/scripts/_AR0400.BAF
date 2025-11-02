@@ -17,3 +17,14 @@ THEN
       CreateCreature("AC#PPSKD",[1277.2233],NE)  // Skann Delth
 END
 
+IF
+    TimeOfDay(NIGHT)
+    !InMyArea("AC#PPMA4")  // waiting man
+    !Dead("AC#PPMA4")  // waiting man
+    Global("AC#PP_MarrikQuest","GLOBAL",7)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPMA4",[988.1239],SW)  // waiting man
+        SetGlobal("AC#PP_MarrikQuest","GLOBAL",8) 
+END
+

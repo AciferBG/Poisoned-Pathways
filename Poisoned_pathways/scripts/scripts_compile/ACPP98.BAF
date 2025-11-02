@@ -1,0 +1,10 @@
+IF
+    Global("AC#PP_MarrikQuest","GLOBAL",0)
+    PartyHasItem("AC#PP98N")  // Note
+    PartyHasItem("AC#PPCOI")  // Old Coin
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PP_MarrikQuest","GLOBAL",1)
+        AddJournalEntry(@13130,QUEST)  
+END
+
