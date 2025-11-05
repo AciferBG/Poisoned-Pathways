@@ -56,7 +56,9 @@ CHAIN IF ~True()~ THEN AC#PPELX bless_charname
 ~Peace follow your steps, <CHARNAME>. Even here, in this wounded grove, the Goddess watches.~
 END
   IF ~~ THEN REPLY ~What do you know about this place?~ EXTERN AC#PPELX about_myth_unnohyr_01  
-  IF ~~ THEN REPLY ~I am in need of healing.~ EXTERN AC#PPELX need_healing  
+  IF ~GlobalLT("Eldathyn_Healing","ACPP75",4)~ THEN REPLY ~I am in need of healing.~ EXTERN AC#PPELX need_healing  
+  IF ~GlobalGT("Eldathyn_Healing","ACPP75",3)
+  !GlobalTimerExpired("Eldathyn_Healing_Timer","ACPP75")~ THEN REPLY ~I am in need of healing.~ EXTERN AC#PPELX need_healing_wait  
 
 CHAIN IF ~True()~ THEN AC#PPELY bless_charname
 ~The waters remember kindness. Should you fall, may they cradle you gently and bear you home.~
@@ -71,6 +73,11 @@ CHAIN AC#PPELX need_healing
 ~That can be arranged. Remain still... let the quiet waters of Eldath flow through you.~
 DO ~ForceSpell(LastTalkedToBy(),CLERIC_MASS_CURE)
 IncrementGlobal("Eldathyn_Healing","ACPP75",1)~
+EXIT
+
+// healing
+CHAIN AC#PPELX need_healing_wait
+~Forgive me, but my healing prayers are spent for the day. Come again tomorrow, and I shall aid you then.~
 EXIT
 
 // about the place:
@@ -215,61 +222,29 @@ IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN REPLY ~How could something s
 CHAIN AC#PPMI wyrd_cont
 ~This ancient evil feeds upon the rotting magic that lingers in these ruins, using it to raise more of the dead. It will not be long before such abominations spill into the surrounding lands. We must end this threat by destroying the creature.~
 END
-IF ~~ THEN REPLY ~By "we" I assume you mean me?~ EXTERN AC#PPMI wyrd_wait_for_start
-IF ~~ THEN REPLY ~I will gladly help. Perhaps the trouble at Myth Unnohyr grew worse because of me.~ EXTERN AC#PPMI wyrd_wait_for_start
-IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I will try to help.~ EXTERN AC#PPMI wyrd_wait_for_start
-IF ~~ THEN REPLY ~Myth Unnohyr? Not ten rothé could drag me back there.~ EXTERN AC#PPMI wyrd_wait_for_start
+IF ~~ THEN REPLY ~By "we" I assume you mean me?~ EXTERN AC#PPMI grant_blade_idea
+IF ~~ THEN REPLY ~I will gladly help. Perhaps the trouble at Myth Unnohyr grew worse because of me.~ EXTERN AC#PPMI grant_blade_idea
+IF ~~ THEN REPLY ~I do not see what this has to do with me—but very well, I will try to help.~ EXTERN AC#PPMI grant_blade_idea
+IF ~~ THEN REPLY ~Myth Unnohyr? Not ten rothé could drag me back there.~ EXTERN AC#PPMI grant_blade_idea
 
-/*
-CHAIN AC#PPMI C6.QUEST.01.04c
-~You have fought similar foes before. Undead, I have heard—under their mistress Bodhi. You may face them again. And Duskwood Dell holds a weapon that could aid against such foes.~   
-== AC#PPEL4 ~You mean the Memory of the Myths, that fabled blade, Mismal?~  
-== AC#PPMI ~The very same. It has rested here long enough. The time has come to set it against the foes of life. Give it to <CHARNAME>.~   
-== AC#PPEL4 ~No. Evil cannot be undone by answering it with further deeds of blood.~  
-== AC#PPMI ~The blade I propose was forged to strike the undead. Its spectral edge cannot touch the living, but it shall wound all unliving, such as a Wyrd. It is a blessing against the undead, not a curse upon the living. Let <CHARNAME> take up the weapon that was once laid down in the grotto.~  
-== AC#PPEL4 ~What was laid to rest in that grotto must never again be turned to bring death. Such is Eldath’s charge.~  
-== AC#PPMI ~The creatures that stand before <CHARNAME> are already dead. They bring only further death. And you know the blade cannot harm the living.~  
-== AC#PPEL4 ~No. Eldath would not approve of this.~  
-== AC#PPMI ~*Sigh*. <CHARNAME>, perhaps you can persuade Alatoasz to entrust you with the blade? It would be of great use to you—not only on your return to Myth Unnohyr.~  
+
+// Discussion about granting the blade
+CHAIN AC#PPMI grant_blade_idea
+~I know we ask much of you already. Perhaps there is aid to be found in the relics that rest within Eldath’s sanctuary, Alatoasz.~
+== AC#PPEL4 ~You speak of the Memory of the Myths, the fabled blade?~  
+== AC#PPMI ~The very same. It has lain here long enough. The time has come to turn it against the foes of life. Give it to <CHARNAME>.~  
+== AC#PPEL4 ~No. Evil cannot be undone by answering it with the tools of bloodshed. Such ways are not ours.~  
+== AC#PPMI ~This blade was forged to strike only the undead. Its edge cannot harm the living—it severs only the unlife that mocks true peace. It is a blessing, not a curse. Let <CHARNAME> take up the weapon that was once laid to rest in the grotto.~  
+== AC#PPEL4 ~What was laid to rest in Eldath’s waters must not be raised again to bring death, no matter its purpose. The Quiet One forbids it.~  
+== AC#PPMI ~Then so be it. I will not quarrel with you, Fallskeeper. Even without the blade, the time has come to end the unrest within Myth Unnohyr.~  
 END
-IF ~~ THEN REPLY ~If you would guard life, then give me the means to end what threatens it. This weapon may prevent more deaths.~ EXTERN AC#PPEL4 convince_memory
-IF ~~ THEN REPLY ~If the sword must rest in worthy hands, then let it be mine. I will not falter where others would.~ EXTERN AC#PPEL4 convince_memory
-IF ~~ THEN REPLY ~If it eases your heart, I swear to return the blade once the Wyrd is undone. Lend it to me only for this task.~ EXTERN AC#PPEL4 convince_memory_return
-IF ~~ THEN REPLY ~Why waste such a treasure rotting in your grotto? Hand it over—what I do with it is none of your concern.~ EXTERN AC#PPEL4 deny_memory
-IF ~~ THEN REPLY ~The sword belongs in the hands of one strong enough to wield it, not locked away by cowards.~ EXTERN AC#PPEL4 deny_memory
-IF ~~ THEN REPLY ~Keep your blade. I trust in my own weapons.~ EXTERN AC#PPMI cont_no_blade
+IF ~~ THEN EXTERN AC#PPMI wyrd_wait_for_start
 
-CHAIN AC#PPEL4 convince_memory  
-~Your reasoning is sound; you speak with reverence for Eldath’s teaching. If this weapon can preserve life without endangering it, then I cannot deny you. May your hand wield the blade only against those already lost. Take it, and may peace guide each strike. Remember always the charge you carry.~       
-== AC#PPMI ~With this weapon, it will be easier for you to defeat the Wyrd.~  
-== AC#PPEL4 ~You may collect the blade, the Memory of the Myths, from our handmaiden in Eldath’s Grotto.~   
-== AC#PPMI ~When you are ready, go with Alatoasz’s blessing to the grotto where heroes once surrendered their weapons—and claim it.~    
-END
-IF ~~ THEN DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",1)~ EXTERN AC#PPMI wyrd_wait_for_start
 
-	CHAIN AC#PPEL4 deny_memory  
-	~Such words reek of cruelty. You would turn a gift of peace into a tool of slaughter? I will not be party to such evil.~ 
-	END
-	IF ~~ THEN EXTERN AC#PPMI cont_no_blade	
-	
-	
-	CHAIN AC#PPMI cont_no_blade
-	~So be it. Even without the blade, the time has come to put an end to the Wyrd.~  
-	END
-	IF ~~ THEN EXTERN AC#PPMI wyrd_wait_for_start
-	
-	CHAIN AC#PPEL4 convince_memory_return
-	~If you give me your solemn word, then so be it. Take the blade, and when the Wyrd is no more, return it here, where it shall rest in peace once more.~  
-	== AC#PPMI ~With this weapon, it will be easier for you to defeat the Wyrd.~  
-	== AC#PPEL4 ~You may collect the blade from our handmaiden in Eldath’s Grotto.~  
-	== AC#PPMI ~When you are ready, go with Alatoasz’s blessing to the grotto where heroes once surrendered their weapons—and claim it.~    
-	END
-	IF ~~ THEN DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",1) SetGlobal("AC#PP_ReturnBlade","GLOBAL",1)~ EXTERN AC#PPMI wyrd_wait_for_start
-*/
 
 // Waiting for the player to begin the Wyrd quest
 CHAIN AC#PPMI wyrd_wait_for_start
-~In a desperate act, we sealed the approaches to the old elven city. Myth Unnohyr now lies behind a barrier. I can lift the wards and grant us passage into the ruins. Together, we may yet put an end to this creature once and for all.~
+~We must go to Myth Unnohyr. In a desperate act, we sealed the approaches to the old elven city, which now lies behind a barrier. I can lift the wards and grant us passage into the ruins. Together, we may yet put an end to this creature once and for all.~
 END
 IF ~~ THEN REPLY ~We have a deal.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
 IF ~~ THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.07
@@ -707,35 +682,50 @@ GiveItemCreate("AC#PPBE",Player1,1,0,0)
 CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
 
 
-//FINALE 
+// FINALE – Return to Alatoasz
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",25)~ THEN AC#PPEL4 C6.QUEST.0X.00
-~It's you! That means you've defeated the enemy!~
+~You have returned! Does this mean you have banished the evil haunting Myth Unnohyr once and for all?~
 END
-IF~~THEN REPLY ~Yes, but it required more effort than we thought. But with some divine intervention, Myth Unnohyr is now safe.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
-IF~~THEN REPLY ~You're surprised? Well, you should be! It's all been some sort of nightmare! But the wyrd is gone now. And Myth Unnohyr should be safer from now on. I won't lie, though, you've teleported me right into some... nighmare! I expect some grand reward!~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
+IF ~~ THEN REPLY ~Yes, though it required far more effort than we imagined. With a touch of divine intervention, Myth Unnohyr is safe again.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
+IF ~~ THEN REPLY ~Surprised? It was like a nightmare come to life—but it’s over now. The evil will trouble no one for a long while.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.01
-~Wait—are you saying that the ruins are safe now?~
+~Are you certain the ruins are at peace again?~
 END
-IF~~THEN REPLY ~Yes. Mythrien appeared me. Myth Unnohyr will be free of its strange curse for a year. I'd say it's a perfect moment for you to do something to keep it that way.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.02
-IF~~THEN REPLY ~You will need to check the details on your own. I'm done with that place.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.03
+IF ~~ THEN REPLY ~Yes. I was able to call upon Mythrien himself. His blessing will keep Myth Unnohyr free from corruption for a year.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.02
+IF ~~ THEN REPLY ~You’ll have to see for yourself. My part in this is done.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.03
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.02
-~This is wonderful news! And Mythrien helped you... This is big.~
+~Truly? This is wondrous news! And Mythrien’s hand was in it... that is no small thing.~
 EXTERN AC#PPEL4 C6.QUEST.FINALE.04
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.03
-~Of course!~
+~Of course.~
 EXTERN AC#PPEL4 C6.QUEST.FINALE.04
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.04
-~What you did is more than any of us could ever dream. Thank you. We will never forget what you did.~
-==AC#PPMI ~Here. Your reward. Thank you for everything! And whoever is going to stand on your way: I pity them already.~
+~What you have done surpasses all we had hoped for. The grove and all its faithful shall remember your name.~
+== AC#PPEL4 ~I have long pondered something. You may remember the blade kept hidden here in the Dell—a weapon of great power, one that can harm only the undead. My former hesitation to release it was misguided. This blade does not destroy life—it unravels unlife, that which stands in defiance of Eldath’s peace.~
+== AC#PPEL4 ~With her blessing, I wish to grant you this weapon as a reward. May you wield it against the foes of life itself, and let each strike serve peace rather than wrath.~
+== AC#PPEL4 ~The weapon rests at the bottom of Eldath’s Grotto. You need only ask the Maiden who guards those waters—she will not deny you.~
+END
+IF ~~ THEN REPLY ~It will be an honor. I shall wield it in Eldath’s name, and for the peace she teaches.~ EXTERN AC#PPEL4 bye_mythblade
+IF ~~ THEN REPLY ~I am glad you changed your mind, Fallskeeper.~ EXTERN AC#PPEL4 bye_mythblade
+
+CHAIN AC#PPEL4 bye_mythblade
+~Go with Eldath’s blessing, <CHARNAME>. Whoever stands in your way—I pity them already.~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",26)
+SetGlobal("AC#PP_GiveBlade","GLOBAL",1)
 AddJournalEntry(@12219,QUEST)
- AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) GiveItemCreate("AC#PPSTA",Player1,1,1,1) GiveGoldForce(1000)~ EXIT
+AddXPObject(Player1,5000)
+AddXPObject(Player2,5000)
+AddXPObject(Player3,5000)
+AddXPObject(Player4,5000)
+AddXPObject(Player5,5000)
+AddXPObject(Player6,5000)~ EXIT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",26)~ THEN AC#PPEL4 C6.QUEST.0X.01
-~I'll pray for you to find peace.~
+~May the waters of peace ever flow around you, my friend.~
 EXIT
+

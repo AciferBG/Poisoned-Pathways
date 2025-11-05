@@ -148,14 +148,8 @@ CHAIN IF ~~ THEN AC#PPDR1 need_blade_01
 ~You seek the blade that may wound only dead flesh? I can scarce believe the Fallskeeper allowed it. Weapons laid down here are meant to rest forever.~  
 END
 IF ~~ THEN REPLY ~Then this time, it shall be otherwise.~ EXTERN AC#PPDR1 need_blade_02
-IF ~~ THEN REPLY ~I would not ask, were it not urgent.~ EXTERN AC#PPDR1 need_blade_02
 IF ~~ THEN REPLY ~Enough of this prattle. Give me the blade that is mine by right!~ EXTERN AC#PPDR1 need_blade_unfriendly
-IF ~Global("AC#PP_ReturnBlade","GLOBAL",1)~ THEN REPLY ~I have sworn to return it once the battle is done.~ EXTERN AC#PPDR1 need_blade_give_back_later
 
-CHAIN IF ~~ THEN AC#PPDR1 need_blade_give_back_later
-~Very well. If you vow to wield it only against dead flesh, then mayhap the Fallskeeper had reason to entrust it to you.~  
-END
-IF ~~ THEN EXTERN AC#PPDR1 need_blade_02
 
 CHAIN IF ~~ THEN AC#PPDR1 need_blade_unfriendly
 ~Such rudeness! What was the Fallskeeper thinking, to permit you this? Still... it is not mine to decide.~  
@@ -164,7 +158,8 @@ IF ~~ THEN EXTERN AC#PPDR1 need_blade_02
 
 CHAIN IF ~~ THEN AC#PPDR1 need_blade_02
 ~Here is the weapon. It is called the Memory of the Myths. Treat it with care.~  
-DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",10)  
+DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",10) 
+AddJournalEntry(@12220,QUEST_DONE) 
 GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 
 	CHAIN IF ~~ THEN AC#PPDR1 need_singing_water

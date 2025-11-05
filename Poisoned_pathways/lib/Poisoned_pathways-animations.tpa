@@ -178,18 +178,18 @@
     COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Zombie_Treant/Zombie_treant_sounds~ ~override~
   END
 
-  // Acifer's Thorn wither animation
+  // Acifer's Wood woad animation
   LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7f35 slotMax = slotMin + 0xff RET slot END
   ACTION_IF (slot <= 0) BEGIN
     FAIL ~No free creature animation slot found.~
   END
   LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
-  APPEND ~animate.ids~ ~0x%hexNumber% THORN_WITHER_ACIFER~ UNLESS ~THORN_WITHER_ACIFER~
+  APPEND ~animate.ids~ ~0x%hexNumber% WOOD_WOAD_ACIFER~ UNLESS ~WOOD_WOAD_ACIFER~
   CLEAR_IDS_MAP
-  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Thorn_wither/exxx.ini~ ~override/%hexNumber%.ini~
-  ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Thorn_wither~ ~^.+\.bam$~ BEGIN
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Wood_Woad/exxx.ini~ ~override/%hexNumber%.ini~
+  ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Wood_Woad~ ~^.+\.bam$~ BEGIN
     COPY ~%BASH_FOR_FILESPEC%~ ~override~
-    COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Thorn_wither/Thorn_wither_sounds~ ~override~
+    COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Wood_Woad/Wood_Woad_sounds~ ~override~
   END
   
   // SNAKE_SMALL  animation

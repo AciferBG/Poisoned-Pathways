@@ -7,3 +7,19 @@ THEN
         StartDialogueNoSet([PC])
 END
 
+IF
+    GlobalTimerExpired("Eldathyn_Healing_Timer","ACPP75")
+    GlobalGT("Eldathyn_Healing","ACPP75",0)
+THEN
+    RESPONSE #100
+        SetGlobal("Eldathyn_Healing","ACPP75",0)
+END
+
+IF
+    GlobalGT("Eldathyn_Healing","ACPP75",0)
+    !GlobalTimerNotExpired("Eldathyn_Healing_Timer","ACPP75")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("Eldathyn_Healing_Timer","ACPP75",ONE_DAY)
+END
+
