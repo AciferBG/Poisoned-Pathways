@@ -1493,6 +1493,19 @@ we’re behind the Temple of Helm in the Bridge District after dark, like every 
 @1241 = ~This small bottle contains a handful of shimmering pixie dust that can be tossed into the air. Any ally touched by the dust becomes invisible (the dust spreads in a radius of about 15 ft.). Of course, the invisible creature is not magically silenced, and certain other conditions can still reveal it. Even allies cannot see the invisible creature or its gear unless they are normally able to see invisible things or employ magic to do so. Items dropped or set down by the invisible creature become visible, while items picked up vanish if tucked into the creature’s clothing or pouches.
 
 The dust’s magic lasts until it is dispelled, willingly ended, or broken by an attack. It can also fade naturally after 24 hours. The invisible being may move freely and cast defensive spells, but any offensive action immediately ends the effect — though it still allows the first strike to go unseen.~
+@1242 = ~Arrow of healing~
+@1243 = ~These arrows are an invention of Eldath’s faithful, crafted not for battle but for mercy. Each slender shaft bears at its tip a small vial of sanctified water drawn from a tranquil spring within Duskwood Dell. When the arrow strikes, the vial shatters harmlessly, releasing a gentle burst of divine essence that seeps into the wounded flesh of its target.
+
+Though they fly as true as any weapon, these arrows cannot harm — their purpose is to mend rather than wound.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 0 
+Launcher: Bow
+Special: Restores 27 Hit Points to the creature struck
+
+Weight: 0~
 
 // script strings
 @2000 = ~Duskwood Dell~
