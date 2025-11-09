@@ -54,7 +54,7 @@ IF
     Global("Dayblade_wielder","ACPP70",0)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPDBD",[1716.261],S)  //  daytime blade wielder
+        CreateCreature("AC#PPDBD",[3298.310],SSW)  //  daytime blade wielder
         SetGlobal("Dayblade_wielder","ACPP70",1)
 END
 
@@ -65,7 +65,7 @@ IF
     Global("Nightblade_wielder","ACPP70",0)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPDBN",[1716.261],S)  //  nighttime blade wielder
+        CreateCreature("AC#PPDBN",[3298.310],SSW)  //  nighttime blade wielder
         SetGlobal("Nightblade_wielder","ACPP70",1)
 END
 

@@ -2,6 +2,8 @@ IF
     Global("AC#PP_Killed_Wyrd_1_time","GLOBAL",1)
 THEN
     RESPONSE #100
+        FaceObject(Player1)
+        Wait(1)
         StartDialogueNoSet([PC])
 END
 

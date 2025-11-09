@@ -375,23 +375,22 @@ BEGIN AC#PPWYR
 //1ST FIGHT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",2)~ THEN AC#PPWYR 1.00
-~So you have come this far. Still clinging to your mortal cause. Brave. Or foolish.~
+~So you have come this far. Still clinging to your mortal cause. Brave. Foolish.~
 END
 IF ~~ THEN REPLY ~You must be the one I’m looking for.~ EXTERN AC#PPWYR 1.01
 IF ~~ THEN REPLY ~I heard there’s some new horror trying to claim this place—I came to end you.~ EXTERN AC#PPWYR 1.01
 
 CHAIN AC#PPWYR 1.01
 ~I was old when your gods still whispered in the dark.~
-== AC#PPWYR ~I watched this city rise and crumble, again and again. I have seen decay and rebirth, terror and worship, blood and silence... and in all of it, I endured.~
-== AC#PPWYR ~Now you come, thinking yourself its saviour. But you are only another breath, soon spent and forgotten.~
+== AC#PPWYR ~I watched this city rise and crumble. I have seen birth and decay, blood and silence. And in all of it, I endured. You are only another breath, soon spent and forgotten.~
 END
 IF ~~ THEN EXTERN AC#PPWYR hunger_01
 
 CHAIN AC#PPWYR hunger_01
-~I hunger as the earth beneath Myth Unnohyr hungers. It swallowed part of this city once before, and it will again. This time, we shall feast on the living and on all who dare to come. It seems your name was written among them.~
+~I hunger as the earth beneath Myth Unnohyr hungers. I shall feast on the living and on all life who dares to come.~
 END
 IF ~~ THEN REPLY ~You won't win this.~ EXTERN AC#PPWYR 1.04
-IF ~~ THEN REPLY ~You will not defeat me, monster. I shall be your doom.~ EXTERN AC#PPWYR 1.04
+IF ~~ THEN REPLY ~You will not defeat me. I shall be your doom.~ EXTERN AC#PPWYR 1.04
 IF ~~ THEN REPLY ~Perhaps I made a mistake coming here. Let me go — I have no wish to fight you.~ EXTERN AC#PPWYR 1.05
 
 CHAIN AC#PPWYR 1.04
@@ -403,7 +402,7 @@ CHAIN AC#PPWYR 1.05
 EXTERN AC#PPWYR 1.06
 
 CHAIN AC#PPWYR 1.06
-~Come then... let us see what remains of your courage when death itself takes notice.~
+~So let us see what remains of your courage when death itself takes notice!~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",3) 
 Enemy()~ 
 EXIT
@@ -416,32 +415,33 @@ ClearAllActions()
 StartCutSceneMode()
 StartCutScene("AC#PP6C8")~ EXIT
 
-BEGIN ~AC#PPWY9~ 
+// Reincarnated Wyrd
+BEGIN ~AC#PPWY9~
 CHAIN IF ~Global("AC#PP_Killed_Wyrd_1_time","GLOBAL",1)~ THEN AC#PPWY9 hello_reincarnated
-~My beautiful symbiotes link me to this place. You cannot defeat me, but—I encourage you to try. I want to see you tired. I want to see you lose all hope.~
+~Here I am again! Did you truly think you could slay me so easily? I cannot die in this place. Each time I am reborn within the shell of another dead elf. I don the bodies of this ruined city as you mortals don your garments. THAT is my true power.~
 END
-IF~~THEN REPLY ~Symbiotes?~ EXTERN AC#PPWY9 2.01
-IF~~THEN REPLY ~I will find some way to destroy you!~ EXTERN AC#PPWY9 2.02
+IF ~~ THEN EXTERN AC#PPWY9 hello_reincarnated_02
 
-CHAIN AC#PPWY9 2.01
-~Well, everyone has their ways to control the flow of power. And they are mine. But that knowledge will give you nothing. I am too powerful for you, with or without them!~
-EXTERN AC#PPWY9 2.03
+CHAIN AC#PPWY9 hello_reincarnated_02
+~Do you know how many fallen elves lie in these streets and crypts? I take the mightiest among them — their strength flows through me. You cannot stand against them all.~
+END
+IF ~~ THEN REPLY ~I will find some way to destroy you!~ EXTERN AC#PPWY9 hello_reincarnated_bye
+IF ~~ THEN REPLY ~I'll beat you out of every single body!~ EXTERN AC#PPWY9 hello_reincarnated_bye
+IF ~~ THEN REPLY ~We will unmake you and lay the fallen to rest, spirit or shell alike.~ EXTERN AC#PPWY9 hello_reincarnated_bye
+IF ~~ THEN REPLY ~Wear what you will — I’ll be the tailor that mends this town by cutting out you.~ EXTERN AC#PPWY9 hello_reincarnated_bye
+IF ~~ THEN REPLY ~One day you will stand naked before me, stripped of your elven raiment, and then I will destroy you!~ EXTERN AC#PPWY9 hello_reincarnated_bye
 
-CHAIN AC#PPWY9 2.02
-~You are clearly a dreamer, haha!~
-EXTERN AC#PPWY9 2.03
-
-CHAIN AC#PPWY9 2.03
-~I shall watch how you struggle. Remember that. Go. Do you best. And let me enjoy the spectacle, little one.~
+CHAIN AC#PPWY9 hello_reincarnated_bye
+~Who says I wish to meet you in open combat? I shall withdraw into the tombs and watch your struggle. Do what you must — I will savour the spectacle.~
 DO ~SetGlobal("AC#PP_Killed_Wyrd_1_time","GLOBAL",2)
-SetGlobal("AC#PPChapter6Quest","GLOBAL",5) 
+SetGlobal("AC#PPChapter6Quest","GLOBAL",5)
 AddJournalEntry(@12209,QUEST)
-StartCutSceneMode() 
-Wait(1) 
-ScreenShake([20.45],15) 
-Wait(2) 
-EndCutSceneMode() 
+StartCutSceneMode()
+CreateVisualEffectObject("SPFLESHS",Myself)
+Wait(1)
+EndCutSceneMode()
 DestroySelf()~ EXIT
+
 //2ND TALK - HURT 
 /*
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",4)~ THEN AC#PPWYR 2.00

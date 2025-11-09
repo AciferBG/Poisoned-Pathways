@@ -36,7 +36,7 @@
 @43 = ~Blood Puddle~
 @44 = ~Mesmerized Ankheg~
 @45 = ~Mismal Al'Visalle~
-@46 = ~The Wyrd of Myth Unnohyr~
+@46 = ~The Undying~
 @47 = ~Blood-Soaked Spirit~
 @48 = ~Gruesome Symbiote~
 @49 = ~Elven Spirit~
@@ -533,19 +533,19 @@ Requires:
 Weight: 1
 ~
 @1081 = ~Robe~
-@1082 = ~Wyrd's Ended Slumber~
-@1083 = ~This robe is known as wyrd's Ended Slumber and it won't be very surprising to say that it was once used by a wyrd from Myth Unnohyr. It feels like it might have looked similar to one of the robes of archimagi, but it was clearly warped by time and wyrd's influence. 
+@1082 = ~The Undyings's Slumber~
+@1083 = ~This ancient robe, known as The Undying’s Slumber, is said to have once adorned the form of the Undying himself — a fallen archmage of Myth Unnohyr. Once a garment of the High Art, it now bears the faint taint of unlife and decay. Its fabric shimmers like a robe of the archmagi, yet the weave is warped, as if time itself recoiled from its touch. Despite its dark history, the robe still hums with quiet power, eager to serve another who dares to wield what remains of the elven High Magic. 
 
 STATISTICS:
 
 Charge abilities:
-– May cast Haste once per day (self-centered)
-– May cast Melf's Minute Meteors once per day 
+– May cast Vampiric Touch once per day
+– May cast Greater Malison once per day
 
 Equipped abilities:
 – Armor Class: 5
 – Magic Resistance: +5%
-– Caster level (arcane): +4
+– Caster level (arcane): +1
 
 Weight: 6
 ~
@@ -1430,15 +1430,10 @@ Though they seem of no direct use to your quest, the words may help you understa
 @1224 = ~Torn Page II~
 @1225 = ~These torn and faded pages appear to be fragments from a much larger chronicle concerning the history of Myth Unnohyr. The ink is elven, the script elegant yet frayed by time:
 
-"Of the Final Watch – The Year of the Shattered Rings
+"In the height of Myth Unnohyr’s glory, an elven high mage sought to bind his soul to the city’s Mythal. He wished not for wisdom, nor for legacy — but for unending life, carried from vessel to vessel by the spell’s eternal weave. 
 
-When the outer glades burned and the stars fell dark behind smoke, Elv-Esster Aened, last Commander of the Guard, stood alone upon the high terrace.
-
-It is said she spoke not to her warriors, but to the soil beneath her feet and the sky above. Some claim she called out to Mythrien Sarath, others that she offered her breath to the Mythal itself. What followed cannot be described with ink.
-
-The wards did not fail – they turned. The city did not fall – it changed.
-
-And Elv-Esster’s name has not been spoken in song since."
+Yet in doing so, he wounded the very heart of the Mythal. Life and death bled together, and when his body fell, the Mythal itself raised him anew — each time within another fallen elf.
+Thus was born the undying echo of a guardian who betrayed his own vow. His immortality became the city’s curse, and his rebirth its unending decay"
 
 Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
 @1226 = ~Signet Ring of House Vemmil~
@@ -1494,16 +1489,15 @@ we’re behind the Temple of Helm in the Bridge District after dark, like every 
 
 The dust’s magic lasts until it is dispelled, willingly ended, or broken by an attack. It can also fade naturally after 24 hours. The invisible being may move freely and cast defensive spells, but any offensive action immediately ends the effect — though it still allows the first strike to go unseen.~
 @1242 = ~Arrow of healing~
-@1243 = ~These arrows are an invention of Eldath’s faithful, crafted not for battle but for mercy. Each slender shaft bears at its tip a small vial of sanctified water drawn from a tranquil spring within Duskwood Dell. When the arrow strikes, the vial shatters harmlessly, releasing a gentle burst of divine essence that seeps into the wounded flesh of its target.
+@1243 = ~These arrows are an invention of Eldath’s faithful, crafted not for battle but for mercy. Each slender shaft bears a small vial of sanctified water drawn from a sacred spring. When the arrow strikes, the vial shatters, releasing a gentle burst of divine essence that seeps into the wounded flesh of its target.
 
-Though they fly as true as any weapon, these arrows cannot harm — their purpose is to mend rather than wound.
+Though the arrows are crafted for healing, even a gentle strike can bruise or cut when loosed from a powerful bow — a small price to pay for the healing they bestow.
 
 STATISTICS:
 
-THAC0: +1
-Damage: 0 
+THAC0: +1 
 Launcher: Bow
-Special: Restores 27 Hit Points to the creature struck
+Special: Restores 4d6 Hit Points to the creature struck
 
 Weight: 0~
 
@@ -1569,8 +1563,8 @@ Weight: 0~
 
 @2053 = ~Elv-Esster Aened's tomb~
 
-@2054 = ~A ghostly entity cloaked in shadows appears to invade the mind of an elven defender – the Wyrd has come.~
-@2055 = ~Elv-Esster Aened and her kin stand against the encroaching Wyrd, their spells lashing out in desperation.~
+@2054 = ~A ghostly entity cloaked in shadows appears to invade the body of a dying elf.~
+@2055 = ~Elv-Esster Aened and her kin stand against the encroaching undead, their spells lashing out in desperation.~
 @2056 = ~A surge of wild magic erupts as the mythal shatters—Elv-Esster vanishes within the blinding light.~
 
 // ACPP70 strings - the tree obstacle
