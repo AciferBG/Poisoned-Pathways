@@ -99,12 +99,23 @@ END
 */
 
 IF
-Global("AC#PP_MythUnnohyr","GLOBAL",7)
+GlobalGT("AC#PP_MythUnnohyr","GLOBAL",5)
 Global("AC#PP_SummonFlowerKid","ACPP01",0)
 THEN
 RESPONSE #100
 CreateCreature("AC#PPCHA",[365.800],12)
 SetGlobal("AC#PP_SummonFlowerKid","ACPP01",1)
+END
+
+IF
+Global("AC#PP_MythUnnohyr","GLOBAL",7)
+Global("EldathynMoveUnnohyr","ACPP01",0)
+THEN
+RESPONSE #100
+CreateCreature("AC#PPEX2",[539.1049],N)
+CreateCreature("AC#PPEY2",[529.1091],NE)
+CreateCreature("AC#PPEZ2",[589.1154],NE)
+SetGlobal("EldathynMoveUnnohyr","ACPP01",1)
 END
 
 

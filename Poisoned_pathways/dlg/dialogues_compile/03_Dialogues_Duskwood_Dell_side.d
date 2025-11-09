@@ -771,11 +771,11 @@ IF ~~ THEN REPLY ~If this is your wish, I will bring it to you.~ EXTERN AC#PPILL
 
 
 
-// "Leaves' Embrace", tavern in area ACPP11 
+// "Treetop Tavern", tavern in area ACPP11 
 BEGIN ~AC#PPELS~
 
 IF ~True()~ THEN BEGIN 0
-  SAY ~Welcome, traveler. The boughs above have whispered of your coming. You’ve found your way to Leaves' Embrace—rest, if you wish, is easily given.~ 
+  SAY ~Welcome, traveler. The boughs above have whispered of your coming. You’ve found your way to the Treetop Tavern—rest, if you wish, is easily given.~ 
   IF ~~ THEN REPLY ~What exactly do you offer here?~ GOTO chain_about_shop
   IF ~~ THEN REPLY ~Not today. Perhaps another time.~ GOTO 1
   IF ~~ THEN REPLY ~Show me what comforts you provide.~ DO ~StartStore("AC#PPELS",LastTalkedToBy())~ EXIT

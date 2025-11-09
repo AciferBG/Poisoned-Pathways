@@ -1,3 +1,36 @@
+// Eldathyns departing to Myth Unnohyr
+
+
+BEGIN AC#PPEX2
+BEGIN AC#PPEY2
+BEGIN AC#PPEZ2
+
+CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPEX2 hello_charname
+~The poison is cleansed, and Talona’s servant lies silent! You have done a great service to all who cherish life.~
+== AC#PPEY2 ~Tell us, <CHARNAME>—what of Myth Unnohyr? Could the place ever be returned to nature’s care?~
+END
+  IF ~~ THEN REPLY ~Hardly. It’s anything but safe out there.~ EXTERN AC#PPEX2 second_talk
+  IF ~~ THEN REPLY ~Of course! What could possibly go wrong?~ EXTERN AC#PPEX2 second_talk
+
+
+CHAIN AC#PPEX2 second_talk
+~Then we must see it with our own eyes.~
+== AC#PPEZ2 ~We have decided to journey there and do what we can to restore its peace.~
+== AC#PPEY2 ~It is the least we can do—to let Eldath’s grace mend what the Talonite’s evil scarred.~
+END
+  IF ~~ THEN REPLY ~I would strongly advise against it.~ EXTERN AC#PPEX2 bye
+  IF ~~ THEN REPLY ~Safe travels, and may peace go with you.~ EXTERN AC#PPEX2 bye
+
+
+CHAIN AC#PPEX2 bye
+~Our minds are set. Thanks to you, the way is open for peace to return to the old forests.~
+== AC#PPEZ2 ~Come, brothers—let us be on our way.~
+== AC#PPEY2 ~May Eldath’s gentle voice guide our steps! And yours too, <CHARNAME>!~
+DO ~SetGlobal("Eldathyn_Heading_Unnohyr","ACPP01",1)
+EscapeAreaDestroy(3)~
+EXIT
+
+  
 // Eldathyns hiding in Myth Unnohyr
 
 BEGIN AC#PPELX
@@ -185,7 +218,8 @@ IF ~~ THEN REPLY ~That is no longer my concern.~ EXTERN AC#PPMI C6.QUEST.01.04a
 IF ~~ THEN REPLY ~I had hoped that ordeal was finished. Why, in all the gods’ names, does everyone always want something else from me?~ EXTERN AC#PPMI C6.QUEST.01.04a
 
 CHAIN AC#PPMI C6.QUEST.01.04a
-~The events at Myth Unnohyr roused something ancient. Strange beings, remnants of the elven kin, now roam that place. From what I have gathered, the power reeks of elven undeath.~  
+~The events at Myth Unnohyr roused something ancient. Strange beings, remnants of the elven kin, now roam that place. From what we have gathered, the power reeks of elven undeath.~
+== AC#PPEL4 ~Three of my priests set out for Myth Unnohyr to cleanse the place. Their last message spoke of a great host of undead now dwelling within the city.~   
 END
 IF ~~ THEN REPLY ~What kind of undeath are we speaking of, exactly?~ EXTERN AC#PPMI about_wyrd
 IF ~~ THEN REPLY ~Whatever it is, it should stay there.~ EXTERN AC#PPMI about_wyrd
@@ -194,7 +228,6 @@ IF ~~ THEN REPLY ~Whatever it is, it should stay there.~ EXTERN AC#PPMI about_wy
 CHAIN AC#PPMI about_wyrd
 ~We believe that an ancient evil—the very one that brought about Myth Unnohyr’s downfall—has begun to stir once more. A creature that seizes the husks of dead elves has crept into the long-sealed sarcophagi. Someone must have removed the wardstones, allowing the being to slip within and claim their bodies.~
 END
-
 IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",0)
 Global("AC#PP_RemovedWardstone","GLOBAL",1)~ THEN REPLY ~That may well have been me.~ EXTERN AC#PPMI wyrd_player_guilty
 IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",0)~ THEN REPLY ~How could such a thing happen?~ EXTERN AC#PPEL4 wyrd_guilt_not_important
@@ -208,7 +241,7 @@ IF ~Global("AC#PP_ZombieWyrdDead","GLOBAL",1)~ THEN REPLY ~How could something s
 	IF ~~ THEN REPLY ~Perhaps I was mistaken after all.~ EXTERN AC#PPEL4 wyrd_guilt_not_important
 	
 	CHAIN AC#PPEL4 wyrd_eldathyn_guilty
-	~One of my priests set out for Myth Unnohyr after your success. It seems he wished to help a desperate zombie find final rest with his beloved—and in doing so, removed the seal. But that no longer matters. What matters now is containing this creature without delay!~ 
+	~As said, some of my priests set out for Myth Unnohyr after your success. Maybe they removed the seal. But that no longer matters. What matters now is containing this creature without delay!~ 
 	END
 	IF ~~ THEN EXTERN AC#PPMI wyrd_cont
 	
@@ -251,7 +284,9 @@ IF ~~ THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.07
 IF ~~ THEN REPLY ~I'm not interested. Sorry. There are other urgent matters that cannot wait.~ EXTERN AC#PPMI C6.QUEST.01.07
 
 CHAIN AC#PPMI wyrd_wait_for_start_bye
-~Excellent! I will set out for Myth Unnohyr at once and scout the area ahead. Meet me before the gates—once you arrive, I shall lift the barrier, and together we will enter the city.~
+~Excellent! I will set out for Myth Unnohyr at once and scout the area ahead.~ 
+== AC#PPEL4 ~And please, when you reach the place—look for my priests. They may still be somewhere within the city.~  
+== AC#PPMI ~Meet me before the gates—once you arrive, I shall lift the barrier, and together we will enter the city.~
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",10)
 SetGlobal("AC#PPChapter6Quest","GLOBAL",1)
 AddJournalEntry(@12202,QUEST)~ EXIT
@@ -281,35 +316,6 @@ CHAIN IF ~True()~ THEN AC#PPMI C6.QUEST.02.00
 END
 IF ~~ THEN REPLY ~I am.~ EXTERN AC#PPMI wyrd_wait_for_start_bye
 IF ~~ THEN REPLY ~I may need to think about this.~ EXTERN AC#PPMI C6.QUEST.01.07 
-/*
-CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",9)~ THEN AC#PPMI C6.QUEST.02.00
-~Are you prepared to face the danger in Myth Unnohyr once more?~
-END 
-//IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ EXTERN AC#PPMI depart_with_sword
-IF ~Global("AC#PP_GiveBlade","GLOBAL",0)~ EXTERN AC#PPMI depart_without_sword
-*/
-/*
-CHAIN IF ~~ THEN AC#PPMI depart_with_sword
-~If you have taken up the sword entrusted to you by the High Priest, then I can send you into Myth Unnohyr.~  
-END
-IF ~~ THEN REPLY ~I am ready.~ EXTERN AC#PPMI C6.QUEST.02.01
-IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXTERN AC#PPMI C6.QUEST.02.01_bye
-*/
-/*
-CHAIN IF ~~ THEN AC#PPMI depart_without_sword
-~I shall send you into Myth Unnohyr if you are ready.~  
-END
-IF ~~ THEN REPLY ~I am ready.~ EXTERN AC#PPMI C6.QUEST.02.01
-IF ~~ THEN REPLY ~Not yet. There is something I must attend to first.~ EXTERN AC#PPMI C6.QUEST.02.01_bye 
-
-CHAIN AC#PPMI C6.QUEST.02.01_bye
-~I will wait for you here.~
-EXIT
-
-CHAIN AC#PPMI C6.QUEST.02.01
-~Good. Follow me.~
-DO ~StartCutScene("AC#PP6CA")~ EXIT
-*/
 
 // High Ranger in Myth Unnohyr
 BEGIN AC#PPMI6
@@ -369,48 +375,75 @@ BEGIN AC#PPWYR
 //1ST FIGHT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",2)~ THEN AC#PPWYR 1.00
-~You are still meddling with my minions, in my stronghold!~
+~So you have come this far. Still clinging to your mortal cause. Brave. Or foolish.~
 END
-IF~~THEN REPLY ~Your stronghold? You are just making it more dangerous. More... dead.~ EXTERN AC#PPWYR 1.01
-IF~~THEN REPLY ~You must be the one I'm looking for. You took over the body of the elven maiden that did all she could to defend this place.~ EXTERN AC#PPWYR 1.01
-IF~~THEN REPLY ~Well, I heard there is some new monster trying to turn this place into its base, so I came. I wouldn't want to miss all the fun.~ EXTERN AC#PPWYR 1.01
+IF ~~ THEN REPLY ~You must be the one I’m looking for.~ EXTERN AC#PPWYR 1.01
+IF ~~ THEN REPLY ~I heard there’s some new horror trying to claim this place—I came to end you.~ EXTERN AC#PPWYR 1.01
 
 CHAIN AC#PPWYR 1.01
-~Just look at you. You think you can match my power?~
-==AC#PPWYR ~Believe me or not, but I am an ancient being. I saw the world crumble. I saw it being rebuilt. I've seen all that there is, the rot, the destruction, death, power, fear... and life. And I came, to be part of this.~
-==AC#PPWYR ~This elf—oh, how she loved this place. And that's why I chose it. So we—me and her—could see this place together. So we could take all the dead parts of it, and build a new enclave. Wild. Dead. And yet... alive.~
-==AC#PPWYR ~And I know you've been here before. Even then I was already humming my silent song! Lured the poisonous. Lured the wild. Lured the rotten roots. All these things weave so well with the wicked energied engraved in Myth Unnohyr's stones and walls.~
+~I was old when your gods still whispered in the dark.~
+== AC#PPWYR ~I watched this city rise and crumble, again and again. I have seen decay and rebirth, terror and worship, blood and silence... and in all of it, I endured.~
+== AC#PPWYR ~Now you come, thinking yourself its saviour. But you are only another breath, soon spent and forgotten.~
 END
-IF~~THEN REPLY ~So you knew about the Talonite that made his base here? And you lured the monsters that came here?~ EXTERN AC#PPWYR 1.02
-IF~~THEN REPLY ~It looks like some's been one busy wyrd!~ EXTERN AC#PPWYR 1.03
+IF ~~ THEN EXTERN AC#PPWYR hunger_01
 
-CHAIN AC#PPWYR 1.02
-~Partially. All these things were here. I just hummed my song.~
-EXTERN AC#PPWYR 1.03
-
-CHAIN AC#PPWYR 1.03
-~You may think that what I am doing here is... evil. Oh, you living things love that word. You want to call thing evil. Wrong. Bad. But I am none of these things. I am ancient. I am above all of this.~
-==AC#PPWYR ~However, some could say that I am hungry. Just as hungry as Myth Unnohyr and the earth below it! It's already swallowed part of this place before. This time, however, we will feed on dreams, and hopes, and life and... those that dared to came. And it looks like you are on that list.~
+CHAIN AC#PPWYR hunger_01
+~I hunger as the earth beneath Myth Unnohyr hungers. It swallowed part of this city once before, and it will again. This time, we shall feast on the living and on all who dare to come. It seems your name was written among them.~
 END
-IF~~THEN REPLY ~You won't win this.~ EXTERN AC#PPWYR 1.04
-IF~~THEN REPLY ~I came armed. You're not going to defeat me, monsters. I shall be your doom.~ EXTERN AC#PPWYR 1.04
-IF~~THEN REPLY ~I suppose it was a mistake to come here. Let me leave. I'm not going to fight you. I changed my mind.~ EXTERN AC#PPWYR 1.05
+IF ~~ THEN REPLY ~You won't win this.~ EXTERN AC#PPWYR 1.04
+IF ~~ THEN REPLY ~You will not defeat me, monster. I shall be your doom.~ EXTERN AC#PPWYR 1.04
+IF ~~ THEN REPLY ~Perhaps I made a mistake coming here. Let me go — I have no wish to fight you.~ EXTERN AC#PPWYR 1.05
 
 CHAIN AC#PPWYR 1.04
-~Do not make promises that you are unable to hold.~
+~Do not make vows your frail flesh cannot keep.~  
 EXTERN AC#PPWYR 1.06
 
 CHAIN AC#PPWYR 1.05
-~No. It's too late for you. You will be consumed by us. By this place. Your bones will become part of it.~
+~No escape. It is far too late for that. You will be consumed — by me, by this place, by the hunger that binds us all. Your bones will rest in its soil, your name forgotten in its silence.~
 EXTERN AC#PPWYR 1.06
 
 CHAIN AC#PPWYR 1.06
-~Let's test your weapons and your will!~
+~Come then... let us see what remains of your courage when death itself takes notice.~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",3) 
-Enemy()~ EXIT
+Enemy()~ 
+EXIT
 
+// Pretending to be dying
+CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",4)~ THEN AC#PPWYR 2.00
+~No... you killed me... How dare you? Argh...~
+DO ~SetGlobal("AC#PP_Killed_Wyrd_1_time","GLOBAL",1) 
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("AC#PP6C8")~ EXIT
+
+BEGIN ~AC#PPWY9~ 
+CHAIN IF ~Global("AC#PP_Killed_Wyrd_1_time","GLOBAL",1)~ THEN AC#PPWY9 hello_reincarnated
+~My beautiful symbiotes link me to this place. You cannot defeat me, but—I encourage you to try. I want to see you tired. I want to see you lose all hope.~
+END
+IF~~THEN REPLY ~Symbiotes?~ EXTERN AC#PPWY9 2.01
+IF~~THEN REPLY ~I will find some way to destroy you!~ EXTERN AC#PPWY9 2.02
+
+CHAIN AC#PPWY9 2.01
+~Well, everyone has their ways to control the flow of power. And they are mine. But that knowledge will give you nothing. I am too powerful for you, with or without them!~
+EXTERN AC#PPWY9 2.03
+
+CHAIN AC#PPWY9 2.02
+~You are clearly a dreamer, haha!~
+EXTERN AC#PPWY9 2.03
+
+CHAIN AC#PPWY9 2.03
+~I shall watch how you struggle. Remember that. Go. Do you best. And let me enjoy the spectacle, little one.~
+DO ~SetGlobal("AC#PP_Killed_Wyrd_1_time","GLOBAL",2)
+SetGlobal("AC#PPChapter6Quest","GLOBAL",5) 
+AddJournalEntry(@12209,QUEST)
+StartCutSceneMode() 
+Wait(1) 
+ScreenShake([20.45],15) 
+Wait(2) 
+EndCutSceneMode() 
+DestroySelf()~ EXIT
 //2ND TALK - HURT 
-
+/*
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",4)~ THEN AC#PPWYR 2.00
 ~You are putting a lot of effort in all of this. It's almost impressive. But this place is mine, and I shall leave just as long as the half-dead and half-wild nature of this place.~
 ==AC#PPWYR ~My beautiful symbiotes link me to this place. You cannot defeat me, but—I encourage you to try. I want to see you tired. I want to see you lose all hope.~
@@ -436,6 +469,7 @@ ScreenShake([20.45],15)
 Wait(2) 
 EndCutSceneMode() 
 DestroySelf()~ EXIT
+*/
 
 //HELPER 
 

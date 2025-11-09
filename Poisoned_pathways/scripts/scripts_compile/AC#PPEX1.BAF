@@ -1,0 +1,7 @@
+IF
+    Global("Eldathyn_Heading_Unnohyr","ACPP01",1)
+THEN
+    RESPONSE #100
+        EscapeAreaDestroy(3)
+END
+

@@ -41,6 +41,7 @@ IF
 THEN
     RESPONSE #100
         CreateCreature("AC#PPWYR",[650.490],SSW)  // Wild Wyrd
+        CreateCreature("AC#PPSD1",[754.459],S)  // No such index
         SetGlobal("AC#PP_CH6_ENEMIES","ACPP77",1)
 END
 

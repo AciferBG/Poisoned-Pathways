@@ -69,6 +69,8 @@
 @76 = ~Brother Elonar~
 @77 = ~Brother Meyndel~
 @78 = ~Brother Thalen~
+@79 = ~Warden of the Day~
+@80 = ~Warden of the Night~
 
 
 // cre soundfiles
@@ -167,7 +169,7 @@
 //sto files
 @950 = ~Temple of Eldath~
 @951 = ~Calmfire's Scrolls~
-@952 = ~The Leaves' Embrace~
+@952 = ~Treetop Tavern~
 @953 = ~Debbie's Undoubtful Weapons & Goods~
 @954 = ~Woodcarver~
 @955 = ~Zar’khaan's wonders~

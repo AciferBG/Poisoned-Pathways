@@ -1,0 +1,13 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("AC#PPWYR")  // The Wyrd of Myth Unnohyr
+        ReallyForceSpellRES("AC#PP19","AC#PPSD1")  // Animate Dead
+        Wait(1)
+        CreateVisualEffectObject("SPFLESHS",Myself)
+        EndCutSceneMode()
+        ReallyForceSpell("AC#PPSD1",BEHOLDER_BLAST_VISUAL2)  // No such index
+        DestroySelf()
+END
+

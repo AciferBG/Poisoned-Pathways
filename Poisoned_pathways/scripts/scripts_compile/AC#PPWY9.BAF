@@ -1,0 +1,7 @@
+IF
+    Global("AC#PP_Killed_Wyrd_1_time","GLOBAL",1)
+THEN
+    RESPONSE #100
+        StartDialogueNoSet([PC])
+END
+

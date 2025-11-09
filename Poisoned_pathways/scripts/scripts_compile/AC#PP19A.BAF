@@ -1,0 +1,10 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        Wait(1)
+        CreateVisualEffectObject("SPFLESHS",Myself)
+        SmallWait(15)
+        ChangeAnimation("AC#PPWY9")  // The Wyrd of Myth Unnohyr
+END
+

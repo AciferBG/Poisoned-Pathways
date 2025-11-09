@@ -2,6 +2,36 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPEZ2.cre~ ~override~       // Eldathyn heading to Myth Unnohyr
+SAY NAME1 @78 SAY NAME2 @78
+  SAY INITIAL_MEETING @307
+  SAY SELECT_COMMON1 @303
+  SAY SELECT_COMMON2 @301
+  SAY SELECT_COMMON3 @304
+  SAY SELECT_COMMON4 @305
+  SAY SELECT_COMMON5 @306
+  SAY SELECT_COMMON6 @307
+
+COPY ~%MOD_FOLDER%/cre/AC#PPEY2.cre~ ~override~       // Eldathyn heading to Myth Unnohyr
+SAY NAME1 @77 SAY NAME2 @77
+  SAY INITIAL_MEETING @307
+  SAY SELECT_COMMON1 @303
+  SAY SELECT_COMMON2 @301
+  SAY SELECT_COMMON3 @304
+  SAY SELECT_COMMON4 @305
+  SAY SELECT_COMMON5 @306
+  SAY SELECT_COMMON6 @307
+
+COPY ~%MOD_FOLDER%/cre/AC#PPEX2.cre~ ~override~       // Eldathyn heading to Myth Unnohyr
+SAY NAME1 @76 SAY NAME2 @76
+  SAY INITIAL_MEETING @307
+  SAY SELECT_COMMON1 @303
+  SAY SELECT_COMMON2 @301
+  SAY SELECT_COMMON3 @304
+  SAY SELECT_COMMON4 @305
+  SAY SELECT_COMMON5 @306
+  SAY SELECT_COMMON6 @307
+
 COPY ~%MOD_FOLDER%/cre/AC#PPELZ.cre~ ~override~       // Eldathyn in Myth Unnohyr
 SAY NAME1 @78 SAY NAME2 @78
   SAY INITIAL_MEETING @307
@@ -44,9 +74,11 @@ SAY NAME1 @74 SAY NAME2 @74
 COPY ~%MOD_FOLDER%/cre/AC#PPMA1.cre~ ~override~       // man waiting behind the temple of Helm in Bridge District
 SAY NAME1 @74 SAY NAME2 @74
 
-COPY ~%MOD_FOLDER%/cre/AC#PPDBD.cre~ ~override~       // day skeleton
+COPY ~%MOD_FOLDER%/cre/AC#PPDBD.cre~ ~override~       // day skeleton: warden of the day
+SAY NAME1 @79 SAY NAME2 @79
 
 COPY ~%MOD_FOLDER%/cre/AC#PPDBN.cre~ ~override~       // night skeleton
+SAY NAME1 @80 SAY NAME2 @80
 
 COPY ~%MOD_FOLDER%/cre/AC#PPHEZ.cre~ ~override~       // Hezrou
 SAY NAME1 @73 SAY NAME2 @73
@@ -434,6 +466,10 @@ COPY ~%MOD_FOLDER%/cre/AC#PPWY7.cre~ ~override~ // WILD WYRD
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#WYRD~))
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWY8.cre~ ~override~ // WILD WYRD
+  SAY NAME1 @46 SAY NAME2 @46
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#WYRD~))
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPWY9.cre~ ~override~ // WILD WYRD
   SAY NAME1 @46 SAY NAME2 @46
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#WYRD~))
 
