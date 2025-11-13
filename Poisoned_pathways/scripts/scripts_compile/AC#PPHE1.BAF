@@ -1,0 +1,10 @@
+IF
+    See([PC])
+    InMyArea(Player1)
+    Global("AC#PPChapter6Quest","GLOBAL",6)
+THEN
+    RESPONSE #100
+        Wait(1)
+        StartDialogueNoSet(Player1)
+END
+

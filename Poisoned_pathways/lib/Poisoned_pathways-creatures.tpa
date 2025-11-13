@@ -482,7 +482,10 @@ COPY ~%MOD_FOLDER%/cre/AC#PPSYM.cre~ ~override~ // Gruesome Symbiote
   
 COPY ~%MOD_FOLDER%/cre/AC#PPHEL.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP70
   SAY NAME1 @49 SAY NAME2 @49
-  
+
+COPY ~%MOD_FOLDER%/cre/AC#PPHE1.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP70
+  SAY NAME1 @49 SAY NAME2 @49
+
 COPY ~%MOD_FOLDER%/cre/AC#PPHE2.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP90
   SAY NAME1 @49 SAY NAME2 @49
   

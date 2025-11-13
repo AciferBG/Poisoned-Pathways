@@ -442,7 +442,7 @@ StartCutScene("AC#PP6C8")~ EXIT
 // Reincarnated Wyrd
 BEGIN ~AC#PPWY9~
 CHAIN IF ~Global("AC#PP_Killed_Wyrd_1_time","GLOBAL",1)~ THEN AC#PPWY9 hello_reincarnated
-~Here I am again! Did you truly think you could slay me that easily? I cannot die in this place. Each time I am reborn within the shell of another dead elf. I don the bodies of this ruined city as you mortals don your garments. THAT is my true power.~
+~Ha! Did you truly think you could slay me that easily? I cannot die in this place. Each time I am reborn within the shell of another dead elf. I don the bodies of this ruined city as you mortals don your garments. THAT is my true power.~
 END
 IF ~~ THEN EXTERN AC#PPWY9 hello_reincarnated_02
 
@@ -466,9 +466,37 @@ Wait(1)
 EndCutSceneMode()
 DestroySelf()~ EXIT
 
+// HELPER – New 
+BEGIN AC#PPHE1
+
+CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",6)~ THEN AC#PPHE1 hello_seek_rose
+~You have struck the Undying down! He has risen again — but this proves he can be defeated!~
+END
+IF ~~ THEN REPLY ~He rose again the moment he fell. I hardly call that a success.~ EXTERN AC#PPHE1 about_rose
+IF ~~ THEN REPLY ~It was a beginning, at least.~ EXTERN AC#PPHE1 about_rose
+IF ~~ THEN REPLY ~I'll strike him down as many times as it takes!~ EXTERN AC#PPHE1 about_rose
+
+CHAIN AC#PPHE1 about_rose
+~The Undying wishes you to believe that you cannot stop him, that your struggle is futile. It is not. By felling him once, you have shaken the ancient power of the Mythal. Subtly — too faint for mortals to sense — but we, the once-living of this place, we feel it clearly.~
+== AC#PPHE1 ~You must call upon our god to suppress the corrupted Mythal! Only then can the Undying be defeated once and for all.~
+END
+IF ~~ THEN REPLY ~How am I supposed to do that? There’s little left of the old splendor here.~ EXTERN AC#PPHE1 seek_rose_01
+IF ~~ THEN REPLY ~I will do whatever it takes to destroy that undead monstrosity!~ EXTERN AC#PPHE1 seek_rose_01
+
+CHAIN AC#PPHE1 seek_rose_01
+~Seek something in this city that has not been corrupted… something that still carries the old magic of our once-great home. Look for a rose that has not withered — the last living remnant of Myth Unnohyr’s grace. Lay it at the feet of Mythrien’s statue in his forgotten temple. Through that offering, he may pierce the fog that shrouds this place.~
+== AC#PPHE1 ~Call upon our god. Heal this wounded city and let peace return within these walls.~
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9)
+AddJournalEntry(@12212,QUEST)
+CreateVisualEffectObject("SPFLESHS",Myself)
+Wait(1)
+DestroySelf()~ EXIT
+
+
+ 
 
 //HELPER 
-
+/*
 BEGIN AC#PPHEL
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",6)~ THEN AC#PPHEL HELPER.1.00
@@ -540,7 +568,7 @@ CHAIN AC#PPHEL HELPER.2.08
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9)
 AddJournalEntry(@12212,QUEST)
  CreateVisualEffect("AC#PPBUR",[2230.800]) DestroySelf()~ EXIT
-
+*/
 
 
 //MYTHRIEN SUMMONED
@@ -558,59 +586,50 @@ IF~~THEN REPLY ~We need your strength, Mythrien.~ EXTERN AC#PPMYT 01.02
 IF~~THEN REPLY ~You dwell on ruin, yet spirits still cling to you. Do you not see?~ EXTERN AC#PPMYT 01.01
 
 CHAIN AC#PPMYT 01.01
-~^0xFF8FAD5DTo chastise the Seldarine is folly… yet your words hold more than rebuke. Speak then. ^-~
+~^0xFF8FAD5DTo chastise the Seldarine is folly… yet your words hold more than rebuke. ^-~
 EXTERN AC#PPMYT 01.02
 
 CHAIN AC#PPMYT 01.02
-~^0xFF8FAD5DAh. The Rose… not by chance. Who guided your hand? For what end? ^-~
+~^0xFF8FAD5DTo what end do you seek the Watcher of Mythals? Speak then. ^-~
 END
-IF~~THEN REPLY ~This city’s Mythal is shattered. A wyrd has seized your champion’s body. We must end it, and give these souls peace.~ EXTERN AC#PPMYT myth_unnohyr_not_forgotten
-IF~~THEN REPLY ~Elv-Esster Aened, your faithful, is defiled. The wyrd twists spirit and magic alike. We cannot prevail without you.~ EXTERN AC#PPMYT 01.03
-IF~~THEN REPLY ~I want to leave this place as soon as possible. For that, I need your help.~ EXTERN AC#PPMYT myth_unnohyr_not_forgotten
-
-CHAIN AC#PPMYT 01.03
-~^0xFF8FAD5DElv-Esster Aened… yes. I recall her vow. ^-~
-END
-IF~~THEN EXTERN AC#PPMYT myth_unnohyr_not_forgotten
-
+IF ~~ THEN REPLY ~This city’s Mythal is shattered. An undead who calls himself the Undying has seized these ruins. We must end him and grant peace to the souls trapped here.~ EXTERN AC#PPMYT myth_unnohyr_not_forgotten
+IF ~~ THEN REPLY ~I wish to leave this place in one piece — and for that, I require your help.~ EXTERN AC#PPMYT myth_unnohyr_not_forgotten
 
 CHAIN AC#PPMYT myth_unnohyr_not_forgotten 
-~^0xFF8FAD5DI thought Unnohyr forgotten, its Weave dissolved. Yet the Rose still breathes, and rites yet whispered… perhaps not wholly forsaken. ^-~
-==AC#PPMYT ~^0xFF8FAD5DA wyrd, swelling on broken currents… strange, for such a thing is weak without the wound of a Mythal to feed it. Before I act, tell me: Is this ruin still worth salvation? ^-~
+~^0xFF8FAD5DI thought Unnohyr forgotten, its Weave dissolved. Yet roses still bloom, rites still whisper... perhaps it is not wholly forsaken. ^-~
+==AC#PPMYT ~^0xFF8FAD5DThe Undying is swelling on broken currents… strange, for such a thing is weak without the wound of a Mythal to feed it. Before I act, tell me: Is this ruin still worth salvation? ^-~
 END
 IF~~THEN REPLY ~Yes. It must be.~ EXTERN AC#PPMYT 01.04
 IF~Race(Player1,ELF)~THEN REPLY ~Yes. It is our home, Mythrien.~ EXTERN AC#PPMYT 01.04
-IF~~THEN REPLY ~No. Ruins only. But the wyrd must fall.~ EXTERN AC#PPMYT 01.05
+IF~~THEN REPLY ~No. Ruins only. But the undead must fall.~ EXTERN AC#PPMYT 01.05
 
 CHAIN AC#PPMYT 01.04
 ~^0xFF8FAD5DSo be it. ^-~
 EXTERN AC#PPMYT 01.06
 
 CHAIN AC#PPMYT 01.05
-~^0xFF8FAD5DYet even in dismissal, I hear Eldath's and Khalreshaar’s breath among these woods. Not all seems lost. ^-~
+~^0xFF8FAD5DYet even in dismissal, I hear a breath of peace among these woods. Not all seems lost. ^-~
 EXTERN AC#PPMYT 01.06
 
 CHAIN AC#PPMYT 01.06
 ~^0xFF8FAD5DKnow this: I cannot descend with sword in hand. My essence is too frayed, my avatar bound. ^-~
-==AC#PPMYT ~^0xFF8FAD5DYours must be the struggle. Yet I shall unbind the flow that fattens the wyrd—no longer shall this broken Mythal lend it strength. ^-~
+==AC#PPMYT ~^0xFF8FAD5DYours must be the struggle. Yet I shall unbind the flow that fattens the Undying—no longer shall this broken Mythal lend him strength. ^-~
 ==AC#PPMYT ~^0xFF8FAD5DThe Weave here will remain wild or dead to gentle touch, perilous to all… but no more shall the corruption swell against you. ^-~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",15) StartCutScene("AC#PP6C4")~ EXIT
 
 
 //Mythal fixed against wyrd
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",16)~ THEN AC#PPMYT 02.00
-~^0xFF8FAD5DThe price is paid… may it not be in vain. ^-~
+~^0xFF8FAD5DThe price is paid. May it not be in vain. ^-~
 END
 IF~~THEN REPLY ~What happened?~ EXTERN AC#PPMYT 02.01
-IF~~THEN REPLY ~Have you—~ EXTERN AC#PPMYT 02.01
 
 CHAIN AC#PPMYT 02.01
-~^0xFF8FAD5DI have not mended this Mythal. Its wounds run deeper than my hands may reach. ^-~
-==AC#PPMYT ~^0xFF8FAD5DBut I poured a fragment of my essence into its breach, and the wyrd shall drink here no longer. The broken weave will still twist, will still fall dead at times... yet its corruption shall not rise to feed your foe. ^-~
+~^0xFF8FAD5DI poured a fragment of my essence into the Mythal, and the Undying shall drink from it no longer. The broken weave still twists and falls dead at times... yet its corruption shall not rise to feed your foe. ^-~
 END
-IF~~THEN REPLY ~Hah! I’d love to see the wyrd’s face—if it had one.~ EXTERN AC#PPMYT 02.02
+IF~~THEN REPLY ~Hah! I’d love to see the Undying’s face—if it had one.~ EXTERN AC#PPMYT 02.02
 IF~~THEN REPLY ~Will that be enough?~ EXTERN AC#PPMYT 02.02
-IF~~THEN REPLY ~So… you only weakened it?~ EXTERN AC#PPMYT 02.03
+IF~~THEN REPLY ~So you only weakened it? Disappointing.~ EXTERN AC#PPMYT 02.03
 
 CHAIN AC#PPMYT 02.02
 ~^0xFF8FAD5DIt is all that can be given. It must suffice. ^-~
@@ -631,8 +650,7 @@ CHAIN IF ~GlobalGT("AC#PPChapter6Quest","GLOBAL",16)
 GlobalLT("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT hello_all_fixed
 ~^0xFF8FAD5DHave you brought the wyrd to its end? ^-~
 END
-//IF~Dead("AC#PPWYR")~THEN REPLY ~Yes. The wyrd is no more.~ EXTERN AC#PPMYT FINALE.00
-IF~~THEN REPLY ~Yes. The wyrd is no more.~ EXTERN AC#PPMYT FINALE.00
+IF~Dead("AC#PPWYR")~THEN REPLY ~Yes. The wyrd is no more.~ EXTERN AC#PPMYT FINALE.00
 IF~~THEN REPLY ~No, not yet.~ EXTERN AC#PPMYT wait_wyrd_defeat_bye
 
 CHAIN AC#PPMYT wait_wyrd_defeat_bye

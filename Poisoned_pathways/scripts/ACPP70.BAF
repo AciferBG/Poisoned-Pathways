@@ -279,6 +279,16 @@ IF
     Global("AC#PPChapter6Quest","GLOBAL",10)
 THEN
     RESPONSE #100
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",11)
+        AddJournalEntry(@12213,QUEST)
+END
+
+/*
+IF
+    PartyHasItem("AC#PPGRQ")  // Green Rose of Mythrien
+    Global("AC#PPChapter6Quest","GLOBAL",10)
+THEN
+    RESPONSE #100
         StartCutSceneMode()
         ClearAllActions()
         SetGlobal("AC#PPChapter6Quest","GLOBAL",11)
@@ -295,6 +305,7 @@ THEN
         EndCutSceneMode()
         AddJournalEntry(@12213,QUEST)
 END
+*/
 
 IF
     Global("OpenTreeDoor","ACPP70",1)
@@ -498,13 +509,13 @@ Global("AC#PPChapter6Quest","GLOBAL",5)
 Global("AC#PPCreateWeirdling","ACPP70",0)
 THEN
 RESPONSE #100
-CreateCreature("AC#PPSYM",[1270.2170],1)
+//CreateCreature("AC#PPSYM",[1270.2170],1)
 CreateCreature("AC#PPSPI",[1170.2170],1)
 CreateCreature("AC#PPSPI",[1370.2170],0)
-CreateCreature("AC#PPSYM",[440.1575],1)
+//CreateCreature("AC#PPSYM",[440.1575],1)
 CreateCreature("AC#PPSPI",[390.2170],2)
 CreateCreature("AC#PPSPI",[430.1665],9)
-CreateCreature("AC#PPSYM",[3900.2000],1)
+//CreateCreature("AC#PPSYM",[3900.2000],1)
 CreateCreature("AC#PPSPI",[3810.2020],9)
 CreateCreature("AC#PPSPI",[4000.1920],4)
 CreateCreature("AC#PPSPI",[3750.2170],2)
@@ -524,6 +535,15 @@ SetGlobal("AC#PPCreateWeirdling","ACPP70",1)
 END
 
 IF
+    Global("AC#PPChapter6Quest","GLOBAL",5)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPHE1",[3860.389],NNE)
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",6)
+END
+
+/*
+IF
     NumDead("AC#PPSYM",3)  // Blood-Soaked Spirit
     CombatCounter(0)
     Global("AC#PPChapter6Quest","GLOBAL",5)
@@ -539,6 +559,7 @@ THEN
         Wait(1)
         EndCutSceneMode()
 END
+*/
 
 IF
 Global("AC#PPChapter6Quest","GLOBAL",11)
