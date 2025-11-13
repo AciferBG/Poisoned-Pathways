@@ -1,0 +1,9 @@
+IF
+    OR(2)
+        Global("AC#PP70_Eldathyn_Leave","GLOBAL",1)
+        Global("AC#PP90_Eldathyn_Leave","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+

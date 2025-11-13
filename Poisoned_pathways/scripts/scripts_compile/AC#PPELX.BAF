@@ -1,4 +1,13 @@
 IF
+    AreaCheck("ACPP90")
+    See([PC])
+THEN
+    RESPONSE #100
+        Wait(1)
+        StartDialogueNoSet([PC])
+END
+
+IF
     NumberOfTimesTalkedTo(0)
     See([PC])
 THEN

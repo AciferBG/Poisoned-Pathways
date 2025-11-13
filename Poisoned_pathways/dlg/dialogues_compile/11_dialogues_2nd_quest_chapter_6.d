@@ -37,6 +37,30 @@ BEGIN AC#PPELX
 BEGIN AC#PPELY
 BEGIN AC#PPELZ
 
+// second meeting in area ACPP90
+CHAIN IF ~AreaCheck("ACPP90")~ THEN AC#PPELX hello_acpp90
+~You have cleansed this place! The air itself feels whole again... How did you manage such a wonder?~
+END
+  IF ~~ THEN REPLY ~I’m not entirely sure myself.~ EXTERN AC#PPELY acpp90_bye
+  IF ~~ THEN REPLY ~It was Mythrien Sarath’s doing.~ EXTERN AC#PPELZ acpp90_mythrien
+
+CHAIN AC#PPELZ acpp90_mythrien
+~Mythrien himself set his hand upon this place?~
+== AC#PPELY ~Then a true miracle has taken root here!~
+END
+  IF ~~ THEN EXTERN AC#PPELY acpp90_bye
+
+CHAIN AC#PPELY acpp90_bye
+~However it came to pass, we are grateful. The grove breathes gently once more, as if waking from a long nightmare.~
+== AC#PPELX ~Come, brothers — our task here is done. Let us not disturb the peace that has returned.~
+== AC#PPELZ ~Let the land heal in quiet. It belongs to itself again.~
+== AC#PPELX ~Farewell, <CHARNAME>. May Eldath’s calm ever follow your steps.~
+DO ~SetGlobal("AC#PP90_Eldathyn_Leave","GLOBAL",1)
+EscapeArea()~
+EXIT
+
+
+
 // First meeting
 CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPELX hello_charname
 ~A friendly face in this blighted place... we did not dare hope for it. Eldath be praised!~
@@ -409,7 +433,7 @@ EXIT
 
 // Pretending to be dying
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",4)~ THEN AC#PPWYR 2.00
-~No... you killed me... How dare you? Argh...~
+~No! You killed me? How dare you! Argh... how horribly inconvenient!~
 DO ~SetGlobal("AC#PP_Killed_Wyrd_1_time","GLOBAL",1) 
 ClearAllActions()
 StartCutSceneMode()
@@ -418,7 +442,7 @@ StartCutScene("AC#PP6C8")~ EXIT
 // Reincarnated Wyrd
 BEGIN ~AC#PPWY9~
 CHAIN IF ~Global("AC#PP_Killed_Wyrd_1_time","GLOBAL",1)~ THEN AC#PPWY9 hello_reincarnated
-~Here I am again! Did you truly think you could slay me so easily? I cannot die in this place. Each time I am reborn within the shell of another dead elf. I don the bodies of this ruined city as you mortals don your garments. THAT is my true power.~
+~Here I am again! Did you truly think you could slay me that easily? I cannot die in this place. Each time I am reborn within the shell of another dead elf. I don the bodies of this ruined city as you mortals don your garments. THAT is my true power.~
 END
 IF ~~ THEN EXTERN AC#PPWY9 hello_reincarnated_02
 
@@ -442,34 +466,6 @@ Wait(1)
 EndCutSceneMode()
 DestroySelf()~ EXIT
 
-//2ND TALK - HURT 
-/*
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",4)~ THEN AC#PPWYR 2.00
-~You are putting a lot of effort in all of this. It's almost impressive. But this place is mine, and I shall leave just as long as the half-dead and half-wild nature of this place.~
-==AC#PPWYR ~My beautiful symbiotes link me to this place. You cannot defeat me, but—I encourage you to try. I want to see you tired. I want to see you lose all hope.~
-END
-IF~~THEN REPLY ~Symbiotes?~ EXTERN AC#PPWYR 2.01
-IF~~THEN REPLY ~I will find some way to destroy you!~ EXTERN AC#PPWYR 2.02
-
-CHAIN AC#PPWYR 2.01
-~Well, everyone has their ways to control the flow of power. And they are mine. But that knowledge will give you nothing. I am too powerful for you, with or without them!~
-EXTERN AC#PPWYR 2.03
-
-CHAIN AC#PPWYR 2.02
-~You are clearly a dreamer, haha!~
-EXTERN AC#PPWYR 2.03
-
-CHAIN AC#PPWYR 2.03
-~I shall watch how you struggle. Remember that. Go. Do you best. And let me enjoy the spectacle, little one.~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",5) 
-AddJournalEntry(@12209,QUEST)
-StartCutSceneMode() 
-Wait(1) 
-ScreenShake([20.45],15) 
-Wait(2) 
-EndCutSceneMode() 
-DestroySelf()~ EXIT
-*/
 
 //HELPER 
 
