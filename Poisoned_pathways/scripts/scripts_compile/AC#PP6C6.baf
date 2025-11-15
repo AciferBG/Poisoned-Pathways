@@ -2,15 +2,11 @@ IF
     True()
 THEN
     RESPONSE #100
-        CutSceneId(Player1)
-        StartCutSceneMode()
-        ClearAllActions()
+       CutSceneId("AC#PPWYR")  // The Undying
+        MoveViewObject("AC#PPSD1",INSTANT)  // No such index
+        CreateCreatureObjectOffset("CUTSPY","AC#PPSD1",[3.3])  // No such index
+        ReallyForceSpellRES("AC#PP19","AC#PPSD1")  // Animate Dead
         Wait(1)
-        CreateVisualEffect("SPPORTAL",[3900.570])
-        Wait(2)
-        CreateCreature("AC#PPMYT",[3900.570],6)
-        SetGlobal("AC#PPChapter6Quest","GLOBAL",19)
-        Wait(2)
-        MultiPlayerSync()
         EndCutSceneMode()
 END
+

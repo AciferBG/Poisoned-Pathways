@@ -1,76 +1,75 @@
 IF
-	Die()
+    Die()
 THEN
-	RESPONSE #100
-		CreateVisualEffectObject("SPUNHOLY",Myself)
-		DestroySelf()
+    RESPONSE #100
+        CreateVisualEffectObject("SPUNHOLY",Myself)
+        DestroySelf()
 END
 
 IF
-Dead("AC#PPWYR")
-Global("AC#PPKillMyselfNow","LOCALS",0)
+    Dead("AC#PPWYR")  // The Undying
 THEN
-RESPONSE #100
-SetGlobal("AC#PPKillMyselfNow","LOCALS",1)
-Kill(Myself)
+    RESPONSE #100
+        DestroySelf()
 END
 
 IF
-RandomNum(5,1)
-See(NearestEnemyOf(Myself))
-Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+    RandomNum(5,1)
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPSoulAttackWithSpells","LOCALS",0)
 THEN
-RESPONSE #100
-DisplayStringHead(Myself,@2024)
-SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
-ForceSpell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON)
+    RESPONSE #100
+        DisplayStringHead(Myself,109810)  // Blood... All I can see is blood!
+        SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON)  // SPWI412.SPL (Greater Malison)
 END
 
 IF
-RandomNum(5,2)
-See(NearestEnemyOf(Myself))
-Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+    RandomNum(5,2)
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPSoulAttackWithSpells","LOCALS",0)
 THEN
-RESPONSE #100
-DisplayStringHead(Myself,@2025)
-SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
-ForceSpell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)
+    RESPONSE #100
+        DisplayStringHead(Myself,109811)  // Free me! Please!
+        SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
 
 IF
-RandomNum(5,3)
-See(NearestEnemyOf(Myself))
-Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+    RandomNum(5,3)
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPSoulAttackWithSpells","LOCALS",0)
 THEN
-RESPONSE #100
-SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
-ForceSpell(Myself,WIZARD_STRENGTH)
+    RESPONSE #100
+        SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+        ForceSpell(Myself,WIZARD_STRENGTH)  // SPWI214.SPL (Strength)
 END
 
 IF
-RandomNum(5,4)
-See(NearestEnemyOf(Myself))
-Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+    RandomNum(5,4)
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPSoulAttackWithSpells","LOCALS",0)
 THEN
-RESPONSE #100
-SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
-ForceSpell(NearestEnemyOf(Myself),WIZARD_GLITTERDUST)
+    RESPONSE #100
+        SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
 
 IF
-RandomNum(5,5)
-See(NearestEnemyOf(Myself))
-Global("AC#PPSoulAttackWithSpells","LOCALS",0)
+    RandomNum(5,5)
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPSoulAttackWithSpells","LOCALS",0)
 THEN
-RESPONSE #100
-SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
-ForceSpell(NearestEnemyOf(Myself),WIZARD_FIRE_SHIELD_RED)
+    RESPONSE #100
+        SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_FIRE_SHIELD_RED)  // SPWI418.SPL (Fire Shield (Red))
 END
 
 IF
-Global("AC#PPSoulAttackWithSpells","LOCALS",1)
-See(NearestEnemyOf(Myself))
+    Global("AC#PPSoulAttackWithSpells","LOCALS",1)
+    See(NearestEnemyOf(Myself))
 THEN
-RESPONSE #100
-AttackReevaluate(NearestEnemyOf(Myself),10)
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),10)
 END
+

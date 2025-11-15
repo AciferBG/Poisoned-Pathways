@@ -401,12 +401,13 @@ BEGIN AC#PPWYR
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",2)~ THEN AC#PPWYR 1.00
 ~So you have come this far. Still clinging to your mortal cause. Brave. Foolish.~
 END
-IF ~~ THEN REPLY ~You must be the one I’m looking for.~ EXTERN AC#PPWYR 1.01
-IF ~~ THEN REPLY ~I heard there’s some new horror trying to claim this place—I came to end you.~ EXTERN AC#PPWYR 1.01
+IF ~~ THEN REPLY ~You are the one I’m looking for!~ EXTERN AC#PPWYR 1.01
+IF ~~ THEN REPLY ~Your terror ends here. I will free this city and the souls trapped within it.~ EXTERN AC#PPWYR 1.01
+IF ~~ THEN REPLY ~Well, you certainly look the part. Now let’s see if you die as well as you boast.~ EXTERN AC#PPWYR 1.01
+
 
 CHAIN AC#PPWYR 1.01
-~I was old when your gods still whispered in the dark.~
-== AC#PPWYR ~I watched this city rise and crumble. I have seen birth and decay, blood and silence. And in all of it, I endured. You are only another breath, soon spent and forgotten.~
+~You are only another breath, soon spent and forgotten. I watched this city rise and crumble. I have seen birth and decay, blood and silence. And in all of it, I endured.~
 END
 IF ~~ THEN EXTERN AC#PPWYR hunger_01
 
@@ -464,6 +465,7 @@ StartCutSceneMode()
 CreateVisualEffectObject("SPFLESHS",Myself)
 Wait(1)
 EndCutSceneMode()
+ActionOverride("CUTSPY",DestroySelf())
 DestroySelf()~ EXIT
 
 // HELPER – New 
@@ -478,14 +480,32 @@ IF ~~ THEN REPLY ~I'll strike him down as many times as it takes!~ EXTERN AC#PPH
 
 CHAIN AC#PPHE1 about_rose
 ~The Undying wishes you to believe that you cannot stop him, that your struggle is futile. It is not. By felling him once, you have shaken the ancient power of the Mythal. Subtly — too faint for mortals to sense — but we, the once-living of this place, we feel it clearly.~
-== AC#PPHE1 ~You must call upon our god to suppress the corrupted Mythal! Only then can the Undying be defeated once and for all.~
+== AC#PPHE1 ~You must call upon our old patron deity Mythrien Sarath to heal the corrupted Mythal. Only he can help to defeat the Undying once and for all.~
 END
-IF ~~ THEN REPLY ~How am I supposed to do that? There’s little left of the old splendor here.~ EXTERN AC#PPHE1 seek_rose_01
+IF ~~ THEN REPLY ~Mythrien Sarath? Never heard of him. Who’s that supposed to be?~ EXTERN AC#PPHE1 seek_rose_mythrien
 IF ~~ THEN REPLY ~I will do whatever it takes to destroy that undead monstrosity!~ EXTERN AC#PPHE1 seek_rose_01
 
+	CHAIN AC#PPHE1 seek_rose_mythrien
+	~Mythrien Sarath... a name the world no longer seems to speak. He is the Watcher Over Mythals. In the days before ruin, he was the shaper of our city, the guardian who bound protection spells to every tree, every leaf, every blade of grass.~
+	END
+	IF ~~ THEN REPLY ~How am I able to call him?~ EXTERN AC#PPHE1 seek_rose_01
+	IF ~~ THEN REPLY ~Seems he has little power left in this place.~ EXTERN AC#PPHE1 seek_rose_01
+
 CHAIN AC#PPHE1 seek_rose_01
-~Seek something in this city that has not been corrupted… something that still carries the old magic of our once-great home. Look for a rose that has not withered — the last living remnant of Myth Unnohyr’s grace. Lay it at the feet of Mythrien’s statue in his forgotten temple. Through that offering, he may pierce the fog that shrouds this place.~
-== AC#PPHE1 ~Call upon our god. Heal this wounded city and let peace return within these walls.~
+~To draw our patron’s gaze to you, you will need something in this city untouched by corruption — something that still carries a trace of the old magic that once sustained our home.~
+END
+IF ~~ THEN REPLY ~And where would I find such a thing? There’s little left of the old splendor here.~ EXTERN AC#PPHE1 seek_rose_03
+IF ~~ THEN REPLY ~I recall seeing roses blooming somewhere in the city.~ EXTERN AC#PPHE1 seek_rose_idea
+
+CHAIN AC#PPHE1 seek_rose_idea
+~Roses. A splendid thought… yes. That is exactly what we need.~
+END
+IF ~~ THEN EXTERN AC#PPHE1 seek_rose_03
+
+
+CHAIN AC#PPHE1 seek_rose_03
+~Look for a rose that has not withered — the last living remnant of Myth Unnohyr’s grace. Lay it at the feet of Mythrien’s statue in his forgotten temple in the middle of the city.~
+== AC#PPHE1 ~Through that offering, he may pierce the fog that shrouds this place. Call upon our god. Bid him to mend this wounded city… and to banish the Undying once and for all.~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9)
 AddJournalEntry(@12212,QUEST)
 CreateVisualEffectObject("SPFLESHS",Myself)
@@ -659,29 +679,51 @@ EXIT
 
 
 
-//WYRD 2nd Meeting
+// WYRD 2nd Meeting
 
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",18)~ THEN AC#PPWYR 3.00
-~** Mmm. I am getting bored with that struggle of yours. You don't even understand you are destined to lose it. **~
+CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",18)~ THEN AC#PPWYR 1.00
+~You again! You may have forced me to show myself here, but that is all you have achieved.~
 END
-IF~~THEN REPLY ~Lose it? Don't you sense what I did?~ EXTERN AC#PPWYR 3.01
-IF~~THEN REPLY ~Hah! You are afraid, aren't you? You know it's you who is losing this! Hahaha!~ EXTERN AC#PPWYR 3.01
+IF ~~ THEN REPLY ~Don’t you see what I’ve done?~ EXTERN AC#PPWYR 3.01
+IF ~~ THEN REPLY ~You’re afraid, aren’t you? You know you’re the one losing this.~ EXTERN AC#PPWYR 3.01
 
 CHAIN AC#PPWYR 3.01
-~** You may think that you sand a chance, but you don't. None of this matters. **~
-DO ~StartCutScene("AC#PP6C6")~ EXIT
+~You may think you stand a chance, but you do not. Die—every last one of you!~
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",20)
+CreateCreature("AC#PPSPI",[3730.420],1)
+CreateVisualEffect("SPFLESHS",[3730.420])
+CreateCreature("AC#PPSPI",[3900.490],1)
+CreateVisualEffect("SPFLESHS",[3900.490])
+CreateCreature("AC#PPBGO",[3350.500],1)
+CreateVisualEffect("SPFLESHS",[3350.500])
+CreateCreature("AC#PPBGO",[3880.790],1)
+CreateVisualEffect("SPFLESHS",[3880.790])
+Enemy()~ 
+EXIT
 
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",19)~ THEN AC#PPWYR 3.02 //continued
-~** What is this?! **~
-==AC#PPMYT ~^0xFF8FAD5DIt's time for you to leave Myth Unnohyr, monster. ^-~
-==AC#PPWYR ~No! I still have a few tricks I'm not afraid to use! Die! All of you!~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",20) CreateCreature("AC#PPSPI",[3730.420],1) CreateVisualEffect("SPFLESHS",[3730.420]) CreateCreature("AC#PPSPI",[3900.490],1) CreateVisualEffect("SPFLESHS",[3900.490]) CreateCreature("AC#PPBGO",[3350.500],1) CreateVisualEffect("SPFLESHS",[3350.500]) CreateCreature("AC#PPBGO",[3880.790],1) CreateVisualEffect("SPFLESHS",[3880.790]) Enemy()~ EXIT
 
-//WYRD 3rd and final
+// WYRD final 
+
+CHAIN IF ~Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",2)~ THEN AC#PPWYR 4.00
+~What have you done? How have you torn this place’s power out of my grasp?~
+DO ~SetGlobal("AC#PP_Killed_Wyrd_2_time","GLOBAL",10)
+SetGlobal("AC#PPChapter6Quest","GLOBAL",22)
+DestroyItem("MINHP1")
+Enemy()~ 
+EXIT
+
+
+// WYRD 3rd 
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",21)~ THEN AC#PPWYR 4.00
-~** No!!! You cannot win! I still have one more trick! **~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",22) ApplySpell(Myself,CLERIC_HEAL) DestroyItem("MINHP1") ApplySpell(Myself,CLERIC_REGENERATE) ApplySpell(Myself,CLERIC_EARTHQUAKE)~ EXIT
+~You are about to strike me down a second time… but I will simply rise again—a third time!~
+DO ~SetGlobal("AC#PP_Killed_Wyrd_2_time","GLOBAL",1)
+ChangeEnemyAlly(Myself,NEUTRAL)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("AC#PP6C6")~ 
+EXIT
+
 
 //MYTHRIEN
 

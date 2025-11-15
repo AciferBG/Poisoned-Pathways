@@ -8,6 +8,14 @@ END
 
 IF
     Global("AC#PPChapter6Quest","GLOBAL",21)
+    Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",0)
+THEN
+    RESPONSE #100
+        StartDialogueNoSet(Player1)
+END
+
+IF
+    Global("AC#PPChapter6Quest","GLOBAL",2)
 THEN
     RESPONSE #100
         StartDialogueNoSet(Player1)
@@ -21,7 +29,17 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("AC#PPChapter6Quest","GLOBAL",2)
-        StartDialogueNoSet(Player1)
+END
+
+IF
+    InMyArea(Player1)
+    Delay(6)
+    !See([PC])
+    Global("AC#PPChapter6Quest","GLOBAL",1)
+THEN
+    RESPONSE #100
+        MoveToPointNoInterrupt([568.593])
+        SetGlobal("AC#PPChapter6Quest","GLOBAL",2)
 END
 
 IF
@@ -47,8 +65,45 @@ THEN
     RESPONSE #100
         ApplySpellRES("AC#PP43",Myself)  // Death Shroud
         SetGlobal("AC#PP70FightSpells","LOCALS",1)
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("FingerOfDeath","LOCALS",0)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        SetGlobal("FingerOfDeath","LOCALS",1)
         SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",9)
         ForceSpell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)  // SPWI713.SPL (Finger of Death)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("FingerOfDeath","LOCALS",0)
+    HaveSpell(WIZARD_FINGER_OF_DEATH)  // SPWI713.SPL (Finger of Death)
+THEN
+    RESPONSE #100
+        SetGlobal("FingerOfDeath","LOCALS",1)
+        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",9)
+        Spell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)  // SPWI713.SPL (Finger of Death)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPChapter6Quest","GLOBAL",3)
+    Global("AC#PP70FightSpells","LOCALS",1)
+    GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
+    HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        ApplySpell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
+        ApplySpell(Myself,WIZARD_PROTECTION_FROM_NORMAL_WEAPONS)  // SPWI511.SPL (Protection From Normal Weapons)
+        SetGlobal("AC#PP70FightSpells","LOCALS",2)
+        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",ONE_ROUND)
+        Spell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
 END
 
 IF
@@ -58,26 +113,60 @@ IF
     GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
 THEN
     RESPONSE #100
-        ApplySpell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
-        ApplySpell(Myself,WIZARD_PROTECTION_FROM_NORMAL_WEAPONS)  // SPWI511.SPL (Protection From Normal Weapons)
+        ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
+        ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_NORMAL_WEAPONS)  // SPWI511.SPL (Protection From Normal Weapons)
         SetGlobal("AC#PP70FightSpells","LOCALS",2)
-        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",9)
-        ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
+        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",ONE_ROUND)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("AC#PPChapter6Quest","GLOBAL",3)
+    HaveSpell(WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
+    GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobal("AC#PP70FightSpells","LOCALS",2)
+        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",ONE_ROUND)
+        Spell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
 END
 
 IF
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",3)
     Global("AC#PP70FightSpells","LOCALS",2)
+    HaveSpell(WIZARD_NPC_SYMBOL_FEAR)  // SPWI899.SPL (Symbol, Fear)
     GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
 THEN
     RESPONSE #100
         ApplySpell(Myself,WIZARD_SPELL_TURNING)  // SPWI701.SPL (Spell Turning)
         SetGlobal("AC#PP70FightSpells","LOCALS",3)
-        ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAIN_LIGHTNING)  // SPWI615.SPL (Chain Lightning)
+        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",ONE_ROUND)
+        Spell(NearestEnemyOf(Myself),WIZARD_NPC_SYMBOL_FEAR)  // SPWI899.SPL (Symbol, Fear)
 END
 
 IF
+    See(NearestEnemyOf(Myself))
+    HaveSpell(WIZARD_NPC_SYMBOL_DEATH)  // SPWI897.SPL (Symbol, Death)
+    GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",ONE_ROUND)
+        Spell(NearestEnemyOf(Myself),WIZARD_NPC_SYMBOL_DEATH)  // SPWI897.SPL (Symbol, Death)
+END
+
+IF
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+    HaveSpell(WIZARD_SLOW)  // SPWI312.SPL (Slow)
+    GlobalTimerExpired("AC#PP70FightSpellsTime","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobalTimer("AC#PP70FightSpellsTime","LOCALS",ONE_ROUND)
+        Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
+END
+
+IF
+    See([PC])
     Global("AC#PPChapter6Quest","GLOBAL",18)
 THEN
     RESPONSE #100
@@ -85,7 +174,7 @@ THEN
 END
 
 IF
-    Global("AC#PPChapter6Quest","GLOBAL",19)
+    Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",2)
 THEN
     RESPONSE #100
         StartDialogueNoSet(Player1)

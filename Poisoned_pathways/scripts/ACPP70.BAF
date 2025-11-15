@@ -507,31 +507,59 @@ END
 IF
 Global("AC#PPChapter6Quest","GLOBAL",5)
 Global("AC#PPCreateWeirdling","ACPP70",0)
-THEN
-RESPONSE #100
+LevelPartyGT(13)
+    THEN
+    RESPONSE #100
 //CreateCreature("AC#PPSYM",[1270.2170],1)
-CreateCreature("AC#PPSPI",[1170.2170],1)
-CreateCreature("AC#PPSPI",[1370.2170],0)
 //CreateCreature("AC#PPSYM",[440.1575],1)
-CreateCreature("AC#PPSPI",[390.2170],2)
-CreateCreature("AC#PPSPI",[430.1665],9)
 //CreateCreature("AC#PPSYM",[3900.2000],1)
-CreateCreature("AC#PPSPI",[3810.2020],9)
-CreateCreature("AC#PPSPI",[4000.1920],4)
-CreateCreature("AC#PPSPI",[3750.2170],2)
-CreateCreature("AC#PPBGO",[1500.500],13)
-CreateCreature("AC#PPBGO",[1300.1600],8)
-CreateCreature("AC#PPBGO",[4100.1200],6)
-CreateCreature("AC#PPBGO",[1000.1900],10)
-CreateCreature("AC#PPSPI",[420.1250],14)
-CreateCreature("AC#PPSPI",[460.1650],14)
-CreateCreature("AC#PPSPI",[1050.550],14)
-CreateCreature("AC#PPSPI",[1050.650],14)
-CreateCreature("AC#PPSPI",[1300.1450],8)
-CreateCreature("AC#PPSPI",[1300.2020],8)
-CreateCreature("AC#PPSPI",[1320.2170],8)
-CreateCreature("AC#PPSPI",[1420.2120],8)
-SetGlobal("AC#PPCreateWeirdling","ACPP70",1)
+        CreateCreature("AC#PPSPI",[1170.2170],SSW)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[1370.2170],S)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[390.2170],SW)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[430.1665],NNE)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[3810.2020],NNE)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[4000.1920],W)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[3750.2170],SW)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPBGO",[1500.500],SEE)  // Bone Weirdling
+        CreateCreature("AC#PPBGO",[1300.1600],N)  // Bone Weirdling
+        CreateCreature("AC#PPBGO",[4100.1200],NW)  // Bone Weirdling
+        CreateCreature("AC#PPBGO",[1000.1900],NE)  // Bone Weirdling
+        CreateCreature("AC#PPSPI",[420.1250],SE)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[460.1650],SE)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[1050.550],SE)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[1050.650],SE)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[1300.1450],N)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[1300.2020],N)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[1320.2170],N)  // Blood-Soaked Spirit
+        CreateCreature("AC#PPSPI",[1420.2120],N)  // Blood-Soaked Spirit
+        SetGlobal("AC#PP_CH6_ENEMIES","ACPP70",1)
+END
+
+IF
+    Global("AC#PPChapter6Quest","GLOBAL",5)
+    Global("AC#PPCreateWeirdling","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPBGO",[1500.500],SEE)  // Bone Weirdling
+        CreateCreature("AC#PPBGO",[1300.1600],N)  // Bone Weirdling
+        CreateCreature("AC#PPBGO",[4100.1200],NW)  // Bone Weirdling
+        CreateCreature("AC#PPBGO",[1000.1900],NE)  // Bone Weirdling
+        SetGlobal("AC#PPCreateWeirdling","ACPP70",1)
+END
+
+IF
+    GlobalGT("AC#PPChapter6Quest","GLOBAL",8)
+    Global("CreateAllip","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPAL2",[2359.225],SSW)  // Allip
+        CreateCreature("AC#PPAL2",[1215.460],S)  // Allip
+        CreateCreature("AC#PPAL2",[1587.1145],SW)  // Allip
+        CreateCreature("AC#PPAL2",[1276.1514],NNE)  // Allip
+        CreateCreature("AC#PPAL2",[836.1048],NNE)  // Allip
+        CreateCreature("AC#PPAL2",[4000.1920],W)  // Allip
+        CreateCreature("AC#PPAL2",[3750.2170],SW)  // Allip
+        SetGlobal("CreateAllip","ACPP70",1)
 END
 
 IF
@@ -564,6 +592,7 @@ END
 IF
 Global("AC#PPChapter6Quest","GLOBAL",11)
 Global("AC#PPCreateMoreEnemies","ACPP70",0)
+LevelPartyGT(13)
 THEN
 RESPONSE #100
 CreateCreature("AC#PPSPI",[1300.2000],1)
@@ -584,7 +613,8 @@ AreaCheckObject("ACPP70",Player1)
 Global("AC#PPChapter6Quest","GLOBAL",17)
 THEN
 RESPONSE #100
-StartCutScene("AC#PP6C5")
+OpenDoor("DOOR04")
+SetGlobal("AC#PPChapter6Quest","GLOBAL",18)
 END
 
 /////////////////////////////////////////////

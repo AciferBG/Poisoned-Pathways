@@ -88,6 +88,10 @@ COPY ~%MOD_FOLDER%/cre/AC#PPAL1.cre~ ~override~       // Allip
 SAY NAME1 @72 SAY NAME2 @72
 WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#NWN_ALLIP~))
 
+COPY ~%MOD_FOLDER%/cre/AC#PPAL2.cre~ ~override~       // Allip
+SAY NAME1 @72 SAY NAME2 @72
+WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#NWN_ALLIP~))
+
 COPY ~%MOD_FOLDER%/cre/AC#PPLHS.cre~ ~override~       // Lhiannan Shee
 SAY NAME1 @71 SAY NAME2 @71
 

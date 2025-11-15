@@ -2,12 +2,14 @@ IF
     True()
 THEN
     RESPONSE #100
-        CutSceneId("AC#PPWYR")  // The Wyrd of Myth Unnohyr
+        CutSceneId("AC#PPWYR")  // The Undying
+        MoveViewObject("AC#PPSD1",INSTANT)  // No such index
+        CreateCreatureObjectOffset("CUTSPY","AC#PPSD1",[3.3])  // No such index
         ReallyForceSpellRES("AC#PP19","AC#PPSD1")  // Animate Dead
         Wait(1)
         CreateVisualEffectObject("SPFLESHS",Myself)
         EndCutSceneMode()
-        ReallyForceSpell("AC#PPSD1",BEHOLDER_BLAST_VISUAL2)  // No such index
+        ReallyForceSpell("AC#PPSD1",BEHOLDER_BLAST_VISUAL2)  // No such index        
         DestroySelf()
 END
 
