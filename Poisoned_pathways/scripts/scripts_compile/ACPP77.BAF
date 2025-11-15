@@ -70,12 +70,55 @@ IF
     Global("AC#PPChapter6Quest","GLOBAL",18)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPWYR",[650.490],SSW)  // Wild Wyrd
+        CreateCreature("AC#PPWYR",[650.490],SSW)  // The Undying
+        CreateCreature("AC#PPSD2",[610.353],E)  // No such index
+        CreateCreature("AC#PPSD3",[574.469],E)  // No such index
         SetGlobal("CreateWyrd2","ACPP77",1)
 END
 
 IF
-    Dead("AC#PPWYR")  // Wild Wyrd
+    Global("CreateWyrdHelpers2","ACPP77",0)
+    Global("AC#PPChapter6Quest","GLOBAL",20)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPBGO",[396.434],SE)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[396.434])
+        CreateCreature("AC#PPBGO",[907.479],W)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[907.479])
+        SetGlobal("CreateWyrdHelpers2","ACPP77",1)
+END
+
+IF
+    Global("CreateWyrdBanshee","ACPP77",0)
+    Global("AC#PPChapter6Quest","GLOBAL",20)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PP77W",[599.276],S)  // Banshee
+        CreateVisualEffect("SPFLESHS",[599.276])
+        CreateCreature("AC#PP77W",[882.357],S)  // Banshee
+        CreateVisualEffect("SPFLESHS",[882.357])
+        SetGlobal("CreateWyrdBanshee","ACPP77",1)
+END
+
+IF
+    Global("CreateWyrdHelpers2","ACPP77",0)
+    Global("AC#PPChapter6Quest","GLOBAL",20)
+    LevelPartyGT(11)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPSPI",[535.295],SSW)  // Blood-Soaked Spirit
+        CreateVisualEffect("SPFLESHS",[535.295])
+        CreateCreature("AC#PPSPI",[910.426],SSW)  // Blood-Soaked Spirit
+        CreateVisualEffect("SPFLESHS",[910.426])
+        CreateCreature("AC#PPBGO",[396.434],SE)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[396.434])
+        CreateCreature("AC#PPBGO",[907.479],W)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[907.479])
+        SetGlobal("CreateWyrdHelpers2","ACPP77",1)
+END
+
+IF
+    Dead("AC#PPWYR")  // The Undying
     Global("AC#PPChapter6Quest","GLOBAL",22)
     Global("WyrdDead","ACPP77",0)
 THEN

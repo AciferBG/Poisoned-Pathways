@@ -662,7 +662,6 @@ EXTERN AC#PPMYT 02.04
 CHAIN AC#PPMYT 02.04
 ~^0xFF8FAD5DGo now. Find the creature. End its theft. Return to me when justice is wrought. ^-~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",17) 
-SetGlobal("AC#PPFixMagic","GLOBAL",1)
 AddJournalEntry(@12214,QUEST)~ EXIT
 
 // Waiting for the defeat of the wyrd
@@ -690,14 +689,6 @@ IF ~~ THEN REPLY ~You’re afraid, aren’t you? You know you’re the one losin
 CHAIN AC#PPWYR 3.01
 ~You may think you stand a chance, but you do not. Die—every last one of you!~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",20)
-CreateCreature("AC#PPSPI",[3730.420],1)
-CreateVisualEffect("SPFLESHS",[3730.420])
-CreateCreature("AC#PPSPI",[3900.490],1)
-CreateVisualEffect("SPFLESHS",[3900.490])
-CreateCreature("AC#PPBGO",[3350.500],1)
-CreateVisualEffect("SPFLESHS",[3350.500])
-CreateCreature("AC#PPBGO",[3880.790],1)
-CreateVisualEffect("SPFLESHS",[3880.790])
 Enemy()~ 
 EXIT
 

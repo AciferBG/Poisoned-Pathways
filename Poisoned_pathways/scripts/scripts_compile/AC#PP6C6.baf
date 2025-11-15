@@ -2,10 +2,10 @@ IF
     True()
 THEN
     RESPONSE #100
-       CutSceneId("AC#PPWYR")  // The Undying
-        MoveViewObject("AC#PPSD1",INSTANT)  // No such index
-        CreateCreatureObjectOffset("CUTSPY","AC#PPSD1",[3.3])  // No such index
-        ReallyForceSpellRES("AC#PP19","AC#PPSD1")  // Animate Dead
+        CutSceneId("AC#PPWYR")  // The Undying
+        MoveViewObject("AC#PPSD2",INSTANT)  // No such index
+        CreateCreatureObjectOffset("CUTSPY","AC#PPSD2",[3.3])  // No such index
+        ReallyForceSpellRES("AC#PP19","AC#PPSD2")  // Animate Dead
         Wait(1)
         EndCutSceneMode()
 END
