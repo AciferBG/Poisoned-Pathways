@@ -323,7 +323,8 @@ DO ~~ EXIT
 
 // Duskwood Dell CH6 -- 2nd Talk (Cleric)
 
-CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",10)~ THEN AC#PPEL4 c6.2nd.c.00
+CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",10)
+GlobalLT("AC#PPChapter6Quest","GLOBAL",24)~ THEN AC#PPEL4 c6.2nd.c.00
 ~Good fortune out there, <CHARNAME>.~
 END
 IF ~~ THEN REPLY ~Thank you.~ EXTERN AC#PPEL4 c6.2nd.c.00_bye
@@ -404,6 +405,7 @@ END
 IF ~~ THEN REPLY ~You are the one I’m looking for!~ EXTERN AC#PPWYR 1.01
 IF ~~ THEN REPLY ~Your terror ends here. I will free this city and the souls trapped within it.~ EXTERN AC#PPWYR 1.01
 IF ~~ THEN REPLY ~Well, you certainly look the part. Now let’s see if you die as well as you boast.~ EXTERN AC#PPWYR 1.01
+IF ~~ THEN REPLY ~Who are you?~ EXTERN AC#PPWYR who_are_you_wyrd
 
 
 CHAIN AC#PPWYR 1.01
@@ -411,11 +413,19 @@ CHAIN AC#PPWYR 1.01
 END
 IF ~~ THEN EXTERN AC#PPWYR hunger_01
 
+	CHAIN AC#PPWYR who_are_you_wyrd
+	~Who am I? A question I have not heard in an age. Names crumble, flesh withers — but the will endures.~
+	== AC#PPWYR ~I was mortal once, as you are now. But such a shell was never meant to bind me. I hungered for eternity... and this place offered the perfect wound in which to root myself. That is all you need know.~
+	END
+	IF ~~ THEN EXTERN AC#PPWYR hunger_01
+
+
 CHAIN AC#PPWYR hunger_01
-~I hunger as the earth beneath Myth Unnohyr hungers. I shall feast on the living and on all life who dares to come.~
+~I feast upon the corrupted Weave of this stained city. I feast upon the living — and upon any life that dares to come here.~
 END
-IF ~~ THEN REPLY ~You won't win this.~ EXTERN AC#PPWYR 1.04
-IF ~~ THEN REPLY ~You will not defeat me. I shall be your doom.~ EXTERN AC#PPWYR 1.04
+IF ~~ THEN REPLY ~Enough feasting. Now it’s time to pay.~ EXTERN AC#PPWYR 1.04
+IF ~~ THEN REPLY ~All I see is a parasite gnawing on a dying city. I’ll be the cure that cuts you out.~ EXTERN AC#PPWYR 1.04
+IF ~~ THEN REPLY ~You’ve taken enough from this place. I’ll make sure that you take nothing more.~ EXTERN AC#PPWYR 1.04
 IF ~~ THEN REPLY ~Perhaps I made a mistake coming here. Let me go — I have no wish to fight you.~ EXTERN AC#PPWYR 1.05
 
 CHAIN AC#PPWYR 1.04
@@ -427,7 +437,7 @@ CHAIN AC#PPWYR 1.05
 EXTERN AC#PPWYR 1.06
 
 CHAIN AC#PPWYR 1.06
-~So let us see what remains of your courage when death itself takes notice!~
+~Let us see what remains of your courage when death itself takes notice!~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",3) 
 Enemy()~ 
 EXIT
@@ -472,7 +482,9 @@ DestroySelf()~ EXIT
 BEGIN AC#PPHE1
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",6)~ THEN AC#PPHE1 hello_seek_rose
-~You have struck the Undying down! He has risen again — but this proves he can be defeated!~
+~You defeated him! At last. Do not fear my form — the Undying can seize our bodies, but not our spirits. I am Elv-Esster Aened, once commander of Myth Unnohyr’s guard.~
+== AC#PPHE1 ~I, too, once stood against that monster — the blight upon our city. I thought I had defeated it. Yet it rose again as if my blade had never touched it. My strength faltered before I could finish what I began. But you... you may yet succeed where I failed.~
+== AC#PPHE1 ~You have struck the Undying down once. He rose again… but that single blow has shaken the Mythal. Subtle to mortal senses — yet to me, who still remembers this place, the tremor is unmistakable.~
 END
 IF ~~ THEN REPLY ~He rose again the moment he fell. I hardly call that a success.~ EXTERN AC#PPHE1 about_rose
 IF ~~ THEN REPLY ~It was a beginning, at least.~ EXTERN AC#PPHE1 about_rose
@@ -484,11 +496,13 @@ CHAIN AC#PPHE1 about_rose
 END
 IF ~~ THEN REPLY ~Mythrien Sarath? Never heard of him. Who’s that supposed to be?~ EXTERN AC#PPHE1 seek_rose_mythrien
 IF ~~ THEN REPLY ~I will do whatever it takes to destroy that undead monstrosity!~ EXTERN AC#PPHE1 seek_rose_01
+IF ~~ THEN REPLY ~If you’re truly Elv-Esster Aened, commander of Myth Unnohyr’s guard, then I’ll trust your guidance.~ EXTERN AC#PPHE1 seek_rose_01
 
 	CHAIN AC#PPHE1 seek_rose_mythrien
 	~Mythrien Sarath... a name the world no longer seems to speak. He is the Watcher Over Mythals. In the days before ruin, he was the shaper of our city, the guardian who bound protection spells to every tree, every leaf, every blade of grass.~
 	END
 	IF ~~ THEN REPLY ~How am I able to call him?~ EXTERN AC#PPHE1 seek_rose_01
+	IF ~~ THEN REPLY ~If you’re truly Elv-Esster Aened, commander of Myth Unnohyr’s guard, then I’ll trust your guidance.~ EXTERN AC#PPHE1 seek_rose_01
 	IF ~~ THEN REPLY ~Seems he has little power left in this place.~ EXTERN AC#PPHE1 seek_rose_01
 
 CHAIN AC#PPHE1 seek_rose_01
@@ -498,14 +512,14 @@ IF ~~ THEN REPLY ~And where would I find such a thing? There’s little left of 
 IF ~~ THEN REPLY ~I recall seeing roses blooming somewhere in the city.~ EXTERN AC#PPHE1 seek_rose_idea
 
 CHAIN AC#PPHE1 seek_rose_idea
-~Roses. A splendid thought… yes. That is exactly what we need.~
+~Roses. Yes. That is exactly what you need.~
 END
 IF ~~ THEN EXTERN AC#PPHE1 seek_rose_03
 
 
 CHAIN AC#PPHE1 seek_rose_03
-~Look for a rose that has not withered — the last living remnant of Myth Unnohyr’s grace. Lay it at the feet of Mythrien’s statue in his forgotten temple in the middle of the city.~
-== AC#PPHE1 ~Through that offering, he may pierce the fog that shrouds this place. Call upon our god. Bid him to mend this wounded city… and to banish the Undying once and for all.~
+~Look for a rose that has not withered — the last living remnant of Myth Unnohyr’s grace. At my statue in the heart of the city, you should find one still in bloom. They endure, nourished by my lingering hope that this place may one day regain its untainted face. Take the rose and lay it at the feet of Mythrien’s statue in the forgotten temple at the city’s center.~
+== AC#PPHE1 ~Through that offering, Mythrien may pierce the fog that shrouds this place. Call upon our god. Bid him to mend this wounded city… and to banish the Undying once and for all.~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",9)
 AddJournalEntry(@12212,QUEST)
 CreateVisualEffectObject("SPFLESHS",Myself)
@@ -667,9 +681,9 @@ AddJournalEntry(@12214,QUEST)~ EXIT
 // Waiting for the defeat of the wyrd
 CHAIN IF ~GlobalGT("AC#PPChapter6Quest","GLOBAL",16)
 GlobalLT("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT hello_all_fixed
-~^0xFF8FAD5DHave you brought the wyrd to its end? ^-~
+~^0xFF8FAD5DHave you brought the Undying to its end? ^-~
 END
-IF~Dead("AC#PPWYR")~THEN REPLY ~Yes. The wyrd is no more.~ EXTERN AC#PPMYT FINALE.00
+IF~Dead("AC#PPWYR")~THEN REPLY ~Yes. The Undying is no more.~ EXTERN AC#PPMYT FINALE.00
 IF~~THEN REPLY ~No, not yet.~ EXTERN AC#PPMYT wait_wyrd_defeat_bye
 
 CHAIN AC#PPMYT wait_wyrd_defeat_bye
@@ -731,7 +745,7 @@ EXIT
 //MYTHRIEN
 
 CHAIN AC#PPMYT FINALE.00
-~^0xFF8FAD5DSo it is done. The wyrd is unmade, its hunger silenced... and for the first time in long ages, this land may breathe. ^-~
+~^0xFF8FAD5DSo it is done. The Undying is unmade, its hunger silenced... and for the first time in long ages, this land may breathe. ^-~
 EXTERN AC#PPMYT wyrd_dead_02
 
 CHAIN AC#PPMYT wyrd_dead_02
@@ -755,12 +769,18 @@ CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",23)~ THEN AC#PPMYT FINALE.02
 ~^0xFF8FAD5DA year of quiet is all I can grant. Beyond that, it rests with my kin—if they choose to weave anew, to raise a true Mythal here once more. ^-~
 ==AC#PPMYT ~^0xFF8FAD5DAs my thanks, I return to you the rose you placed at my feet when you called me forth. May it shield you against the malice of hostile spells. Yet remember—its power, too, shall one day fade into silence. ^-~
 END
-IF~~THEN DO ~GiveItemCreate("AC#PPMYR",Player1,1,0,0)~ EXTERN AC#PPMYT bye_final
+IF~~THEN DO ~GiveItemCreate("AC#PPMYR",Player1,5,5,5)~ EXTERN AC#PPMYT bye_final
 
 CHAIN AC#PPMYT bye_final
 ~^0xFF8FAD5DFarewell, <CHARNAME>. May the paths ahead bow to your courage. ^-~
-DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24) 
+DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",24)
 AddJournalEntry(@12217,QUEST)
+AddXPObject(Player1,1000)
+AddXPObject(Player2,1000)
+AddXPObject(Player3,1000)
+AddXPObject(Player4,1000)
+AddXPObject(Player5,1000)
+AddXPObject(Player6,1000)
 CreateVisualEffect("SPPORTAL",[900.400]) DestroySelf()~ EXIT
 
 BEGIN AC#PPHE2
@@ -777,20 +797,22 @@ CreateVisualEffectObject("SPFLESHS",Myself) Wait(1) DestroySelf()~ EXIT
 
 // FINALE – Return to Alatoasz
 
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",25)~ THEN AC#PPEL4 C6.QUEST.0X.00
+CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",24)~ THEN AC#PPEL4 C6.QUEST.0X.00
 ~You have returned! Does this mean you have banished the evil haunting Myth Unnohyr once and for all?~
 END
-IF ~~ THEN REPLY ~Yes, though it required far more effort than we imagined. With a touch of divine intervention, Myth Unnohyr is safe again.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
-IF ~~ THEN REPLY ~Surprised? It was like a nightmare come to life—but it’s over now. The evil will trouble no one for a long while.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
+IF ~~ THEN REPLY ~Yes. And I’d appreciate never seeing that city again.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
+IF ~~ THEN REPLY ~With a touch of divine intervention, Myth Unnohyr is safe again.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
+IF ~~ THEN REPLY ~It’s over. The spirits of the city can rest at last.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
+IF ~~ THEN REPLY ~It was a nightmare—but it’s over now.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.01
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.01
-~Are you certain the ruins are at peace again?~
+~That is wonderful news! How did you manage to bring peace back to the ruins?~
 END
-IF ~~ THEN REPLY ~Yes. I was able to call upon Mythrien himself. His blessing will keep Myth Unnohyr free from corruption for a year.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.02
-IF ~~ THEN REPLY ~You’ll have to see for yourself. My part in this is done.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.03
+IF ~~ THEN REPLY ~I was able to call upon Mythrien Sarath himself. His blessing will keep Myth Unnohyr free from corruption for a year.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.02
+IF ~~ THEN REPLY ~That no longer matters. My part in this is done.~ EXTERN AC#PPEL4 C6.QUEST.FINALE.03
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.02
-~Truly? This is wondrous news! And Mythrien’s hand was in it... that is no small thing.~
+~Mythrien’s hand was in it... that is no small thing.~
 EXTERN AC#PPEL4 C6.QUEST.FINALE.04
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.03
@@ -798,27 +820,28 @@ CHAIN AC#PPEL4 C6.QUEST.FINALE.03
 EXTERN AC#PPEL4 C6.QUEST.FINALE.04
 
 CHAIN AC#PPEL4 C6.QUEST.FINALE.04
-~What you have done surpasses all we had hoped for. The grove and all its faithful shall remember your name.~
-== AC#PPEL4 ~I have long pondered something. You may remember the blade kept hidden here in the Dell—a weapon of great power, one that can harm only the undead. My former hesitation to release it was misguided. This blade does not destroy life—it unravels unlife, that which stands in defiance of Eldath’s peace.~
+~What you have done surpasses all we had hoped for. I thank you in the name of all who cherish quiet groves and gentle clearings. The Dell and all its faithful shall remember your name.~
+== AC#PPEL4 ~I wish to offer you a fitting reward. I have long pondered something.~
+== AC#PPEL4 ~You may remember the blade kept hidden here in the Dell—a weapon of great power, one that can harm only the undead. My former hesitation to release it was misguided. This blade does not destroy life—it unravels unlife, that which stands in defiance of Eldath’s peace.~
 == AC#PPEL4 ~With her blessing, I wish to grant you this weapon as a reward. May you wield it against the foes of life itself, and let each strike serve peace rather than wrath.~
 == AC#PPEL4 ~The weapon rests at the bottom of Eldath’s Grotto. You need only ask the Maiden who guards those waters—she will not deny you.~
 END
 IF ~~ THEN REPLY ~It will be an honor. I shall wield it in Eldath’s name, and for the peace she teaches.~ EXTERN AC#PPEL4 bye_mythblade
-IF ~~ THEN REPLY ~I am glad you changed your mind, Fallskeeper.~ EXTERN AC#PPEL4 bye_mythblade
+IF ~~ THEN REPLY ~I am glad you changed your mind.~ EXTERN AC#PPEL4 bye_mythblade
 
 CHAIN AC#PPEL4 bye_mythblade
-~Go with Eldath’s blessing, <CHARNAME>. Whoever stands in your way—I pity them already.~
+~Go with Eldath’s blessing, <CHARNAME>. This place shall always open its arms to you.~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",26)
 SetGlobal("AC#PP_GiveBlade","GLOBAL",1)
 AddJournalEntry(@12219,QUEST)
-AddXPObject(Player1,5000)
-AddXPObject(Player2,5000)
-AddXPObject(Player3,5000)
-AddXPObject(Player4,5000)
-AddXPObject(Player5,5000)
-AddXPObject(Player6,5000)~ EXIT
+AddXPObject(Player1,1000)
+AddXPObject(Player2,1000)
+AddXPObject(Player3,1000)
+AddXPObject(Player4,1000)
+AddXPObject(Player5,1000)
+AddXPObject(Player6,1000)~ EXIT
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",26)~ THEN AC#PPEL4 C6.QUEST.0X.01
-~May the waters of peace ever flow around you, my friend.~
+~May the waters of peace ever flow around you, <CHARNAME>.~
 EXIT
 

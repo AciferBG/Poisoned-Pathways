@@ -490,11 +490,13 @@ COPY ~%MOD_FOLDER%/cre/AC#PPSYM.cre~ ~override~ // Gruesome Symbiote
 COPY ~%MOD_FOLDER%/cre/AC#PPHEL.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP70
   SAY NAME1 @49 SAY NAME2 @49
 
-COPY ~%MOD_FOLDER%/cre/AC#PPHE1.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP70
-  SAY NAME1 @49 SAY NAME2 @49
+COPY ~%MOD_FOLDER%/cre/AC#PPHE1.cre~ ~override~ // Spirit of Elv-Esster Aened - Elven Spirit in area ACPP70
+  SAY NAME1 @81 SAY NAME2 @81
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#ELVENMAID~))
 
-COPY ~%MOD_FOLDER%/cre/AC#PPHE2.cre~ ~override~ // Vaxh Aened - Elven Spirit in area ACPP90
-  SAY NAME1 @49 SAY NAME2 @49
+COPY ~%MOD_FOLDER%/cre/AC#PPHE2.cre~ ~override~ // Spirit of Elv-Esster Aened - Elven Spirit in area ACPP90
+  SAY NAME1 @81 SAY NAME2 @81
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#ELVENMAID~))
   
 COPY ~%MOD_FOLDER%/cre/AC#PPHE3.cre~ ~override~ // Elven Spirit in area ACPP90
   SAY NAME1 @49 SAY NAME2 @49
@@ -502,11 +504,14 @@ COPY ~%MOD_FOLDER%/cre/AC#PPHE3.cre~ ~override~ // Elven Spirit in area ACPP90
 COPY ~%MOD_FOLDER%/cre/AC#PPSON.cre~ ~override~ // Son
   SAY NAME1 @49 SAY NAME2 @49
 
-COPY ~%MOD_FOLDER%/cre/AC#PPBGO.cre~ ~override~ // Bone Weirdling
+COPY ~%MOD_FOLDER%/cre/AC#PPBGO.cre~ ~override~ // Bone Weird
   SAY NAME1 @50 SAY NAME2 @50
   
-COPY ~%MOD_FOLDER%/cre/AC#PPBG7.cre~ ~override~ // Bone Weirdling
+COPY ~%MOD_FOLDER%/cre/AC#PPBG7.cre~ ~override~ // Bone Weird
   SAY NAME1 @50 SAY NAME2 @50
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPBGL.cre~ ~override~ // lesser Bone Weird
+  SAY NAME1 @82 SAY NAME2 @82
   
 COPY ~%MOD_FOLDER%/cre/AC#PPMYT.cre~ ~override~ // Mythrien S4rath
   SAY NAME1 @51 SAY NAME2 @51

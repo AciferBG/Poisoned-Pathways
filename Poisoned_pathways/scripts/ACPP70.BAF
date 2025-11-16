@@ -506,7 +506,7 @@ END
 
 IF
 Global("AC#PPChapter6Quest","GLOBAL",5)
-Global("AC#PPCreateWeirdling","ACPP70",0)
+Global("AC#PPCreateWeird","ACPP70",0)
 LevelPartyGT(13)
     THEN
     RESPONSE #100
@@ -520,10 +520,10 @@ LevelPartyGT(13)
         CreateCreature("AC#PPSPI",[3810.2020],NNE)  // Blood-Soaked Spirit
         CreateCreature("AC#PPSPI",[4000.1920],W)  // Blood-Soaked Spirit
         CreateCreature("AC#PPSPI",[3750.2170],SW)  // Blood-Soaked Spirit
-        CreateCreature("AC#PPBGO",[1500.500],SEE)  // Bone Weirdling
-        CreateCreature("AC#PPBGO",[1300.1600],N)  // Bone Weirdling
-        CreateCreature("AC#PPBGO",[4100.1200],NW)  // Bone Weirdling
-        CreateCreature("AC#PPBGO",[1000.1900],NE)  // Bone Weirdling
+        CreateCreature("AC#PPBGO",[1500.500],SEE)  // Bone Weird
+        CreateCreature("AC#PPBGO",[1300.1600],N)  // Bone Weird
+        CreateCreature("AC#PPBGO",[4100.1200],NW)  // Bone Weird
+        CreateCreature("AC#PPBGO",[1000.1900],NE)  // Bone Weird
         CreateCreature("AC#PPSPI",[420.1250],SE)  // Blood-Soaked Spirit
         CreateCreature("AC#PPSPI",[460.1650],SE)  // Blood-Soaked Spirit
         CreateCreature("AC#PPSPI",[1050.550],SE)  // Blood-Soaked Spirit
@@ -537,14 +537,27 @@ END
 
 IF
     Global("AC#PPChapter6Quest","GLOBAL",5)
-    Global("AC#PPCreateWeirdling","ACPP70",0)
+    Global("AC#PPCreateWeird","ACPP70",0)
+    LevelPartyGT(13)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPBGO",[1500.500],SEE)  // Bone Weirdling
-        CreateCreature("AC#PPBGO",[1300.1600],N)  // Bone Weirdling
-        CreateCreature("AC#PPBGO",[4100.1200],NW)  // Bone Weirdling
-        CreateCreature("AC#PPBGO",[1000.1900],NE)  // Bone Weirdling
-        SetGlobal("AC#PPCreateWeirdling","ACPP70",1)
+        CreateCreature("AC#PPBGO",[1500.500],SEE)  // Bone Weird
+        CreateCreature("AC#PPBGO",[1300.1600],N)  // Bone Weird
+        CreateCreature("AC#PPBGO",[4100.1200],NW)  // Bone Weird
+        CreateCreature("AC#PPBGO",[1000.1900],NE)  // Bone Weird
+        SetGlobal("AC#PPCreateWeird","ACPP70",1)
+END
+
+IF
+    Global("AC#PPChapter6Quest","GLOBAL",5)
+    Global("AC#PPCreateWeird","ACPP70",0)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPBGL",[1500.500],SEE)  // lesser Bone Weird
+        CreateCreature("AC#PPBGL",[1300.1600],N)  // lesser Bone Weird
+        CreateCreature("AC#PPBGL",[4100.1200],NW)  // lesser Bone Weird
+        CreateCreature("AC#PPBGL",[1000.1900],NE)  // lesser Bone Weird
+        SetGlobal("AC#PPCreateWeird","ACPP70",1)
 END
 
 IF
@@ -616,32 +629,3 @@ RESPONSE #100
 OpenDoor("DOOR04")
 SetGlobal("AC#PPChapter6Quest","GLOBAL",18)
 END
-
-/////////////////////////////////////////////
-/////////////////////////////////////////////
-
-/*
-IF
-  OR(2)
-      TimeOfDay(DUSK)
-      TimeOfDay(NIGHT)
-  !GlobalTimerNotExpired("AntimagicTimer","ACPP70")
-THEN
-  RESPONSE #100
-      ApplySpell(Player1,DEAD_MAGIC_AREA)  // SPIN646.SPL (No such index)
-      AddAreaFlag(DEADMAGICZONE)
-      SetGlobalTimer("AntimagicTimer","ACPP70",14)
-END
-
-IF
-  OR(2)
-      TimeOfDay(MORNING)
-      TimeOfDay(DAY)
-  !GlobalTimerNotExpired("WildMagicTimer","ACPP70")
-THEN
-  RESPONSE #100
-      ApplySpellRES("AC#PPWM",Player1)  
-       RemoveAreaFlag(DEADMAGICZONE)
-      SetGlobalTimer("WildMagicTimer","ACPP70",14)
-END
-*/

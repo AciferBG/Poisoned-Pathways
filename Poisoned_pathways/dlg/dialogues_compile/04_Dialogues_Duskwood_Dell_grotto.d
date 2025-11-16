@@ -142,22 +142,25 @@ IF~~THEN REPLY ~I think I'll be going now.~ EXTERN AC#PPDR1 bye
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~I have weapons I’d like to lay to rest here.~ EXTERN AC#PPDR1 trade_root
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY ~Remind me, how was it again with the weapons I was to give you?~ EXTERN AC#PPDR1 trade_weapons_hub
 IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY ~Your High Priest has sent me. I am to collect a carafe of Eldath’s sacred singing water.~ EXTERN AC#PPDR1 need_singing_water
-IF ~Global("AC#PP_GiveBlade","GLOBAL",1) !Dead("AC#PPWYR")~ THEN REPLY ~I was told to collect a weapon here, one said to aid me against the undead.~ EXTERN AC#PPDR1 need_blade_01
+IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ THEN REPLY ~Alatoasz told me to collect a weapon here, one to aid me against the undead.~ EXTERN AC#PPDR1 need_blade_01
 
 CHAIN IF ~~ THEN AC#PPDR1 need_blade_01
 ~You seek the blade that may wound only dead flesh? I can scarce believe the Fallskeeper allowed it. Weapons laid down here are meant to rest forever.~  
 END
 IF ~~ THEN REPLY ~Then this time, it shall be otherwise.~ EXTERN AC#PPDR1 need_blade_02
+IF ~~ THEN REPLY ~Well, it was promised to me, and I would like to claim it now.~ EXTERN AC#PPDR1 need_blade_02
+IF ~~ THEN REPLY ~I understand your concerns, but it would be a welcome aid against all undead.~ EXTERN AC#PPDR1 need_blade_02
 IF ~~ THEN REPLY ~Enough of this prattle. Give me the blade that is mine by right!~ EXTERN AC#PPDR1 need_blade_unfriendly
 
 
 CHAIN IF ~~ THEN AC#PPDR1 need_blade_unfriendly
-~Such rudeness! What was the Fallskeeper thinking, to permit you this? Still... it is not mine to decide.~  
+~Such rudeness! What was the Fallskeeper thinking, to permit you this?~
+== AC#PPDR1 ~Still... it is not mine to decide.~  
 END
 IF ~~ THEN EXTERN AC#PPDR1 need_blade_02
 
 CHAIN IF ~~ THEN AC#PPDR1 need_blade_02
-~Here is the weapon. It is called the Memory of the Myths. Treat it with care.~  
+~Take the blade, <PRO_RACE>. I return to your hands what has rested in silence for ages. This is the Memory of the Myths — a sword forged in elder days to wound only that which should not walk. It has slumbered long beneath the waters. Treat it with reverence. And may its purpose serve you well.~ 
 DO ~SetGlobal("AC#PP_GiveBlade","GLOBAL",10) 
 AddJournalEntry(@12220,QUEST_DONE) 
 GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT

@@ -5,6 +5,7 @@ THEN
         SetMusic(NIGHT,%AC#PP90%)
 	    SetMusic(DAY,%AC#PP90%)
         Explore()
+        DayNight(DAWN_END)
         HideAreaOnMap("ACPP70")
         SetGlobal("Prep","ACPP90",1)
 END

@@ -8,6 +8,18 @@
   // Animation - green abishai
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/GAbi_BGEE~         ~override~
  
+  // Elven maid (modified banshee) animation
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Elven_maid/AC#EM.bmp~ ~override~
+  LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% AC#ELVENMAID~ UNLESS ~AC#ELVENMAID~
+  CLEAR_IDS_MAP
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Elven_maid/exxx.ini~ ~override/%hexNumber%.ini~
+  
+ 
     // Hezrou
   LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0x7f15 slotMax = slotMin + 0xff RET slot END
   ACTION_IF (slot <= 0) BEGIN
