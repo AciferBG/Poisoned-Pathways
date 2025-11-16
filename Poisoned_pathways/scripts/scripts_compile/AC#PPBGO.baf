@@ -2,8 +2,6 @@ IF
     Dead("AC#PPWYR")  // The Undying
 THEN
     RESPONSE #100
-        CreateVisualEffectObject("SPFLESHS",Myself)
-        Wait(1)
         DestroySelf()
 END
 

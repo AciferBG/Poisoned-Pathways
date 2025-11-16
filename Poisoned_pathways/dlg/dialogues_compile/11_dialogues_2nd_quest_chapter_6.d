@@ -681,13 +681,15 @@ EXIT
 // WYRD 2nd Meeting
 
 CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",18)~ THEN AC#PPWYR 1.00
-~You again! You may have forced me to show myself here, but that is all you have achieved.~
+~You again…? Impossible. Something drags me into this form, forces me to stand before you. What have you done, mortal? What power meddles with mine?~
 END
-IF ~~ THEN REPLY ~Don’t you see what I’ve done?~ EXTERN AC#PPWYR 3.01
-IF ~~ THEN REPLY ~You’re afraid, aren’t you? You know you’re the one losing this.~ EXTERN AC#PPWYR 3.01
+IF ~~ THEN REPLY ~You feel it! Your grip on this place is slipping.~ EXTERN AC#PPWYR 3.01
+IF ~~ THEN REPLY ~You’re not here by choice. That alone should worry you.~ EXTERN AC#PPWYR 3.01
+IF ~~ THEN REPLY ~Seems even an 'Undying' can be summoned like a rat from its hole.~ EXTERN AC#PPWYR 3.01   
+IF ~~ THEN REPLY ~The city refuses you. Its dead no longer welcome you.~ EXTERN AC#PPWYR 3.01   
 
 CHAIN AC#PPWYR 3.01
-~You may think you stand a chance, but you do not. Die—every last one of you!~
+~Whatever trick you wield will not save you. I will unmake all of this — and all of you!~
 DO ~SetGlobal("AC#PPChapter6Quest","GLOBAL",20)
 Enemy()~ 
 EXIT
@@ -695,18 +697,28 @@ EXIT
 
 // WYRD final 
 
-CHAIN IF ~Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",2)~ THEN AC#PPWYR 4.00
-~What have you done? How have you torn this place’s power out of my grasp?~
+CHAIN IF ~Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",4)~ THEN AC#PPWYR raise_again_failed_02
+~No! This can't be! This is my place! My power!~
 DO ~SetGlobal("AC#PP_Killed_Wyrd_2_time","GLOBAL",10)
 SetGlobal("AC#PPChapter6Quest","GLOBAL",22)
 DestroyItem("MINHP1")
 Enemy()~ 
 EXIT
 
+// WYRD pre-final 
+
+CHAIN IF ~Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",2)~ THEN AC#PPWYR raise_again_failed_01
+~What have you done? How have you torn this place’s power out of my grasp?~
+DO ~SetGlobal("AC#PP_Killed_Wyrd_2_time","GLOBAL",3)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("AC#PP6C9")~ 
+EXIT
+
 
 // WYRD 3rd 
 
-CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",21)~ THEN AC#PPWYR 4.00
+CHAIN IF ~Global("AC#PPChapter6Quest","GLOBAL",21)~ THEN AC#PPWYR raise_again_try
 ~You are about to strike me down a second time… but I will simply rise again—a third time!~
 DO ~SetGlobal("AC#PP_Killed_Wyrd_2_time","GLOBAL",1)
 ChangeEnemyAlly(Myself,NEUTRAL)

@@ -182,6 +182,14 @@ THEN
 END
 
 IF
+    Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",4)
+THEN
+    RESPONSE #100
+        Wait(1)
+        StartDialogueNoSet(Player1)
+END
+
+IF
     See(NearestEnemyOf(Myself))
     Global("AC#PPChapter6Quest","GLOBAL",20)
     Global("AC#PP70FightSpells_F","LOCALS",0)

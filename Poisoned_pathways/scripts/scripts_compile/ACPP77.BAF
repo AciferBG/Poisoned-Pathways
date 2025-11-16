@@ -79,11 +79,61 @@ END
 IF
     Global("CreateWyrdHelpers2","ACPP77",0)
     Global("AC#PPChapter6Quest","GLOBAL",20)
+    LevelPartyGT(16)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPBGO",[396.434],SE)  // Bone Weirdling
+        CreateCreature("AC#PPSP7",[535.295],SSW)  // Blood-Soaked Spirit
+        CreateVisualEffect("SPFLESHS",[535.295])
+        CreateCreature("AC#PPSP7",[910.426],SSW)  // Blood-Soaked Spirit
+        CreateVisualEffect("SPFLESHS",[910.426])
+        CreateCreature("AC#PPBG7",[396.434],SE)  // Bone Weirdling
         CreateVisualEffect("SPFLESHS",[396.434])
-        CreateCreature("AC#PPBGO",[907.479],W)  // Bone Weirdling
+        CreateCreature("AC#PPBG7",[907.479],W)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[907.479])
+        CreateCreature("AC#PPAL2",[326.512],SE)  // Allip
+        CreateVisualEffect("SPFLESHS",[396.434])
+        CreateCreature("AC#PPAL2",[326.512],W)  // Allip
+        CreateVisualEffect("SPFLESHS",[907.479])
+        CreateCreature("AC#PPMUM",[476.394],SE) 
+        CreateVisualEffect("SPFLESHS",[476.394])
+        CreateCreature("AC#PPMUM",[337.595],SE) 
+        CreateVisualEffect("SPFLESHS",[337.595])
+        CreateCreature("AC#PPMUM",[841.519],SE) 
+        CreateVisualEffect("SPFLESHS",[841.519]) 
+        CreateCreature("AC#PPMUM",[752.640],SE) 
+        CreateVisualEffect("SPFLESHS",[752.640]) 
+        SetGlobal("CreateWyrdHelpers2","ACPP77",1)
+END
+
+IF
+    Global("CreateWyrdHelpers2","ACPP77",0)
+    Global("AC#PPChapter6Quest","GLOBAL",20)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPSP7",[535.295],SSW)  // Blood-Soaked Spirit
+        CreateVisualEffect("SPFLESHS",[535.295])
+        CreateCreature("AC#PPSP7",[910.426],SSW)  // Blood-Soaked Spirit
+        CreateVisualEffect("SPFLESHS",[910.426])
+        CreateCreature("AC#PPBG7",[396.434],SE)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[396.434])
+        CreateCreature("AC#PPBG7",[907.479],W)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[907.479])
+        CreateCreature("AC#PPAL2",[326.512],SE)  // Allip
+        CreateVisualEffect("SPFLESHS",[396.434])
+        CreateCreature("AC#PPAL2",[326.512],W)  // Allip
+        CreateVisualEffect("SPFLESHS",[907.479])
+        SetGlobal("CreateWyrdHelpers2","ACPP77",1)
+END
+
+IF
+    Global("CreateWyrdHelpers2","ACPP77",0)
+    Global("AC#PPChapter6Quest","GLOBAL",20)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPBG7",[396.434],SE)  // Bone Weirdling
+        CreateVisualEffect("SPFLESHS",[396.434])
+        CreateCreature("AC#PPBG7",[907.479],W)  // Bone Weirdling
         CreateVisualEffect("SPFLESHS",[907.479])
         SetGlobal("CreateWyrdHelpers2","ACPP77",1)
 END
@@ -98,23 +148,6 @@ THEN
         CreateCreature("AC#PP77W",[882.357],S)  // Banshee
         CreateVisualEffect("SPFLESHS",[882.357])
         SetGlobal("CreateWyrdBanshee","ACPP77",1)
-END
-
-IF
-    Global("CreateWyrdHelpers2","ACPP77",0)
-    Global("AC#PPChapter6Quest","GLOBAL",20)
-    LevelPartyGT(11)
-THEN
-    RESPONSE #100
-        CreateCreature("AC#PPSPI",[535.295],SSW)  // Blood-Soaked Spirit
-        CreateVisualEffect("SPFLESHS",[535.295])
-        CreateCreature("AC#PPSPI",[910.426],SSW)  // Blood-Soaked Spirit
-        CreateVisualEffect("SPFLESHS",[910.426])
-        CreateCreature("AC#PPBGO",[396.434],SE)  // Bone Weirdling
-        CreateVisualEffect("SPFLESHS",[396.434])
-        CreateCreature("AC#PPBGO",[907.479],W)  // Bone Weirdling
-        CreateVisualEffect("SPFLESHS",[907.479])
-        SetGlobal("CreateWyrdHelpers2","ACPP77",1)
 END
 
 IF

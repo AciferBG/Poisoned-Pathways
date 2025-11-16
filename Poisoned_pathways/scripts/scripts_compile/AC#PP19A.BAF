@@ -1,7 +1,18 @@
 IF
+    Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",3)
+THEN
+    RESPONSE #100
+        CreateVisualEffectObject("SPHOLY",Myself)
+        Wait(1)
+        SetGlobal("AC#PP_Killed_Wyrd_2_time","GLOBAL",4)
+        Kill(Myself)
+END
+
+IF
     Global("AC#PP_Killed_Wyrd_2_time","GLOBAL",1)
 THEN
     RESPONSE #100
+        CreateVisualEffectObject("SPHOLY",Myself)
         Wait(1)
         SetGlobal("AC#PP_Killed_Wyrd_2_time","GLOBAL",2)
         Kill(Myself)

@@ -10,8 +10,6 @@ IF
     Dead("AC#PPWYR")  // The Undying
 THEN
     RESPONSE #100
-        CreateVisualEffectObject("SPFLESHS",Myself)
-        Wait(1)
         DestroySelf()
 END
 
@@ -21,7 +19,7 @@ IF
     Global("AC#PPSoulAttackWithSpells","LOCALS",0)
 THEN
     RESPONSE #100
-        DisplayStringHead(Myself,109810)  // Blood... All I can see is blood!
+        DisplayStringHead(Myself,@2024)  // Blood... All I can see is blood!
         SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
         ForceSpell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON)  // SPWI412.SPL (Greater Malison)
 END
@@ -32,7 +30,7 @@ IF
     Global("AC#PPSoulAttackWithSpells","LOCALS",0)
 THEN
     RESPONSE #100
-        DisplayStringHead(Myself,109811)  // Free me! Please!
+        DisplayStringHead(Myself,@2025)  // Free me! Please!
         SetGlobal("AC#PPSoulAttackWithSpells","LOCALS",1)
         ForceSpell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
