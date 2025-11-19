@@ -1,10 +1,10 @@
 IF
     Global("DyingMan","ACPP01",1)
     See([PC])
+    Range([PC],15)
 THEN
     RESPONSE #100
-        SetGlobal("DyingMan","ACPP01",2)
-        Dialogue([PC])
+        StartDialogueNoSet([PC])
 END
 
 IF

@@ -208,7 +208,7 @@ Myth Rhynn
 Hidden deep within the Mytharan Woods, in the shadowed reaches of the Wealdath, lies Myth Rhynn, once a hallowed necropolis of the elves. Its mythal, unlike those of other elven cities, was not wrought for war or wonder, but for reverence. But the mythal is broken. Whether shattered by age, sacrilege, or forgotten sorrow, it no longer binds the dead to sleep. Now, shadows walk among the roots of ancient barrows, and unquiet spirits rise in the stillness. Even the elves who once came to honor their ancestors now avoid the place, for the broken threads of the mythal pull at their hearts, as if mourning its own fall. What was once a sacred resting place is now a sorrowful wound upon the forest—and a warning.
 
 Myth Unnohyr
-The darkest tale among the three, Myth Unnohyr rose in the shadowed valleys of Tethyr’s southern forests. Its magic once fostered growth, healing, and deep communion with the natural world. Yet long before the Time of Troubles, something began to unravel. Elven lore speaks in hushed tones of a faltering divine bond—of a protector whose waning strength left the city's heart exposed. When that sacred power faded, the mythal shattered in silent despair, birthing a zone of wild and dead magic—a festering wound upon the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and the poisoned soil hums with restless malice.
+The darkest tale among the three, Myth Unnohyr rose in the shadowed valleys of Keltormir’s southern forests. Its magic once fostered growth, healing, and deep communion with the natural world. Yet, something began to unravel. Elven lore speaks in hushed tones of a faltering divine bond—of a protector whose waning strength left the city's heart exposed. When that sacred power faded, the mythal shattered in silent despair, birthing a zone of wild and dead magic—a festering wound upon the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and the poisoned soil hums with restless malice.
 
 Myth Tellaren
 Far to the south, in lands now buried under the sands of the desert, stood Myth Tellaren. When the genie-lords of Calim and Memnon warred across the south, their chaos reached even the hidden places of the elves. Myth Tellaren’s mythal, strained by planar pressure and betrayal from within, fractured—and with it, the delicate magic that held the city aloft. The destruction was swift and near-total. Some say the ruin still exists beneath the shifting sands, frozen in a moment of magical collapse—its mythal broken, yet still pulsing faintly, like embers beneath ash.
@@ -1204,8 +1204,6 @@ Weight: 1~
 @1184 = ~Face of the Forest~
 @1185 = ~This mask resembles a serene face—neither elf nor human, but something older, wilder. By donning the mask, the wearer feels the quiet strength of the forest. In the forest, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
 
-Another power, when invoked, is the way certain mammals respond to the wearer—with unexpected calm, even trust. From field mouse to forest bear, creatures of fur and fang seem to ignore the being behind the mask.
-
 STATISTICS:
 
 Equipped abilities:
@@ -1585,6 +1583,8 @@ Weight: 0~
 @2073 = ~Follow me.~
 
 @2074 = ~You need all blessings to perform the ritual required to create the antidote.~
+
+@2075 = ~Though the water is murky, you notice a tunnel beneath the surface of the water. You could dive through and explore it if you wish.~
 
 // the two fairies
 @2100 = ~If you must sparkle, do it over there!~

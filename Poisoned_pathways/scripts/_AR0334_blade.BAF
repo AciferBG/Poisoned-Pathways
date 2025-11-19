@@ -7,6 +7,8 @@ THEN
     SetGlobal("ForgeStuff","GLOBAL",0)
     TakePartyItemNum("AC#PPDN1",1) 
     TakePartyItemNum("AC#PPDN2",1) 
+    TakePartyItemNum("MISC27",1) 
+    TakePartyItemNum("MISC18",1) 
     DestroyItem("AC#PPDN1") 
     DestroyItem("AC#PPDN2")
     GiveItemCreate("AC#PPDNB",Player1,1,0,0) // give completed item

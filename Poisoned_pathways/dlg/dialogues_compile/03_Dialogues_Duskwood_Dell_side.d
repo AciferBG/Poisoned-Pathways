@@ -148,7 +148,7 @@ IF ~~ THEN REPLY ~The Dell-Light Twins? They seemed harmless enough — a bit ta
 IF ~~ THEN REPLY ~Those two faeries were delightful! Please don’t tell me something’s happened to them.~ EXTERN AC#PPMAN twins_kidnapped_01
 
 	CHAIN IF ~~ THEN AC#PPMAN twins_kidnapped_01
-	~They can be a little tiresome at times, yes, but they’ve long been part of life here in Duskwood Dell. I fear something has happened to them — they’ve vanished without a trace.~
+	~They can be a little tiresome at times, but they’ve long been part of life here in Duskwood Dell. I fear something has happened to them — they’ve vanished without a trace.~
 	END
 	IF ~~ THEN DO ~SetGlobal("AC#PPFairyTwinsKidnapQuest","GLOBAL",3)~ EXTERN AC#PPMAN twins_kidnapped_02
 
@@ -668,12 +668,13 @@ BEGIN AC#PPILL
 	IF ~PartyHasItem("AC#PPPUB")~ THEN REPLY ~I have the plant here with me.~ EXTERN AC#PPILL yes_have_plant
 	IF ~~ THEN REPLY ~I'm not going to help you after all.~ EXTERN AC#PPILL not_help_02
 
-CHAIN IF ~Global("DyingMan","ACPP01",2)~ THEN AC#PPILL request
+CHAIN IF ~Global("DyingMan","ACPP01",1)~ THEN AC#PPILL request
 ~You’ve spoken with the High One, haven’t you? Alatoasz sent you after the Talona priest... and the flower. The Groveglove. Everyone whispers of it. A poison so pure even the gentle hands of Eldath cannot undo it.~
 == AC#PPILL IF ~Global("MetMannatarv","ACPP01",0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But the Eldathyns won't let me.~ 
 == AC#PPILL IF ~GlobalGT("MetMannatarv","ACPP01",0)~ THEN ~We've met before. My name is Mannatarv. You know I am old and sick, very sick. All I want is to die. But they won't let me.~ 
 == AC#PPILL ~The priests heal me every day. They pour their light into me, knit my wounds, call me back when I slip away. But I am tired. My bones rot, my breath burns. Each day they gift me is another day of pain. I want no more gifts.~
-DO ~AddJournalEntry(@13080,QUEST)~ EXTERN AC#PPILL request_02
+DO ~SetGlobal("DyingMan","ACPP01",2)
+AddJournalEntry(@13080,QUEST)~ EXTERN AC#PPILL request_02
 
 CHAIN AC#PPILL request_02
 ~I beg you: Bring me a fragment of that flower before they make an antidote. Just a single leaf. Let me ingest its venom and be done. Let me leave this world in silence, not in their endless chants.~
@@ -752,8 +753,9 @@ IF ~~ THEN REPLY ~If this is your wish, I will bring it to you.~ EXTERN AC#PPILL
 IF ~~ THEN REPLY ~Perhaps there is another way.~ EXTERN AC#PPILL alternative
 
 CHAIN AC#PPILL refuse
-~Then leave me to my torment. The priests will be pleased. Farewell~
+~Then leave me to my torment. The priests will be pleased.~
 DO ~AddJournalEntry(@13083,QUEST_DONE)
+SetGlobal("DyingMan","ACPP01",20)
 EscapeArea()~ EXIT
 
 CHAIN AC#PPILL accept
@@ -960,7 +962,7 @@ IF~Global("AC#PP_HoneyQuest","GLOBAL",0)~THEN REPLY ~I shall not keep you from y
 	=
 	~Many wanderers pass by with burdens heavy on their shoulders, and I give them a spoonful. You would be surprised how many quarrels melt away when lips are sticky with honey.~ 
 	END
-	IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",1)~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
+	IF~GlobalGT("AC#PP_HoneyQuest","GLOBAL",0)~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 bye
 	IF~Global("AC#PP_HoneyQuest","GLOBAL",0)~THEN REPLY ~I shall not keep you from your honey. Goodbye.~ EXTERN AC#PPON2 five_flagons_quest_start
 	
 // Einstieg: erkennt den Spieler
@@ -1421,7 +1423,7 @@ IF~Global("AC#PPSymbolQuest","GLOBAL",2) Global("AC#PP_AlaAgreesSymbol","GLOBAL"
 IF~Global("AC#PPSymbolQuest","GLOBAL",0)~THEN REPLY ~You seem calm and content. Have you lived here long, priestess?~ DO ~SetGlobal("AC#PPSymbolQuest","GLOBAL",1) AddJournalEntry(@13050,QUEST)~ EXTERN AC#PPMON 01.01
 IF~~THEN REPLY ~How do you like this place, priestess? Duskwood Dell seems like a tranquil enclave in a troubled world.~ EXTERN AC#PPMON 01.02
 IF~~THEN REPLY ~This isn't my concern. Goodbye.~ EXTERN AC#PPMON bye
-IF~~THEN REPLY ~May peace flow with you, sister. Farewell.~ EXTERN AC#PPMON bye  
+IF~~THEN REPLY ~May peace flow with you. Farewell.~ EXTERN AC#PPMON bye  
 IF~Global("AC#PPSirineQuest","GLOBAL",1) Global("AC#PPSirineQuest_d","GLOBAL",0)~THEN REPLY ~I met a sirine, full of anger. You live by peace and calm—can you tell me how to help her?~ EXTERN AC#PPMON hello_s_00
 
 CHAIN AC#PPMON 01.01

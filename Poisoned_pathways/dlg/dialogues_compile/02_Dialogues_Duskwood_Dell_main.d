@@ -485,16 +485,12 @@ CHAIN AC#PPEL4 cnt.01.01
 == AC#PPEL4 ~It is in fine condition, yes. And it has grown tall, laden with venomous blossoms—more than enough for an antidote!~
 == AC#PPEL4 ~While you strove to thwart our foe, I searched through all my books, and I believe I have found a way to fashion such an antidote. For it, we require both the flower and knowledge of the precise place—the cauldron or laboratory—where the poison was first brewed.~
 END
-IF ~~ THEN REPLY ~I recall the place well. A cauldron stood there, steeped in the venom of his craft. It seemed the work was left unfinished.~ EXTERN AC#PPEL4 cnt.01.03
-IF ~~ THEN REPLY ~You mean the chamber where I struck down Talona’s servant? There was a cauldron there, no doubt meant for his next brew of poison.~ EXTERN AC#PPEL4 cnt.01.03
-IF ~~ THEN REPLY ~A cauldron, yes—I saw it when I fought him. The stench alone told me it was not yet complete.~ EXTERN AC#PPEL4 cnt.01.03
-IF ~~ THEN REPLY ~I did notice a cauldron there, though I had little mind for it while trading blows. If that is what you need, I can lead you to it.~ EXTERN AC#PPEL4 cnt.01.03
+IF ~~ THEN REPLY ~I recall the place well. A cauldron, steeped in the venom of his craft.~ EXTERN AC#PPEL4 cnt.01.03
+IF ~~ THEN REPLY ~I did notice a cauldron there, though I had little mind for it while trading blows.~ EXTERN AC#PPEL4 cnt.01.03
 IF ~~ THEN REPLY ~Oh, that bubbling pot? Looked like something half-finished—and wholly unpleasant.~ EXTERN AC#PPEL4 cnt.01.03
 
-
-
 CHAIN AC#PPEL4 cnt.01.03
-~That is precisely what I had hoped. Yet more is still required. Allow me to share what I discovered in my books.~
+~That is precisely what I had hoped. Yet more is still required. Allow me to share what I discovered.~
 == AC#PPEL4 ~Know this: Three blessings of the gods must be inscribed upon this flower. One or two alone shall not avail, for the dead magic that has fed it is grievously strong. Only when it is sanctified with life, compassion, and renewal may the corruption be purged.~ 
 == AC#PPEL4 ~I cannot bestow all three blessings myself. For this, we must seek the aid of other faiths. And I know well where to turn for such help.~
 == AC#PPEL4 ~You must travel to Athkatla and speak with the priest of Ilmater in the Slums. Ask him for the Blessing of Compassion. He and I are on good terms—I believe he will support our cause without hesitation.~

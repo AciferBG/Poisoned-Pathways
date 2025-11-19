@@ -6,7 +6,7 @@ THEN
         ClearAllActions()
         SetGlobal("Spelunking","ACPP73",1)
         SetGlobalTimer("Pool4Timer","ACPP73",ONE_MINUTE)   
-        DisplayStringNoName(Myself,72209)  // Though the water is murky and the steam from the hot spring nearly made you miss it, you notice a tunnel beneath the surface of the water. You could dive through and explore it if you wish.
+        DisplayStringNoName(Myself,@2075)  
 END
 
 IF
