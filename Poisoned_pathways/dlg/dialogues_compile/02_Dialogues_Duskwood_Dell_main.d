@@ -258,7 +258,7 @@ IF~~THEN REPLY ~Then Myth Unnohyr must be the one.~ EXTERN AC#PPEL4 right_myth_u
 
 CHAIN IF ~~ THEN AC#PPEL4 right_myth_unnohyr
 ~It's Myth Unnohyr! That must be the place. Listen to this passage: 'When his blessing was withdrawn, the mythal shattered in silent judgment, leaving behind a zone of wild and dead magic—a festering wound in the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and plants whisper poison into the soil.'~
-= ~That explains why our attempts at healing fail—it carries the essence of Myth Unnohyr’s broken mythal!~
+= ~That explains why our attempts at healing fail — the plant used to brew this incurable poison grows in the soil of a corrupted Mythal. It draws dead magic into itself and spreads that very rot through the victim’s body as venom. And all of this fits perfectly with what we know of Myth Unnohyr.~
 END
 IF ~~ THEN REPLY ~If you say so.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
 IF ~~ THEN REPLY ~If that’s where the plant grows, that’s where we’ll go.~ EXTERN AC#PPEL4 poison_myth_unnhoyr_03
@@ -270,12 +270,12 @@ CHAIN AC#PPEL4 hello_03x
 EXIT
 
 CHAIN IF ~~ THEN AC#PPEL4 poison_myth_unnhoyr_03
-~Myth Unnohyr seems to have once been a glorious, mythal-shrouded elven city. But one day, a mysterious catastrophe caused that mythal to implode, leaving behind a vast magical abomination: a wild magic zone by day and a dead magic zone by night.~
+~According to legends, Myth Unnohyr seems to have once been a glorious, mythal-shrouded elven city. But one day, a mysterious catastrophe caused that mythal to implode, leaving behind a vast magical abomination: A wild magic zone by day and a dead magic zone by night.~
 == NEERAJ IF ~InParty("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN ~Wild magic?! Gods, yes! Or no. Or maybe! I love it when even reality can’t make up its mind.~
 == VALYGARJ IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Elven ruins or not, this mythal was never meant for mortal hands. And now it bleeds its vengeance into the land.~
 == HAERDAJ IF ~InParty("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN ~Creepy ruins, cursed mythals, shattered relics—these elves had a real flair for drama.~
 == HEXXATJ IF ~InParty("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN ~When gods fall silent, the poison sings.~
-== AC#PPEL4 ~Since that time, magic there has been unstable—at least the kind that relies on spellcraft. Whether innate gifts or enchanted items still function, I cannot say.~
+== AC#PPEL4 ~Magic there seems to be highly unstable—at least the kind that relies on spellcraft. Whether innate gifts or enchanted items still function, I cannot say.~
 END
 IF ~~ THEN REPLY ~And you want me to go there?~ EXTERN AC#PPEL4 dead_magic_areab
 IF ~~ THEN REPLY ~So we’ll have to rely on steel and wits.~ EXTERN AC#PPEL4 dead_magic_areab
