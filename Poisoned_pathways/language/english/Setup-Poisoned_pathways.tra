@@ -168,6 +168,8 @@
 @944 = ~Neverfrog Blessing~ // ~Save vs. polymorph bonus~
 @945 = ~Breeze Against Dragon’s Cough~ // ~Save vs. breath bonus~
 
+@946 = ~gained 1 temporary hit point~
+
 //sto files
 @950 = ~Temple of Eldath~
 @951 = ~Calmfire's Scrolls~
@@ -287,27 +289,7 @@ Charge abilities:
 – May cast Chant once per day
 
 Weight: 0~
-@1034 = ~Longsword~
-@1035 = ~Blade of the Elven Mycologist +3~
-@1036 = ~This sword used to belong to an elven mycologist, Vicjane Fol-Truvé. She was known to be one of the most skilled mycologists in Amn. While she knew how to fight myconids, she considered it her last resort, and she would rather try to communicate with them, study their culture. If she had no other choice, though, she would use that exact sword against them.
 
-STATISTICS:
-
-Equipped abilities: 
-– Magic Resistance: +5%
-– Armor Class vs. Myconids: +2
-– Saving Throws vs. Myconids: +2
-
-THAC0: +3
-Damage: 1d8+3, +1 acid damage, +1 fire damage
-Damage type: Slashing
-Speed Factor: 3
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 4~
 @1037 = ~Ioun Stone~
 @1038 = ~Berry-Shaped Ioun Stone~
 @1039 = ~This Ioun stone is shaped like a berry. Someone must have used magic to make it look like this.
@@ -487,15 +469,13 @@ Weight: 2
 ~
 
 @1075 = ~Headband~
-@1076 = ~Halo of Corrosive Blood~
-@1077 = ~This sinister halo is fashioned from congealed, darkened blood. Once worn by an ancient creature imprisoned beneath Myth Unnohyr—an elder blood amniote—it still pulses faintly, as if remembering the rhythm of a long-forgotten heart.
-
-Those who don the halo may channel its corrosive essence, spreading decay and agony in equal measure. To some, such pain is a curse... to others, a final and perfect gift.
+@1076 = ~Halo of Coagulated Blood~
+@1077 = ~Fashioned from congealed, hardened blood clots, this halo once adorned the brow of an ancient blood amniote imprisoned beneath Myth Unnohyr. It is not merely a crown, but a scar given shape, memory turned weapon.
 
 STATISTICS:
 
-Charge abilities:
-– May cast Dolorous Decay once per day
+Combat abilities:
+– When the wearer kills a creature, <PRO_HESHE> gains 1 temporary hit point for 1 turn (cumulative).
 
 Equipped abilities:
 – Charisma: –1
@@ -553,7 +533,7 @@ Weight: 6
 STATISTICS:
 
 Charge abilities:
-– May cast Goodberry twice per day 
+– May cast Sanctuary once per day 
 
 Equipped abilities:
 – Immune to Entangle and Web
@@ -1360,9 +1340,9 @@ These pale, floating lights haunt marshes and ruins, feeding on fear. They lure 
 A mutation born of unstable magic. Flickering in ever-changing flashes, these lights twist spells around them—wards collapse, surges erupt, enchantments go awry. They are most often found drifting in regions of wild magic."
 
 "Will-o’Dead
-Spawn of lifeless Weave. These wan globes feed not on fear but on power: They sap prepared spells and drain charges from wands and staves. They linger where magic itself has failed, in the barren zones known as dead magic."~
+Spawn of the lifeless Weave, these wan globes feed not on fear, but on life force. They linger where magic itself has failed — in the barren places known as dead-magic zones."~
 @1210 = ~Essence of the Will-o’Dead~
-@1211 = ~A faintly glowing mote of pallid light, cold to the touch and unnervingly silent. Within it lingers the hollow hunger of dead magic, a force that drains spell and staff alike. Lore-whispers suggest that such an essence could one day serve to counter the emptiness where the Weave has failed.~
+@1211 = ~A faintly glowing mote of pallid light, cold to the touch and unnervingly silent. Lore-whispers suggest that such an essence could one day serve to counter the emptiness where the Weave has failed.~
 @1212 = ~Essence of the Will-o’Wild~
 @1213 = ~This shimmering fragment pulses with chaotic hues, shifting from emerald to amber in an instant. It carries within it the untamed spark of wild magic, unpredictable yet potent. Some claim that such essence, properly bound, might shield its bearer from the turbulence of unstable Weave-fields.~ 
 @1214 = ~Manual of Peaceful Living~
@@ -1495,6 +1475,25 @@ Launcher: Bow
 Special: Restores 4d6 Hit Points to the creature struck
 
 Weight: 0~
+@1244 = ~Axe of Apologies~
+@1245 = ~The magical imprint on this weapon was warped by a particularly sensitive Odonti shaman who felt that aggression should be tempered with grace and remorse.
+Now the axe whispers a soft "Sorry!" each time it hits a target.
+Unfortunately, these apologies affect the wielder more than the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in combat.
+
+STATISTICS:
+
+Combat abilities:
+– Each successful hit causes the wielder to suffer a cumulative –2 THAC0 for 2 rounds
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Speed Factor: 5
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
 
 // script strings
 @2000 = ~Duskwood Dell~

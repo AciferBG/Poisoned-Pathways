@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPAX1.itm~         ~override~    //  axe of apologies
+  SAY NAME2 @1244
+  SAY DESC  @1245
+
 COPY ~%MOD_FOLDER%/itm/AC#PPAHE.itm~         ~override~    //  arrow of healing
   SAY NAME2 @1242
   SAY DESC  @1243
@@ -394,11 +398,6 @@ COPY ~%MOD_FOLDER%/itm/AC#PPHE.itm~         ~override~    // Helmet of Elven Cha
   SAY NAME1 @1031
   SAY NAME2 @1032
   SAY DESC  @1033
-
-COPY ~%MOD_FOLDER%/itm/AC#PPSW.itm~         ~override~    // Blade of the Elven Mycologist
-  SAY NAME1 @1034
-  SAY NAME2 @1035
-  SAY DESC  @1036
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBR.itm~         ~override~    // Berry-Shaped Ioun Stone
   SAY NAME1 @1037
