@@ -1476,11 +1476,16 @@ Special: Restores 4d6 Hit Points to the creature struck
 
 Weight: 0~
 @1244 = ~Axe of Apologies~
-@1245 = ~The magical imprint on this weapon was warped by a particularly sensitive Odonti shaman who felt that aggression should be tempered with grace and remorse.
-Now the axe whispers a soft "Sorry!" each time it hits a target.
-Unfortunately, these apologies affect the wielder more than the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in combat.
+@1245 = ~This magical battle axe bears the image of an orc. Once wielded by the Odonti, a reclusive clan of peaceful orcs from the Unapproachable East who venerate Eldath, it served as a symbol of protection—and regret.
+
+The axe whispers a soft “Sorry!” each time it strikes a target. Unfortunately, these apologies weigh heavier on the wielder than on the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in battle.
+When the bearer is wounded, the axe seems to grieve—sometimes knitting flesh with the last remnants of long-forgotten Eldathyn blessings.
+
 
 STATISTICS:
+
+Equipped abilities: 
+– 25% chance to cast Cure Moderate Wounds on the wielder when hit
 
 Combat abilities:
 – Each successful hit causes the wielder to suffer a cumulative –2 THAC0 for 2 rounds
