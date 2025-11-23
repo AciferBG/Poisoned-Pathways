@@ -85,7 +85,7 @@ The ritual succeeded. From the Malagent’s corrupted cauldron rose a monstrous 
 
 @12111 = ~The Antidote
 
-Fallskeeper Alatoasz has received the antidote and completed the ritual of purification. The venom that once threatened Amn and beyond can no longer spread. Peace returns to the waters, and the shadow of the poison has lifted.~
+I delivered the antidote to Alatoasz Berendim, and he accepted it with gratitude. The venom that once threatened the Lands of Intrigue can spread no further.~
 
 // chapter 6 Quest
 @12200 = ~Echoes from Myth Unnohyr
@@ -387,6 +387,25 @@ Atthe Temple of Waukeen, I was sent once more on. They spoke of a final meeting,
 @13134 = ~The Promise Unkept
 
 Behind the Temple of Ilmater I finally met the man all the others had spoken of. He asked about a geas I was supposed to be bound by — yet the letter I carried belonged to someone long dead. Whatever burden or plea the original sender hoped to resolve ended elsewhere, and none of it had anything to do with me.~
+
+// Undying in Zombie shape
+@13200 = ~The Restless Zombie
+
+In the ruins of Myth Unnohyr I met a strange undead creature—a zombie who still speaks with a trace of reason. It begged for my help, claiming that fallen trees block the path ahead and that only by lifting an ancient seal from a nearby tomb can both the way and its tormented soul be freed.~
+
+@13201 = ~The Restless Zombie
+
+The undead claims that the seal it seeks bars the tomb of its beloved, Elv-Esster Aened. It wishes me to remove the ward so that it may reach her and finally rest. The same seal is said to hold sway over the cursed trees that block my path.~
+
+@13202 = ~The Restless Zombie
+
+I removed the warding seal from the tomb. The undead creature vanished into the shadows soon after—perhaps at last reunited with the one it called its beloved. I can only hope their rest is a peaceful one.~
+
+@13203 = ~The Restless Zombie
+
+I chose to destroy the zombie rather than aid it. Whatever story bound it to this place has ended, and its hunger for peace ends with it. The path through the ruins must now be cleared without its guidance.~
+
+
 
 
 

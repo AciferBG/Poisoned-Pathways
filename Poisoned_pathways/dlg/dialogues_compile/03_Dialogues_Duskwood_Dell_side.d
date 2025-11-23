@@ -1244,7 +1244,7 @@ IF~~THEN REPLY ~Depends. What do you need?~ EXTERN AC#PPCHA 01.01
 IF~~THEN REPLY ~I have no time on helping boys that do not even shave themselves yet. Go play in the trees.~ EXTERN AC#PPCHA 01.02
 
 CHAIN AC#PPCHA 01.01
-~You see, it was recently that I run away from home. I... I just couldn't live the life I was expected to live! My parents passed when I was still young, and I was raised by my aunt—Pesca. She lives in the Government District of Athkatla. Her world is... marble, silk, and coin. She wanted me to become a refined, wealthy man. Polished. Privileged. Fat. Lazy.~
+~You see, it was recently that I run away from home. I... I just couldn't live the life I was expected to live! My parents passed when I was still young, and I was raised by my aunt—Pesca. She lives in the Government District of Athkatla. Her world is... marble, silk, and coin. She wanted me to become a refined, wealthy man. Privileged. Preening. Pampered.~
 ==AC#PPCHA ~But none of it ever felt like mine. Not the clothes, not the manners, not the future. One day, I heard something—felt something. A stillness. A call. Eldath’s voice in the wind, maybe.~
 ==AC#PPCHA ~So I came here, to Duskwood Dell, to learn, to breathe, to find a path of my own. But... I left without a word. Just vanished. That wasn’t right.~
 ==AC#PPCHA ~I can't return—she'd never let me go again. But maybe, if someone brought her this flower... told her I'm safe and where I am... maybe then, peace can grow between us again.~

@@ -601,17 +601,13 @@ EXIT
 
 CHAIN AC#PPEL4 have_blessings_have_flower_have_water
 //DO ~GiveItemCreate("AC#PPWA",Player1,1,0,0)~
-~We have the flower, the singing water of Eldath, and we have the blessings. And we know where the poison was prepared. Now, we're going to use that exact place to give the shape to the toxin and prepare the antidote.~
+~We have the flower, the singing water of Eldath, and we have the blessings. And we know where the poison was prepared.~
 END
 IF~~THEN EXTERN AC#PPEL4 have_blessings_have_flower_have_water_02
 
 
 CHAIN AC#PPEL4 have_blessings_have_flower_have_water_02
-~You must remember: We are contending with wild magic, dead magic, and sacred blessing—a volatile mixture indeed. Yet I believe it shall hold… no, it must hold.~
-== JaheiraJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~It will. I know it.~
-== CerndJ  IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~A risk must be taken, if a bird is to learn how to fly. And we are such birds. We need to do whatever we can, and we'll sly above the threats.~
-== RasaadJ IF ~InParty("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN ~Even though we cannot be completely sure about how the dead magic zone may affect the plan, we should indeed do our best. There are people who depend on us.~
-==AC#PPEL4 ~You must return to Myth Unnohyr and place the blessed flower and Eldath’s singing water within the malagent’s cauldron. When they mingle with the poison’s remnants, the toxin will take form—defeat it, and an antidote shall be wrought.~
+~You must return to Myth Unnohyr and place the blessed flower together with Eldath’s singing water within the Malagent’s cauldron. When they mingle with the poison’s remnants, the toxin will take form—defeat it, and an antidote shall be wrought.~
 == AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Then let the vile concoction be given flesh, that we might smite it in righteous combat!~
 == NEERAJ IF ~InParty("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN ~This is either going to end in glorious salvation... or one really big kaboom.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~So, we toss blessings in, stir thrice clockwise, and hope it doesn’t explode in our faces? Sounds like my first cooking attempts with Winthrop back in Candlekeep.~
@@ -625,10 +621,9 @@ DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",6)~ EXIT
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",6)~ THEN AC#PPEL4 cnt.03.00
 ~Have you fashioned the antidote? Is that why you have returned—to bring me good news?~
 END
-IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Yes. Here it is—but it was no easy task.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
-IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~The antidote is made. May it spare many lives.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
+IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Yes. Here it is. May it spare many lives.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~Here—freshly wrought, and hard-won.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
-IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~This little vial cost me blood, sweat, and more than a few corpses. Take it, before I change my mind.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
+IF ~PartyHasItem("AC#PPANT")~ THEN REPLY ~This vial cost me blood, sweat, and a few corpses.~ DO ~TakePartyItem("AC#PPANT") DestroyItem("AC#PPANT")~ EXTERN AC#PPEL4 cnt.03.02
 IF ~~ THEN REPLY ~Not yet.~ EXTERN AC#PPEL4 cnt.03.01
 IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY ~One more thing—I have Merethan’s symbol of Eldath with me.~ EXTERN AC#PPEL4 Merethan_emblem_05
 

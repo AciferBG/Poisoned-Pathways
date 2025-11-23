@@ -10,8 +10,9 @@ CHAIN IF ~NumTimesTalkedTo(0)~ THEN AC#PPEX2 hello_charname
 == AC#PPEY2 ~Tell us, <CHARNAME>—what of Myth Unnohyr? Could the place ever be returned to nature’s care?~
 END
   IF ~~ THEN REPLY ~Hardly. It’s anything but safe out there.~ EXTERN AC#PPEX2 second_talk
+  IF ~~ THEN REPLY ~If you value your lives, you should stay far away from that place.~ EXTERN AC#PPEX2 second_talk  
   IF ~~ THEN REPLY ~Of course! What could possibly go wrong?~ EXTERN AC#PPEX2 second_talk
-
+  IF ~~ THEN REPLY ~Even in its ruin, the place holds a quiet strength. Nature has not abandoned it entirely.~ EXTERN AC#PPEX2 second_talk
 
 CHAIN AC#PPEX2 second_talk
 ~Then we must see it with our own eyes.~
@@ -19,8 +20,8 @@ CHAIN AC#PPEX2 second_talk
 == AC#PPEY2 ~It is the least we can do—to let Eldath’s grace mend what the Talonite’s evil scarred.~
 END
   IF ~~ THEN REPLY ~I would strongly advise against it.~ EXTERN AC#PPEX2 bye
-  IF ~~ THEN REPLY ~Safe travels, and may peace go with you.~ EXTERN AC#PPEX2 bye
-
+  IF ~~ THEN REPLY ~If anyone can bring a little peace back to that place, it’s you.~ EXTERN AC#PPEX2 bye
+  IF ~~ THEN REPLY ~At least ward yourselves well before you set foot there. The Mythal is unpredictable.~ EXTERN AC#PPEX2 bye
 
 CHAIN AC#PPEX2 bye
 ~Our minds are set. Thanks to you, the way is open for peace to return to the old forests.~

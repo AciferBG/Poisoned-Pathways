@@ -336,7 +336,7 @@ STATISTICS:
 Weight: 1~
 @1047 = ~Cloak~
 @1048 = ~Eldath's Embrace~
-@1049 = ~This enchanted cloak dates back to Daraniel of the Still Waters, a reclusive priest of Eldath who wandered the groves of Wealdath in ages past. Birds would nest in his hands, wolves guarded his sleep, and even the most skittish beasts would draw near to bask in his tranquil presence.
+@1049 = ~This enchanted cloak dates back to a reclusive priest of Eldath who wandered the groves of Wealdath in ages past. Birds would nest in his hands, wolves guarded his sleep, and even the most skittish beasts would draw near to bask in his tranquil presence.
 When he passed from the world, it is said dryads wove this mantle from the leaves that had fallen around his resting place. Those who wear it walk in quiet grace—and the wild things of the world walk beside them.
 
 When animals are near, the cloak responds with gentle magic. Its wearer becomes more grounded, harder to frighten, and more difficult to strike.
@@ -344,7 +344,7 @@ When animals are near, the cloak responds with gentle magic. Its wearer becomes 
 STATISTICS:
 
 Charge abilities:
-– May cast Slow Poison once per day (on self)
+– May cast Defensive Harmony once per day (on self)
 
 Equipped abilities:
 – Armor Class: +2
@@ -528,12 +528,14 @@ Weight: 6
 ~
 @1084 = ~Staff~
 @1085 = ~Branch of Duskwood Dell +3~
-@1086 = ~This quarterstaff was cut long ago from a living tree within Duskwood Dell. The branch still bears a faint emerald sheen, and when held, it thrums softly with life. It was not made to kill, but to ward and to guide. Those who wield it find their strength tempered by serenity, their hearts anchored in quiet purpose.
+@1086 = ~This quarterstaff was cut from a tree within Duskwood Dell. The branch still carries a faint verdant sheen, and when held, it thrums softly with life. It was never meant to kill, but to protect, to clear the way, and to preserve.
+
+Its magic shields the bearer from webs and tangling roots, strengthens the body, and guards against death. For those who wish only to walk their path in peace, it is a steadfast companion.
 
 STATISTICS:
 
 Charge abilities:
-– May cast Sanctuary once per day 
+– May cast Remove Paralysis once per day 
 
 Equipped abilities:
 – Immune to Entangle and Web
