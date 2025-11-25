@@ -35,10 +35,10 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("Summon_Chasme","LOCALS",1)
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[693.400],S)  // Chasme
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[854.754],NNW)  // Chasme
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[1036.540],SW)  // Chasme
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[465.702],NE)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[693.400],S)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[854.754],NNW)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[1036.540],SW)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[465.702],NE)  // Chasme
 END
 
 IF
@@ -51,9 +51,9 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("Summon_Chasme","LOCALS",1)
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[693.400],S)  // Chasme
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[854.754],NNW)  // Chasme
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[1036.540],SW)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[693.400],S)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[854.754],NNW)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[1036.540],SW)  // Chasme
 END
 
 IF
@@ -64,8 +64,8 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("Summon_Chasme","LOCALS",1)
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[693.400],S)  // Chasme
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[854.754],NNW)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[693.400],S)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[854.754],NNW)  // Chasme
 END
 
 IF
@@ -76,6 +76,6 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("Summon_Chasme","LOCALS",1)
-        CreateCreatureEffect("AC#PPCHS","SPSPEV",[693.400],S)  // Chasme
+        CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[693.400],S)  // Chasme
 END
 
