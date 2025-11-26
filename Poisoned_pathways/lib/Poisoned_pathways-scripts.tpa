@@ -49,22 +49,6 @@ EXTEND_BOTTOM ~ar0800.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start:
 EXTEND_BOTTOM ~ar0900.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 EXTEND_BOTTOM ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_plot_start.baf~ // plot start: first encounter of eldathyn cleric
 
-// PLOT CONTINUE: 2nd; create priest of Eldath for wyrd plot
-EXTEND_TOP ~ar0020.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar0300.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar0400.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_TOP ~ar0500.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar0700.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar0800.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar0900.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar1100.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar1200.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar1700.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar1800.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar1900.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-EXTEND_BOTTOM ~ar2000.bcs~ ~%MOD_FOLDER%/scripts/_plot_2nd.baf~ // plot start: 2nd encounter of eldathyn cleric
-
 // Patching GENSHY script to prevent running away
 COPY_EXISTING ~GENSHY.BCS~ ~override~
     DECOMPILE_AND_PATCH BEGIN

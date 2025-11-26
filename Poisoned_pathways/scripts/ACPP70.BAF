@@ -280,32 +280,8 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("AC#PPChapter6Quest","GLOBAL",11)
-        AddJournalEntry(@12213,QUEST)
+        //AddJournalEntry(@12213,QUEST)
 END
-
-/*
-IF
-    PartyHasItem("AC#PPGRQ")  // Green Rose of Mythrien
-    Global("AC#PPChapter6Quest","GLOBAL",10)
-THEN
-    RESPONSE #100
-        StartCutSceneMode()
-        ClearAllActions()
-        SetGlobal("AC#PPChapter6Quest","GLOBAL",11)
-        CreateVisualEffect("SPFLESHS",[1525.1110])
-        Wait(2)
-        CreateCreature("AC#PPSON",[1525.1110],S)  // Elven Spirit
-        Wait(3)
-        DisplayStringHead("AC#PPSON",@2019)  // *Rose... it must be safe!*
-        Wait(5)
-        DisplayStringHead("AC#PPSON",@2020)  // *Take it to Mythrien... Place it under his feet and reach for his helping hand...*
-        Wait(5)
-        Kill("AC#PPSON")  // Elven Spirit
-        Wait(3)
-        EndCutSceneMode()
-        AddJournalEntry(@12213,QUEST)
-END
-*/
 
 IF
     Global("OpenTreeDoor","ACPP70",1)
@@ -326,6 +302,7 @@ THEN
         DestroyItem("AC#PP77W")  // Elven Wardstone
 END
 
+/*
 IF
     PartyHasItem("AC#PPWA")  // Singing Water of Eldath
     Global("SecondVisit","ACPP70",0)
@@ -338,6 +315,7 @@ THEN
         TriggerActivation("Trigger_wardstone",TRUE)
         SetGlobal("SecondVisit","ACPP70",1)
 END
+*/
 
 IF
     Global("AC#PPOpenTomb","GLOBAL",1)
@@ -582,25 +560,6 @@ THEN
         CreateCreature("AC#PPHE1",[3860.389],NNE)
         SetGlobal("AC#PPChapter6Quest","GLOBAL",6)
 END
-
-/*
-IF
-    NumDead("AC#PPSYM",3)  // Blood-Soaked Spirit
-    CombatCounter(0)
-    Global("AC#PPChapter6Quest","GLOBAL",5)
-THEN
-    RESPONSE #100
-        StartCutSceneMode()
-        Wait(1)
-        CreateCreatureObjectOffset("AC#PPHEL",Player1,[40.40])  // Elven Spirit
-        SmallWait(1)
-        CreateVisualEffectObject("SPDIMNDR","AC#PPHEL")  // Elven Spirit
-        Wait(5)
-        SetGlobal("AC#PPChapter6Quest","GLOBAL",6)
-        Wait(1)
-        EndCutSceneMode()
-END
-*/
 
 IF
 Global("AC#PPChapter6Quest","GLOBAL",11)

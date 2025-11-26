@@ -383,9 +383,9 @@ Global("DebatingKorgan","ACPP01",0)~ THEN AC#PPST1 hello_korgan
 ==KORGANJ ~When I cut out that halfling’s jabbering tongue.~
 ==AC#PPST2 ~With such an attitude you’ll have a hard time getting anyone to lend you their ears!~
 ==KORGANJ ~Never had trouble with that! Kept their ears. Made a fine necklace, that.~
-==AC#PPST2 ~By Eldath, you have problems with your temper!~
-==KORGANJ ~No, you have problems with your delusions!~
-==AC#PPST1 ~He’s beyond reach.~
+//==AC#PPST2 ~By Eldath, you have problems with your temper!~
+//==KORGANJ ~No, you have problems with your delusions!~
+==AC#PPST1 ~By Eldath, he’s beyond reach.~
 ==KORGANJ ~Aye. And proud of it!~
 END
 IF ~~ THEN DO ~SetGlobal("DebatingKorgan","ACPP01",1)~ EXIT
@@ -483,6 +483,25 @@ THEN AC#PPST2 hello_viconia
 ==VICONIJ ~Or perhaps some waters run black for a reason.~
 ==AC#PPST2 ~May Eldath’s peace find you yet, even if she must search long.~
 DO ~SetGlobal("DebatingViconia","ACPP01",1)~ EXIT
+
+// Eldathyn and Minsc
+CHAIN IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Global("EldMinsc1","ACPP01",0)~
+THEN AC#PPST1 EldMinsc_surrender1
+~Fierce warrior, have you ever considered asking your foes to surrender *before* charging at them?~
+==MINSCJ ~Of course I have! I always shout "Surrender!" while charging. They always refuse, as my swords reach them first.~
+==AC#PPST2 ~Perhaps... you could wait for an answer next time?~
+==MINSCJ ~But waiting gives evil time to think! Better to bonk them before they bolt!~
+DO ~SetGlobal("EldMinsc1","ACPP01",1)~ EXIT
+
+
+// Eldathyn and Minsc
+CHAIN IF ~InParty("Minsc") !StateCheck("minsc",CD_STATE_NOTVALID) Global("EldMinsc1","ACPP01",0)~
+THEN AC#PPST2 EldMinsc_surrender1
+~Fierce warrior, have you ever considered asking your foes to surrender *before* charging at them?~
+==MINSCJ ~Of course I have! I always shout "Surrender!" while charging. They always refuse, as my swords reach them first.~
+==AC#PPST1 ~Perhaps... you could wait for an answer next time?~
+==MINSCJ ~But waiting gives evil time to think! Better to bonk them before they bolt!~
+DO ~SetGlobal("EldMinsc1","ACPP01",1)~ EXIT
 
 
 // Eldathyn #1

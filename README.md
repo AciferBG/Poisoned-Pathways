@@ -9,12 +9,13 @@
 ## Features
 - New quest content continuing after the Renfeld encounter in the Docks District  
 - New areas to explore in Amn and Tethyr 
-- An additional extensive questline in Chapter 6 of the game – make sure to revisit the places of the mod later in your journey!
 - New enemies and custom encounters  
 - Unique magical items  
 - Challenging battles and dialogue-driven progression   
 - Approx. 2–3 hours of gameplay  
-- Compatible with both BG2EE and EET   
+- Compatible with both BG2EE and EET
+
+*The current release of this mod ends with the resolution of the Renfeld poison storyline. Certain areas introduced in this mod are planned to be revisited in later BG chapters and in Throne of Bhaal in a future release, though no release date has been set.*
 
 **How the mod begins:**  
 The mod is triggered **after delivering Renfeld’s body** in the Docks District of Athkatla. Once this event is completed, a new path will open...

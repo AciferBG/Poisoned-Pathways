@@ -87,63 +87,6 @@ The ritual succeeded. From the Malagent’s corrupted cauldron rose a monstrous 
 
 I delivered the antidote to Alatoasz Berendim, and he accepted it with gratitude. The venom that once threatened the Lands of Intrigue can spread no further.~
 
-// chapter 6 Quest
-@12200 = ~Echoes from Myth Unnohyr
-
-An Eldathyn messenger reached out to me again. He bears news from Duskwood Dell and asked me to meet Fallskeeper Alatoasz Berendim there regarding new troubles in Myth Unnohyr. I should visit Duskwood Dell and hear the Fallskeeper’s request when I can.~
-
-@12202 = ~Echoes from Myth Unnohyr
-
-In Duskwood Dell, I was introduced to the ranger Mismal Al’Visalle. He and the Fallskeeper fear that Myth Unnohyr has worsened since my last battle there. Mismal believes an ancient undead evil is feeding on Myth Unnohyr’s broken magic. If left unchecked, its undead will spill into the surrounding lands. Mismal will await me in Myth Unnohyr.~
-
-@12207 = ~Echoes from Myth Unnohyr
-
-I entered Myth Unnohyr. Mismal will scout ahead; we are to meet beyond the gate.~
-
-@12208 = ~Echoes from Myth Unnohyr
-
-The evil being manifested as an undead wearing the face of the city’s former commander, a warrioress named Elv-Esster Aened. It killed Mismal and tightened its hold over the city. There will be no retreat.~
-
-@12209 = ~Echoes from Myth Unnohyr
-
-I confronted the evil that haunts Myth Unnohyr. It boasts of binding itself to the corpses of the city, drawing its strength from their numbers. I must find a way to sever the power it draws from the ruins. Perhaps there is some means within the city itself to weaken its hold.~
-
-@12211 = ~Echoes from Myth Unnohyr
-
-I destroyed the symbiotes. An elven spirit bade me meet him beneath Mythrien’s temple; he claims to know how to end the evil in the city.~
-
-@12212 = ~Echoes from Myth Unnohyr
-
-I encountered the spirit of Elv-Esster Aened, once commander of Myth Unnohyr’s guard. She urged me to seek a rose that still blooms — one nourished by her lingering hope for the city she once protected. I must take this rose to the forgotten temple and lay it at Mythrien’s feet to call upon the god’s aid.~
-
-@12213 = ~Echoes from Myth Unnohyr
-
-I found the rose. With it, I can attempt the summoning at Mythrien's old temple by placing the rose at the feet of his statue.~
-
-@12214 = ~Echoes from Myth Unnohyr
-
-I summoned an aspect of the ancient elven deity Mythrien Sarath. The god cannot mend the Mythal in full, but he will sever the currents that feed the Undying so I may face it on more equal ground. I must hunt him down and end it.~
-
-@12216 = ~Echoes from Myth Unnohyr
-
-The Undying is defeated and Myth Unnohyr—at last—can breathe. I should speak to Mythrien in his temple again.~
-
-@12217 = ~Echoes from Myth Unnohyr
-
-I have informed Mythrien of my victory. As thanks, he gave me his Green Rose, bearing a ward against hostile sorcery. He cannot restore the Mythal forever, but he has steadied it for a single year; during that time, no corruption shall rise to feed upon it.~
-
-@12218 = ~Echoes from Myth Unnohyr
-
-Elv-Esster’s spirit appeared once more. She thanked me for granting Mythrien the chance to steady the Mythal for a year and to restore to these ruins the rest they were long denied.~
-
-@12219 = ~Echoes from Myth Unnohyr
-
-I returned to Duskwood Dell and delivered the news to Fallskeeper Alatoasz. Grateful for what has been done, Alatoasz entrusted me with a final task — to visit Eldath’s Grotto, where a sacred blade awaits, forged to strike only the unliving.~
-
-@12220 = ~Echoes from Myth Unnohyr
-
-Within the still waters of Eldath’s Grotto, the Maiden granted me the blade spoken of by Fallskeeper Alatoasz. The weapon bears no hunger for blood — it harms only the unliving, striking down what defies the peace of the Quiet One. With this gift, the echoes of Myth Unnohyr may finally fade into silence.~
-
 /******************************
 SIDE quest journal entries
 ******************************/
@@ -387,27 +330,6 @@ Atthe Temple of Waukeen, I was sent once more on. They spoke of a final meeting,
 @13134 = ~The Promise Unkept
 
 Behind the Temple of Ilmater I finally met the man all the others had spoken of. He asked about a geas I was supposed to be bound by — yet the letter I carried belonged to someone long dead. Whatever burden or plea the original sender hoped to resolve ended elsewhere, and none of it had anything to do with me.~
-
-// Undying in Zombie shape
-@13200 = ~The Restless Zombie
-
-In the ruins of Myth Unnohyr I met a strange undead creature—a zombie who still speaks with a trace of reason. It begged for my help, claiming that fallen trees block the path ahead and that only by lifting an ancient seal from a nearby tomb can both the way and its tormented soul be freed.~
-
-@13201 = ~The Restless Zombie
-
-The undead claims that the seal it seeks bars the tomb of its beloved, Elv-Esster Aened. It wishes me to remove the ward so that it may reach her and finally rest. The same seal is said to hold sway over the cursed trees that block my path.~
-
-@13202 = ~The Restless Zombie
-
-I removed the warding seal from the tomb. The undead creature vanished into the shadows soon after—perhaps at last reunited with the one it called its beloved. I can only hope their rest is a peaceful one.~
-
-@13203 = ~The Restless Zombie
-
-I chose to destroy the zombie rather than aid it. Whatever story bound it to this place has ended, and its hunger for peace ends with it. The path through the ruins must now be cleared without its guidance.~
-
-
-
-
 
 
 

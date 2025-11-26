@@ -1,3 +1,4 @@
+/*
 IF
    OnCreation()
 THEN
@@ -158,16 +159,6 @@ THEN
     RESPONSE #100
         SetGlobal("WyrdDead","ACPP77",1)
         AddJournalEntry(@12216,QUEST)
-END
-
-/*
-IF
-    Dead("AC#PPWYR")  // Wild Wyrd
-    CombatCounter(0)
-    Global("AC#PPChapter6Quest","GLOBAL",22)
-THEN
-    RESPONSE #100
-        StartCutScene("AC#PP6C7")
 END
 */
 

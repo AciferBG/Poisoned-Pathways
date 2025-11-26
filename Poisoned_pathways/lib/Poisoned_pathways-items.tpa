@@ -280,11 +280,12 @@ WRITE_LONG 0x34 600
 ///////////////////////////////////////////
 ///////// OTHER ITEMS///////////////
 ///////////////////////////////////////////
+/*
 COPY ~%MOD_FOLDER%/itm/AC#PPMYT.itm~ ~override~
   SAY NAME1 @1071
   SAY NAME2 @1072
   SAY DESC @1073
-
+*/
 COPY ~%MOD_FOLDER%/itm/AC#PPHAL.itm~ ~override~
   SAY NAME1 @1075
   SAY NAME2 @1076
@@ -295,11 +296,12 @@ COPY ~%MOD_FOLDER%/itm/AC#PPSCO.itm~ ~override~
   SAY NAME2 @1079
   SAY DESC @1080
 
+/*
 COPY ~%MOD_FOLDER%/itm/AC#PPROB.itm~ ~override~
   SAY NAME1 @1081
   SAY NAME2 @1082
   SAY DESC @1083
-
+*/
 COPY ~%MOD_FOLDER%/itm/AC#PPSTA.itm~ ~override~
   SAY NAME1 @1084
   SAY NAME2 @1085
@@ -383,12 +385,6 @@ COPY ~%MOD_FOLDER%/itm/AC#PPPX.itm~         ~override~    // Will-o'-pox's attac
 COPY ~%MOD_FOLDER%/itm/AC#PPAM.itm~         ~override~    // Amulet of life
   SAY NAME2 @1018
   SAY DESC  @1019
-
-COPY ~%MOD_FOLDER%/itm/AC#PPBE.itm~         ~override~    // Bell of Erlavanas Myth'yalv
-  SAY NAME1 @1026
-  SAY NAME2 @1027
-  SAY UNIDENTIFIED_DESC @1028
-  SAY DESC  @1029
 
 COPY ~%MOD_FOLDER%/itm/AC#PPBER.itm~         ~override~    // creature's ring
   SAY NAME1 @1030

@@ -259,21 +259,7 @@ STATISTICS:
 Weight: 1~
 @1024 = ~Will-o'-wisp's attack~
 @1025 = ~Will-o'-pox's attack~
-@1026 = ~Bell~
-@1027 = ~Bell of Erlavanas Myth'yalv~
-@1028 = ~Bells like these are music instruments. Bells most often have the shape of an empty cup. When struck, it vibrates in a single strong strike tone. Some noblemen and noblewomen also use this instrument to call their servants, but many artists wouldn't call it a proper use of such item.
-  
-STATISTICS:
 
-Weight: 0~
-@1029 = ~This bell is an old elven instrument, bound witht the spirit of an elven traitor, Erlavanas Myth'yalv. He was once called the "Traitor of the Mythal". What exactly were his crimes, it is hard to say. Tales of this man never survived the trial of time. Unlike as his spirit, as it looks like this bell can still call him and force him to fight on the side of anyone that has this bell.
-
-STATISTICS:
-
-Charge abilities:
-– May call the spirit of Erlavanas Myth'yalv once per day
-
-Weight: 0~
 @1030 = ~Spectre's Ring~
 @1031 = ~Helmet~
 @1032 = ~Helmet of Elven Chants~
@@ -444,30 +430,6 @@ May all who breathe know suffering—and in their final, gasping moments, know H
 
 — Malagent Delgorth
 ~
-@1071 = ~Longsword~
-@1072 = ~The Memory of the Myths +5~
-@1073 = ~This blade once belonged to Telva, an elven knight who devoted her life to hunting the undead. Legends say it shattered in battle against a dracolich, yet its holy purpose endured — the steel dissolving into a spectral edge shaped by Telva’s final stand. Since that day, the weapon cannot harm the living, but its power against the undead has only grown, striking both decaying flesh and incorporeal forms with unwavering clarity.
-
-STATISTICS:
-
-Combat abilities:
-– Can only harm undead creatures
-– Does not receive bonus damage from Strength
-– Critical hits do not deal bonus damage
-– 20% chance on hit to deal 2d8+5 additional fire damage to undead (Save vs. Spells at –5 to halve)
-– 10% chance on hit to instantly destroy undead target
-
-THAC0: +5
-Damage: 2d8+5 (magic, vs. undead only)
-Speed Factor: 3
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 2
-~
-
 @1075 = ~Headband~
 @1076 = ~Halo of Coagulated Blood~
 @1077 = ~Fashioned from congealed, hardened blood clots, this halo once adorned the brow of an ancient blood amniote imprisoned beneath Myth Unnohyr. It is not merely a crown, but a scar given shape, memory turned weapon.
@@ -508,23 +470,6 @@ Requires:
  3 Strength
 
 Weight: 1
-~
-@1081 = ~Robe~
-@1082 = ~The Undyings's Slumber~
-@1083 = ~This ancient robe, known as The Undying’s Slumber, is said to have once adorned the form of the Undying himself — a fallen archmage of Myth Unnohyr. Once a garment of the High Art, it now bears the faint taint of unlife and decay. Its fabric shimmers like a robe of the archmagi, yet the weave is warped, as if time itself recoiled from its touch. Despite its dark history, the robe still hums with quiet power, eager to serve another who dares to wield what remains of the elven High Magic. 
-
-STATISTICS:
-
-Charge abilities:
-– May cast Vampiric Touch once per day
-– May cast Greater Malison once per day
-
-Equipped abilities:
-– Armor Class: 5
-– Magic Resistance: +5%
-– Caster level (arcane): +1
-
-Weight: 6
 ~
 @1084 = ~Staff~
 @1085 = ~Branch of Duskwood Dell +3~
