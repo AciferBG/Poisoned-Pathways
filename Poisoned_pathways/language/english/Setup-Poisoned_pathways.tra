@@ -241,7 +241,7 @@ Equipped abilities:
 – Maximum Hit Points: +2  
 
 Weight: 0~
-@1020 = ~Springwater of Eldath~
+@1020 = ~Potion of Peace~
 @1021 = ~Drawn from a spring where Eldath’s blessing flows undisturbed, this sacred draught carries more than mere healing. It is said that the water remembers the shape of peace—cleansing not only wounds and sickness, but also breaking curses that bind the soul.
 
 Those who drink of it feel not only restored in body, but unburdened—as though a gentle current carried their troubles away.
@@ -330,7 +330,7 @@ When animals are near, the cloak responds with gentle magic. Its wearer becomes 
 STATISTICS:
 
 Charge abilities:
-– May cast Defensive Harmony once per day (on self)
+– May cast Protection From Evil, 10' Radius once per day (on self)
 
 Equipped abilities:
 – Armor Class: +2

@@ -483,7 +483,7 @@ EXIT
 CHAIN AC#PPEL4 cnt.01.01
 ~Let me take a look at the plant. Keep it with you, however, for you shall soon have need of it. So, this is the Groveglove—grown in a dead-magic zone within Myth Unnohyr. How very curious...~
 == AC#PPEL4 ~It is in fine condition, yes. And it has grown tall, laden with venomous blossoms—more than enough for an antidote!~
-== AC#PPEL4 ~While you strove to thwart our foe, I searched through all my books, and I believe I have found a way to fashion such an antidote. For it, we require both the flower and knowledge of the precise place—the cauldron or laboratory—where the poison was first brewed.~
+== AC#PPEL4 ~While you strove to thwart our foe, I believe I have found a way to fashion such an antidote. For it, we require both the flower and knowledge of the precise place—the cauldron or laboratory—where the poison was first brewed.~
 END
 IF ~~ THEN REPLY ~I recall the place well. A cauldron, steeped in the venom of his craft.~ EXTERN AC#PPEL4 cnt.01.03
 IF ~~ THEN REPLY ~I did notice a cauldron there, though I had little mind for it while trading blows.~ EXTERN AC#PPEL4 cnt.01.03
@@ -607,7 +607,7 @@ IF~~THEN EXTERN AC#PPEL4 have_blessings_have_flower_have_water_02
 
 
 CHAIN AC#PPEL4 have_blessings_have_flower_have_water_02
-~You must return to Myth Unnohyr and place the blessed flower together with Eldath’s singing water within the Malagent’s cauldron. When they mingle with the poison’s remnants, the toxin will take form—defeat it, and an antidote shall be wrought.~
+~You must return to Myth Unnohyr and place the blessed flower together with Eldath’s singing water within the Malagent’s cauldron. But beware—this may stir an unwelcome reaction, and you may be forced to defend yourself.~ 
 == AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Then let the vile concoction be given flesh, that we might smite it in righteous combat!~
 == NEERAJ IF ~InParty("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN ~This is either going to end in glorious salvation... or one really big kaboom.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~So, we toss blessings in, stir thrice clockwise, and hope it doesn’t explode in our faces? Sounds like my first cooking attempts with Winthrop back in Candlekeep.~
