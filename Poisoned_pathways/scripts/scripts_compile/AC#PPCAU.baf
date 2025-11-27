@@ -19,6 +19,7 @@ THEN
         StartCutSceneMode()
         CutSceneId(Player1)
         MoveViewPoint([772.606],INSTANT)
+        ReallyForceSpellRES("AC#PP73",Myself)  // Stinking Cloud
         CreateVisualEffect("AC#PPBOM",[769.556])
         Wait(1)
         CreateVisualEffect("AC#PPGAG",[835.489])

@@ -630,6 +630,10 @@ COPY ~Poisoned_pathways/spl/AC#PPHB.spl~ ~override~
     parameter2 = %forest_row%
   END
 
+ADD_PROJECTILE      ~Poisoned_pathways/pro/AC#PP73.PRO~ // cauldron stinking cloud projectile
+COPY ~Poisoned_pathways/spl/AC#PP73.spl~            ~override~  // cauldron stinking cloud
+       WRITE_SHORT   0x98 ~%AC#PP73%~
+       
 ADD_PROJECTILE      ~Poisoned_pathways/pro/AC#HEZRU.PRO~ // Hezrou stench projectile
 COPY ~Poisoned_pathways/spl/AC#HEZR.spl~            ~override~  // Hezrou stench
   SAY NAME1 @930
@@ -720,7 +724,7 @@ COPY ~%MOD_FOLDER%/spl/AC#PPBES.spl~ ~override~
   
 COPY ~%MOD_FOLDER%/spl/AC#PPBLO.spl~ ~override~
   SAY NAME1 #-1
-  
+/*
 // candle spells:
 COPY ~%MOD_FOLDER%/spl/AC#PPCM.spl~ ~override~
   SAY NAME1 @1095
@@ -767,13 +771,8 @@ COPY ~%MOD_FOLDER%/spl/AC#PPCC8.spl~ ~override~
 COPY ~%MOD_FOLDER%/spl/AC#PPCC9.spl~ ~override~
   SAY NAME1 @1109
   SAY UNIDENTIFIED_DESC #-1
-
-/*
-COPY ~Poisoned_pathways/spl/AC#PPWM.spl~         ~override~ // OLD wild magic spell effect in Myth Unnnohyr
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@903) STR_VAR bam_file = AC#WILMG RET icon END
-COPY_EXISTING ~AC#PPWM.spl~         ~override~
-LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 0 parameter2 = icon END
 */
+
 COPY ~Poisoned_pathways/spl/AC#PPWI.spl~         ~override~ // NEW #2 wild magic spell effect in Myth Unnnohyr
 LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@903) STR_VAR bam_file = AC#WILMG RET icon END
 COPY_EXISTING ~AC#PPWI.spl~         ~override~

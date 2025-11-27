@@ -140,7 +140,7 @@ THEN
     RESPONSE #10
         SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
         SetGlobal("SlayLiving","LOCALS",1)
-        ForceSpell(Myself,CLERIC_SLAY_LIVING)  // SPPR511.SPL (Slay Living)
+        ReallyForceSpell(Myself,CLERIC_SLAY_LIVING)  // SPPR511.SPL (Slay Living)
         AttackReevaluate(LastSeenBy(Myself),18)
 END
 
@@ -149,26 +149,27 @@ IF
     !GlobalTimerNotExpired("OH_Cast","LOCALS")
     Global("FingerOfDeath","LOCALS",0)
     !Difficulty(EASIEST)
-    See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
         SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
         SetGlobal("FingerOfDeath","LOCALS",1)
-        Spell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+        ForceSpell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
 END
 
 IF
     See(NearestEnemyOf(Myself))
     !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    !GlobalTimerNotExpired("Harm_Timer","LOCALS")
     !HasItem("HARM",Myself)  // Harm
     !HasItem("SLAYLIVE",Myself)  // Slay Living
-    Global("Harm","LOCALS",0)
+    GlobalLT("Harm","LOCALS",3)
     DifficultyGT(EASY)
 THEN
     RESPONSE #10
         SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        SetGlobal("Harm","LOCALS",0)
-        ForceSpell(Myself,CLERIC_HARM)  // SPPR608.SPL (Harm)
+        SetGlobalTimer("Harm_Timer","LOCALS",TEN_ROUNDS)
+        IncrementGlobal("Harm","LOCALS",1)
+        ReallyForceSpell(Myself,CLERIC_HARM)  // SPPR608.SPL (Harm)
 END
 
 IF

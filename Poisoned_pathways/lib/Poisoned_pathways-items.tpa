@@ -162,7 +162,7 @@ COPY ~%MOD_FOLDER%/itm/AC#PPNT2.itm~ ~override~ // note #2, regarding the mythal
 ///////////////////////////////////////////
 ///////// CANDLES AND SPELLS///////////////
 ///////////////////////////////////////////
-
+/*
 // cleric spell scroll
 COPY ~%MOD_FOLDER%/itm/AC#PPCCC.itm~ ~override~
   SAY NAME1 @1098
@@ -224,9 +224,9 @@ COPY ~%MOD_FOLDER%/itm/AC#PPCC9.itm~ ~override~
   SAY NAME1 @1126
   SAY NAME2 @1126
   SAY DESC @1127
-
+*/
 //stabilized
-
+/*
 COPY ~%MOD_FOLDER%/itm/AC#PPCC1.itm~ ~override/AC#PPCX1.itm~
 WRITE_LONG 0x34 800
   SAY NAME1 @1128
@@ -280,7 +280,7 @@ WRITE_LONG 0x34 600
   SAY NAME1 @1144
   SAY NAME2 @1144
   SAY DESC @1145
-  
+  */
 ///////////////////////////////////////////
 ///////// OTHER ITEMS///////////////
 ///////////////////////////////////////////
