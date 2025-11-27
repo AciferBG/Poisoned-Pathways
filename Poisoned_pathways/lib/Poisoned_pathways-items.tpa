@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPBOO.itm~         ~override~    //  Freewalker's boots
+  SAY NAME2 @1246
+  SAY DESC  @1247
+
 COPY ~%MOD_FOLDER%/itm/AC#PPAX1.itm~         ~override~    //  axe of apologies
   SAY NAME2 @1244
   SAY DESC  @1245

@@ -79,3 +79,103 @@ THEN
         CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[693.400],S)  // Chasme
 END
 
+IF
+    OR(2)
+        HasItem("HARM",Myself)  // Harm
+        HasItem("SLAYLIVE",Myself)  // Slay Living
+    See(NearestEnemyOf(Myself))
+    See(WorstAC([PC]))
+THEN
+    RESPONSE #100
+        AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+    OR(2)
+        HasItem("HARM",Myself)  // Harm
+        HasItem("SLAYLIVE",Myself)  // Slay Living
+    See(NearestEnemyOf(Myself))
+    !See(WorstAC([PC]))
+THEN
+    RESPONSE #100
+        AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    !GlobalTimerNotExpired("Blight_Timer","LOCALS")
+    !Difficulty(EASIEST)
+    See([GOODCUTOFF.0.0.0.0.0.MASK_GOOD])
+    GlobalLT("Blight","LOCALS",4)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobalTimer("Blight_Timer","LOCALS",THREE_ROUNDS)
+        IncrementGlobal("Blight","LOCALS",1)
+        ReallyForceSpell(LastSeenBy(Myself),CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    HPGT(LastSeenBy(Myself),20)
+    GlobalLT("Decay","LOCALS",4)
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    !GlobalTimerNotExpired("Decay_Timer","LOCALS")
+THEN
+    RESPONSE #100
+        IncrementGlobal("Decay","LOCALS",1)
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobalTimer("Decay_Timer","LOCALS",FIVE_ROUNDS)
+        ForceSpell(NearestEnemyOf(Myself),CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Global("SlayLiving","LOCALS",0)
+    !HasItem("HARM",Myself)  // Harm
+    !HasItem("SLAYLIVE",Myself)  // Slay Living
+    DifficultyGT(EASY)
+THEN
+    RESPONSE #10
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobal("SlayLiving","LOCALS",1)
+        ForceSpell(Myself,CLERIC_SLAY_LIVING)  // SPPR511.SPL (Slay Living)
+        AttackReevaluate(LastSeenBy(Myself),18)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    Global("FingerOfDeath","LOCALS",0)
+    !Difficulty(EASIEST)
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobal("FingerOfDeath","LOCALS",1)
+        Spell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    !HasItem("HARM",Myself)  // Harm
+    !HasItem("SLAYLIVE",Myself)  // Slay Living
+    Global("Harm","LOCALS",0)
+    DifficultyGT(EASY)
+THEN
+    RESPONSE #10
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobal("Harm","LOCALS",0)
+        ForceSpell(Myself,CLERIC_HARM)  // SPPR608.SPL (Harm)
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),6)
+END
+

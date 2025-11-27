@@ -1,0 +1,12 @@
+IF
+    PartyHasItem("AC#PPWA")  // Singing Water of Eldath
+    Global("SecondVisit","ACPP70",0)
+THEN
+    RESPONSE #100
+        CloseDoor("DOOR03")
+        CreateCreature("AC#PPANN",[744.2498],S)  // Mesmerized Ankheg
+        CreateCreature("AC#PPWY1",[4108.1050],NW)  // Zombie
+        CreateCreatureImpassableAllowOverlap("AC#PP70Z",[4117.1196],N)  // Fallen Tree
+        TriggerActivation("Trigger_wardstone",TRUE)
+        SetGlobal("SecondVisit","ACPP70",1)
+END

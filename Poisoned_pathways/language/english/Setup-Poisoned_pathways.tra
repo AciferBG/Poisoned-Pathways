@@ -473,9 +473,7 @@ Weight: 1
 ~
 @1084 = ~Staff~
 @1085 = ~Branch of Duskwood Dell +3~
-@1086 = ~This quarterstaff was cut from a tree within Duskwood Dell. The branch still carries a faint verdant sheen, and when held, it thrums softly with life. It was never meant to kill, but to protect, to clear the way, and to preserve.
-
-Its magic shields the bearer from webs and tangling roots, strengthens the body, and guards against death. For those who wish only to walk their path in peace, it is a steadfast companion.
+@1086 = ~This quarterstaff was cut from a tree within Duskwood Dell. The branch still carries a faint verdant sheen, and when held, it thrums softly with life. It was never meant to kill, but to clear the way, and to preserve. Its magic shields the bearer from all effects that would hinder <PRO_HISHER> steps or halt <PRO_HISHER> journey. For those who wish only to walk their path in peace, it is a steadfast companion.
 
 STATISTICS:
 
@@ -483,9 +481,8 @@ Charge abilities:
 – May cast Remove Paralysis once per day 
 
 Equipped abilities:
+– The wearer is immune to everything, magical and otherwise, that affects mobility in any way. This includes Haste and Slow spells.
 – Immune to Entangle and Web
-– Maximum Hit Points: +20%
-– Saving Throws vs. Death: +2
 
 THAC0: +3
 Damage: 1d2 (non-lethal)
@@ -1446,6 +1443,16 @@ Requires:
  10 Strength
 
 Weight: 5~
+@1246 = ~Freewalker's Boots~
+@1247 = ~These simple leather sandals protect the wearer on <PRO_HISHER> peaceful journey—whether against roots, snares, or silken webs. Favored by those who walk without violence and stop for no one, they ensure that no step need be delayed.
+
+STATISTICS:
+
+Equipped abilities:
+– Immune to Entangle and Web
+
+Weight: 4
+~
 
 // script strings
 @2000 = ~Duskwood Dell~

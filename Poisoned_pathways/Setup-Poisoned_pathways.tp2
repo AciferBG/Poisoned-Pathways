@@ -73,6 +73,24 @@ ADD_JOURNAL
 @12110
 @12111
 
+// ch6-ToB
+/*
+@12200
+@12202
+@12207
+@12208
+@12209
+@12211
+@12212
+@12213
+@12214
+@12216
+@12217
+@12218
+@12219
+@12220
+*/
+
 @13000
 @13001
 @13002
@@ -561,7 +579,14 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWXD.bam~ ~override~ // Will-o-wi
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1052.pvrz~
  END
  END
- 
+
+ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPAD1.bam~ ~override~ // generic bottle desc bam
+ LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+ ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
+ LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1053.pvrz~
+ END
+ END
+
  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#BOTTD.bam~ ~override~ // generic bottle desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 
