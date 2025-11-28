@@ -13,7 +13,8 @@
 - New areas to explore: a haunted elven ruin and a tranquil forest village 
 - New enemies with custom animations: face Chasmes, Zombie Treants and many more!  
 - Unique magical items  
-- Challenging battles and dialogue-driven progression   
+- Challenging battles and dialogue-driven progression  
+- Two new custom music tracks created for this mod 
 - Approx. 2–3 hours of gameplay  
 - Compatible with both BG2EE and EET
 
