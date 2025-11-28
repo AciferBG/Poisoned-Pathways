@@ -251,8 +251,8 @@ STATISTICS:
 Special: Cures poison and disease, removes curses, and heals 5 Hit Points
 
 Weight: 1~
-@1022 = ~Singing Water of Eldath~
-@1023 =~This is a bottle of Singing Water of Eldath. It is one of the ingredients needed to create an antidote for a poison created by a priest of Talona.
+@1022 = ~Holy Water of Eldath~
+@1023 =~This is a carafe of holy water of Eldath. It is one of the ingredients needed to create an antidote for a poison created by a priest of Talona.
   
 STATISTICS:
 
@@ -1132,7 +1132,7 @@ Requires:
  10 Strength
 
 Weight: 5~
-@1246 = ~Freewalker's Boots~
+@1246 = ~Freewalker's sandals~
 @1247 = ~These simple leather sandals protect the wearer on <PRO_HISHER> peaceful journey—whether against roots, snares, or silken webs. Favored by those who walk without violence and stop for no one, they ensure that no step need be delayed.
 
 STATISTICS:

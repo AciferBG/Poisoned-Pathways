@@ -102,6 +102,16 @@ THEN
 END
 
 IF
+    HPPercentLT(Myself,20)
+    Global("Heal","LOCALS",1)
+    LevelPartyGT(14)
+THEN
+    RESPONSE #100
+        SetGlobal("Heal","LOCALS",1)
+        ReallyForceSpell(Myself,CLERIC_HEAL)  // SPPR607.SPL (Heal)
+END
+
+IF
     !GlobalTimerNotExpired("OH_Cast","LOCALS")
     !GlobalTimerNotExpired("Blight_Timer","LOCALS")
     !Difficulty(EASIEST)
@@ -113,6 +123,32 @@ THEN
         SetGlobalTimer("Blight_Timer","LOCALS",THREE_ROUNDS)
         IncrementGlobal("Blight","LOCALS",1)
         ReallyForceSpell(LastSeenBy(Myself),CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    LevelPartyGT(15)
+    GlobalLT("AbiDalzim","LOCALS",3)
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+    !GlobalTimerNotExpired("Dalzim_Timer","LOCALS")
+THEN
+    RESPONSE #100
+        IncrementGlobal("AbiDalzim","LOCALS",1)
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        SetGlobalTimer("Dalzim_Timer","LOCALS",NINE_ROUNDS)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    LevelPartyGT(12)
+    Global("AbiDalzim","LOCALS",0)
+    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+THEN
+    RESPONSE #100
+        SetGlobal("AbiDalzim","LOCALS",1)
+        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
 END
 
 IF

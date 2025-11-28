@@ -548,7 +548,7 @@ CHAIN AC#PPEL4 cnt.01.07
 EXTERN AC#PPEL4 cnt.01.08
 
 CHAIN AC#PPEL4 cnt.01.08
-~In addition, you will need a jug of Eldath’s singing water from our grotto. Speak to Eldath’s handmaiden near the water; she will give you a carafe of the sacred water.~
+~In addition, you will need a jug of Eldath’s holy water from our grotto. Speak to Eldath’s handmaiden near the water; she will give you a carafe of the sacred water.~
 =
 ~When you have the water and the blessings of Lathander and Ilmater, return to me. Then I shall tell you what must be done next.~
 =
@@ -590,7 +590,7 @@ AddJournalEntry(@12105,QUEST_DONE)~ EXIT
 //BLESSING
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",5)~ THEN AC#PPEL4 cnt.02.00
-~Welcome back. Have you received the blessings already and gathered some of Eldath's singing water from our grotto?~
+~Welcome back. Have you received the blessings already and gathered some of Eldath's holy water from our grotto?~
 END
 IF~PartyHasItem("AC#PPWA") PartyHasItem("AC#PPPUB") Global("AC#PP_LathanderBlessing","GLOBAL",1) Global("AC#PP_IlmaterBlessing","GLOBAL",1)~THEN REPLY ~Yes, I have. What's next?~ EXTERN AC#PPEL4 have_blessings_have_flower_have_water
 IF~~THEN REPLY ~I'm still working on this.~ EXTERN AC#PPEL4 cnt.02.01
@@ -601,13 +601,13 @@ EXIT
 
 CHAIN AC#PPEL4 have_blessings_have_flower_have_water
 //DO ~GiveItemCreate("AC#PPWA",Player1,1,0,0)~
-~We have the flower, the singing water of Eldath, and we have the blessings. And we know where the poison was prepared.~
+~We have the flower, the holy water of Eldath, and we have the blessings. And we know where the poison was prepared.~
 END
 IF~~THEN EXTERN AC#PPEL4 have_blessings_have_flower_have_water_02
 
 
 CHAIN AC#PPEL4 have_blessings_have_flower_have_water_02
-~You must return to Myth Unnohyr and place the blessed flower together with Eldath’s singing water within the Malagent’s cauldron. But beware—this may stir an unwelcome reaction, and you may be forced to defend yourself.~ 
+~You must return to Myth Unnohyr and place the blessed flower together with Eldath’s holy water within the Malagent’s cauldron. But beware—this may stir an unwelcome reaction, and you may be forced to defend yourself.~ 
 == AnomenJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Then let the vile concoction be given flesh, that we might smite it in righteous combat!~
 == NEERAJ IF ~InParty("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN ~This is either going to end in glorious salvation... or one really big kaboom.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~So, we toss blessings in, stir thrice clockwise, and hope it doesn’t explode in our faces? Sounds like my first cooking attempts with Winthrop back in Candlekeep.~
