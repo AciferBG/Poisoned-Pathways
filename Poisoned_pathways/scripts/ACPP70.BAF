@@ -19,6 +19,8 @@ RESPONSE #100
 	Continue()
 END
 
+// now in area acpp81
+/*
 IF
     !InMyArea("AC#PPWIW")  // Will-O'-Wild
     !Dead("AC#PPWIW")  // Will-O'-Wild
@@ -43,6 +45,7 @@ THEN
         CreateCreature("AC#PPWOD",[3849.432],S)  // Will O'Dead
         SetGlobal("Will_O_Dead","ACPP70",1)
 END
+*/
 
 // Create the two sword part wielders
 IF
@@ -96,24 +99,6 @@ THEN
     RESPONSE #100
         AddJournalEntry(@13010,QUEST)
         SetGlobal("AmuletJournal01","ACPP70",1)
-END
-
-IF
-    Global("AmuletJournalWild","ACPP70",0)
-    PartyHasItem("AC#PPWIW")
-THEN
-    RESPONSE #100
-        AddJournalEntry(@13014,QUEST)
-        SetGlobal("AmuletJournalWild","ACPP70",1)
-END
-
-IF
-    Global("AmuletJournalDead","ACPP70",0)
-    PartyHasItem("AC#PPWOD")
-THEN
-    RESPONSE #100
-        AddJournalEntry(@13015,QUEST)
-        SetGlobal("AmuletJournalDead","ACPP70",1)
 END
 
 IF
