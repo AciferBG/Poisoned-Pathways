@@ -241,6 +241,7 @@ THEN
         SpawnPtDeactivate("Spawn_spiders01")
         SpawnPtDeactivate("Mud_zombies")
         SpawnPtDeactivate("Spawn_ankhegs_entry")
+        SpawnPtDeactivate("Spawn_vermin_entry")
         SpawnPtDeactivate("Spawn_ankhegs_tower")
         SpawnPtDeactivate("Spawn_undead_entry")
         SpawnPtDeactivate("Spawn_undead_tower")
@@ -412,9 +413,7 @@ IF
   Global("ActivateSpawnPoints01","ACPP70",0)
 THEN
 RESPONSE #100
-    SpawnPtActivate("Spawn_gibberlings")
-    SpawnPtActivate("Spawn_undead_entry")
-    SpawnPtActivate("Spawn_ankhegs_entry")  
+    SpawnPtActivate("Spawn_gibberlings")      
 	SetGlobal("ActivateSpawnPoints01","ACPP70",1)
 END
 
@@ -423,9 +422,30 @@ IF
   Global("ActivateSpawnPoints02","ACPP70",0)
 THEN
 RESPONSE #100
-  //SpawnPtActivate("Spawn_wisps01")
   SpawnPtActivate("Spawn_spiders01")  
 	SetGlobal("ActivateSpawnPoints02","ACPP70",1)
+END
+
+IF
+	LevelPartyGT(15)
+    Global("ActivateSpawnPoints03","ACPP70",0)
+THEN
+RESPONSE #100
+        SpawnPtActivate("Spawn_undead_entry")
+        SpawnPtActivate("Spawn_ankhegs_entry")
+        SpawnPtActivate("Spawn_vermin_entry")       
+	    SetGlobal("ActivateSpawnPoints03","ACPP70",1)
+END
+
+IF
+	Dead("AC#PPZMT")
+  Global("ActivateSpawnPoints03","ACPP70",0)
+THEN
+RESPONSE #100
+    SpawnPtActivate("Spawn_undead_entry")
+    SpawnPtActivate("Spawn_ankhegs_entry")
+    SpawnPtActivate("Spawn_vermin_entry")       
+	SetGlobal("ActivateSpawnPoints03","ACPP70",1)
 END
 
 IF
