@@ -1,0 +1,76 @@
+IF
+    GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
+THEN
+    RESPONSE #100
+        DestroySelf()
+END
+
+IF
+    Global("Stronger","LOCALS",0)
+    LevelPartyGT(11)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",1)
+END
+
+IF
+    Global("Stronger","LOCALS",1)
+    LevelPartyGT(13)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",2)
+END
+
+IF
+    Global("Stronger","LOCALS",2)
+    LevelPartyGT(16)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",3)
+END
+
+IF
+    Range([GOODCUTOFF],16)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Shout(77)
+        Enemy()
+END
+
+IF
+    Heard([ANYONE],77)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Shout(77)
+        Enemy()
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+    ActionListEmpty()
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Attack(LastAttackerOf(Myself))
+END
+

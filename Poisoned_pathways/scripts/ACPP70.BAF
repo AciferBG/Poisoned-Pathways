@@ -4,16 +4,17 @@ THEN
 RESPONSE #100
 	SetMusic(NIGHT,27)
 	SetMusic(DAY,%AC#PP70%)
-  OpenDoor("DOOR01")
-  OpenDoor("DOOR03")  
-  ContainerEnable("Roses",FALSE)
-  SpawnPtDeactivate("Spawn_gibberlings")
-  //SpawnPtDeactivate("Spawn_wisps01")
-  SpawnPtDeactivate("Spawn_spiders01")  
-  TriggerActivation("Info_no_way_back",FALSE)
-  SoundActivate("Portal01",FALSE)
-  SoundActivate("Portal02",FALSE)
-  TriggerActivation("Trigger_wardstone",FALSE)
+    OpenDoor("DOOR01")
+    OpenDoor("DOOR03")  
+    ContainerEnable("Roses",FALSE)
+    SpawnPtDeactivate("Spawn_gibberlings")
+    SpawnPtDeactivate("Spawn_undead_entry")
+    SpawnPtDeactivate("Spawn_ankhegs_entry")
+    SpawnPtDeactivate("Spawn_spiders01")  
+    TriggerActivation("Info_no_way_back",FALSE)
+    SoundActivate("Portal01",FALSE)
+    SoundActivate("Portal02",FALSE)
+    TriggerActivation("Trigger_wardstone",FALSE)
 	SetGlobal("Prep","ACPP70",1)
 	Continue()
 END
@@ -67,6 +68,15 @@ THEN
     RESPONSE #100
         CreateCreature("AC#PPDBN",[287.364],E)  //  nighttime blade wielder
         SetGlobal("Nightblade_wielder","ACPP70",1)
+END
+
+IF
+    Global("SpawnFirstZombieTreants","ACPP70",0)
+    LevelPartyGT(10)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPZMT",[1038.1992],S)  // Zombie Treant
+        SetGlobal("SpawnFirstZombieTreants","ACPP70",1)
 END
 
 IF
@@ -398,11 +408,13 @@ RESPONSE #100
 END
 
 IF
-	Dead("AC#PPZOT")
+	Dead("AC#PPZMT")
   Global("ActivateSpawnPoints01","ACPP70",0)
 THEN
 RESPONSE #100
-  SpawnPtActivate("Spawn_gibberlings")
+    SpawnPtActivate("Spawn_gibberlings")
+    SpawnPtActivate("Spawn_undead_entry")
+    SpawnPtActivate("Spawn_ankhegs_entry")  
 	SetGlobal("ActivateSpawnPoints01","ACPP70",1)
 END
 
