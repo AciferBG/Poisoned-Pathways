@@ -1,4 +1,5 @@
 IF
+    !ActuallyInCombat()
     OR(3)
         TimeOfDay(DUSK)
         TimeOfDay(DAY)
@@ -9,12 +10,31 @@ THEN
         DestroySelf()
 END
 
+
+IF
+    Global("Stronger","LOCALS",0)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",1)
+END
+
+IF
+    Global("Stronger","LOCALS",1)
+    LevelPartyGT(15)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",2)
+END
+
 IF
     See(NearestEnemyOf(Myself))
     Global("WispBlindness","LOCALS",0)
 THEN
     RESPONSE #100
-        ForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Blindness
+        ForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Shadow Veil
         SetGlobal("WispBlindness","LOCALS",1)
 END
 

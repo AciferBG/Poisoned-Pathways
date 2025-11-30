@@ -1,4 +1,5 @@
 IF
+    !ActuallyInCombat()
     TimeOfDay(NIGHT)
 THEN
     RESPONSE #100

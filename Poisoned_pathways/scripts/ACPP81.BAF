@@ -1,11 +1,39 @@
 IF
-	Global("Prep","ACPP81",0)
+    Global("Prep","ACPP81",0)
 THEN
-RESPONSE #100
-	SetMusic(NIGHT,27)
-	SetMusic(DAY,%AC#PP70%)
-	SetGlobal("Prep","ACPP81",1)
-	Continue()
+    RESPONSE #100
+        SetMusic(NIGHT,Area1500)
+        SetMusic(DAY,109)
+        SetGlobal("Prep","ACPP81",1)
+        Continue()
+END
+
+IF
+    !Global("AC#PPFixMagic","GLOBAL",1)
+    Global("AC#PP_GoMythal","GLOBAL",1)
+    OR(2)
+        TimeOfDay(DUSK)
+        TimeOfDay(NIGHT)
+    !GlobalTimerNotExpired("AC#PP_AntimagicTimer","GLOBAL")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPDM",Player1)  // No such index
+        SetGlobalTimer("AC#PP_AntimagicTimer","GLOBAL",ONE_ROUND)
+        Continue()
+END
+
+IF
+    !Global("AC#PPFixMagic","GLOBAL",1)
+    Global("AC#PP_GoMythal","GLOBAL",1)
+    OR(2)
+        TimeOfDay(MORNING)
+        TimeOfDay(DAY)
+    !GlobalTimerNotExpired("AC#PP_WildMagicTimer","GLOBAL")
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPWI",Player1)  // No such index
+        SetGlobalTimer("AC#PP_WildMagicTimer","GLOBAL",ONE_ROUND)
+        Continue()
 END
 
 IF
@@ -35,18 +63,19 @@ END
 
 IF
     Global("AmuletJournalWild","ACPP70",0)
-    PartyHasItem("AC#PPWIW")
+    PartyHasItem("AC#PPWIW")  // Essence of the Will-o’Wild
 THEN
     RESPONSE #100
-        AddJournalEntry(@13014,QUEST)
+        AddJournalEntry(@13014,QUEST)  // Binding the Unbound I obtained the essence of a Will-o’-Wild, a luminous fragment of chaotic energy that seems to hum with the pulse of living magic.
         SetGlobal("AmuletJournalWild","ACPP70",1)
 END
 
 IF
     Global("AmuletJournalDead","ACPP70",0)
-    PartyHasItem("AC#PPWOD")
+    PartyHasItem("AC#PPWOD")  // Essence of the Will-o’Dead
 THEN
     RESPONSE #100
-        AddJournalEntry(@13015,QUEST)
+        AddJournalEntry(@13015,QUEST)  // Binding the Unbound I have captured the essence of a Will-o’-Dead. Its shadowed glow feels cold to the touch, filled with the silence of dead magic.
         SetGlobal("AmuletJournalDead","ACPP70",1)
 END
+

@@ -9,13 +9,9 @@ COMPILE ~%MOD_FOLDER%/scripts/ACPP10.baf~  EVAL
 COMPILE ~%MOD_FOLDER%/scripts/ACPP11.baf~  EVAL
 COMPILE ~%MOD_FOLDER%/scripts/ACPP70.baf~  EVAL
 COMPILE ~%MOD_FOLDER%/scripts/ACPP81.baf~  EVAL
+COMPILE ~%MOD_FOLDER%/scripts/ACPP82.baf~  EVAL
 COMPILE ~%MOD_FOLDER%/scripts/ACPP73.baf~  EVAL
 COMPILE ~%MOD_FOLDER%/scripts/ACPP90.baf~  EVAL
-
-// Append scripts in Myth UNnohyr to make corrupted mythal work
-EXTEND_TOP ~ACPP70.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
-EXTEND_TOP ~ACPP81.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
-EXTEND_BOTTOM ~ACPP80.bcs~ ~%MOD_FOLDER%/scripts/_ACPP7x_mythal.baf~
 
 EXTEND_TOP ~ar0408.bcs~ ~%MOD_FOLDER%/scripts/_ar0408.baf~ // plot start: 2nd encounter of eldathyn cleric in temple of ilmater in the slums
 EXTEND_TOP ~ar1000.bcs~ ~%MOD_FOLDER%/scripts/_ar1000.baf~ // plot: Boy and the Aunt

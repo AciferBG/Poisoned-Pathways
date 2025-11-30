@@ -19,58 +19,34 @@ RESPONSE #100
 	Continue()
 END
 
-// now in area acpp81
-/*
 IF
-    !InMyArea("AC#PPWIW")  // Will-O'-Wild
-    !Dead("AC#PPWIW")  // Will-O'-Wild
-    OR(3)
-        TimeOfDay(DUSK)
-        TimeOfDay(DAY)
-        TimeOfDay(MORNING)
-    Global("Will_O_Wild","ACPP70",0)
+  !Global("AC#PPFixMagic","GLOBAL",1)
+  Global("AC#PP_GoMythal","GLOBAL",1)
+  OR(2)
+      TimeOfDay(DUSK)
+      TimeOfDay(NIGHT)
+  !GlobalTimerNotExpired("AC#PP_AntimagicTimer","GLOBAL")
 THEN
-    RESPONSE #100
-        CreateCreature("AC#PPWIW",[3849.432],S)  // Will-O'-Wild
-        SetGlobal("Will_O_Wild","ACPP70",1)
+  RESPONSE #100
+      ApplySpellRES("AC#PPDM",Player1) 
+      //AddAreaFlag(DEADMAGICZONE)
+      SetGlobalTimer("AC#PP_AntimagicTimer","GLOBAL",6)
+      Continue()
 END
 
 IF
-    !InMyArea("AC#PPWOD")  // Will O'Dead
-    !Dead("AC#PPWOD")  // Will O'Dead
-    TimeOfDay(NIGHT)
-    Global("Will_O_Dead","ACPP70",0)
+  !Global("AC#PPFixMagic","GLOBAL",1)
+  Global("AC#PP_GoMythal","GLOBAL",1)
+  OR(2)
+      TimeOfDay(MORNING)
+      TimeOfDay(DAY)
+  !GlobalTimerNotExpired("AC#PP_WildMagicTimer","GLOBAL")
 THEN
-    RESPONSE #100
-        CreateCreature("AC#PPWOD",[3849.432],S)  // Will O'Dead
-        SetGlobal("Will_O_Dead","ACPP70",1)
-END
-*/
-
-// Create the two sword part wielders
-IF
-    !InMyArea("AC#PPDBD")  // daytime blade wielder
-    !Dead("AC#PPDBD")  //  daytime blade wielder
-    OR(3)
-        TimeOfDay(DUSK)
-        TimeOfDay(DAY)
-        TimeOfDay(MORNING)
-    Global("Dayblade_wielder","ACPP70",0)
-THEN
-    RESPONSE #100
-        CreateCreature("AC#PPDBD",[297.430],NE)  //  daytime blade wielder
-        SetGlobal("Dayblade_wielder","ACPP70",1)
-END
-
-IF
-    !InMyArea("AC#PPDBN")  // nighttime blade wielder
-    !Dead("AC#PPDBN")  // nighttime blade wielder
-    TimeOfDay(NIGHT)
-    Global("Nightblade_wielder","ACPP70",0)
-THEN
-    RESPONSE #100
-        CreateCreature("AC#PPDBN",[287.364],E)  //  nighttime blade wielder
-        SetGlobal("Nightblade_wielder","ACPP70",1)
+  RESPONSE #100
+      ApplySpellRES("AC#PPWI",Player1)  
+      //RemoveAreaFlag(DEADMAGICZONE)
+      SetGlobalTimer("AC#PP_WildMagicTimer","GLOBAL",6)
+      Continue()
 END
 
 IF

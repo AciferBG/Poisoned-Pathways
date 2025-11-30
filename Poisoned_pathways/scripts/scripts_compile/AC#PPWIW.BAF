@@ -1,9 +1,28 @@
 IF
+    !ActuallyInCombat()
     TimeOfDay(NIGHT)
 THEN
     RESPONSE #100
         SetGlobal("Will_O_Wild","ACPP70",0)
         DestroySelf()
+END
+
+IF
+    Global("Stronger","LOCALS",0)
+    LevelPartyGT(12)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",1)
+END
+
+IF
+    Global("Stronger","LOCALS",1)
+    LevelPartyGT(15)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",2)
 END
 
 IF
