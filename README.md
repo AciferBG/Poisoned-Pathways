@@ -23,7 +23,7 @@
 ![Town Watercolor](https://github.com/AciferBG/Poisoned-Pathways/blob/main/pics/screenshot01_lorez.png)
 
 **How the mod begins:**  
-The mod is triggered **after delivering Renfeld’s body** in the Docks District of Athkatla. Once this event is completed, a new path will open...
+The mod is triggered **after delivering Renfeld’s body** in the Docks District of Athkatla. After a while, a messenger will approach you within the city.
 
 ## Installation
 1. Remove any previous version of the mod before installing a new one.  
