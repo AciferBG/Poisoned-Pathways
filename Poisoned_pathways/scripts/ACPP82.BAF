@@ -36,11 +36,20 @@ THEN
         Continue()
 END
 
-
-// Create the two sword part wielders
 IF
-    !InMyArea("AC#PPDBD")  // daytime blade wielder
-    !Dead("AC#PPDBD")  //  daytime blade wielder
+    Global("DiffAdjust","ACPP82",0)
+    OR(2)
+    DifficultyLT(HARD)
+    LevelPartyLT(9)
+THEN
+    RESPONSE #100
+        SpawnPtDeactivate("Spawn_skeletons_3")
+        SetGlobal("DiffAdjust","ACPP82",1)
+END
+
+IF
+    !InMyArea("AC#PPDBD")  // Warden of the Day
+    !Dead("AC#PPDBD")  // Warden of the Day
     OR(3)
         TimeOfDay(DUSK)
         TimeOfDay(DAY)
@@ -48,18 +57,18 @@ IF
     Global("Dayblade_wielder","ACPP82",0)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPDBD",[806.559],NE)  //  daytime blade wielder
+        CreateCreature("AC#PPDBD",[806.559],NE)  // Warden of the Day
         SetGlobal("Dayblade_wielder","ACPP82",1)
 END
 
 IF
-    !InMyArea("AC#PPDBN")  // nighttime blade wielder
-    !Dead("AC#PPDBN")  // nighttime blade wielder
+    !InMyArea("AC#PPDBN")  // Warden of the Night
+    !Dead("AC#PPDBN")  // Warden of the Night
     TimeOfDay(NIGHT)
     Global("Nightblade_wielder","ACPP82",0)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPDBN",[808.552],E)  //  nighttime blade wielder
+        CreateCreature("AC#PPDBN",[808.552],E)  // Warden of the Night
         SetGlobal("Nightblade_wielder","ACPP82",1)
 END
 

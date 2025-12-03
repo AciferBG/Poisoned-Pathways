@@ -11,6 +11,7 @@ RESPONSE #100
     SpawnPtDeactivate("Spawn_undead_entry")
     SpawnPtDeactivate("Spawn_ankhegs_entry")
     SpawnPtDeactivate("Spawn_spiders01")  
+    SpawnPtDeactivate("Spawn_mounds")
     TriggerActivation("Info_no_way_back",FALSE)
     SoundActivate("Portal01",FALSE)
     SoundActivate("Portal02",FALSE)
@@ -201,6 +202,7 @@ THEN
         //SpawnPtDeactivate("Spawn_wisps01")
         SpawnPtDeactivate("Spawn_spiders01")
         SpawnPtDeactivate("Mud_zombies")
+        SpawnPtDeactivate("Spawn_mounds")
         SpawnPtDeactivate("Spawn_ankhegs_entry")
         SpawnPtDeactivate("Spawn_vermin_entry")
         SpawnPtDeactivate("Spawn_ankhegs_tower")
@@ -274,6 +276,14 @@ THEN
         DestroyItem("AC#PP77W")  // Elven Wardstone
 END
 
+IF
+    PartyHasItem("AC#PPWA")  // Singing Water of Eldath
+    Global("SecondVisitSpawns","ACPP70",0)
+THEN
+    RESPONSE #100
+        SpawnPtActivate("Spawn_mounds")
+        SetGlobal("SecondVisitSpawns","ACPP70",1)
+END
 /*
 IF
     PartyHasItem("AC#PPWA")  // Singing Water of Eldath
