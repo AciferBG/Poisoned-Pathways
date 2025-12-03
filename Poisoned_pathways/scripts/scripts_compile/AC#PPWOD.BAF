@@ -6,10 +6,9 @@ IF
         TimeOfDay(MORNING)
 THEN
     RESPONSE #100
-        SetGlobal("Will_O_Dead","ACPP70",0)
+        SetGlobal("Will_O_Dead","ACPP81",0)
         DestroySelf()
 END
-
 
 IF
     Global("Stronger","LOCALS",0)
@@ -31,18 +30,35 @@ END
 
 IF
     See(NearestEnemyOf(Myself))
+    Global("WispBlindness","LOCALS",1)
+    GlobalTimerExpired("Blindness_Timer","LOCALS")
+THEN
+    RESPONSE #100
+        ForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Shadow Veil
+        SetGlobalTimer("Blindness_Timer","LOCALS",FIVE_ROUNDS)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
     Global("WispBlindness","LOCALS",0)
 THEN
     RESPONSE #100
         ForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Shadow Veil
+        SetGlobalTimer("Blindness_Timer","LOCALS",FIVE_ROUNDS)
         SetGlobal("WispBlindness","LOCALS",1)
 END
 
 IF
-    ActionListEmpty()
+    Range(NearestEnemyOf(Myself),8)
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),6)
+END
+
+IF
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
-        AttackReevaluate(NearestEnemyOf(Myself),12)
+        AttackReevaluate(NearestEnemyOf(Myself),3)
 END
 

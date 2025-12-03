@@ -1,0 +1,7 @@
+IF
+    LevelPartyLT(14)
+THEN
+    RESPONSE #100
+        DestroySelf()
+END
+

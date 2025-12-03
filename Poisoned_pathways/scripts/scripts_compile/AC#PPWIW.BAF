@@ -3,7 +3,7 @@ IF
     TimeOfDay(NIGHT)
 THEN
     RESPONSE #100
-        SetGlobal("Will_O_Wild","ACPP70",0)
+        SetGlobal("Will_O_Wild","ACPP81",0)
         DestroySelf()
 END
 

@@ -379,6 +379,9 @@ COPY ~%MOD_FOLDER%/cre/AC#PPWOW.cre~ ~override~ // Will-o'-wisp
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWO2.cre~ ~override~ // Will-o'-wisp
   SAY NAME1 @20 SAY NAME2 @20
+  
+COPY ~%MOD_FOLDER%/cre/AC#PPWO3.cre~ ~override~ // Will-o'-wisp
+  SAY NAME1 @20 SAY NAME2 @20
 
   COPY ~%MOD_FOLDER%/cre/AC#PPBES.cre~ ~override~ // Erlavanas Myth'yalv
   SAY NAME1 @21 SAY NAME2 @21
