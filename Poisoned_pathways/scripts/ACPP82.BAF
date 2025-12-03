@@ -2,8 +2,8 @@ IF
     Global("Prep","ACPP82",0)
 THEN
     RESPONSE #100
-        SetMusic(NIGHT,Area1500)
-        SetMusic(DAY,109)
+	SetMusic(NIGHT,27)
+	SetMusic(DAY,%AC#PP70%)
         SetGlobal("Prep","ACPP82",1)
         Continue()
 END

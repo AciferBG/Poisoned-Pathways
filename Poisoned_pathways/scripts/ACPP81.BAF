@@ -2,8 +2,8 @@ IF
     Global("Prep","ACPP81",0)
 THEN
     RESPONSE #100
-        SetMusic(NIGHT,Area1500)
-        SetMusic(DAY,109)
+	SetMusic(NIGHT,27)
+	SetMusic(DAY,%AC#PP70%)
         SetGlobal("Prep","ACPP81",1)
         Continue()
 END
@@ -46,7 +46,7 @@ IF
     Global("Will_O_Wild","ACPP81",0)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPWIW",[769.528],S)  // Will-O'-Wild
+        CreateCreature("AC#PPWIW",[766.588],S)  // Will-O'-Wild
         SetGlobal("Will_O_Wild","ACPP81",1)
 END
 
@@ -57,7 +57,7 @@ IF
     Global("Will_O_Dead","ACPP81",0)
 THEN
     RESPONSE #100
-        CreateCreature("AC#PPWOD",[769.528],S)  // Will O'Dead
+        CreateCreature("AC#PPWOD",[766.588],S)  // Will O'Dead
         SetGlobal("Will_O_Dead","ACPP81",1)
 END
 

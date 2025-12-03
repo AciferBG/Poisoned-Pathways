@@ -1,4 +1,11 @@
 IF
+    Die()
+THEN
+    RESPONSE #100
+        DestroySelf()
+END
+
+IF
     !ActuallyInCombat()
     OR(3)
         TimeOfDay(DUSK)
@@ -49,16 +56,11 @@ THEN
 END
 
 IF
-    Range(NearestEnemyOf(Myself),8)
-THEN
-    RESPONSE #100
-        RunAwayFrom(NearestEnemyOf(Myself),6)
-END
-
-IF
     See(NearestEnemyOf(Myself))
 THEN
     RESPONSE #100
-        AttackReevaluate(NearestEnemyOf(Myself),3)
+        RunAwayFrom(NearestEnemyOf(Myself),6)
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),6)
 END
 
