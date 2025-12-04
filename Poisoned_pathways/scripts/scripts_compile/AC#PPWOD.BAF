@@ -41,8 +41,9 @@ IF
     GlobalTimerExpired("Blindness_Timer","LOCALS")
 THEN
     RESPONSE #100
-        ForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Shadow Veil
+        ReallyForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Shadow Veil
         SetGlobalTimer("Blindness_Timer","LOCALS",FIVE_ROUNDS)
+        Continue()
 END
 
 IF
@@ -50,16 +51,24 @@ IF
     Global("WispBlindness","LOCALS",0)
 THEN
     RESPONSE #100
-        ForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Shadow Veil
+        ReallyForceSpellRES("AC#PPWX",NearestEnemyOf(Myself))  // Shadow Veil
         SetGlobalTimer("Blindness_Timer","LOCALS",FIVE_ROUNDS)
         SetGlobal("WispBlindness","LOCALS",1)
+        Continue()
+END
+
+IF
+    Range(NearestEnemyOf(Myself),6)
+    RandomNum(2,1)
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),45)
 END
 
 IF
     See(NearestEnemyOf(Myself))
+    ActionListEmpty()
 THEN
-    RESPONSE #100
-        RunAwayFrom(NearestEnemyOf(Myself),6)
     RESPONSE #100
         AttackReevaluate(NearestEnemyOf(Myself),6)
 END

@@ -1,10 +1,46 @@
 IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        SetGlobalTimer("AC#PP_AntimagicTimer","GLOBAL",0)
+        SetGlobalTimer("AC#PP_WildMagicTimer","GLOBAL",0)
+END
+
+IF
     Global("Prep","ACPP81",0)
 THEN
     RESPONSE #100
 	SetMusic(NIGHT,27)
 	SetMusic(DAY,%AC#PP70%)
         SetGlobal("Prep","ACPP81",1)
+        Continue()
+END
+
+IF
+    PartyRested()
+    !Global("AC#PPFixMagic","GLOBAL",1)
+    Global("AC#PP_GoMythal","GLOBAL",1)
+    OR(2)
+        TimeOfDay(DUSK)
+        TimeOfDay(NIGHT)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPDM",Player1)  // No such index
+        SetGlobalTimer("AC#PP_AntimagicTimer","GLOBAL",ONE_ROUND)
+        Continue()
+END
+
+IF
+    PartyRested()
+    !Global("AC#PPFixMagic","GLOBAL",1)
+    Global("AC#PP_GoMythal","GLOBAL",1)
+    OR(2)
+        TimeOfDay(MORNING)
+        TimeOfDay(DAY)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPWI",Player1)  // No such index
+        SetGlobalTimer("AC#PP_WildMagicTimer","GLOBAL",ONE_ROUND)
         Continue()
 END
 
