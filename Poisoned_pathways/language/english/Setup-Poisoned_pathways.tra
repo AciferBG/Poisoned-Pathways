@@ -186,10 +186,7 @@
 
 A single drop of sap is enough to kill an adult—or, in skilled hands, to craft a cure for equally lethal afflictions. Druids regard the plant with ambivalence: as a natural part of the world’s balance, but also as a reminder that even the most beautiful gifts of nature can be deadly.
 
-You must deliver one of these blossoms to Alatoasz Berendim in Duskwood Dell.
-
-Notable Traits:
-Found only in elven groves under the influence of strong nature magic.~
+You must deliver one of these blossoms to Alatoasz Berendim in Duskwood Dell.~
 @1004 = ~Fungal Key~
 @1005 = ~This key is overgrown with grime and strange spores. It appears to open a very particular kind of door.~
 @1006 = ~Supplier's Note~
@@ -200,30 +197,30 @@ Delgorth~
 @1009 = ~Keltormir, the Fallen Empire
 by Elenneth Moonsyl, Sage of Evereska
 
-“All forests remember. Even when the trees fall and the songs fade, the roots hold the memory.”
+"All forests remember. Even when the trees fall and the songs fade, the roots hold the memory."
 
-In the elder days of Toril, long before the rise of Calimshan or Tethyr, the ancient forest empire of Keltormir stretched across the south of Faerûn like a green ocean. Bound by reverence to the Seldarine and governed by harmony with nature, the elves of Keltormir built their realms not in defiance of the land, but in communion with it.
+In the elder days of Toril, long before the rise of Calimshan or Tethyr, the ancient forest empire of Keltormir stretched across the south of Faerûn. Bound by reverence to the Seldarine and governed by harmony with nature, the elves of Keltormir built their realms in communion with the surrounding land.
 
-Among the most enduring legacies of Keltormir were its three mythal-guarded cities, each a beacon of elven magic and culture—each now lost, faded, or fallen: Myth Rhynn, Myth Unnohyr and Myth Tellaren.
+Among the most enduring legacies of Keltormir were its three mythal-guarded cities, each a beacon of elven magic and culture; each now lost, faded, and fallen: Myth Rhynn, Myth Unnohyr and Myth Tellaren.
 
 Myth Rhynn
-Hidden deep within the Mytharan Woods, in the shadowed reaches of the Wealdath, lies Myth Rhynn, once a hallowed necropolis of the elves. Its mythal, unlike those of other elven cities, was not wrought for war or wonder, but for reverence. But the mythal is broken. Whether shattered by age, sacrilege, or forgotten sorrow, it no longer binds the dead to sleep. Now, shadows walk among the roots of ancient barrows, and unquiet spirits rise in the stillness. Even the elves who once came to honor their ancestors now avoid the place, for the broken threads of the mythal pull at their hearts, as if mourning its own fall. What was once a sacred resting place is now a sorrowful wound upon the forest—and a warning.
+Hidden deep within the Mytharan Woods, in the shadowed reaches of the Wealdath, lies Myth Rhynn, a hallowed necropolis of the elves. Its mythal, unlike those of other elven cities, was wrought for reverence. But the mythal is broken. Whether shattered by age, sacrilege, or forgotten sorrow, it no longer binds the dead to sleep. Now, shadows walk among the roots of ancient barrows, and unquiet spirits rise in the stillness. Even the elves who once came to honor their ancestors now avoid the place, for the broken threads of the mythal pull at their hearts, as if mourning its own fall. What was once a sacred resting place is now a sorrowful wound upon the forest.
 
 Myth Unnohyr
-The darkest tale among the three, Myth Unnohyr rose in the shadowed valleys of Keltormir’s southern forests. Its magic once fostered growth, healing, and deep communion with the natural world. Yet, something began to unravel. Elven lore speaks in hushed tones of a faltering divine bond—of a protector whose waning strength left the city's heart exposed. When that sacred power faded, the mythal shattered in silent despair, birthing a zone of wild and dead magic—a festering wound upon the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and the poisoned soil hums with restless malice.
+Myth Unnohyr rose in the shadowed valleys of Keltormir’s southern forests. Its magic once fostered growth, healing, and deep communion with the natural world. Yet, something began to unravel. Elven lore speaks in hushed tones of a faltering divine bond—of a protector whose waning strength left the city's heart exposed. When that sacred power faded, the mythal shattered in silent despair, birthing a zone of wild and dead magic—a festering wound upon the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and the poisoned soil hums with restless malice.
 
 Myth Tellaren
-Far to the south, in lands now buried under the sands of the desert, stood Myth Tellaren. When the genie-lords of Calim and Memnon warred across the south, their chaos reached even the hidden places of the elves. Myth Tellaren’s mythal, strained by planar pressure and betrayal from within, fractured—and with it, the delicate magic that held the city aloft. The destruction was swift and near-total. Some say the ruin still exists beneath the shifting sands, frozen in a moment of magical collapse—its mythal broken, yet still pulsing faintly, like embers beneath ash.
+Far to the south, in lands now buried under the sands of the desert, stood Myth Tellaren. When the genie-lords of Calim and Memnon warred across the south, their chaos reached even the hidden places of the elves. Myth Tellaren’s mythal, strained by the genies' pressure, fractured. And with it, the delicate magic that held the city aloft. Some say the ruin still exists beneath the shifting sands, frozen in a moment of magical collapse—its mythal broken, yet still pulsing faintly, like embers beneath ash.
 
 Though Keltormir has faded into myth, the echoes of its greatness endure. Where trees grow thick and stars fall strangely, where magic sings through stone or refuses to stir—there, the empire of leaves once stood. And perhaps, may rise again.~
 @1010 = ~Fragment of an Amulet~
-@1011 = ~This is a fragment of a pendant, depicting three intertwined golden rings—a sacred symbol once revered by an ancient elven guardian of magic and unity. Though incomplete, the fragment still resonates faintly with the corrupted mythal of Myth Unnohyr. When held, you feel the oppressive forces around you soften slightly, as if the fractured Weave remembers its original purpose. Yet without the full amulet, its protective strength remains useless.~
+@1011 = ~This is a fragment of a pendant, depicting three intertwined golden rings—a sacred symbol once revered by an ancient elven guardian of magic and unity. Though incomplete, the fragment still resonates faintly with the corrupted mythal of Myth Unnohyr. When held, you feel the oppressive forces around you soften slightly. Yet without the full amulet, its protective strength remains useless.~
 @1012 = ~Head of an Elf~
 @1013 = ~This is the severed head of what was once a strikingly handsome elven man. Around his neck, strands of long, silken hair remain tightly coiled—still clinging to him in death. It appears he was strangled… not by rope or cord, but by someone’s hair.~  
 @1014 = ~Golden Chain~
-@1015 = ~This is a finely wrought golden chain, crafted with meticulous care to once bear a splendid amulet. Though the medallion itself has been lost to time, the chain retains a faint, lingering trace of its ancient enchantment—a whisper of a forgotten duty to shield and preserve.~
+@1015 = ~This is a finely wrought golden chain, crafted with meticulous care to once bear a splendid amulet. Though the medallion itself has been lost to time, the chain retains a faint, lingering trace of its ancient enchantment—a forgotten duty to shield and preserve.~
 @1016 = ~Mythrien's Amulet~
-@1017 = ~Forged during the founding of Myth Unnohyr, this talisman bore the emblem of three intertwined rings, the symbol of the nearly forgotten elven god of mythals, Mythrien Sarath. Even as centuries of ruin dulled its brilliance, the talisman preserves a fragile echo of its former strength. In the presence of this relic, the wild surges and dead magic of the broken mythal falter, offering precious protection to those who dare walk the fallen city's shattered streets.
+@1017 = ~Forged during the founding of Myth Unnohyr, this talisman bore the emblem of three intertwined rings, the symbol of the nearly forgotten elven god of mythals, Mythrien Sarath. Even as centuries of ruin dulled its brilliance, the talisman preserves a fragile echo of its former strength. In the presence of this relic, the wild surges and dead magic of the broken mythal falter, offering protection to those who walk the city's shattered streets.
 
 Equipped abilities: 
 – Immunity to wild magic and dead magic zone effects in Myth Unnohyr
@@ -231,8 +228,6 @@ Equipped abilities:
 Weight: 0~
 @1018 = ~Necklace of Life~
 @1019 = ~Simple in appearance, yet suffused with quiet power, this necklace pulses faintly with restorative energy. Though its origins remain unclear, it is often favored by healers, peacewardens, and those who walk where death's shadow lingers.
-
-The amulet seems to repel the chill of necromantic energies and lends renewed strength to those who wear it—bolstering both body and spirit in equal measure.
 
 STATISTICS:
 
@@ -242,9 +237,7 @@ Equipped abilities:
 
 Weight: 0~
 @1020 = ~Potion of Peace~
-@1021 = ~Drawn from a spring where Eldath’s blessing flows undisturbed, this sacred draught carries more than mere healing. It is said that the water remembers the shape of peace—cleansing not only wounds and sickness, but also breaking curses that bind the soul.
-
-Those who drink of it feel not only restored in body, but unburdened—as though a gentle current carried their troubles away.
+@1021 = ~Drawn from a spring where Eldath’s blessing flows undisturbed, this sacred draught carries more than mere healing. Those who drink of it feel restored and unburdened—as though a gentle current carried their troubles away.
 
 STATISTICS:
 
@@ -252,7 +245,7 @@ Special: Cures poison and disease, removes curses, and heals 5 Hit Points
 
 Weight: 1~
 @1022 = ~Holy Water of Eldath~
-@1023 =~This is a carafe of holy water of Eldath. It is one of the ingredients needed to create an antidote for a poison created by a priest of Talona.
+@1023 =~This is a carafe of holy water of Eldath. It is one of the ingredients needed to create an antidote for the poison created by the priest of Talona.
   
 STATISTICS:
 
@@ -263,7 +256,7 @@ Weight: 1~
 @1030 = ~Spectre's Ring~
 @1031 = ~Helmet~
 @1032 = ~Helmet of Elven Chants~
-@1033 = ~This helmet is known as Helmet of Elven Chants and was created by a powerful elven blacksmith. If legends are to be belived, when worn by elves, the helmet improves their natural abilities, as well as it allows to summon an old elven chant that will aid the one that wears this headgear and their allies.
+@1033 = ~This helmet is known as the Helmet of Elven Chants. Forged by a master elven smith, it resonates with the ancient harmonies of his people. When worn by an elf, it enhances their natural gifts and allows the bearer to invoke an age-old elven chant that lends its strength to them and their allies.
 
 STATISTICS:
 
@@ -285,7 +278,7 @@ STATISTICS:
 Weight: 0~
 @1040 = ~This Ioun stone is believed to have been created by a powerful cleric of Talona. Shaped like a sour green berry, it carries a sharp, unripe scent that lingers unpleasantly in the air.
 
-Whispers among the faithful claim that certain Talonites used stones like this to deal with rival priests—especially those who stood in the way of their poison-laced ambitions. Unsurprisingly, the stone refuses to attune to those of a good-aligned nature.
+Certain Talonites used stones like this to deal with rival priests—especially those who stood in the way of their poison-laced ambitions. Unsurprisingly, the stone refuses to attune to those of a good-aligned nature.
 
 STATISTICS:
 
@@ -298,7 +291,7 @@ Special abilities:
 Weight: 0~
 @1041 = ~Studded Leather~
 @1042 = ~The Blessed Wyvern +3~
-@1043 = ~This studded leather armor is known under the name The Blessed Wyvern and it is believed to protect its wearer by granting them regeneration, but it's also able to manipulate the probability thus it grants its user a boost of luck.
+@1043 = ~This studded leather armor is known under the name The Blessed Wyvern and it is believed to protect its wearer by granting <PRO_HIMHER> regeneration, but it's also able to manipulate the probability thus it grants its user a boost of luck.
   
 Some say it was named after a wyvern called Lucretia.
   
@@ -315,7 +308,7 @@ Requires:
 Weight: 8~
 @1044 = ~Celestial Antidote~
 @1045 = ~Celestial Antidote~
-@1046 = ~This is an antidote you created at Myth Unnohyr. It should be able to heal those poisoned by a powerful toxin created from flowers that grow at the ruins.
+@1046 = ~This is the antidote you brewed in the Talonite’s cauldron beneath Myth Unnohyr. It is said to cure those afflicted by the potent toxin distilled from the strange flowers that grow among the ruins.
   
 STATISTICS:
 
@@ -324,8 +317,6 @@ Weight: 1~
 @1048 = ~Eldath's Embrace~
 @1049 = ~This enchanted cloak dates back to a reclusive priest of Eldath who wandered the groves of Wealdath in ages past. Birds would nest in his hands, wolves guarded his sleep, and even the most skittish beasts would draw near to bask in his tranquil presence.
 When he passed from the world, it is said dryads wove this mantle from the leaves that had fallen around his resting place. Those who wear it walk in quiet grace—and the wild things of the world walk beside them.
-
-When animals are near, the cloak responds with gentle magic. Its wearer becomes more grounded, harder to frighten, and more difficult to strike.
   
 STATISTICS:
 
@@ -408,7 +399,7 @@ STATISTICS:
 Weight: 2~
 @1067 = ~Delgorth's Note~
 @1068 = ~First Entry:
-The Groveglove... the legends were true. It blooms still amidst the shattered remnants of Myth Unnohyr, where dead magic festers and life warps. Each petal hums with quiet malice, steeped in a power neither divine nor mortal. Talona smiles upon my discovery.
+The Groveglove... the legends were true. It blooms still amidst the shattered remnants of Myth Unnohyr, where dead magic festers and life warps. Talona smiles upon my discovery!
 
 Second Entry:
 With painstaking effort, I have distilled the first batches of the toxin. Small quantities only—precious drops of death, born of the Vein’s purple heart. Already, the results have exceeded expectations: swift, incurable, a silencer of both flesh and spirit.
@@ -420,13 +411,12 @@ Fourth Entry:
 The Night Masks in Westgate see potential. They offer coin and bodies to spread the work, but they lack subtlety. I must tread carefully. The Zhentarim, ever watchful, may prove useful—if kept at arm’s length.
 
 Fifth Entry:
-The foundations here in Myth Unnohyr are firm enough—its wild and dead magic shields my work from unwanted eyes. Though I have managed to cultivate a few vines within the dead soil, they grow slowly, stubbornly, yielding but scant blossoms. At this rate, it will take seasons to produce enough toxin for the ambitions I nurture. I must seek a way to quicken their growth—or secure more hands willing to tend the cursed harvest.
+The foundations here in Myth Unnohyr are firm enough—its wild and dead magic shields my work from unwanted eyes. Though I have managed to cultivate a few vines within the dead soil, they grow slowly, stubbornly, yielding but scant blossoms. At this rate, it will take seasons to produce enough toxin for the ambitions I nurture. I must seek a way to quicken their growth—or secure more hands willing to tend the harvest.
 
 Sixth Entry:
 This Eldathyn interfered, and paid for his foolishness. Others may come, but the path is clear: the toxin will spread. It will seep into the veins of Faerûn’s mighty and humble alike. Talona’s will is woven into every trembling breath they take.
 
 Let the strong fall and the weak wither. Only decay is eternal!
-May all who breathe know suffering—and in their final, gasping moments, know Her name.
 
 — Malagent Delgorth
 ~
@@ -448,7 +438,7 @@ Weight: 1
 ~
 @1078 = ~Dagger~
 @1079 = ~Scolopendra's Spit +3~
-@1080 = ~This powerful dagger is an ideal weapon for spellcasters, especially those that specialize in summonig all sorts of acidic creations and projectiles. It does not only improve caster's abilities, but also allows such adventurers to attack enemies from a distance.
+@1080 = ~This finely wrought dagger is a favored weapon among spellcasters, especially those who command acidic conjurations and projectiles. It enhances the wielder’s casting abilities and allows <PRO_HIMHER> to strike foes from a distance.
 
 STATISTICS:
 
@@ -473,7 +463,7 @@ Weight: 1
 ~
 @1084 = ~Staff~
 @1085 = ~Branch of Duskwood Dell +3~
-@1086 = ~This quarterstaff was cut from a tree within Duskwood Dell. The branch still carries a faint verdant sheen, and when held, it thrums softly with life. It was never meant to kill, but to clear the way, and to preserve. Its magic shields the bearer from all effects that would hinder <PRO_HISHER> steps or halt <PRO_HISHER> journey. For those who wish only to walk their path in peace, it is a steadfast companion.
+@1086 = ~This quarterstaff still carries a faint verdant sheen. It was never meant to kill, but to clear the way and to preserve. Its magic shields the bearer from all effects that would hinder <PRO_HISHER> steps or halt <PRO_HISHER> journey. For those who wish only to walk their path in peace, it is a steadfast companion.
 
 STATISTICS:
 
@@ -482,7 +472,6 @@ Charge abilities:
 
 Equipped abilities:
 – The wearer is immune to everything, magical and otherwise, that affects mobility in any way. This includes Haste and Slow spells.
-– Immune to Entangle and Web
 
 THAC0: +3
 Damage: 1d2 (non-lethal)
@@ -495,7 +484,7 @@ Requires:
 Weight: 3
 ~
 @1087 = ~Rose of Eldath~
-@1088 = ~This is a rose blossom blessed by a priest of Eldath. When consumed, it gently restores the life energy of the afflicted, reversing any previous level drain caused by unnatural forces or undead creatures. Its petals hum with quiet mercy—offering peace not through strength, but through renewal.
+@1088 = ~This is a rose blossom blessed by a priest of Eldath. When consumed, it restores the life energy of the afflicted, reversing any previous level drain caused by unnatural forces or undead creatures.
 
 STATISTICS:
 
@@ -506,7 +495,7 @@ Weight: 1~
 @1090 = ~Good Luck, Honeysuckle +3~
 @1091 = ~This finely balanced two-handed sword once belonged to a ranger named Vala’ll Stormneedle, a beloved protector of the Larswood region. He was known not only for his skill in battle, but for the joy with which he lived—a perfect life, a loving family, and his wife named Systianna, a faithful of Tymora.
 
-Before each mission, she would kiss his cheek and hand him the blade, whispering, “Good luck, honeysuckle.” Unlike many folk heroes whose tales end in blood, the legend of Vala’ll is one of rare peace: He lived with Systianna until the age of eighty, passing not to sword or spell, but to pneumonia.
+Before each mission, she would kiss his cheek and hand him the blade, whispering, "Good luck, honeysuckle." Unlike many folk heroes whose tales end in blood, the legend of Vala’ll is one of rare peace: He lived with Systianna until the age of eighty, passing neither to sword nor spell, but to pneumonia.
 
 Some believe it was this very sword that shielded him all those years—a silent companion preserving his life long beyond the span of most who walk with steel in hand. 
   
@@ -551,13 +540,13 @@ Weight: 6~
 
 @1146 = ~To whomever finds this:
 
-The Mythal that once protected Myth Unnohyr is shattered beyond recognition, a festering wound in the Weave itself. Within these ruins, magic frays and collapses without warning—prayers go unanswered, spells twist or wither to dust.
+The Mythal that once protected Myth Unnohyr is shattered beyond recognition. Within these ruins, magic frays and collapses without warning—prayers go unanswered, spells twist or wither to nothing.
 
-Yet not all is lost. Certain beings—Will-o'-Wisps among them—seem to have adapted to the Mythal’s corruption. Their resilience hints at the possibility that immunity is not beyond mortal grasp.
+Yet not all is lost. Certain beings—Will-o'-Wisps among them—seem to have adapted to the Mythal’s corruption. Their resilience hints at the possibility that immunity is not impossible.
 
-Before my strength failed me, I theorized that an ancient elven relic might be restored—one capable of channeling the original power of the Mythal to shield its bearer from the effects of its corruption. Perhaps then, spellcasting within these ruins could once again be possible without peril.
+Before my strength failed me, I theorized that an ancient elven relic might be restored—one capable of channeling the original power of the Mythal to shield its bearer from its corruptive force. Perhaps spellcasting within these ruins could then be possible again.
 
-I suspect that the essences of wisps born of both wild and dead magic, combined with the elven talisman itself, might yield such an effect. If such rare wisps truly dwell within these ruins, and if one could forge an ancient elven talisman once more, life here would be far less precarious.
+I suspect that the essences of wisps born of both wild and dead magic, combined with the elven talisman itself, might yield such an effect. If such rare wisps truly dwell within these ruins, and if one could forge the ancient elven talisman, life of a mage here would be far less precarious.
 
 Whether such a talisman can truly be made, I shall not live to see.
 
@@ -571,72 +560,47 @@ I was but young when first I wandered deep into the Wood of Sharp Teeth.
 The elders had warned me: "Not all who walk beneath the green honor life."
 Yet my heart knew no fear, only the call to carry Eldath’s peace wherever my steps would take me.
 
-For three nights I slept beneath the starlit canopy, the whispering leaves singing wind-songs to my soul. But on the fourth evening, as mists crept low and cold between the trunks, I came upon him—the ogre Brughul, who sought to feed his god with blood.
+For three nights I slept beneath the starlit canopy, the whispering leaves singing wind-songs to my soul. On the fourth evening, I came upon the ogre Brughul, who sought to feed his club with blood.
 
 A calf, bound and trembling, lay near his fire. Brughul towered like two men, his club glistening with old stains. I could have fled. I could have struck with spell or flame.
 
 But I did what Eldath had always taught: I sat.
 
-Simply that. Cross-legged. Palms open. Heart bare.
-And I began to sing.
+Simply that. Cross-legged. Palms open. Heart bare. And I began to sing the old lullaby of the quiet waters.
 
-No warcry. No enchantment. Just the old lullaby of the quiet water.
-
-“No blood shall quench as calm as light,
+"No blood shall quench as calm as light,
 Drawn from a spring so pure and bright.
 No scream shall ever bring release,
-But silence sows the seeds of peace.”
+let silence sow the seeds of peace."
 
-His rage faltered. The beast stepped forward. I heard his breath, heavy and confused. His grip loosened. The club dropped to moss. Then — silence.
+Brughuls rage faltered. The monster stepped forward. I smelled his breath. His grip loosened. The club dropped to moss. Then — silence. Only the soft splash of the calf as it stumbled into shallow water and was gone.
 
-And the soft splash of the calf as it stumbled into shallow water and was gone.
-
-When I opened my eyes, I was alone.
-
-They say a ring of white lilies grows there now, though none bloomed before.
-And if you sit, and breathe, and wait… you may yet hear the last note of my song, carried on the wind that knows no violence.
+When I opened my eyes, I was alone. They say a ring of white lilies grows there now, though none bloomed before.
 
 (Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
 @1149 = ~Peacewalker's stories II~
 @1150 = ~"The Thorn and the Dove"
-As recorded by the Willowroot Circle, retold from the journals of Brother Halem of Stillgrove
+As recorded by the Willowroot Circle
 
-They say he walked barefoot across Amn.
+He walked barefoot across Amn. Brother Eolan—a freewalker of Eldath—carried no coin, no weapon, no map. Only a waterskin and a heart uncluttered by wrath. Where others turned blades upon strangers, he offered silence, and when the world scorned mercy, he extended his hand.
 
-Brother Eolan—wandering disciple of Eldath—carried no coin, no weapon, no map. Only a waterskin and a heart uncluttered by wrath. Where others turned blades upon strangers, he offered silence, and when the world scorned mercy, he still extended his hand.
+It was in the Gorge of the Fallen Idol that he was most sorely tested.
 
-But it was in the Gorge of the Fallen Idol that he was most sorely tested.
+The gorge is cut deep into the foothills of the Small Teeth. Long ago, a statue of a forgotten god fell from the cliffs and shattered in the chasm below. Since then, the gorge has attracted those with dark intentions.
 
-The gorge is a ragged wound in the earth’s skin, cut deep into the foothills of the Small Teeth. It is a place where prayers go to die. Long ago, a statue—some say of a forgotten god, others a demon—fell from the cliffs and shattered in the chasm below. Since then, the gorge has drawn those whose hearts have likewise broken.
+One such was Thornmaw, a scar-marked brigand queen. When Brother Eolan wandered into her domain, she and her kin saw him as prey.
 
-One such was Thornmaw, a scar-marked brigand queen who ruled the shattered gorge. She and her feral kin carved their symbols into the fallen idol’s stone bones, built pyres in the hollows of its ribcage. When Brother Eolan wandered into her domain, she saw him as prey.
+But he made no plea, no argument. He simply knelt. In the dust at the edge of the shattered idol’s gaze, he drew forth his waterskin. With both hands, he offered it to her. His eyes met hers. And he spoke: "When did you last drink without fear?"
 
-He made no plea, no argument.
+The others laughed. But Thornmaw did not. Her hand lingered at her belt, where her curved blade hung heavy with dried blood. She stepped forward. Took the waterskin. Drank.
 
-He simply knelt.
-
-In the dust at the edge of the shattered idol’s gaze, he drew forth his waterskin. With both hands, he offered it to her. His eyes met hers—not in defiance, not in fear, but in shared weariness. And he spoke only once:
-
-"When did you last drink without fear?"
-
-No blade. No spell. Just a question.
-
-The others laughed. But Thornmaw did not. Her hand lingered at her belt, where her curved blade hung heavy with dried blood.
-
-She stepped forward. Took the waterskin. Drank.
-
-Then she hurled it down into the gorge and turned away, saying only,
-“Go.”
+Then she hurled it down into the gorge and turned away, saying: "Go."
 
 And he did.
 
 No one laid hand nor claw on him. He passed unscathed, vanishing into the southern passes like mist before dawn.
 
-The next season, the fallen idol bore something new—a vine, delicate and green, curling up through its cracked stone lips. Water pooled near its base. Some say Thornmaw never drew her blade again.
-
-No one has seen Eolan since.
-
-But in Stillgrove, where lilies bloom thick as grass, the children tell his story. And those who carry heavy hearts sometimes journey to the Gorge of the Fallen Idol—not to conquer it, but to kneel, and listen.
+The next season, the fallen idol bore something new—a vine, delicate and green, curling up through its cracked stone lips. Water pooled near its base.
 
 (Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
 @1151 = ~Elven Wardstone~
@@ -684,7 +648,7 @@ Equipped abilities:
 Weight: 2~
 @1163 = ~Shortbow~
 @1164 = ~Bard's Love Letter +3~
-@1165 = ~This magical bow is known as Bard's Love Letter. It's known to not only shot arrows well, but it enhances bard's ability to focus. If used properly, it can turn any bard into powerful casters. 
+@1165 = ~This magical bow is known as the Bard’s Love Letter. It fires arrows with remarkable grace and sharpens a bard’s focus. In the right hands, it can turn even a modest performer into a formidable spellcaster.
 
 STATISTICS:
 
@@ -767,9 +731,8 @@ Requires:
 Weight: 8~
 @1175 = ~Plate Armor~
 @1176 = ~Duskwood Plate~
-@1177 = ~This finely crafted suit of armor is fashioned from layered duskwood—an ancient, iron-hard timber known for its resilience and quiet grace. Woven into the wood are subtle enchantments of druidic origin. While it offers the solid defense of conventional plate, it remains lighter and more attuned to natural energy, resisting corruption and warding off unnatural decay.
-
-Though shaped in the form of full plate, its organic structure and natural resonance allow even single-class druids to don it without breaking their sacred oaths.
+@1177 = ~This finely crafted suit of armor is fashioned from layered duskwood. While it offers the solid defense of conventional plate, it remains lighter and more attuned to natural energy. 
+Its organic structure allows even single-class druids to don it without breaking their sacred oaths.
 
 STATISTICS:
 
@@ -787,7 +750,7 @@ Weight: 20~
 @1179 = ~Potion of Natural Attunement~
 @1180 = ~This murky green potion exudes the scent of wet bark and crushed leaves. It was designed by druids who believe that all true growth comes through greater sacrifice.
 
-Upon drinking the entire potion, the user feels a subtle shift in <PRO_HISHER> being—strength wanes, but something healing stirs. In surrendering brute force, the body opens to the quiet powers of rejuvenation—an ancient balance, restored through loss.
+Upon drinking the entire potion, the user feels a subtle shift in <PRO_HISHER> being—strength wanes, but something healing stirs. In surrendering brute force, the body opens to the quiet powers of rejuvenation.
 
 Such potions are rare and respected, for they teach what every tree already knows: that what is shed may nourish something greater.
 
@@ -813,7 +776,7 @@ Requires:
 Weight: 1~
 
 @1184 = ~Face of the Forest~
-@1185 = ~This mask resembles a serene face—neither elf nor human, but something older, wilder. By donning the mask, the wearer feels the quiet strength of the forest. In the forest, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
+@1185 = ~This mask resembles a serene face—neither elf nor human, but something older. By donning the mask, the wearer feels the quiet strength of the forest. In the forest, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
 
 STATISTICS:
 
@@ -824,7 +787,7 @@ Equipped abilities:
 
 Weight: 1~
 @1186 = ~Chestnut Bullet +2~
-@1187 = ~These magically hardened sling bullets are made from wild chestnuts—still bearing their natural spines. Originally enchanted by a halfling named Tipple Fernburrow to scare off a pack of hungry goblins, they’ve since found favor with pranksters and wanderers across the Western Heartlands. Despite their humble appearance, they strike with surprising force—and a sting you won’t soon forget.
+@1187 = ~These magically hardened sling bullets are made from wild chestnuts—still bearing their natural spines. Originally enchanted by a halfling to scare off a pack of hungry goblins, they’ve since found favor with pranksters and wanderers across the Western Heartlands. Despite their humble appearance, they strike with surprising force—and a sting nobody will soon forget.
 
 STATISTICS:
 
@@ -868,7 +831,7 @@ Requires:
 
 Weight: 3~
 @1193 = ~Arrows of Charming~
-@1194 = ~These finely crafted arrows are unlike any of mundane make. Their tips are delicately shaped into hearts of polished coral, glimmering faintly in the light. It is said they were fashioned by the sirines of the Sword Coast, not for war, but for persuasion — each arrow carrying a whisper of its maker’s beguiling song. When loosed, they seek not to harm, but to sway the will of the target, drawing them toward the archer’s cause.
+@1194 = ~These finely crafted arrows are unlike any of mundane make. Their tips are delicately shaped into hearts of polished coral, glimmering faintly in the light. When loosed, they seek to sway the will of the target, drawing them toward the archer’s cause.
 
 STATISTICS:
 
@@ -895,7 +858,7 @@ Launcher: Sling
 
 Weight: 0~
 @1197 = ~Witherbranch~
-@1198 = ~This cruel club appears to be nothing more than a gnarled, blackened bough, its surface split and twisted as if writhing in pain. It was cut from a tree deep within a plague-ridden grove, where Talona’s breath had stilled all life. Its thorns gleam with a dull green patina — residue from years of venomous anointing. Wielded in battle, the Witherbranch delivers not only a bruising blow, but the creeping embrace of rot.
+@1198 = ~This cruel club appears to be nothing more than a gnarled, blackened bough, its surface split and twisted as if writhing in pain. It was cut from a tree deep within a plague-ridden grove, where Talona’s breath had stilled all life. Its thorns gleam with a dull green patina — residue from years of venomous anointing.
 
 STATISTICS:
 
@@ -934,13 +897,13 @@ Equipped abilities:
 
 Weight: 1~
 @1203 = ~Honeymead of Duskwood Dell~
-@1204 = ~This heavy cask is filled with golden mead brewed by an Eldathyn monk in Duskwood Dell. The nectar carries the fragrance of wild blossoms and the patient work of countless bees.
+@1204 = ~This heavy cask is filled with golden mead brewed by an Eldathyn monk in Duskwood Dell. The nectar carries the patient work of countless bees.
 
 The monk has entrusted you with this cask, asking that you deliver it to Samuel Thunderburp, proprietor of the Five Flagons in Athkatla. Once you have received payment, you are to return the gold to the monk so that it may serve the temples and gardens of Eldath.
 
 Weight: 1~
 @1205 = ~Cloak of Thousand Stings~
-@1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells of smoke, wax, and honey.
+@1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells of smoke, wax, and wild honey.
 
 STATISTICS:
 
@@ -980,9 +943,7 @@ Spawn of the lifeless Weave, these wan globes feed not on fear, but on life forc
 @1213 = ~This shimmering fragment pulses with chaotic hues, shifting from emerald to amber in an instant. It carries within it the untamed spark of wild magic, unpredictable yet potent. Some claim that such essence, properly bound, might shield its bearer from the turbulence of unstable Weave-fields.~ 
 @1214 = ~Manual of Peaceful Living~
 @1215 = ~Manual of Peaceful Living
-This contemplative tome  offers guidance on living a life of serenity and restraint. By learning to set aside violence, the reader loses one attack per round. Yet in return, <PRO_HESHE> gains a permanent boon of calm resilience: +1 to all saving throws, and a natural grace that grants +1 to Armor Class.
-
-As with all such rare works, the book vanishes after a single use.
+This contemplative tome  offers guidance on living a life of serenity and restraint. As with all such rare works, the book vanishes after a single use.
 
 STATISTICS:
 
@@ -1000,7 +961,7 @@ The seal cannot be opened or broken by physical or magical means. The faeries wi
 
 Weight: 1~
 @1218 = ~Mirage’s Edge~
-@1219 = ~Forged by genies who sought to weave illusion and motion into one, this blade is said to cut not only through flesh, but through certainty itself. Once each day, it can wrap its wielder in shimmering reflections — turning the swordsman into a living mirage.
+@1219 = ~Forged by genies who sought to weave illusion and motion into one, this blade can wrap its wielder in shimmering reflections — turning the swordsman into a living mirage.
 
 STATISTICS:
 
@@ -1045,7 +1006,7 @@ Thus was born the undying echo of a guardian who betrayed his own vow. His immor
 
 Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
 @1226 = ~Signet Ring of House Vemmil~
-@1227 = ~This opulent signet ring bears the crest of the Vemmil family, an ancient Amnian merchant line known for its wealth, political maneuvering, and staggering lack of humility. The ring hums faintly with enchantment, as if every insult bounced off its golden sheen like rain off polished marble. Among Amnian elites, its wearer is often greeted with smiles – genuine or not – and a careful counting of silverware.
+@1227 = ~This opulent signet ring bears the crest of the Vemmil family, an ancient Amnian merchant line known for its wealth, political maneuvering, and staggering lack of humility. Among Amnian elites, its wearer is often greeted with smiles – genuine or not – and a careful counting of silverware.
 
 STATISTICS:
 
@@ -1060,7 +1021,7 @@ Weight: 1~
 @1228 = ~Blade of Day and Night~
 @1229 = ~Forged in the elder days of Myth Unnohyr, this elegant longsword was once a ceremonial weapon of the elven guardians who served the Watcher Over Mythals. Known as the Blade of Day and Night, it was said to embody the balance between vigilance and rest, between the radiance of the sun and the quiet strength of moonlight.
 
-Legends tell that the sword shattered when the city’s protective mythal began to wane, its twin halves cast apart by opposing forces of light and shadow. For centuries, elves spoke of the two fragments — the Dayblade and the Nightblade — resting in distant ruins, awaiting the one who could restore harmony between dawn and dusk.
+Legends tell that the sword shattered when the city’s protective mythal began to wane, its twin halves cast apart by opposing forces of light and shadow. 
 
 Now reforged, the sword shifts its nature with the turning of the heavens. In daylight it burns with quiet resolve, keen and strong. Under moon and stars, it softens its radiance, guarding the bearer with calm and patience.
 
@@ -1097,7 +1058,7 @@ we’re behind the Temple of Helm in the Bridge District after dark, like every 
 
 The dust’s magic lasts until it is dispelled, willingly ended, or broken by an attack. It can also fade naturally after 24 hours. The invisible being may move freely and cast defensive spells, but any offensive action immediately ends the effect — though it still allows the first strike to go unseen.~
 @1242 = ~Arrow of healing~
-@1243 = ~These arrows are an invention of Eldath’s faithful, crafted not for battle but for mercy. Each slender shaft bears a small vial of sanctified water drawn from a sacred spring. When the arrow strikes, the vial shatters, releasing a gentle burst of divine essence that seeps into the wounded flesh of its target.
+@1243 = ~These arrows are an invention of Eldath’s faithful. Each shaft bears a small vial of sanctified water drawn from a sacred spring. When the arrow strikes, the vial shatters, releasing a gentle burst of divine essence that seeps into the wounded flesh of its target.
 
 Though the arrows are crafted for healing, even a gentle strike can bruise or cut when loosed from a powerful bow — a small price to pay for the healing they bestow.
 
@@ -1109,10 +1070,10 @@ Special: Restores 4d6 Hit Points to the creature struck
 
 Weight: 0~
 @1244 = ~Axe of Apologies~
-@1245 = ~This magical battle axe bears the image of an orc. Once wielded by the Odonti, a reclusive clan of peaceful orcs from the Unapproachable East who venerate Eldath, it served as a symbol of protection—and regret.
+@1245 = ~This magical battle axe bears the image of an orc. Once wielded by the Odonti, a reclusive clan of peaceful orcs from the Unapproachable East who venerate Eldath, it served as a symbol of regret.
 
-The axe whispers a soft “Sorry!” each time it strikes a target. Unfortunately, these apologies weigh heavier on the wielder than on the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in battle.
-When the bearer is wounded, the axe seems to grieve—sometimes knitting flesh with the last remnants of long-forgotten Eldathyn blessings.
+The axe whispers a soft "Sorry!" each time it strikes a target. Unfortunately, these apologies weigh heavier on the wielder than on the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in battle.
+When the bearer is wounded, the axe seems to grieve—sometimes knitting flesh with Eldathyn blessings.
 
 
 STATISTICS:
@@ -1133,7 +1094,7 @@ Requires:
 
 Weight: 5~
 @1246 = ~Freewalker's sandals~
-@1247 = ~These simple leather sandals protect the wearer on <PRO_HISHER> peaceful journey—whether against roots, snares, or silken webs. Favored by those who walk without violence and stop for no one, they ensure that no step need be delayed.
+@1247 = ~These simple leather sandals protect the wearer on <PRO_HISHER> peaceful journey. Favored by those who walk without violence and stop for no one, they ensure that no step need be delayed.
 
 STATISTICS:
 
