@@ -1,13 +1,4 @@
 IF
-    Global("DyingMan","ACPP01",1)
-    See([PC])
-    Range([PC],15)
-THEN
-    RESPONSE #100
-        StartDialogueNoSet([PC])
-END
-
-IF
     GlobalGT("DyingMan","ACPP01",20)
 THEN
     RESPONSE #100
