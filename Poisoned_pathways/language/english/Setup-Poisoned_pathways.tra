@@ -210,7 +210,7 @@ Myth Rhynn
 Hidden deep within the Mytharan Woods, in the shadowed reaches of the Wealdath, lies Myth Rhynn, a hallowed necropolis of the elves. Its mythal, unlike those of other elven cities, was wrought for reverence. But the mythal is broken. Whether shattered by age, sacrilege, or forgotten sorrow, it no longer binds the dead to sleep. Now, shadows walk among the roots of ancient barrows, and unquiet spirits rise in the stillness. Even the elves who once came to honor their ancestors now avoid the place, for the broken threads of the mythal pull at their hearts, as if mourning its own fall. What was once a sacred resting place is now a sorrowful wound upon the forest.
 
 Myth Unnohyr
-Myth Unnohyr rose in the shadowed valleys of Keltormir’s southern forests. Its magic once fostered growth, healing, and deep communion with the natural world. Yet, something began to unravel. Elven lore speaks in hushed tones of a faltering divine bond—of a protector whose waning strength left the city's heart exposed. When that sacred power faded, the mythal shattered in silent despair, birthing a zone of wild and dead magic—a festering wound upon the Weave that endures to this day. Now, few dare to approach its ruins, where even divine power falters, and the poisoned soil hums with restless malice.
+Myth Unnohyr rose in the shadowed valleys of Keltormir’s southern forests. Its magic once fostered growth, healing, and deep communion with the natural world. Yet, something began to unravel. Elven lore speaks of a faltering divine bond—of a protector whose waning strength left the city's heart exposed. When the sacred power imploded, the mythal shattered, birthing a zone of wild and dead magic that endures to this day. Now, few dare to approach its ruins, where every magic falters, and the poisoned soil hums with restless malice.
 
 Myth Tellaren
 Far to the south, in lands now buried under the sands of the desert, stood Myth Tellaren. When the genie-lords of Calim and Memnon warred across the south, their chaos reached even the hidden places of the elves. Myth Tellaren’s mythal, strained by the genies' pressure, fractured. And with it, the delicate magic that held the city aloft. Some say the ruin still exists beneath the shifting sands, frozen in a moment of magical collapse—its mythal broken, yet still pulsing faintly, like embers beneath ash.
@@ -1116,7 +1116,15 @@ Equipped abilities:
 
 Weight: 0~
 @1250 = ~Blinding Powder~
-@1251 = ~This powder can be thrown at any creature within 40 ft. Upon impact, it dissipates in a 15-ft. radius and blinds all creatures caught within. A saving throw vs. Breath Weapon -2 negates the effect. A blinded creature suffers a –4 penalty to attack rolls and Armor Class for one turn.~
+@1251 = ~This powder can be thrown at any creature within 40 ft. Upon impact, it bursts into a blinding cloud that affects all creatures caught within who fail to avert their eyes.
+
+STATISTICS:
+
+Blinds affected creatures (Save vs. Breath –4 negates)
+Duration: 1 turn
+Area of Effect: 15-ft. radius
+
+Weight: 1~
 
 // script strings
 @2000 = ~Duskwood Dell~

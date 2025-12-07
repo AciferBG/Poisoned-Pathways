@@ -104,6 +104,7 @@ COPY_EXISTING ~BALDUR.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -141,6 +142,7 @@ COPY_EXISTING ~BALDUR.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -178,6 +180,7 @@ COPY_EXISTING ~BALDUR.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -215,6 +218,7 @@ COPY_EXISTING ~BALDUR.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -252,6 +256,7 @@ COPY_EXISTING ~BALDUR.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -289,6 +294,7 @@ COPY_EXISTING ~BALDUR.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -329,6 +335,7 @@ COPY_EXISTING ~JAN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -369,6 +376,7 @@ COPY_EXISTING ~JAHEIRA.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -406,6 +414,7 @@ COPY_EXISTING ~JAHEIRA.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -443,6 +452,7 @@ COPY_EXISTING ~JAHEIRA.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -483,6 +493,7 @@ COPY_EXISTING ~NALIA.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -519,6 +530,7 @@ COPY_EXISTING ~NALIA.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -555,6 +567,7 @@ COPY_EXISTING ~NALIA.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -595,6 +608,7 @@ COPY_EXISTING ~HAERDALI.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -631,6 +645,7 @@ COPY_EXISTING ~HAERDALI.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -670,6 +685,7 @@ COPY_EXISTING ~AERIE.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -708,6 +724,7 @@ COPY_EXISTING ~AERIE.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -747,6 +764,7 @@ COPY_EXISTING ~ANOMEN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -786,6 +804,7 @@ COPY_EXISTING ~MINSC.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -825,6 +844,7 @@ COPY_EXISTING ~EDWIN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -864,6 +884,7 @@ COPY_EXISTING ~EDWIN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -903,6 +924,7 @@ COPY_EXISTING ~EDWIN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -942,6 +964,7 @@ COPY_EXISTING ~KORGAN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -981,6 +1004,7 @@ COPY_EXISTING ~KORGAN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -1020,6 +1044,7 @@ COPY_EXISTING ~KORGAN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -1059,6 +1084,7 @@ COPY_EXISTING ~KORGAN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
@@ -1098,6 +1124,7 @@ COPY_EXISTING ~KORGAN.BCS~ ~override~
             !AreaCheck("ACPP80")
             !AreaCheck("ACPP81")
             !AreaCheck("ACPP82")
+            !AreaCheck("ACPP97")
             !AreaCheck("ACPP98")
             !AreaCheck("ACPP99")\1~
             PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
