@@ -1,4 +1,11 @@
 // area files
 
-
 COPY ~%MOD_FOLDER%/areas/copy~         ~override~
+
+COPY ~%MOD_FOLDER%/areas/ACPP01.are~      ~override~  // Duskwood Dell
+  SAY 0x20c8  @2200  // Info Infirmary
+  SAY 0x20fc  @2201  // Info temple Eldath
+  SAY 0x2130  @2202  // Info tree of honey
+  SAY 0x2164  @2203  // Info grotto
+  SAY 0x2198  @2204  // Info alatoasz
+
