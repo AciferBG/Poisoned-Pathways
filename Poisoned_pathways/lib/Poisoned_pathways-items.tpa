@@ -2,6 +2,14 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPPOB.itm~         ~override~    //  Blinding Powder
+  SAY NAME2 @1250
+  SAY DESC  @1251
+
+COPY ~%MOD_FOLDER%/itm/AC#PPRI6.itm~         ~override~    //  Ring of Non-Detection
+  SAY NAME2 @1248
+  SAY DESC  @1249
+
 COPY ~%MOD_FOLDER%/itm/AC#PPBOO.itm~         ~override~    //  Freewalker's boots
   SAY NAME2 @1246
   SAY DESC  @1247

@@ -10,15 +10,6 @@ THEN
         CreateCreatureObjectOffset("AC#PPSCR",Player4,[1.1])  // Scorpion
         CreateCreatureObjectOffset("AC#PPSCR",Player5,[1.1])  // Scorpion
         CreateCreatureObjectOffset("AC#PPSCR",Player6,[1.1])  // Scorpion
-END
-
-IF
-    HPPercentLT(Myself,50)
-    HasItem("potn52",Myself)  // Potion of Extra Healing
-THEN
-    RESPONSE #100
-        DisplayStringHead(Myself,46150)  // *quaffs a potion*
-        UseItem("potn52",Myself)  // Potion of Extra Healing
         Continue()
 END
 
@@ -32,15 +23,76 @@ THEN
 END
 
 IF
+    OR(2)
+        StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+        StateCheck(Myself,STATE_INVISIBLE)
+    HPPercentLT(Myself,50)
+    HasItem("potn52",Myself)  // Potion of Extra Healing
+THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("potn52",Myself)  // Potion of Extra Healing
+        Continue()
+END
+
+IF
     See(NearestEnemyOf(Myself))
     OR(2)
         StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
         StateCheck(Myself,STATE_INVISIBLE)
+    HasItem("AC#PPPOB",Myself)  // Potion of Icedust
+    Global("Blindness","LOCALS",0)
 THEN
     RESPONSE #100
-        RandomWalk()
+        UseItem("AC#PPPOB",LastSeenBy(Myself))  // Potion of Icedust
+        CreateItem("AC#PPPOB",1,0,0)
+        SetGlobal("Blindness","LOCALS",1)
+END
+
+IF
+    BecameVisible()
+    See(NearestEnemyOf(Myself))
+    !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+    !StateCheck(Myself,STATE_INVISIBLE)
+    HasItem("potn10",Myself)  // Potion of Invisibility
+THEN
     RESPONSE #100
-        Continue()
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("potn10",Myself)  // Potion of Invisibility
+        IncrementGlobal("Invisible_First","LOCALS",1)
+END
+
+IF
+    GlobalLT("Invisible_First","LOCALS",3)
+    OR(2)
+        StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+        StateCheck(Myself,STATE_INVISIBLE)
+    See(WorstAC([PC]))
+    !StateCheck(WorstAC([PC]),STATE_MIRRORIMAGE)
+    !CheckStatGT(WorstAC([PC]),2,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    CheckStatLT(WorstAC([PC]),100,RESISTCRUSHING)
+    CheckStatLT(WorstAC([PC]),1,STONESKINS)
+THEN
+    RESPONSE #100
+        EquipMostDamagingMelee()
+        AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+    GlobalGT("Invisible_First","LOCALS",2)
+    OR(2)
+        StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+        StateCheck(Myself,STATE_INVISIBLE)
+    See(WorstAC([PC]))
+    !StateCheck(WorstAC([PC]),STATE_MIRRORIMAGE)
+    !CheckStatGT(WorstAC([PC]),2,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    CheckStatLT(WorstAC([PC]),100,RESISTCRUSHING)
+    CheckStatLT(WorstAC([PC]),1,STONESKINS)
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),45)
+        EquipRanged()
+        AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -52,6 +104,17 @@ THEN
     RESPONSE #100
         DisplayStringHead(Myself,46150)  // *quaffs a potion*
         UseItem("potn10",Myself)  // Potion of Invisibility
+        IncrementGlobal("Invisible_First","LOCALS",1)
+END
+
+IF
+    HPPercentLT(Myself,50)
+    HasItem("potn52",Myself)  // Potion of Extra Healing
+THEN
+    RESPONSE #100
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+        UseItem("potn52",Myself)  // Potion of Extra Healing
+        Continue()
 END
 
 IF
@@ -60,16 +123,6 @@ IF
 THEN
     RESPONSE #100
         Enemy()
-END
-
-IF
-    ActionListEmpty()
-    AttackedBy([ANYONE],DEFAULT)
-    Range(LastAttackerOf(Myself),4)
-THEN
-    RESPONSE #100
-        EquipMostDamagingMelee()
-        AttackReevaluate(LastAttackerOf(Myself),30)
 END
 
 IF
@@ -104,12 +157,11 @@ END
 
 IF
     ActionListEmpty()
-    See(NearestEnemyOf(Myself))
-    !Range(NearestEnemyOf(Myself),4)
+    AttackedBy([ANYONE],DEFAULT)
+    Range(LastAttackerOf(Myself),4)
 THEN
     RESPONSE #100
-        EquipRanged()
         EquipMostDamagingMelee()
-        AttackReevaluate(NearestEnemyOf(Myself),30)
+        AttackReevaluate(LastAttackerOf(Myself),30)
 END
 

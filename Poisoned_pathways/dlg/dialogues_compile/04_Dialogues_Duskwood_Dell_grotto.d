@@ -218,7 +218,7 @@ GiveItemCreate("AC#PPMYT",Player1,1,0,0)~ EXIT
 		CHAIN IF ~~ THEN AC#PPDR1 take_some_weapons
 		@4468 
 		END
-		IF~~THEN REPLY @4469 EXTERN AC#PPDR1 spectral_blade
+		//IF~~THEN REPLY @4469 EXTERN AC#PPDR1 spectral_blade
 		IF~~THEN REPLY @4470 EXTERN AC#PPDR1 bye
 		IF~~THEN REPLY @4449 EXTERN AC#PPDR1 bye
 		

@@ -684,6 +684,9 @@ COPY ~Poisoned_pathways/spl/AC#PPF5.spl~            ~override~ // Faeries Save v
 COPY ~Poisoned_pathways/spl/AC#PPHL.spl~          ~override~  // halo blood hp gain message
 SAY 0xfe @946
 
+COPY ~Poisoned_pathways/spl/AC#PPPB.spl~          ~override~  // potion of blindness spell name
+SAY NAME1 @947
+
 COPY ~Poisoned_pathways/spl/AC#GLDRK.spl~            ~override~
   SAY NAME1 @917
 

@@ -171,6 +171,8 @@
 
 @946 = ~gained 1 temporary hit point~
 
+@947 = ~Blinding Powder~
+
 //sto files
 @950 = ~Temple of Eldath~
 @951 = ~Calmfire's Scrolls~
@@ -1104,6 +1106,17 @@ Equipped abilities:
 
 Weight: 4
 ~
+@1248 = ~Ring of Non-Detection~
+@1249 = ~Reportedly created for a lineage of the greatest burglars ever to walk the night, this cloak was apparently a success. No record exists of previous owners.
+
+STATISTICS:
+
+Equipped abilities:
+– While hidden or invisible, the wearer is non-detectable by magical means such as Detect Invisibility and scrying
+
+Weight: 0~
+@1250 = ~Blinding Powder~
+@1251 = ~This powder can be thrown at any creature within 40 ft. Upon impact, it dissipates in a 15-ft. radius and blinds all creatures caught within. A saving throw vs. Spell negates the effect. A blinded creature suffers a –4 penalty to attack rolls and Armor Class for one turn.~
 
 // script strings
 @2000 = ~Duskwood Dell~
