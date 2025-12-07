@@ -25,6 +25,7 @@ THEN
         SetGlobal("Stronger","LOCALS",2)
 END
 
+/*
 IF
     See(NearestEnemyOf(Myself))
     !GlobalTimerNotExpired("WIW_Eruption","LOCALS")
@@ -33,6 +34,280 @@ THEN
     RESPONSE #100
         SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
         ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+END
+*/
+
+// NEW:
+
+IF 
+    See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("WIW_Eruption","LOCALS")
+    //RandomNum(2,1)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),315)  // Wild color changes
+        ForceSpellRES("SPWM102",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),316)  // Squirrels... Everywhere squirrels!
+        ForceSpellRES("SPWM103",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),317)  // I'm so itchy!
+        ForceSpellRES("SPWM104",NearestEnemyOf(Myself))  // Squirrels
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),318)  // It's so bright!
+        ForceSpellRES("SPWM105",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),320)  // Sex change
+        ForceSpellRES("SPWM107",NearestEnemyOf(Myself))  // Squirrels
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),321)  // Color change
+        ForceSpellRES("SPWM108",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),322)  // What was that? Over there!
+        ForceSpellRES("SPWM109",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),332)  // Explosion?
+        ForceSpellRES("SPWM110",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),334)  // Entangled
+        ForceSpellRES("SPWM111",NearestEnemyOf(Myself))  // Entangle
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),335)  // Slowed
+        ForceSpellRES("SPWM112",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),339)  // Polymorphed
+        ForceSpellRES("SPWM113",NearestEnemyOf(Myself))  // Polymorph Other
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),340)  // Held
+        ForceSpellRES("SPWM114",NearestEnemyOf(Myself))  // Polymorph Other
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),349)  // Hastened
+        ForceSpellRES("SPWM115",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),351)  // Polymorphed
+        ForceSpellRES("SPWM183",NearestEnemyOf(Myself))  // Polymorph Other
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),359)  // Gold Destroyed!
+        ForceSpellRES("SPWM117",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),360)  // Weakened
+        ForceSpellRES("SPWM118",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),381)  // Legs... so... heavy.
+        ForceSpellRES("SPWM120",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),384)  // Held
+        ForceSpellRES("SPWM122",NearestEnemyOf(Myself))  // Hold Person
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),388)  // Fear
+        ForceSpellRES("SPWM123",NearestEnemyOf(Myself))  // Symbol, Fear
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),390)  // Area explored
+        ForceSpellRES("SPWM125",NearestEnemyOf(Myself))  // Minor Globe of Invulnerability
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),391)  // Globe of Invulnerability
+        ForceSpellRES("SPWM126",NearestEnemyOf(Myself))  // Minor Globe of Invulnerability
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),395)  // Dizzy
+        ForceSpellRES("SPWM128",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),397)  // Pretty sparkles
+        ForceSpellRES("SPWM130",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),405)  // I've always said that bird magic is the most difficult.
+        ForceSpellRES("SPWM134",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),408)  // Gems!
+        ForceSpellRES("SPWM136",NearestEnemyOf(Myself))  // Goodberry
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),420)  // What's this in my pocket?
+        ForceSpellRES("SPWM141",NearestEnemyOf(Myself))  // Goodberry
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),421)  // Combat ready!
+        ForceSpellRES("SPWM142",NearestEnemyOf(Myself))  // Hold Person
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),454)  // *hiccup*... *hic*...
+        ForceSpellRES("SPWM145",NearestEnemyOf(Myself))  // Polymorph Other
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),867)  // Double Hit Points
+        ForceSpellRES("SPWM153",NearestEnemyOf(Myself))  // Repulsion, caster
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),874)  // Oops, a gate... Is that a demon?!
+        ForceSpellRES("SPWM154",NearestEnemyOf(Myself))  // Cacofiend
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),875)  // What's with the noise?
+        ForceSpellRES("SPWM155",NearestEnemyOf(Myself))  // Cacofiend
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),877)  // Swirly things
+        ForceSpellRES("SPWM157",NearestEnemyOf(Myself))  // Cacofiend
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),890)  // Weapons glow
+        ForceSpellRES("SPWM159",NearestEnemyOf(Myself))  // Cacofiend
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),917)  // Detect magic
+        ForceSpellRES("SPWM162",NearestEnemyOf(Myself))  // Charm Person
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),1446)  // Slowed
+        ForceSpellRES("SPWM164",NearestEnemyOf(Myself))  // Slow
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),1452)  // Strengthened
+        ForceSpellRES("SPWM167",NearestEnemyOf(Myself))  // Polymorph Other
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),1453)  // Heal
+        ForceSpellRES("SPWM168",NearestEnemyOf(Myself))  // Heal
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),1474)  // Blinded
+        ForceSpellRES("SPWM178",NearestEnemyOf(Myself))  // Blindness
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),1476)  // Charmed
+        ForceSpellRES("SPWM179",NearestEnemyOf(Myself))  // Polymorph Other
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),1487)  // Explosion?
+        ForceSpellRES("SPWM186",NearestEnemyOf(Myself))  // Charm Person
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),8694)  // Stinking cloud
+        ForceSpellRES("SPWM187",NearestEnemyOf(Myself))  // Stinking Cloud
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),8695)  // COW!
+        ForceSpellRES("SPWM188",NearestEnemyOf(Myself))  // Summon Cow
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),8795)  // Itchy
+        ForceSpellRES("SPWM191",NearestEnemyOf(Myself))  // Polymorph Other
+    RESPONSE #100
+        SetGlobalTimer("WIW_Eruption","LOCALS",FIVE_ROUNDS)
+        ReallyForceSpellRES("AC#PPWW",NearestEnemyOf(Myself))  // Wild Magic Eruption
+        DisplayString(NearestEnemyOf(Myself),52260)  // Wild Surge:
+        DisplayString(NearestEnemyOf(Myself),8827)  // My gold!
+        ForceSpellRES("SPWM199",NearestEnemyOf(Myself))  // You... you are the one I am to meet? I know of no one else that would approach me. Show me the note if you are who you appear to be.
 END
 
 IF

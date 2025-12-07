@@ -1107,7 +1107,7 @@ Equipped abilities:
 Weight: 4
 ~
 @1248 = ~Ring of Non-Detection~
-@1249 = ~Reportedly created for a lineage of the greatest burglars ever to walk the night, this cloak was apparently a success. No record exists of previous owners.
+@1249 = ~Fashioned by a reclusive cabal, this simple band was designed to shield their agents from arcane prying. When worn, it shrouds the bearer in subtle counter-magic that prevents detection by spells.
 
 STATISTICS:
 
@@ -1116,7 +1116,7 @@ Equipped abilities:
 
 Weight: 0~
 @1250 = ~Blinding Powder~
-@1251 = ~This powder can be thrown at any creature within 40 ft. Upon impact, it dissipates in a 15-ft. radius and blinds all creatures caught within. A saving throw vs. Spell negates the effect. A blinded creature suffers a –4 penalty to attack rolls and Armor Class for one turn.~
+@1251 = ~This powder can be thrown at any creature within 40 ft. Upon impact, it dissipates in a 15-ft. radius and blinds all creatures caught within. A saving throw vs. Breath Weapon -2 negates the effect. A blinded creature suffers a –4 penalty to attack rolls and Armor Class for one turn.~
 
 // script strings
 @2000 = ~Duskwood Dell~

@@ -98,20 +98,20 @@ THEN
 END
 
 IF
-    Global("AmuletJournalWild","ACPP70",0)
+    Global("AmuletJournalWild","ACPP81",0)
     PartyHasItem("AC#PPWIW")  // Essence of the Will-o’Wild
 THEN
     RESPONSE #100
         AddJournalEntry(@13014,QUEST)  // Binding the Unbound I obtained the essence of a Will-o’-Wild, a luminous fragment of chaotic energy that seems to hum with the pulse of living magic.
-        SetGlobal("AmuletJournalWild","ACPP70",1)
+        SetGlobal("AmuletJournalWild","ACPP81",1)
 END
 
 IF
-    Global("AmuletJournalDead","ACPP70",0)
+    Global("AmuletJournalDead","ACPP81",0)
     PartyHasItem("AC#PPWOD")  // Essence of the Will-o’Dead
 THEN
     RESPONSE #100
         AddJournalEntry(@13015,QUEST)  // Binding the Unbound I have captured the essence of a Will-o’-Dead. Its shadowed glow feels cold to the touch, filled with the silence of dead magic.
-        SetGlobal("AmuletJournalDead","ACPP70",1)
+        SetGlobal("AmuletJournalDead","ACPP81",1)
 END
 

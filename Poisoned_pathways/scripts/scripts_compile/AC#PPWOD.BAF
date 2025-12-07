@@ -36,6 +36,14 @@ THEN
 END
 
 IF
+    Range(NearestEnemyOf(Myself),6)
+    RandomNum(2,1)
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),90)
+END
+
+IF
     See(NearestEnemyOf(Myself))
     Global("WispBlindness","LOCALS",1)
     GlobalTimerExpired("Blindness_Timer","LOCALS")
@@ -55,14 +63,6 @@ THEN
         SetGlobalTimer("Blindness_Timer","LOCALS",FIVE_ROUNDS)
         SetGlobal("WispBlindness","LOCALS",1)
         Continue()
-END
-
-IF
-    Range(NearestEnemyOf(Myself),6)
-    RandomNum(2,1)
-THEN
-    RESPONSE #100
-        RunAwayFrom(NearestEnemyOf(Myself),45)
 END
 
 IF

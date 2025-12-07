@@ -6,5 +6,17 @@ APPEND ~MastArea.2da~
 ~ACPP01     value~
 UNLESS ~ACPP01~
 
+APPEND ~MastArea.2da~
+~ACPP70     value~
+UNLESS ~ACPP70~
+
+APPEND ~MastArea.2da~
+~ACPP81     value~
+UNLESS ~ACPP81~
+
+APPEND ~MastArea.2da~
+~ACPP82     value~
+UNLESS ~ACPP82~
+
 // Adding Spawn groups to spawngrp.2da
 APPEND_COL ~spawngrp.2da~ "$ $ RDAC#PP7 150 AC#PPSK8 AC#PPSK8 AC#PPSK9 AC#PPSK9 * * * *"
