@@ -1,4 +1,14 @@
 IF
+    Global("Slime","ACPP71",1)
+THEN
+    RESPONSE #100
+        SetGlobal("Slime","ACPP71",2)
+        CreateCreatureEffect("JELLYGR","TRGOOYAA",[504.406],SW)  // Green Slime
+        CreateCreatureEffect("JELLYGR","TRGOOYAA",[186.389],SW)  // Green Slime
+        CreateCreatureEffect("JELLYGR","TRGOOYAA",[358.468],SW)  // Green Slime
+END
+
+IF
     Range(NearestEnemyOf(Myself),8)
     !GlobalTimerNotExpired("Stench","LOCALS")
 THEN
