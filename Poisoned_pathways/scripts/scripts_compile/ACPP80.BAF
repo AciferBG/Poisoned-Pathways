@@ -1,4 +1,12 @@
 IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPRM",Player1)  // No such index
+        Continue()
+END
+
+IF
     Global("Prep","ACPP80",0)
 THEN
     RESPONSE #100
@@ -6,6 +14,8 @@ THEN
         AmbientActivate("Mythrien_eye",FALSE)
         TriggerActivation("Tracpp90",FALSE)
         SoundActivate("Mythrien_eye_sound_01",FALSE)
+        DisplayString(Myself,@2008)
+        DisplayStringHead(Player1,@2008)
         SetGlobal("Prep","ACPP80",1)
 END
 
@@ -19,36 +29,6 @@ THEN
         AmbientActivate("Mythrien_eye",FALSE)
         SoundActivate("Mythrien_eye_sound_01",FALSE)
         SetGlobal("City_healed","ACPP80",1)
-END
-
-IF
-  !Global("AC#PPFixMagic","GLOBAL",1)
-  Global("AC#PP_GoMythal","GLOBAL",1)
-  OR(2)
-      TimeOfDay(DUSK)
-      TimeOfDay(NIGHT)
-  !GlobalTimerNotExpired("AC#PP_AntimagicTimer","GLOBAL")
-THEN
-  RESPONSE #100
-      ApplySpellRES("AC#PPDM",Player1) 
-      //AddAreaFlag(DEADMAGICZONE)
-      SetGlobalTimer("AC#PP_AntimagicTimer","GLOBAL",6)
-      Continue()
-END
-
-IF
-  !Global("AC#PPFixMagic","GLOBAL",1)
-  Global("AC#PP_GoMythal","GLOBAL",1)
-  OR(2)
-      TimeOfDay(MORNING)
-      TimeOfDay(DAY)
-  !GlobalTimerNotExpired("AC#PP_WildMagicTimer","GLOBAL")
-THEN
-  RESPONSE #100
-      ApplySpellRES("AC#PPWI",Player1)  
-      //RemoveAreaFlag(DEADMAGICZONE)
-      SetGlobalTimer("AC#PP_WildMagicTimer","GLOBAL",6)
-      Continue()
 END
 
 /*

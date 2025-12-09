@@ -3,9 +3,9 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("Slime","ACPP71",2)
-        CreateCreatureEffect("JELLYGR","TRGOOYAA",[504.406],SW)  // Green Slime
-        CreateCreatureEffect("JELLYGR","TRGOOYAA",[186.389],SW)  // Green Slime
-        CreateCreatureEffect("JELLYGR","TRGOOYAA",[358.468],SW)  // Green Slime
+        CreateCreatureEffect("AC#PPJEG","TRGOOYAA",[504.406],SW)  // Green Slime
+        CreateCreatureEffect("AC#PPJEG","TRGOOYAA",[186.389],SW)  // Green Slime
+        CreateCreatureEffect("AC#PPJEG","TRGOOYAA",[358.468],SW)  // Green Slime
 END
 
 IF
