@@ -60,6 +60,16 @@ THEN
 END
 
 IF
+    Global("SpawnDrowParty","ACPP70",0)
+    PartyHasItem("AC#PPWA")  // Holy Water of Eldath
+THEN
+    RESPONSE #100
+        SpawnPtDeactivate("Spawn_spiders03")
+        CreateCreature("AC#PPDW1",[1962.279],S)  // Zalyndar, Drow Wizard of Vhaeraun
+        SetGlobal("SpawnDrowParty","ACPP70",1)
+END
+
+IF
     GlobalGT("AC#PP_NewProblemsUnnohyr","GLOBAL",0)
     Global("CloseMainEntry","ACPP70",0)
 THEN

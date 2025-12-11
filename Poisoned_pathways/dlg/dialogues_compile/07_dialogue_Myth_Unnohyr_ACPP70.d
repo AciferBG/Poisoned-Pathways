@@ -53,7 +53,7 @@ DO ~SetGlobal("AC#PPBansheeHead","GLOBAL",10)
 CreateVisualEffectObject("SPDEATH3",Myself)
 TakePartyItem("AC#PPHD1")
 DestroyItem("AC#PPHD1")
-AddexperienceParty(4000)
+AddexperienceParty(400)
 AddJournalEntry(@13022,QUEST_DONE)
 DropItem("AC#PPCO1",[-1.-1])
 DestroySelf()~ EXIT

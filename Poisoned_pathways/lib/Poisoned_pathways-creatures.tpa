@@ -2,6 +2,9 @@
 
 COPY ~%MOD_FOLDER%/cre/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/cre/AC#PPDW1.cre~ ~override~       // Zalyndar, Vhaeraun drow leader in Myth Unnohyr
+SAY NAME1 @84 SAY NAME2 @84
+
 COPY ~%MOD_FOLDER%/cre/AC#PPILW.cre~ ~override~       // sick woman in area acpp12
 SAY NAME1 @83 SAY NAME2 @83
 

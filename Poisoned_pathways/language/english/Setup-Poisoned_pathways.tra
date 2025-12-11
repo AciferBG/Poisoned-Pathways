@@ -74,6 +74,7 @@
 @81 = ~Spirit of Elv-Esster Aened~
 @82 = ~Lesser Bone Weird~
 @83 = ~Sick Woman~
+@84 = ~Zalyndar~
 
 
 // cre soundfiles
@@ -1125,6 +1126,13 @@ Duration: 1 turn
 Area of Effect: 15-ft. radius
 
 Weight: 1~
+@1252 = ~Dark Amulet of Mythrien~
+@1253 = ~This amulet was fashioned through sinister Drow rites from shattered fragments of an ancient surface-elven necklace—very likely once a sacred pendant devoted to Mythrien Sarath. The purity it once held has long since been profaned. Whatever materials the Drow used in its creation... the process was undoubtedly cruel, and very, very bloody.
+
+Equipped abilities: 
+– Immunity to wild magic and dead magic zone effects in Myth Unnohyr
+
+Weight: 0~
 
 // script strings
 @2000 = ~Duskwood Dell~

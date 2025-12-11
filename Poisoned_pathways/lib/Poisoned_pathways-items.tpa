@@ -2,6 +2,10 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPCO4.itm~         ~override~    // Mythrien's amulet drowish
+  SAY NAME2 @1252
+  SAY DESC  @1253
+
 COPY ~%MOD_FOLDER%/itm/AC#PPPOB.itm~         ~override~    //  Blinding Powder
   SAY NAME2 @1250
   SAY DESC  @1251
@@ -346,7 +350,7 @@ COPY ~%MOD_FOLDER%/itm/AC#PPWA2.itm~         ~override~    // Springwater of Eld
   SAY NAME2 @1020
   SAY DESC  @1021
 
-COPY ~%MOD_FOLDER%/itm/AC#PPCO3.itm~         ~override~    // Corellon's amulet tutti
+COPY ~%MOD_FOLDER%/itm/AC#PPCO3.itm~         ~override~    // Mythrien's amulet tutti
   SAY NAME2 @1016
   SAY DESC  @1017
 
