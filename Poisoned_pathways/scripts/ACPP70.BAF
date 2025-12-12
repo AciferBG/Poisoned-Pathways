@@ -70,6 +70,27 @@ THEN
 END
 
 IF
+    Global("SpawnDrowParty","ACPP70",1)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPDW2",[1878.230],S)  // Drow Warrior
+        CreateCreature("AC#PPDW2",[2058.192],S)  // Drow Warrior
+        CreateCreature("AC#PPDW3",[2160.222],SW)  // Drow
+        CreateCreature("AC#PPDW3",[2166.307],SW)  // Drow
+        SetGlobal("SpawnDrowParty","ACPP70",2)
+END
+
+IF
+    Global("SpawnDrowParty","ACPP70",2)
+    LevelPartyGT(11)
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPDW2",[2215.181],S)  // Drow Warrior
+        CreateCreature("AC#PPDW3",[2258.274],S)  // Drow
+        SetGlobal("SpawnDrowParty","ACPP70",3)
+END
+
+IF
     GlobalGT("AC#PP_NewProblemsUnnohyr","GLOBAL",0)
     Global("CloseMainEntry","ACPP70",0)
 THEN

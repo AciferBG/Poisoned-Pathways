@@ -1,0 +1,41 @@
+IF
+    Global("Stronger","LOCALS",0)
+    LevelPartyGT(14)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",1)
+END
+
+IF
+    Global("Stronger","LOCALS",1)
+    LevelPartyGT(16)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",2)
+END
+
+IF
+    Global("AC#PPDrowFight","GLOBAL",2)
+    Allegiance(Myself,NEUTRAL)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    HasItem("POTN34",Myself)  // Potion of Magic Protection
+    OR(2)
+        TimeOfDay(MORNING)
+        TimeOfDay(DAY)
+    CheckStatLT(Myself,100,RESISTMAGIC)
+    !GlobalTimerNotExpired("DrankPotionTimer","LOCALS")
+    Range(NearestEnemyOf(Myself),30)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("DrankPotionTimer","LOCALS",ONE_ROUND)
+        UseItem("POTN34",Myself)  // Potion of Magic Protection
+        DisplayStringHead(Myself,46150)  // *quaffs a potion*
+END
+

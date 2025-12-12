@@ -30,6 +30,7 @@ IF ~~ THEN EXTERN AC#PPDW1 fight
 CHAIN AC#PPDW1 fight
 ~Enough talk. Slaughter them! Let us educate this <PRO_RACE> in the cost of defying the Masked Lord’s faithful!~
 DO ~SetGlobal("AC#PPDrowFight","GLOBAL",2)
+Shout(151)
 Enemy()~
 EXIT
 

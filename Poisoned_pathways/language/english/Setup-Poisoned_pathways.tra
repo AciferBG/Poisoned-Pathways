@@ -1103,7 +1103,7 @@ Weight: 5~
 STATISTICS:
 
 Equipped abilities:
-– Immune to Entangle and Web
+– Immune to Hold Person and Slow
 
 Weight: 4
 ~
@@ -1133,6 +1133,19 @@ Equipped abilities:
 – Immunity to wild magic and dead magic zone effects in Myth Unnohyr
 
 Weight: 0~
+@1254 = ~Spidersilk Boots~
+@1255 = ~These supple boots were crafted from spider-hide and reinforced with strands of consecrated silk. Worn by Vhaeraun’s surface scouts, they allow swift, silent movement through webs, roots, and magical snares alike.
+A subtle enchantment, woven in defiance of Lolth’s faithful and the children of the Seldarine, grants the wearer a faint defensive edge when facing elven foes.
+
+STATISTICS:
+
+Equipped abilities:
+– Immune to Entangle and Web
+– +2 AC and +2 Saving Throws vs. Elves 
+– Move Silently: +10%
+– Hide In Shadows: +10%
+
+Weight: 4~
 
 // script strings
 @2000 = ~Duskwood Dell~
