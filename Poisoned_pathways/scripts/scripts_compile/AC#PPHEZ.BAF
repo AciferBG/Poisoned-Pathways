@@ -9,6 +9,16 @@ THEN
 END
 
 IF
+    Global("Stronger","LOCALS",0)
+    LevelPartyGT(10)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        ApplySpellRES("AC#PPX1",Myself)  // No such index
+        SetGlobal("Stronger","LOCALS",1)
+END
+
+IF
     Range(NearestEnemyOf(Myself),8)
     !GlobalTimerNotExpired("Stench","LOCALS")
 THEN

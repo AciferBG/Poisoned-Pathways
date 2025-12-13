@@ -150,6 +150,17 @@ THEN
 END
 
 IF
+    Global("DiffYuanTiAdjust","ACPP70",0)
+    OR(2)
+    DifficultyLT(NORMAL)
+    LevelPartyLT(10)
+THEN
+    RESPONSE #100
+        SpawnPtDeactivate("Spawn_yuan_ti")
+        SetGlobal("DiffYuanTiAdjust","ACPP70",1)
+END
+
+IF
     Global("DiffAdjust","ACPP70",0)
     Difficulty(NORMAL)
 THEN
@@ -230,6 +241,7 @@ IF
 THEN
     RESPONSE #100
         SpawnPtDeactivate("Spawn_gibberlings")
+        SpawnPtDeactivate("Spawn_yuan_ti")
         //SpawnPtDeactivate("Spawn_wisps01")
         SpawnPtDeactivate("Spawn_spiders01")
         SpawnPtDeactivate("Mud_zombies")

@@ -614,7 +614,8 @@ CHAIN AC#PPEL4 have_blessings_have_flower_have_water_02
 == MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN @3642
 == JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @3643
 == AC#PPEL4 @3644
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",6)~ EXIT
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",6) 
+AddJournalEntry(@12108,QUEST)~ EXIT
 
 //ANTIDOTE
 

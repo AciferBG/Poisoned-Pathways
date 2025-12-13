@@ -162,7 +162,7 @@
 @933 = ~Permanent +1 bonus to Saving Throws vs. Spells~
 @934 = ~Permanent +1 bonus to Saving Throws vs. Wands~
 @935 = ~Permanent +1 bonus to Saving Throws vs. Polymorph~
-@936 = ~Permanent +1 bonus to Saving Throws vs. Breath Attacks~
+@936 = ~Permanent +1 bonus to Saving Throws vs. Breath Weapons~
 
 @941 = ~Whisper Against Death~ //~Save vs. death bonus~
 @942 = ~Glimmer Against Magic~ //~Save vs. spell bonus~
@@ -1077,7 +1077,8 @@ Weight: 0~
 @1245 = ~This magical battle axe bears the image of an orc. Once wielded by the Odonti, a reclusive clan of peaceful orcs from the Unapproachable East who venerate Eldath, it served as a symbol of regret.
 
 The axe whispers a soft "Sorry!" each time it strikes a target. Unfortunately, these apologies weigh heavier on the wielder than on the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in battle.
-When the bearer is wounded, the axe seems to grieve—sometimes knitting flesh with Eldathyn blessings.
+
+When the bearer is wounded, though, the axe becomes sometimes useful in combat, granting the wielder an Eldathyn blessing.
 
 
 STATISTICS:

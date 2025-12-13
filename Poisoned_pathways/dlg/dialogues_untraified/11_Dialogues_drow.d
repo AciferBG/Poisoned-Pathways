@@ -20,26 +20,17 @@ CHAIN AC#PPDW1 antidote_and_begone
 ~You truly believe we would allow you to walk away, now that you have seen us?~
 END
 IF ~~ THEN EXTERN AC#PPDW1 fight
-IF ~HasItemEquipedReal("WA2S1H",Player1)~ THEN EXTERN AC#PPDW1 player1_has_mythrien_amulet
-IF ~OR(2)
-    HasItemEquipedReal("WA2S1H",Player2)
-    HasItemEquipedReal("WA2S1H",Player3)
-    HasItemEquipedReal("WA2S1H",Player4)
-    HasItemEquipedReal("WA2S1H",Player5)
-    HasItemEquipedReal("WA2S1H",Player6)~ THEN EXTERN AC#PPDW1 npc_has_mythrien_amulet
-
-CHAIN AC#PPDW1 player1_has_mythrien_amulet
-~Oh! You bear the amulet of that vanished Mythrien. How delightful. In a moment, I shall claim *two* amulets as my own.~
-END
-IF ~~ THEN EXTERN AC#PPDW1 fight
+IF ~PartyHasItem("AC#PPCO3")~ THEN EXTERN AC#PPDW1 npc_has_mythrien_amulet
 
 CHAIN AC#PPDW1 npc_has_mythrien_amulet
-~Oh! One among your rabble carries the amulet of that vanished Mythrien. How fitting. Soon I will possess *two* such relics.~
+~Oh! One among your rabble carries another amulet of that vanished Mythrien. Like me. Soon I will possess *two* such relics.~
 END
 IF ~~ THEN EXTERN AC#PPDW1 fight
 
 CHAIN AC#PPDW1 fight
 ~Enough talk. Slaughter them! Let us educate this <PRO_RACE> in the cost of defying the Masked Lord’s faithful!~
-DO ~SetGlobal("AC#PPDrowFight","GLOBAL",2)~
+DO ~SetGlobal("AC#PPDrowFight","GLOBAL",2)
+Shout(151)
+Enemy()~
 EXIT
 
