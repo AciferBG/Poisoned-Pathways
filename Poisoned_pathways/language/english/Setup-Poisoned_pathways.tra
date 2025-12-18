@@ -52,7 +52,7 @@
 @59 = ~Poison Weird~
 @60 = ~Fallen Tree~
 @61 = ~Elv-Esster Aened~
-@62 = ~Will O'Dead~
+@62 = ~Will-O'-Dead~
 @63 = ~Will-O'-Wild~
 @64 = ~Maddlethorpe Vemmil~
 @65 = ~Wimpley Ulvax~
@@ -178,7 +178,7 @@
 @950 = ~Temple of Eldath~
 @951 = ~Calmfire's Scrolls~
 @952 = ~Treetop Tavern~
-@953 = ~Debbie's Undoubtful Weapons & Goods~
+@953 = ~Debbie's Weapons & Goods~
 @954 = ~Woodcarver~
 @955 = ~Zar’khaan's wonders~
 
@@ -295,7 +295,7 @@ Special abilities:
 Weight: 0~
 @1041 = ~Studded Leather~
 @1042 = ~The Blessed Wyvern +3~
-@1043 = ~This studded leather armor is known under the name The Blessed Wyvern and it is believed to protect its wearer by granting <PRO_HIMHER> regeneration, but it's also able to manipulate the probability thus it grants its user a boost of luck.
+@1043 = ~This studded leather armor is known under the name The Blessed Wyvern. It is believed to protect its wearer by granting <PRO_HIMHER> regeneration. 
   
 Some say it was named after a wyvern called Lucretia.
   
@@ -362,12 +362,12 @@ Equipped abilities:
 
 Weight: 0~
 @1058 = ~Shield Fragment~
-@1059 = ~This appears to be the central piece of a shield. Without the outer frame, however, it is unusable.
+@1059 = ~This appears to be a central piece of a shield. Without the outer frame, however, it is unusable.
   
 STATISTICS:
 
 Weight: 0~
-@1060 = ~This appears to be the central piece of a shield. Without the outer frame, however, it is unusable.
+@1060 = ~This appears to be a central piece of a shield. Without the outer frame, however, it is unusable.
   
 STATISTICS:
 
@@ -418,7 +418,7 @@ Fifth Entry:
 The foundations here in Myth Unnohyr are firm enough—its wild and dead magic shields my work from unwanted eyes. Though I have managed to cultivate a few vines within the dead soil, they grow slowly, stubbornly, yielding but scant blossoms. At this rate, it will take seasons to produce enough toxin for the ambitions I nurture. I must seek a way to quicken their growth—or secure more hands willing to tend the harvest.
 
 Sixth Entry:
-This Eldathyn interfered, and paid for his foolishness. Others may come, but the path is clear: the toxin will spread. It will seep into the veins of Faerûn’s mighty and humble alike. Talona’s will is woven into every trembling breath they take.
+An Eldathyn interfered, and paid for his foolishness. Others may come, but the path is clear: the toxin will spread. It will seep into the veins of Faerûn’s mighty and humble alike. Talona’s will is woven into every trembling breath they take.
 
 Let the strong fall and the weak wither. Only decay is eternal!
 
@@ -577,7 +577,7 @@ Drawn from a spring so pure and bright.
 No scream shall ever bring release,
 let silence sow the seeds of peace."
 
-Brughuls rage faltered. The monster stepped forward. I smelled his breath. His grip loosened. The club dropped to moss. Then — silence. Only the soft splash of the calf as it stumbled into shallow water and was gone.
+Brughul's rage faltered. The monster stepped forward. I smelled his breath. His grip loosened. The club dropped to moss. Then — silence. Only the soft splash of the calf as it stumbled into shallow water and was gone.
 
 When I opened my eyes, I was alone. They say a ring of white lilies grows there now, though none bloomed before.
 
@@ -624,7 +624,7 @@ Weight: 1~
 STATISTICS:
 
 Combat abilities:
-– Each succesful hit has a 50% chance to deal additional 1d6 piercing damage 
+– Each successful hit has a 50% chance to deal additional 1d6 piercing damage 
 
 THAC0: +2
 Damage: 1d10+2 (piercing)
@@ -637,7 +637,7 @@ Requires:
 Weight: 12~
 @1160 = ~Belt~
 @1161 = ~Belt of Starshaping~
-@1162 = ~This belt was once used by Stinna Raonar, an elven oracle that decided that she no longer wants to see how future may unfold, but that she wants to shape it. To do so, she started to learn how to change the future and manipulate the power of luck.
+@1162 = ~This belt was once used by Stinna Raonar, an elven oracle that decided that she no longer wanted to see how future may unfold, but that she wanted to shape it. To do so, she started to learn how to change the future and manipulate the power of luck.
 
 STATISTICS:
 
@@ -674,7 +674,7 @@ Requires:
 Weight: 1~
 @1166 = ~Flail~
 @1167 = ~Two Arguing Heads +2~
-@1168 = ~This flail used to belong to a cleric of Tempus, who found it very difficult to make any decision, what was quite unusual for someone who needs to know how to act even during the greatest battles. Some say it was this weapon wasn't really helping and when he held it, he would overthink things even more.
+@1168 = ~This flail used to belong to a cleric of Tempus, who found it very difficult to make any decision, which was quite unusual for someone who needs to know how to act even during the greatest battles. Some say this weapon wasn't really helping and when he held it, he would overthink things even more.
 
 STATISTICS:
 
@@ -683,7 +683,7 @@ Equipped abilities:
 
 Combat abilities:
 – Attacks Per Round: +1/2 
-– Each succesful hit has a 50% chance to deal additional 1d6+3 crushing damage
+– Each successful hit has a 50% chance to deal additional 1d6+3 crushing damage
 
 THAC0: +2
 Damage: 1d6+3 (crushing)
@@ -696,7 +696,7 @@ Requires:
 Weight: 12~
 @1169 = ~War Hammer~
 @1170 = ~Hammer of Powerful Yet Unlikely Blows +4~
-@1171 = ~This hammer is an unusual weapons. While it can break any bone, damage metal plate armors, kill huge beasts like giants or dragons, it's very uncomfortable to hold and use. But if someone is able to land a proper hit, the effect may be truly grand!
+@1171 = ~This hammer is an unusual weapon. While it can break any bone, damage metal plate armors, kill huge beasts like giants or dragons, it's very uncomfortable to hold and use. But if someone is able to land a proper hit, the effect may be truly grand!
 
 STATISTICS:
 
@@ -719,10 +719,10 @@ Equipped abilities:
 – Cold Resistance: +25%
 
 Combat abilities:
-– Each succesful hit has a 5% chance to deal additional 1d4 cold damage
-– Each succesful hit has a 5% chance to deal additional 1d4 piercing damage
-– Each succesful hit has a 5% chance to lower targets cold resistance by 10% for 3 rounds (no saving throw)
-– Only one of the combat abilities above may trigger at one hit
+– Each successful hit has a 5% chance to deal additional 1d4 cold damage
+– Each successful hit has a 5% chance to deal additional 1d4 piercing damage
+– Each successful hit has a 5% chance to lower target's cold resistance by 10% for 3 rounds (no saving throw)
+– Only one of the combat abilities above may trigger on a single hit
 
 THAC0: +3
 Damage: 2d4+3 (crushing)
@@ -772,7 +772,7 @@ Though humble in form, this wand holds the power to conjure Goodberries, just li
 
 STATISTICS:
 
-– May cast Goodberry per charge
+– May cast Goodberry once per charge
 
 Requires:
  9 Wisdom
@@ -906,7 +906,7 @@ Weight: 1~
 The monk has entrusted you with this cask, asking that you deliver it to Samuel Thunderburp, proprietor of the Five Flagons in Athkatla. Once you have received payment, you are to return the gold to the monk so that it may serve the temples and gardens of Eldath.
 
 Weight: 1~
-@1205 = ~Cloak of Thousand Stings~
+@1205 = ~Cloak of a Thousand Stings~
 @1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells of smoke, wax, and wild honey.
 
 STATISTICS:
@@ -936,10 +936,10 @@ The appendix seems to refer to newly-discovered variations on normal breeds of c
 "Will-o’-the-Wisps (Common)
 These pale, floating lights haunt marshes and ruins, feeding on fear. They lure travelers astray and strike with crackling bursts of lightning. Hard to harm with steel or spell, they remain among the most treacherous of minor undead."
 
-"Will-o’Wild
+"Will-o’-Wild
 A mutation born of unstable magic. Flickering in ever-changing flashes, these lights twist spells around them—wards collapse, surges erupt, enchantments go awry. They are most often found drifting in regions of wild magic."
 
-"Will-o’Dead
+"Will-o’-Dead
 Spawn of the lifeless Weave, these wan globes feed not on fear, but on life force. They linger where magic itself has failed — in the barren places known as dead-magic zones."~
 @1210 = ~Essence of the Will-o’Dead~
 @1211 = ~A faintly glowing mote of pallid light, cold to the touch and unnervingly silent. Lore-whispers suggest that such an essence could one day serve to counter the emptiness where the Weave has failed.~
@@ -1058,7 +1058,7 @@ we’re behind the Temple of Helm in the Bridge District after dark, like every 
 @1239 = ~This worn coin bears the faint image of an elderly man with a solemn expression. The details have long since faded — the nose smoothed by countless hands, the edges dulled by time. There are no markings of mint or value, and yet it feels heavier than it should, as if it remembers the years it has passed through. Whoever pressed it into shape is long gone, and whatever purpose it once held has long been forgotten.~
 
 @1240 = ~Bottle of Pixie Dust~
-@1241 = ~This small bottle contains a handful of shimmering pixie dust that can be tossed into the air. Any ally touched by the dust becomes invisible (the dust spreads in a radius of about 15 ft.). Of course, the invisible creature is not magically silenced, and certain other conditions can still reveal it. Even allies cannot see the invisible creature or its gear unless they are normally able to see invisible things or employ magic to do so. Items dropped or set down by the invisible creature become visible, while items picked up vanish if tucked into the creature’s clothing or pouches.
+@1241 = ~This small bottle contains a handful of shimmering pixie dust that can be tossed into the air. Any ally touched by the dust becomes invisible (the dust spreads in a radius of about 15 ft). Of course, the invisible creature is not magically silenced, and certain other conditions can still reveal it. Even allies cannot see the invisible creature or its gear unless they are normally able to see invisible things or employ magic to do so. Items dropped or set down by the invisible creature become visible, while items picked up vanish if tucked into the creature’s clothing or pouches.
 
 The dust’s magic lasts until it is dispelled, willingly ended, or broken by an attack. It can also fade naturally after 24 hours. The invisible being may move freely and cast defensive spells, but any offensive action immediately ends the effect — though it still allows the first strike to go unseen.~
 @1242 = ~Arrow of healing~
@@ -1154,7 +1154,7 @@ Weight: 4~
 @2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~
 @2003 = ~As you approach the gate leading to the lower levels, you feel a flicker of magic. It seems the corrupted mythal does not reach into the depths—meaning your magic should function normally in the areas below.~
 @2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead magic.~
-@2005 = ~You must place both pieces of a necklace upon the anvil to reforge them into one.~
+@2005 = ~You must place both pieces of the necklace upon the anvil to reforge them into one.~
 @2006 = ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
 @2007 = ~Could it be you... my beloved, at last?~
 @2008 = ~The corrupted mythal does not reach this place.~
@@ -1179,7 +1179,7 @@ Weight: 4~
 @2026 = ~(The yuan-ti is nowhere to be seen, but he couldn't have left Myth Unnohyr, he was too wounded for that.)~
 @2027 = ~You're in Myth Unnohyr again. The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
 @2028 = ~Something unsettling stirs in the north. To reach it, you must pass through the sanctuary once claimed by the priest of Talona.~
-@2029 = ~We should see our dryad-friend first. From what I understand, she has the sword.~
+@2029 = ~We should see our dryad friend first. From what I understand, she has the sword.~
 @2030 = ~We came for the Remembrance of the Myths, my friend. The High Priest knows about everything.~
 @2031 = ~Yes. I know. And I was told to give you the sword. Even though I believe it should stay here. With me.~
 @2032 = ~We do not have much choice.~

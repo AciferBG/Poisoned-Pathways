@@ -1,4 +1,4 @@
-@3000 = ~Hey there, friends! Friends, right? You wanted to know where the nastiest poison comes from, didn’t you? Well—lucky you! I've got a map right here. It shows the spot where I usually meet the fella who brews the real stuff. But, listen—just a word of advice, friend to friend: don’t mess around with that guy—smile at him wrong, and you’ll be coughing blood.~
+@3000 = ~Hey there, friends! You are friends, right? You wanted to know where the nastiest poison comes from, didn’t you? Well—lucky you! I've got a map right here. It shows the spot where I usually meet the fella who brews the real stuff. But, listen—just a word of advice, friend to friend: don’t mess around with that guy—smile at him wrong, and you’ll be coughing blood.~
 @3001 = ~Where's my map? I’m feeling kinda dizzy all of a sudden. Think I’ll head to the tavern, get something strong to clear my head.~
 @3002 = ~Anyway... here's the map. Farewell for now. I’m feeling kinda dizzy all of a sudden. Think I’ll head to the tavern, get something strong to clear my head.~
 @3003 = ~Well now, what do we have here? You lookin’ for something that makes problems disappear... real quiet-like? I’ve got potions, powders, and little drips of doom—if your coin’s honest and your conscience ain’t too fussy.~
@@ -23,7 +23,7 @@
 @3022 = ~My strength isn’t for show. Do I really have to beat the answer out of you? Choose wisely which side of my fists you’d like to be on.~
 @3023 = ~Minsc, perhaps Skann would feel more cooperative if you showed him your muscles. Would you be so kind?~
 @3024 = ~I'm <CHARNAME>. People call me notorious. Ask around what happens to those who cross me.~
-@3025 = ~I helped bring down Mae’Var. So unless you want to follow him, you’ll start talking.~
+@3025 = ~I killed Maevar. So unless you want to follow him, you’ll start talking.~
 @3026 = ~You might have heard of me— I'm <CHARNAME>. I've brought down worse than you, and I don't need poison to do it. So tell me what I want to know!~
 @3027 = ~I work for the Shadow Thieves. I doubt they'd be pleased to hear about your little side business.~
 @3028 = ~Ever heard of that new guild—the one that drains the blood from their enemies? I doubt your poisons would do them much harm. And, well... I work for them.~
@@ -57,7 +57,7 @@
 @3056 = ~Before he died, Therrik told my masters about you.~
 @3057 = ~Hey, I don’t want no trouble, right? I—I’m just running a bit of a business here...~
 @3058 = ~You’re lookin’ for the one behind the real nasty poison? Sure. He’s got a name... and probably more blood on his hands than most!~
-@3059 = ~His name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the wood. That’s all I know of him, swear on the gutter gods. I’ll give you his instructions.~
+@3059 = ~His name’s Delgorth. Weird fellow. I’ve only met him twice—in a glade out in the wood. That’s all I know of him, swear on the gutter gods. I'll give you his particulars.~
 @3060 = ~Smart choice.~
 @3061 = ~That’s all I needed.~
 @3062 = ~The map’ll get you there. Thing’s burnin’ a hole in my pocket anyway. Here—your problem now, not mine anymore.~
@@ -66,7 +66,7 @@
 @3065 = ~Fine, fine. Come back if you grow a taste for shadows and want your troubles bottled. I'll be here... till I ain't.~
 @3066 = ~Pah! You won’t get anything from me unless you got something really good to offer. Get lost!~
 @3067 = ~Hey, you in the back—what was your name again? <CHARNAME>? You can come collect your dying friend! And tell his masters: Never cross a Malagent!~
-@3068 = ~<CHARNAME>! We’re lucky! I... *cough*... catched that potent poison!~
+@3068 = ~<CHARNAME>! We’re lucky! I... *cough*... caught that potent poison!~
 @3069 = ~That is clearly evident.~
 @3070 = ~Don't worry! I’ll heal you.~
 @3071 = ~If you call that luck, I never want to know what misfortune looks like to you.~
@@ -177,7 +177,7 @@
 @3176 = ~Sounds useful, this toxin.~
 @3177 = ~I initially suspected that one of Faerûn’s more malevolent groups had devised this terrible poison. But my search uncovered something troubling: The poison has been used by unrelated factions, with no alliance or shared interest between them. No shared ambition—only the same deadly means.~
 @3178 = ~That can only mean a different power is behind this—one that acts on his own, working in the shadows. Someone who delights in the death this poison leaves behind.~
-@3179 = ~Silent but violent... This stuff’s like a flatulence at a turnip banquet: You don’t know who did it, but someone’s definitely going to suffer.~
+@3179 = ~Silent but violent... This stuff’s like flatulence at a turnip banquet: You don’t know who did it, but someone’s definitely going to suffer.~
 @3180 = ~So you want me to face this poison-maker?~
 @3181 = ~And just how are we meant to find this mysterious mastermind?~
 @3182 = ~Sounds like you have a task in mind for me...~
@@ -199,7 +199,7 @@
 @3198 = ~Are you certain you won’t help me?~
 @3199 = ~All right, I’ll help you.~
 @3200 = ~I won’t help you.~
-@3201 = ~Excellent! Skann Delth usually lingers on the roof of the Copper Coronet, boasting about his brews. Most of them are of little use—tricks and tinctures for fools. You should insist you're looking for something truly dangerous. Try to find out where he gets his poison from.~
+@3201 = ~Excellent! Skann Delth usually lingers on the roof of the Copper Coronet, boasting about his brews. Most of them are of little use; tricks and tinctures for fools. You should insist you're looking for something truly dangerous. Try to find out where he gets his poison from.~
 @3202 = ~I will wait for you at the temple of Ilmater in the Slums. His priests offer me shelter whenever I need it. Find me there once you’ve learned anything—so we know where to continue the search for the source of this mysterious poison.~
 @3203 = ~That is unfortunate. Are you sure you don't want to help me?~
 @3204 = ~Alright, I will try help you.~

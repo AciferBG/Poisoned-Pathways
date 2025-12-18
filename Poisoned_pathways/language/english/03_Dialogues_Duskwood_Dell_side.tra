@@ -212,7 +212,7 @@
 @3911 = ~And yet some rains come too late. I have seen fields scorched beyond all tending.~
 @3912 = ~Even the blackest earth may bloom again, if given time and care. Eldath does not give up on any soil.~
 @3913 = ~I think I’ll wait until you’re done.~
-@3914 = ~And in time, may flowers grow where banners once stood.~
+@3914 = ~And in time, flowers may grow where banners once stood.~
 @3915 = ~Oh! Eldath preserve us—someone was listening this whole time!~
 @3916 = ~Then may <PRO_HESHE> carry peace in <PRO_HISHER> heart... and patience in <PRO_HISHER> ears.~
 @3917 = ~Water is the voice of Eldath. It sings in streams and whispers in the mist.~
@@ -344,7 +344,7 @@
 @4043 = ~My thanks flow as freely as the hive’s nectar. May your words in that tavern be as smooth as honey, and may Samuel see wisdom in fair trade. Return to me with the payment, and I shall grant you a share, for even those who serve peace must taste a little sweetness for their labor.~
 @4044 = ~Then let it be so. The hive teaches patience; perhaps another day another person will carry Eldath’s sweetness into the world.~
 @4045 = ~Goodbye! Stay calm and honey-comb along.~
-@4046 = ~Hive teaches us: Work in silence, guard the sweet, sting only when you must.~
+@4046 = ~The Hive teaches us: Work in silence, guard the sweet, sting only when you must.~
 @4047 = ~May your anger melt like wax before the flame, and may every word that leaves your lips be as gentle and sweet as the summer’s honey. Go in peace, stranger, and carry a little sweetness into the world.~
 @4048 = ~It takes patience to make peace... just like good honey. You can’t rush the bees, you can’t rush the fighters.~
 @4049 = ~May your anger melt like wax, and may your words be sweet as summer honey.~
@@ -412,8 +412,8 @@
 @4111 = ~Thank you for saving us!~
 @4112 = ~Excuse me... You're the one who helped our High Priest, aren't you? I was wondering if you might help me as well... just for a moment.~
 @4113 = ~Depends. What do you need?~
-@4114 = ~I have no time on helping boys that do not even shave themselves yet. Go play in the trees.~
-@4115 = ~You see, it was recently that I run away from home. I... I just couldn't live the life I was expected to live! My parents passed when I was still young, and I was raised by my aunt—Pesca. She lives in the Government District of Athkatla. Her world is... marble, silk, and coin. She wanted me to become a refined, wealthy man. Privileged. Preening. Pampered.~
+@4114 = ~I have no time for helping boys that do not even shave themselves yet. Go play in the trees.~
+@4115 = ~You see, it was recently that I ran away from home. I... I just couldn't live the life I was expected to live! My parents passed when I was still young, and I was raised by my aunt—Pesca. She lives in the Government District of Athkatla. Her world is... marble, silk, and coin. She wanted me to become a refined, wealthy man. Privileged. Preening. Pampered.~
 @4116 = ~But none of it ever felt like mine. Not the clothes, not the manners, not the future. One day, I heard something—felt something. A stillness. A call. Eldath’s voice in the wind, maybe.~
 @4117 = ~So I came here, to Duskwood Dell, to learn, to breathe, to find a path of my own. But... I left without a word. Just vanished. That wasn’t right.~
 @4118 = ~I can't return—she'd never let me go again. But maybe, if someone brought her this flower... told her I'm safe and where I am... maybe then, peace can grow between us again.~
@@ -423,13 +423,13 @@
 @4122 = ~Truly? Thank you. Here—take it. She rarely leaves the District; she always said the City of Coins was all she needed.~
 @4123 = ~Let me know once you’ve given it to her. I’d really appreciate it.~
 @4124 = ~R-right... I’m sorry to have bothered you.~
-@4125 = ~I really hope my aunt will understand I needed to breath. That I needed something else than she does. I didn’t run from her—I ran toward something I needed.~
+@4125 = ~I really hope my aunt will understand I needed to breathe. That I needed something other than she does. I didn’t run from her—I ran toward something I needed.~
 @4126 = ~I passed your message and gave the flower to your aunt. She suggested that maybe in a while you should give her some flowers on your own.~
 @4127 = ~I gave her the flower. I’m not surprised you left. She seems... horrible.~
 @4128 = ~Hmm.~
 @4129 = ~She said that? Huh... I wasn’t expecting that.~
 @4130 = ~Well, she's not THAT bad. I mean... she can be nice sometimes.~
-@4131 = ~Thank you for doing this. It means more than I can say. Now that she knows I’m safe, I can truly begin focusing on what matters.~
+@4131 = ~Thank you for doing this. It means more than I can say. Now that she knows I’m safe, I can truly begin to focus on what matters.~
 @4132 = ~Whatever that is, exactly. Still figuring that out. But thanks. Really. You’re alright.~
 @4133 = ~Peace be with you! You carry the scent of earth and danger—were you in some ruin or dark place? I’m not sure I’m made for such paths… but I hope the stillness I find here helps someone, too.~
 @4134 = ~What is this rabble now? I have neither time nor patience for unsolicited interruptions. Be gone, unless you bear something of true importance.~
@@ -457,8 +457,8 @@
 @4156 = ~I’m an orphan. The priests here took me in when I had nowhere else to go. They say the goddess doesn’t turn away even the smallest leaf caught in the current.~
 @4157 = ~Anyway… are you gonna help me find worms, or not?~
 @4158 = ~I REALLY want to catch some good fish and show everyone what a good fisher-boy I can be! But I need a nice fat worm to do that! Let me know if you find one!~
-@4159 = ~There must be some worm around here...~
-@4160 = ~Eh, still no luck with all that worm-hunting job. Seriously, how hard it can be. Where are all the worms when a man needs one! I've looked everywhere.~
+@4159 = ~There must be some worms around here...~
+@4160 = ~Eh, still no luck with that worm-hunting job. Seriously, how hard it can be. Where are all the worms when a man needs one! I've looked everywhere.~
 @4161 = ~Guess what! I've got a worm for you.~
 @4162 = ~Patience. You'll find it.~
 @4163 = ~You do?! That's amazing!~
