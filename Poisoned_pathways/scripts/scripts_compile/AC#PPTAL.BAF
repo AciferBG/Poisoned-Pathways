@@ -79,140 +79,1623 @@ THEN
         CreateCreatureEffect("AC#PPCHS","AC#PPSEV",[693.400],S)  // Chasme
 END
 
+/////////////////////////////////////////////////////////////////////
+// Heal!
+/////////////////////////////////////////////////////////////////////
 IF
-    OR(2)
-        HasItem("HARM",Myself)  // Harm
-        HasItem("SLAYLIVE",Myself)  // Slay Living
-    See(NearestEnemyOf(Myself))
-    See(WorstAC([PC]))
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  HPPercentLT(Myself,60)
+  Global("Heal","LOCALS",1)
+  LevelPartyGT(14)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
 THEN
-    RESPONSE #100
-        AttackOneRound(LastSeenBy(Myself))
+  RESPONSE #100
+    IncrementGlobal("Heal","LOCALS",1)
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ReallyForceSpell(Myself,CLERIC_HEAL)  // SPPR607.SPL (Heal)
+    SetInterrupt(TRUE)
+END
+
+/////////////////////////////////////////////////////////////////////
+// Spell: Unholy Blight
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_UnholyBlightTimer","LOCALS")
+  !Difficulty(EASIEST)
+  GlobalLT("Blight","LOCALS",4)
+  Alignment(Myself,MASK_EVIL)
+  Alignment(SixthNearestEnemyOf(Myself),MASK_GOOD)
+  Range(SixthNearestEnemyOf(Myself),15)
+  !CheckSpellState(SixthNearestEnemyOf(Myself),SI_NECROMANCY)
+  CheckStatLT(SixthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    OR(2)
-        HasItem("HARM",Myself)  // Harm
-        HasItem("SLAYLIVE",Myself)  // Slay Living
-    See(NearestEnemyOf(Myself))
-    !See(WorstAC([PC]))
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_UnholyBlightTimer","LOCALS")
+  !Difficulty(EASIEST)
+  GlobalLT("Blight","LOCALS",4)
+  Alignment(Myself,MASK_EVIL)
+  Alignment(FifthNearestEnemyOf(Myself),MASK_GOOD)
+  Range(FifthNearestEnemyOf(Myself),15)
+  !CheckSpellState(FifthNearestEnemyOf(Myself),SI_NECROMANCY)
+  CheckStatLT(FifthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(FifthNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        AttackOneRound(LastSeenBy(Myself))
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    HPPercentLT(Myself,20)
-    Global("Heal","LOCALS",1)
-    LevelPartyGT(14)
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_UnholyBlightTimer","LOCALS")
+  !Difficulty(EASIEST)
+  GlobalLT("Blight","LOCALS",4)
+  Alignment(Myself,MASK_EVIL)
+  Alignment(FourthNearestEnemyOf(Myself),MASK_GOOD)
+  Range(FourthNearestEnemyOf(Myself),15)
+  !CheckSpellState(FourthNearestEnemyOf(Myself),SI_NECROMANCY)
+  CheckStatLT(FourthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(FourthNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        SetGlobal("Heal","LOCALS",1)
-        ReallyForceSpell(Myself,CLERIC_HEAL)  // SPPR607.SPL (Heal)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    !GlobalTimerNotExpired("OH_Cast","LOCALS")
-    !GlobalTimerNotExpired("Blight_Timer","LOCALS")
-    !Difficulty(EASIEST)
-    See([GOODCUTOFF.0.0.0.0.0.MASK_GOOD])
-    GlobalLT("Blight","LOCALS",4)
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_UnholyBlightTimer","LOCALS")
+  !Difficulty(EASIEST)
+  GlobalLT("Blight","LOCALS",4)
+  Alignment(Myself,MASK_EVIL)
+  Alignment(ThirdNearestEnemyOf(Myself),MASK_GOOD)
+  Range(ThirdNearestEnemyOf(Myself),15)
+  !CheckSpellState(ThirdNearestEnemyOf(Myself),SI_NECROMANCY)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        SetGlobalTimer("Blight_Timer","LOCALS",THREE_ROUNDS)
-        IncrementGlobal("Blight","LOCALS",1)
-        ReallyForceSpell(LastSeenBy(Myself),CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    LevelPartyGT(15)
-    GlobalLT("AbiDalzim","LOCALS",3)
-    !GlobalTimerNotExpired("OH_Cast","LOCALS")
-    !GlobalTimerNotExpired("Dalzim_Timer","LOCALS")
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_UnholyBlightTimer","LOCALS")
+  !Difficulty(EASIEST)
+  GlobalLT("Blight","LOCALS",4)
+  Alignment(Myself,MASK_EVIL)
+  Alignment(SecondNearestEnemyOf(Myself),MASK_GOOD)
+  Range(SecondNearestEnemyOf(Myself),15)
+  !CheckSpellState(SecondNearestEnemyOf(Myself),SI_NECROMANCY)
+  CheckStatLT(SecondNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(SecondNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        IncrementGlobal("AbiDalzim","LOCALS",1)
-        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        SetGlobalTimer("Dalzim_Timer","LOCALS",NINE_ROUNDS)
-        ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_UnholyBlightTimer","LOCALS")
+  !Difficulty(EASIEST)
+  GlobalLT("Blight","LOCALS",4)
+  Alignment(Myself,MASK_EVIL)
+  Alignment(NearestEnemyOf(Myself),MASK_GOOD)
+  Range(NearestEnemyOf(Myself),15)
+  !CheckSpellState(NearestEnemyOf(Myself),SI_NECROMANCY)
+  CheckStatLT(NearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF 
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_UnholyBlightTimer","LOCALS")
+  !Difficulty(EASIEST)
+  GlobalLT("Blight","LOCALS",4)
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  Alignment(Myself,MASK_EVIL)
+  Alignment(LastSeenBy(Myself),MASK_GOOD)
+  Range(LastSeenBy(Myself),15)
+  !CheckSpellState(LastSeenBy(Myself),SI_NECROMANCY)
+  CheckStatLT(LastSeenBy(Myself),40,RESISTMAGIC)
+  CheckStatLT(Myself,40,SPELLFAILUREPRIEST)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,80)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetGlobalTimer("MO_UnholyBlightTimer","LOCALS",18)
+    SetInterrupt(FALSE)
+    Spell(Myself,CLERIC_UNHOLY_BLIGHT)  // SPPR314.SPL (Unholy Blight)
+    SetInterrupt(TRUE)
+  RESPONSE #100
+    Continue()
+END
+
+/////////////////////////////////////////////////////////////////////
+// Spell: Wilting 
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
     LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
     Global("AbiDalzim","LOCALS",0)
-    !GlobalTimerNotExpired("OH_Cast","LOCALS")
+  !HasItemEquiped("CLCK26",SixthNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(SixthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SixthNearestEnemyOf(Myself),80,RESISTMAGIC)
+  CheckStatLT(SixthNearestEnemyOf(Myself),80,MAGICDAMAGERESISTANCE)
+  See(SixthNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        SetGlobal("AbiDalzim","LOCALS",1)
-        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    HPGT(LastSeenBy(Myself),20)
-    GlobalLT("Decay","LOCALS",4)
-    !GlobalTimerNotExpired("OH_Cast","LOCALS")
-    !GlobalTimerNotExpired("Decay_Timer","LOCALS")
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",FifthNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(FifthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FifthNearestEnemyOf(Myself),80,RESISTMAGIC)
+  CheckStatLT(FifthNearestEnemyOf(Myself),80,MAGICDAMAGERESISTANCE)
+  See(FifthNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        IncrementGlobal("Decay","LOCALS",1)
-        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        SetGlobalTimer("Decay_Timer","LOCALS",FIVE_ROUNDS)
-        ForceSpell(NearestEnemyOf(Myself),CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    !GlobalTimerNotExpired("OH_Cast","LOCALS")
-    Global("SlayLiving","LOCALS",0)
-    !HasItem("HARM",Myself)  // Harm
-    !HasItem("SLAYLIVE",Myself)  // Slay Living
-    DifficultyGT(EASY)
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",FourthNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(FourthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FourthNearestEnemyOf(Myself),80,RESISTMAGIC)
+  CheckStatLT(FourthNearestEnemyOf(Myself),80,MAGICDAMAGERESISTANCE)
+  See(FourthNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #10
-        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        SetGlobal("SlayLiving","LOCALS",1)
-        ReallyForceSpell(Myself,CLERIC_SLAY_LIVING)  // SPPR511.SPL (Slay Living)
-        AttackReevaluate(LastSeenBy(Myself),18)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    !GlobalTimerNotExpired("OH_Cast","LOCALS")
-    Global("FingerOfDeath","LOCALS",0)
-    !Difficulty(EASIEST)
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",ThirdNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(ThirdNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),80,RESISTMAGIC)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),80,MAGICDAMAGERESISTANCE)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        SetGlobal("FingerOfDeath","LOCALS",1)
-        ForceSpell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    !GlobalTimerNotExpired("OH_Cast","LOCALS")
-    !GlobalTimerNotExpired("Harm_Timer","LOCALS")
-    !HasItem("HARM",Myself)  // Harm
-    !HasItem("SLAYLIVE",Myself)  // Slay Living
-    GlobalLT("Harm","LOCALS",3)
-    DifficultyGT(EASY)
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",SecondNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(SecondNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SecondNearestEnemyOf(Myself),80,RESISTMAGIC)
+  CheckStatLT(SecondNearestEnemyOf(Myself),80,MAGICDAMAGERESISTANCE)
+  See(SecondNearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #10
-        SetGlobalTimer("OH_Cast","LOCALS",ONE_ROUND)
-        SetGlobalTimer("Harm_Timer","LOCALS",TEN_ROUNDS)
-        IncrementGlobal("Harm","LOCALS",1)
-        ReallyForceSpell(Myself,CLERIC_HARM)  // SPPR608.SPL (Harm)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    ActionListEmpty()
-    See(NearestEnemyOf(Myself))
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",NearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(NearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(NearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(NearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(NearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(NearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(NearestEnemyOf(Myself),80,RESISTMAGIC)
+  CheckStatLT(NearestEnemyOf(Myself),80,MAGICDAMAGERESISTANCE)
+  See(NearestEnemyOf(Myself))
+  False()
 THEN
-    RESPONSE #100
-        AttackReevaluate(NearestEnemyOf(Myself),6)
+  RESPONSE #100
+    NoAction()
 END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",SixthNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(SixthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SixthNearestEnemyOf(Myself),50,RESISTMAGIC)
+  CheckStatLT(SixthNearestEnemyOf(Myself),50,MAGICDAMAGERESISTANCE)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",FifthNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(FifthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FifthNearestEnemyOf(Myself),50,RESISTMAGIC)
+  CheckStatLT(FifthNearestEnemyOf(Myself),50,MAGICDAMAGERESISTANCE)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",FourthNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(FourthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FourthNearestEnemyOf(Myself),50,RESISTMAGIC)
+  CheckStatLT(FourthNearestEnemyOf(Myself),50,MAGICDAMAGERESISTANCE)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",ThirdNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(ThirdNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),50,RESISTMAGIC)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),50,MAGICDAMAGERESISTANCE)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",SecondNearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(SecondNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SecondNearestEnemyOf(Myself),50,RESISTMAGIC)
+  CheckStatLT(SecondNearestEnemyOf(Myself),50,MAGICDAMAGERESISTANCE)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  !HasItemEquiped("CLCK26",NearestEnemyOf(Myself)) // Cloak of Mirroring
+  !CheckSpellState(NearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(NearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(NearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(NearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(NearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(NearestEnemyOf(Myself),50,RESISTMAGIC)
+  CheckStatLT(NearestEnemyOf(Myself),50,MAGICDAMAGERESISTANCE)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF 
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !GlobalTimerNotExpired("MO_AbiCastTimer","LOCALS")
+  OR(2)
+    LevelPartyGT(12)
+    GlobalLT("AbiDalzim","LOCALS",3)
+  OR(2)
+    LevelPartyGT(15)
+    Global("AbiDalzim","LOCALS",0)
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasItemEquiped("CLCK26",LastSeenBy(Myself)) // Cloak of Mirroring
+  !CheckSpellState(LastSeenBy(Myself),SI_NECROMANCY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(LastSeenBy(Myself),0,SANCTUARY)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(LastSeenBy(Myself),80,RESISTMAGIC)
+  CheckStatLT(LastSeenBy(Myself),80,MAGICDAMAGERESISTANCE)
+  CheckStatLT(Myself,40,SPELLFAILUREMAGE)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+  !CheckSpellState(Myself,WILD_MAGIC_AREA)
+  !CheckSpellState(Myself,DEAD_MAGIC_AREA)
+THEN
+  RESPONSE #100
+    IncrementGlobal("AbiDalzim","LOCALS",1)
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetGlobalTimer("MO_AbiCastTimer","LOCALS",18)
+    SetInterrupt(FALSE)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING)  // SPWI812.SPL (Abi-Dalzim's Horrid Wilting)
+    SetInterrupt(TRUE)
+  RESPONSE #100
+    Continue()
+END
+
+/////////////////////////////////////////////////////////////////////
+// Spell: Dolorous Decay
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  GlobalLT("Decay","LOCALS",4)
+  !General(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),UNDEAD)
+  !General(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),PLANT)
+  !Race(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),DEMONIC)
+  !Race(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),TROLL)
+  !Race(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SLIME)
+  CheckStatLT(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,RESISTPOISON)
+  !HasItem("AMUL22",SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Periapt of Proof Against Poison~
+  !HasItem("RING46",SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Ring of Anti-Venom~
+  CheckStatGT(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),-2,SAVEVSDEATH)
+  !StateCheck(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_POISONED)
+  !StateCheck(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_NOT_TARGETABLE)
+  !CheckSpellState(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SI_TRANSMUTATION)
+  !StateCheck(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_IMPROVEDINVISIBILITY)
+  CheckStatLT(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,MAGICDAMAGERESISTANCE)
+  !HasItem("MORSWORD",SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // Mordenkainen's Sword
+  See(SixthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  GlobalLT("Decay","LOCALS",4)
+  !General(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),UNDEAD)
+  !General(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),PLANT)
+  !Race(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),DEMONIC)
+  !Race(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),TROLL)
+  !Race(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SLIME)
+  CheckStatLT(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,RESISTPOISON)
+  !HasItem("AMUL22",FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Periapt of Proof Against Poison~
+  !HasItem("RING46",FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Ring of Anti-Venom~
+  CheckStatGT(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),-2,SAVEVSDEATH)
+  !StateCheck(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_POISONED)
+  !StateCheck(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_NOT_TARGETABLE)
+  !CheckSpellState(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SI_TRANSMUTATION)
+  !StateCheck(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_IMPROVEDINVISIBILITY)
+  CheckStatLT(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,MAGICDAMAGERESISTANCE)
+  !HasItem("MORSWORD",FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // Mordenkainen's Sword
+  See(FifthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  GlobalLT("Decay","LOCALS",4)
+  !General(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),UNDEAD)
+  !General(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),PLANT)
+  !Race(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),DEMONIC)
+  !Race(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),TROLL)
+  !Race(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SLIME)
+  CheckStatLT(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,RESISTPOISON)
+  !HasItem("AMUL22",FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Periapt of Proof Against Poison~
+  !HasItem("RING46",FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Ring of Anti-Venom~
+  CheckStatGT(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),-2,SAVEVSDEATH)
+  !StateCheck(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_POISONED)
+  !StateCheck(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_NOT_TARGETABLE)
+  !CheckSpellState(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SI_TRANSMUTATION)
+  !StateCheck(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_IMPROVEDINVISIBILITY)
+  CheckStatLT(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,MAGICDAMAGERESISTANCE)
+  !HasItem("MORSWORD",FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // Mordenkainen's Sword
+  See(FourthNearestEnemyOfType([GOODCUTOFF.HUMANOID]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  GlobalLT("Decay","LOCALS",4)
+  !General(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),UNDEAD)
+  !General(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),PLANT)
+  !Race(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),DEMONIC)
+  !Race(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),TROLL)
+  !Race(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SLIME)
+  CheckStatLT(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,RESISTPOISON)
+  !HasItem("AMUL22",ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Periapt of Proof Against Poison~
+  !HasItem("RING46",ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Ring of Anti-Venom~
+  CheckStatGT(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),-2,SAVEVSDEATH)
+  !StateCheck(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_POISONED)
+  !StateCheck(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_NOT_TARGETABLE)
+  !CheckSpellState(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SI_TRANSMUTATION)
+  !StateCheck(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_IMPROVEDINVISIBILITY)
+  CheckStatLT(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,MAGICDAMAGERESISTANCE)
+  !HasItem("MORSWORD",ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // Mordenkainen's Sword
+  See(ThirdNearestEnemyOfType([GOODCUTOFF.HUMANOID]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  GlobalLT("Decay","LOCALS",4)
+  !General(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),UNDEAD)
+  !General(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),PLANT)
+  !Race(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),DEMONIC)
+  !Race(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),TROLL)
+  !Race(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SLIME)
+  CheckStatLT(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,RESISTPOISON)
+  !HasItem("AMUL22",SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Periapt of Proof Against Poison~
+  !HasItem("RING46",SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // ~Ring of Anti-Venom~
+  CheckStatGT(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),-2,SAVEVSDEATH)
+  !StateCheck(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_POISONED)
+  !StateCheck(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_NOT_TARGETABLE)
+  !CheckSpellState(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),SI_TRANSMUTATION)
+  !StateCheck(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),STATE_IMPROVEDINVISIBILITY)
+  CheckStatLT(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]),50,MAGICDAMAGERESISTANCE)
+  !HasItem("MORSWORD",SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]))  // Mordenkainen's Sword
+  See(SecondNearestEnemyOfType([GOODCUTOFF.HUMANOID]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  GlobalLT("Decay","LOCALS",4)
+  !General([GOODCUTOFF.HUMANOID],UNDEAD)
+  !General([GOODCUTOFF.HUMANOID],PLANT)
+  !Race([GOODCUTOFF.HUMANOID],DEMONIC)
+  !Race([GOODCUTOFF.HUMANOID],TROLL)
+  !Race([GOODCUTOFF.HUMANOID],SLIME)
+  CheckStatLT([GOODCUTOFF.HUMANOID],50,RESISTPOISON)
+  !HasItem("AMUL22",[GOODCUTOFF.HUMANOID])  // ~Periapt of Proof Against Poison~
+  !HasItem("RING46",[GOODCUTOFF.HUMANOID])  // ~Ring of Anti-Venom~
+  CheckStatGT([GOODCUTOFF.HUMANOID],-2,SAVEVSDEATH)
+  !StateCheck([GOODCUTOFF.HUMANOID],STATE_POISONED)
+  !StateCheck([GOODCUTOFF.HUMANOID],STATE_NOT_TARGETABLE)
+  !CheckSpellState([GOODCUTOFF.HUMANOID],SI_TRANSMUTATION)
+  !StateCheck([GOODCUTOFF.HUMANOID],STATE_IMPROVEDINVISIBILITY)
+  CheckStatLT([GOODCUTOFF.HUMANOID],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.HUMANOID],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.HUMANOID],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.HUMANOID],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT([GOODCUTOFF.HUMANOID],50,MAGICDAMAGERESISTANCE)
+  !HasItem("MORSWORD",[GOODCUTOFF.HUMANOID])  // Mordenkainen's Sword
+  See([GOODCUTOFF.HUMANOID])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF 
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  GlobalLT("Decay","LOCALS",4)
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !General(LastSeenBy(Myself),UNDEAD)
+  !General(LastSeenBy(Myself),PLANT)
+  !Race(LastSeenBy(Myself),DEMONIC)
+  !Race(LastSeenBy(Myself),TROLL)
+  !Race(LastSeenBy(Myself),SLIME)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTPOISON)
+  !HasItem("AMUL22",LastSeenBy(Myself))  // ~Periapt of Proof Against Poison~
+  !HasItem("RING46",LastSeenBy(Myself))  // ~Ring of Anti-Venom~
+  CheckStatGT(LastSeenBy(Myself),-2,SAVEVSDEATH)
+  !StateCheck(LastSeenBy(Myself),STATE_POISONED)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !CheckSpellState(LastSeenBy(Myself),SI_TRANSMUTATION)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(LastSeenBy(Myself),50,MAGICDAMAGERESISTANCE)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  CheckStatLT(Myself,40,SPELLFAILUREPRIEST)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,80)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Decay","LOCALS",1)
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(NearestEnemyOf(Myself),CLERIC_DOLOROUS_DECAY)  // SPPR610.SPL (Dolorous Decay)
+    SetInterrupt(TRUE)
+  RESPONSE #100
+    Continue()
+END
+
+/////////////////////////////////////////////////////////////////////
+// Spell: Slay Living
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  DifficultyGT(EASY)
+  Global("SlayLiving","LOCALS",0)
+  Range(SixthNearestEnemyOf(Myself),4)
+  !HasItemEquiped("clck26",SixthNearestEnemyOf(Myself))  // Cloak of Mirroring
+  !CheckStat(SixthNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(SixthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SixthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  DifficultyGT(EASY)
+  Global("SlayLiving","LOCALS",0)
+  Range(FifthNearestEnemyOf(Myself),4)
+  !HasItemEquiped("clck26",FifthNearestEnemyOf(Myself))  // Cloak of Mirroring
+  !CheckStat(FifthNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(FifthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FifthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  DifficultyGT(EASY)
+  Global("SlayLiving","LOCALS",0)
+  Range(FourthNearestEnemyOf(Myself),4)
+  !HasItemEquiped("clck26",FourthNearestEnemyOf(Myself))  // Cloak of Mirroring
+  !CheckStat(FourthNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(FourthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FourthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  DifficultyGT(EASY)
+  Global("SlayLiving","LOCALS",0)
+  Range(ThirdNearestEnemyOf(Myself),4)
+  !HasItemEquiped("clck26",ThirdNearestEnemyOf(Myself))  // Cloak of Mirroring
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(ThirdNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  DifficultyGT(EASY)
+  Global("SlayLiving","LOCALS",0)
+  Range(SecondNearestEnemyOf(Myself),4)
+  !HasItemEquiped("clck26",SecondNearestEnemyOf(Myself))  // Cloak of Mirroring
+  !CheckStat(SecondNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(SecondNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SecondNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  DifficultyGT(EASY)
+  Global("SlayLiving","LOCALS",0)
+  Range(NearestEnemyOf(Myself),4)
+  !HasItemEquiped("clck26",NearestEnemyOf(Myself))  // Cloak of Mirroring
+  !CheckStat(NearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(NearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(NearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(NearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(NearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(NearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(NearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF 
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  DifficultyGT(EASY)
+  Global("SlayLiving","LOCALS",0)
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  Range(LastSeenBy(Myself),4)
+  !HasItemEquiped("clck26",LastSeenBy(Myself))  // Cloak of Mirroring
+  !CheckStat(LastSeenBy(Myself),1,DEATH_WARD)
+  !CheckSpellState(LastSeenBy(Myself),SI_NECROMANCY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(LastSeenBy(Myself),0,SANCTUARY)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(LastSeenBy(Myself),40,RESISTMAGIC)
+  CheckStatLT(Myself,40,SPELLFAILUREPRIEST)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,80)
+THEN
+  RESPONSE #100
+    SetGlobal("SlayLiving","LOCALS",1)
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ReallyForceSpell(Myself,CLERIC_SLAY_LIVING)  // SPPR511.SPL (Slay Living)
+    SetInterrupt(TRUE)
+  RESPONSE #100
+    Continue()
+END
+
+/////////////////////////////////////////////////////////////////////
+// Spell: Finger of Death
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !Difficulty(EASIEST)
+  Global("FingerOfDeath","LOCALS",0)
+  !HasItemEquiped("clck26",SixthNearestEnemyOf(Myself))  // Cloak of Mirroring
+  HPGT(SixthNearestEnemyOf(Myself),20)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(SixthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SixthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SixthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SixthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !Difficulty(EASIEST)
+  Global("FingerOfDeath","LOCALS",0)
+  !HasItemEquiped("clck26",FifthNearestEnemyOf(Myself))  // Cloak of Mirroring
+  HPGT(FifthNearestEnemyOf(Myself),20)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(FifthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FifthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FifthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FifthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !Difficulty(EASIEST)
+  Global("FingerOfDeath","LOCALS",0)
+  !HasItemEquiped("clck26",FourthNearestEnemyOf(Myself))  // Cloak of Mirroring
+  HPGT(FourthNearestEnemyOf(Myself),20)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(FourthNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(FourthNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(FourthNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(FourthNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !Difficulty(EASIEST)
+  Global("FingerOfDeath","LOCALS",0)
+  !HasItemEquiped("clck26",ThirdNearestEnemyOf(Myself))  // Cloak of Mirroring
+  HPGT(ThirdNearestEnemyOf(Myself),20)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(ThirdNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(ThirdNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !Difficulty(EASIEST)
+  Global("FingerOfDeath","LOCALS",0)
+  !HasItemEquiped("clck26",SecondNearestEnemyOf(Myself))  // Cloak of Mirroring
+  HPGT(SecondNearestEnemyOf(Myself),20)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(SecondNearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(SecondNearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !Difficulty(EASIEST)
+  Global("FingerOfDeath","LOCALS",0)
+  !HasItemEquiped("clck26",NearestEnemyOf(Myself))  // Cloak of Mirroring
+  HPGT(NearestEnemyOf(Myself),20)
+  !CheckStat(NearestEnemyOf(Myself),1,DEATH_WARD)
+  !CheckSpellState(NearestEnemyOf(Myself),SI_NECROMANCY)
+  !StateCheck(NearestEnemyOf(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(NearestEnemyOf(Myself),0,SANCTUARY)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(NearestEnemyOf(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(NearestEnemyOf(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(NearestEnemyOf(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(NearestEnemyOf(Myself),40,RESISTMAGIC)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF 
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !Difficulty(EASIEST)
+  Global("FingerOfDeath","LOCALS",0)
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !HasItemEquiped("clck26",LastSeenBy(Myself))  // Cloak of Mirroring
+  HPGT(LastSeenBy(Myself),20)
+  !CheckStat(LastSeenBy(Myself),1,DEATH_WARD)
+  !CheckSpellState(LastSeenBy(Myself),SI_NECROMANCY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(LastSeenBy(Myself),0,SANCTUARY)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStatLT(LastSeenBy(Myself),40,RESISTMAGIC)
+  CheckStatLT(Myself,40,SPELLFAILUREPRIEST)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,80)
+THEN
+  RESPONSE #100
+    SetGlobal("FingerOfDeath","LOCALS",1)
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+    SetInterrupt(TRUE)
+  RESPONSE #100
+    Continue()
+END
+
+/////////////////////////////////////////////////////////////////////
+// Attack
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(6)
+    See(Player1)
+    See(Player2)
+    See(Player3)
+    See(Player4)
+    See(Player5)
+    See(Player6)
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(NearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+// EEex - Is Moving Check 1
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(SixthNearestEnemyOf(Myself),5)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(FifthNearestEnemyOf(Myself),5)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(FourthNearestEnemyOf(Myself),5)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(ThirdNearestEnemyOf(Myself),5)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(SecondNearestEnemyOf(Myself),5)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(NearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(NearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(NearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  Range(NearestEnemyOf(Myself),5)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+// EEex - Is Moving Check 2
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(SixthNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(FifthNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(FourthNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(SecondNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  StateCheck(NearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+// EEex - Target Caster (Melee)
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+  CheckStatLT(LastSeenBy(Myself),1,SANCTUARY)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,49)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_AttackedSomeone","LOCALS",1)
+    AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+  !Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  Allegiance(LastSeenBy(Myself),ENEMY)
+  WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+  CheckStatLT(LastSeenBy(Myself),1,SANCTUARY)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,49)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_AttackedSomeone","LOCALS",1)
+    AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+
 

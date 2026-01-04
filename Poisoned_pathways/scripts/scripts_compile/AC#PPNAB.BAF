@@ -1,3 +1,6 @@
+/////////////////////////////////////////////////////////////////////
+// Difficulty Boost
+/////////////////////////////////////////////////////////////////////
 IF
     Global("Stronger","LOCALS",0)
     LevelPartyGT(9)
@@ -16,30 +19,1271 @@ THEN
         SetGlobal("Stronger","LOCALS",2)
 END
 
+/////////////////////////////////////////////////////////////////////
+// Ability: Tanari Paralyze
+/////////////////////////////////////////////////////////////////////
 IF
-    See(NearestEnemyOf(Myself))
-    !TimeOfDay(NIGHT)
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",SecondNearest([GOODCUTOFF.0.0.THIEF]))  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",SecondNearest([GOODCUTOFF.0.0.THIEF]))  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",SecondNearest([GOODCUTOFF.0.0.THIEF]))  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",SecondNearest([GOODCUTOFF.0.0.THIEF])) // Sword of Avoreen
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.THIEF]),SI_ENCHANTMENT)
+  !Gender(SecondNearest([GOODCUTOFF.0.0.THIEF]),SUMMONED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.THIEF]),BARBARIAN_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.THIEF]),BERSERKER_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.THIEF]),MINSC_BERSERK)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.THIEF]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.THIEF]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.THIEF]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.THIEF]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.THIEF]),STATE_HARMLESS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.THIEF]),0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.THIEF]),0,CLERIC_FREE_ACTION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.THIEF]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.THIEF]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.THIEF]),0,SANCTUARY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.THIEF]),25,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.THIEF]))
+  False()
 THEN
-    RESPONSE #50
-        ForceSpell(NearestEnemyOf(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
-        ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
-        AttackOneRound(NearestEnemyOf(Myself))
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
-    Global("TANARIPARALYZE","LOCALS",0)
-    !TimeOfDay(NIGHT)
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",[GOODCUTOFF.0.0.THIEF])  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",[GOODCUTOFF.0.0.THIEF])  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",[GOODCUTOFF.0.0.THIEF])  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",[GOODCUTOFF.0.0.THIEF]) // Sword of Avoreen
+  !CheckSpellState([GOODCUTOFF.0.0.THIEF],SI_ENCHANTMENT)
+  !Gender([GOODCUTOFF.0.0.THIEF],SUMMONED)
+  !CheckSpellState([GOODCUTOFF.0.0.THIEF],BARBARIAN_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.THIEF],BERSERKER_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.THIEF],MINSC_BERSERK)
+  CheckStatLT([GOODCUTOFF.0.0.THIEF],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.THIEF],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.THIEF],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.THIEF],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck([GOODCUTOFF.0.0.THIEF],STATE_HARMLESS)
+  !CheckStatGT([GOODCUTOFF.0.0.THIEF],0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT([GOODCUTOFF.0.0.THIEF],0,CLERIC_FREE_ACTION)
+  !StateCheck([GOODCUTOFF.0.0.THIEF],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.THIEF],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.THIEF],0,SANCTUARY)
+  !CheckStatGT([GOODCUTOFF.0.0.THIEF],25,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.THIEF])
+  False()
 THEN
-    RESPONSE #100
-        ForceSpell(NearestEnemyOf(Myself),TANARI_PARALYZE)  // SPIN999.SPL (Paralyze)
-        SetGlobal("TANARIPARALYZE","LOCALS",1)
+  RESPONSE #100
+    NoAction()
 END
 
 IF
-    See(NearestEnemyOf(Myself))
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]))  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]))  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]))  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",SecondNearest([GOODCUTOFF.0.0.RANGER_ALL])) // Sword of Avoreen
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),SI_ENCHANTMENT)
+  !Gender(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),SUMMONED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),BARBARIAN_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),BERSERKER_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),MINSC_BERSERK)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),STATE_HARMLESS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),0,CLERIC_FREE_ACTION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),0,SANCTUARY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]),25,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.RANGER_ALL]))
+  False()
 THEN
-    RESPONSE #100
-        AttackReevaluate(NearestEnemyOf(Myself),30)
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",[GOODCUTOFF.0.0.RANGER_ALL])  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",[GOODCUTOFF.0.0.RANGER_ALL])  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",[GOODCUTOFF.0.0.RANGER_ALL])  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",[GOODCUTOFF.0.0.RANGER_ALL]) // Sword of Avoreen
+  !CheckSpellState([GOODCUTOFF.0.0.RANGER_ALL],SI_ENCHANTMENT)
+  !Gender([GOODCUTOFF.0.0.RANGER_ALL],SUMMONED)
+  !CheckSpellState([GOODCUTOFF.0.0.RANGER_ALL],BARBARIAN_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.RANGER_ALL],BERSERKER_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.RANGER_ALL],MINSC_BERSERK)
+  CheckStatLT([GOODCUTOFF.0.0.RANGER_ALL],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.RANGER_ALL],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.RANGER_ALL],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.RANGER_ALL],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck([GOODCUTOFF.0.0.RANGER_ALL],STATE_HARMLESS)
+  !CheckStatGT([GOODCUTOFF.0.0.RANGER_ALL],0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT([GOODCUTOFF.0.0.RANGER_ALL],0,CLERIC_FREE_ACTION)
+  !StateCheck([GOODCUTOFF.0.0.RANGER_ALL],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.RANGER_ALL],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.RANGER_ALL],0,SANCTUARY)
+  !CheckStatGT([GOODCUTOFF.0.0.RANGER_ALL],25,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.RANGER_ALL])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !Kit(SecondNearest([GOODCUTOFF.0.0.PALADIN]),INQUISITOR)
+  !Kit(SecondNearest([GOODCUTOFF.0.0.PALADIN]),UNDEADHUNTER)
+  !HasItem("MORSWORD",SecondNearest([GOODCUTOFF.0.0.PALADIN]))  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",SecondNearest([GOODCUTOFF.0.0.PALADIN]))  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",SecondNearest([GOODCUTOFF.0.0.PALADIN]))  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",SecondNearest([GOODCUTOFF.0.0.PALADIN])) // Sword of Avoreen
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.PALADIN]),SI_ENCHANTMENT)
+  !Gender(SecondNearest([GOODCUTOFF.0.0.PALADIN]),SUMMONED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.PALADIN]),BARBARIAN_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.PALADIN]),BERSERKER_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.PALADIN]),MINSC_BERSERK)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.PALADIN]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.PALADIN]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.PALADIN]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.PALADIN]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.PALADIN]),STATE_HARMLESS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.PALADIN]),0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.PALADIN]),0,CLERIC_FREE_ACTION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.PALADIN]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.PALADIN]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.PALADIN]),0,SANCTUARY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.PALADIN]),25,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.PALADIN]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !Kit([GOODCUTOFF.0.0.PALADIN],INQUISITOR)
+  !Kit([GOODCUTOFF.0.0.PALADIN],UNDEADHUNTER)
+  !HasItem("MORSWORD",[GOODCUTOFF.0.0.PALADIN])  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",[GOODCUTOFF.0.0.PALADIN])  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",[GOODCUTOFF.0.0.PALADIN])  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",[GOODCUTOFF.0.0.PALADIN]) // Sword of Avoreen
+  !CheckSpellState([GOODCUTOFF.0.0.PALADIN],SI_ENCHANTMENT)
+  !Gender([GOODCUTOFF.0.0.PALADIN],SUMMONED)
+  !CheckSpellState([GOODCUTOFF.0.0.PALADIN],BARBARIAN_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.PALADIN],BERSERKER_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.PALADIN],MINSC_BERSERK)
+  CheckStatLT([GOODCUTOFF.0.0.PALADIN],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.PALADIN],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.PALADIN],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.PALADIN],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck([GOODCUTOFF.0.0.PALADIN],STATE_HARMLESS)
+  !CheckStatGT([GOODCUTOFF.0.0.PALADIN],0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT([GOODCUTOFF.0.0.PALADIN],0,CLERIC_FREE_ACTION)
+  !StateCheck([GOODCUTOFF.0.0.PALADIN],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.PALADIN],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.PALADIN],0,SANCTUARY)
+  !CheckStatGT([GOODCUTOFF.0.0.PALADIN],25,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.PALADIN])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]))  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]))  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]))  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL])) // Sword of Avoreen
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),SI_ENCHANTMENT)
+  !Gender(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),SUMMONED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),BARBARIAN_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),BERSERKER_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),MINSC_BERSERK)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),STATE_HARMLESS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),0,CLERIC_FREE_ACTION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),0,SANCTUARY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]),25,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.FIGHTER_ALL]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",[GOODCUTOFF.0.0.FIGHTER_ALL])  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",[GOODCUTOFF.0.0.FIGHTER_ALL])  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",[GOODCUTOFF.0.0.FIGHTER_ALL])  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",[GOODCUTOFF.0.0.FIGHTER_ALL]) // Sword of Avoreen
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER_ALL],SI_ENCHANTMENT)
+  !Gender([GOODCUTOFF.0.0.FIGHTER_ALL],SUMMONED)
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER_ALL],BARBARIAN_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER_ALL],BERSERKER_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER_ALL],MINSC_BERSERK)
+  CheckStatLT([GOODCUTOFF.0.0.FIGHTER_ALL],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.FIGHTER_ALL],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.FIGHTER_ALL],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.FIGHTER_ALL],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck([GOODCUTOFF.0.0.FIGHTER_ALL],STATE_HARMLESS)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER_ALL],0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER_ALL],0,CLERIC_FREE_ACTION)
+  !StateCheck([GOODCUTOFF.0.0.FIGHTER_ALL],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.FIGHTER_ALL],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER_ALL],0,SANCTUARY)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER_ALL],25,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.FIGHTER_ALL])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",SecondNearest([GOODCUTOFF.0.0.FIGHTER]))  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",SecondNearest([GOODCUTOFF.0.0.FIGHTER]))  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",SecondNearest([GOODCUTOFF.0.0.FIGHTER]))  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",SecondNearest([GOODCUTOFF.0.0.FIGHTER])) // Sword of Avoreen
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),SI_ENCHANTMENT)
+  !Gender(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),SUMMONED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),BARBARIAN_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),BERSERKER_RAGE)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),MINSC_BERSERK)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),STATE_HARMLESS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),0,CLERIC_FREE_ACTION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),0,SANCTUARY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.FIGHTER]),25,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.FIGHTER]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Paralyze","LOCALS",0)
+  !HasItem("MORSWORD",[GOODCUTOFF.0.0.FIGHTER])  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",[GOODCUTOFF.0.0.FIGHTER])  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",[GOODCUTOFF.0.0.FIGHTER])  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",[GOODCUTOFF.0.0.FIGHTER]) // Sword of Avoreen
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER],SI_ENCHANTMENT)
+  !Gender([GOODCUTOFF.0.0.FIGHTER],SUMMONED)
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER],BARBARIAN_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER],BERSERKER_RAGE)
+  !CheckSpellState([GOODCUTOFF.0.0.FIGHTER],MINSC_BERSERK)
+  CheckStatLT([GOODCUTOFF.0.0.FIGHTER],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.FIGHTER],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.FIGHTER],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.FIGHTER],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck([GOODCUTOFF.0.0.FIGHTER],STATE_HARMLESS)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER],0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER],0,CLERIC_FREE_ACTION)
+  !StateCheck([GOODCUTOFF.0.0.FIGHTER],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.FIGHTER],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER],0,SANCTUARY)
+  !CheckStatGT([GOODCUTOFF.0.0.FIGHTER],25,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.FIGHTER])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF 
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  Global("MO_Paralyze","LOCALS",0)
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Kit(LastSeenBy(Myself),INQUISITOR)
+  !Kit(LastSeenBy(Myself),UNDEADHUNTER)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  !HasItemEquiped("RING09",LastSeenBy(Myself))  // Edventar's Gift
+  !HasItemEquipedReal("SW2H06",LastSeenBy(Myself))  // Spider's Bane +2
+  !HasItemEquiped("NPSW01",LastSeenBy(Myself)) // Sword of Avoreen
+  !CheckSpellState(LastSeenBy(Myself),SI_ENCHANTMENT)
+  !Gender(LastSeenBy(Myself),SUMMONED)
+  !CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),MINSC_BERSERK)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  !StateCheck(LastSeenBy(Myself),STATE_HARMLESS)
+  !CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)
+  !CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(LastSeenBy(Myself),0,SANCTUARY)
+  !CheckStatGT(LastSeenBy(Myself),25,RESISTMAGIC)
+  CheckStatLT(Myself,40,SPELLFAILUREMAGE)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+  !CheckSpellState(Myself,WILD_MAGIC_AREA)
+  !CheckSpellState(Myself,DEAD_MAGIC_AREA)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetGlobal("MO_Paralyze","LOCALS",1)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),TANARI_PARALYZE)  // SPIN999.SPL (Paralyze)
+    SetInterrupt(TRUE)
+  RESPONSE #100
+    Continue()
+END
+
+/////////////////////////////////////////////////////////////////////
+// Spell: Silence, 15' Radius
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),15)
+  Range(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),50)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),STATE_SILENCED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),SI_TRANSMUTATION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),0,SANCTUARY)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),0,MINORGLOBE)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]),50,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.DRUID_ALL]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range([GOODCUTOFF.0.0.DRUID_ALL],15)
+  Range([GOODCUTOFF.0.0.DRUID_ALL],50)
+  !StateCheck([GOODCUTOFF.0.0.DRUID_ALL],STATE_SILENCED)
+  !CheckSpellState([GOODCUTOFF.0.0.DRUID_ALL],SI_TRANSMUTATION)
+  !StateCheck([GOODCUTOFF.0.0.DRUID_ALL],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.DRUID_ALL],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.DRUID_ALL],0,SANCTUARY)
+  CheckStatLT([GOODCUTOFF.0.0.DRUID_ALL],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.DRUID_ALL],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.DRUID_ALL],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.DRUID_ALL],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat([GOODCUTOFF.0.0.DRUID_ALL],0,MINORGLOBE)
+  CheckStatLT([GOODCUTOFF.0.0.DRUID_ALL],50,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.DRUID_ALL])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),15)
+  Range(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),50)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_SILENCED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),SI_TRANSMUTATION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),0,SANCTUARY)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),0,MINORGLOBE)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]),50,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.CLERIC_ALL]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range([GOODCUTOFF.0.0.CLERIC_ALL],15)
+  Range([GOODCUTOFF.0.0.CLERIC_ALL],50)
+  !StateCheck([GOODCUTOFF.0.0.CLERIC_ALL],STATE_SILENCED)
+  !CheckSpellState([GOODCUTOFF.0.0.CLERIC_ALL],SI_TRANSMUTATION)
+  !StateCheck([GOODCUTOFF.0.0.CLERIC_ALL],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.CLERIC_ALL],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.CLERIC_ALL],0,SANCTUARY)
+  CheckStatLT([GOODCUTOFF.0.0.CLERIC_ALL],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.CLERIC_ALL],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.CLERIC_ALL],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.CLERIC_ALL],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat([GOODCUTOFF.0.0.CLERIC_ALL],0,MINORGLOBE)
+  CheckStatLT([GOODCUTOFF.0.0.CLERIC_ALL],50,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.CLERIC_ALL])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),15)
+  Range(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),50)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),STATE_SILENCED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),SI_TRANSMUTATION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),0,SANCTUARY)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),0,MINORGLOBE)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]),50,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.BARD_ALL]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range([GOODCUTOFF.0.0.BARD_ALL],15)
+  Range([GOODCUTOFF.0.0.BARD_ALL],50)
+  !StateCheck([GOODCUTOFF.0.0.BARD_ALL],STATE_SILENCED)
+  !CheckSpellState([GOODCUTOFF.0.0.BARD_ALL],SI_TRANSMUTATION)
+  !StateCheck([GOODCUTOFF.0.0.BARD_ALL],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.BARD_ALL],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.BARD_ALL],0,SANCTUARY)
+  CheckStatLT([GOODCUTOFF.0.0.BARD_ALL],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.BARD_ALL],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.BARD_ALL],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.BARD_ALL],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat([GOODCUTOFF.0.0.BARD_ALL],0,MINORGLOBE)
+  CheckStatLT([GOODCUTOFF.0.0.BARD_ALL],50,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.BARD_ALL])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),15)
+  Range(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),50)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),STATE_SILENCED)
+  !CheckSpellState(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),SI_TRANSMUTATION)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),STATE_NOT_TARGETABLE)
+  !StateCheck(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),0,SANCTUARY)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),1,WIZARD_SPELL_TURNING)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),1,WIZARD_SPELL_TRAP)
+  !CheckStat(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),0,MINORGLOBE)
+  CheckStatLT(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]),50,RESISTMAGIC)
+  See(SecondNearest([GOODCUTOFF.0.0.MAGE_ALL]))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range([GOODCUTOFF.0.0.MAGE_ALL],15)
+  Range([GOODCUTOFF.0.0.MAGE_ALL],50)
+  !StateCheck([GOODCUTOFF.0.0.MAGE_ALL],STATE_SILENCED)
+  !CheckSpellState([GOODCUTOFF.0.0.MAGE_ALL],SI_TRANSMUTATION)
+  !StateCheck([GOODCUTOFF.0.0.MAGE_ALL],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.MAGE_ALL],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.MAGE_ALL],0,SANCTUARY)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE_ALL],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE_ALL],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.MAGE_ALL],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.MAGE_ALL],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat([GOODCUTOFF.0.0.MAGE_ALL],0,MINORGLOBE)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE_ALL],50,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.MAGE_ALL])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range([GOODCUTOFF.0.0.MAGE_THIEF],15)
+  Range([GOODCUTOFF.0.0.MAGE_THIEF],50)
+  !StateCheck([GOODCUTOFF.0.0.MAGE_THIEF],STATE_SILENCED)
+  !CheckSpellState([GOODCUTOFF.0.0.MAGE_THIEF],SI_TRANSMUTATION)
+  !StateCheck([GOODCUTOFF.0.0.MAGE_THIEF],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.MAGE_THIEF],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.MAGE_THIEF],0,SANCTUARY)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE_THIEF],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE_THIEF],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.MAGE_THIEF],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.MAGE_THIEF],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat([GOODCUTOFF.0.0.MAGE_THIEF],0,MINORGLOBE)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE_THIEF],50,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.MAGE_THIEF])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  Global("MO_Silence","LOCALS",0)
+  !Range([GOODCUTOFF.0.0.MAGE],15)
+  Range([GOODCUTOFF.0.0.MAGE],50)
+  !StateCheck([GOODCUTOFF.0.0.MAGE],STATE_SILENCED)
+  !CheckSpellState([GOODCUTOFF.0.0.MAGE],SI_TRANSMUTATION)
+  !StateCheck([GOODCUTOFF.0.0.MAGE],STATE_NOT_TARGETABLE)
+  !StateCheck([GOODCUTOFF.0.0.MAGE],STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT([GOODCUTOFF.0.0.MAGE],0,SANCTUARY)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE],1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE],1,WIZARD_SPELL_TURNING)
+  !CheckStat([GOODCUTOFF.0.0.MAGE],1,WIZARD_SPELL_TRAP)
+  !CheckStat([GOODCUTOFF.0.0.MAGE],1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat([GOODCUTOFF.0.0.MAGE],0,MINORGLOBE)
+  CheckStatLT([GOODCUTOFF.0.0.MAGE],50,RESISTMAGIC)
+  See([GOODCUTOFF.0.0.MAGE])
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF 
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  Global("MO_Silence","LOCALS",0)
+  !Class(Myself,DRUID_ALL)
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !Range(LastSeenBy(Myself),15)
+  Range(LastSeenBy(Myself),50)
+  !StateCheck(LastSeenBy(Myself),STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself),SI_TRANSMUTATION)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !CheckStatGT(LastSeenBy(Myself),0,SANCTUARY)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+  CheckStatLT(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+  !CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TRAP)
+  !CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+  CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+  CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+  CheckStatLT(Myself,40,SPELLFAILUREPRIEST)
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,80)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetGlobal("MO_Silence","LOCALS",1)
+    SetInterrupt(FALSE)
+    Spell(LastSeenBy(Myself),TANARI_SILENCE)  // SPIN998.SPL (Silence, 15' Radius)
+    SetInterrupt(TRUE)
+  RESPONSE #100
+    Continue()
+END
+
+/////////////////////////////////////////////////////////////////////
+// Ability: Tanari Death Gaze
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  See(NearestEnemyOfType([PC]))
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  !CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
+    ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
+    SetInterrupt(TRUE)
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  See(SecondNearestEnemyOfType([PC]))
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  !CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
+    ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
+    SetInterrupt(TRUE)
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  See(ThirdNearestEnemyOfType([PC]))
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  !CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
+    ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
+    SetInterrupt(TRUE)
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  See(FourthNearestEnemyOfType([PC]))
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  !CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
+    ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
+    SetInterrupt(TRUE)
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  See(FifthNearestEnemyOfType([PC]))
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  !CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
+    ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
+    SetInterrupt(TRUE)
+END
+
+IF
+  OR(2)
+    !GlobalTimerNotExpired("MO_SpellCastTimer","LOCALS")
+    CheckStatGT(Myself,0,AURACLEANSING)
+  !TimeOfDay(NIGHT)
+  See(SixthNearestEnemyOfType([PC]))
+  Allegiance(Myself,ENEMY)
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  !StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  !CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)
+  !CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !HasItem("MORSWORD",LastSeenBy(Myself))  // Mordenkainen's Sword
+  !CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+  !StateCheck(Myself,STATE_POISONED)
+  !StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
+    SetInterrupt(FALSE)
+    ForceSpell(LastSeenBy(Myself),TANARI_DEATH_GAZE)  // SPIN996.SPL (Death Gaze)
+    ForceSpell(NearestEnemyOf(Myself),TANARI_VAMPIRIC_TOUCH)  // SPIN997.SPL (Vampiric Touch)
+    SetInterrupt(TRUE)
+END
+
+/////////////////////////////////////////////////////////////////////
+// Attack
+/////////////////////////////////////////////////////////////////////
+IF
+  OR(6)
+    See(Player1)
+    See(Player2)
+    See(Player3)
+    See(Player4)
+    See(Player5)
+    See(Player6)
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(NearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+// EEex - Is Moving Check 1
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(SixthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(SixthNearestEnemyOf(Myself),5)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(FifthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(FifthNearestEnemyOf(Myself),5)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(FourthNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(FourthNearestEnemyOf(Myself),5)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(ThirdNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(ThirdNearestEnemyOf(Myself),5)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(SecondNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  Range(SecondNearestEnemyOf(Myself),5)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  !StateCheck(NearestEnemyOf(Myself),STATE_PANIC)
+  CheckStatLT(NearestEnemyOf(Myself),1,STONESKINS)
+  !StateCheck(NearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  Range(NearestEnemyOf(Myself),5)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+// EEex - Is Moving Check 2
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(SixthNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(FifthNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(FourthNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  StateCheck(SecondNearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  DifficultyGT(EASY)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  StateCheck(NearestEnemyOf(Myself),STATE_IMMOBILE)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+// EEex - Target Caster (Melee)
+
+IF
+  Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  !Allegiance(LastSeenBy(Myself),ENEMY)
+  WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+  CheckStatLT(LastSeenBy(Myself),1,SANCTUARY)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,49)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_AttackedSomeone","LOCALS",1)
+    AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+  !Allegiance(Myself,ENEMY)
+  See(LastSeenBy(Myself))
+  Allegiance(LastSeenBy(Myself),ENEMY)
+  WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+  CheckStatLT(LastSeenBy(Myself),1,SANCTUARY)
+  OR(2)
+    CheckStatLT(Myself,1,SANCTUARY)
+    HPPercentGT(Myself,49)
+THEN
+  RESPONSE #100
+    SetGlobal("MO_AttackedSomeone","LOCALS",1)
+    AttackReevaluate(LastSeenBy(Myself),30)
 END
 
