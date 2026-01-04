@@ -1,0 +1,401 @@
+COPY ~%MOD_FOLDER%/scripts/scripts_compile/ac#ppskd.baf~ ~%MOD_FOLDER%/scripts/scripts_compile/ac#ppskd.baf~
+
+///////////////////////////////////////////////////////////////////////////
+// Target Characters Casting Spells                                      //
+///////////////////////////////////////////////////////////////////////////
+  
+  LPF REPLACE_MULTILINE
+    INT_VAR
+    strict = 1
+    verbose = 0
+    STR_VAR
+    pattern = ~~~~~// EEex - Target Caster (Ranged)~~~~~
+    string = ~~~~~IF
+  EEex_LuaTrigger("return MOIsCasting(6)")
+  !Difficulty(EASIEST)
+  !CheckSpellState(SixthNearestEnemyOf(Myself),ENTROPY_SHIELD)
+  !CheckStatGT(SixthNearestEnemyOf(Myself),0,CLERIC_PHYSICAL_MIRROR)
+  !HasItemEquiped("SHLD24",SixthNearestEnemyOf(Myself))  // Reflection Shield +1
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SixthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SixthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SixthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SixthNearestEnemyOf(Myself),BARD)
+  !Range(SixthNearestEnemyOf(Myself),5)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(5)")
+  !Difficulty(EASIEST)
+  !CheckSpellState(FifthNearestEnemyOf(Myself),ENTROPY_SHIELD)
+  !CheckStatGT(FifthNearestEnemyOf(Myself),0,CLERIC_PHYSICAL_MIRROR)
+  !HasItemEquiped("SHLD24",FifthNearestEnemyOf(Myself))  // Reflection Shield +1
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(FifthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(FifthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(FifthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(FifthNearestEnemyOf(Myself),BARD)
+  !Range(FifthNearestEnemyOf(Myself),5)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(4)")
+  !Difficulty(EASIEST)
+  !CheckSpellState(FourthNearestEnemyOf(Myself),ENTROPY_SHIELD)
+  !CheckStatGT(FourthNearestEnemyOf(Myself),0,CLERIC_PHYSICAL_MIRROR)
+  !HasItemEquiped("SHLD24",FourthNearestEnemyOf(Myself))  // Reflection Shield +1
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(FourthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(FourthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(FourthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(FourthNearestEnemyOf(Myself),BARD)
+  !Range(FourthNearestEnemyOf(Myself),5)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(3)")
+  !Difficulty(EASIEST)
+  !CheckSpellState(ThirdNearestEnemyOf(Myself),ENTROPY_SHIELD)
+  !CheckStatGT(ThirdNearestEnemyOf(Myself),0,CLERIC_PHYSICAL_MIRROR)
+  !HasItemEquiped("SHLD24",ThirdNearestEnemyOf(Myself))  // Reflection Shield +1
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(ThirdNearestEnemyOf(Myself),MAGE_ALL)
+    Class(ThirdNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(ThirdNearestEnemyOf(Myself),DRUID_ALL)
+    Class(ThirdNearestEnemyOf(Myself),BARD)
+  !Range(ThirdNearestEnemyOf(Myself),5)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(2)")
+  !Difficulty(EASIEST)
+  !CheckSpellState(SecondNearestEnemyOf(Myself),ENTROPY_SHIELD)
+  !CheckStatGT(SecondNearestEnemyOf(Myself),0,CLERIC_PHYSICAL_MIRROR)
+  !HasItemEquiped("SHLD24",SecondNearestEnemyOf(Myself))  // Reflection Shield +1
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SecondNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SecondNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SecondNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SecondNearestEnemyOf(Myself),BARD)
+  !Range(SecondNearestEnemyOf(Myself),5)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(1)")
+  !Difficulty(EASIEST)
+  !CheckSpellState(NearestEnemyOf(Myself),ENTROPY_SHIELD)
+  !CheckStatGT(NearestEnemyOf(Myself),0,CLERIC_PHYSICAL_MIRROR)
+  !HasItemEquiped("SHLD24",NearestEnemyOf(Myself))  // Reflection Shield +1
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(NearestEnemyOf(Myself),MAGE_ALL)
+    Class(NearestEnemyOf(Myself),CLERIC_ALL)
+    Class(NearestEnemyOf(Myself),DRUID_ALL)
+    Class(NearestEnemyOf(Myself),BARD)
+  !Range(NearestEnemyOf(Myself),5)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  Global("MO_AttackedSomeone","LOCALS",1)
+  EEex_LuaTrigger("return MoTargetCompare()")
+THEN
+  RESPONSE #100
+    SetGlobal("MO_AttackedSomeone","LOCALS",0)
+    Continue()
+END~~~~~ //"
+  END
+
+  LPF REPLACE_MULTILINE
+    INT_VAR
+    strict = 1
+    verbose = 0
+    STR_VAR
+    pattern = ~~~~~// EEex - Target Caster (Melee)~~~~~
+    string = ~~~~~IF
+  EEex_LuaTrigger("return MOIsCasting(6)")
+  !Difficulty(EASIEST)
+  Range(SixthNearestEnemyOf(Myself),10)
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SixthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SixthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SixthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SixthNearestEnemyOf(Myself),BARD)
+  See(SixthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(5)")
+  Range(FifthNearestEnemyOf(Myself),10)
+  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(FifthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(FifthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(FifthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(FifthNearestEnemyOf(Myself),BARD)
+  See(FifthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(4)")
+  Range(FourthNearestEnemyOf(Myself),10)
+  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(FourthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(FourthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(FourthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(FourthNearestEnemyOf(Myself),BARD)
+  See(FourthNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(3)")
+  Range(ThirdNearestEnemyOf(Myself),10)
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(ThirdNearestEnemyOf(Myself),MAGE_ALL)
+    Class(ThirdNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(ThirdNearestEnemyOf(Myself),DRUID_ALL)
+    Class(ThirdNearestEnemyOf(Myself),BARD)
+  See(ThirdNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(2)")
+  Range(SecondNearestEnemyOf(Myself),10)
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SecondNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SecondNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SecondNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SecondNearestEnemyOf(Myself),BARD)
+  See(SecondNearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  EEex_LuaTrigger("return MOIsCasting(1)")
+  Range(NearestEnemyOf(Myself),10)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(NearestEnemyOf(Myself),MAGE_ALL)
+    Class(NearestEnemyOf(Myself),CLERIC_ALL)
+    Class(NearestEnemyOf(Myself),DRUID_ALL)
+    Class(NearestEnemyOf(Myself),BARD)
+  See(NearestEnemyOf(Myself))
+  False()
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+IF
+  Global("MO_AttackedSomeone","LOCALS",1)
+  EEex_LuaTrigger("return MoTargetCompare()")
+THEN
+  RESPONSE #100
+    SetGlobal("MO_AttackedSomeone","LOCALS",0)
+    Continue()
+END~~~~~ //"
+  END
+  
+  /*
+  LPF REPLACE_MULTILINE
+    INT_VAR
+    strict = 1
+    verbose = 0
+    STR_VAR
+    pattern = ~~~~~// EEex - Interrupt Spellcast Check~~~~~
+    string = ~~~~~IF
+  !GlobalTimerNotExpired("MO_FindCasterTimer","LOCALS")
+  EEex_LuaTrigger("return MOIsCasting(6)")
+  EEex_LuaTrigger("return AmAttacking()")
+  !Difficulty(EASIEST)
+  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SixthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SixthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SixthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SixthNearestEnemyOf(Myself),BARD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_FindCasterTimer","LOCALS",2)
+    ActionOverride(Myself,ClearActions(Myself))
+END
+
+IF
+  !GlobalTimerNotExpired("MO_FindCasterTimer","LOCALS")
+  EEex_LuaTrigger("return MOIsCasting(1)")
+  EEex_LuaTrigger("return AmAttacking()")
+  !Difficulty(EASIEST)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(NearestEnemyOf(Myself),MAGE_ALL)
+    Class(NearestEnemyOf(Myself),CLERIC_ALL)
+    Class(NearestEnemyOf(Myself),DRUID_ALL)
+    Class(NearestEnemyOf(Myself),BARD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_FindCasterTimer","LOCALS",2)
+    ActionOverride(Myself,ClearActions(Myself))
+END
+
+IF
+  !GlobalTimerNotExpired("MO_FindCasterTimer","LOCALS")
+  EEex_LuaTrigger("return MOIsCasting(1)")
+  EEex_LuaTrigger("return AmAttacking()")
+  !Difficulty(EASIEST)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(NearestEnemyOf(Myself),MAGE_ALL)
+    Class(NearestEnemyOf(Myself),CLERIC_ALL)
+    Class(NearestEnemyOf(Myself),DRUID_ALL)
+    Class(NearestEnemyOf(Myself),BARD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_FindCasterTimer","LOCALS",2)
+    ActionOverride(Myself,ClearActions(Myself))
+END
+
+IF
+  !GlobalTimerNotExpired("MO_FindCasterTimer","LOCALS")
+  EEex_LuaTrigger("return MOIsCasting(1)")
+  EEex_LuaTrigger("return AmAttacking()")
+  !Difficulty(EASIEST)
+  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(ThirdNearestEnemyOf(Myself),MAGE_ALL)
+    Class(ThirdNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(ThirdNearestEnemyOf(Myself),DRUID_ALL)
+    Class(ThirdNearestEnemyOf(Myself),BARD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_FindCasterTimer","LOCALS",2)
+    ActionOverride(Myself,ClearActions(Myself))
+END
+
+IF
+  !GlobalTimerNotExpired("MO_FindCasterTimer","LOCALS")
+  EEex_LuaTrigger("return MOIsCasting(2)")
+  EEex_LuaTrigger("return AmAttacking()")
+  !Difficulty(EASIEST)
+  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SecondNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SecondNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SecondNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SecondNearestEnemyOf(Myself),BARD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_FindCasterTimer","LOCALS",2)
+    ActionOverride(Myself,ClearActions(Myself))
+END
+
+IF
+  !GlobalTimerNotExpired("MO_FindCasterTimer","LOCALS")
+  EEex_LuaTrigger("return MOIsCasting(1)")
+  EEex_LuaTrigger("return AmAttacking()")
+  !Difficulty(EASIEST)
+  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
+  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
+  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(NearestEnemyOf(Myself),MAGE_ALL)
+    Class(NearestEnemyOf(Myself),CLERIC_ALL)
+    Class(NearestEnemyOf(Myself),DRUID_ALL)
+    Class(NearestEnemyOf(Myself),BARD)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("MO_FindCasterTimer","LOCALS",2)
+    ActionOverride(Myself,ClearActions(Myself))
+END~~~~~ //"
+  END
+  */

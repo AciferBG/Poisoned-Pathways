@@ -1,8 +1,8 @@
 IF
-See([PC])
-Global("AC#PPMesmerAnkheg","GLOBAL",0)
+	See([PC])
+	Global("AC#PPMesmerAnkheg","GLOBAL",0)
 THEN
-RESPONSE #100
-SetGlobal("AC#PPMesmerAnkheg","GLOBAL",1)
-DisplayStringHead(Player1,@2021)
+	RESPONSE #100
+		SetGlobal("AC#PPMesmerAnkheg","GLOBAL",1)
+		DisplayStringHead(Player1,@2021)
 END

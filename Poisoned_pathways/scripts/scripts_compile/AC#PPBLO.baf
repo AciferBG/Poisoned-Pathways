@@ -1,7 +1,7 @@
 IF
-See([PC])
-NumTimesTalkedTo(0)
+	See([PC])
+	NumTimesTalkedTo(0)
 THEN
-RESPONSE #100
-StartDialogueNoSet(Player1)
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
 END

@@ -1,153 +1,27 @@
-IF
-    GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
-THEN
-    RESPONSE #100
-        DestroySelf()
-END
+COPY ~%MOD_FOLDER%/scripts/scripts_compile/ac#ppzmt.baf~ ~%MOD_FOLDER%/scripts/scripts_compile/ac#ppzmt.baf~
 
-IF
-    Global("Stronger","LOCALS",0)
-    LevelPartyGT(11)
-THEN
-    RESPONSE #100
-        ApplySpellRES("AC#PPX1",Myself)  // No such index
-        SetGlobal("Stronger","LOCALS",1)
-END
+///////////////////////////////////////////////////////////////////////////
+// Target Characters Casting Spells                                      //
+///////////////////////////////////////////////////////////////////////////
 
-IF
-    Global("Stronger","LOCALS",1)
-    LevelPartyGT(13)
-THEN
-    RESPONSE #100
-        ApplySpellRES("AC#PPX1",Myself)  // No such index
-        SetGlobal("Stronger","LOCALS",2)
-END
-
-IF
-    Global("Stronger","LOCALS",2)
-    LevelPartyGT(16)
-THEN
-    RESPONSE #100
-        ApplySpellRES("AC#PPX1",Myself)  // No such index
-        SetGlobal("Stronger","LOCALS",3)
-END
-
-IF
-    Range([GOODCUTOFF],16)
-    !Allegiance(Myself,ENEMY)
-THEN
-    RESPONSE #100
-        Shout(77)
-        Enemy()
-END
-
-IF
-    Heard([ANYONE],77)
-    !Allegiance(Myself,ENEMY)
-THEN
-    RESPONSE #100
-        Enemy()
-END
-
-IF
-    AttackedBy([GOODCUTOFF],DEFAULT)
-    !Allegiance(Myself,ENEMY)
-THEN
-    RESPONSE #100
-        Shout(77)
-        Enemy()
-END
-
-/////////////////////////////////////////////////////////////////////
-// Attack
-/////////////////////////////////////////////////////////////////////
-IF
-  OR(6)
-    See(Player1)
-    See(Player2)
-    See(Player3)
-    See(Player4)
-    See(Player5)
-    See(Player6)
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
-  See(NearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
-  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
-  See(SixthNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
-  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
-  See(FifthNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
-  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
-  See(FourthNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
-  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
-  See(ThirdNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
-  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
-  See(SecondNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
-  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
-  See(NearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
+  LPF REPLACE_MULTILINE
+    INT_VAR
+    strict = 1
+    verbose = 0
+    STR_VAR
+    pattern = ~~~~~// EEex - Target Caster (Melee)~~~~~
+    string = ~~~~~IF
+  EEex_LuaTrigger("return MOIsCasting(6)")
+  !Difficulty(EASIEST)
+  Range(SixthNearestEnemyOf(Myself),10)
   WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
   CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SixthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SixthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SixthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SixthNearestEnemyOf(Myself),BARD)
   See(SixthNearestEnemyOf(Myself))
   False()
 THEN
@@ -156,9 +30,16 @@ THEN
 END
 
 IF
+  EEex_LuaTrigger("return MOIsCasting(5)")
+  Range(FifthNearestEnemyOf(Myself),10)
   WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
   CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(FifthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(FifthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(FifthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(FifthNearestEnemyOf(Myself),BARD)
   See(FifthNearestEnemyOf(Myself))
   False()
 THEN
@@ -167,9 +48,16 @@ THEN
 END
 
 IF
+  EEex_LuaTrigger("return MOIsCasting(4)")
+  Range(FourthNearestEnemyOf(Myself),10)
   WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
   CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(FourthNearestEnemyOf(Myself),MAGE_ALL)
+    Class(FourthNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(FourthNearestEnemyOf(Myself),DRUID_ALL)
+    Class(FourthNearestEnemyOf(Myself),BARD)
   See(FourthNearestEnemyOf(Myself))
   False()
 THEN
@@ -178,9 +66,16 @@ THEN
 END
 
 IF
+  EEex_LuaTrigger("return MOIsCasting(3)")
+  Range(ThirdNearestEnemyOf(Myself),10)
   WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
   CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(ThirdNearestEnemyOf(Myself),MAGE_ALL)
+    Class(ThirdNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(ThirdNearestEnemyOf(Myself),DRUID_ALL)
+    Class(ThirdNearestEnemyOf(Myself),BARD)
   See(ThirdNearestEnemyOf(Myself))
   False()
 THEN
@@ -189,9 +84,16 @@ THEN
 END
 
 IF
+  EEex_LuaTrigger("return MOIsCasting(2)")
+  Range(SecondNearestEnemyOf(Myself),10)
   WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
   CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(SecondNearestEnemyOf(Myself),MAGE_ALL)
+    Class(SecondNearestEnemyOf(Myself),CLERIC_ALL)
+    Class(SecondNearestEnemyOf(Myself),DRUID_ALL)
+    Class(SecondNearestEnemyOf(Myself),BARD)
   See(SecondNearestEnemyOf(Myself))
   False()
 THEN
@@ -200,9 +102,16 @@ THEN
 END
 
 IF
+  EEex_LuaTrigger("return MOIsCasting(1)")
+  Range(NearestEnemyOf(Myself),10)
   WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
   CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
+  OR(4)
+    Class(NearestEnemyOf(Myself),MAGE_ALL)
+    Class(NearestEnemyOf(Myself),CLERIC_ALL)
+    Class(NearestEnemyOf(Myself),DRUID_ALL)
+    Class(NearestEnemyOf(Myself),BARD)
   See(NearestEnemyOf(Myself))
   False()
 THEN
@@ -211,6 +120,29 @@ THEN
 END
 
 IF
+  Global("MO_AttackedSomeone","LOCALS",1)
+  EEex_LuaTrigger("return MoTargetCompare()")
+THEN
+  RESPONSE #100
+    SetGlobal("MO_AttackedSomeone","LOCALS",0)
+    Continue()
+END~~~~~ //"
+  END
+
+///////////////////////////////////////////////////////////////////////////
+// Is Moving Checks                                                      //
+///////////////////////////////////////////////////////////////////////////
+
+  LPF REPLACE_MULTILINE
+    INT_VAR
+    strict = 1
+    verbose = 0
+    STR_VAR
+    pattern = ~~~~~// EEex - Is Moving Check 1~~~~~
+    string = ~~~~~IF
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(6)")
+    HPPercentLT(SixthNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(SixthNearestEnemyOf(Myself),STATE_PANIC)
@@ -223,6 +155,9 @@ THEN
 END
 
 IF
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(5)")
+    HPPercentLT(FifthNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(FifthNearestEnemyOf(Myself),STATE_PANIC)
@@ -235,6 +170,9 @@ THEN
 END
 
 IF
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(4)")
+    HPPercentLT(FourthNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(FourthNearestEnemyOf(Myself),STATE_PANIC)
@@ -247,6 +185,9 @@ THEN
 END
 
 IF
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(3)")
+    HPPercentLT(ThirdNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(ThirdNearestEnemyOf(Myself),STATE_PANIC)
@@ -259,6 +200,9 @@ THEN
 END
 
 IF
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(2)")
+    HPPercentLT(SecondNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(SecondNearestEnemyOf(Myself),STATE_PANIC)
@@ -271,6 +215,9 @@ THEN
 END
 
 IF
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(1)")
+    HPPercentLT(NearestEnemyOf(Myself),20)
   WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
   !StateCheck(NearestEnemyOf(Myself),STATE_PANIC)
@@ -280,12 +227,20 @@ IF
 THEN
   RESPONSE #100
     NoAction()
-END
+END~~~~~ //"
+  END
 
-// EEex - Is Moving Check 1
-
-IF
+  LPF REPLACE_MULTILINE
+    INT_VAR
+    strict = 1
+    verbose = 0
+    STR_VAR
+    pattern = ~~~~~// EEex - Is Moving Check 2~~~~~
+    string = ~~~~~IF
   DifficultyGT(EASY)
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(6)")
+    HPPercentLT(SixthNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(SixthNearestEnemyOf(Myself),STATE_PANIC)
@@ -302,6 +257,9 @@ END
 
 IF
   DifficultyGT(EASY)
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(5)")
+    HPPercentLT(FifthNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(FifthNearestEnemyOf(Myself),STATE_PANIC)
@@ -318,6 +276,9 @@ END
 
 IF
   DifficultyGT(EASY)
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(4)")
+    HPPercentLT(FourthNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(FourthNearestEnemyOf(Myself),STATE_PANIC)
@@ -334,6 +295,9 @@ END
 
 IF
   DifficultyGT(EASY)
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(3)")
+    HPPercentLT(ThirdNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(ThirdNearestEnemyOf(Myself),STATE_PANIC)
@@ -350,6 +314,9 @@ END
 
 IF
   DifficultyGT(EASY)
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(2)")
+    HPPercentLT(SecondNearestEnemyOf(Myself),20)
   WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
   !StateCheck(SecondNearestEnemyOf(Myself),STATE_PANIC)
@@ -366,6 +333,9 @@ END
 
 IF
   DifficultyGT(EASY)
+  OR(2)
+    EEex_LuaTrigger("return MOIsMoving(1)")
+    HPPercentLT(NearestEnemyOf(Myself),20)
   WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
   WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
   !StateCheck(NearestEnemyOf(Myself),STATE_PANIC)
@@ -378,125 +348,5 @@ IF
 THEN
   RESPONSE #100
     NoAction()
-END
-
-// EEex - Is Moving Check 2
-
-IF
-  DifficultyGT(EASY)
-  WeaponEffectiveVs(SixthNearestEnemyOf(Myself),MAINHAND)
-  WeaponCanDamage(SixthNearestEnemyOf(Myself),MAINHAND)
-  StateCheck(SixthNearestEnemyOf(Myself),STATE_IMMOBILE)
-  CheckStatLT(SixthNearestEnemyOf(Myself),1,SANCTUARY)
-  See(SixthNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  DifficultyGT(EASY)
-  WeaponEffectiveVs(FifthNearestEnemyOf(Myself),MAINHAND)
-  WeaponCanDamage(FifthNearestEnemyOf(Myself),MAINHAND)
-  StateCheck(FifthNearestEnemyOf(Myself),STATE_IMMOBILE)
-  CheckStatLT(FifthNearestEnemyOf(Myself),1,SANCTUARY)
-  See(FifthNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  DifficultyGT(EASY)
-  WeaponEffectiveVs(FourthNearestEnemyOf(Myself),MAINHAND)
-  WeaponCanDamage(FourthNearestEnemyOf(Myself),MAINHAND)
-  StateCheck(FourthNearestEnemyOf(Myself),STATE_IMMOBILE)
-  CheckStatLT(FourthNearestEnemyOf(Myself),1,SANCTUARY)
-  See(FourthNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  DifficultyGT(EASY)
-  WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
-  WeaponCanDamage(ThirdNearestEnemyOf(Myself),MAINHAND)
-  StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMMOBILE)
-  CheckStatLT(ThirdNearestEnemyOf(Myself),1,SANCTUARY)
-  See(ThirdNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  DifficultyGT(EASY)
-  WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
-  WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)
-  StateCheck(SecondNearestEnemyOf(Myself),STATE_IMMOBILE)
-  CheckStatLT(SecondNearestEnemyOf(Myself),1,SANCTUARY)
-  See(SecondNearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-IF
-  DifficultyGT(EASY)
-  WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
-  WeaponCanDamage(NearestEnemyOf(Myself),MAINHAND)
-  StateCheck(NearestEnemyOf(Myself),STATE_IMMOBILE)
-  CheckStatLT(NearestEnemyOf(Myself),1,SANCTUARY)
-  See(NearestEnemyOf(Myself))
-  False()
-THEN
-  RESPONSE #100
-    NoAction()
-END
-
-// EEex - Target Caster (Melee)
-
-IF
-  Allegiance(Myself,ENEMY)
-  See(LastSeenBy(Myself))
-  !Allegiance(LastSeenBy(Myself),ENEMY)
-  WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
-  CheckStatLT(LastSeenBy(Myself),1,SANCTUARY)
-  OR(2)
-    CheckStatLT(Myself,1,SANCTUARY)
-    HPPercentGT(Myself,49)
-THEN
-  RESPONSE #100
-    SetGlobal("MO_AttackedSomeone","LOCALS",1)
-    AttackReevaluate(LastSeenBy(Myself),30)
-END
-
-IF
-  !Allegiance(Myself,ENEMY)
-  See(LastSeenBy(Myself))
-  Allegiance(LastSeenBy(Myself),ENEMY)
-  WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
-  CheckStatLT(LastSeenBy(Myself),1,SANCTUARY)
-  OR(2)
-    CheckStatLT(Myself,1,SANCTUARY)
-    HPPercentGT(Myself,49)
-THEN
-  RESPONSE #100
-    SetGlobal("MO_AttackedSomeone","LOCALS",1)
-    AttackReevaluate(LastSeenBy(Myself),30)
-END
-
-IF
-    ActionListEmpty()
-    AttackedBy([ANYONE],DEFAULT)
-THEN
-    RESPONSE #100
-        Attack(LastAttackerOf(Myself))
-END
-
+END~~~~~ //"
+  END

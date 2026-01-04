@@ -1,5 +1,32 @@
 //Script files
 
+// Detect EEex
+ACTION_IF FILE_EXISTS_IN_GAME ~EEex_Actionbar.lua~ BEGIN
+    // Import Custom EEex Triggers
+    ACTION_IF !FILE_EXISTS_IN_GAME ~m_mocast.lua~ BEGIN
+      COPY ~%MOD_FOLDER%/lua/m_mocast.lua~ ~override~
+      COPY ~%MOD_FOLDER%/lua/m_motar1.lua~ ~override~
+      COPY ~%MOD_FOLDER%/lua/m_momove.lua~ ~override~
+    END
+
+    // Update Scripts to use EEex Custom Triggers
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#pp77w.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppchs.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#pphez.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppmum.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppnab.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#pprak.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppskd.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppspi.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppta2.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#pptal.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppwiw.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppwod.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppwow.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppytm.tph~
+    INCLUDE ~%MOD_FOLDER%/lib/eeex/ac#ppzmt.tph~
+END
+
 // Compile all scripts in folder "scripts_compile"
 COMPILE ~%MOD_FOLDER%/scripts/scripts_compile~
 

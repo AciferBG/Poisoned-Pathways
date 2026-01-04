@@ -48,6 +48,7 @@ REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~ && FILE_EXISTS ~engine.lua~) ~Requires BG
 
 INCLUDE ~Poisoned_pathways/lib/extra_regexp_vars.tph~
 INCLUDE ~Poisoned_pathways/lib/functions.tph~
+INCLUDE ~Poisoned_pathways/lib/replace_multiline.tpa~ // Block of code in EET
 
 ADD_JOURNAL 
 @12000
