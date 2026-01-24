@@ -2,7 +2,7 @@
 BACKUP ~Poisoned_pathways/backup~
 AUTHOR ~Acifer~
 //README ~Poisoned_pathways/readme.Poisoned_pathways.%LANGUAGE%.html~ ~readme.Poisoned_pathways.english.html~
-VERSION ~BETA5.1~
+VERSION ~BETA5.3~
 
 ALWAYS
 
@@ -41,6 +41,11 @@ LANGUAGE ~English~
          ~english~
          ~Poisoned_pathways/language/english/Setup-Poisoned_pathways.tra~
          ~Poisoned_pathways/language/english/Poisoned_pathways_Journal.tra~
+         
+LANGUAGE ~Spanish by ElGamerViejuno~
+         ~spanish~
+         ~Poisoned_pathways/language/spanish/Setup-Poisoned_pathways.tra~
+         ~Poisoned_pathways/language/spanish/Poisoned_pathways_Journal.tra~
 
 BEGIN ~Poisoned pathways~
 
@@ -622,7 +627,7 @@ COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPWXD.bam~ ~override~ // Will-o-wi
  LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = ~Poisoned_pathways/bam/bam_desc_BG2EE/MOS1058.pvrz~
  END
  END
- 
+
  COPY ~Poisoned_pathways/bam/bam_desc_BG2EE/AC#PPDRD.bam~ ~override~ // drow boots desc bam
  LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
  ACTION_IF (original_base_index >= 0 AND new_base_index >= 0) BEGIN 

@@ -1,0 +1,373 @@
+// Journal strings
+
+//Quest start
+@12000 = ~El veneno perfecto
+
+En los barrios bajos de Athkatla, un Eldathyn llamado Merethan se me acercó para hablarme de una toxina incurable que se estaba propagando por las tierras. Él cree que detrás de todo esto hay un misterioso proveedor de veneno y me pidió ayuda para localizar la fuente.~
+
+@12001 = ~El veneno perfecto
+
+Merethan me indicó a Skann Delth, un pequeño traficante de veneno que merodea por los tejados de la Corona de Cobre. Debo presionarlo para que me revele el origen de sus mortíferos productos. Merethan me espera en el Templo de Ilmater, en los barrios bajos de Athkatla.~
+
+@12002 = ~El veneno perfecto
+
+Me enfrenté a Skann Delth y conseguí un mapa que conduce a un lugar apartado llamado Hondonada de las Setas. Debo llevar este mapa a Merethan, que me espera en el Templo de Ilmater, en los barrios bajos de Athkatla.~
+
+@12003 = ~El veneno perfecto
+
+Merethan desea que lo acompañe a Hondonada de las Setas para ver si el envenenador se revela. Me espera en el Templo de Ilmater, en los barrios bajos, para que podamos partir juntos.~
+
+@12004 = ~El veneno perfecto
+
+En Hondonada de las Setas, un supuesto intercambio se convirtió en una emboscada. El misterioso sirviente del envenenador acabó con Merethan, pero una de las flechas quedó impregnada con el veneno. Antes de morir, me confió la flecha y me pidió que se la llevara al Guardián de las Cascadas Alatoasz Berendim en el Valle del Bosque del Ocaso, el santuario de Eldath.~
+
+@12005 = ~El veneno perfecto
+
+El Guardián de las Cascadas Alatoasz cree que la clave para comprender el veneno se encuentra en las ruinas de una antigua ciudad élfica. Sospecha que la rara planta utilizada para crearlo puede crecer allí. Para reducir nuestra búsqueda, me ha pedido que visite el Templo de Oghma en Athkatla y consulte sus tomos sobre el reino perdido de Keltormir.~
+
+@12006 = ~El veneno perfecto
+
+Devolví el tomo del Templo de Oghma al Guardián de las Cascadas Alatoasz. Sus pasajes apuntan a Myt Unnoyr: una ciudad élfica en ruinas cuyo mythal destrozado genera magia salvaje durante el día y magia muerta durante la noche. La contaminación se ha filtrado en una planta poco común utilizada para fabricar el veneno incurable. Marcó las ruinas en mi mapa. Debo viajar a Myt Unnoyr, encontrar al envenenador —un malagante de Talona— y traer una flor de la planta corrupta para que el Guardián de las Cascadas pueda intentar crear un antídoto.~
+
+@12007 = ~El veneno perfecto
+
+Me enfrenté al malagante en lo más profundo de las ruinas de Myt Unnoyr. Confesó haber fusionado magia mítica corrupta con una nueva toxina y se jactó de que ya se habían distribuido varios lotes por todo Amn. Juró convertir Myt Unnohr en el dominio tóxico de su señora, pero yo puse fin a sus planes. Ahora debo llevar una muestra de la planta corrupta al Guardián de las Cascadas Alatoasz Berendim en el Valle del Bosque del Ocaso para que se pueda crear un antídoto.~
+
+@12008 = ~El veneno perfecto
+
+He encontrado la planta corrupta conocida como frondalera, la fuente del veneno perfecto. Tras derrotar al malagante, debo llevar esta muestra al Guardián de las Cascadas Alatoasz Berendim en el Valle del Bosque del Ocaso, para que intente purificar su esencia y elaborar un antídoto.~
+
+@12009 = ~El veneno perfecto
+
+El malagante ha muerto y su vil obra yace en ruinas. He llevado la planta frondalera al Guardián de las Cascadas Alatoasz Berendim, en el Valle del Bosque del Ocaso, quien cree que se puede crear un antídoto para contrarrestar el veneno que ya se ha extendido por Amn. Sin embargo, para purificar la flor contaminada y elaborar la cura, se necesitará la ayuda de otras religiones.~
+
+// El antídoto
+
+@12100 = ~El antídoto
+
+El Guardián de las Cascadas Alatoasz cree que la flor de frondalera puede purificarse y convertirse en un antídoto. Para lograrlo, la flor debe ser bendecida tres veces: con los aspectos divinos de la vida, la compasión y la renovación. Alatoasz me ha concedido la primera bendición, pero debo buscar las otras dos.~
+
+@12101 = ~El antídoto: La bendición de la compasión de Ilmater
+
+Debo viajar al templo de Ilmater en los barrios bajos de Athkatla y solicitar la bendición de la compasión. El Guardián de las Cascadas cree que los Ilmateri ayudarán a nuestra causa sin dudarlo.~
+
+@12102 = ~El antídoto: La bendición de la renovación de Lathander
+
+Debo visitar la iglesia de Lathander en Athkatla para recibir la bendición de la renovación.~
+
+@12103 = ~El antídoto: El agua cantarina de Eldath
+
+Alatoasz me ha ordenado que recoja una jarra del agua cantarina de Eldath de la gruta del Valle del Bosque del Ocaso. Una de las doncellas que cuida del estanque sagrado me la proporcionará. El agua servirá como medio definitivo a través del cual se deben combinar las bendiciones.~
+
+@12104 = ~El antídoto: La bendición de la compasión de Ilmater
+
+He recibido la bendición de la compasión de los Ilmateri en los barrios bajos. Su plegaria imbuyó la frondalera de un leve calor, como si la propia flor respondiera a la misericordia.~
+
+@12105 = ~El antídoto: La bendición de la renovación de Lathander
+
+Los sacerdotes de Lathander han otorgado la bendición de renovación. Bañada por la luz del sol, la frondalera parecía agitarse, y su tono oscuro palidecía ligeramente bajo la gracia del Señor de la Mañana.~
+
+@12106 = ~El antídoto: El agua cantarina de Eldath
+
+He obtenido una jarra del agua cantarina de Eldath de la gruta del Valle del Bosque del Ocaso. Su superficie vibra suavemente, reflejando cada soplo del bosque. Ahora solo queda regresar con el Guardián de las Cascadas Alatoasz con la flor bendita y el agua sagrada.~
+
+@12107 = ~El antídoto
+
+Las tres bendiciones han sido reunidas —vida, compasión y renovación— y he conseguido el agua cantarina de Eldath. Ahora debo regresar con el Guardián de las Cascadas Alatoasz en el Valle del Bosque del Ocaso para que finalmente se pueda crear el antídoto y purgar de una vez por todas la corrupción de la frondalera.~
+
+@12108 = ~El antídoto
+
+He reunido todo lo necesario: la flor frondalera, las bendiciones y una jarra del agua cantarina de Eldath. El Guardián de las Cascadas Alatoasz cree que, para forjar el antídoto, la flor santificada y el agua sagrada deben colocarse dentro del caldero del malagante en las ruinas de Myt Unnoyr, el mismo lugar donde se elaboró el veneno por primera vez.~
+
+@12110 = ~El antídoto
+
+El ritual tuvo éxito. Del caldero corrupto del malagante surgió una monstruosa encarnación del veneno, la encarnación de la ira final de la toxina. La destruí y la corrupción de la frondalera fue purgada. El antídoto ha tomado forma, brillando con una luz esmeralda y tranquila. Debo llevárselo al Guardián de las Cascadas Alatoasz Berendim en el Valle del Bosque del Ocaso.~
+
+@12111 = ~El antídoto
+
+Le entregué el antídoto a Alatoasz Berendim, y él lo aceptó con gratitud. El veneno que una vez amenazó las Tierras de la Intriga ya no puede propagarse más.~
+
+/******************************
+SIDE quest journal entries
+******************************/
+// Duskwood Dell – Missing Faerie Twins Quest
+
+@13000 = ~Las hadas gemelas desaparecidas
+
+Las hadas de Valle del Bosque del Ocaso han desaparecido. El hermano Edrim me ha pedido que investigue su desaparición. Las gemelas fueron vistas por última vez hablando con un comerciante vestido con seda roja brillante, que hablaba con un acento extraño, con una "r" vibrante. Continuó hacia el oeste, en dirección a Athkatla, y puede que se esté escondiendo entre los comerciantes del Paseo de Waukin. Si realmente trafica con curiosidades mágicas, lo encontraré allí.~
+
+@13001 = ~Las hadas gemelas desaparecidas
+
+Entre los puestos del Paseo de Waukin, me he encontrado con un curioso comerciante que encaja con la descripción del hermano Edrim: un hombre vestido con seda roja, que comercia con artículos peculiares y habla con un extraño encanto casi hipnótico. Hay algo en él que me parece... extraño.~
+
+@13002 = ~Las hadas gemelas desaparecidas
+
+El comerciante que se hacía llamar Zar'khaan no era ningún comerciante, sino un rakshasa disfrazado. Debo averiguar si lleva consigo a las gemelas Valleluz, quizá encerradas en algún tipo de recipiente pequeño o baratija encantada.~
+
+@13003 = ~Las hadas gemelas desaparecidas
+
+He encontrado a las gemelas Valleluz. El Rakshasa las aprisionó dentro de un recipiente mágico sellado con un poderoso encantamiento. Aunque las hadas parecen ilesas, el frasco se niega a abrirse. Debería devolvérselo al hermano Edrim en el Valle del Bosque del Ocaso, quizá él sepa cómo romper el sello.~
+
+@13004 = ~Las hadas gemelas desaparecidas
+
+He devuelto el frasco de las hadas al hermano Edrim en el Valle del Bosque del Ocaso. Ha conseguido romper el sello y las gemelas Valleluz han salido ilesas. Sus risas vuelven a resonar en el Valle del Bosque del Ocaso. La paz, y algunas travesuras, han regresado a este tranquilo rincón del mundo.~
+
+// Mythal forge amulet
+@13010 = ~Atando lo desatado
+
+Entre los restos de un mago fallecido encontré una carta que describía el Mythal de Myt Unnoyr, ahora destrozado. Él creía que era posible forjar un antiguo talismán élfico capaz de resistir la corrupción del Mythal, si se combinaban las esencias de dos raras luces, nacidas de la magia salvaje y muerta, con la propia reliquia.~
+
+@13011 = ~Atando lo desatado
+
+Descubrí un antiguo yunque élfico, cuya superficie seguía siendo lisa a pesar del paso de los siglos. En su día se utilizó para fabricar finos adornos y reliquias sagradas. Si hay algún lugar donde se pueda volver a unir la magia, es aquí.~
+
+@13012 = ~Atando lo desatado
+
+He encontrado una delicada cadena élfica, probablemente parte de un talismán. En otro tiempo debió de llevar algún tipo de colgante.~
+
+@13013 = ~Atando lo desatado
+
+Descubrí una cabeza de amuleto finamente trabajada, claramente de diseño élfico. Su encaje parece hecho para sujetar una cadena. Si se restauraran, las dos piezas podrían formar un talismán completo.~
+
+@13014 = ~Atando lo desatado
+
+He obtenido la esencia de un fuego fatuo salvaje, un fragmento luminoso de energía caótica que parece vibrar con el pulso de la magia viva.~
+
+@13015 = ~Atando lo desatado
+
+He capturado la esencia de un fuego fatuo de muerte. Su resplandor sombrío es frío al tacto, lleno del silencio de la magia muerta.~
+
+@13016 = ~Atando lo desatado
+
+Ahora poseo todo lo necesario para forjar el talismán descrito en la carta del mago: la cadena élfica, la cabeza del amuleto y las esencias gemelas de los fuegos fatuos, una de magia salvaje y otra de magia muerta. Quizás en el antiguo yunque que encontré se puedan unir sus poderes.~
+
+@13017 = ~Atando lo desatado
+
+En el viejo yunque combiné las dos esencias de los fuegos fatuos con el talismán élfico restaurado. La reliquia ha despertado, con un brillo débil pero constante. La corrupción de Mythal ya no afecta a los hechizos de quien lleva el talismán.~
+
+// Banshee seeking head:
+@13020 = ~Lamento de los perdidos
+
+En lo alto de una torre en ruinas en Myt Unnoyr, me encontré con el espíritu de una banshee que lamentaba eternamente la muerte de su amado. Busca algo que le recuerde a él, algo que finalmente permita que su espíritu descanse en paz.~
+
+@13021 = ~Lamento de los perdidos
+
+Encontré una cabeza élfica cortada entre las ruinas de Myt Unnoyr, con un aspecto extrañamente tranquilo a pesar de su cruel destino.~
+
+@13022 = ~Lamento de los perdidos
+
+Le devolví la cabeza de su amado a la banshee. Ella susurró un último suspiro y desapareció, con su dolor finalmente apaciguado.~
+
+@13023 = ~Lamento de los perdidos
+
+Destruí a una banshee que rondaba una torre en ruinas en Myt Unnoyr. Su lamento ha callado y su dolor ya no perturbará este lugar.~
+
+// Honeymead Quest
+@13030 = ~La hidromiel Eldathyn
+
+En el Valle del Bosque del Ocaso conocí a un apicultor Eldathyn que produce una hidromiel muy poco común. Me pidió que llevara una botella a la posada de Las Cinco Jarras en Athkatla y se la vendiera a Samuel Eructrueno por un precio justo.~
+
+@13032 = ~La hidromiel Eldathyn
+
+Vendí la botella de hidromiel a Samuel Eructrueno por cien piezas de oro. Parecía bastante satisfecho con el trato.~
+
+@13033 = ~La hidromiel Eldathyn
+
+Vendí la botella de hidromiel a Samuel Eructrueno por quinientas piezas de oro. Un intercambio justo por una bebida tan refinada.~
+
+@13034 = ~La hidromiel Eldathyn
+
+Vendí la botella de hidromiel a Samuel Eructrueno por setecientas cincuenta piezas de oro. El posadero alabó su calidad y su generosidad fluyó tan libremente como su dinero.~
+
+@13035 = ~La hidromiel Eldathyn
+
+Vendí la botella de hidromiel a Samuel Eructrueno por mil piezas de oro. La calificó de néctar sin precio y pagó en consecuencia.~
+
+@13036 = ~La hidromiel Eldathyn
+
+Volví al apicultor del Valle del Bosque del Ocaso y le llevé cien piezas de oro por la hidromiel. Aceptó el pago con una silenciosa decepción.~
+
+@13037 = ~La hidromiel Eldathyn
+
+Volví a ver al apicultor en el Valle del Bosque del Ocaso y le entregué quinientas piezas de oro por la hidromiel. Él sonrió levemente, agradecido por mi honestidad.~
+
+@13038 = ~La hidromiel Eldathyn
+
+Le llevé al apicultor setecientas cincuenta piezas de oro por la hidromiel. Se sorprendió gratamente y murmuró que las bendiciones de Eldath se manifestaban de muchas formas.~
+
+@13039 = ~La hidromiel Eldathyn
+
+Volví al apicultor con mil piezas de oro por la hidromiel. Se quedó asombrado por mi generosidad y ofreció una sincera plegaria en mi nombre.~
+
+// Boy and worm
+
+@13040 = ~El pequeño pescador
+
+Un niño junto al muelle del Valle del Bosque del Ocaso me pidió que le ayudara a encontrar un gusano para pescar. Dijo que quería demostrar a todo el mundo que podía pescar un pez de verdad él solo.~
+
+@13041 = ~El pequeño pescador
+
+Encontré un gusano retorciéndose en la tierra blanda del Valle del Bosque del Ocaso. Quizás sea la captura afortunada que el niño estaba buscando.~
+
+@13042 = ~El pequeño pescador
+
+Le di el gusano al niño del muelle. En lugar de usarlo como cebo, decidió quedárselo como mascota y lo llamó Fideo. Los dos parecen bastante felices juntos.~
+
+@13043 = ~El pequeño pescador
+
+En lugar de dárselo al niño, tiré el gusano al agua. Él se echó a llorar, me insultó y se marchó corriendo. Dudo que vuelva a ser bienvenido en el muelle.~ ~El pequeño pescador
+
+En lugar de dárselo al niño, tiré el gusano al agua. Él se echó a llorar, me insultó y se marchó corriendo. Dudo que vuelva a ser bienvenida en el muelle.~
+
+// Montrassa - emblem
+@13050 = ~El emblema de Eldath
+
+En el Valle del Bosque del Ocaso conocí a una anciana Eldathyn llamada Montrassa. Sus manos tiemblan por la edad y ya no puede tallar los emblemas sagrados que antes hacía para su templo. Habló con cariño de Merethan, pero rechazó humildemente su emblema, diciendo que tal regalo solo debía concederse con la bendición del Alto Guardián de las Cascadas. Quizás debería hablar con Alatoasz Berendim al respecto.~
+
+@13051 = ~El emblema de Eldath
+
+Alatoasz estuvo de acuerdo en que Montrassa es digna de llevar el emblema de Merethan. Debería entregárselo en el Valle del Bosque del Ocaso para que pueda volver a tener en sus manos el símbolo de su diosa.~
+
+@13052 = ~El emblema de Eldath
+
+Le entregué el emblema de Merethan a Montrassa. Su gratitud fue silenciosa pero profunda: dijo que llevaría mi nombre en sus oraciones a la Dama de las Aguas Tranquilas.~
+
+// Siren
+@13060 = ~La furia de la sirena
+
+En el Valle del Bosque del Ocaso conocí a una sirena atormentada por la ira y el dolor. Había venido en busca de paz al bosque de Eldath, pero la furia aún se aferraba a ella como la sal a la marea. Quizás alguien en el Valle sepa cómo calmar su inquietud.~
+
+@13061 = ~La furia de la sirena
+
+Una anciana sacerdotisa de Eldathyn me confió una taza de infusión de hierbas. Ella cree que puede calmar el corazón de la sirena si se le da bajo el cielo abierto.~
+
+@13062 = ~La furia de la sirena
+
+Le di la infusión bendita a la sirena. En agradecimiento, me ofreció sus viejas flechas, diciendo que habían llevado su ira durante demasiado tiempo.~
+
+
+//HALFLING
+@13072 = ~La mercader mediana
+
+Conocí a una comerciante mediana llamada Debbie Gobblebubble en el desierto. Decidió viajar a Caravasar, donde su cocina y sus productos podrían tener una mejor acogida.~
+
+@13073 = ~La mercader mediana
+
+Conocí a una comerciante mediana llamada Debbie Gobblebubble en el desierto. Se ha puesto en camino hacia Athkatla para probar suerte entre los mercaderes y vagabundos del Paseo de Waukin.~
+
+@13074 = ~La mercader mediana
+
+Conocí a una comerciante mediana llamada Debbie Gobblebubble en el desierto. Ella decidió dirigirse a la Abadía de las Agujas de Oro, el refugio sagrado de los mercaderes devotos de Waukin.~
+
+// Mannatarv wants to die
+@13080 = ~Una muerte tranquila
+
+En el Valle del Bosque del Ocaso conocí a un anciano llamado Mannatarv. Es frágil y está cansado de la vida, pero los sacerdotes de Eldath se niegan a dejarlo morir. Me pidió que le trajera una hoja de frondalera antes de que se preparara el antídoto, para poder abandonar este mundo en silencio.~
+
+@13081 = ~Una muerte tranquila
+
+Acepté la petición de Mannatarv. Él espera en la enfermería del Valle del Bosque del Ocaso la hoja venenosa, listo para poner fin a su sufrimiento cuando yo regrese.~
+
+@13082 = ~Una muerte tranquila
+
+Le di a Mannatarv una hoja de frondalera. Me agradeció por concederle la misericordia que otros no le concedieron, y falleció pacíficamente poco después.~
+
+@13083 = ~Una muerte tranquila
+
+Me negué a ayudar a Mannatarv a acabar con su vida. Los sacerdotes de Eldath lo mantendrán con vida gracias a sus poderes curativos, lo desee él o no. Solo puedo esperar que encuentre la paz bajo su cuidado... o en sus sueños.~
+
+// Wadal Hrun
+@13090 = ~La torre del envenenador
+
+Me encontré con uno de los sirvientes yuan-ti del Talonita cerca de las ruinas envenenadas de Myt Unnoyr. La criatura se ha escondido en algún lugar de la ciudad, y la entrada a la torre del envenenador permanece sellada por algún hechizo desconocido.~
+
+@13091 = ~La torre del envenenador
+
+Maté al sirviente yuan-ti. Entre sus pertenencias había una pequeña piedra ioun, lisa y con forma de baya, que emitía un leve zumbido con una luz venenosa atrapada en su interior. Probablemente sirva como llave para la torre del envenenador.~
+
+// Grotto quest
+@13110 = ~Donde el acero calla
+
+La doncella de la gruta del Valle del Bosque del Ocaso se ofreció a quedarse con las armas que ya no necesitaba para depositarlas en el estanque sagrado de Eldath. Me prometió que, al hacerlo, complacería a la Silenciosa y recibiría su bendición, además de un toque de vitalidad renovada.~
+
+@13111 = ~Donde el acero calla
+
+Ofrecí una de mis armas al estanque, tal y como me pidió la doncella. El agua brilló débilmente cuando el acero se hundió bajo la superficie, engullido por la calma. En ese silencio, sentí un fugaz toque de la paz de Eldath: suave, silenciosa y completa.~
+
+// Runaway Nephew
+@13120 = ~El sobrino huido
+
+En el Valle del Bosque del Ocaso conocí a un joven que había huido de su tía en el Distrito Gubernamental de Athkatla. Criado entre mármol y monedas, anhelaba una vida más sencilla y encontró la paz entre los fieles de Eldath. Me pidió que le llevara una flor a su tía y le dijera que estaba a salvo.~
+
+@13121 = ~El sobrino huido
+
+Me encontré con la tía del chico en el distrito gubernamental de Athkatla. Al principio estaba furiosa, pero el mensaje y la flor suavizaron su ira. Dijo que la próxima vez él mismo debería llevarle las flores.~
+
+@13122 = ~El sobrino huido
+
+Volví con el chico en el Valle del Bosque del Ocaso y le conté las palabras de su tía. Por fin, puede centrarse en la vida que realmente quería vivir.~
+
+@13123 = ~El sobrino huido
+
+Me reuní con la tía del chico en el distrito gubernamental de Athkatla y le entregué la flor.~
+
+
+// Coinquest
+@13130 = ~La promesa incumplida
+
+Encontré una nota arrugada junto al cadáver de un aventurero muerto. Hablaba de una reunión nocturna detrás del Templo de Helm, en el Distrito del Puente de Athkatla, para conseguir lo que alguien había estado pidiendo. La nota estaba dirigida a un hombre llamado Marrik. También encontré una moneda gastada con la cara de un anciano. Quizás ambas cosas estén relacionadas.~
+
+@13131 = ~La promesa incumplida
+
+Detrás del Templo de Helm, en el Distrito del Puente, me encontré con un hombre y le mostré la ficha. Me envió a otro lugar de encuentro detrás del Templo de Lathander, en el Distrito del Templo, de nuevo, después del anochecer. Dijo que obtendría lo que había venido a buscar, aunque no tengo ni idea de lo que eso significa.~
+
+@13132 = ~La promesa incumplida
+
+Detrás del Templo de Lathander, mi presencia, y la moneda, parecían esperadas. El hombre que estaba allí afirmó que la próxima reunión sería en el Templo de Waukin, en el Distrito Gubernamental, cuando cayera la noche. Nadie me ha explicado aún qué es lo que voy a recibir.~
+
+@13133 = ~La promesa incumplida
+
+En el templo de Waukin, me enviaron una vez más. Hablaron de una reunión final, esta vez por la noche, detrás del templo de Ilmater, en los barrios bajos. Todas las promesas suenan igual: que obtendré lo que quería. Sin embargo, ya no estoy seguro de qué es eso.~
+
+@13134 = ~La promesa incumplida
+
+Detrás del Templo de Ilmater, finalmente conocí al hombre del que todos hablaban. Me preguntó por un geas al que se suponía que estaba obligado, pero la carta que llevaba pertenecía a alguien que llevaba mucho tiempo muerto. Cualquier carga o súplica que el remitente original esperaba resolver terminó en otro lugar, y nada de eso tenía que ver conmigo.~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

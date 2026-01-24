@@ -1,0 +1,17 @@
+Version 5.3
+- changed ACPP30SR.bmp search map: added Exit to the North
+- changed area link ACPP30: Exit to the North now leads to Duskwood Dell
+- updated Delgorth's portrait
+Version 5.2
+- changes by morpheus562:
+This is all of the script updates leaving original intent in-tact. The biggest divergeance is will-o-wisp where I have it use more spells based on difficulty level. I also updated the mummy to have an weapon assigned.
+In addition to updating attack and spell targeting, I am also utilizing EEex for net new custom triggers. This includes:
+•	Identifying if the current target is moving and therefore trying to kite the enemy so the enemy can focus on a creature that is not kiting.
+•	Identifying if an player controlled character is casting a spell and attempting to direct physical attacks on that caster to force a spell interrupt.
+•	New trigger to check if the best target to attack is the current target being attacked. If not, then the scripts will re-direct their attacks to the better target.
+
+
+
+Beta Version 5.1
+- initial beta testing version
+

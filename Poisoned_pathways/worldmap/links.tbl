@@ -10,6 +10,8 @@ AR0400       S            ACPP01       Entrywm      4            1            N 
 
 ACPP30       S            AR0400       ExitSE       4            1            N            N            N            N            N            0
 ACPP30       S            ACPP01       Entrywm      4            1            N            N            N            N            N            0
+ACPP30       N            AR0400       ExitSE       4            1            N            N            N            N            N            0
+ACPP30       N            ACPP01       Entrywm      4            1            N            N            N            N            N            0
 
 ACPP70       S            ACPP01       Entrywm      4            1            N            N            N            N            N            0
 ACPP70       S            AR0400       ExitSE       4            1            N            N            N            N            N            0
