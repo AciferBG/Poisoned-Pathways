@@ -107,6 +107,7 @@ CreateCreature("AC#PPCHA",[365.800],12)
 SetGlobal("AC#PP_SummonFlowerKid","ACPP01",1)
 END
 
+/*
 IF
 Global("AC#PP_MythUnnohyr","GLOBAL",7)
 Global("EldathynMoveUnnohyr","ACPP01",0)
@@ -117,5 +118,6 @@ CreateCreature("AC#PPEY2",[529.1091],NE)
 CreateCreature("AC#PPEZ2",[589.1154],NE)
 SetGlobal("EldathynMoveUnnohyr","ACPP01",1)
 END
+*/
 
 

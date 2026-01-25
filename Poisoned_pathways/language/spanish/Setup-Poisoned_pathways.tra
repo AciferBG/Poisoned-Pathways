@@ -5,8 +5,8 @@
 @12 = ~Sacerdote de Eldath~
 @13 = ~Alatoasz Berendim~
 @14 = ~Colmillopaz~
-@15 = ~Quietbrook~
-@16 = ~Hermano Amableenjambre~
+@15 = ~Arroyocalmado~
+@16 = ~Hermano Amablenjambre~
 @17 = ~Doncella de la Gruta~
 @18 = ~Árbol zombi~
 @19 = ~Hermana Irinwe~
@@ -330,10 +330,10 @@ Aptitudes especiales:
 Aptitudes poseídas:
   Clase de armadura: +2
   Tiradas de salvación: +2
-  Movimiento silencioso: +10%
+  Moverse sigilosamente: +10%
   5% de probabilidad de lanzar santuario cuando el portador de la capa es golpeado en combate.
-  Cuando hay animales a menos de 10 pies:
-   +1 adicional a la CA
+  Cuando hay animales a menos de 3 metros:
+   +1 adicional a la clase de armadura
    +1 adicional a las tiradas de salvación
    Inmunidad a los efectos de miedo
 
