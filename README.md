@@ -41,7 +41,9 @@ The mod is triggered **after delivering Renfeld’s body** in the Docks District
 - The mod includes scaling elements that adapt to the player’s level and difficulty settings.
 
 ## Language Support  
-This mod is available in **English**. The language will be selected automatically based on your game installation.
+This mod is available in: 
+- **English**
+- **Spanish**
 
 ## Compatibility  
 Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core game content and should be compatible with most other mods.
@@ -51,9 +53,12 @@ Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core g
 ## Credits
 
 **Acifer** – Writing, Area Art, Item Graphics & Design, Quest Design, Scripting, Music  
-**Lava** – Writing, Additional Area Art, Item Graphics & Design, Quest Design, Scripting, Worldmap Icons    
+**Lava** – Writing, Additional Area Art, Item Graphics & Design, Quest Design, Scripting, Worldmap Icons 
+**morpheus562** – Bug fixing, additional scripting, EEex compatibility   
 **Megrimlock** – English version  
 **Weigo** – BP-BGT Worldmap mod compatibility
+**ElGamerViejuno** – Beta-testing, Spanish version
+**Trouveur** – Beta-testing
 
 
 ---
