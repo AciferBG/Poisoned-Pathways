@@ -60,9 +60,6 @@ Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core g
 **ElGamerViejuno** – Beta-testing, Spanish version <br>
 **Trouveur** – Beta-testing <br>
 
-This mod uses a scorpion animation adapted from Diablo II © Blizzard Entertainment. If required, the asset can be replaced or removed.
-
-
 ---
 
 ## License  
