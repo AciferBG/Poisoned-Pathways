@@ -192,10 +192,6 @@ COPY ~%MOD_FOLDER%/cre/AC#PPSCR.cre~ ~override~       // scorpion
   SAY NAME1 @53 SAY NAME2 @53
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~SCORPION_ACIFER~))
 
-COPY ~%MOD_FOLDER%/cre/AC#PP71V.cre~ ~override~       // wood woad
-  SAY NAME1 @39 SAY NAME2 @39
-  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~WOOD_WOAD_ACIFER~))
-
 COPY ~%MOD_FOLDER%/cre/AC#PPEAE.cre~ ~override~       // corrupted earth elemental
   SAY NAME1 @41 SAY NAME2 @41
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#ELEMENTAL_EARTH_GRAY~))
