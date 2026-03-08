@@ -236,7 +236,7 @@ Obgleich Keltormir in den Nebel der Legende verschwunden ist, hallt sein einstig
 @1016 = ~Mythriens Amulett~
 @1017 = ~Geschmiedet in den Tagen der Gründung von Myth Unnohyr, trug dieses Kleinod das Zeichen dreier ineinander verschlungener Ringe — das Symbol des beinahe vergessenen elfischen Gottes der Mythale, Mythrien Sarath. Selbst Jahrhunderte des Verfalls vermochten nur seine äußere Pracht zu trüben; ein zarter Widerhall seiner einstigen Macht ist geblieben. In der Gegenwart dieses Relikts schwächen sich die Unbändigen Wogen und die tote Magie des zerbrochenen Mythals ab. Es gewährt denjenigen Schutz, die durch die zerschmetterten Straßen der Stadt wandeln.
 
-Angelegte Fähigkeiten: 
+Ausgerüstete Fähigkeiten: 
 – Immunität gegen Effekte wilder Magie und toter Magiezonen in Myth Unnohyr
 
 Gewicht: 0~
@@ -247,7 +247,7 @@ Gewicht: 0~
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Rettungswurf gegen Nekromantie: +5  
 – Maximale Trefferpunkte: +2  
 
@@ -279,7 +279,7 @@ Gewicht: 1~
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Schützt vor kritischen Treffern
 – Geschicklichkeit: +2 (nur Elfen), +1 (nur Halbelfen)
 
@@ -321,7 +321,7 @@ Einige behaupten, sie sei nach einem LIndwurm namens Lucretia benannt worden.
   
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten: 
+Ausgerüstete Fähigkeiten: 
 – Glück: +1
 – Regeneriert 1 Trefferpunkt pro Runde
 
@@ -351,7 +351,7 @@ EIGENSCHAFTEN:
 Fähigkeiten (Aufladungen):
 – Kann einmal pro Tag Schutz vor Bösem im Umkreis von 3 Metern (auf sich selbst) wirken
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Rüstungsklasse: +2
 – Rettungswürfe: +2
 – Leise bewegen: +10%
@@ -384,7 +384,7 @@ Gewicht: 0~
   
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Rüstungsklasse: +1
 – Rettungswürfe: +1
 – THAC0: –2
@@ -421,7 +421,7 @@ Manche sagen, ihre Geschwindigkeit sei der Tartsche selbst zu verdanken gewesen,
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Rüstungsklasse: +4
 – Kein Schutz gegen Geschoss- und Stichwaffen
 – Bewegungsgeschwindigkeit um 1 erhöht; in Wäldern um 2 erhöht
@@ -475,7 +475,7 @@ EIGENSCHAFTEN:
 Kampffähigkeiten:
 – Wenn der Träger ein Wesen tötet, erhält <PRO_HESHE> 1 temporären Trefferpunkt für 1 Runde (kumulativ).
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Charisma: –1
 – Säureresistenz: +10%
 – 25% Chance, dass ein Angreifer beim Treffer 1W2 Säureschaden erleidet (Rettungswurf gegen Tod bei –2 negiert)
@@ -489,7 +489,7 @@ Gewicht: 1
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Zauberwirkzeit um 1 verringert
 – Immunität gegen Gift
 
@@ -531,7 +531,6 @@ Erfordert:
 
 Gewicht: 3
 ~
-// itm files
 
 @1087 = ~Rose der Eldath~
 
@@ -578,7 +577,7 @@ Aufgrund der druidischen Verzauberungen, die in die Waffe gewoben wurden, könne
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
+Ausgerüstete Fähigkeiten:
 – Setzt Armbrust-Fertigkeit auf 1
 
 Kampffähigkeiten:
@@ -595,717 +594,899 @@ Erfordert:
 
 Gewicht: 6~
 
-@1146 = ~To whomever finds this:
+// itm files
 
-The Mythal that once protected Myth Unnohyr is shattered beyond recognition. Within these ruins, magic frays and collapses without warning—prayers go unanswered, spells twist or wither to nothing.
+@1146 = ~An den, der dies findet:
 
-Yet not all is lost. Certain beings—Will-o'-Wisps among them—seem to have adapted to the Mythal’s corruption. Their resilience hints at the possibility that immunity is not impossible.
+Das Mythal, das einst Myth Unnohyr schützte, ist jenseits aller Erkenntnis zerschmettert. In diesen Ruinen zerfasert und zerbricht Magie ohne Vorwarnung — Gebete verhallen ungehört, Zauber verkrümmen sich oder vergehen im Nichts.
 
-Before my strength failed me, I theorized that an ancient elven relic might be restored—one capable of channeling the original power of the Mythal to shield its bearer from its corruptive force. Perhaps spellcasting within these ruins could then be possible again.
+Und doch ist nicht alles verloren. Gewisse Wesen — darunter Irrlichter — scheinen sich an die Verderbnis des Mythals angepasst zu haben. Ihre Widerstandskraft deutet darauf hin, dass Immunität nicht unmöglich ist.
 
-I suspect that the essences of wisps born of both wild and dead magic, combined with the elven talisman itself, might yield such an effect. If such rare wisps truly dwell within these ruins, and if one could forge the ancient elven talisman, life of a mage here would be far less precarious.
+Bevor meine Kräfte mich verließen, stellte ich die Theorie auf, dass ein uraltes elfisches Relikt wiederhergestellt werden könnte — eines, das die ursprüngliche Macht des Mythals kanalisieren und seinen Träger vor dessen verderblichem Einfluss schützen kann. Vielleicht wäre es dann möglich, in diesen Ruinen erneut zu zaubern.
 
-Whether such a talisman can truly be made, I shall not live to see.
+Ich vermute, dass die Essenzen von Irrlichtern, geboren aus wilder wie aus toter Magie, verbunden mit dem elfischen Talisman selbst, einen solchen Effekt hervorbringen könnten. Sollten solche seltenen Irrlichter tatsächlich in diesen Ruinen verweilen, und sollte es gelingen, den uralten Talisman neu zu schmieden, wäre das Leben eines Magiers hier weit weniger prekär.
 
-May you fare better than I.~
-@1147 = ~Peacewalker's stories I~
-@1148 = ~"The Still Water Within"
+Ob ein solcher Talisman je erschaffen werden kann, werde ich nicht mehr erleben.
 
-As penned by Lirael of the Gentle Banks, Keeper of the Silent Pool
+Möget Ihr mehr Erfolg haben als ich.~
 
-I was but young when first I wandered deep into the Wood of Sharp Teeth.
-The elders had warned me: "Not all who walk beneath the green honor life."
-Yet my heart knew no fear, only the call to carry Eldath’s peace wherever my steps would take me.
+@1147 = ~Geschichten des Friedenswanderers I~
 
-For three nights I slept beneath the starlit canopy, the whispering leaves singing wind-songs to my soul. On the fourth evening, I came upon the ogre Brughul, who sought to feed his club with blood.
+@1148 = ~„Das stille Wasser im Innern“
 
-A calf, bound and trembling, lay near his fire. Brughul towered like two men, his club glistening with old stains. I could have fled. I could have struck with spell or flame.
+Niedergeschrieben von Lirael von den Sanften Ufern, Hüterin des Stillen Beckens
 
-But I did what Eldath had always taught: I sat.
+Ich war noch jung, als ich erstmals tief in den Wald der Scharfen Zähne wanderte.
+Die Ältesten hatten gewarnt: „Nicht alle, die unter dem Grün wandeln, ehren das Leben.“
+Doch mein Herz kannte keine Furcht, nur den Ruf, Eldaths Frieden dorthin zu tragen, wohin meine Schritte mich führten.
 
-Simply that. Cross-legged. Palms open. Heart bare. And I began to sing the old lullaby of the quiet waters.
+Drei Nächte schlief ich unter dem sternklaren Blätterdach, und das Flüstern der Blätter sang Windlieder für meine Seele. Am vierten Abend begegnete ich dem Oger Brughul, der sein Knüppel nach Blut dürstete.
 
-"No blood shall quench as calm as light,
-Drawn from a spring so pure and bright.
-No scream shall ever bring release,
-let silence sow the seeds of peace."
+Ein Kalb, gefesselt und zitternd, lag nahe seinem Feuer. Brughul ragte wie zwei Männer übereinander, sein Knüppel glänzte von alten Flecken. Ich hätte fliehen können. Ich hätte mit Zauber oder Flamme zuschlagen können.
 
-Brughul's rage faltered. The monster stepped forward. I smelled his breath. His grip loosened. The club dropped to moss. Then — silence. Only the soft splash of the calf as it stumbled into shallow water and was gone.
+Doch ich tat, was Eldath stets gelehrt hatte: Ich setzte mich.
 
-When I opened my eyes, I was alone. They say a ring of white lilies grows there now, though none bloomed before.
+Einfach so. Im Schneidersitz. Die Handflächen offen. Das Herz entblößt. Und ich begann das alte Wiegenlied der stillen Wasser zu singen.
 
-(Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
-@1149 = ~Peacewalker's stories II~
-@1150 = ~"The Thorn and the Dove"
-As recorded by the Willowroot Circle
+„Kein Blut stillt je so rein das Licht,
+Wie Quell, der klar aus Tiefe bricht.
+Kein Schrei vermag Erlösung je,
+Lass Stille säen Frieden im Weh.“
 
-He walked barefoot across Amn. Brother Eolan—a freewalker of Eldath—carried no coin, no weapon, no map. Only a waterskin and a heart uncluttered by wrath. Where others turned blades upon strangers, he offered silence, and when the world scorned mercy, he extended his hand.
+Brughuls Zorn schwankte. Das Ungeheuer trat näher. Ich roch seinen Atem. Sein Griff lockerte sich. Der Knüppel fiel ins Moos. Dann — Stille. Nur das leise Plätschern des Kalbes, als es ins seichte Wasser taumelte und verschwand.
 
-It was in the Gorge of the Fallen Idol that he was most sorely tested.
+Als ich die Augen öffnete, war ich allein. Man sagt, dort wachse nun ein Ring weißer Lilien, wo zuvor keine blühten.
 
-The gorge is cut deep into the foothills of the Small Teeth. Long ago, a statue of a forgotten god fell from the cliffs and shattered in the chasm below. Since then, the gorge has attracted those with dark intentions.
+(Obwohl dieser Gegenstand kulturellen Wert besitzen mag, scheint er weder magisch noch von Nutzen für Eure Aufgabe zu sein.)~
 
-One such was Thornmaw, a scar-marked brigand queen. When Brother Eolan wandered into her domain, she and her kin saw him as prey.
+@1149 = ~Geschichten des Friedenswanderers II~
 
-But he made no plea, no argument. He simply knelt. In the dust at the edge of the shattered idol’s gaze, he drew forth his waterskin. With both hands, he offered it to her. His eyes met hers. And he spoke: "When did you last drink without fear?"
+@1150 = ~„Der Dorn und die Taube“
+Aufgezeichnet vom Weidenwurzel-Kreis
 
-The others laughed. But Thornmaw did not. Her hand lingered at her belt, where her curved blade hung heavy with dried blood. She stepped forward. Took the waterskin. Drank.
+Barfuß durchquerte er Amn. Bruder Eolan — ein Freiwanderer Eldaths — trug weder Münze noch Waffe noch Karte. Nur einen Wasserschlauch und ein Herz frei von Zorn. Wo andere die Klinge gegen Fremde erhoben, bot er Stille dar, und wenn die Welt Erbarmen verhöhnte, reichte er die Hand.
 
-Then she hurled it down into the gorge and turned away, saying: "Go."
+In der Schlucht des Gefallenen Götzen wurde er am härtesten geprüft.
 
-And he did.
+Die Schlucht schneidet tief in die Ausläufer der Small Teeth. Vor langer Zeit stürzte dort die Statue eines vergessenen Gottes von den Klippen und zerbrach im Abgrund. Seitdem zieht die Schlucht jene mit finsteren Absichten an.
 
-No one laid hand nor claw on him. He passed unscathed, vanishing into the southern passes like mist before dawn.
+Eine von ihnen war Dornschlund, eine von Narben gezeichnete Räuberfürstin. Als Bruder Eolan ihr Gebiet betrat, sahen sie und ihre Sippe in ihm leichte Beute.
 
-The next season, the fallen idol bore something new—a vine, delicate and green, curling up through its cracked stone lips. Water pooled near its base.
+Doch er flehte nicht, er argumentierte nicht. Er kniete einfach nieder. Im Staub am Rand des zerschmetterten Götzen zog er seinen Wasserschlauch hervor. Mit beiden Händen bot er ihn ihr dar. Sein Blick traf den ihren. Und er sprach: „Wann habt Ihr zuletzt ohne Furcht getrunken?“
 
-(Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
-@1151 = ~Elven Wardstone~
-@1152 = ~This is a finely crafted elven wardstone.~
-@1153 = ~Branch Key~
-@1154 = ~This key is crafted from interwoven branches and appears to open a particular kind of door.~
-@1155 = ~Rose of Mythrien~
-@1156 = ~This flower is known as the Rose of Mythrien. Some say it is a wonder that it has endured all the centuries since the fall of Myth Unnohyr, for the lingering touch of the broken Mythal should have withered it long ago — but it did not.
+Die anderen lachten. Doch Dornschlund nicht. Ihre Hand verharrte am Gürtel, wo die gekrümmte Klinge schwer von getrocknetem Blut hing. Sie trat vor. Nahm den Wasserschlauch. Trank.
+
+Dann schleuderte sie ihn in die Schlucht und wandte sich ab. „Geht.“
+
+Und er ging.
+
+Keiner legte Hand noch Klaue an ihn. Er verschwand in den südlichen Pässen wie Nebel vor dem Morgen.
+
+Im nächsten Jahr trug der gefallene Götze etwas Neues — eine zarte grüne Ranke, die sich durch seine gesprungenen steinernen Lippen wand. Wasser sammelte sich an seinem Fuß.
+
+(Obwohl dieser Gegenstand kulturellen Wert besitzen mag, scheint er weder magisch noch von Nutzen für Eure Aufgabe zu sein.)~
+
+@1151 = ~Elfischer Wächterstein~
+
+@1152 = ~Dies ist ein kunstvoll gefertigter elfischer Schutzstein.~
+// itm files
+
+@1153 = ~Zweigschlüssel~
+
+@1154 = ~Dieser Schlüssel ist aus ineinander verschlungenen Zweigen gefertigt und scheint eine ganz bestimmte Art von Tür zu öffnen.~
+
+@1155 = ~Rose des Mythrien~
+
+@1156 = ~Diese Blume ist als die Rose des Mythrien bekannt. Manche sagen, es sei ein Wunder, dass sie all die Jahrhunderte seit dem Fall von Myth Unnohyr überdauert hat, denn die nachwirkende Berührung des zerbrochenen Mythals hätte sie längst verwelken lassen müssen — doch sie tat es nicht.
   
-STATISTICS:
+EIGENSCHAFTEN:
 
-Weight: 1~
-@1157 = ~Halberd~
-@1158 = ~Halberd of Fierce Bites +2~
-@1159 = ~This halberd has three teeth-like picks that can pierce even through some armors and deal powerful damage to enemies.
+Gewicht: 1~
+
+@1157 = ~Hellebarde~
+
+@1158 = ~Hellebarde der grimmigen Bisse +2~
+
+@1159 = ~Diese Hellebarde besitzt drei zahnartige Spitzen, die selbst durch manche Rüstungen dringen und verheerenden Schaden anrichten können.
   
-STATISTICS:
+EIGENSCHAFTEN:
 
-Combat abilities:
-– Each successful hit has a 50% chance to deal additional 1d6 piercing damage 
+Kampffähigkeiten:
+– Jeder erfolgreiche Treffer hat eine 50% Chance, zusätzlich 1W6 Stichschaden zu verursachen
 
 THAC0: +2
-Damage: 1d10+2 (piercing)
-Speed Factor: 7
-Proficiency Type: Halberd
-Type: Two-handed
-Requires:
- 13 Strength
+Schaden: 1W10+2 (Stich)
+Initiativefaktor: 7
+Waffenfertigkeit: Hellebarde
+Typ: Zweihändig
+Erfordert:
+ 13 Stärke
 
-Weight: 12~
-@1160 = ~Belt~
-@1161 = ~Belt of Starshaping~
-@1162 = ~This belt was once used by Stinna Raonar, an elven oracle that decided that she no longer wanted to see how future may unfold, but that she wanted to shape it. To do so, she started to learn how to change the future and manipulate the power of luck.
+Gewicht: 12~
 
-STATISTICS:
+@1160 = ~Gürtel~
 
-Charge abilities:
-– May cast Oracle once per day
+@1161 = ~Gürtel der Sternformung~
 
-Equipped abilities:
-– Luck: +1 (diviner only)
-– Lore: +10 (diviner only)
-– Saving Throws bonus: +2
+@1162 = ~Dieser Gürtel wurde einst von Stinna Raonar getragen, einer elfischen Seherin, die nicht länger nur beobachten wollte, wie sich die Zukunft entfaltet, sondern beschloss, sie selbst zu formen. Um dies zu erreichen, begann sie, die Macht des Glücks zu studieren und zu lenken.
 
-Weight: 2~
-@1163 = ~Shortbow~
-@1164 = ~Bard's Love Letter +3~
-@1165 = ~This magical bow is known as the Bard’s Love Letter. It fires arrows with remarkable grace and sharpens a bard’s focus. In the right hands, it can turn even a modest performer into a formidable spellcaster.
+EIGENSCHAFTEN:
 
-STATISTICS:
+Fähigkeiten (Aufladungen):
+– Kann einmal pro Tag Orakel wirken
 
-Charge abilities:
-– May cast Magic Missile once per day
+Ausgerüstete Fähigkeiten:
+– Glück: +1 (nur Weissager)
+– Sagenkunde: +10 (nur Weissager)
+– Rettungswürfe: +2
 
-Equipped abilities:
+Gewicht: 2~
+// itm files
+
+@1163 = ~Kurzbogen~
+
+@1164 = ~Des Barden Liebesbrief +3~
+
+@1165 = ~Dieser magische Bogen ist als des Barden Liebesbrief bekannt. Er verschießt Pfeile mit bemerkenswerter Anmut und schärft zugleich den Geist eines Barden. In den richtigen Händen vermag er selbst einen bescheidenen Darsteller zu einem eindrucksvollen Zauberwirker zu machen.
+
+EIGENSCHAFTEN:
+
+Fähigkeiten (Aufladungen):
+– Kann einmal pro Tag Magisches Geschoss wirken
+
+Ausgerüstete Fähigkeiten:
 – Charisma: +1
-– Can memorize two extra 1st level spells, and one extra 2nd level spell (bard only)
+– Kann zwei zusätzliche Zauber des 1. Grades und einen zusätzlichen Zauber des 2. Grades memorieren (nur Barde)
 
-Damage: +1 (bard only)
+Schaden: +1 (nur Barde)
 THAC0: +3
-Speed Factor: 3
-Proficiency Type: Shortbow
-Type: Two-handed
-Requires:
- 3 Strength
+Initiativefaktor: 3
+Waffenfertigkeit: Kurzbogen
+Typ: Zweihändig
+Erfordert:
+ 3 Stärke
 
-Weight: 1~
-@1166 = ~Flail~
-@1167 = ~Two Arguing Heads +2~
-@1168 = ~This flail used to belong to a cleric of Tempus, who found it very difficult to make any decision, which was quite unusual for someone who needs to know how to act even during the greatest battles. Some say this weapon wasn't really helping and when he held it, he would overthink things even more.
+Gewicht: 1~
 
-STATISTICS:
+@1166 = ~Flegel~
 
-Equipped abilities:
-– Wisdom: -1
+@1167 = ~Zwei streitende Köpfe +2~
 
-Combat abilities:
-– Attacks Per Round: +1/2 
-– Each successful hit has a 50% chance to deal additional 1d6+3 crushing damage
+@1168 = ~Dieser Flegel gehörte einst einem Kleriker des Tempus, der große Schwierigkeiten hatte, Entscheidungen zu treffen — was für jemanden, der selbst im heftigsten Gefecht wissen muss, wie zu handeln ist, höchst ungewöhnlich war. Manche behaupten, die Waffe habe ihm nicht geholfen; wann immer er sie trug, grübelte er nur noch mehr.
+
+EIGENSCHAFTEN:
+
+Ausgerüstete Fähigkeiten:
+– Weisheit: –1
+
+Kampffähigkeiten:
+– Angriffe pro Runde: +1/2
+– Jeder erfolgreiche Treffer hat eine 50% Chance, zusätzlich 1W6+3 Wuchtschaden zu verursachen
 
 THAC0: +2
-Damage: 1d6+3 (crushing)
-Speed Factor: 5
-Proficiency Type: Flail/Morning Star
-Type: One-handed
-Requires:
- 13 Strength
+Schaden: 1W6+3 (Wucht)
+Initiativefaktor: 5
+Waffenfertigkeit: Flegel/Morgenstern
+Typ: Einhändig
+Erfordert:
+ 13 Stärke
 
-Weight: 12~
-@1169 = ~War Hammer~
-@1170 = ~Hammer of Powerful Yet Unlikely Blows +4~
-@1171 = ~This hammer is an unusual weapon. While it can break any bone, damage metal plate armors, kill huge beasts like giants or dragons, it's very uncomfortable to hold and use. But if someone is able to land a proper hit, the effect may be truly grand!
+Gewicht: 12~
 
-STATISTICS:
+@1169 = ~Kriegshammer~
 
-THAC0: -4
-Damage: 4d4+5 (crushing)
-Speed Factor: 1
-Proficiency Type: War Hammer
-Type: One-handed
-Requires:
- 9 Strength
+@1170 = ~Hammer gewaltiger, doch unwahrscheinlicher Schläge +4~
 
-Weight: 4~
-@1172 = ~Morning Star~
-@1173 = ~The Pufferfish +3~
-@1174 = ~This morningstar was blessed by a cleric of Umberlee. The name of this weapon was clearly inspired by its round head. Some say that this weapon and its name amuses even The Bitch Queen herself.
+@1171 = ~Dieser Hammer ist eine ungewöhnliche Waffe. Er vermag Knochen zu zerschmettern, Plattenrüstungen zu beschädigen und selbst riesenhafte Kreaturen wie Riesen oder Drachen zu töten — doch liegt er unangenehm in der Hand und ist schwer zu führen. Gelingt jedoch ein sauberer Treffer, kann die Wirkung wahrhaft gewaltig sein.
 
-STATISTICS:
+EIGENSCHAFTEN:
 
-Equipped abilities:
-– Cold Resistance: +25%
+THAC0: –4
+Schaden: 4W4+5 (Wucht)
+Initiativefaktor: 1
+Waffenfertigkeit: Kriegshammer
+Typ: Einhändig
+Erfordert:
+ 9 Stärke
 
-Combat abilities:
-– Each successful hit has a 5% chance to deal additional 1d4 cold damage
-– Each successful hit has a 5% chance to deal additional 1d4 piercing damage
-– Each successful hit has a 5% chance to lower target's cold resistance by 10% for 3 rounds (no saving throw)
-– Only one of the combat abilities above may trigger on a single hit
+Gewicht: 4~
+
+@1172 = ~Morgenstern~
+
+@1173 = ~Der Kugelfisch +3~
+
+@1174 = ~Dieser Morgenstern wurde von einem Kleriker der Umberlee gesegnet. Sein Name ist offensichtlich von seinem rundlichen Kopf inspiriert. Manche sagen, selbst die Meereskönigin lächle über diese Waffe und ihren Namen.
+
+EIGENSCHAFTEN:
+
+Ausgerüstete Fähigkeiten:
+– Kälteresistenz: +25%
+
+Kampffähigkeiten:
+– Jeder erfolgreiche Treffer hat eine 5% Chance, zusätzlich 1W4 Kälteschaden zu verursachen
+– Jeder erfolgreiche Treffer hat eine 5% Chance, zusätzlich 1W4 Stichschaden zu verursachen
+– Jeder erfolgreiche Treffer hat eine 5% Chance, die Kälteresistenz des Ziels für 3 Runden um 10% zu senken (kein Rettungswurf)
+– Pro Treffer kann nur eine der obigen Fähigkeiten ausgelöst werden
 
 THAC0: +3
-Damage: 2d4+3 (crushing)
-Speed Factor: 4
-Proficiency Type: Flail/Morning Star
-Type: One-handed
-Requires:
- 11 Strength
+Schaden: 2W4+3 (Wucht)
+Initiativefaktor: 4
+Waffenfertigkeit: Flegel/Morgenstern
+Typ: Einhändig
+Erfordert:
+ 11 Stärke
 
-Weight: 8~
-@1175 = ~Plate Armor~
-@1176 = ~Duskwood Plate~
-@1177 = ~This finely crafted suit of armor is fashioned from layered duskwood. While it offers the solid defense of conventional plate, it remains lighter and more attuned to natural energy. 
-Its organic structure allows even single-class druids to don it without breaking their sacred oaths.
+Gewicht: 8~
+@1175 = ~Plattenrüstung~
 
-STATISTICS:
+@1176 = ~Dämmerwald-Plattenpanzer~
 
-Equipped abilities:
-– Fire Resistance: -10%
-– Electricity Resistance: +10%
-– Saving Throws vs. Death: +1
+@1177 = ~Diese kunstvoll gefertigte Rüstung besteht aus geschichteten Platten aus Dämmerholz. Obwohl sie den soliden Schutz einer gewöhnlichen Plattenrüstung bietet, ist sie leichter und stärker mit den Energien der Natur verbunden.  
+Ihre organische Struktur erlaubt es selbst einklassigen Druiden, sie zu tragen, ohne ihre heiligen Gelübde zu brechen.
 
-Armor Class: 3 (0 vs. slashing)
-Requires:
- 8 Strength
+EIGENSCHAFTEN:
 
-Weight: 20~
-@1178 = ~Potion~
-@1179 = ~Potion of Natural Attunement~
-@1180 = ~This murky green potion exudes the scent of wet bark and crushed leaves. It was designed by druids who believe that all true growth comes through greater sacrifice.
+Ausgerüstete Fähigkeiten:
+– Feuerresistenz: –10%
+– Elektrizitätsresistenz: +10%
+– Rettungswürfe gegen Tod: +1
 
-Upon drinking the entire potion, the user feels a subtle shift in <PRO_HISHER> being—strength wanes, but something healing stirs. In surrendering brute force, the body opens to the quiet powers of rejuvenation.
+Rüstungsklasse: 3 (0 gegen Hieb)
+Erfordert:
+ 8 Stärke
 
-Such potions are rare and respected, for they teach what every tree already knows: that what is shed may nourish something greater.
+Gewicht: 20~
 
-STATISTICS:
+@1178 = ~Trank~
 
-Charge ability:
-– Drinking the potion permanently lowers the character’s Strength by 1, but grants Cure Serious Wounds or Neutralize Poison (50% chance each) as an innate ability
+@1179 = ~Trank der natürlichen Einstimmung~
 
-Weight: 1~
-@1181 = ~Wand~
-@1182 = ~Wand of Goodberry~
-@1183 = ~This slender wand appears to have grown rather than been carved—it is shaped from a single twisting branch, smooth to the touch and still warm with life. At either end, tiny berries have sprouted, glowing faintly with druidic magic.
+@1180 = ~Dieser trübe, grünliche Trank verströmt den Geruch von nasser Rinde und zerdrückten Blättern. Er wurde von Druiden entwickelt, die glauben, dass alles wahre Wachstum aus größerem Opfer erwächst.
 
-Though humble in form, this wand holds the power to conjure Goodberries, just like the druidic spell. These enchanted fruits offer nourishment, restore vitality, and provide comfort in the wilds—each a small gift of peace in a world too often torn by blade and flame.
+Wer den Trank vollständig trinkt, spürt eine feine Veränderung in <PRO_HISHER> Wesen – die rohe Kraft schwindet, doch etwas Heilendes regt sich. Indem der Körper seine bloße Stärke aufgibt, öffnet er sich den stillen Kräften der Erneuerung.
 
-STATISTICS:
+Solche Tränke sind selten und werden mit Respekt behandelt, denn sie lehren, was jeder Baum bereits weiß: Dass das, was abgestreift wird, etwas Größeres nähren kann.
 
-– May cast Goodberry once per charge
+EIGENSCHAFTEN:
 
-Requires:
- 9 Wisdom
+Fähigkeit (Aufladung):
+– Beim Trinken verliert der Charakter dauerhaft 1 Punkt Stärke, erhält jedoch entweder *Schwere Wunden heilen* oder *Gift neutralisieren* (je 50 % Chance) als angeborene Fähigkeit.
 
-Weight: 1~
+Gewicht: 1~
 
-@1184 = ~Face of the Forest~
-@1185 = ~This mask resembles a serene face—neither elf nor human, but something older. By donning the mask, the wearer feels the quiet strength of the forest. In the forest, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
+@1181 = ~Zauberstab~
 
-STATISTICS:
+@1182 = ~Zauberstab der Guten Beere~
 
-Equipped abilities:
-– Armor Class: +1
-– Regenerates 3 Hit Points per round while within a forest.
-– Protects against critical hits
+@1183 = ~Dieser schlanke Zauberstab scheint eher gewachsen als geschnitzt zu sein – er besteht aus einem einzelnen, gedrehten Zweig, der sich glatt anfühlt und noch immer warm vom Leben ist. An beiden Enden sind kleine Beeren gewachsen, die schwach mit druidischer Magie glimmen.
 
-Weight: 1~
-@1186 = ~Chestnut Bullet +2~
-@1187 = ~These magically hardened sling bullets are made from wild chestnuts—still bearing their natural spines. Originally enchanted by a halfling to scare off a pack of hungry goblins, they’ve since found favor with pranksters and wanderers across the Western Heartlands. Despite their humble appearance, they strike with surprising force—and a sting nobody will soon forget.
+Obwohl er unscheinbar wirkt, besitzt dieser Stab die Macht, Gute Beeren hervorzubringen – genau wie der gleichnamige druidische Zauber. Diese verzauberten Früchte nähren, stellen Lebenskraft wieder her und spenden Trost in der Wildnis – jedes von ihnen ein kleines Geschenk des Friedens in einer Welt, die allzu oft von Stahl und Flammen zerrissen wird.
 
-STATISTICS:
+EIGENSCHAFTEN:
+
+– Kann pro Aufladung *Gute Beeren* wirken
+
+Erfordert:
+ 9 Weisheit
+
+Gewicht: 1~
+
+@1184 = ~Gesicht des Waldes~
+
+@1185 = ~Diese Maske zeigt ein ruhiges Gesicht – weder elfisch noch menschlich, sondern etwas Älteres. Wer sie aufsetzt, spürt die stille Kraft des Waldes. In Wäldern belebt ihre Magie das Blut und heilt kleine Wunden. Die natürlichen Fasern der Maske verhärten sich bei Gefahr und bieten sowohl körperlichen Schutz als auch eine unheimliche Widerstandskraft gegen tödliche Treffer.
+
+EIGENSCHAFTEN:
+
+Ausgerüstete Fähigkeiten:
+– Rüstungsklasse: +1
+– Regeneriert 3 Trefferpunkte pro Runde, solange sich der Träger in einem Wald befindet
+– Schützt vor kritischen Treffern
+
+Gewicht: 1~
+
+@1186 = ~Kastaniengeschoss +2~
+
+@1187 = ~Diese magisch gehärteten Schleudergeschosse bestehen aus wilden Kastanien – noch immer mit ihren natürlichen Stacheln versehen. Ursprünglich von einem Halbling verzaubert, um eine Bande hungriger Goblins zu vertreiben, erfreuen sie sich inzwischen unter Scherzkeksen und Wanderern in den Westlichen Herzlanden großer Beliebtheit. Trotz ihres unscheinbaren Aussehens treffen sie mit überraschender Wucht – und einem Stich, den man so schnell nicht vergisst.
+
+EIGENSCHAFTEN:
 
 THAC0: +2
-Damage: 1d4+3 (missile), +2 piercing damage
-Launcher: Sling
+Schaden: 1W4+3 (Geschoss), +2 Stichschaden
+Abschussgerät: Schleuder
 
-Weight: 0~
-@1188 = ~This ancient elven armor has long since seen its prime. Once finely crafted and bearing the elegance of its people, it is now dulled, cracked, and fragile with age. Whatever enchantments or strength it once held have faded to dust, leaving only a shell unfit for battle.
+Gewicht: 0~
 
-STATISTICS:
+@1188 = ~Diese uralte elfische Rüstung hat ihre besten Tage längst hinter sich. Einst kunstvoll gefertigt und von der Eleganz ihres Volkes geprägt, ist sie nun stumpf, rissig und vom Zahn der Zeit gezeichnet. Welche Verzauberungen oder Stärke sie einst besessen haben mag, sind zu Staub zerfallen und haben nur eine leere Hülle zurückgelassen, die für den Kampf unbrauchbar ist.
 
-Weight: 20~
-@1189 = ~Jagged Script~
-@1190 = ~The script is crude and jagged, yet disturbingly deliberate. It reads:
+EIGENSCHAFTEN:
 
-Patience, patience... centuries of it, and still the prize lies just beyond my reach. The elf’s flesh, locked tight by foolish wards. But even the strongest seal can be undone by mortal hands too curious for their own good.
-Find one. Any one. Whisper promises. Let them break the seal on her tomb for me.
-Then... I shall have a body again. A perfect one. A vessel worthy of my hunger.~
-@1191 = ~Plaguestaff~
-@1192 = ~Carved from the heartwood of a long-dead tree, this staff radiates a faint odor of decay. It is said to have been gifted by Talona herself to a mortal champion whose very touch brought weakness and fever. The Plaguestaff does not strike to kill swiftly; it spreads languor, sickness, and inevitability—until the victim's strength falters entirely.
+Gewicht: 20~
 
-STATISTICS:
+@1189 = ~Zackige Schrift~
 
-Equipped abilities:
-– +2 bonus to Saving Throws vs. Death
+@1190 = ~Die Schrift ist grob und zackig, doch beunruhigend bewusst gesetzt. Sie lautet:
 
-Combat abilities:
-– On Hit: 5% chance to inflict Withering Sickness – target must Save vs. Death or lose 2 Strength for 1 turn (stacking)
+Geduld, Geduld ... Jahrhunderte davon, und doch liegt der Preis noch immer knapp außerhalb meiner Reichweite. Das Fleisch der Elfe, fest verschlossen durch törichte Bannungen. Doch selbst das stärkste Siegel kann durch sterbliche Hände gebrochen werden, die zu neugierig für ihr eigenes Wohl sind.
+Finde einen. Irgendeinen. Flüstere Versprechen. Lass ihn das Siegel ihres Grabes für mich brechen.
+Dann ... werde ich wieder einen Körper haben. Einen vollkommenen. Ein Gefäß würdig meines Hungers.~
 
-Charge abilities:
-– Poison Strike (1/day): Target suffers 1 poison damage per second for 6 seconds (Save vs. Death at +1 negates)
+@1191 = ~Seuchenstab~
+
+@1192 = ~Aus dem Kernholz eines lange toten Baumes geschnitzt, verströmt dieser Stab einen schwachen Geruch von Verfall. Man sagt, Talona selbst habe ihn einst einem sterblichen Champion geschenkt, dessen bloße Berührung Schwäche und Fieber brachte. Der Seuchenstab tötet nicht schnell; er verbreitet Mattigkeit, Krankheit und Unausweichlichkeit – bis die Kraft seines Opfers vollständig erlischt.
+
+EIGENSCHAFTEN:
+
+Ausgerüstete Fähigkeiten:
+– +2 Bonus auf Rettungswürfe gegen Tod
+
+Kampffähigkeiten:
+– Bei Treffer: 5 % Chance auf „Verzehrende Krankheit“ – Ziel muss Rettungswurf gegen Tod bestehen oder verliert 1 Runde lang 2 Punkte Stärke (stapelbar)
+
+Fähigkeiten (Aufladungen):
+– Giftstoß (1× pro Tag): Ziel erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde (Rettungswurf gegen Tod bei +1 negiert)
 
 THAC0: +3
-Damage: 1d6+3 (crushing)
-Speed Factor: 1
-Proficiency Type: Quarterstaff
-Type: Two-handed
-Requires:
- 5 Strength
+Schaden: 1W6+3 (Wucht)
+Initiativefaktor: 1
+Waffenfertigkeit: Kampfstab
+Typ: Zweihändig
+Erfordert:
+ 5 Stärke
 
-Weight: 3~
-@1193 = ~Arrows of Charming~
-@1194 = ~These finely crafted arrows are unlike any of mundane make. Their tips are delicately shaped into hearts of polished coral, glimmering faintly in the light. When loosed, they seek to sway the will of the target, drawing them toward the archer’s cause.
+Gewicht: 3~
+// itm files
 
-STATISTICS:
+@1193 = ~Pfeile der Betörung~
 
-Combat abilities:
-– Target must save vs. Spell or be charmed for 5 rounds
+@1194 = ~Diese kunstvoll gefertigten Pfeile sind von keiner gewöhnlichen Machart. Ihre Spitzen sind zu kleinen Herzen aus polierter Koralle geformt, die im Licht schwach schimmern. Wenn sie abgeschossen werden, versuchen sie den Willen ihres Ziels zu beugen und es auf die Seite des Schützen zu ziehen.
+
+EIGENSCHAFTEN:
+
+Kampffähigkeiten:
+– Ziel muss Rettungswurf gegen Zauber bestehen oder wird für 5 Runden betört
 
 THAC0: +1
-Damage: 0 (missile)
-Launcher: Bow
+Schaden: 0 (Geschoss)
+Abschussgerät: Bogen
 
-Weight: 0~
-@1195 = ~Poisoned Bullets~
-@1196 = ~These sling bullets are coated in a thick, foul-smelling contact poison. Upon impact, it seeps into the wound, causing a grievous affliction.
+Gewicht: 0~
 
-STATISTICS:
+@1195 = ~Giftkugeln~
 
-Combat abilities:
-– Hit target must save vs. Death or suffer 2 points of poison damage per second for 10 seconds
+@1196 = ~Diese Schleudergeschosse sind mit einem dicken, übelriechenden Kontaktgift überzogen. Beim Aufprall dringt es in die Wunde ein und verursacht eine schwere Vergiftung.
+
+EIGENSCHAFTEN:
+
+Kampffähigkeiten:
+– Ziel muss Rettungswurf gegen Tod bestehen oder erleidet 10 Sekunden lang 2 Punkte Giftschaden pro Sekunde
 
 THAC0: +1
-Damage: 1d4+1
-Damage type: Missile
-Launcher: Sling
+Schaden: 1W4+1
+Schadensart: Geschoss
+Abschussgerät: Schleuder
 
-Weight: 0~
-@1197 = ~Witherbranch~
-@1198 = ~This cruel club appears to be nothing more than a gnarled, blackened bough, its surface split and twisted as if writhing in pain. It was cut from a tree deep within a plague-ridden grove, where Talona’s breath had stilled all life. Its thorns gleam with a dull green patina — residue from years of venomous anointing.
+Gewicht: 0~
 
-STATISTICS:
+@1197 = ~Verdorrter Zweig~
 
-Equipped abilities:
-–  Talona's Kiss: While the wielder is poisoned, <PRO_HESHE> gains a +5 bonus to all saving throws and attack rolls until the poison subsides.  
+@1198 = ~Diese grausame Keule scheint nichts weiter als ein knorriger, geschwärzter Ast zu sein, dessen Oberfläche aufgespalten und verdreht wirkt, als habe sie Schmerzen erlitten. Sie wurde von einem Baum tief in einem seuchenverseuchten Hain geschnitten, wo Talonas Atem alles Leben erstickt hatte. Ihre Dornen tragen eine stumpfgrüne Patina – Rückstände jahrelanger Giftsegnungen.
 
-Combat abilities:
-– Hit target must save vs. Death or suffer 1 point of poison damage per second for 6 seconds in 50% of hits
+EIGENSCHAFTEN:
 
-THAC0: +3
-Damage: 1d6+3 (crushing)
-Speed Factor: 1
-Proficiency Type: Club
-Type: One-handed
-Requires:
- 5 Strength
+Ausgerüstete Fähigkeiten:
+– Talonas Kuss: Solange der Träger vergiftet ist, erhält <PRO_HESHE> +5 auf alle Rettungswürfe und Angriffswürfe, bis das Gift abgeklungen ist.
 
-Weight: 1~
-@1199 = ~Gauntlets of the Treant~
-@1200 = ~These massive gauntlets are formed of bark and living root, bound with strips of ironwood. Their surface shifts slightly, as if the gauntlets still draw strength from unseen soil. Druids tell that they were crafted in reverence to the treants of the Forest of Tethir, guardians as patient as the earth itself.
-When the wearer’s flesh is hardened with Barkskin, the gauntlets channel that living armor into raw strength, allowing the bearer to strike with the might of a towering oak.
-
-STATISTICS:
-
-Equipped abilities:
-– +2 Strength while Barkskin is active
-
-Weight: 2~
-@1201 = ~Amulet of Inner Stillness~
-@1202 = ~This plain wooden amulet, set with a single green pearl, bears no inscription. It is said to have been blessed in the still waters of Eldath. When silence falls upon its wearer, a deep inner peace rises instead, shielding the mind from all intrusive forces. Neither confusion nor charms, domination nor stunning magic can shake the quiet center of the soul.
-
-STATISTICS:
-
-Equipped abilities:
-– While Silenced: Immunity to Suggestion, Charm, Domination, Command, Sleep, Maze, Stun, Confusion and Psionic Blast.
-
-Weight: 1~
-@1203 = ~Honeymead of Duskwood Dell~
-@1204 = ~This heavy cask is filled with golden mead brewed by an Eldathyn monk in Duskwood Dell. The nectar carries the patient work of countless bees.
-
-The monk has entrusted you with this cask, asking that you deliver it to Samuel Thunderburp, proprietor of the Five Flagons in Athkatla. Once you have received payment, you are to return the gold to the monk so that it may serve the temples and gardens of Eldath.
-
-Weight: 1~
-@1205 = ~Cloak of a Thousand Stings~
-@1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells of smoke, wax, and wild honey.
-
-STATISTICS:
-
-Equipped abilities:
-– Armor Class: +1 vs. missiles and piercing weapons
-– Immunity to "Summon Insects" and "Insect Plague"
-
-Weight: 3~
-@1207 = ~This emerald-hued rose is a gift from Mythrien Sarath, the Watcher over Mythals. Each of its fragile petals glimmers with a light not of this world, as though echoing the lost wards of ancient elven cities.
-When a petal is plucked, a translucent sphere surrounds the bearer, shielding <PRO_HIMHER> from spells of lesser potency. Yet the gift is fleeting—when the last petal falls, the rose will crumble to dust.
-
-STATISTICS:
-
-Charge abilities:
-– Pluck a Petal: Grants immunity to spells of up to 5th level for 3 rounds
-– Limited number of uses; the rose vanishes when depleted
-
-Weight: 0~
-@1208 = ~Elminster's Ecologies: Appendix IVa~
-@1209 = ~Elminster's Ecologies: Appendix IVa
-
-This time-worn tome is written by the sage Elminster, and apparently part of a much larger body of work containing detailed studies of most of the strange creatures from around Faerûn. 
-
-The appendix seems to refer to newly-discovered variations on normal breeds of creatures. Of particular interest:
-
-"Will-o’-the-Wisps (Common)
-These pale, floating lights haunt marshes and ruins, feeding on fear. They lure travelers astray and strike with crackling bursts of lightning. Hard to harm with steel or spell, they remain among the most treacherous of minor undead."
-
-"Will-o’-Wild
-A mutation born of unstable magic. Flickering in ever-changing flashes, these lights twist spells around them—wards collapse, surges erupt, enchantments go awry. They are most often found drifting in regions of wild magic."
-
-"Will-o’-Dead
-Spawn of the lifeless Weave, these wan globes feed not on fear, but on life force. They linger where magic itself has failed — in the barren places known as dead-magic zones."~
-@1210 = ~Essence of the Will-o’Dead~
-@1211 = ~A faintly glowing mote of pallid light, cold to the touch and unnervingly silent. Lore-whispers suggest that such an essence could one day serve to counter the emptiness where the Weave has failed.~
-@1212 = ~Essence of the Will-o’Wild~
-@1213 = ~This shimmering fragment pulses with chaotic hues, shifting from emerald to amber in an instant. It carries within it the untamed spark of wild magic, unpredictable yet potent. Some claim that such essence, properly bound, might shield its bearer from the turbulence of unstable Weave-fields.~ 
-@1214 = ~Manual of Peaceful Living~
-@1215 = ~Manual of Peaceful Living
-This contemplative tome  offers guidance on living a life of serenity and restraint. As with all such rare works, the book vanishes after a single use.
-
-STATISTICS:
-
-Attacks per Round: Reduced by 0.5 (permanently)
-Armor Class: Improved by 1 (permanently)
-Saving Throws: +1 bonus (permanently)
-Special: The book is consumed upon use
-Usage: Place into quick item slot
-
-Weight: 25~
-@1216 = ~Fairy Jar~
-@1217 = ~This crystal jar contains two tiny winged creatures - the Dell-Light Twins, the two fairies from Duskwood Dell, apparently. They appear fully conscious, peering out with curious eyes, their lips moving as if in constant conversation — though no sound escapes. The jar’s lid refuses to move, sealed by a magic older and subtler than any lock. Occasionally, one of the twins presses her hands against the inside, mouthing words the glass will not let through. Whether plea or mischief, it’s impossible to tell.
-
-The seal cannot be opened or broken by physical or magical means. The faeries within are alive but imprisoned, their magic suppressed by the vessel’s binding.
-
-Weight: 1~
-@1218 = ~Mirage’s Edge~
-@1219 = ~Forged by genies who sought to weave illusion and motion into one, this blade can wrap its wielder in shimmering reflections — turning the swordsman into a living mirage.
-
-STATISTICS:
-
-Charge abilities:
-– Mirror Image once per day
-  Duration: 1 turn
+Kampffähigkeiten:
+– Bei 50 % aller Treffer muss das Ziel einen Rettungswurf gegen Tod bestehen oder erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde
 
 THAC0: +3
-Damage: 1d8+3 (slashing)
-Speed Factor: 2
-Proficiency Type: Scimitar/Wakizashi/Ninjatō
-Type: One-handed
-Requires:
- 10 Strength
+Schaden: 1W6+3 (Wucht)
+Initiativefaktor: 1
+Waffenfertigkeit: Keule
+Typ: Einhändig
+Erfordert:
+ 5 Stärke
 
-Weight: 1~
-@1220 = ~Wish
+Gewicht: 1~
 
-Wish will fulfill literally the utterance of the caster. Thus, the actuality of the past, present, or future might be altered in some limited manner. The greater the wish, the greater the strain upon the fabric of reality, and the greater the chance of unwanted consequences.
+@1199 = ~Baumhirtenhandschuhe~
 
-Curiously, this particular scroll may be read by anyone — not merely those trained in the arcane arts. Its words are written in a language so simple, so clear, that even the unlearned might speak them aloud with ease. Almost too simple, in fact... too easy to believe.~
-@1221 = ~Wisdom point lost~
-@1222 = ~Torn Page I~
-@1223 = ~These torn and faded pages appear to be fragments from a much larger chronicle concerning the history of Myth Unnohyr. The ink is elven, the script elegant yet frayed by time:
+@1200 = ~Diese massiven Handschuhe bestehen aus Rinde und lebenden Wurzeln, zusammengehalten von Streifen aus Eisenholz. Ihre Oberfläche bewegt sich leicht, als zögen sie noch immer Kraft aus unsichtbarer Erde. Druiden erzählen, sie seien aus Ehrfurcht vor den Baumhirten des Waldes von Tethir geschaffen worden – Wächtern so geduldig wie der Wald  selbst.
 
-"From the Days of Founding - Year of the First Flowering
+Wenn der Träger durch "Rindenhaut" gehärtet ist, leiten die Handschuhe diese lebendige Rüstung in rohe Kraft um und verleihen Schlägen die Wucht einer mächtigen Eiche.
 
-And so was the City of Quiet Radiance laid upon the forest glade, where seven ley-lines met and the breeze whispered in the tongue of the ancients. The High Mages of Unnohyr bound the first stones with silver word and living root, and the skies turned blue and deep in their blessing.
+EIGENSCHAFTEN:
 
-Mythrien Sarath, Lord of Wards, cast down his gaze and was pleased. His touch fell like dew upon the high towers, and from that day forward the Mythal shielded the city with light and serenity. May all conflict break and wash away before our walls, the Founding Oath proclaimed.
+Ausgerüstete Fähigkeiten:
+– +2 Stärke solange *Rindenhaut* aktiv ist
 
-And for a time, so it was."
+Gewicht: 2~
 
-Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
-@1224 = ~Torn Page II~
-@1225 = ~These torn and faded pages appear to be fragments from a much larger chronicle concerning the history of Myth Unnohyr. The ink is elven, the script elegant yet frayed by time:
+@1201 = ~Amulett der inneren Stille~
 
-"In the height of Myth Unnohyr’s glory, an elven high mage sought to bind his soul to the city’s Mythal. He wished not for wisdom, nor for legacy — but for unending life, carried from vessel to vessel by the spell’s eternal weave. 
+@1202 = ~Dieses schlichte hölzerne Amulett, in das eine einzelne grüne Perle gefasst ist, trägt keine Inschrift. Man sagt, es sei in den stillen Wassern Eldaths gesegnet worden. Wenn Stille den Träger umgibt, erhebt sich stattdessen ein tiefer innerer Frieden, der den Geist gegen jede fremde Einflussnahme schützt. Weder Verwirrung noch Betörung, Beherrschung noch betäubende Magie vermögen das stille Zentrum der Seele zu erschüttern.
 
-Yet in doing so, he wounded the very heart of the Mythal. Life and death bled together, and when his body fell, the Mythal itself raised him anew — each time within another fallen elf.
-Thus was born the undying echo of a guardian who betrayed his own vow. His immortality became the city’s curse, and his rebirth its unending decay"
+EIGENSCHAFTEN:
 
-Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
-@1226 = ~Signet Ring of House Vemmil~
-@1227 = ~This opulent signet ring bears the crest of the Vemmil family, an ancient Amnian merchant line known for its wealth, political maneuvering, and staggering lack of humility. Among Amnian elites, its wearer is often greeted with smiles – genuine or not – and a careful counting of silverware.
+Angelegte Fähigkeiten:
+– Während der Träger verstummt ist: Immunität gegen Suggestion, Betörung, Beherrschung, Befehl, Schlaf, Irrgarten, Betäubung, Verwirrung und Psionischer Schock.
 
-STATISTICS:
+Gewicht: 1~
 
-Equipped abilities:
-– Immunity to poison
+@1203 = ~Honigmet aus dem Dämmerwaldtal~
 
-Charge abilities:
-– Cast Friends once per day
-  Area of Effect: self
+@1204 = ~Dieses schwere Fass ist mit goldenem Met gefüllt, gebraut von einem Eldathyn-Mönch im Dämmerwaldtal. Der Nektar trägt die geduldige Arbeit unzähliger Bienen in sich.
 
-Weight: 1~
-@1228 = ~Blade of Day and Night~
-@1229 = ~Forged in the elder days of Myth Unnohyr, this elegant longsword was once a ceremonial weapon of the elven guardians who served the Watcher Over Mythals. Known as the Blade of Day and Night, it was said to embody the balance between vigilance and rest, between the radiance of the sun and the quiet strength of moonlight.
+Der Mönch hat Euch dieses Fass anvertraut und Euch gebeten, es zu Samuel Donnerbauch, dem Wirt der Fünf Krüge in Athkatla, zu bringen. Sobald Ihr die Bezahlung erhalten habt, sollt Ihr das Gold zum Mönch zurückbringen, damit es den Tempeln und Gärten Eldaths zugutekommen kann.
 
-Legends tell that the sword shattered when the city’s protective mythal began to wane, its twin halves cast apart by opposing forces of light and shadow. 
+Gewicht: 1~
 
-Now reforged, the sword shifts its nature with the turning of the heavens. In daylight it burns with quiet resolve, keen and strong. Under moon and stars, it softens its radiance, guarding the bearer with calm and patience.
+@1205 = ~Mantel der tausend Stiche~
 
-STATISTICS:
+@1206 = ~Dieser Mantel aus grobem braunem Stoff ist von unzähligen kleinen Löchern durchsetzt, als hätte er lange Zeit als letzte Verteidigung gegen tausend Stiche und Pfeile gedient. Trotz seines mitgenommenen Aussehens summt der Stoff schwach vor schützender Magie. Er riecht nach Rauch, Wachs und wildem Honig.
 
-Equipped abilities:
-– During day and dawn: +1 THAC0 and +1 Damage
-– During night and dusk: +1 AC and +1 to all Saving Throws
+EIGENSCHAFTEN:
+
+Ausgerüstete Fähigkeiten:
+– Rüstungsklasse: +1 gegen Geschosse und Stichwaffen
+– Immunität gegen „Insekten beschwören“ und „Insektenplage“
+
+Gewicht: 3~
+
+@1207 = ~Diese smaragdgrüne Rose ist ein Geschenk von Mythrien Sarath, dem Wächter über die Mythale. Jedes ihrer zarten Blütenblätter schimmert in einem Licht, das nicht von dieser Welt zu stammen scheint, als echoe es die verlorenen Schutzzauber uralter elfischer Städte.
+
+Wird eines der Blütenblätter abgezupft, umgibt eine durchscheinende Sphäre den Träger und schützt <PRO_HIMHER> vor Zaubern geringerer Macht. Doch das Geschenk ist vergänglich — fällt das letzte Blatt, zerfällt die Rose zu Staub.
+
+EIGENSCHAFTEN:
+
+Fähigkeiten (Aufladungen):
+– Ein Blütenblatt pflücken: Verleiht Immunität gegen Zauber bis einschließlich Grad 5 für 3 Runden
+– Begrenzte Anzahl von Anwendungen; die Rose verschwindet, sobald alle Blätter verbraucht sind
+
+Gewicht: 0~
+
+@1208 = ~Elminsters Abhandlungen: Anhang IVa~
+
+@1209 = ~Elminsters Abhandlungen: Anhang IVa
+
+Dieses vom Zahn der Zeit gezeichnete Buch stammt aus der Feder des Weisen Elminster und scheint Teil eines weit größeren Werkes zu sein, das detaillierte Studien über viele der seltsamen Kreaturen Faerûns enthält.
+
+Der Anhang befasst sich offenbar mit neu entdeckten Varianten bekannter Kreaturen. Besonders bemerkenswert:
+
+„Irrlichter  
+Diese bleichen, schwebenden Lichter spuken durch Sümpfe und Ruinen und nähren sich von Furcht. Sie locken Reisende in die Irre und greifen mit knisternden Blitzen an. Schwer durch Stahl oder Zauber zu verletzen, zählen sie zu den tückischsten kleineren Untoten.“
+
+„Wildes Irrlicht  
+Eine Mutation, geboren aus instabiler Magie. In ständig wechselnden Blitzen flackernd, verdrehen diese Lichter die Zauber um sich herum — Schutzzauber brechen zusammen, magische Schübe brechen aus, Verzauberungen geraten außer Kontrolle. Man findet sie meist in Regionen unbändiger Magie.“
+
+„Todes-Irrlicht  
+Geschöpfe aus Zonen toter Magie. Die bleichen Kugeln nähren sich nicht von Furcht, sondern von Lebenskraft. Sie verweilen dort, wo selbst die Magie versagt hat — in den Zonen toter Magie.“~
+
+@1210 = ~Essenz eines Todes-Irrlichts~
+
+@1211 = ~Ein schwach leuchtender Funke blassen Lichts, kalt bei Berührung und beunruhigend still. Überlieferungen besagen, dass eine solche Essenz dazu dienen könnte, die Leere auszugleichen, wo das Gewebe der Magie versagt hat.~
+
+@1212 = ~Essenz des Wild-Irrlichts~
+
+@1213 = ~Dieses schimmernde Fragment pulsiert in chaotischen Farben und wechselt im nächsten Augenblick von Grün zu Rot. In ihm lodert der ungezähmte Funke wilder Magie — unberechenbar und doch mächtig. Manche behaupten, eine solche Essenz könne, richtig gebunden, ihren Träger vor den Turbulenzen instabiler Weave-Felder schützen.~
+
+@1214 = ~Handbuch des friedlichen Lebens~
+
+@1215 = ~Dieses nachdenkliche Werk gibt Anleitung zu einem Leben in Gelassenheit und Selbstbeherrschung. Wie bei vielen solchen seltenen Schriften verschwindet das Buch nach einmaliger Verwendung.
+
+EIGENSCHAFTEN:
+
+Angriffe pro Runde: –0,5 (dauerhaft)
+Rüstungsklasse: +1 (dauerhaft)
+Rettungswürfe: +1 Bonus (dauerhaft)
+Besonderes: Das Buch wird bei Gebrauch verbraucht
+Benutzung: In einen Schnellgegenstands-Slot legen
+
+Gewicht: 25~
+
+@1216 = ~Feenglas~
+
+@1217 = ~Dieses Glasgefäß enthält zwei winzige geflügelte Wesen — die Zwielicht-Zwillinge, die beiden Feen aus dem Dämmerwaldtal. Sie blicken mit neugierigen Augen hinaus; ihre Lippen bewegen sich unaufhörlich, als führten sie ein endloses Gespräch — doch kein Laut dringt nach außen. Der Deckel des Gefäßes lässt sich nicht bewegen und ist durch eine Magie versiegelt, die älter und stärker ist als jedes gewöhnliche Schloss. Gelegentlich presst eine der Zwillinge die Hände gegen die Innenseite des Glases und formt Worte, die das Glas nicht hindurchlässt. Ob Bitte oder Schabernack — das lässt sich nicht sagen.
+
+Das Siegel kann weder mit Gewalt noch mit Magie geöffnet werden. Die Feen darin sind lebendig, jedoch gefangen; ihre Magie wird durch die Bindung des Gefäßes unterdrückt.
+
+Gewicht: 1~
+
+@1218 = ~Klinge der Fata Morgana~
+
+@1219 = ~Von Genies geschmiedet, die Illusion und Bewegung zu vereinen suchten, vermag diese Klinge ihren Träger in schimmernde Spiegelbilder zu hüllen — und denjenigen, der sie schwingt zu einer wandelnden Fata Morgana zu machen.
+
+EIGENSCHAFTEN:
+
+Fähigkeiten (Aufladungen):
+– Spiegelbild einmal pro Tag
+  Dauer: 1 Runde
 
 THAC0: +3
-Damage: 2d4+3 (slashing)
-Speed Factor: 5
-Proficiency Type: Bastard Sword
-Type: One-handed
-Requires:
- 11 Strength
+Schaden: 1W8+3 (Hieb)
+Initiativefaktor: 2
+Waffenfertigkeit: Krummsäbel/Wakizashi/Ninjatō
+Typ: Einhändig
+Erfordert:
+ 10 Stärke
 
-Weight: 7~
-@1230 = ~Part of a Blade~
-@1231 = ~This is part of a blade. The metal shimmers with a bluish hue, flecked with tiny motes that gleam like stars in the night sky. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
-@1232 = ~This is part of a blade. The metal gleams with a radiant golden light, bright as the rays of the sun. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
-@1233 = ~Nightblade~
-@1234 = ~Dayblade~
-@1235 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Nightblade. The metal shimmers with a bluish hue, flecked with tiny motes that gleam like stars in the night sky. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
-@1236 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Dayblade. The metal gleams with a radiant golden light, bright as the rays of the sun. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+Gewicht: 1~
 
-@1237 = ~Marrik, 
-we’re behind the Temple of Helm in the Bridge District after dark, like every night. Bring the token, and you’ll get what you’ve been asking for.~
-@1238 = ~Old Coin~
-@1239 = ~This worn coin bears the faint image of an elderly man with a solemn expression. The details have long since faded — the nose smoothed by countless hands, the edges dulled by time. There are no markings of mint or value, and yet it feels heavier than it should, as if it remembers the years it has passed through. Whoever pressed it into shape is long gone, and whatever purpose it once held has long been forgotten.~
+@1220 = ~Wunsch
 
-@1240 = ~Bottle of Pixie Dust~
-@1241 = ~This small bottle contains a handful of shimmering pixie dust that can be tossed into the air. Any ally touched by the dust becomes invisible (the dust spreads in a radius of about 15 ft). Of course, the invisible creature is not magically silenced, and certain other conditions can still reveal it. Even allies cannot see the invisible creature or its gear unless they are normally able to see invisible things or employ magic to do so. Items dropped or set down by the invisible creature become visible, while items picked up vanish if tucked into the creature’s clothing or pouches.
+Der Zauber Wunsch erfüllt wörtlich die Worte seines Anwenders. Dadurch kann die Wirklichkeit von Vergangenheit, Gegenwart oder Zukunft in gewissem Maße verändert werden. Je größer der Wunsch, desto stärker wird das Gefüge der Realität belastet — und desto größer ist die Gefahr unerwünschter Folgen.
 
-The dust’s magic lasts until it is dispelled, willingly ended, or broken by an attack. It can also fade naturally after 24 hours. The invisible being may move freely and cast defensive spells, but any offensive action immediately ends the effect — though it still allows the first strike to go unseen.~
-@1242 = ~Arrow of healing~
-@1243 = ~These arrows are an invention of Eldath’s faithful. Each shaft bears a small vial of sanctified water drawn from a sacred spring. When the arrow strikes, the vial shatters, releasing a gentle burst of divine essence that seeps into the wounded flesh of its target.
+Merkwürdigerweise kann diese besondere Schriftrolle von jedem gelesen werden — nicht nur von jenen, die in den arkanen Künsten geschult sind. Ihre Worte sind in einer Sprache verfasst, so einfach und klar, dass selbst Ungelehrte sie laut sprechen können. Beinahe zu einfach sogar … zu gut, um wahr zu sein.~
 
-Though the arrows are crafted for healing, even a gentle strike can bruise or cut when loosed from a powerful bow — a small price to pay for the healing they bestow.
+@1221 = ~Weisheitspunkt verloren~
 
-STATISTICS:
+@1222 = ~Zerrissene Seite I~
 
-THAC0: +1 
-Launcher: Bow
-Special: Restores 4d6 Hit Points to the creature struck
+@1223 = ~Diese zerfetzten und verblichenen Seiten scheinen Fragmente einer weit größeren Chronik über die Geschichte von Myth Unnohyr zu sein. Die Tinte ist elfisch, die Schrift elegant, doch vom Zahn der Zeit gezeichnet:
 
-Weight: 0~
-@1244 = ~Axe of Apologies~
-@1245 = ~This magical battle axe bears the image of an orc. Once wielded by the Odonti, a reclusive clan of peaceful orcs from the Unapproachable East who venerate Eldath, it served as a symbol of regret.
+„Aus den Tagen der Gründung – Jahr der ersten Blüte
 
-The axe whispers a soft "Sorry!" each time it strikes a target. Unfortunately, these apologies weigh heavier on the wielder than on the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in battle.
+So wurde die Stadt der stillen Strahlkraft auf einer Waldlichtung errichtet, wo sieben Winde zusammentrafen und in der Sprache der Alten flüsterten. Die Hochmagier von Unnohyr banden die ersten Bäume mit silbernem Wort und lebender Wurzel, und der Himmel färbte sich tiefblau in diesem Segen.
 
-When the bearer is wounded, though, the axe becomes sometimes useful in combat, granting the wielder an Eldathyn blessing.
+Mythrien Sarath, Herr aller Mythale, ließ seinen Blick herabfallen und war zufrieden. Seine Berührung fiel wie Tau auf die hohen Türme, und von diesem Tag an schützte der Mythal die Stadt mit Licht und Gelassenheit. Möge aller Streit an diesen Mauern zerbrechen und fortgespült werden. So lautete der Schwur der Gründung.
 
+Und für eine lange Zeit war es auch so.“
 
-STATISTICS:
+Auch wenn diese Seiten für Eure Aufgabe keinen unmittelbaren Nutzen haben, kann ihr Inhalt helfen, die tiefere Natur dessen zu begreifen, was hier einst geschah — und was verloren ging.~
 
-Equipped abilities: 
-– 25% chance to cast Cure Moderate Wounds on the wielder when hit
+@1224 = ~Zerrissene Seite II~
 
-Combat abilities:
-– Each successful hit causes the wielder to suffer a cumulative –2 THAC0 for 2 rounds
+@1225 = ~Diese zerfetzten und verblichenen Seiten scheinen Fragmente einer weit größeren Chronik über die Geschichte von Myth Unnohyr zu sein. Die Tinte ist elfisch, die Schrift elegant, doch vom Zahn der Zeit gezeichnet:
+
+„Auf dem Höhepunkt der Macht von Myth Unnohyr suchte ein elfischer Hochmagier seine Seele an den Mythal der Stadt zu binden. Er begehrte weder Weisheit noch Vermächtnis — sondern unendliches Leben, getragen von Gefäß zu Gefäß durch das ewige Gewebe des Zaubers.
+
+Doch indem er dies tat, verwundete er das Herz des Mythals selbst. Leben und Tod begannen ineinander zu fließen, und als sein Körper zerfiel, erhob der Mythal ihn erneut — jedes Mal im Körper eines anderen gefallenen Elfen.
+
+So entstand das unsterbliche Echo eines Wächters, der seinen eigenen Schwur verraten hatte. Seine Unsterblichkeit wurde zum Fluch der Stadt, und seine Wiedergeburt zu ihrem endlosen Verfall.“
+
+Auch wenn diese Seiten für Eure Aufgabe keinen unmittelbaren Nutzen haben, kann ihr Inhalt helfen, die tiefere Natur dessen zu begreifen, was hier einst geschah — und was verloren ging.~
+
+@1226 = ~Siegelring des Hauses Vemmil~
+
+@1227 = ~Dieser prächtige Siegelring trägt das Wappen der Familie Vemmil, einer alten amnischen Händlerlinie, die für ihren Reichtum, ihr politisches Geschick und ihren erstaunlichen Mangel an Bescheidenheit bekannt ist. Unter den Eliten Amns wird sein Träger häufig mit einem Lächeln begrüßt — ob ehrlich oder nicht — während gleichzeitig sorgfältig das Silberbesteck gezählt wird.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Immunität gegen Gift
+
+Fähigkeiten (Aufladungen):
+– Kann einmal pro Tag Freunde wirken
+  Wirkungsbereich: Selbst
+
+Gewicht: 1~
+
+@1228 = ~Klinge von Tag und Nacht~
+
+@1229 = ~In den frühen Tagen von Myth Unnohyr geschmiedet, war dieses elegante Langschwert einst eine Zeremonialwaffe der elfischen Krieger, die dem Wächter der Mythale dienten. Als Klinge von Tag und Nacht bekannt, sollte sie das Gleichgewicht zwischen Wachsamkeit und Ruhe verkörpern — zwischen der Wärme der Sonne und der stillen Kraft des Mondes.
+
+Legenden berichten, dass das Schwert zerbrach, als der schützende Mythal der Stadt zu schwinden begann, und seine beiden Hälften durch entgegengesetzte Kräfte von Licht und Schatten voneinander getrennt wurden.
+
+Nun neu geschmiedet, verändert die Klinge ihre Natur mit dem Lauf des Himmels. Bei Tageslicht brennt sie mit stiller Entschlossenheit, scharf und kraftvoll. Unter Mond und Sternen mildert sie ihr Leuchten und schützt ihren Träger mit Gelassenheit und Geduld.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Bei Tag und Morgendämmerung: +1 THAC0 und +1 Schaden
+– Bei Nacht und Abenddämmerung: +1 RK und +1 auf alle Rettungswürfe
+
+THAC0: +3
+Schaden: 2W4+3 (Hieb)
+Initiativefaktor: 5
+Waffenfertigkeit: Bastardschwert
+Typ: Einhändig
+Erfordert:
+ 11 Stärke
+
+Gewicht: 7~
+
+@1230 = ~Teil einer Klinge~
+
+@1231 = ~Dies ist ein Teil einer Klinge. Das Metall schimmert in einem bläulichen Farbton, durchzogen von winzigen Funken, die wie Sterne am Nachthimmel glitzern. Ohne die andere Hälfte des Schwertes — und jemanden, der geschickt genug ist, beide Teile wieder zusammenzuschmieden — ist dieses Stück von geringem Nutzen.~
+
+@1232 = ~Dies ist ein Teil einer Klinge. Das Metall leuchtet in strahlendem Gold, hell wie die Strahlen der Sonne. Ohne die andere Hälfte des Schwertes — und jemanden, der geschickt genug ist, beide Teile wieder zusammenzuschmieden — ist dieses Stück von geringem Nutzen.~
+
+@1233 = ~Nachtklinge~
+
+@1234 = ~Tagklinge~
+
+@1235 = ~Dies ist ein Teil eines legendären elfischen Schwertes, das als „Klinge von Tag und Nacht“ bekannt ist. Dieses Fragment ist die Nachtklinge. Das Metall schimmert in einem bläulichen Farbton, durchzogen von winzigen Funken, die wie Sterne am Nachthimmel glitzern. Ohne die andere Hälfte des Schwertes — und jemanden, der geschickt genug ist, beide Teile wieder zusammenzuschmieden — ist dieses Stück von geringem Nutzen.~
+
+@1236 = ~Dies ist ein Teil eines legendären elfischen Schwertes, das als „Klinge von Tag und Nacht“ bekannt ist. Dieses Fragment ist die Tagklinge. Das Metall leuchtet in strahlendem Gold, hell wie die Strahlen der Sonne. Ohne die andere Hälfte des Schwertes — und jemanden, der geschickt genug ist, beide Teile wieder zusammenzuschmieden — ist dieses Stück von geringem Nutzen.~
+
+@1237 = ~Marrik,
+
+wir sind wie jede Nacht nach Einbruch der Dunkelheit hinter dem Tempel des Helm im Brückenviertel. Bring das Zeichen mit, dann bekommst du, worum du uns gebeten hast.~
+
+@1238 = ~Alte Münze~
+
+@1239 = ~Diese abgenutzte Münze trägt das schwache Bild eines älteren Mannes mit ernstem Ausdruck. Die Details sind längst verblasst — die Nase von unzähligen Händen geglättet, die Ränder im Laufe der Zeit abgestumpft. Es gibt keine Prägung, die auf Münzstätte oder Wert hinweist, und doch wirkt sie schwerer, als sie sein sollte, als trüge sie die Erinnerung an all die Jahre, die sie durch Hände gewandert ist. Wer sie einst geprägt hat, ist längst vergessen, ebenso wie der Zweck, den sie einst erfüllte.~
+
+@1240 = ~Fläschchen mit Feenstaub~
+
+@1241 = ~Dieses kleine Fläschchen enthält eine Handvoll schimmernden Feenstaubs, der in die Luft gestreut werden kann. Jeder Verbündete, der von dem Staub berührt wird, wird unsichtbar. Natürlich wird die unsichtbare Kreatur dadurch nicht zum Schweigen gebracht, und bestimmte Umstände können sie weiterhin verraten. Selbst Verbündete können die unsichtbare Kreatur oder ihre Ausrüstung nicht sehen, es sei denn, sie sind gewöhnlich in der Lage, Unsichtbares wahrzunehmen oder verwenden entsprechende Magie. Gegenstände, die von der unsichtbaren Kreatur fallen gelassen oder abgelegt werden, werden sichtbar; Gegenstände, die sie aufnimmt, verschwinden, sobald sie in Kleidung oder Beutel gesteckt werden.
+
+Die Magie des Staubs hält an, bis sie gebannt, freiwillig beendet oder durch einen Angriff gebrochen wird. Sie kann auch nach 24 Stunden von selbst vergehen. Das unsichtbare Wesen kann sich frei bewegen und defensive Zauber wirken, doch jede offensive Handlung beendet den Effekt sofort — auch wenn der erste Schlag noch aus dem Verborgenen erfolgt.~
+
+@1242 = ~Heilpfeil~
+
+@1243 = ~Diese Pfeile sind eine Erfindung der Gläubigen Eldaths. Jeder Schaft trägt ein kleines Fläschchen mit geweihtem Wasser aus einer heiligen Quelle. Wenn der Pfeil sein Ziel trifft, zerbricht das Fläschchen und setzt einen sanften Schwall göttlicher Essenz frei, der in das verwundete Fleisch des Getroffenen einsickert.
+
+Obwohl die Pfeile zur Heilung bestimmt sind, kann selbst ein sanfter Treffer Prellungen oder kleine Wunden verursachen, wenn er aus einem starken Bogen abgeschossen wird — ein geringer Preis für die Heilung, die sie spenden.
+
+EIGENSCHAFTEN:
+
+THAC0: +1
+Abschussgerät: Bogen
+Besonderes: Stellt bei dem getroffenen Ziel 4W6 Trefferpunkte wieder her
+
+Gewicht: 0~
+
+@1244 = ~Axt der Entschuldigungen~
+
+@1245 = ~Diese magische Streitaxt trägt das Abbild eines Orks. Einst wurde sie von den Odonti geführt, einem zurückgezogen lebenden Clan friedfertiger Orks aus dem Unzugänglichen Osten, die Eldath verehren. Dort galt sie als Symbol der Reue.
+
+Bei jedem Treffer flüstert die Axt ein leises "Entschuldigung!". Leider wiegt diese Reue für den Träger schwerer als für den Feind und erfüllt ihn mit einem unterschwelligen Schuldgefühl, das <PRO_HISHER> Konzentration im Kampf stört.
+
+Wenn der Träger jedoch verwundet wird, kann die Axt bisweilen nützlich sein und gewährt ihrem Besitzer einen Segen Eldaths.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– 25 % Chance, beim Treffer auf den Träger *Mittlere Wunden heilen* zu wirken
+
+Kampffähigkeiten:
+– Jeder erfolgreiche Treffer verursacht für den Träger einen kumulativen Malus von –2 auf THAC0 für 2 Runden
 
 THAC0: +2
-Damage: 1d8+2 (slashing)
-Speed Factor: 5
-Proficiency Type: Axe
-Type: One-handed
-Requires:
- 10 Strength
+Schaden: 1W8+2 (Hieb)
+Initiativefaktor: 5
+Waffenfertigkeit: Axt
+Typ: Einhändig
+Erfordert:
+ 10 Stärke
 
-Weight: 5~
-@1246 = ~Freewalker's sandals~
-@1247 = ~These simple leather sandals protect the wearer on <PRO_HISHER> peaceful journey. Favored by those who walk without violence and stop for no one, they ensure that no step need be delayed.
+Gewicht: 5~
 
-STATISTICS:
+@1246 = ~Sandalen des Freiwanderers~
 
-Equipped abilities:
-– Immune to Hold Person and Slow
+@1247 = ~Diese schlichten Ledersandalen schützen ihren Träger auf <PRO_HISHER> friedlicher Reise. Sie werden besonders von jenen geschätzt, die ohne Gewalt wandern und sich von niemandem aufhalten lassen. Mit ihnen wird kein Schritt vergeudet.
 
-Weight: 4
-~
-@1248 = ~Ring of Non-Detection~
-@1249 = ~Fashioned by a reclusive cabal, this simple band was designed to shield their agents from arcane prying. When worn, it shrouds the bearer in subtle counter-magic that prevents detection by spells.
+EIGENSCHAFTEN:
 
-STATISTICS:
+Angelegte Fähigkeiten:
+– Immunität gegen Personen festhalten und Verlangsamung
 
-Equipped abilities:
-– While hidden or invisible, the wearer is non-detectable by magical means such as Detect Invisibility and scrying
+Gewicht: 4~
 
-Weight: 0~
-@1250 = ~Blinding Powder~
-@1251 = ~This powder can be thrown at any creature within 40 ft. Upon impact, it bursts into a blinding cloud that affects all creatures caught within who fail to avert their eyes.
+@1248 = ~Ring der Unauffindbarkeit~
 
-STATISTICS:
+@1249 = ~Von einer zurückgezogen lebenden magischen Kabale gefertigt, sollte dieser schlichte Ring ihre Agenten vor arkaner Ausspähung schützen. Wird er getragen, hüllt er seinen Besitzer in eine subtile Gegenmagie, die ihn vor Entdeckungszaubern verbirgt.
 
-Blinds affected creatures (Save vs. Breath –4 negates)
-Duration: 1 turn
-Area of Effect: 15-ft. radius
+EIGENSCHAFTEN:
 
-Weight: 1~
-@1252 = ~Dark Amulet of Mythrien~
-@1253 = ~This amulet was fashioned through sinister Drow rites from shattered fragments of an ancient surface-elven necklace—very likely once a sacred pendant devoted to Mythrien Sarath. The purity it once held has long since been profaned. Whatever materials the Drow used in its creation... the process was undoubtedly cruel, and very, very bloody.
+Angelegte Fähigkeiten:
+– Während der Träger verborgen oder unsichtbar ist, kann er nicht durch magische Mittel wie "Unsichtbarkeit entdecken" oder andere magische Spähzauber aufgespürt werden
 
-Equipped abilities: 
-– Immunity to wild magic and dead magic zone effects in Myth Unnohyr
+Gewicht: 0~
 
-Weight: 0~
-@1254 = ~Spidersilk Boots~
-@1255 = ~These supple boots were crafted from spider-hide and reinforced with strands of consecrated silk. Worn by Vhaeraun’s surface scouts, they allow swift, silent movement through webs, roots, and magical snares alike.
-A subtle enchantment, woven in defiance of Lolth’s faithful and the children of the Seldarine, grants the wearer a faint defensive edge when facing elven foes.
+@1250 = ~Blendpulver~
 
-STATISTICS:
+@1251 = ~Dieses Pulver kann auf eine Kreatur geworfen werden. Beim Aufprall zerplatzt es zu einer blendenden Wolke, die alle Kreaturen in ihrem Bereich trifft, sofern sie nicht rechtzeitig die Augen schließen.
 
-Equipped abilities:
-– Immune to Entangle and Web
-– +2 AC and +2 Saving Throws vs. Elves 
-– Move Silently: +10%
-– Hide In Shadows: +10%
+EIGENSCHAFTEN:
 
-Weight: 4~
+– Blendet betroffene Kreaturen, denen ein Rettungswurf gegen Odemwaffen –4 misslingt
+– Dauer: 1 Runde
+– Wirkungsbereich: Radius von 5 Metern
+
+Gewicht: 1~
+
+@1252 = ~Dunkles Amulett des Mythrien~
+
+@1253 = ~Dieses Amulett wurde in finsteren Drow-Riten aus den zerbrochenen Fragmenten eines alten oberirdischen Elfenamuletts geschaffen – höchstwahrscheinlich einst ein heiliges Medaillon, das Mythrien Sarath geweiht war. Die Reinheit, die es einst besaß, ist längst entweiht. Welche Materialien die Drow auch bei seiner Herstellung verwendet haben mögen … der Vorgang war zweifellos grausam und sehr, sehr blutig.
+
+EIGENSCHAFTEN: 
+– Immunität gegen Effekte unbändiger Magie und gegen Zonen toter Magie in Myth Unnohyr
+
+Gewicht: 0~
+
+@1254 = ~Spinnenseidenstiefel~
+
+@1255 = ~Diese geschmeidigen Stiefel wurden aus Spinnenhaut gefertigt und mit Strängen geweihter Seide verstärkt. Getragen von Oberflächenspähern Vhaerauns, ermöglichen sie lautlose und schnelle Bewegung durch Netze, Wurzeln und magische Fesseln gleichermaßen.
+
+Eine feine Verzauberung – gewoben im Trotz gegen Lolths Getreue wie auch gegen die Kinder der Seldarine – verleiht dem Träger einen leichten defensiven Vorteil im Kampf gegen elfische Gegner.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Immunität gegen *Verstricken* und *Netz*
+– +2 RK und +2 Rettungswürfe gegen Elfen
+– Lautlos bewegen: +10 %
+– Im Schatten verbergen: +10 %
+
+Gewicht: 4~
 
 // script strings
-@2000 = ~Duskwood Dell~
-@2001 = ~Eldath, goddess of peace and calm waters~
-@2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~
-@2003 = ~As you approach the gate leading to the lower levels, you feel a flicker of magic. It seems the corrupted mythal does not reach into the depths—meaning your magic should function normally in the areas below.~
-@2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead magic.~
-@2005 = ~You must place both pieces of the necklace upon the anvil to reforge them into one.~
-@2006 = ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
-@2007 = ~Could it be you... my beloved, at last?~
-@2008 = ~The corrupted mythal does not reach this place.~
-@2009 = ~(You feel the pull of the berry-shaped Ioun stone towards the tower. It may be a sign you are now able to enter its walls.)~
-@2010 = ~(You do not have the berry-shaped Ioun stone. You can no longer enter the tower. Without the stone, the barrier is erected.)~
-@2011 = ~A small jeweler’s anvil rests atop a larger one. Fragments of fine chains lie scattered nearby, as though many necklaces were once forged here. Strangely, the anvil radiates strong magic that seems untouched by the corrupted mythal.~
-@2012 = ~None of the items in your inventory appear suitable for crafting a necklace upon this anvil.~
-@2013 = ~Magic seems to function normally within this area.~
-@2014 = ~This statue depicts an elven deity, but you find it difficult to recognize it.~
-@2015 = ~This statue portrays Mythrien Sarath, a nearly forgotten god once revered for his guardianship over Mythals.~
-@2016 = ~You recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
-@2017 = ~I AM THE POISON AND I SHALL DEVOUR YOU!~
-@2018 = ~You hear a faint sound rising from the cauldron. It seems that with the creature’s death, an antidote has formed within.~
-@2019 = ~Rose... it must be safe!~
-@2020 = ~Take it to Mythrien! Place it under his feet and reach for his helping hand!~
-@2021 = ~When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.~  
-@2022 = ~A statue of a young elven warrior-maiden, red roses blooming at her feet — the only plants untouched by the corrupted Mythal.~
-@2023 = ~It seems you require something else to forge an amulet that shields you from the Mythal—apparently, an essence.~
+// script strings
 
-@2024 = ~Blood... All I can see is blood!~
-@2025 = ~Free me! Please!~
-@2026 = ~(The yuan-ti is nowhere to be seen, but he couldn't have left Myth Unnohyr, he was too wounded for that.)~
-@2027 = ~You're in Myth Unnohyr again. The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
-@2028 = ~Something unsettling stirs in the north. To reach it, you must pass through the sanctuary once claimed by the priest of Talona.~
-@2029 = ~We should see our dryad friend first. From what I understand, she has the sword.~
-@2030 = ~We came for the Remembrance of the Myths, my friend. The High Priest knows about everything.~
-@2031 = ~Yes. I know. And I was told to give you the sword. Even though I believe it should stay here. With me.~
-@2032 = ~We do not have much choice.~
-@2033 = ~There is always a choice.~
-@2034 = ~Here. Take it. And I pray it won't become your doom. May Eldath watch over you.~
-@2035 = ~Now I will send you to the hidden entrance of Myth Unnohyr, <CHARNAME>.~
-@2036 = ~Farewell. May Eldath’s quiet breath shelter you.~
-@2037 = ~Find our enemy, <CHARNAME>. Find the wyrd and use this sword against it. It should also break the barrier and let you leave that damned place.~
-@2038 = ~We'll wait for your return.~
-@2039 = ~If anyone is to win this battle, it's you.~
-@2040 = ~The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
+@2000 = ~Dämmerwaldtal~
+@2001 = ~Eldath, Göttin des Friedens und der stillen Wasser~
+@2002 = ~Ein tiefes Gefühl von Frieden erfüllt diesen Ort. Ihr fühlt euch vollkommen außerstande, hier eine Waffe zu erheben.~
+@2003 = ~Als ihr euch dem Tor nähert, das zu den tieferen Ebenen führt, spürt ihr ein Flackern von Magie. Es scheint, als reiche der verderbte Mythal nicht in die Tiefen hinab — was bedeutet, dass Eure Magie in den Bereichen darunter normal wirken sollte.~
+@2004 = ~Als ihr die Ruinen der elfischen Stadt betretet, spürt ihr, wie sich die zerbrochenen Reste des Mythals um Euch winden — seine einst reine Magie nun verdreht zu einer unbeständigen Mischung aus wilder und toter Magie.~
+@2005 = ~Ihr müsst beide Teile der Halskette auf den Amboss legen, um sie wieder zu einem Ganzen zu schmieden.~
+@2006 = ~Mit Hilfe des magischen Ambosses gelingt es euch, die beiden Teile wieder zu einem einzigen Stück zusammenzuschmieden.~
+@2007 = ~Bist du es … mein Geliebter, endlich?~
+@2008 = ~Der verdorbene Mythal reicht nicht an diesen Ort.~
+@2009 = ~(Ihr spürt, wie der beerenförmige Ionenstein euch in Richtung des Turmes zieht. Vielleicht ist dies ein Zeichen, dass ihr nun seine Mauern betreten könnt.)~
+@2010 = ~(Ihr besitzt den beerenförmigen Ionenstein nicht. Ihr könnt den Turm nicht mehr betreten. Ohne den Stein ist die Barriere wieder errichtet.)~
+
+@2011 = ~Ein kleiner Juwelieramboss steht auf einem größeren Amboss. Fragmente feiner Ketten liegen verstreut in der Nähe, als wären hier einst viele Halsketten geschmiedet worden. Seltsamerweise strahlt der Amboss eine starke Magie aus, die vom verdorbenen Mythal unberührt zu sein scheint.~
+
+@2012 = ~Keiner der Gegenstände in eurem Inventar scheint geeignet zu sein, um auf diesem Amboss eine Halskette zu schmieden.~
+
+@2013 = ~In diesem Bereich scheint Magie normal zu funktionieren.~
+
+@2014 = ~Diese Statue zeigt eine elfische Gottheit, doch fällt es euch schwer, sie zu erkennen.~
+
+@2015 = ~Diese Statue stellt Mythrien Sarath dar, einen nahezu vergessenen Gott der Elfen, der einst als Hüter der Mythale verehrt wurde.~
+
+@2016 = ~Ihr erkennt diese Statue als Darstellung von Mythrien Sarath — einem beinahe vergessenen elfischen Gott.~
+
+@2017 = ~ICH BIN DAS GIFT, UND ICH WERDE EUCH VERSCHLINGEN!~
+
+@2018 = ~Ihr hört ein schwaches Geräusch aus dem Kessel aufsteigen. Es scheint, als habe sich mit dem Tod der Kreatur darin ein Gegengift gebildet.~
+
+@2019 = ~Die Rose … sie muss in Sicherheit sein!~
+
+@2020 = ~Bringt sie zu Mythrien! Legt sie zu seinen Füßen und greift nach seiner helfenden Hand!~
+
+@2021 = ~Als ihr euch den Ruinen nähert, bemerkt ihr einen Ankheg, der offenbar von diesem Ort angelockt wurde. Als die Kreatur euch bemerkt, greift sie sofort an.~
+
+@2022 = ~Eine Statue einer jungen elfischen Kriegerin — zu ihren Füßen blühen rote Rosen, die einzigen Pflanzen, die vom verdorbenen Mythal unberührt geblieben sind.~
+
+@2023 = ~Es scheint, dass ihr noch etwas anderes benötigt, um ein Amulett zu schmieden, das euch vor dem Mythal schützt — offenbar eine Essenz.~
+
+@2024 = ~Blut … alles, was ich sehe, ist Blut!~
+
+@2025 = ~Befreit mich! Bitte!~
+
+@2026 = ~(Der Yuan-Ti ist nirgends zu sehen, doch kann er Myth Unnohyr unmöglich verlassen haben — dazu war er zu schwer verwundet.)~
+
+@2027 = ~Ihr seid wieder in Myth Unnohyr. Der Weg hinter euch ist von einer Wand aus verschlungenem Pflanzenwuchs versperrt. Eure einzige Flucht liegt vor euch, durch das Herz der zerschmetterten Stadt.~
+
+@2028 = ~Im Norden regt sich etwas Beunruhigendes. Um dorthin zu gelangen, müsst ihr durch das Heiligtum gehen, das einst vom Priester Talonas beansprucht wurde.~
+
+@2029 = ~Wir sollten zuerst unsere Dryadenfreundin aufsuchen. Wenn ich es richtig verstanden habe, besitzt sie das Schwert.~
+
+@2030 = ~Wir sind wegen der Erinnerung der Mythen gekommen, mein Freund. Der Hohepriester weiß darüber Bescheid.~
+
+@2031 = ~Ja. Ich weiß. Und mir wurde gesagt, ich solle euch das Schwert geben. Auch wenn ich glaube, dass es hier bleiben sollte. Bei mir.~
+
+@2032 = ~Wir haben nicht viele Möglichkeiten.~
+
+@2033 = ~Es gibt immer eine Wahl.~
+
+@2034 = ~Hier. Nimm es. Und ich bete, dass es nicht dein Untergang wird. Möge Eldath über dich wachen.~
+
+@2035 = ~Nun werde ich euch zum verborgenen Eingang von Myth Unnohyr schicken, <CHARNAME>.~
+
+@2036 = ~Lebt wohl. Möge Eldaths stiller Atem euch schützen.~
+
+@2037 = ~Findet unseren Feind, <CHARNAME>. Findet das Wyrd und setzt dieses Schwert gegen es ein. Es sollte auch die Barriere brechen und euch erlauben, diesen verfluchten Ort zu verlassen.~
+
+@2038 = ~Wir warten auf eure Rückkehr.~
+
+@2039 = ~Wenn jemand diese Schlacht gewinnen kann, dann du.~
+
+@2040 = ~Der Weg hinter euch ist von einer Wand aus verschlungenem Pflanzenwuchs versperrt. Eure einzige Flucht liegt vor euch, durch das Herz der zerschmetterten Stadt.~
+
 @2041 = ~The entrance to this tower is shrouded in an unnatural mist. Without the proper means, you will not be able to enter.~
 
 // ACPP 77 strings
-@2042 = ~A proud elven warrior-maiden stands joyfully before her city.~
-@2043 = ~She fights against numerous beasts.~
-@2044 = ~The elven warrior-maiden appears to be stabilizing some magic.~
-@2045 = ~An elven community mourns at a coffin.~
 
-@2046 = ~You recognize Elv-Esster Aened, commander of the guard of Myth Unnohyr. She stands before the city – young, proud, and filled with hope.~
-@2047 = ~She fights against numerous beasts – it seems the god Malar has a hand in this. Elv-Esster faces them alone – unyielding, without fear.~
-@2048 = ~You realize she is trying to stabilize the failing mythal with her own essence – an act of sacrifice and magic.~
-@2049 = ~The mourning elves in this image are not just witnesses to death, but to divine failure. Some lower their heads – others gaze accusingly at the sky.~
+@2042 = ~Eine stolze elfische Kriegerin steht vor ihrer Stadt.~
 
-@2050 = ~An undead creature appears to be possessing an elf.~
-@2051 = ~The elven warrior-maiden tries to drive back the undead.~
-@2052 = ~The elven warrior-maiden seems to be torn apart by a blinding magical light.~
+@2043 = ~Sie kämpft gegen zahlreiche Bestien.~
 
-@2053 = ~Elv-Esster Aened's tomb~
+@2044 = ~Die elfische Kriegerin scheint eine Art Magie zu stabilisieren.~
 
-@2054 = ~A ghostly entity cloaked in shadows appears to invade the body of a dying elf.~
-@2055 = ~Elv-Esster Aened and her kin stand against the encroaching undead, their spells lashing out in desperation.~
-@2056 = ~A surge of wild magic erupts as the mythal shatters—Elv-Esster vanishes within the blinding light.~
+@2045 = ~Eine elfische Gemeinschaft trauert an einem Sarg.~
+
+@2046 = ~Ihr erkennt Elv-Esster Aened, die Kommandantin der Wache von Myth Unnohyr. Sie steht vor der Stadt — jung, stolz und voller Hoffnung.~
+
+@2047 = ~Sie kämpft gegen zahlreiche Bestien — es scheint, als habe der Gott Malar seine Hand im Spiel. Elv-Esster stellt sich ihnen allein entgegen — unbeugsam und ohne Furcht.~
+
+@2048 = ~Ihr erkennt, dass sie versucht, den versagenden Mythal mit ihrer eigenen Essenz zu stabilisieren — ein Akt des Opfers und mächtiger Magie.~
+
+@2049 = ~Die trauernden Elfen in diesem Bild sind nicht nur Zeugen eines Todes, sondern eines göttlichen Versagens. Einige senken den Blick — andere richten ihn anklagend zum Himmel.~
+
+@2050 = ~Eine untote Kreatur scheint Besitz von einem Elfen zu ergreifen.~
+
+@2051 = ~Die elfische Kriegerin versucht, die Untoten zurückzudrängen.~
+
+@2052 = ~Die elfische Kriegerin scheint von einem blendenden magischen Licht zerrissen zu werden.~
+
+@2053 = ~Grab von Elv-Esster Aened~
+
+@2054 = ~Eine geisterhafte Gestalt, von Schatten umhüllt, scheint in den Körper eines sterbenden Elfen einzudringen.~
+
+@2055 = ~Elv-Esster Aened und ihre Gefährten stellen sich den vorrückenden Untoten entgegen, ihre Zauber schlagen in verzweifelter Gegenwehr um sich.~
+
+@2056 = ~Ein Ausbruch wilder Magie erschüttert die Umgebung, als der Mythal zerbricht — Elv-Esster verschwindet im blendenden Licht.~
 
 // ACPP70 strings - the tree obstacle
-@2060 = ~By the power of the wardstone, the throng of undead trees is banished.~
-@2061 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
-@2062 = ~With sheer force, you actually manage to shift the tree aside.~
-@2063 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
-@2064 = ~The tree collapses under the fire and dissolves.~
-@2065 = ~The fire seems to slowly destroy the fallen tree.~
-@2066 = ~The fire seems to have some effect on the fallen tree.~
-@2067 = ~Now that the passage is clear, the wardstone crumbles to dust.~
 
-@2068 = ~Temple of Mythrien~
-@2069 = ~Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!~ [AC#PPHO0]
-@2070 = ~Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.~
+@2060 = ~Durch die Macht des Wächtersteins wird die Schar untoter Bäume verbannt.~
 
-@2071 = ~From all you’ve learned, this statue appears to depict Commander Elv-Esster Aened, once the leader of Myth Unnohyr’s guard.~
-@2072 = ~The dead magic zone prevents the trap from triggering properly.~
-@2073 = ~Follow me.~
+@2061 = ~Ihr könntet versuchen, diesen mächtigen Baum mit einem Gegenstand, mit Feuer oder mit außergewöhnlicher Kraft zur Seite zu bewegen.~
 
-@2074 = ~You need all blessings to perform the ritual required to create the antidote.~
+@2062 = ~Mit schierer Kraft gelingt es euch tatsächlich, den Baum zur Seite zu schieben.~
 
-@2075 = ~Though the water is murky, you notice a tunnel beneath the surface of the water. You could dive through and explore it if you wish.~
+@2063 = ~Ihr könntet versuchen, diesen mächtigen Baum mit einem Gegenstand, mit Feuer oder mit außergewöhnlicher Kraft zur Seite zu bewegen.~
+
+@2064 = ~Der Baum bricht unter dem Feuer zusammen und zerfällt.~
+
+@2065 = ~Das Feuer scheint den gefallenen Baum langsam zu zerstören.~
+
+@2066 = ~Das Feuer scheint eine gewisse Wirkung auf den gefallenen Baum zu haben.~
+
+@2067 = ~Nun, da der Durchgang frei ist, zerfällt der Wächterstein zu Staub.~
+
+@2068 = ~Tempel des Mythrien~
+
+@2069 = ~Mmm ... oh-ho-ho! Hmmm. Welcher Genuss! Knusprige Wabe, goldener Nektar ... *schlürf* Ahhh, wahrlich ein Schmaus!~ [AC#PPHO0]
+
+@2070 = ~Oh! Bei der Sanften Brutwächterin ... ich habe während meines kleinen Schmauses nicht mit Besuch gerechnet.~
+
+@2071 = ~Nach allem, was ihr erfahren habt, scheint diese Statue Kommandantin Elv-Esster Aened darzustellen, einst die Anführerin der Wache von Myth Unnohyr.~
+
+@2072 = ~Die Zone toter Magie verhindert, dass die Falle richtig ausgelöst wird.~
+
+@2073 = ~Folgt mir.~
+
+@2074 = ~Ihr benötigt alle Segnungen, um das Ritual durchführen zu können, das zur Herstellung des Gegengifts erforderlich ist.~
+
+@2075 = ~Obwohl das Wasser trüb ist, bemerkt ihr einen Tunnel unter der Wasseroberfläche. Wenn ihr wollt, könntet ihr hinuntertauchen und ihn erkunden.~
 
 // the two fairies
-@2100 = ~If you must sparkle, do it over there!~
-@2101 = ~But over there is boring!~
-@2102 = ~Stop tugging my robe!~
-@2103 = ~Fine, fine! We’ll tug your hair instead. Happy now?~
-@2104 = ~Don’t trust fireflies. They’re just show-offs with no style.~
 
-@2105 = ~Now that you're safe, please— no more vanishing without a word!~
-@2106 = ~But then who would you worry about, Brother Edrim? We keep your heart healthy!~
-@2107 = ~It’s truly wonderful to have you back!~
-@2108 = ~Oh really? We’ll remind you of that next time we’re tugging on your robe!~
+@2100 = ~Wenn ihr unbedingt funkeln müsst, dann tut es dort drüben!~
 
-@2200 = ~Infirmary~
-@2201 = ~Temple of Eldath~
-@2202 = ~Tree of Nourishment~
-@2203 = ~Eldath’s Grotto~
-@2204 = ~High Fallskeeper’s Tree~
+@2101 = ~Aber dort drüben ist es langweilig!~
+
+@2102 = ~Hört auf, an meiner Robe zu ziehen!~
+
+@2103 = ~Na schön, na schön! Dann ziehen wir eben an Euren Haaren. Zufrieden?~
+
+@2104 = ~Traut niemals den Glühwürmchen. Sie sind Angeber ohne Stil.~
+
+@2105 = ~Jetzt, wo Ihr wieder in Sicherheit seid, bitte — verschwindet nicht noch einmal!~
+
+@2106 = ~Aber wer würde Euch dann Sorgen bereiten, Bruder Edrim? Wir halten Euer Herz gesund!~
+
+@2107 = ~Es ist wirklich wunderbar, Euch wieder hier zu haben!~
+
+@2108 = ~Ach wirklich? Daran erinnern wir Euch beim nächsten Mal, wenn wir an Eurer Robe ziehen!~
+
+
+// locations
+
+@2200 = ~Krankenstation~
+
+@2201 = ~Tempel der Eldath~
+
+@2202 = ~Baum der Nahrung~
+
+@2203 = ~Eldaths Grotte~
+
+@2204 = ~Baum des Hochverehrten Hüters~
 
 
 
