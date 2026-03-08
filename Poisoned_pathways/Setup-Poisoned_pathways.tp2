@@ -41,7 +41,12 @@ LANGUAGE ~English~
          ~english~
          ~Poisoned_pathways/language/english/Setup-Poisoned_pathways.tra~
          ~Poisoned_pathways/language/english/Poisoned_pathways_Journal.tra~
-         
+
+LANGUAGE ~German~
+         ~german~
+         ~Poisoned_pathways/language/german/Setup-Poisoned_pathways.tra~
+         ~Poisoned_pathways/language/german/Poisoned_pathways_Journal.tra~
+
 LANGUAGE ~Spanish by ElGamerViejuno~
          ~spanish~
          ~Poisoned_pathways/language/spanish/Setup-Poisoned_pathways.tra~

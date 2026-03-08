@@ -1,0 +1,1327 @@
+
+// cre files
+@10 = ~Merethan~
+@11 = ~Delgorth~
+@12 = ~Priester Eldaths~
+@13 = ~Alatoasz Berendim~
+@14 = ~Friedenszahn~
+@15 = ~Stillbach~
+@16 = ~Bruder Sanftschwarm~
+@17 = ~Hüterin der Grotte~
+@18 = ~Zombie-Baumhirte~
+@19 = ~Schwester Irinwe~
+@20 = ~Irrlicht~
+@21 = ~Erlavanas Myth'yalv~
+@22 = ~Pocken-Irrlicht~
+@23 = ~Wadal Hrun~
+@24 = ~Henry~
+@25 = ~Na'arla~
+@26 = ~Bruder Edrim~
+@27 = ~Montrassa~
+@28 = ~Giftmanifestation~
+@29 = ~Larrin~
+@30 = ~Tante Pesca~
+@31 = ~Bruder Ruhfeuer~
+@32 = ~Fäulnisbrut-Ankheg~
+@33 = ~Novize~
+@34 = ~Friedenswächter~
+@35 = ~Skann Delth~
+@36 = ~Naerwyn~
+@37 = ~Schlamm-Zombie~
+@38 = ~Viper~
+@39 = ~Wald-Woad~
+@40  = ~Debbie Gobblebubble~
+@41 = ~Graberd-Elementar~
+@42 = ~Uraltes Blut-Amniot~
+@43 = ~Blutlache~
+@44 = ~Hypnotisierter Ankheg~
+@45 = ~Mismal Al'Visalle~
+@46 = ~Der Unsterbliche~
+@47 = ~Blutgetränkter Geist~
+@48 = ~Grauenhafter Symbiont~
+@49 = ~Elfengeist~
+@50 = ~Knochenweird~
+@51 = ~Mythrien Sarath~
+@52 = ~Yuan-Ti-Bogenschütze~
+@53 = ~Skorpion~
+@54 = ~Bruder Calmor~
+@55 = ~Bruder Stillnor~
+@56 = ~Varric Rotschramme~
+@57 = ~Giftinkarnation~
+@58 = ~Chasme~
+@59 = ~Giftschreck~
+@60 = ~Gefällter Baum~
+@61 = ~Elv-Esster Aened~
+@62 = ~Todes-Irrlicht~
+@63 = ~Wildes Irrlicht~
+@64 = ~Maddlethorpe Vemmil~
+@65 = ~Wimpley Ulvax~
+@66 = ~Edvarr Nolthune~
+@67 = ~Carven~
+@68 = ~Mannatarv~
+@69 = ~Zwielicht-Zwillinge~
+@70 = ~Zar’khaan~
+@71 = ~Lhiannan Shee~
+@72 = ~Allip~
+@73 = ~Hezrou~
+@74 = ~Wartender Mann~
+@75 = ~Wartender Mann~
+@76 = ~Bruder Elonar~
+@77 = ~Bruder Meyndel~
+@78 = ~Bruder Thalen~
+@79 = ~Wächter des Tages~
+@80 = ~Wächter der Nacht~
+@81 = ~Geist von Elv-Esster Aened~
+@82 = ~Geringerer Knochenschreck~
+@83 = ~Kranke Frau~
+@84 = ~Zalyndar~
+
+
+// cre soundfiles
+@301 = ~Frieden sei mit Euch.~ [AC#PPEL1]
+@302 = ~Lasst Euch von Ruhe leiten.~ [AC#PPEL2]
+@303 = ~Eldath wacht. Selbst in der Stille.~ [AC#PPEL3]
+@304 = ~Ich wandle, wo Wasser ruht.~ [AC#PPEL4]
+@305 = ~Wo Worte versagen, kann Stille heilen.~ [AC#PPEL5]
+@306 = ~Legt Eure Ängste nieder, wenn auch nur für eine Weile.~ [AC#PPEL6]
+@307 = ~Frieden sei mit Euch, Reisender.~ [AC#PPEL7]
+@308 = ~Ich hoffe, eines Tages Frieden zu bringen...~ [AC#PPEL8]
+@309 = ~~ [AC#PPELZ]
+
+@310 = ~Eldath wacht. Selbst in der Stille.~ [AC#PPELA]
+@311 = ~Legt Eure Ängste ab, wenn auch nur für eine Weile.~ [AC#PPELB]
+@312 = ~Die Wildnis flüstert denen Ruhe zu, die zuhören.~ [AC#PPELC]
+@313 = ~Keine Klinge heilt, was Zeit und Güte vermögen.~ [AC#PPELD]
+@314 = ~Lasst nicht Zorn Eure Hand führen, sondern von Erbarmen.~ [AC#PPELE]
+@315 = ~Wir schlagen nicht zu – wir bestehen.~ [AC#PPELF]
+@316 = ~Eldaths Segen über Euch, Freund der stillen Pfade.~ [AC#PPELG]
+
+@325 = ~Die Winde tragen keine böse Absicht. Ich ebenso wenig.~ [AC#PPELL]
+@326 = ~Wie Blätter fallen, so mögen auch Eure Lasten von Euch gleiten.~ [AC#PPELM]
+@327 = ~Frieden sei mit Euch, Reisender.~ [AC#PPELN]
+@328 = ~Ich hoffe, eines Tages Frieden zu bringen...~ [AC#PPELO]
+
+@330 = ~Ich bewahre, was wenig geblieben ist.~ [AC#PPMYB]
+@331 = ~Bruchstücke von Glanz verweilen noch.~ [AC#PPMYA]
+@332 = ~Mythale: Gebrochen, nicht vergessen.~ [AC#PPMYC]
+
+@341 = ~Frieden sei mit Euch.~ [AC#PPED1]
+@342 = ~Lasst Euch von Ruhe leiten.~ [AC#PPED2]
+@343 = ~Eldath wacht. Selbst in der Stille.~ [AC#PPED3]
+@344 = ~Ich wandle, wo Wasser ruht.~ [AC#PPED4]
+@345 = ~Wo Worte versagen, kann Stille heilen.~ [AC#PPED5]
+@346 = ~Legt Eure Ängste ab, wenn auch nur für eine Weile.~ [AC#PPED6]
+@347 = ~Frieden sei mit Euch, Reisender.~ [AC#PPED7]
+@348 = ~Ich hoffe, eines Tages Frieden zu bringen...~ [AC#PPED8]
+
+@351 = ~Willkommen in meiner bescheidenen Honigwabe.~ [AC#PPHO1]
+@352 = ~Das Leben ist süßer, wenn man seine Honig-Kombination findet.~ [AC#PPHO2]
+@353 = ~Ein Tropfen Honig heilt, wo eine Flut aus Salz nur verwundet.~ [AC#PPHO3]
+
+@360 = ~*hust*~ [AC#PPCH1]
+@361 = ~*hust*~ [AC#PPCH2]
+@362 = ~*hust*~ [AC#PPCH3]
+
+@371 = ~~ [AC#PPFY1]
+@372 = ~~ [AC#PPFY2]
+@373 = ~~ [AC#PPFY3]
+@374 = ~~ [AC#PPFY4]
+@375 = ~~ [AC#PPFY5]
+
+// spl files
+@900 = ~Wasserweissagung~
+@901 = ~~
+@902 = ~Irrlichtflackern~
+@903 = ~Wilde Magie~
+@904 = ~Seuchenwolke~
+@905 = ~Schutz vor Tieren~
+@906 = ~Eldaths Stille~
+@907 = ~^0xFF22B4E6 hat +1 maximalen Trefferpunkt erhalten. ^-~
+@908 = ~^0xFF22B4E6 hat +2 maximale Trefferpunkte erhalten. ^-~
+
+@910 = ~Talona’s Kuss~
+@911 = ~Schlafsummen~
+@912 = ~Todesschleier~
+@913 = ~Eldaths besänftigende Gegenwart~
+@914 = ~Eruption wilder Magie~
+@915 = ~Schattenschleier~
+@916 = ~Manisches Gelächter~
+@917 = ~Kugel der Finsternis~
+@918 = ~Eldath gewährt Euch Gelassenheit in der Gegenwart friedlicher Tiere.~
+
+@920 = ~^0xFF22B4E6 hat +1% Resistenz gegen Hiebschaden erhalten. ^-~
+@921 = ~^0xFF22B4E6 hat +1% Resistenz gegen Geschossschaden erhalten. ^-~
+@922 = ~^0xFF22B4E6 hat +1% Resistenz gegen Stichschaden erhalten. ^-~
+@923 = ~^0xFF22B4E6 hat +1% Resistenz gegen Wuchtschaden erhalten. ^-~
+@924 = ~^0xFF22B4E6 hat +1% Magieresistenz erhalten. ^-~
+
+@930 = ~Gestank~
+@931 = ~ETW0 verringert~
+
+@932 = ~Permanenter +1 Bonus auf Rettungswürfe gegen Tod~
+@933 = ~Permanenter +1 Bonus auf Rettungswürfe gegen Zauber~
+@934 = ~Permanenter +1 Bonus auf Rettungswürfe gegen Zauberstäbe~
+@935 = ~Permanenter +1 Bonus auf Rettungswürfe gegen Verwandlung~
+@936 = ~Permanenter +1 Bonus auf Rettungswürfe gegen Odemwaffen~
+
+@941 = ~Flüstern gegen den Tod~
+@942 = ~Schimmer gegen Magie~
+@943 = ~Schattenschritt gegen Zauberstäbe~
+@944 = ~Nimmerfroschs Segen~
+@945 = ~Brise gegen Drachenodem~
+
+@946 = ~hat 1 temporären Trefferpunkt erhalten~
+
+@947 = ~Blendpulver~
+
+// sto files
+@950 = ~Tempel der Eldath~
+@951 = ~Ruhfeuers Schriftrollen~
+@952 = ~Wipfel-Schänke~
+@953 = ~Debbies Waffen & Waren~
+@954 = ~Holzschnitzer~
+@955 = ~Zar’khaans Wunder~
+
+@1000 = ~Vergifteter Pfeil~
+@1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift überzogen, das sich auf gewöhnlichem Wege nicht entfernen lässt. Ihr sollt den Pfeil zu Alatoasz Berendim nach Dämmerwaldtal, Eldaths Heiligtum, bringen, damit das Gift untersucht und seine Herkunft zurückverfolgt werden kann.~
+
+@1002 = ~Hainblüte~
+@1003 = ~Die Hainblüte ist eine außergewöhnlich seltene Giftpflanze, deren wächserne, fingerhutartige Glocken in schimmernden Tönen von tiefem Violett bis zu zartem Rosa erblühen. Sie wächst nur in uralten, von Magie durchwirkten elfischen Hainen, oft nahe stiller Quellbecken oder innerhalb der Grenzen eines Mythals.
+
+Ein einziger Tropfen ihres Saftes genügt, um einen Erwachsenen zu töten — oder, in kundigen Händen, ein Heilmittel gegen ebenso tödliche Leiden zu bereiten. Druiden begegnen der Pflanze mit zwiespältigem Respekt: Als natürlichem Teil des Gleichgewichts der Welt, doch auch als Mahnung, dass selbst die schönsten Gaben der Natur tödlich sein können.
+
+Ihr müsst eine dieser Blüten zu Alatoasz Berendim nach Dämmerwaldtal bringen.~
+
+@1004 = ~Pilzschlüssel~
+@1005 = ~Dieser Schlüssel ist von Schmutz und seltsamen Sporen überwuchert. Er scheint eine ganz bestimmte Art von Tür zu öffnen.~
+
+@1006 = ~Notiz~
+@1007 = ~Skann,
+
+ich brauche Euch, um eine größere Lieferung meiner Arbeit an mehrere interessierte Parteien auszuliefern. Trefft mich am markierten Ort im Fliegenpilz-Hain. Vernichtet diese Nachricht, damit sie nicht in falsche Hände gerät.
+
+Delgorth~
+// itm files
+
+@1008 = ~Keltormir, das gefallene Elfenreich~
+@1009 = ~Keltormir, das gefallene Elfenreich
+von Elenneth Moonsyl, Weiser von Immereska
+
+"Alle Wälder erinnern sich. Selbst wenn die Bäume gefallen und die Lieder verklungen sind bewahren die Wurzeln das Gedächtnis."
+
+In den frühen Tagen Torils, lange vor dem Aufstieg Calimshans oder Tethyrs, erstreckte sich das uralte Waldreich Keltormir über den Süden Faerûns. In Ehrfurcht vor den Seldarine und im Einklang mit der Natur regiert, errichteten die Elfen ihr Reich in inniger Gemeinschaft mit dem Land.
+
+Zu den dauerhaftesten Vermächtnissen Keltormirs zählen drei von Mythalen geschützte Städte, jede ein Sinnbild elfischer Magie und Kultur — und ein jede heutzutage verloren, verblasst und gefallen: Myth Rhynn, Myth Unnohyr und Myth Tellaren.
+
+Myth Rhynn
+Tief verborgen in den schattigen Weiten des Wealdath liegt Myth Rhynn, die geweihte Nekropole der Elfen. Ihr Mythal, anders als jene anderer elfischer Städte, wurde im Zeichen der Ehrfurcht gewoben. Doch der Mythal ist zerbrochen. Ob durch Alter, Frevel oder vergessene Trauer — er vermag die Toten nicht länger im Schlaf zu halten. Nun wandeln Schatten zwischen den Wurzeln uralter Gräber, und rastlose Geister erheben sich in der Stille. Selbst die Elfen, die einst kamen, um ihre Ahnen zu ehren, meiden nun diesen Ort, denn die zerrissenen Fäden des Mythals ziehen an ihren Herzen, als trauere er um seinen eigenen Fall. Was einst eine heilige Ruhestätte war, ist nun eine schmerzende Wunde im Wald.
+
+Myth Unnohyr
+Myth Unnohyr erhob sich in den schattigen Tälern der südlichen Wälder Keltormirs. Seine Magie nährte einst Wachstum, Heilung und tiefe Verbundenheit mit der Natur. Doch etwas begann sich aufzulösen. Elfische Überlieferungen sprechen von einem schwindenden göttlichen Band — von einem Hüter, dessen erlahmende Kraft das Herz der Stadt schutzlos zurückließ. Als die heilige Macht implodierte, zerbarst der Mythal und gebar eine Zone wilder und toter Magie, die bis heute fortbesteht. Nun wagen sich nur wenige in die Ruinen, wo Magie versagt und der vergiftete Boden von rastloser Bosheit durchdrungen ist.
+
+Myth Tellaren
+Weit im Süden, in Landen, die heute unter Wüstensand begraben liegen, stand einst Myth Tellaren. Als die Dschinnfürsten Calim und Memnon das Land verwüsteten, erreichte ihr Chaos selbst die verborgenen Orte der Elfen. Der Mythal von Myth Tellaren, unter dem Druck der Dschinn erschüttert, zerbrach — und mit ihm die feine Magie, die die Stadt in der Höhe hielt. Manche sagen, die Ruine existiere noch immer unter den wandernden Sanddünen, eingefroren im Augenblick magischen Zusammenbruchs — ihr Mythal gebrochen und doch schwach pulsierend, wie Glut unter Asche.
+
+Obgleich Keltormir in den Nebel der Legende verschwunden ist, hallt sein einstiger Glanz noch wider. Wo dichte Bäume stehen und Sterne seltsam fallen, wo Magie singt oder sich gänzlich verweigert — dort stand einst das Imperium der Blätter. Und vielleicht wird es eines Tages wiedererstehen.~
+
+@1010 = ~Fragment eines Amuletts~
+@1011 = ~Dies ist ein Fragment eines Anhängers, welches drei ineinander verschlungene goldene Ringe zeigt — ein heiliges Symbol, das einst von einem uralten elfischen Hüter der Magie und der Einheit verehrt wurde. Obwohl unvollständig, schwingt das Fragment noch schwach im Einklang mit dem verdorbenen Mythal von Myth Unnohyr. Wenn Ihr es haltet, spürt Ihr, wie der bedrückende Einfluss um Euch herum geringfügig nachlässt. Doch ohne das vollständige Amulett bleibt seine schützende Kraft wirkungslos.~
+
+@1012 = ~Kopf eines Elfen~
+@1013 = ~Dies ist der abgetrennte Kopf eines einst bemerkenswert gutaussehenden elfischen Mannes. Um seinen Hals sind Strähnen langen, seidigen Haares geschlungen — selbst im Tod noch an ihn geklammert. Offenbar wurde er erwürgt; nicht von Seil oder Kordel, sondern von jemandes Haar.~  
+
+@1014 = ~Goldene Kette~
+@1015 = ~Dies ist eine kunstvoll gearbeitete goldene Kette, mit größter Sorgfalt gefertigt, um einst ein prächtiges Amulett zu tragen. Obwohl das Medaillon selbst der Zeit zum Opfer fiel, haftet der Kette noch immer ein schwacher Nachklang ihrer uralten Verzauberung an — eine vergessene Pflicht zu schützen und zu bewahren.~
+
+@1016 = ~Mythriens Amulett~
+@1017 = ~Geschmiedet in den Tagen der Gründung von Myth Unnohyr, trug dieses Kleinod das Zeichen dreier ineinander verschlungener Ringe — das Symbol des beinahe vergessenen elfischen Gottes der Mythale, Mythrien Sarath. Selbst Jahrhunderte des Verfalls vermochten nur seine äußere Pracht zu trüben; ein zarter Widerhall seiner einstigen Macht ist geblieben. In der Gegenwart dieses Relikts schwächen sich die Unbändigen Wogen und die tote Magie des zerbrochenen Mythals ab. Es gewährt denjenigen Schutz, die durch die zerschmetterten Straßen der Stadt wandeln.
+
+Angelegte Fähigkeiten: 
+– Immunität gegen Effekte wilder Magie und toter Magiezonen in Myth Unnohyr
+
+Gewicht: 0~
+// itm files
+
+@1018 = ~Halskette des Lebens~
+@1019 = ~Schlicht im Äußeren, doch von stiller Kraft durchdrungen, pulsiert diese Halskette schwach mit heilender Energie. Obwohl ihr Ursprung im Dunkeln liegt, wird sie oft von Heilern, Friedenswächtern und jenen getragen, die dort wandeln, wo der Schatten des Todes verweilt.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Rettungswurf gegen Nekromantie: +5  
+– Maximale Trefferpunkte: +2  
+
+Gewicht: 0~
+
+@1020 = ~Trank des Friedens~
+@1021 = ~Geschöpft aus einer Quelle, in der Eldaths Segen ungestört fließt, trägt dieses geweihte Gebräu mehr als bloße Heilung in sich. Wer davon trinkt, fühlt sich gestärkt und erleichtert — als trüge eine sanfte Strömung alle Sorgen davon.
+
+EIGENSCHAFTEN:
+
+Besonderes: Heilt Gift und Krankheiten, entfernt Flüche und stellt 5 Trefferpunkte wieder her
+
+Gewicht: 1~
+
+@1022 = ~Heiliges Wasser der Eldath~
+@1023 = ~Dies ist eine Karaffe mit heiligem Wasser der Eldath. Es ist eine der Zutaten, die benötigt werden, um ein Gegengift gegen das vom Priester Talonas geschaffene Gift herzustellen.
+  
+EIGENSCHAFTEN:
+
+Gewicht: 1~
+// itm files
+
+@1024 = ~Irrlicht-Angriff~
+@1025 = ~Pocken-Irrlicht-Angriff~
+@1030 = ~Ring des Gespenstes~
+@1031 = ~Helm~
+@1032 = ~Helm der Elfenlieder~
+@1033 = ~Dieser Helm ist bekannt als der Helm der Elfenlieder. Geschmiedet von einem meisterhaften elfischen Schmied, schwingt er im Einklang mit den uralten Harmonien seines Volkes. Wird er von einem Elfen getragen, verstärkt er dessen natürliche Begabungen und erlaubt es dem Träger, einen alten elfischen Gesang anzustimmen, der ihm und seinen Gefährten Kraft verleiht.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Schützt vor kritischen Treffern
+– Geschicklichkeit: +2 (nur Elfen), +1 (nur Halbelfen)
+
+Fähigkeiten (Aufladungen):
+– Kann einmal pro Tag Gesang wirken
+
+Gewicht: 0~
+
+// itm files
+
+@1037 = ~Ioun-Stein~
+@1038 = ~Beerenförmiger Ionenstein~
+@1039 = ~Dieser Ionenstein ist wie eine Beere geformt. Jemand muss Magie gewirkt haben, um ihm dieses Aussehen zu verleihen.
+  
+EIGENSCHAFTEN:
+
+Gewicht: 0~
+
+@1040 = ~Dieser Ionenstein soll von einem mächtigen Kleriker Talonas erschaffen worden sein. In der Form einer säuerlich grünen Beere gehalten, verströmt er einen scharfen, unreifen Geruch, der unangenehm in der Luft verweilt.
+
+Gewisse Taloniten nutzten solche Steine, um mit rivalisierenden Priestern abzurechnen — insbesondere mit jenen, die ihren giftgetränkten Ambitionen im Wege standen. Wenig überraschend verweigert der Stein Wesen guter Gesinnung sein Tragen.
+
+EIGENSCHAFTEN:
+
+Kampffähigkeiten:
+– THAC0 gegen Kleriker: +3
+
+Besondere Fähigkeiten:
+– Wenn getragen oder angelegt, vertreibt dieser Ioun-Stein die giftigen Dämpfe, die den Eingang zum Turm in Myth Unnohyr versperren
+
+Gewicht: 0~
+
+@1041 = ~Nietenleder~
+@1042 = ~Der Gesegnete Lindwurm +3~
+
+@1043 = ~Diese beschlagene Lederrüstung ist unter dem Namen Der Gesegnete Lindwurm bekannt. Man sagt, sie schütze ihren Träger, indem sie <PRO_HIMHER> Regeneration gewährt.
+  
+Einige behaupten, sie sei nach einem LIndwurm namens Lucretia benannt worden.
+  
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten: 
+– Glück: +1
+– Regeneriert 1 Trefferpunkt pro Runde
+
+Rüstungsklasse: 4 (2 gegen Hiebwaffen, 3 gegen Stich- und Geschosswaffen)
+Erfordert:
+ 6 Stärke
+
+Gewicht: 8~
+// itm files
+
+@1044 = ~Himmlisches Gegengift~
+@1045 = ~Himmlisches Gegengift~
+@1046 = ~Dies ist das Gegengift, das Ihr im Kessel des Taloniten unter Myth Unnohyr gebraut habt. Man sagt, es heile jene, die von dem starken Toxin befallen sind, das aus den seltsamen Blumen der Ruinen gewonnen wurde.
+  
+EIGENSCHAFTEN:
+
+Gewicht: 1~
+
+@1047 = ~Umhang~
+@1048 = ~Eldaths Umarmung~
+@1049 = ~Dieser verzauberte Umhang geht auf einen zurückgezogen lebenden Priester Eldaths zurück, der vor langen Zeiten durch die Haine des Wealdath wanderte. Vögel nisteten in seinen Händen, Wölfe hüteten seinen Schlaf, und selbst die scheuesten Tiere traten näher, um in seiner friedvollen Gegenwart zu verweilen.
+
+Als er aus der Welt schied, so heißt es, webten Dryaden diesen Mantel aus den Blättern, die um seine Ruhestätte gefallen waren. Wer ihn trägt, schreitet in stiller Anmut — und die wilden Geschöpfe der Welt schreiten an seiner Seite.
+
+EIGENSCHAFTEN:
+
+Fähigkeiten (Aufladungen):
+– Kann einmal pro Tag Schutz vor Bösem im Umkreis von 3 Metern (auf sich selbst) wirken
+
+Angelegte Fähigkeiten:
+– Rüstungsklasse: +2
+– Rettungswürfe: +2
+– Leise bewegen: +10%
+– 5% Chance, bei einem Treffer im Kampf Heiligtum zu wirken
+– Befinden sich Tiere im Umkreis von 3 Metern:
+   - Zusätzlich +1 auf Rüstungsklasse
+   - Zusätzlich +1 auf Rettungswürfe
+   - Immunität gegen Furcht
+
+Gewicht: 3~
+
+@1050 = ~Rotwabenblume~
+
+@1051 = ~Diese wunderschöne, süß duftende Blume ist ein Geschenk eines Jungen aus Dämmerwaldtal an seine Tante im Regierungsviertel von Athkatla. Er bittet Euch, ihr die Blume zusammen mit einer Botschaft zu überbringen: Dass es ihm gut geht und er lediglich etwas Zeit für sich braucht.
+
+EIGENSCHAFTEN:
+Gewicht: 1~
+
+@1052 = ~Regenwurm~
+
+@1053 = ~Dieser Regenwurm riecht nach feuchter Erde und Kürbissen. Er ist sehr rosa und wirkt ausgesprochen lebhaft. Abgesehen davon gibt es nichts Ungewöhnliches an ihm.
+  
+EIGENSCHAFTEN:
+
+Gewicht: 0~
+
+@1054 = ~Emblem~
+@1055 = ~Heiliges Symbol der Eldath~
+@1057 = ~Dies ist ein schlichtes Emblem, das Eldaths Zeichen darstellt. Obwohl unscheinbar im Äußeren, scheint es jenen stillen Schutz zu gewähren, die die Göttin des Friedens verehren. Sein Einfluss lenkt den Träger unmerklich von Aggression fort, stärkt die Verteidigung und mindert zugleich den Drang zum Angriff.
+  
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Rüstungsklasse: +1
+– Rettungswürfe: +1
+– THAC0: –2
+
+Gewicht: 0~
+// itm files
+
+@1058 = ~Schildfragment~
+
+@1059 = ~Dies scheint das Mittelstück eines Schildes zu sein. Ohne den äußeren Rahmen ist es jedoch unbrauchbar.
+  
+EIGENSCHAFTEN:
+
+Gewicht: 0~
+
+@1060 = ~Dies scheint das Mittelstück eines Schildes zu sein. Ohne den äußeren Rahmen ist es jedoch unbrauchbar.
+  
+EIGENSCHAFTEN:
+
+Gewicht: 0~
+
+@1061 = ~Dies scheint der äußere Rahmen eines Schildes zu sein. Ohne sein zentrales Element ist er jedoch unbrauchbar.
+  
+EIGENSCHAFTEN:
+
+Gewicht: 0~
+
+@1062 = ~Tartsche~
+@1063 = ~Laubläufer +3~
+
+@1064 = ~Diese elegante Tartsche gehörte einst einer druidischen Hüterin namens Blasanna Laubläufer, von der sie auch den Namen trägt. Als eine Gnollhorde ihren Hain und ihre Sippe bedrohte, stellte sich Blasanna ihnen allein entgegen. Legenden berichten, sie habe sich mit der Schnelligkeit eines Sturmwinds bewegt und die Hälfte der Angreifer niedergestreckt, bevor die übrigen in panischer Furcht flohen.
+
+Manche sagen, ihre Geschwindigkeit sei der Tartsche selbst zu verdanken gewesen, dessen Magie ihr die Anmut der Wildnis verlieh. Andere glauben, es sei der Geist des Waldes gewesen, der sie vorantrug und nicht zulassen wollte, dass seine Hüterin fiel.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Rüstungsklasse: +4
+– Kein Schutz gegen Geschoss- und Stichwaffen
+– Bewegungsgeschwindigkeit um 1 erhöht; in Wäldern um 2 erhöht
+– Rettungswürfe gegen Hervorrufungszauber: +2
+
+Erfordert:
+ 4 Stärke
+
+Gewicht: 2~
+
+@1065 = ~Kräutertrunk~
+
+@1066 = ~Dieses Gebräu besteht aus Kamille, wildem Honig, Brombeere und Lavendel und wirkt äußerst beruhigend. Ihr sollt diesen Trunk der Sirene am Wasser im Dämmerwaldtal bringen, damit sie Frieden findet.
+  
+EIGENSCHAFTEN: 
+
+Gewicht: 2~
+
+@1067 = ~Delgorths Notiz~
+
+@1068 = ~Erster Eintrag:
+Die Hainblüte... die Legenden sprachen die Wahrheit. Sie blüht noch immer zwischen den zerschmetterten Überresten von Myth Unnohyr, wo tote Magie fault und Leben sich verdreht. Talona lächelt über meine Entdeckung!
+
+Zweiter Eintrag:
+Mit mühseliger Sorgfalt habe ich die ersten Essenzen des Toxins destilliert. Nur geringe Mengen — kostbare Tropfen des Todes, geboren aus dem purpurnen Herzen der Ader. Die Ergebnisse übertreffen bereits alle Erwartungen: Es ist rasch, unheilbar, ein Verstummen von Fleisch und Geist.
+
+Dritter Eintrag:
+Meine ersten Lieferungen gingen an die Feinde der Harfner. Kleinliche Fürsten, enttäuschte Söldner und jene, die das Eingreifen der Harfner als Bedrohung des wahren Gleichgewichts betrachten. Mögen die Selbstgerechten an ihrer eigenen Frömmigkeit ersticken.
+
+Vierter Eintrag:
+Die Nachtmasken in Westtor wittern Gewinn. Sie bieten Münze und Hände, um das Werk zu verbreiten, doch es fehlt ihnen an Feingefühl. Ich muss vorsichtig vorgehen. Die Zhentarim, stets wachsam, könnten nützlich sein — sofern man sie auf Abstand hält.
+
+Fünfter Eintrag:
+Die Fundamente hier in Myth Unnohyr sind fest genug — seine wilde und tote Magie schirmt meine Arbeit vor unerwünschten Blicken ab. Zwar ist es mir gelungen, einige Ranken im toten Boden zu kultivieren, doch wachsen sie langsam und eigensinnig und tragen nur wenige Blüten. In diesem Tempo wird es Jahre dauern, bis genug Toxin für meine ehrgeizigen Pläne gewonnen ist. Ich muss einen Weg finden, das Wachstum zu beschleunigen — oder mehr Hände gewinnen, die bereit sind, die Ernte zu pflegen.
+
+Sechster Eintrag:
+Ein Priester der Eldath mischte sich ein — und bezahlte für seine Torheit. Andere mögen ihm nachfolgen, doch mein Weg ist klar: Das Toxin wird sich ausbreiten. Es wird in die Adern der Mächtigen wie der Demütigen Faerûns sickern. Talonas Wille ist in jeden zitternden Atemzug gewoben.
+
+Mögen die Starken fallen und die Schwachen vergehen. Nur Verfall ist ewig!
+
+— Malagent Delgorth
+~
+
+@1075 = ~Stirnband~
+@1076 = ~Stirnband des geronnenen Blutes~
+
+@1077 = ~Aus geronnenen, verhärteten Blutklumpen geformt, zierte dieses Stirnband einst das Haupt eines uralten Blut-Amnioten, der unter Myth Unnohyr gefangen war. Es ist nicht bloß eine Krone, sondern eine Gestalt gewordene Narbe.
+
+EIGENSCHAFTEN:
+
+Kampffähigkeiten:
+– Wenn der Träger ein Wesen tötet, erhält <PRO_HESHE> 1 temporären Trefferpunkt für 1 Runde (kumulativ).
+
+Angelegte Fähigkeiten:
+– Charisma: –1
+– Säureresistenz: +10%
+– 25% Chance, dass ein Angreifer beim Treffer 1W2 Säureschaden erleidet (Rettungswurf gegen Tod bei –2 negiert)
+
+Gewicht: 1
+~
+@1078 = ~Dolch~
+@1079 = ~Scolopendras Speichel +3~
+
+@1080 = ~Dieser fein gearbeitete Dolch ist eine bevorzugte Waffe unter Zauberkundigen, insbesondere bei jenen, die säurehaltige Beschwörungen und Geschosse beherrschen. Er verstärkt die Zauberkraft seines Trägers und erlaubt es <PRO_HIMHER>, Feinde auch aus der Ferne zu treffen.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Zauberwirkzeit um 1 verringert
+– Immunität gegen Gift
+
+Kampffähigkeiten:
+– Verursachter Säureschaden: +10%
+– Ermöglicht Nah- und Fernangriffe
+
+THAC0: +3
+Schaden (Nahkampf): 1W4+3 (Stich), +1 Säureschaden
+Schaden (Fernkampf): 1W4+3 (Säure)
+Initiativefaktor: 1
+Waffenfertigkeit: Dolch
+Typ: Einhändig
+Erfordert:
+ 3 Stärke
+
+Gewicht: 1
+~
+
+@1084 = ~Stab~
+@1085 = ~Zweig des Dämmerwaldtals +3~
+@1086 = ~Dieser Kampfstab trägt noch immer einen schwachen, grünen Schimmer. Er war nie dazu bestimmt zu töten, sondern Wege zu bahnen und zu bewahren. Seine Magie schützt den Träger vor allen Effekten, die Schritte hemmen oder eine Reise zum Stillstand bringen würden. Für jene, die lediglich in Frieden ihren Pfad beschreiten wollen, ist er ein verlässlicher Gefährte.
+
+EIGENSCHAFTEN:
+
+Fähigkeiten:
+– Kann einmal pro Tag Lähmung aufheben
+
+Ausgerüstete Fähigkeiten:
+– Der Träger ist immun gegen sämtliche Effekte, die seine Bewegungsfreiheit beeinträchtigen. Dies schließt Hast und Verlangsamung ein.
+
+THAC0: +3
+Schaden: 1W2 (nicht-tödlich)
+Initiativefaktor: 2
+Waffenfertigkeit: Kampfstab
+Typ: Zweihändig
+Erfordert:
+ 5 Stärke
+
+Gewicht: 3
+~
+// itm files
+
+@1087 = ~Rose der Eldath~
+
+@1088 = ~Dies ist eine von einem Priester Eldaths gesegnete Rosenblüte. Wird sie verzehrt, stellt sie die Lebenskraft eines Geschwächten wieder her und macht jeglichen Stufenverlust rückgängig, der durch unnatürliche Kräfte oder untote Kreaturen verursacht wurde.
+
+EIGENSCHAFTEN:
+
+Besonderes: Entfernt sämtliche Stufenverluste vom Ziel
+
+Gewicht: 1~
+
+@1089 = ~Zweihandschwert~
+
+@1090 = ~Viel Glück, Geißblatt +3~
+
+@1091 = ~Dieses wohlbalancierte Zweihandschwert gehörte einst einem Waldläufer namens Vala’ll Stormneedle, einem geschätzten Beschützer der Region Larswald. Er war nicht nur für seine Kampffertigkeit bekannt, sondern auch für seine Lebensfreude — ein erfülltes Leben, eine liebevolle Familie und seine Gemahlin Systianna, eine Getreue Tymoras.
+
+Vor jeder Mission küsste sie ihn auf die Wange, reichte ihm die Klinge und flüsterte: „Viel Glück, Geißblatt.“ Anders als viele Volkshelden, deren Geschichten in Blut enden, ist Vala’lls Legende eine des seltenen Friedens: Er lebte mit Systianna bis ins achtzigste Lebensjahr, starb weder durch Schwert noch durch Zauber, sondern an einer Lungenentzündung.
+
+Manche glauben, es sei eben diese Klinge gewesen, die ihn all die Jahre schützte — ein stiller Gefährte, der sein Leben weit über das Maß der meisten hinaus bewahrte, die mit Stahl in der Hand wandeln.
+  
+EIGENSCHAFTEN:
+
+Kampffähigkeiten:
+– Jeder erfolgreiche Treffer hat eine 15% Chance, das Glück des Ziels für 2 Runden um 1 zu senken (Rettungswurf gegen Zauber bei –4 negiert), während das Glück des Trägers für einen ganzen Tag um 1 erhöht wird.
+
+THAC0: +3
+Schaden: 1W10+3 (Hieb)
+Initiativefaktor: 7
+Waffenfertigkeit: Zweihandschwert
+Typ: Zweihändig
+Erfordert:
+ 14 Stärke
+
+Gewicht: 9~
+
+@1092 = ~Leichte Armbrust~
+
+@1093 = ~Dornenschütze +1~
+
+@1094 = ~Diese einzigartige Armbrust erschafft ihre eigenen magischen Dornbolzen: scharfe, mit Widerhaken versehene Geschosse, die Feinde beim Aufprall verfangen können.
+
+Aufgrund der druidischen Verzauberungen, die in die Waffe gewoben wurden, können nur einklassige Druiden sie wirkungsvoll führen.
+
+EIGENSCHAFTEN:
+
+Angelegte Fähigkeiten:
+– Setzt Armbrust-Fertigkeit auf 1
+
+Kampffähigkeiten:
+– Benötigt keine Munition; verschießt herbeigerufene magische Dornbolzen
+– 20% Chance pro Treffer, das Ziel zu verstricken (Rettungswurf gegen Zauber bei –1 negiert)
+
+THAC0: +1
+Schaden: 1W6+1 (Geschoss)
+Initiativefaktor: 4
+Waffenfertigkeit: Armbrust
+Typ: Zweihändig
+Erfordert:
+ 8 Stärke
+
+Gewicht: 6~
+
+@1146 = ~To whomever finds this:
+
+The Mythal that once protected Myth Unnohyr is shattered beyond recognition. Within these ruins, magic frays and collapses without warning—prayers go unanswered, spells twist or wither to nothing.
+
+Yet not all is lost. Certain beings—Will-o'-Wisps among them—seem to have adapted to the Mythal’s corruption. Their resilience hints at the possibility that immunity is not impossible.
+
+Before my strength failed me, I theorized that an ancient elven relic might be restored—one capable of channeling the original power of the Mythal to shield its bearer from its corruptive force. Perhaps spellcasting within these ruins could then be possible again.
+
+I suspect that the essences of wisps born of both wild and dead magic, combined with the elven talisman itself, might yield such an effect. If such rare wisps truly dwell within these ruins, and if one could forge the ancient elven talisman, life of a mage here would be far less precarious.
+
+Whether such a talisman can truly be made, I shall not live to see.
+
+May you fare better than I.~
+@1147 = ~Peacewalker's stories I~
+@1148 = ~"The Still Water Within"
+
+As penned by Lirael of the Gentle Banks, Keeper of the Silent Pool
+
+I was but young when first I wandered deep into the Wood of Sharp Teeth.
+The elders had warned me: "Not all who walk beneath the green honor life."
+Yet my heart knew no fear, only the call to carry Eldath’s peace wherever my steps would take me.
+
+For three nights I slept beneath the starlit canopy, the whispering leaves singing wind-songs to my soul. On the fourth evening, I came upon the ogre Brughul, who sought to feed his club with blood.
+
+A calf, bound and trembling, lay near his fire. Brughul towered like two men, his club glistening with old stains. I could have fled. I could have struck with spell or flame.
+
+But I did what Eldath had always taught: I sat.
+
+Simply that. Cross-legged. Palms open. Heart bare. And I began to sing the old lullaby of the quiet waters.
+
+"No blood shall quench as calm as light,
+Drawn from a spring so pure and bright.
+No scream shall ever bring release,
+let silence sow the seeds of peace."
+
+Brughul's rage faltered. The monster stepped forward. I smelled his breath. His grip loosened. The club dropped to moss. Then — silence. Only the soft splash of the calf as it stumbled into shallow water and was gone.
+
+When I opened my eyes, I was alone. They say a ring of white lilies grows there now, though none bloomed before.
+
+(Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
+@1149 = ~Peacewalker's stories II~
+@1150 = ~"The Thorn and the Dove"
+As recorded by the Willowroot Circle
+
+He walked barefoot across Amn. Brother Eolan—a freewalker of Eldath—carried no coin, no weapon, no map. Only a waterskin and a heart uncluttered by wrath. Where others turned blades upon strangers, he offered silence, and when the world scorned mercy, he extended his hand.
+
+It was in the Gorge of the Fallen Idol that he was most sorely tested.
+
+The gorge is cut deep into the foothills of the Small Teeth. Long ago, a statue of a forgotten god fell from the cliffs and shattered in the chasm below. Since then, the gorge has attracted those with dark intentions.
+
+One such was Thornmaw, a scar-marked brigand queen. When Brother Eolan wandered into her domain, she and her kin saw him as prey.
+
+But he made no plea, no argument. He simply knelt. In the dust at the edge of the shattered idol’s gaze, he drew forth his waterskin. With both hands, he offered it to her. His eyes met hers. And he spoke: "When did you last drink without fear?"
+
+The others laughed. But Thornmaw did not. Her hand lingered at her belt, where her curved blade hung heavy with dried blood. She stepped forward. Took the waterskin. Drank.
+
+Then she hurled it down into the gorge and turned away, saying: "Go."
+
+And he did.
+
+No one laid hand nor claw on him. He passed unscathed, vanishing into the southern passes like mist before dawn.
+
+The next season, the fallen idol bore something new—a vine, delicate and green, curling up through its cracked stone lips. Water pooled near its base.
+
+(Although this item may hold cultural value, it appears neither magical nor useful in advancing your mission.)~
+@1151 = ~Elven Wardstone~
+@1152 = ~This is a finely crafted elven wardstone.~
+@1153 = ~Branch Key~
+@1154 = ~This key is crafted from interwoven branches and appears to open a particular kind of door.~
+@1155 = ~Rose of Mythrien~
+@1156 = ~This flower is known as the Rose of Mythrien. Some say it is a wonder that it has endured all the centuries since the fall of Myth Unnohyr, for the lingering touch of the broken Mythal should have withered it long ago — but it did not.
+  
+STATISTICS:
+
+Weight: 1~
+@1157 = ~Halberd~
+@1158 = ~Halberd of Fierce Bites +2~
+@1159 = ~This halberd has three teeth-like picks that can pierce even through some armors and deal powerful damage to enemies.
+  
+STATISTICS:
+
+Combat abilities:
+– Each successful hit has a 50% chance to deal additional 1d6 piercing damage 
+
+THAC0: +2
+Damage: 1d10+2 (piercing)
+Speed Factor: 7
+Proficiency Type: Halberd
+Type: Two-handed
+Requires:
+ 13 Strength
+
+Weight: 12~
+@1160 = ~Belt~
+@1161 = ~Belt of Starshaping~
+@1162 = ~This belt was once used by Stinna Raonar, an elven oracle that decided that she no longer wanted to see how future may unfold, but that she wanted to shape it. To do so, she started to learn how to change the future and manipulate the power of luck.
+
+STATISTICS:
+
+Charge abilities:
+– May cast Oracle once per day
+
+Equipped abilities:
+– Luck: +1 (diviner only)
+– Lore: +10 (diviner only)
+– Saving Throws bonus: +2
+
+Weight: 2~
+@1163 = ~Shortbow~
+@1164 = ~Bard's Love Letter +3~
+@1165 = ~This magical bow is known as the Bard’s Love Letter. It fires arrows with remarkable grace and sharpens a bard’s focus. In the right hands, it can turn even a modest performer into a formidable spellcaster.
+
+STATISTICS:
+
+Charge abilities:
+– May cast Magic Missile once per day
+
+Equipped abilities:
+– Charisma: +1
+– Can memorize two extra 1st level spells, and one extra 2nd level spell (bard only)
+
+Damage: +1 (bard only)
+THAC0: +3
+Speed Factor: 3
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@1166 = ~Flail~
+@1167 = ~Two Arguing Heads +2~
+@1168 = ~This flail used to belong to a cleric of Tempus, who found it very difficult to make any decision, which was quite unusual for someone who needs to know how to act even during the greatest battles. Some say this weapon wasn't really helping and when he held it, he would overthink things even more.
+
+STATISTICS:
+
+Equipped abilities:
+– Wisdom: -1
+
+Combat abilities:
+– Attacks Per Round: +1/2 
+– Each successful hit has a 50% chance to deal additional 1d6+3 crushing damage
+
+THAC0: +2
+Damage: 1d6+3 (crushing)
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 13 Strength
+
+Weight: 12~
+@1169 = ~War Hammer~
+@1170 = ~Hammer of Powerful Yet Unlikely Blows +4~
+@1171 = ~This hammer is an unusual weapon. While it can break any bone, damage metal plate armors, kill huge beasts like giants or dragons, it's very uncomfortable to hold and use. But if someone is able to land a proper hit, the effect may be truly grand!
+
+STATISTICS:
+
+THAC0: -4
+Damage: 4d4+5 (crushing)
+Speed Factor: 1
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 4~
+@1172 = ~Morning Star~
+@1173 = ~The Pufferfish +3~
+@1174 = ~This morningstar was blessed by a cleric of Umberlee. The name of this weapon was clearly inspired by its round head. Some say that this weapon and its name amuses even The Bitch Queen herself.
+
+STATISTICS:
+
+Equipped abilities:
+– Cold Resistance: +25%
+
+Combat abilities:
+– Each successful hit has a 5% chance to deal additional 1d4 cold damage
+– Each successful hit has a 5% chance to deal additional 1d4 piercing damage
+– Each successful hit has a 5% chance to lower target's cold resistance by 10% for 3 rounds (no saving throw)
+– Only one of the combat abilities above may trigger on a single hit
+
+THAC0: +3
+Damage: 2d4+3 (crushing)
+Speed Factor: 4
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 8~
+@1175 = ~Plate Armor~
+@1176 = ~Duskwood Plate~
+@1177 = ~This finely crafted suit of armor is fashioned from layered duskwood. While it offers the solid defense of conventional plate, it remains lighter and more attuned to natural energy. 
+Its organic structure allows even single-class druids to don it without breaking their sacred oaths.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: -10%
+– Electricity Resistance: +10%
+– Saving Throws vs. Death: +1
+
+Armor Class: 3 (0 vs. slashing)
+Requires:
+ 8 Strength
+
+Weight: 20~
+@1178 = ~Potion~
+@1179 = ~Potion of Natural Attunement~
+@1180 = ~This murky green potion exudes the scent of wet bark and crushed leaves. It was designed by druids who believe that all true growth comes through greater sacrifice.
+
+Upon drinking the entire potion, the user feels a subtle shift in <PRO_HISHER> being—strength wanes, but something healing stirs. In surrendering brute force, the body opens to the quiet powers of rejuvenation.
+
+Such potions are rare and respected, for they teach what every tree already knows: that what is shed may nourish something greater.
+
+STATISTICS:
+
+Charge ability:
+– Drinking the potion permanently lowers the character’s Strength by 1, but grants Cure Serious Wounds or Neutralize Poison (50% chance each) as an innate ability
+
+Weight: 1~
+@1181 = ~Wand~
+@1182 = ~Wand of Goodberry~
+@1183 = ~This slender wand appears to have grown rather than been carved—it is shaped from a single twisting branch, smooth to the touch and still warm with life. At either end, tiny berries have sprouted, glowing faintly with druidic magic.
+
+Though humble in form, this wand holds the power to conjure Goodberries, just like the druidic spell. These enchanted fruits offer nourishment, restore vitality, and provide comfort in the wilds—each a small gift of peace in a world too often torn by blade and flame.
+
+STATISTICS:
+
+– May cast Goodberry once per charge
+
+Requires:
+ 9 Wisdom
+
+Weight: 1~
+
+@1184 = ~Face of the Forest~
+@1185 = ~This mask resembles a serene face—neither elf nor human, but something older. By donning the mask, the wearer feels the quiet strength of the forest. In the forest, its magic quickens the blood and mends small wounds. The mask’s natural fibers harden under threat, offering both physical protection and uncanny resilience against deadly blows.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Regenerates 3 Hit Points per round while within a forest.
+– Protects against critical hits
+
+Weight: 1~
+@1186 = ~Chestnut Bullet +2~
+@1187 = ~These magically hardened sling bullets are made from wild chestnuts—still bearing their natural spines. Originally enchanted by a halfling to scare off a pack of hungry goblins, they’ve since found favor with pranksters and wanderers across the Western Heartlands. Despite their humble appearance, they strike with surprising force—and a sting nobody will soon forget.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d4+3 (missile), +2 piercing damage
+Launcher: Sling
+
+Weight: 0~
+@1188 = ~This ancient elven armor has long since seen its prime. Once finely crafted and bearing the elegance of its people, it is now dulled, cracked, and fragile with age. Whatever enchantments or strength it once held have faded to dust, leaving only a shell unfit for battle.
+
+STATISTICS:
+
+Weight: 20~
+@1189 = ~Jagged Script~
+@1190 = ~The script is crude and jagged, yet disturbingly deliberate. It reads:
+
+Patience, patience... centuries of it, and still the prize lies just beyond my reach. The elf’s flesh, locked tight by foolish wards. But even the strongest seal can be undone by mortal hands too curious for their own good.
+Find one. Any one. Whisper promises. Let them break the seal on her tomb for me.
+Then... I shall have a body again. A perfect one. A vessel worthy of my hunger.~
+@1191 = ~Plaguestaff~
+@1192 = ~Carved from the heartwood of a long-dead tree, this staff radiates a faint odor of decay. It is said to have been gifted by Talona herself to a mortal champion whose very touch brought weakness and fever. The Plaguestaff does not strike to kill swiftly; it spreads languor, sickness, and inevitability—until the victim's strength falters entirely.
+
+STATISTICS:
+
+Equipped abilities:
+– +2 bonus to Saving Throws vs. Death
+
+Combat abilities:
+– On Hit: 5% chance to inflict Withering Sickness – target must Save vs. Death or lose 2 Strength for 1 turn (stacking)
+
+Charge abilities:
+– Poison Strike (1/day): Target suffers 1 poison damage per second for 6 seconds (Save vs. Death at +1 negates)
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+@1193 = ~Arrows of Charming~
+@1194 = ~These finely crafted arrows are unlike any of mundane make. Their tips are delicately shaped into hearts of polished coral, glimmering faintly in the light. When loosed, they seek to sway the will of the target, drawing them toward the archer’s cause.
+
+STATISTICS:
+
+Combat abilities:
+– Target must save vs. Spell or be charmed for 5 rounds
+
+THAC0: +1
+Damage: 0 (missile)
+Launcher: Bow
+
+Weight: 0~
+@1195 = ~Poisoned Bullets~
+@1196 = ~These sling bullets are coated in a thick, foul-smelling contact poison. Upon impact, it seeps into the wound, causing a grievous affliction.
+
+STATISTICS:
+
+Combat abilities:
+– Hit target must save vs. Death or suffer 2 points of poison damage per second for 10 seconds
+
+THAC0: +1
+Damage: 1d4+1
+Damage type: Missile
+Launcher: Sling
+
+Weight: 0~
+@1197 = ~Witherbranch~
+@1198 = ~This cruel club appears to be nothing more than a gnarled, blackened bough, its surface split and twisted as if writhing in pain. It was cut from a tree deep within a plague-ridden grove, where Talona’s breath had stilled all life. Its thorns gleam with a dull green patina — residue from years of venomous anointing.
+
+STATISTICS:
+
+Equipped abilities:
+–  Talona's Kiss: While the wielder is poisoned, <PRO_HESHE> gains a +5 bonus to all saving throws and attack rolls until the poison subsides.  
+
+Combat abilities:
+– Hit target must save vs. Death or suffer 1 point of poison damage per second for 6 seconds in 50% of hits
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 1
+Proficiency Type: Club
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 1~
+@1199 = ~Gauntlets of the Treant~
+@1200 = ~These massive gauntlets are formed of bark and living root, bound with strips of ironwood. Their surface shifts slightly, as if the gauntlets still draw strength from unseen soil. Druids tell that they were crafted in reverence to the treants of the Forest of Tethir, guardians as patient as the earth itself.
+When the wearer’s flesh is hardened with Barkskin, the gauntlets channel that living armor into raw strength, allowing the bearer to strike with the might of a towering oak.
+
+STATISTICS:
+
+Equipped abilities:
+– +2 Strength while Barkskin is active
+
+Weight: 2~
+@1201 = ~Amulet of Inner Stillness~
+@1202 = ~This plain wooden amulet, set with a single green pearl, bears no inscription. It is said to have been blessed in the still waters of Eldath. When silence falls upon its wearer, a deep inner peace rises instead, shielding the mind from all intrusive forces. Neither confusion nor charms, domination nor stunning magic can shake the quiet center of the soul.
+
+STATISTICS:
+
+Equipped abilities:
+– While Silenced: Immunity to Suggestion, Charm, Domination, Command, Sleep, Maze, Stun, Confusion and Psionic Blast.
+
+Weight: 1~
+@1203 = ~Honeymead of Duskwood Dell~
+@1204 = ~This heavy cask is filled with golden mead brewed by an Eldathyn monk in Duskwood Dell. The nectar carries the patient work of countless bees.
+
+The monk has entrusted you with this cask, asking that you deliver it to Samuel Thunderburp, proprietor of the Five Flagons in Athkatla. Once you have received payment, you are to return the gold to the monk so that it may serve the temples and gardens of Eldath.
+
+Weight: 1~
+@1205 = ~Cloak of a Thousand Stings~
+@1206 = ~This cloak of thick brown cloth is pitted and punctured with countless tiny holes, as though it had long served as the last defense against a thousand stings and arrows. Despite its battered look, the fabric hums faintly with protective power. It smells of smoke, wax, and wild honey.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1 vs. missiles and piercing weapons
+– Immunity to "Summon Insects" and "Insect Plague"
+
+Weight: 3~
+@1207 = ~This emerald-hued rose is a gift from Mythrien Sarath, the Watcher over Mythals. Each of its fragile petals glimmers with a light not of this world, as though echoing the lost wards of ancient elven cities.
+When a petal is plucked, a translucent sphere surrounds the bearer, shielding <PRO_HIMHER> from spells of lesser potency. Yet the gift is fleeting—when the last petal falls, the rose will crumble to dust.
+
+STATISTICS:
+
+Charge abilities:
+– Pluck a Petal: Grants immunity to spells of up to 5th level for 3 rounds
+– Limited number of uses; the rose vanishes when depleted
+
+Weight: 0~
+@1208 = ~Elminster's Ecologies: Appendix IVa~
+@1209 = ~Elminster's Ecologies: Appendix IVa
+
+This time-worn tome is written by the sage Elminster, and apparently part of a much larger body of work containing detailed studies of most of the strange creatures from around Faerûn. 
+
+The appendix seems to refer to newly-discovered variations on normal breeds of creatures. Of particular interest:
+
+"Will-o’-the-Wisps (Common)
+These pale, floating lights haunt marshes and ruins, feeding on fear. They lure travelers astray and strike with crackling bursts of lightning. Hard to harm with steel or spell, they remain among the most treacherous of minor undead."
+
+"Will-o’-Wild
+A mutation born of unstable magic. Flickering in ever-changing flashes, these lights twist spells around them—wards collapse, surges erupt, enchantments go awry. They are most often found drifting in regions of wild magic."
+
+"Will-o’-Dead
+Spawn of the lifeless Weave, these wan globes feed not on fear, but on life force. They linger where magic itself has failed — in the barren places known as dead-magic zones."~
+@1210 = ~Essence of the Will-o’Dead~
+@1211 = ~A faintly glowing mote of pallid light, cold to the touch and unnervingly silent. Lore-whispers suggest that such an essence could one day serve to counter the emptiness where the Weave has failed.~
+@1212 = ~Essence of the Will-o’Wild~
+@1213 = ~This shimmering fragment pulses with chaotic hues, shifting from emerald to amber in an instant. It carries within it the untamed spark of wild magic, unpredictable yet potent. Some claim that such essence, properly bound, might shield its bearer from the turbulence of unstable Weave-fields.~ 
+@1214 = ~Manual of Peaceful Living~
+@1215 = ~Manual of Peaceful Living
+This contemplative tome  offers guidance on living a life of serenity and restraint. As with all such rare works, the book vanishes after a single use.
+
+STATISTICS:
+
+Attacks per Round: Reduced by 0.5 (permanently)
+Armor Class: Improved by 1 (permanently)
+Saving Throws: +1 bonus (permanently)
+Special: The book is consumed upon use
+Usage: Place into quick item slot
+
+Weight: 25~
+@1216 = ~Fairy Jar~
+@1217 = ~This crystal jar contains two tiny winged creatures - the Dell-Light Twins, the two fairies from Duskwood Dell, apparently. They appear fully conscious, peering out with curious eyes, their lips moving as if in constant conversation — though no sound escapes. The jar’s lid refuses to move, sealed by a magic older and subtler than any lock. Occasionally, one of the twins presses her hands against the inside, mouthing words the glass will not let through. Whether plea or mischief, it’s impossible to tell.
+
+The seal cannot be opened or broken by physical or magical means. The faeries within are alive but imprisoned, their magic suppressed by the vessel’s binding.
+
+Weight: 1~
+@1218 = ~Mirage’s Edge~
+@1219 = ~Forged by genies who sought to weave illusion and motion into one, this blade can wrap its wielder in shimmering reflections — turning the swordsman into a living mirage.
+
+STATISTICS:
+
+Charge abilities:
+– Mirror Image once per day
+  Duration: 1 turn
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 1~
+@1220 = ~Wish
+
+Wish will fulfill literally the utterance of the caster. Thus, the actuality of the past, present, or future might be altered in some limited manner. The greater the wish, the greater the strain upon the fabric of reality, and the greater the chance of unwanted consequences.
+
+Curiously, this particular scroll may be read by anyone — not merely those trained in the arcane arts. Its words are written in a language so simple, so clear, that even the unlearned might speak them aloud with ease. Almost too simple, in fact... too easy to believe.~
+@1221 = ~Wisdom point lost~
+@1222 = ~Torn Page I~
+@1223 = ~These torn and faded pages appear to be fragments from a much larger chronicle concerning the history of Myth Unnohyr. The ink is elven, the script elegant yet frayed by time:
+
+"From the Days of Founding - Year of the First Flowering
+
+And so was the City of Quiet Radiance laid upon the forest glade, where seven ley-lines met and the breeze whispered in the tongue of the ancients. The High Mages of Unnohyr bound the first stones with silver word and living root, and the skies turned blue and deep in their blessing.
+
+Mythrien Sarath, Lord of Wards, cast down his gaze and was pleased. His touch fell like dew upon the high towers, and from that day forward the Mythal shielded the city with light and serenity. May all conflict break and wash away before our walls, the Founding Oath proclaimed.
+
+And for a time, so it was."
+
+Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
+@1224 = ~Torn Page II~
+@1225 = ~These torn and faded pages appear to be fragments from a much larger chronicle concerning the history of Myth Unnohyr. The ink is elven, the script elegant yet frayed by time:
+
+"In the height of Myth Unnohyr’s glory, an elven high mage sought to bind his soul to the city’s Mythal. He wished not for wisdom, nor for legacy — but for unending life, carried from vessel to vessel by the spell’s eternal weave. 
+
+Yet in doing so, he wounded the very heart of the Mythal. Life and death bled together, and when his body fell, the Mythal itself raised him anew — each time within another fallen elf.
+Thus was born the undying echo of a guardian who betrayed his own vow. His immortality became the city’s curse, and his rebirth its unending decay"
+
+Though they seem of no direct use to your quest, the words may help you understand the deeper nature of what transpired here — and what was lost.~
+@1226 = ~Signet Ring of House Vemmil~
+@1227 = ~This opulent signet ring bears the crest of the Vemmil family, an ancient Amnian merchant line known for its wealth, political maneuvering, and staggering lack of humility. Among Amnian elites, its wearer is often greeted with smiles – genuine or not – and a careful counting of silverware.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+
+Charge abilities:
+– Cast Friends once per day
+  Area of Effect: self
+
+Weight: 1~
+@1228 = ~Blade of Day and Night~
+@1229 = ~Forged in the elder days of Myth Unnohyr, this elegant longsword was once a ceremonial weapon of the elven guardians who served the Watcher Over Mythals. Known as the Blade of Day and Night, it was said to embody the balance between vigilance and rest, between the radiance of the sun and the quiet strength of moonlight.
+
+Legends tell that the sword shattered when the city’s protective mythal began to wane, its twin halves cast apart by opposing forces of light and shadow. 
+
+Now reforged, the sword shifts its nature with the turning of the heavens. In daylight it burns with quiet resolve, keen and strong. Under moon and stars, it softens its radiance, guarding the bearer with calm and patience.
+
+STATISTICS:
+
+Equipped abilities:
+– During day and dawn: +1 THAC0 and +1 Damage
+– During night and dusk: +1 AC and +1 to all Saving Throws
+
+THAC0: +3
+Damage: 2d4+3 (slashing)
+Speed Factor: 5
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
+@1230 = ~Part of a Blade~
+@1231 = ~This is part of a blade. The metal shimmers with a bluish hue, flecked with tiny motes that gleam like stars in the night sky. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+@1232 = ~This is part of a blade. The metal gleams with a radiant golden light, bright as the rays of the sun. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+@1233 = ~Nightblade~
+@1234 = ~Dayblade~
+@1235 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Nightblade. The metal shimmers with a bluish hue, flecked with tiny motes that gleam like stars in the night sky. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+@1236 = ~This is part of a legendary elven sword known as the "Blade of Day and Night". This fragment is the Dayblade. The metal gleams with a radiant golden light, bright as the rays of the sun. Without the other half of the sword—and someone skilled enough to reforge them together—this piece is of little use.~
+
+@1237 = ~Marrik, 
+we’re behind the Temple of Helm in the Bridge District after dark, like every night. Bring the token, and you’ll get what you’ve been asking for.~
+@1238 = ~Old Coin~
+@1239 = ~This worn coin bears the faint image of an elderly man with a solemn expression. The details have long since faded — the nose smoothed by countless hands, the edges dulled by time. There are no markings of mint or value, and yet it feels heavier than it should, as if it remembers the years it has passed through. Whoever pressed it into shape is long gone, and whatever purpose it once held has long been forgotten.~
+
+@1240 = ~Bottle of Pixie Dust~
+@1241 = ~This small bottle contains a handful of shimmering pixie dust that can be tossed into the air. Any ally touched by the dust becomes invisible (the dust spreads in a radius of about 15 ft). Of course, the invisible creature is not magically silenced, and certain other conditions can still reveal it. Even allies cannot see the invisible creature or its gear unless they are normally able to see invisible things or employ magic to do so. Items dropped or set down by the invisible creature become visible, while items picked up vanish if tucked into the creature’s clothing or pouches.
+
+The dust’s magic lasts until it is dispelled, willingly ended, or broken by an attack. It can also fade naturally after 24 hours. The invisible being may move freely and cast defensive spells, but any offensive action immediately ends the effect — though it still allows the first strike to go unseen.~
+@1242 = ~Arrow of healing~
+@1243 = ~These arrows are an invention of Eldath’s faithful. Each shaft bears a small vial of sanctified water drawn from a sacred spring. When the arrow strikes, the vial shatters, releasing a gentle burst of divine essence that seeps into the wounded flesh of its target.
+
+Though the arrows are crafted for healing, even a gentle strike can bruise or cut when loosed from a powerful bow — a small price to pay for the healing they bestow.
+
+STATISTICS:
+
+THAC0: +1 
+Launcher: Bow
+Special: Restores 4d6 Hit Points to the creature struck
+
+Weight: 0~
+@1244 = ~Axe of Apologies~
+@1245 = ~This magical battle axe bears the image of an orc. Once wielded by the Odonti, a reclusive clan of peaceful orcs from the Unapproachable East who venerate Eldath, it served as a symbol of regret.
+
+The axe whispers a soft "Sorry!" each time it strikes a target. Unfortunately, these apologies weigh heavier on the wielder than on the enemy, instilling a subtle sense of guilt that disrupts <PRO_HISHER> focus in battle.
+
+When the bearer is wounded, though, the axe becomes sometimes useful in combat, granting the wielder an Eldathyn blessing.
+
+
+STATISTICS:
+
+Equipped abilities: 
+– 25% chance to cast Cure Moderate Wounds on the wielder when hit
+
+Combat abilities:
+– Each successful hit causes the wielder to suffer a cumulative –2 THAC0 for 2 rounds
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Speed Factor: 5
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+@1246 = ~Freewalker's sandals~
+@1247 = ~These simple leather sandals protect the wearer on <PRO_HISHER> peaceful journey. Favored by those who walk without violence and stop for no one, they ensure that no step need be delayed.
+
+STATISTICS:
+
+Equipped abilities:
+– Immune to Hold Person and Slow
+
+Weight: 4
+~
+@1248 = ~Ring of Non-Detection~
+@1249 = ~Fashioned by a reclusive cabal, this simple band was designed to shield their agents from arcane prying. When worn, it shrouds the bearer in subtle counter-magic that prevents detection by spells.
+
+STATISTICS:
+
+Equipped abilities:
+– While hidden or invisible, the wearer is non-detectable by magical means such as Detect Invisibility and scrying
+
+Weight: 0~
+@1250 = ~Blinding Powder~
+@1251 = ~This powder can be thrown at any creature within 40 ft. Upon impact, it bursts into a blinding cloud that affects all creatures caught within who fail to avert their eyes.
+
+STATISTICS:
+
+Blinds affected creatures (Save vs. Breath –4 negates)
+Duration: 1 turn
+Area of Effect: 15-ft. radius
+
+Weight: 1~
+@1252 = ~Dark Amulet of Mythrien~
+@1253 = ~This amulet was fashioned through sinister Drow rites from shattered fragments of an ancient surface-elven necklace—very likely once a sacred pendant devoted to Mythrien Sarath. The purity it once held has long since been profaned. Whatever materials the Drow used in its creation... the process was undoubtedly cruel, and very, very bloody.
+
+Equipped abilities: 
+– Immunity to wild magic and dead magic zone effects in Myth Unnohyr
+
+Weight: 0~
+@1254 = ~Spidersilk Boots~
+@1255 = ~These supple boots were crafted from spider-hide and reinforced with strands of consecrated silk. Worn by Vhaeraun’s surface scouts, they allow swift, silent movement through webs, roots, and magical snares alike.
+A subtle enchantment, woven in defiance of Lolth’s faithful and the children of the Seldarine, grants the wearer a faint defensive edge when facing elven foes.
+
+STATISTICS:
+
+Equipped abilities:
+– Immune to Entangle and Web
+– +2 AC and +2 Saving Throws vs. Elves 
+– Move Silently: +10%
+– Hide In Shadows: +10%
+
+Weight: 4~
+
+// script strings
+@2000 = ~Duskwood Dell~
+@2001 = ~Eldath, goddess of peace and calm waters~
+@2002 = ~A profound sense of peace washes over you in this place. You feel utterly incapable of raising a weapon here.~
+@2003 = ~As you approach the gate leading to the lower levels, you feel a flicker of magic. It seems the corrupted mythal does not reach into the depths—meaning your magic should function normally in the areas below.~
+@2004 = ~Upon entering the ruined elven city, you feel the shattered remnants of the mythal coil around you—its once-pure magic now twisted into a volatile blend of wild surges and dead magic.~
+@2005 = ~You must place both pieces of the necklace upon the anvil to reforge them into one.~
+@2006 = ~With the aid of the magical anvil, you are able to reforge the two pieces into one once more.~
+@2007 = ~Could it be you... my beloved, at last?~
+@2008 = ~The corrupted mythal does not reach this place.~
+@2009 = ~(You feel the pull of the berry-shaped Ioun stone towards the tower. It may be a sign you are now able to enter its walls.)~
+@2010 = ~(You do not have the berry-shaped Ioun stone. You can no longer enter the tower. Without the stone, the barrier is erected.)~
+@2011 = ~A small jeweler’s anvil rests atop a larger one. Fragments of fine chains lie scattered nearby, as though many necklaces were once forged here. Strangely, the anvil radiates strong magic that seems untouched by the corrupted mythal.~
+@2012 = ~None of the items in your inventory appear suitable for crafting a necklace upon this anvil.~
+@2013 = ~Magic seems to function normally within this area.~
+@2014 = ~This statue depicts an elven deity, but you find it difficult to recognize it.~
+@2015 = ~This statue portrays Mythrien Sarath, a nearly forgotten god once revered for his guardianship over Mythals.~
+@2016 = ~You recognize this statue as likely depicting Mythrien Sarath—a nearly forgotten elven god.~
+@2017 = ~I AM THE POISON AND I SHALL DEVOUR YOU!~
+@2018 = ~You hear a faint sound rising from the cauldron. It seems that with the creature’s death, an antidote has formed within.~
+@2019 = ~Rose... it must be safe!~
+@2020 = ~Take it to Mythrien! Place it under his feet and reach for his helping hand!~
+@2021 = ~When you approach the ruins, you notice an ankheg that looked as if it was lured by the place, but when the creature notices you, it decides to attack.~  
+@2022 = ~A statue of a young elven warrior-maiden, red roses blooming at her feet — the only plants untouched by the corrupted Mythal.~
+@2023 = ~It seems you require something else to forge an amulet that shields you from the Mythal—apparently, an essence.~
+
+@2024 = ~Blood... All I can see is blood!~
+@2025 = ~Free me! Please!~
+@2026 = ~(The yuan-ti is nowhere to be seen, but he couldn't have left Myth Unnohyr, he was too wounded for that.)~
+@2027 = ~You're in Myth Unnohyr again. The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
+@2028 = ~Something unsettling stirs in the north. To reach it, you must pass through the sanctuary once claimed by the priest of Talona.~
+@2029 = ~We should see our dryad friend first. From what I understand, she has the sword.~
+@2030 = ~We came for the Remembrance of the Myths, my friend. The High Priest knows about everything.~
+@2031 = ~Yes. I know. And I was told to give you the sword. Even though I believe it should stay here. With me.~
+@2032 = ~We do not have much choice.~
+@2033 = ~There is always a choice.~
+@2034 = ~Here. Take it. And I pray it won't become your doom. May Eldath watch over you.~
+@2035 = ~Now I will send you to the hidden entrance of Myth Unnohyr, <CHARNAME>.~
+@2036 = ~Farewell. May Eldath’s quiet breath shelter you.~
+@2037 = ~Find our enemy, <CHARNAME>. Find the wyrd and use this sword against it. It should also break the barrier and let you leave that damned place.~
+@2038 = ~We'll wait for your return.~
+@2039 = ~If anyone is to win this battle, it's you.~
+@2040 = ~The path behind you is sealed by a wall of tangled growth. Your only escape lies ahead, through the heart of the shattered city.~
+@2041 = ~The entrance to this tower is shrouded in an unnatural mist. Without the proper means, you will not be able to enter.~
+
+// ACPP 77 strings
+@2042 = ~A proud elven warrior-maiden stands joyfully before her city.~
+@2043 = ~She fights against numerous beasts.~
+@2044 = ~The elven warrior-maiden appears to be stabilizing some magic.~
+@2045 = ~An elven community mourns at a coffin.~
+
+@2046 = ~You recognize Elv-Esster Aened, commander of the guard of Myth Unnohyr. She stands before the city – young, proud, and filled with hope.~
+@2047 = ~She fights against numerous beasts – it seems the god Malar has a hand in this. Elv-Esster faces them alone – unyielding, without fear.~
+@2048 = ~You realize she is trying to stabilize the failing mythal with her own essence – an act of sacrifice and magic.~
+@2049 = ~The mourning elves in this image are not just witnesses to death, but to divine failure. Some lower their heads – others gaze accusingly at the sky.~
+
+@2050 = ~An undead creature appears to be possessing an elf.~
+@2051 = ~The elven warrior-maiden tries to drive back the undead.~
+@2052 = ~The elven warrior-maiden seems to be torn apart by a blinding magical light.~
+
+@2053 = ~Elv-Esster Aened's tomb~
+
+@2054 = ~A ghostly entity cloaked in shadows appears to invade the body of a dying elf.~
+@2055 = ~Elv-Esster Aened and her kin stand against the encroaching undead, their spells lashing out in desperation.~
+@2056 = ~A surge of wild magic erupts as the mythal shatters—Elv-Esster vanishes within the blinding light.~
+
+// ACPP70 strings - the tree obstacle
+@2060 = ~By the power of the wardstone, the throng of undead trees is banished.~
+@2061 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
+@2062 = ~With sheer force, you actually manage to shift the tree aside.~
+@2063 = ~You could try to move this mighty tree aside using an object, fire, or exceptionally great strength.~
+@2064 = ~The tree collapses under the fire and dissolves.~
+@2065 = ~The fire seems to slowly destroy the fallen tree.~
+@2066 = ~The fire seems to have some effect on the fallen tree.~
+@2067 = ~Now that the passage is clear, the wardstone crumbles to dust.~
+
+@2068 = ~Temple of Mythrien~
+@2069 = ~Mmm... oh-ho-ho! Hmmm. Such sweetness! Crunchy comb, golden nectar... *slurp* Ahhh, bliss indeed!~ [AC#PPHO0]
+@2070 = ~Oh! By the Gentle Broodkeeper herself... I did not expect company while I indulged.~
+
+@2071 = ~From all you’ve learned, this statue appears to depict Commander Elv-Esster Aened, once the leader of Myth Unnohyr’s guard.~
+@2072 = ~The dead magic zone prevents the trap from triggering properly.~
+@2073 = ~Follow me.~
+
+@2074 = ~You need all blessings to perform the ritual required to create the antidote.~
+
+@2075 = ~Though the water is murky, you notice a tunnel beneath the surface of the water. You could dive through and explore it if you wish.~
+
+// the two fairies
+@2100 = ~If you must sparkle, do it over there!~
+@2101 = ~But over there is boring!~
+@2102 = ~Stop tugging my robe!~
+@2103 = ~Fine, fine! We’ll tug your hair instead. Happy now?~
+@2104 = ~Don’t trust fireflies. They’re just show-offs with no style.~
+
+@2105 = ~Now that you're safe, please— no more vanishing without a word!~
+@2106 = ~But then who would you worry about, Brother Edrim? We keep your heart healthy!~
+@2107 = ~It’s truly wonderful to have you back!~
+@2108 = ~Oh really? We’ll remind you of that next time we’re tugging on your robe!~
+
+@2200 = ~Infirmary~
+@2201 = ~Temple of Eldath~
+@2202 = ~Tree of Nourishment~
+@2203 = ~Eldath’s Grotto~
+@2204 = ~High Fallskeeper’s Tree~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

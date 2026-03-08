@@ -1,0 +1,383 @@
+// Journal strings
+
+// Journal strings
+
+//Quest start
+@12000 = ~Das vollkommene Gift
+
+In den Slums von Athkatla sprach mich ein Eldathyn namens Merethan wegen eines unheilbaren Giftes an, das sich im Land ausbreitet. Er glaubt, ein zwielichtiger Giftlieferant stecke dahinter, und bat mich, die Quelle ausfindig zu machen.~
+
+@12001 = ~Das vollkommene Gift
+
+Merethan verwies mich an Skann Delth, einen kleinen Giftkrämer, der sich auf dem Dach der Kupferkrone herumtreibt. Ich soll ihn nach der Herkunft seiner tödlichsten Waren ausfragen. Merethan erwartet mich im Tempel des Ilmater in den Slums von Athkatla.~
+
+@12002 = ~Das vollkommene Gift
+
+Ich stellte Skann Delth zur Rede und erhielt eine Karte zu einem abgelegenen Ort namens Fliegenpilzlichtung. Diese Karte muss ich zu Merethan bringen, der im Tempel des Ilmater in den Slums von Athkatla auf mich wartet.~
+
+@12003 = ~Das vollkommene Gift
+
+Merethan wünscht, dass ich ihn zur Fliegenpilzlichtung begleite, um zu sehen, ob der Giftmischer sich zeigt. Er erwartet mich im Tempel des Ilmater in den Slums, damit wir gemeinsam aufbrechen können.~
+
+@12004 = ~Das vollkommene Gift
+
+An der Fliegenpilzlichtung verwandelte sich ein angeblicher Austausch in einen Hinterhalt. Der Diener des geheimnisvollen Giftmischers erschlug Merethan, doch einer der Pfeile blieb mit dem Toxin getränkt zurück. Vor seinem Tod vertraute er mir den Pfeil an und drängte mich, ihn zu Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim nach Duskwood Dell zu bringen, Eldaths Heiligtum.~
+
+@12005 = ~Das vollkommene Gift
+
+Hochverehrter Hüter der Stillen Wasser Alatoasz glaubt, der Schlüssel zum Verständnis des Giftes liege in den Ruinen einer alten elfischen Stadt. Er vermutet, dass die seltene Pflanze, aus der es gewonnen wurde, dort wächst. Um die Suche einzugrenzen, bat er mich, den Tempel des Oghma in Athkatla aufzusuchen und ihre Schriften über das verlorene Königreich Keltormir zu studieren.~
+
+@12006 = ~Das vollkommene Gift
+
+Ich brachte das Buch aus dem Tempel des Oghma zu Hochverehrter Hüter der Stillen Wasser Alatoasz zurück. Seine Passagen weisen auf Myth Unnohyr: eine zerstörte elfische Stadt, deren zerborstener Mythal bei Tage wilde Magie und bei Nacht tote Magie gebiert. Diese Verderbnis hat sich in eine seltene Pflanze gefressen, aus der das unheilbare Gift gewonnen wird. Er markierte die Ruinen auf meiner Karte. Ich muss nach Myth Unnohyr reisen, den Giftmischer – einen Malagenten Talonas – finden und eine Blüte der verderbten Pflanze zurückbringen, damit der Hochverehrter Hüter der Stillen Wasser ein Gegengift versuchen kann.~
+
+@12007 = ~Das vollkommene Gift
+
+Tief in den Ruinen von Myth Unnohyr stellte ich den Malagenten. Er gestand, die verdorbene Macht des Mythals mit einem neuartigen Toxin verbunden zu haben, und prahlte damit, dass bereits mehrere Chargen in ganz Amn verteilt seien. Er schwor, Myth Unnohyr in das giftige Reich seiner Herrin zu verwandeln – doch ich setzte seinem Treiben ein Ende. Nun muss ich eine Probe der verderbten Pflanze zu Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim nach Duskwood Dell bringen, damit ein Gegengift geschaffen werden kann.~
+
+@12008 = ~Das vollkommene Gift
+
+Ich habe die verderbte Pflanze namens Hainblüte gefunden – die Quelle des vollkommenen Giftes. Nachdem ich den Malagenten besiegt habe, muss ich diese Probe zu Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim nach Duskwood Dell bringen, damit er versuchen kann, ihre Essenz zu reinigen und ein Gegengift zu brauen.~
+
+@12009 = ~Das vollkommene Gift
+
+Der Malagent ist tot, und sein niederträchtiges Werk liegt in Trümmern. Ich brachte die Hainblüte-Pflanze zu Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim nach Duskwood Dell, der glaubt, ein Gegengift gegen das bereits in Amn verbreitete Gift schaffen zu können. Doch um die befleckte Blume zu reinigen und das Heilmittel zu brauen, wird die Hilfe weiterer Glaubensgemeinschaften nötig sein.~
+
+// The antidote
+
+@12100 = ~Das Gegengift
+
+Hochverehrter Hüter der Stillen Wasser Alatoasz glaubt, dass die Hainblüte-Blume gereinigt und in ein Gegengift verwandelt werden kann. Dazu muss die Blume dreifach gesegnet werden – mit den göttlichen Aspekten Leben, Mitgefühl und Erneuerung. Alatoasz hat mir den ersten Segen selbst gewährt, doch die beiden anderen muss ich anderswo suchen.~
+
+@12101 = ~Das Gegengift: Ilmaters Segen des Mitgefühls
+
+Ich soll zum Tempel des Ilmater in den Slums von Athkatla reisen und um den Segen des Mitgefühls bitten. Der Hochverehrter Hüter der Stillen Wasser ist überzeugt, dass die Ilmateri unserer Sache ohne Zögern beistehen werden.~
+
+@12102 = ~Das Gegengift: Lathanders Segen der Erneuerung
+
+Ich muss die Kirche des Lathander in Athkatla aufsuchen, um den Segen der Erneuerung zu empfangen.~
+
+@12103 = ~Das Gegengift: Eldaths singendes Wasser
+
+Alatoasz wies mich an, eine Karaffe von Eldaths singendem Wasser aus der Grotte in Duskwood Dell zu holen. Eine der Dienerinnen am heiligen Becken wird es mir geben. Das Wasser dient als letztes Medium, durch das die Segnungen vereint werden sollen.~
+
+@12104 = ~Das Gegengift: Ilmaters Segen des Mitgefühls
+
+Ich erhielt den Segen des Mitgefühls von den Ilmateri in den Slums. Ihr Gebet erfüllte die Hainblüte mit einer leisen Wärme – als würde die Blume selbst auf Barmherzigkeit antworten.~
+
+@12105 = ~Das Gegengift: Lathanders Segen der Erneuerung
+
+Die Priester Lathanders haben mir den Segen der Erneuerung gewährt. Im Licht der Sonne schien die Hainblüte sich zu regen, ihr dunkler Farbton wich unter der Gnade des Morgenfürsten ein wenig zurück.~
+
+@12106 = ~Das Gegengift: Eldaths singendes Wasser
+
+Ich habe einen Krug von Eldaths singendem Wasser aus der Grotte in Duskwood Dell erhalten. Seine Oberfläche summt leise und spiegelt jeden Atemzug des Waldes. Nun bleibt nur noch, mit der gesegneten Blume und dem heiligen Wasser zu Hochverehrter Hüter der Stillen Wasser Alatoasz zurückzukehren.~
+
+@12107 = ~Das Gegengift
+
+Alle drei Segnungen wurden gesammelt – Leben, Mitgefühl und Erneuerung – und ich habe Eldaths singendes Wasser gesichert. Nun muss ich zu Hochverehrter Hüter der Stillen Wasser Alatoasz nach Duskwood Dell zurückkehren, damit das Gegengift endlich geschaffen und die Verderbnis der Hainblüte ein für alle Mal getilgt werden kann.~
+
+@12108 = ~Das Gegengift
+
+Ich habe alles zusammengetragen: die Hainblüte-Blume, die Segnungen und eine Karaffe von Eldaths singendem Wasser. Hochverehrter Hüter der Stillen Wasser Alatoasz glaubt, dass zur Herstellung des Gegengiftes die geweihte Blume und das heilige Wasser im Kessel des Malagenten in den Ruinen von Myth Unnohyr vereint werden müssen – genau dort, wo das Gift einst gebraut wurde.~
+
+@12110 = ~Das Gegengift
+
+Das Ritual gelang. Aus dem verdorbenen Kessel des Malagenten erhob sich eine monströse Giftinkarnation – die letzte Verkörperung des Toxins. Ich vernichtete sie, und die Verderbnis der Hainblüte wurde gereinigt. Das Gegengift hat Gestalt angenommen und schimmert in ruhigem Smaragdlicht. Ich muss es zu Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim nach Duskwood Dell bringen.~
+
+@12111 = ~Das Gegengift
+
+Ich übergab das Gegengift Alatoasz Berendim, und er nahm es dankbar entgegen. Das Gift, das einst die Lande der Intrigen bedrohte, kann sich nicht weiter ausbreiten.~
+
+/******************************
+SIDE quest journal entries
+******************************/
+// Duskwood Dell – Missing Faerie Twins Quest
+
+@13000 = ~Die verschwundenen Feenzwillinge
+
+Die Feen von Duskwood Dell sind verschwunden. Bruder Edrim bat mich, ihrem Verschwinden nachzugehen. Zuletzt wurden die Zwillinge im Gespräch mit einem Händler gesehen, der in leuchtend rote Seide gekleidet war und mit einem seltsamen, rollenden „R“ sprach. Er zog weiter nach Westen in Richtung Athkatla und könnte sich unter den Händlern auf Waukeens Promenade verbergen. Wenn er tatsächlich mit magischen Kuriositäten handelt, werde ich ihn dort finden.~
+
+@13001 = ~Die verschwundenen Feenzwillinge
+
+Zwischen den Ständen von Waukeens Promenade bin ich einem merkwürdigen Händler begegnet, der Bruder Edrims Beschreibung entspricht — ein Mann in roter Seide, der mit seltsamen Waren handelt und mit einem beinahe hypnotischen Charme spricht. Etwas an ihm fühlt sich... falsch an.~
+
+@13002 = ~Die verschwundenen Feenzwillinge
+
+Der Händler, der sich Zar’khaan nennt, war in Wahrheit kein Händler, sondern ein verkleideter Rakshasa. Ich muss herausfinden, ob er die Zwielicht-Zwillinge bei sich trägt — vielleicht eingeschlossen in einem kleinen Gefäß oder einem verzauberten Schmuckstück.~
+
+@13003 = ~Die verschwundenen Feenzwillinge
+
+Ich habe die Zwielicht-Zwillinge gefunden. Der Rakshasa hielt sie in einem magischen Gefäß gefangen, versiegelt durch mächtige Verzauberung. Die Feen scheinen unversehrt, doch das Glas lässt sich nicht öffnen. Ich sollte es zu Bruder Edrim nach Dämmerwaldtal zurückbringen — vielleicht weiß er, wie das Siegel zu brechen ist.~
+
+@13004 = ~Die verschwundenen Feenzwillinge
+
+Ich brachte das Feenglas zurück zu Bruder Edrim nach Duskwood Dell. Es gelang ihm, das Siegel zu brechen, und die Zwielicht-Zwillinge entstiegen dem Gefäß unversehrt. Ihr Lachen tanzt nun wieder durch Duskwood Dell. Frieden — und ein wenig Unfug — sind in diesen stillen Winkel der Welt zurückgekehrt.~
+
+// Mythal forge amulet
+
+@13010 = ~Das Ungebundene binden
+
+Unter den Überresten eines toten Magiers fand ich einen Brief, der den zerschmetterten Mythal von Myth Unnohyr beschrieb. Er glaubte, es sei möglich, einen uralten elfischen Talisman zu schmieden, der der Verderbnis des Mythals widerstehen könne — sofern es gelänge, die Essenzen zweier seltener Irrlichter, geboren aus wilder und toter Magie, mit dem Relikt selbst zu vereinen.~
+
+@13011 = ~Das Ungebundene binden
+
+Ich entdeckte einen uralten elfischen Amboss, dessen Oberfläche trotz der vergangenen Jahrhunderte noch immer glatt ist. Einst wurde er genutzt, um feine Zierstücke und heilige Relikte zu fertigen. Wenn es einen Ort gibt, an dem sich Magie neu binden lässt, dann hier.~
+
+@13012 = ~Das Ungebundene binden
+
+Ich fand eine zarte elfische Kette — vermutlich Teil eines Talismans. Einst muss sie einen Anhänger getragen haben.~
+
+@13013 = ~Das Ungebundene binden
+
+Ich entdeckte einen kunstvoll gearbeiteten Amulettkopf eindeutig elfischen Ursprungs. Seine Fassung scheint für eine Kette geschaffen. Wiederhergestellt könnten beide Teile einen vollständigen Talisman ergeben.~
+
+@13014 = ~Das Ungebundene binden
+
+Ich erlangte die Essenz eines Will-o’-Wild, ein leuchtendes Fragment chaotischer Energie, das mit dem Puls lebendiger Magie zu summen scheint.~
+
+@13015 = ~Das Ungebundene binden
+
+Ich habe die Essenz eines Will-o’-Dead eingefangen. Sein schattenhaftes Leuchten fühlt sich kalt an und ist erfüllt vom Schweigen toter Magie.~
+
+@13016 = ~Das Ungebundene binden
+
+Nun besitze ich alles, was nötig ist, um den im Brief beschriebenen Talisman zu schmieden: die elfische Kette, den Amulettkopf und die beiden Essenzen der Irrlichter — eine aus wilder Magie, eine aus toter. Vielleicht lassen sich ihre Kräfte an dem alten Amboss vereinen.~
+
+@13017 = ~Das Ungebundene binden
+
+Am alten Amboss verband ich die beiden Irrlichtessenzen mit dem wiederhergestellten elfischen Talisman. Das Relikt ist erwacht — sein Leuchten schwach, doch beständig. Die Verderbnis des Mythals beeinflusst die Zauber seines Trägers nun nicht mehr.~
+
+// Banshee seeking head:
+
+@13020 = ~Klage der Verlorenen
+
+In den oberen Gemächern eines verfallenen Turmes in Myth Unnohyr begegnete ich dem Geist einer Banshee, die unaufhörlich den Tod ihres Geliebten beklagt. Sie sucht etwas, das sie an ihn erinnert — etwas, das ihrer Seele endlich Ruhe schenken könnte.~
+
+@13021 = ~Klage der Verlorenen
+
+Ich fand in den Ruinen von Myth Unnohyr einen abgetrennten elfischen Kopf — seine Züge seltsam friedlich trotz seines grausamen Schicksals.~
+
+@13022 = ~Klage der Verlorenen
+
+Ich brachte der Banshee den Kopf ihres Geliebten zurück. Sie hauchte einen letzten Seufzer und verschwand; ihr Gram ist endlich zur Ruhe gekommen.~
+
+@13023 = ~Klage der Verlorenen
+
+Ich zerstörte eine Banshee, die einen verfallenen Turm in Myth Unnohyr heimsuchte. Ihr Klagegesang ist verstummt, und ihr Leid wird diesen Ort nicht länger heimsuchen.~
+
+// Honeymead Quest
+
+@13030 = ~Der Eldath-Honigmet
+
+In Duskwood Dell traf ich einen Eldathyn-Imker, der einen seltenen Honigmet braut. Er bat mich, eine einzelne Flasche zum Gasthaus „Die Fünf Fahnen“ in Athkatla zu bringen und sie dort zu einem angemessenen Preis an Samuel Donnergroll zu verkaufen.~
+
+@13032 = ~Der Eldath-Honigmet
+
+Ich verkaufte die Flasche Honigmet an Samuel Donnergroll für einhundert Goldstücke. Er schien mit dem Handel zufrieden zu sein.~
+
+@13033 = ~Der Eldath-Honigmet
+
+Ich verkaufte die Flasche Honigmet an Samuel Donnergroll für fünfhundert Goldstücke. Ein fairer Preis für ein so erlesenes Gebräu.~
+
+@13034 = ~Der Eldath-Honigmet
+
+Ich verkaufte die Flasche Honigmet an Samuel Donnergroll für siebenhundertfünfzig Goldstücke. Der Wirt pries seine Qualität, und seine Großzügigkeit floss beinahe so frei wie seine Münzen.~
+
+@13035 = ~Der Eldath-Honigmet
+
+Ich verkaufte die Flasche Honigmet an Samuel Donnergroll für eintausend Goldstücke. Er nannte es einen Nektar jenseits allen Preises — und zahlte entsprechend.~
+
+@13036 = ~Der Eldath-Honigmet
+
+Ich kehrte nach Duskwood Dell zurück und überbrachte dem Imker einhundert Goldstücke für den Honigmet. Er nahm das Geld mit stiller Enttäuschung entgegen.~
+
+@13037 = ~Der Eldath-Honigmet
+
+Ich brachte dem Imker fünfhundert Goldstücke für den Honigmet. Er lächelte schwach und dankte mir für meine Ehrlichkeit.~
+
+@13038 = ~Der Eldath-Honigmet
+
+Ich überreichte dem Imker siebenhundertfünfzig Goldstücke für den Honigmet. Er war angenehm überrascht und murmelte, dass Eldaths Segen viele Gestalten annehmen könne.~
+
+@13039 = ~Der Eldath-Honigmet
+
+Ich brachte dem Imker eintausend Goldstücke für den Honigmet. Er war von meiner Großzügigkeit erstaunt und sprach ein aufrichtiges Gebet in meinem Namen.~
+
+// Boy and worm
+
+@13040 = ~Der kleine Angler
+
+Ein Junge am Steg von Duskwood Dell bat mich, ihm einen Wurm zum Angeln zu besorgen. Er möchte allen beweisen, dass er ganz allein einen echten Fisch fangen kann.~
+
+@13041 = ~Der kleine Angler
+
+Ich fand einen Wurm, der sich in der weichen Erde von Duskwood Dell wand. Vielleicht ist dies der glückbringende Fang, nach dem der Junge sucht.~
+
+@13042 = ~Der kleine Angler
+
+Ich gab dem Jungen am Steg den Wurm. Statt ihn als Köder zu verwenden, beschloss er, ihn als Haustier zu behalten und nannte ihn Nudel. Die beiden scheinen recht zufrieden miteinander.~
+
+@13043 = ~Der kleine Angler
+
+Ich warf den Wurm ins Wasser, anstatt ihn dem Jungen zu geben. Er brach in Tränen aus, beschimpfte mich aufs Übelste und lief davon. Ich bezweifle, dass ich am Steg noch willkommen bin.~
+
+// Montrassa - emblem
+
+@13050 = ~Das Emblem Eldaths
+
+In Duskwood Dell traf ich eine betagte Eldathyn namens Montrassa. Ihre Hände zittern vor Alter, und sie kann die heiligen Embleme für ihren Tempel nicht länger schnitzen. Mit Wärme sprach sie von Merethan, doch demütig lehnte sie es ab, sein Emblem anzunehmen, da eine solche Gabe nur mit dem Segen des Hochverehrten Hüters der Stillen Wasser gewährt werden dürfe. Vielleicht sollte ich mit Alatoasz Berendim darüber sprechen.~
+
+@13051 = ~Das Emblem Eldaths
+
+Alatoasz stimmte zu, dass Montrassa würdig ist, Merethans Emblem zu tragen. Ich sollte es ihr in Duskwood Dell überbringen, damit sie das Zeichen ihrer Göttin wieder bei sich tragen kann.~
+
+@13052 = ~Das Emblem Eldaths
+
+Ich gab Montrassa Merethans Emblem. Ihre Dankbarkeit war still, doch tief empfunden — sie sagte, sie werde meinen Namen in ihren Gebeten zur Herrin der Stillen Wasser tragen.~
+
+// Siren
+
+@13060 = ~Die zornige der Sirene
+
+In Duskwood Dell begegnete ich einer Sirene, die von Zorn und Kummer gequält wird. Sie suchte Frieden im Hain Eldaths, doch die Wut haftet noch an ihr wie Salz an der Flut. Vielleicht weiß jemand im Dell, wie sich ihre Unrast besänftigen lässt.~
+
+@13061 = ~Die zornige der Sirene
+
+Eine betagte Eldathyn-Priesterin vertraute mir einen Krug mit Kräutertrank an. Sie glaubt, er könne das Herz der Sirene beruhigen, wenn man ihn unter freiem Himmel darreicht.~
+
+@13062 = ~Die zornige der Sirene
+
+Ich gab der Sirene das gesegnete Gebräu. Aus Dankbarkeit überließ sie mir ihre alten Pfeile und sagte, sie hätten ihren Zorn zu lange getragen.~
+
+
+// HALFLING
+
+@13072 = ~Die Halblingshändlerin
+
+In der Wildnis traf ich eine Halblingshändlerin namens Debbie Gobblebubble. Sie beschloss, nach Handelstreff zu reisen, wo ihre Kochkünste und Waren womöglich auf größere Wertschätzung stoßen.~
+
+@13073 = ~Die Halblingshändlerin
+
+In der Wildnis traf ich eine Halblingshändlerin namens Debbie Gobblebubble. Sie ist nach Athkatla aufgebrochen, um ihr Glück unter den Händlern und Wanderern auf Waukeens Promenade zu versuchen.~
+
+@13074 = ~Die Halblingshändlerin
+
+In der Wildnis traf ich eine Halblingshändlerin namens Debbie Gobblebubble. Sie entschied sich, zur Abtei der Goldtürme zu reisen, dem heiligen Zufluchtsort der Kaufleute, die Waukeen dienen.~
+
+// Mannatarv wants to die
+
+@13080 = ~Ein friedvoller Tod
+
+In Duskwood Dell traf ich einen alten Mann namens Mannatarv. Er ist gebrechlich und lebensmüde, doch die Priester Eldaths verweigern ihm den Tod. Er bat mich, ihm ein Blatt der Hainblüte zu bringen, ehe ein Gegengift bereitet wird, damit er diese Welt endlich in Stille verlassen kann.~
+
+@13081 = ~Ein friedvoller Tod
+
+Ich stimmte Mannatarvs Bitte zu. Er wartet in der Krankenstube von Duskwood Dell auf das giftige Blatt, bereit, seinem Leiden ein Ende zu setzen, wenn ich zurückkehre.~
+
+@13082 = ~Ein friedvoller Tod
+
+Ich gab Mannatarv ein Blatt der Hainblüte. Er dankte mir für die Gnade, die andere ihm verweigerten — und verschied bald darauf in Frieden.~
+
+@13083 = ~Ein friedvoller Tod
+
+Ich weigerte mich, Mannatarv beim Beenden seines Lebens zu helfen. Die Priester Eldaths werden ihn mit ihrer Heilkunst am Leben erhalten, ob er es wünscht oder nicht. Ich kann nur hoffen, dass er Frieden findet — in ihrer Fürsorge oder in seinen Träumen.~
+
+// Wadal Hrun
+
+@13090 = ~Der Turm des Giftmischers
+
+Nahe den vergifteten Ruinen von Myth Unnohyr begegnete ich einem yuan-ti-Diener der Talonitin. Die Kreatur ist irgendwo innerhalb der Stadt untergetaucht, und der Zugang zum Turm des Giftmischers bleibt durch ein unbekanntes Bannzeichen versiegelt.~
+
+@13091 = ~Der Turm des Giftmischers
+
+Ich tötete den yuan-ti-Diener. Unter seinen Habseligkeiten befand sich ein kleiner Ioun-Stein, glatt und beerenförmig, der schwach von eingeschlossenem giftigem Licht summt. Wahrscheinlich dient er als Schlüssel zum Turm des Giftmischers.~
+
+// Grotto quest
+
+@13110 = ~Wo Stahl verstummt
+
+Die Hüterin der Grotte in Duskwood Dell bot an, alle Waffen, die ich nicht länger benötige, in Eldaths heiligem Quell zur Ruhe zu legen. Sie versprach, dass ich dadurch die Stille Herrin erfreuen und ihren Segen empfangen würde — zusammen mit einem Hauch erneuerter Lebenskraft.~
+
+@13111 = ~Wo Stahl verstummt
+
+Ich opferte eine meiner Waffen dem Quell, wie die Hüterin es wünschte. Das Wasser schimmerte schwach, als der Stahl unter der Oberfläche versank, verschlungen von vollkommener Ruhe. In dieser Stille spürte ich einen flüchtigen Hauch von Eldaths Frieden — sanft, wortlos und vollkommen.~
+
+// Runaway Nephew
+
+@13120 = ~Der entlaufene Neffe
+
+In Duskwood Dell traf ich einen jungen Mann, der vor seiner Tante im Regierungsviertel von Athkatla geflohen war. Zwischen Marmor und Münzen aufgewachsen, sehnte er sich nach einem einfacheren Leben und fand Frieden unter Eldaths Gläubigen. Er bat mich, seiner Tante eine Blume zu bringen und ihr zu sagen, dass es ihm gut gehe.~
+
+@13121 = ~Der entlaufene Neffe
+
+Ich traf die Tante des Jungen im Regierungsviertel von Athkatla. Zunächst war sie zornig, doch die Botschaft — und die Blume — milderten ihren Ärger. Sie sagte, beim nächsten Mal solle er die Blumen selbst bringen.~
+
+@13122 = ~Der entlaufene Neffe
+
+Ich kehrte zu dem Jungen nach Duskwood Dell zurück und berichtete ihm von den Worten seiner Tante. Nun kann er sich endlich auf das Leben konzentrieren, das er wirklich führen wollte.~
+
+@13123 = ~Der entlaufene Neffe
+
+Ich traf die Tante des Jungen im Regierungsviertel von Athkatla und übergab ihr die Blume.~
+
+
+// Coinquest
+
+@13130 = ~Das gebrochene Versprechen
+
+Ich fand eine zerknitterte Notiz bei einem toten Abenteurer. Darin war von einem nächtlichen Treffen hinter dem Tempel des Helm im Brückenviertel von Athkatla die Rede, um zu erhalten, worum jemand gebeten hatte. Die Nachricht war an einen Mann namens Marrik gerichtet. Zudem fand ich eine abgenutzte Münze mit dem Antlitz eines alten Mannes. Vielleicht stehen beide Dinge in Zusammenhang.~
+
+@13131 = ~Das gebrochene Versprechen
+
+Hinter dem Tempel des Helm im Brückenviertel traf ich einen Mann und zeigte ihm die Münze. Er schickte mich zu einem weiteren Treffpunkt hinter dem Tempel des Lathander im Tempelviertel — wiederum nach Einbruch der Dunkelheit. Er sagte, ich würde erhalten, weshalb ich gekommen sei, doch ich habe keine Ahnung, was das bedeuten soll.~
+
+@13132 = ~Das gebrochene Versprechen
+
+Hinter dem Tempel des Lathander schien meine Anwesenheit — und die Münze — erwartet zu werden. Der Mann dort erklärte, das nächste Treffen finde beim Tempel der Waukeen im Regierungsviertel statt, sobald die Nacht hereinbricht. Noch immer hat mir niemand erklärt, was ich dort empfangen soll.~
+
+@13133 = ~Das gebrochene Versprechen
+
+Am Tempel der Waukeen wurde ich erneut weitergeschickt. Man sprach von einem letzten Treffen, diesmal bei Nacht hinter dem Tempel des Ilmater in den Slums. Jedes Versprechen klingt gleich: dass ich erhalten werde, was ich wollte. Doch ich bin mir längst nicht mehr sicher, was das überhaupt war.~
+
+@13134 = ~Das gebrochene Versprechen
+
+Hinter dem Tempel des Ilmater traf ich schließlich den Mann, von dem die anderen gesprochen hatten. Er fragte nach einem Geas, dem ich angeblich unterliege — doch der Brief, den ich bei mir trug, gehörte einem längst Verstorbenen. Welche Last oder Bitte auch immer der ursprüngliche Absender zu lösen hoffte, sie fand ihr Ende anderswo — und hatte nie etwas mit mir zu tun.~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

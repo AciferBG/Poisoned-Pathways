@@ -1,0 +1,986 @@
+// Bär & Geschichten (3700–3739)
+
+@3700 = ~Große Ohren, noch größere Geschichten. Ruhe! Jetzt kommt der beste Teil.~
+@3701 = ~Pssst! Wenn ihr Krach macht, vergesse ich, wo wir in der Geschichte waren.~
+@3702 = ~Verschwindet! Ich habe einen warmen Platz, eine gute Geschichte und keine Geduld für Störungen.~
+@3703 = ~Jede Geschichte braucht Stille, um zu wachsen – wie eine Wurzel in der Erde. Ihr trampelt auf meiner herum.~
+@3704 = ~Bitte! Ich lausche ganz aufmerksam. Einen Bären mit solchem Sinn für Erzählkunst trifft man selten.~
+@3705 = ~Und so, meine Kleinen, rettete das Eichhörnchen die Eiche, indem es den Sturm zum Husten brachte.~
+@3706 = ~Das war wundervoll! Ich mochte den Teil, wo die Wolken vor Lachen geweint haben!~
+@3707 = ~Du magst immer die lustigen Stellen. Ich mochte, wie das Eichhörnchen sogar den Donner überlistet hat.~
+@3708 = ~Aber das war nicht fair. Der Käfer hat es nicht verdient, so zerquetscht zu werden.~
+@3709 = ~Ich bleibe dabei: Der Käfer hat’s verdient. Dummer Käfer.~
+@3710 = ~Es ist doch nur eine Geschichte... oder etwa nicht? Vielleicht ist so etwas wirklich einmal geschehen.~
+@3711 = ~In jeder Geschichte steckt ein wenig Wahrheit, meine Kleinen. Ihr müsst mit mehr als nur den Ohren lauschen.~
+@3712 = ~Mit Ohren wie meinen höre ich alles!~
+@3713 = ~Meine sind nicht so groß, und ich höre trotzdem zu. Meistens jedenfalls...~
+@3714 = ~Kennst du noch eine Geschichte? Eine mit einem Kaninchen?~
+@3715 = ~Sehr wohl. Setzt euch ruhig. Dies ist die Geschichte vom mondbeschienenen Hain und dem Kaninchen, das der Zeit davonlief...~
+@3716 = ~Oh nein... nicht schon wieder die Zeitgeschichte...~
+@3717 = ~Pssst! Ich liebe diese Geschichte.~
+@3718 = ~Vor langer Zeit, noch ehe selbst die Sterne Namen trugen...~
+@3719 = ~Ooooh!~
+@3720 = ~Seid gegrüßt, Zweibeiner. Hört gut zu – aber erschreckt meine Kleinen nicht, ja? Ich erzähle hier Geschichten.~
+@3721 = ~Und so, meine Kleinen, überlistete der Igel die Sonne, damit sie verschlief – und die Blumen länger blühen konnten.~
+@3722 = ~Der Igel war klug! Ich wette, der kriegt nie einen Sonnenbrand.~
+@3723 = ~Ich finde es immer noch unhöflich, die Sonne zu täuschen. Was, wenn sie wütend wird?~
+@3724 = ~Dann hätten wir immer Nacht! Stell dir vor, wie viele Nüsse ich verstecken könnte!~
+@3725 = ~Was hat die Sonne danach gemacht? Hat sie den Igel gejagt?~
+@3726 = ~Ah… das ist eine andere Geschichte… für ein anderes Mal.~
+@3727 = ~Einst verliebte sich der Wind in eine Lerche und folgte ihr so dicht, dass er all ihre Federn verkehrt herum blies.~
+@3728 = ~Darum sehen Vögel nach einem Sturm immer so zerzaust aus! Ich wusste es!~
+@3729 = ~Ist das der Grund, warum der Wind immer pfeift? Weil er einsam ist?~
+@3730 = ~Die Lerche hätte ein Wiegenlied singen sollen. Hätte den Wind vielleicht beruhigt.~
+@3731 = ~Aber was ist mit ihr geschehen? Ist sie davongeflogen?~
+@3732 = ~Sie sang einen letzten Ton, so süß, dass der Wind ihn um die ganze Welt trug. Manche sagen, er hallt noch immer nach – in der Stille kurz vor der Dämmerung.~
+@3733 = ~Und so kletterte die Maus auf die Schulter des alten Wolkenriesen, um ihm ein Lied in die Höhlung seines schweren Herzens zu flüstern.~
+@3734 = ~Das ist keine Tapferkeit. Das ist Dummheit auf winzigen Pfoten.~
+@3735 = ~Und was nützt ein Lied gegen ein Wesen, größer als zehn Bäume?~
+@3736 = ~Nicht die Größe der Pfoten zählt – sondern die Schärfe des Tons.~
+@3737 = ~Ich habe einmal eine Harfensaite durchgenagt. Zählt das auch?~
+@3738 = ~Wenn der Riese draufgetreten wäre, gäb’s keine Geschichte. Nur Matsch.~
+@3739 = ~Doch der Riese trat nicht. Er lauschte. Und in seiner Stille wurde die Welt ein wenig gütiger.~
+@3740 = ~Willkommen, Wanderer. Wenige gelangen zufällig nach Dämmerwaldtal. Was führt Euch unter diese Zweige?~
+@3741 = ~Was ist das für ein Ort?~
+@3742 = ~Ich möchte mehr über die Kirche Eldaths hier erfahren.~
+@3743 = ~Ich suche euren Hochpriester.~
+@3744 = ~Ich suche den Feuchtfrohlockten Flegelweiner Alabath Bumbleditch.~
+@3745 = ~Ich suche immer noch den Moosverherrlichenden Fallenschipper Alatoss Boringdim.~
+@3746 = ~Ich bemühe mich eifrig, den Feucht Ausatmenden Fehlwischer Alatooth Brushdent zu finden.~
+@3747 = ~Noch immer kein Glück beim Auffinden des Höchstermüdeten Flachhüters Alatoast Berrydrink.~
+@3748 = ~Meine Suche gilt dem Höchstaufgeblasenen Furzschläfer Analoss Bladderbim.~
+@3749 = ~Ich suche den Hochverehrten Hüter der Stillen Wasser Alatoasz Berendim.~
+@3750 = ~Ich suche einen Regenwurm. Habt Ihr zufällig einen gesehen?~
+@3751 = ~Dies ist nicht der Augenblick für stille Einkehr.~
+@3752 = ~Bevor Ihr fragt: Ihr findet den Hochverehrten Hüter der Stillen Wasser Alatoasz Berendim im nordöstlichen Baumhaus nahe dem Wasser. Noch etwas?~
+@3753 = ~Erzählt mir von diesem Ort.~
+@3754 = ~Es geht um die Zwielicht-Zwillinge.~
+@3755 = ~Seid abermals gegrüßt. Was kann ich für Euch tun, Sucher des Friedens?~
+@3756 = ~Möge Euer Pfad sanft und Euer Geist ungestört sein.~
+@3757 = ~Ein Wort, <CHARNAME>. Ihr spracht vor kurzem mit den zwei kleinen Feen, die sich die Zwielicht-Zwillinge nennen.~
+@3758 = ~Ihr meint diese beiden kleinen Plagegeister, die ständig lachen und leuchten?~
+@3759 = ~Ah ja – das fröhliche Paar, das des Nachts das Tal erhellt. Was ist mit ihnen?~
+@3760 = ~Die Zwielicht-Zwillinge? Sie wirkten harmlos – ein wenig redselig vielleicht.~
+@3761 = ~Diese beiden Feen waren entzückend! Bitte sagt mir nicht, dass ihnen etwas zugestoßen ist.~
+@3762 = ~Sie mögen zuweilen ein wenig unerquicklich sein, doch sie gehören seit Langem zum Leben hier in Dämmerwaldtal. Ich fürchte, ihnen ist etwas zugestoßen – sie sind spurlos verschwunden.~
+@3763 = ~Ich fürchte, sie kamen zu Schaden... oder schlimmer noch – man hat sie entführt.~
+@3764 = ~Entführt?~
+@3765 = ~Dafür habe ich keine Zeit. Fragt jemand anderen.~
+@3766 = ~Entführt, ja. Sie verließen das Tal in der Abenddämmerung und sagten, sie wollten ein Abenteuer erleben. Ich sandte eine Eule aus, um sie im Blick zu behalten – nur für den Fall.~
+@3767 = ~Der Vogel folgte ihnen auf der Eshpurta-Straße in Richtung Athkatla. Er sah, wie sie mit einem Händler sprachen, und dann… verschwanden sie einfach. Der Händler zog allein weiter nach Westen.~
+@3768 = ~Meine Eule verlor ihn aus den Augen – eine Mäusefamilie am Wegesrand lenkte sie ab; sie ist leicht zu verführen. Doch sagt mir, <CHARNAME>: Was für ein Händler bereist des nachts diese Straße, ohne Wachen? Und weshalb kehrten die Zwillinge nicht zurück oder sandten seitdem ein Zeichen?~
+@3769 = ~Vielleicht wurden sie aus Angst unsichtbar und verstecken sich irgendwo?~
+@3770 = ~Wenn das wieder einer ihrer Streiche ist, falle ich nicht darauf herein.~
+@3771 = ~Ich werde nach ihnen suchen.~
+@3772 = ~Dafür habe ich keine Zeit. Sucht jemand anderen.~
+@3773 = ~Ich bezweifle es. So lange sind sie noch nie fortgeblieben.~
+@3774 = ~Dafür habe ich keine Zeit.~
+@3775 = ~Habt Dank! Wie gesagt, der Händler war auf dem Weg nach Athkatla. Wo er sich in dieser gewaltigen Stadt aufhält, vermag ich nicht zu erraten – doch Ihr kennt Euch dort gewiss besser aus als ich. Vielleicht wäre ein Ort, an dem Händler sich sammeln, der beste Anfang.~
+@3776 = ~Dort gibt es einen großen Markt – Waukeens Promenade.~
+@3777 = ~Habt Ihr eine Beschreibung dieses Händlers?~
+@3778 = ~Er trug leuchtend rote Seide – recht verschwenderisch, wenn Ihr mich fragt. Er muss wohlhabend gewesen sein, was es nur umso seltsamer macht, dass er die Eshpurta-Straße allein und nachts, ohne Wachen, ging. Er sprach außerdem mit einem sonderbaren Akzent und rollte das „R“ sehr deutlich. Ansonsten war nichts Ungewöhnliches an ihm zu erkennen… zumindest aus den Augen einer Eule.~
+@3779 = ~In Athkatla gibt es einen großen Markt – Waukeens Promenade. Dort beginne ich meine Suche und halte nach einem Händler in roter Seide Ausschau.~
+@3780 = ~Habt Dank, dass Ihr dies auf Euch nehmt. Bitte bringt die Zwillinge wohlbehalten nach Dämmerwaldtal zurück. Es wäre… leerer ohne ihre Streiche und ihr Lachen.~
+@3781 = ~Ich verstehe. Ich hatte gehofft, Ihr würdet uns helfen, doch dann werde ich anderswo um Beistand bitten.~
+@3782 = ~Oh, Ihr sucht den Hochverehrten Hüter der Stillen Wasser Alatoasz Berendim? Ihr findet ihn in einem der Bäume – dem nordöstlichen, nahe dem Wasser. Sehr wahrscheinlich in den Wipfeln, wo er mit den Vögeln des Waldes über schwere Dinge spricht.~
+@3783 = ~Gut. Ich werde ihn dort aufsuchen.~
+@3784 = ~Na dann. Ab in die Bäume.~
+@3785 = ~Ich habe noch eine Frage.~
+
+@3786 = ~Ihr meint gewiss den Hochverehrten Hüter der Stillen Wasser Alatoasz Berendim. Bitte verspottet seinen Namen nicht – es ist ein heiliger Titel. Ihr findet ihn im nordöstlichen Baumhaus nahe dem Wasser.~
+@3787 = ~Seltsamer Name für einen heiligen Mann, doch Minsc hörte seltsamere! Vorwärts zum Baum am Wasser!~
+@3788 = ~Äh… gut. Ich werde ihn dort suchen.~
+@3789 = ~Verzeiht. Ich mache mich auf den Weg.~
+
+@3790 = ~Seufz. Es heißt: Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim. Zeigt etwas Ehrfurcht – dies ist ein Heiligtum, keine Schenke voller Gaukler. Ihr findet ihn im nordöstlichen Baumhaus am Wasser. Und fasst Euch, bevor Ihr mit ihm sprecht.~
+@3791 = ~Warum stellt Ihr immer wieder dieselbe Frage, <CHARNAME>? Wir wissen doch, dass der Priester, den Ihr sucht, im Baum am Wasser lebt.~
+@3792 = ~Müsst Ihr wirklich einen Diener Eldaths verspotten? Ihre Geduld ist keine Herausforderung für Euer Vergnügen. Zeigt Respekt.~
+@3793 = ~Oh, nur zu, <CHARNAME>! Ich genieße es, fromme Narren zappeln zu sehen.~
+@3794 = ~Verzeihung. Ich gehe zu seinem Baum.~
+@3795 = ~Ich habe gegen Drachen gekämpft, die kürzere Namen hatten. Wie auch immer — ich gehe.~
+
+@3796 = ~Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim! Nichts anderes! Bei den stillen Wassern, wie schwer ist das? Zeigt Ehrfurcht, oder selbst die Bäume seufzen noch über Eure Unwissenheit. Nur zu — Ihr findet ihn am Ufer.~
+@3797 = ~Einen Priester des Friedens zu reizen — welche Melodie erwartet Ihr, mein Rabe? Einen Schrei? Ein Sonett? In stillen Wassern liegt keine Dramatik.~
+@3798 = ~Es ist töricht, die Geduld dessen zu prüfen, der geschworen hat, sie nie zu verlieren. Es liegt keine Ehre darin, Beherrschung zu verhöhnen.~
+@3799 = ~Ein wenig Lästerung hat noch niemandem geschadet — außer vielleicht dem Stolz frommer Schwächlinge.~
+@3800 = ~Man sagt, Worte stechen tiefer als Klingen. Fast tut mir dieses moosverwirrte Relikt leid. Fast.~
+@3801 = ~Na los — sehen wir, ob der Priester seine friedliche Haut abstreift und seine Zähne zeigt!~
+@3802 = ~Verzeiht… ich bin nur schlecht mit so vielen albernen Silben. Lebt wohl.~
+
+@3803 = ~Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim! Sprecht es nach: Be-ren-dim! Und wenn Ihr es nicht hinbekommt, dann haltet wenigstens den Mund, während Ihr nach Nordosten zu seinen Gemächern geht.~
+@3804 = ~Keine Sorge, wir nennen ihn von jetzt an einfach "Berri".~
+@3805 = ~Hah. Es braucht Witz, nicht Wucht, um einen Priester des Friedens aus der Fassung zu bringen. (Natürlich beherrsche ich beides.)~
+@3806 = ~Ich wollte nicht beleidigen. Lebt wohl.~
+@3807 = ~Genug! Ihr tättet gut daran, die Stille dieses Hains zu nutzen, um über Euer Benehmen nachzudenken!~
+@3808 = ~Tut das. Er wird Euch gern begegnen.~
+
+@3809 = ~Oh! Habt Ihr sie gefunden?~
+@3810 = ~Der Händler war ein verkleideter Rakshasa. Er hat die Zwillinge gefangen. Sie sind in diesem Glasgefäß — lebendig und unversehrt, doch es lässt sich nicht öffnen.~
+@3811 = ~Noch nicht, ich suche weiter.~
+@3812 = ~Bei den Göttern, welch Glück! Lasst mich sehen…~
+@3813 = ~Sie sehen unverletzt aus! Eldath sei gepriesen. Sind sie in diesem Gefäß gefangen?~
+@3814 = ~Das Glasgefäß lässt sich nicht öffnen.~
+@3815 = ~Schüttelt es. Vielleicht hilft das.~
+@3816 = ~Soll ich es mit einem Hammer zerschlagen?~
+@3817 = ~Lasst sie drin. Die Stille steht ihnen gut.~
+@3818 = ~Dieses Gefäß ist außerhalb Dämmerwaldtals versiegelt — doch hier, an diesem Ort des Friedens, kann nichts Lebendiges gefangen bleiben. Seht genau hin… die Versiegelung weicht, so leicht, wie Dunkelheit dem Licht weicht.~
+@3819 = ~Bitte sucht weiter. Ich fürchte um sie mit jedem vergehenden Tag.~
+@3820 = ~Regenwürmer? Ihr müsstet den ganzen heiligen Boden umgraben, um einen zu finden. Nein — ich fürchte, dabei kann ich Euch nicht helfen.~
+@3821 = ~Das wäre alles. Lebt wohl.~
+@3822 = ~Ihr habt Fragen? Gern! Ich hoffe nur, ich habe Antworten, die Euch gefallen.~
+@3823 = ~Ich muss weiter.~
+
+@3824 = ~Unsere Kirche wird vom Hochverehrten Hüter der Stillen Wasser, Alatoasz Berendim, geführt – dem weisesten und friedvollsten unter uns. Alle anderen Priester, die Ihr hier seht, dienen unter seiner Führung. Anders als viele Glaubensgemeinschaften kennen wir keine starre Hierarchie – unser Glaube an die Harmonie der Natur eint uns und leitet unseren Dienst an der Gemeinschaft.~
+
+@3825 = ~Manche Priester werden bisweilen ausgesandt, um die Welt ein wenig friedvoller zu machen. Wir nennen sie Freiwandler – sie reisen an Orte, die ihnen unsere Göttin weist, um Zwietracht zu lindern und Streit zu beenden. Ein gefährlicher Pfad, doch ein würdiger.~
+
+@3826 = ~Ich sollte nun weiterziehen.~
+
+@3827 = ~Dies ist Dämmerwaldtal – eine verborgene Lichtung, genährt vom Glauben an Eldath, die Göttin der Stillen Wasser und der stillen Haine. Es ist ein Zufluchtsort für jene, die Frieden und Gleichgewicht suchen. Wollt Ihr mehr erfahren?~
+
+@3828 = ~Ja, erzählt mir mehr.~
+
+@3829 = ~Nein, ich sollte weitergehen.~
+
+@3830 = ~Dämmerwaldtal besteht seit unvordenklichen Zeiten – als dieser Wald noch jung und unberührt war. Die ersten Anhänger Eldaths ließen sich damals hier nieder. Im Murmeln der Wasser vernahmen sie erstmals die Stimme der Göttin und errichteten ihr zu Ehren ein Heiligtum.~
+
+@3831 = ~Sie bauten keine Mauern. Die Bäume selbst umarmen uns seither. Wir schlafen in Hängematten zwischen den Ästen, und unser Atem mischt sich mit Wind und Blatt.~
+
+@3832 = ~Die Wasser um uns gehören zu den Fällen der Grünen Göttin, heiligen Kaskaden, die sich in Becken sammeln, ehe sie als Fluss Rimril weiterziehen, sich mit dem Trifin-Bach vereinen und schließlich in die Amstel münden.~
+
+@3833 = ~Und welchem Zweck dient dieser Ort?~
+
+@3834 = ~Ihr habt mir viel zum Nachdenken gegeben. Lebt wohl.~
+
+@3835 = ~Dem Zweck? Welchen Zweck braucht der Frieden? Ihr werdet hier keine Tempel aus behauenem Stein finden. Nur offenen Himmel und das sanfte Lied der Wasser. Frieden ist der Wille, Last, Klinge und Bitterkeit loszulassen – und es gibt keinen besseren Ort dafür als diesen.~
+
+@3836 = ~An Frieden festzuhalten ist Feigheit in Seide gekleidet. Helm lehrt Gerechtigkeit durch rechtschaffene Stärke, nicht durch passives Gebet.~
+
+@3837 = ~In der Stille liegt Schönheit... doch Untätigkeit lädt zum Untergang ein. Selbst Wälder müssen sich verteidigen.~
+
+@3838 = ~Kein Kämpfen? Aber wie soll das Böse dann seine Lektion lernen? Boo und ich sind sehr gute Lehrer!~
+
+@3839 = ~Frieden ist ein Luxus für jene, die nicht von der Wirklichkeit der Welt bedrückt werden. Die Natur kann ebenso grausam sein wie sanft.~
+
+@3840 = ~Ein schaler Gedanke für die Schwachen und Machtlosen. Macht, nicht Pazifismus, formt die Reiche!~
+
+@3841 = ~Wie sehr doch alles Sterbliche klingt. Kehrt zu mir zurück, wenn Ihr zerrissen wurdet – und dennoch Güte wählt.~
+
+@3842 = ~Meine Brüder lehren, dass Frieden das Ziel ist – nicht die Abwesenheit von Konflikt, sondern sein Ende. Darin, so denke ich, unterscheiden wir uns nicht allzu sehr von den Eldathyn.~
+
+@3843 = ~Die Weave ist nicht friedlich. Sie wandelt sich, sie brennt, sie verzehrt. Kann Frieden in einer Welt wie dieser wirklich Bestand haben?~
+
+@3844 = ~Ihr sprecht vom Frieden, als sei er ein Ort, den man erreichen kann. Doch ich habe nie einen Weg dorthin gesehen.~
+
+@3845 = ~Frieden ist etwas für Menschen, die nie um ihren nächsten Atemzug kämpfen mussten.~
+
+@3846 = ~Vielleicht ist Frieden nicht die Abwesenheit von Streit... sondern der Mut, ihn nicht weiter zu nähren.~
+
+@3847 = ~Schöne Ideale. Doch meiner Erfahrung nach folgt Frieden meist einer Klinge.~
+
+@3848 = ~Klingt wunderbar!~
+
+@3849 = ~Danke für Eure Worte. Ich muss nun gehen.~
+
+@3850 = ~Genug Weisheit für heute. Es ist Zeit weiterzuziehen.~
+
+@3851 = ~Flüsse eilen nicht in den Krieg, und doch formen sie das Land tiefer als jedes Heer. Denkt darüber nach, mein <LADYLORD>. Lebt wohl.~
+
+@3852 = ~Sieh nur, Bruder! Eine neue Seele ist nach Dämmerwaldtal gekommen.~
+
+@3853 = ~Friede sei mit Euch, zwergischer Sucher der Stille...~
+
+@3854 = ~Hmpf.~
+
+@3855 = ~Sagt uns, Bruder – wie lautet Euer Name?~
+
+@3856 = ~Korgan. BLUT-Axt.~
+
+@3857 = ~So sagt uns, Bruder – wann habt Ihr zuletzt wahren Frieden gespürt?~
+
+@3858 = ~Als ich diesem Menschen den hässlichen Kopf abgeschlagen habe.~
+
+@3859 = ~Äh... und wann habt Ihr zuletzt die ewige Stille gehört?~
+
+@3860 = ~Als ich diesem Halbling die plappernde Zunge herausgeschnitten habe.~
+
+@3861 = ~Mit einer solchen Haltung wird Euch niemand gern sein Ohr leihen!~
+
+@3862 = ~Hatte nie Probleme damit! Hab ihre Ohren behalten. Gab eine feine Halskette, das.~
+
+@3863 = ~Bei Eldath, er ist jenseits jeder Reichweite.~
+
+@3864 = ~Aye. Und stolz darauf!~
+
+@3865 = ~Bei Eldath, Ihr habt ein Problem mit Eurem Zorn!~
+
+@3866 = ~Nein, Ihr habt ein Problem mit Euren Wahnvorstellungen!~
+
+@3867 = ~Er ist jenseits jeder Reichweite.~
+
+@3868 = ~Frieden ist ein leicht übersehenes Geschenk, gnomischer Philosoph. Würdet Ihr nicht lieber still sitzen und dem Wald beim Atmen lauschen?~
+
+@3869 = ~Ah, das Atmen! Niemand würdigt es gebührend. Man atmet, ohne nachzudenken – und sobald man darüber nachdenkt, beginnt man sich zu sorgen: Atme ich richtig? Zu flach? Zu tief? Was, wenn ich es vergesse? Meine Tante Belka hielt einmal die Luft an, um jung zu bleiben. Wurde ganz blau dabei – behauptete aber, es habe gewirkt. Sah zwanzig Jahre jünger aus, als man sie begrub.~
+
+@3870 = ~Übrigens: Durchs Atmen hab ich herausgefunden, dass mein Vetter Jaffin gar nicht tot war. Hat den Totengräber zu Tode erschreckt. Das Geschäft ging bankrott. Im wahrsten Sinne – er grub sich selbst ein.~
+
+@3871 = ~Ich sehe... selbst die Luft ist vor Euren Geschichten nicht sicher.~
+
+@3872 = ~Seid gegrüßt, zauberkundiger Elf.~
+
+@3873 = ~Halb*-Elf*.~
+
+@3874 = ~Eure Magie fließt sanft, wie Wasser über Stein.~
+
+@3875 = ~Meine eher wie Wasser über eine Klippe. Mit Dampf. Und Geschrei.~
+
+@3876 = ~Wir... verstehen. Vielleicht prüft Eldath unsere Geduld durch Euch.~
+
+@3877 = ~Ha! Das macht uns wohl zu zweit!~
+
+@3878 = ~Gesegnet seien die Stillen Wasser! Eine Dunkelelfe, die sich vom Dunkel abgewandt hat – welch wunderbarer Anblick!~
+
+@3879 = ~Ich wandte mich von einer Dunkelheit ab, nur um eine andere zu finden, rivvil.~
+
+@3880 = ~Und doch – unter der Sonne zu wandeln und zu leben... empfindet Ihr nun nicht endlich Frieden?~
+
+@3881 = ~Frieden? Die Sonne verbrennt meine Haut, die Brandung zerreißt meine Ohren, und jeder törichte Priester will meine Seele waschen. Ich ertrage – ich frohlocke nicht.~
+
+@3882 = ~Vielleicht wird Euch die Oberfläche mit der Zeit ebenso aufnehmen, wie Eldath es täte.~
+
+@3883 = ~Die Oberfläche nimmt nichts auf. Sie duldet. Ganz wie Eure Göttin, vermute ich.~
+
+@3884 = ~Ich... verstehe. Vielleicht suchen nicht alle Flüsse dasselbe Meer.~
+
+@3885 = ~Oder manche Wasser fließen aus gutem Grund schwarz.~
+
+@3886 = ~Möge Eldaths Friede Euch dennoch finden – selbst wenn er lange suchen muss.~
+
+@3887 = ~Streiter, habt Ihr je daran gedacht, Eure Feinde um Kapitulation zu bitten, bevor Ihr auf sie zustürmt?~
+
+@3888 = ~Natürlich! Ich rufe immer „Ergebt euch!“ während ich stürme. Sie lehnen stets ab – meine Schwerter sind schneller.~
+
+@3889 = ~Vielleicht... könntet Ihr nächstes Mal auf eine Antwort warten?~
+
+@3890 = ~Aber Warten gibt dem Bösen Zeit zum Denken! Besser, man haut es nieder, ehe es entkommt!~
+
+@3891 = ~Dieser Gedanke verdient es, weiter verfolgt zu werden.~
+
+@3892 = ~Ein bedenkenswerter Punkt, Bruder.~
+
+@3893 = ~Friedvolle Gedanken führen zu klarer Einsicht.~
+
+@3894 = ~Ein Blütenblatt der Wahrheit, getragen von ruhigem Wind.~
+
+@3895 = ~Ein Gedanke, den man ins Licht halten sollte.~
+
+@3896 = ~Ein stiller Teich spiegelt klarer als ein reißender Strom. Auf Besinnung muss Handlung folgen.~
+
+@3897 = ~Stille ist der Kern von Eldaths Lehre. Im Schweigen finden wir Wahrheit.~
+
+@3898 = ~Schweigen, ja – doch nicht Untätigkeit. Selbst der Fluss fließt, auch wenn er in der Tiefe lautlos bleibt.~
+
+@3899 = ~Und doch spiegelt ein ruhiges Wasser klarer als ein stürzender Strom. Handlung sollte erst nach Besinnung folgen.~
+
+@3900 = ~Äh, verzeiht –~
+
+@3901 = ~Ich werde weitergehen.~
+
+@3902 = ~Besinnung ohne Bewegung ist Erstarrung. Frieden muss durch das Land schreiten, nicht nur unter ihm träumen.~
+
+@3903 = ~Dann sind wir uns vielleicht einig: Frieden ist nicht das Fehlen von Bewegung, sondern ihre Führung.~
+
+@3904 = ~Wohl gesprochen. Mögen unsere Schritte leicht sein und unser Zweck fest verwurzelt.~
+
+@3905 = ~Hallo? Hört Ihr überhaupt zu?~
+
+@3906 = ~Ah – bei Eldaths Gnade, jemand ist hier! Vergebt uns, Reisender, wir waren in Gedanken versunken.~
+
+@3907 = ~Krieg ist die große Wunde der Welt. Wo er wütet, muss Frieden mühsam neu wachsen.~
+
+@3908 = ~Wahr – doch manche sagen, ohne Krieg hätte Frieden keinen Wert. Was antworten wir ihnen?~
+
+@3909 = ~Dass Frieden nicht die Abwesenheit von Schmerz ist, sondern die Heilung danach. Krieg ist ein Feuer; Frieden ist der Regen.~
+
+@3910 = ~Verzeiht die Störung, aber –~
+
+@3911 = ~Und doch kommt mancher Regen zu spät. Ich habe Felder gesehen, die jenseits aller Pflege verbrannt waren.~
+
+@3912 = ~Selbst die schwärzeste Erde kann wieder blühen, wenn man ihr Zeit und Fürsorge schenkt. Eldath gibt keinen Boden auf.~
+
+@3913 = ~Ich warte wohl besser, bis Ihr fertig seid.~
+
+@3914 = ~Und mit der Zeit mögen Blumen dort wachsen, wo einst Banner standen.~
+
+@3915 = ~Oh! Eldath bewahre – jemand hat die ganze Zeit zugehört!~
+
+@3916 = ~Dann möge <PRO_HESHE> Frieden im Herzen tragen... und Geduld in den Ohren.~
+
+@3917 = ~Wasser ist Eldaths Stimme. Es singt in Bächen und flüstert im Nebel.~
+
+@3918 = ~Und doch hat es keine eigene Gestalt. Es nimmt jede Form an und widerstrebt keiner.~
+
+@3919 = ~Schöne Worte, doch ich wollte nur fragen –~
+
+@3920 = ~Gerade darin liegt seine Stärke. Indem es nachgibt, besteht es fort. In seiner Sanftheit trägt es selbst Stein ab.~
+
+@3921 = ~Und wenn es aufgewühlt ist, spiegelt es nichts. Es erinnert uns daran, unsere Gedanken zur Ruhe zu bringen.~
+
+@3922 = ~Ah – Eldaths Segen! Wir bemerkten Euch gar nicht, Freund. Ihr habt doch nicht lange gewartet, hoffe ich? Nun, wo waren wir stehen geblieben?~
+
+@3923 = ~Von den Bienen können wir viel lernen: Sie arbeiten in Stille, fordern nichts und hinterlassen dennoch Süße und Heilung.~
+
+@3924 = ~Ich bereite meinen Honig langsam und schonend gefiltert zu, wie Eldath es wünschte. Kein Rauch, kein Feuer – nur Geduld und kühle Hände.~
+
+@3925 = ~Honig beruhigt die Kehle, verschließt Wunden und trägt den Duft all der Blüten in sich, aus denen er geboren wurde. Ein stiller Segen in goldener Gestalt.~
+
+@3926 = ~Jedes Glas, das ich verschließe, ist ein bewahrter Funke Frieden. Wenn die Welt sticht, erinnert ein Löffel Honig daran, dass nicht alles Schmerz bedeutet.~
+
+@3927 = ~Der Garten lehrt uns: Wachs in Stille, schütze das Sanfte und blühe erst, wenn die Zeit reif ist.~
+
+@3928 = ~Krieg verwundet die Welt. Blumen helfen ihr zu heilen. Eldath wusste wohl, was sie tat, als sie uns Blüten statt Klingen gab.~
+
+@3929 = ~Frieden schlägt langsam Wurzeln – wie eine Blume im Frühling. Man kann ihn nicht gewaltsam öffnen. Man kann nur den Boden pflegen und warten.~
+
+@3930 = ~Möge Euer Zorn wie Reif in der Morgensonne vergehen, und mögen Eure Worte wie sanfte Wiesenblumen erblühen.~
+
+@3931 = ~Manche sagen, Blumen seien zerbrechlich. Ich sage, sie sind mutig – denn sie blühen, obwohl sie wissen, wie kurz ihre Zeit sein mag.~
+
+@3932 = ~Jeden Morgen spreche ich mit den Pflanzen. Sie eilen nie, sie schreien nie – und doch wachsen sie ganz vortrefflich.~
+
+@3933 = ~Gewalt mag das Feld niedertrampeln – doch gebt ihm Zeit, und das Grün kehrt zurück. Immer.~
+
+@3934 = ~Nicht jede Heilung kommt durch Kräuter. Manchmal genügen ein stiller Ort und der Duft blühender Dinge.~
+
+@3935 = ~Habt Ihr die Pflanze schon gefunden?~
+
+@3936 = ~Nein, noch nicht.~
+
+@3937 = ~Ich habe die Pflanze hier bei mir.~
+
+@3938 = ~Ich werde Euch doch nicht helfen.~
+
+@3939 = ~Ihr habt mit dem Hochverehrten gesprochen, nicht wahr? Alatoasz sandte Euch hinter dem Talona-Priester her... und nach der Blume. Der Groveglove. Jeder flüstert von ihr. Ein Gift so rein, dass selbst Eldaths sanfte Hände es nicht zu bannen vermögen.~
+
+@3940 = ~Wir sind uns noch nicht begegnet. Mein Name ist Mannatarv. Ich bin alt und krank, sehr krank. Alles, was ich will, ist zu sterben. Doch die Eldathyn lassen mich nicht.~
+
+@3941 = ~Wir sind uns schon begegnet. Mein Name ist Mannatarv. Ihr wisst, dass ich alt und schwer krank bin. Alles, was ich will, ist zu sterben. Doch sie lassen es nicht zu.~
+
+@3942 = ~Die Priester heilen mich jeden Tag. Sie gießen ihr Licht in mich, flicken meine Wunden, rufen mich zurück, wenn ich hinübergleite. Doch ich bin müde. Meine Knochen verfaulen, mein Atem brennt. Jeder weitere Tag ist nur ein weiterer Tag voller Schmerz. Ich will keine Gaben mehr.~
+
+@3943 = ~Ich flehe Euch an: Bringt mir ein Blatt jener Blume, bevor sie ein Gegenmittel bereiten. Nur ein einziges Blatt. Lasst mich ihr Gift kosten und es sei getan. Lasst mich in Stille gehen – nicht unter ihren endlosen Gesängen.~
+
+@3944 = ~Eine Seele, die um den Kuss des Todes bittet. Ich würde ihn gewähren… doch nicht rasch.~
+
+@3945 = ~Wir dürfen uns nicht in den Lauf der Natur einmischen. Leben und Tod stehen nicht in unserer Macht.~
+
+@3946 = ~Warum lange reden? Wenn er sterben will, dann gewähren wir es ihm. Diese Blume braucht es dafür nicht.~
+
+@3947 = ~Manche Last ist schwerer, als ein Mensch sie tragen kann.~
+
+@3948 = ~Ist seine Zeit gekommen, wird der Fluss des Lebens ihn holen. Wir sollten seinen Lauf weder beschleunigen noch aufhalten.~
+
+@3949 = ~Barmherzigkeit und Mord liegen hier gefährlich nah beieinander. Ich kann ihm nicht guten Gewissens helfen.~
+
+@3950 = ~Solche Gedanken sind Gotteslästerung. Es steht uns nicht zu, einen leichten Tod zu gewähren.~
+
+@3951 = ~Leben ist Leid. Wenn er das Ende wünscht, werde ich es ihm gewähren.~
+
+@3952 = ~Sein Elend ist nicht unser Problem. Sorgt nur dafür, dass er uns nicht aufhält.~
+
+@3953 = ~Wenn der alte Narr verrecken will, gebt ihm das verfluchte Kraut.~
+
+@3954 = ~Ihr wollt Euch mit dieser Pflanze selbst töten?~
+
+@3955 = ~Nein. Ich werde nicht an Eurem Tod teilhaben.~
+
+@3956 = ~Wenn dies Euer Wunsch ist, bringe ich sie Euch.~
+
+@3957 = ~Vielleicht gibt es einen anderen Weg.~
+
+@3958 = ~Warum auf die Pflanze warten? Ich kann Euch einen schnellen Tod schenken.~
+
+@3959 = ~Hm... noch ein Besucher. Spart Euch Eure Heiterkeit, Fremder. Worte wiegen schwer, und ich habe kaum Kraft, sie zu tragen.~
+
+@3960 = ~Die Priester kümmern sich schon genug um mich. Lasst einen alten Mann mit den kümmerlichen Resten seines Daseins allein. Besser Ihr verschwendet Euer Mitleid anderswo.~
+
+@3961 = ~Ich wollte Euch nicht kränken.~
+
+@3962 = ~Ihr klingt krank. Kann ich Euch helfen?~
+
+@3963 = ~Hmpf. Nein, nichts, das Ihr lindern könntet. Mein Fleisch verrät mich, meine Knochen nagen an mir – und dennoch lassen sie mich nicht gehen. Lasst mich in Ruhe, ehe Ihr Euer Mitgefühl vergeudet.~
+
+@3964 = ~Wie Ihr wünscht. Lebt wohl.~
+
+@3965 = ~Genug Worte… jedes zehrt an mir. Lebt wohl.~
+
+@3966 = ~Noch immer hier? Hm. Ich habe keine neuen Worte für Euch… nur den alten Schmerz. Geht, Fremder. Lasst der Wind Eure Schritte anderswohin tragen.~
+
+@3967 = ~Sehr wohl. Lebt wohl.~
+
+@3968 = ~Ihr bringt sie wirklich zu mir? Ihr seid ein guter <PRO_RACE>! Lasst mich sehen…~
+
+@3969 = ~So schön – und doch so tödlich… hier, ich nehme nur ein Blatt. Die anderen sollen das Gegenmittel erhalten, nur ich nicht…~
+
+@3970 = ~Ugh, das schmeckt bitter! Ich dachte nicht, dass…~
+
+@3971 = ~Dann lasst mich meinem Leid überlassen. Die Priester werden zufrieden sein.~
+
+@3972 = ~Nein! Nicht hier, nicht im Heiligtum Eldaths. Kein Blut darf diesen heiligen Boden beflecken. Wenn Ihr mir wahrhaft Gnade erweisen wollt, dann ohne Gewalt.~
+
+@3973 = ~Wenn Ihr es so sehen wollt, ja. Ich nenne es Erlösung.~
+
+@3974 = ~Ihr… Ihr würdet das wirklich für mich tun? Ich danke Euch schon jetzt für den Gedanken allein. Ihr mögt mich für wahnsinnig halten, doch Ihr zeigt mir Barmherzigkeit, wo andere nur Heilung boten. Ich werde in der Krankenstube auf Euch warten. Denkt daran: Gebt mir ein Blatt, bevor Ihr die Pflanze zu Alatoasz bringt! Sobald er ein Gegenmittel erschafft, bleibt mir keine Hoffnung mehr auf einen stillen Abschied.~
+
+@3975 = ~Viel Glück bei Eurer Suche, <PRO_RACE>. Ich zähle auf Euch und werde warten.~
+
+@3976 = ~Ein anderer Weg? Nein. Ich habe alles versucht. Sogar beim Hochverehrten selbst gefleht. Nichts hilft. Darum brauche ich Euch.~
+
+@3977 = ~Seid willkommen, Reisender. Ihr habt die Wipfelschenke erreicht – Rast ist hier leicht gewährt, wenn Ihr sie wünscht.~
+
+@3978 = ~Was bietet Ihr hier an?~
+
+@3979 = ~Heute nicht. Vielleicht ein andermal.~
+
+@3980 = ~Zeigt mir, welche Annehmlichkeiten Ihr bereithaltet.~
+
+@3981 = ~Dann möge der Wind Euch sanft tragen und Frieden Eure Schritte begleiten.~
+
+@3982 = ~Einen Ort zur Rast unter freiem Himmel, geborgen in den Armen der Bäume. Decken, gewärmt von der Sonne des Tages, Hängematten zwischen uralten Ästen… und eine sanfte Stille, nur vom Gesang der Vögel unterbrochen.~
+
+@3983 = ~Das klingt, als könnte ich es gut gebrauchen.~
+
+@3984 = ~Fürs Erste verzichte ich.~
+
+@3985 = ~Dann legt Euch nieder und lasst die Blätter Euer Gewicht tragen. An diesem Ort vergisst die Welt ihren Lärm.~
+
+@3986 = ~Wir gewähren Unterkunft in diesen Wipfeln; Schlafplätze wie Nester zwischen den Ästen, für jene, die den Bäumen vertrauen.~
+
+@3987 = ~Wir reichen warmen Tee aus Hainkräutern und – wenn Ihr es wünscht – Kerzen, um den Geist zu beruhigen oder traumlosen Schlaf zu schenken.~
+
+@3988 = ~Frieden ist unser einziges wahres Angebot. Doch mitunter ist das mehr als genug.~
+
+@3989 = ~Ich bleibe. Die Welt kann warten.~
+
+@3990 = ~Ein andermal vielleicht.~
+
+@3991 = ~*Hust, hust*! Verzeiht den Dunst! Zu viele Dochte brennen. Dennoch… willkommen! Wollt Ihr etwas erwerben? *Hust*!~
+
+@3992 = ~Was bietet Ihr an?~
+
+@3993 = ~Lasst mich sehen, was Ihr habt.~
+
+@3994 = ~Habt Ihr keine Sorge, dass all diese Kerzen den ganzen Baum in Brand setzen könnten?~
+
+@3995 = ~Oh, nein… *hust*! Der Rauch hält das Ungeziefer fern, und Eldath wacht über die Flammen. Außerdem… ich habe nur einmal im letzten Jahr einen Ast in Brand gesetzt, und meine Brüder und Schwestern waren rasch mit ihren Regenzaubern zur Stelle.~
+
+@3996 = ~Ich nehme meinen Abschied.~
+
+@3997 = ~Dann geht in Frieden… *hust*… und möge Eure Flamme niemals erlöschen.~
+
+@3998 = ~*Hust*…~
+
+@3999 = ~Ich führe einige Schriftrollen. *Hust*! Manche schlicht, andere mit Gebet gewoben.~
+
+@4000 = ~Nun gut, zeigt sie mir.~
+
+@4001 = ~Seid willkommen, mein <BROTHERSISTER>. Ihr steht an einem Ort der Stille, unter der sanften Gnade Eldaths, der Schweigsamen. Möge ihr Friede sich auf Euer Herz senken.~
+
+@4002 = ~Ich würde gern Eure Dienste in Anspruch nehmen.~
+
+@4003 = ~Könnt Ihr mir mehr über Eldath erzählen?~
+
+@4004 = ~Ich verstehe. Ich werde nun gehen.~
+
+@4005 = ~Gewiss, mein <BROTHERSISTER>. Tretet sanft auf, und lasst den Frieden Euren Weg leiten.~
+
+@4006 = ~Mögen Eldaths milde Winde Euch führen, <BROTHERSISTER>.~
+
+@4007 = ~Eldath ist die Göttin des Friedens, der stillen Wasser und der ruhigen Haine. Wir gewähren Zuflucht jenen, die Harmonie suchen, fern vom Lärm der Welt. Keine Klinge wird gezogen, wo ihr Segen verweilt.~
+
+@4008 = ~Wenn ich noch einmal „Frieden“ höre, schwöre ich, fange ich an, Bäume zu fällen. Dann Köpfe. In dieser Reihenfolge.~
+
+@4009 = ~Keine Schwerter? Kein Zerschmettern? Nicht einmal ein kleines Hintern-Versohlen? Wie verwirrend…~
+
+@4010 = ~Eine Göttin des Friedens… Wie reizend. Wenn sie existiert, wird sie die Erste sein, die blutet.~
+
+@4011 = ~Viele lachten über uns, als wir hier die ersten Setzlinge pflanzten. Und nun steht Ihr in ihrem Schatten.~
+
+@4012 = ~Noch etwas?~
+
+@4013 = ~Darf ich Eure Dienste sehen?~
+
+@4014 = ~Ah, so ist es besser. Verzeiht. Manchmal nehme ich die Gestalt eines Bären an, wenn die Sehnsucht zu groß wird. Honig schmeckt süßer, wenn man ihn mit Schnauze und Zunge sammelt – so rede ich es mir zumindest ein.~
+
+@4015 = ~Seid erneut gegrüßt, Honigliebhaber! Welche Süße führt Euch heute zu mir zurück?~
+
+@4016 = ~Es geht um den Met.~
+
+@4017 = ~Was tut Ihr hier eigentlich?~
+
+@4018 = ~Ich will Euch nicht länger vom Honig abhalten. Lebt wohl.~
+
+@4019 = ~Oh! Bringt Ihr gute Nachrichten, hoffe ich?~
+
+@4020 = ~Ich habe das Fass dem Wirt der Fünf Krüge überbracht.~
+
+@4021 = ~Nein, noch gibt es nichts zu berichten.~
+
+@4022 = ~Und? Hat er Euch einen angemessenen Preis gezahlt? Ein Jahr Arbeit steckt in diesem Nektar.~
+
+@4023 = ~Er gab mir hundert Goldstücke.~
+
+@4024 = ~Er gab mir fünfhundert Goldstücke.~
+
+@4025 = ~Er gab mir siebenhundertfünfzig Goldstücke.~
+
+@4026 = ~Er gab mir tausend Goldstücke.~
+
+@4027 = ~Nur hundert? Das ist… enttäuschend. Samuel scheint Eldaths Frieden weniger wert zu schätzen als gewöhnliches Bier. Nun, was geschehen ist, ist geschehen. Ich werde damit auskommen, auch wenn mein Herz schwer ist.~
+
+@4028 = ~Ahh, fünfhundert Gold! Das ist ein gerechter Lohn für ein Jahr Pflege. Eldaths Gärten werden heller erblühen. Hier, nehmt hundert Münzen für Eure Mühe – Frieden ist süß, doch Arbeit verdient ihren Lohn.~
+
+@4029 = ~Siebenhundertfünfzig! Ha! Mehr als gerecht, mehr als ich zu hoffen wagte! Wahrlich, Eldath lächelt heute auf uns herab. Nehmt diese 250 Goldstücke für Euch, und wisst, dass Eure Worte mehr als Münzen eingebracht haben – sie brachten Respekt. Möge Euer Name süß wie Honig auf der Zunge liegen.~
+
+@4030 = ~Tausend Gold? Das ist überaus großzügig – nein, geradezu wundersam! Samuel muss nicht nur den Wert des Mets erkannt haben, sondern auch den Wert des Friedens selbst. Nehmt diese 500 Münzen und zudem dieses Geschenk – einen Mantel, gewoben mit Eldaths Segen, Schutz vor Stichen, seien sie groß oder klein.~
+
+@4031 = ~Nun, da ich Euch wieder in meiner eigenen Haut gegenüberstehe… welchen Dienst könnte ein bescheidener Mönch Eldaths Euch erweisen?~
+
+@4032 = ~Ich will Euch nicht vom Honig fernhalten. Lebt wohl.~
+
+@4033 = ~Was ich hier tue? Ich hüte die Bienen, natürlich! Gemeinsam weben wir Harmonie in Waben und verwandeln Blüten in flüssiges Sonnenlicht. Wir erzeugen nicht nur Honig, sondern Frieden selbst – dick und golden, süß auf der Zunge.~
+
+@4034 = ~Viele Wanderer tragen schwere Lasten auf den Schultern, und ich reiche ihnen einen Löffel davon. Ihr würdet staunen, wie viele Streitigkeiten vergehen, wenn die Lippen klebrig vor Honig sind.~
+
+@4035 = ~Nun, da Ihr vor mir steht, erkenne ich Euch wieder. Ihr seid der <PRO_RACE> aus Athkatla, nicht wahr? Ich hätte eine Aufgabe für Euch, solltet Ihr in die Stadt der Münzen zurückkehren.~
+
+@4036 = ~Warum sollte sich ein Priester Eldaths um die Stadt der Münzen kümmern?~
+
+@4037 = ~Was verlangt Ihr von mir?~
+
+@4038 = ~Ich bin kein Laufbursche für Mönche und Met. Sucht Euch jemand anderen für Eure Fässer.~
+
+@4039 = ~In Athkatla steht ein Haus des Lachens und des Liedes – die Schenke „Die Fünf Krüge“. Ihr Wirt, Samuel, ist ein Mann der Worte und des Witzes – doch selbst eine solche Bühne kann durch Süße gewinnen. Würdet Ihr ein Fass meines Honigmetes zu ihm tragen? Handelt einen gerechten Preis im Namen Eldaths aus, damit die Tempel und Gärten der Schweigsamen daran teilhaben mögen.~
+
+@4040 = ~Sehr wohl. Ich werde Euren Honigmet zu Samuel von den Fünf Krügen bringen.~
+
+@4041 = ~Was versteht Ihr unter einem gerechten Preis?~
+
+@4042 = ~Ihr kennt die Wege des Handels gewiss besser als ich. Fordert eine Summe, die den Wert des Mets ehrt, und kehrt mit der Zahlung zu mir zurück. Mit diesen Münzen werden wir neue Güter für Eldaths Heiligtum im Tal erwerben, damit der Frieden so sorgsam gepflegt werde wie der Bienenstock.~
+
+@4043 = ~Mein Dank fließt so reich wie der Nektar der Waben. Mögen Eure Worte in jener Schenke so sanft sein wie Honig, und möge Samuel die Weisheit des gerechten Handels erkennen. Kehrt mit der Bezahlung zurück, und ich werde Euch einen Anteil gewähren – denn auch wer dem Frieden dient, soll ein wenig Süße kosten.~
+
+@4044 = ~So sei es. Der Bienenstock lehrt Geduld; vielleicht wird ein andrer Tag, ein andrer Mensch Eldaths Süße in die Welt tragen.~
+
+@4045 = ~Lebt wohl! Bleibt ruhig und summt im Takt der Waben.~
+
+@4046 = ~Der Bienenstock lehrt uns: Arbeite in Stille, hüte das Süße, stich nur, wenn es sein muss.~
+
+@4047 = ~Möge Euer Zorn wie Wachs vor der Flamme schmelzen, und mögen Eure Worte so sanft und süß sein wie Sommerhonig. Geht in Frieden, Fremder, und tragt ein wenig Süße in die Welt.~
+
+@4048 = ~Frieden braucht Geduld… wie guter Honig. Man kann die Bienen nicht hetzen – und die Streithähne ebenso wenig.~
+
+@4049 = ~Möge Euer Zorn wie Wachs schmelzen und Eure Worte süß wie Sommerhonig sein.~
+
+@4050 = ~Ich habe hier ein Fass Honigmet von einem Mönch Eldaths aus Dämmerwaldtal.~
+
+@4051 = ~Bei den Göttern, seht Euch diesen goldenen Schimmer an! Wenn der Geschmack der Farbe entspricht, ist dies kein Bauerngebräu. Ein Mönch Eldaths, sagt Ihr? Wie reizend – und wie klug. Frieden in der Flasche, Süße im Fass! Meine Gäste werden auf die Harmonie trinken, und Streit wird sich verflüchtigen, noch ehe der erste Krug geleert ist.~
+
+@4052 = ~Der Mönch bat um einen gerechten Preis, damit die Tempel der Schweigsamen am Gewinn teilhaben mögen.~
+
+@4053 = ~Solcher Met verdient keinen gewöhnlichen Preis. Was bietet Ihr dafür, Samuel?~
+
+@4054 = ~Ein vernünftiger Wunsch – und ich bin kein Geizhals, wenn es um Qualität geht. Wie viel verlangt Ihr für den Met?~
+
+@4055 = ~Ich verlange hundert Goldstücke.~
+
+@4056 = ~Ich verlange fünfhundert Goldstücke.~
+
+@4057 = ~Ich verlange siebenhundertfünfzig Goldstücke.~
+
+@4058 = ~Ich verlange tausend Goldstücke.~
+
+@4059 = ~Welch ein Schnäppchen! Die Priester Eldaths scheinen den wahren Wert ihres Getränks nicht zu kennen. Hier, nehmt Eure hundert Goldstücke.~
+
+@4060 = ~Abgemacht! Hier sind fünfhundert Gold. Eine gerechte Summe für ein gerechtes Fass – richtet Eurem Mönch aus, es werde sowohl Schenke als auch Tempel Frieden bringen.~
+
+@4061 = ~Einverstanden! Siebenhundertfünfzig Gold! Der Nektar ist fein, und der Zweck noch feiner. Möge Eldath meine Großzügigkeit – und den Durst meiner Gäste – segnen!~
+
+@4062 = ~Ein Königslohn! Doch solche Süße lässt sich kaum in Münzen messen. Dennoch – nehmt tausend Gold. Man soll sagen, dass Samuel Donnerwams hervorragende Braukunst und edle Taten gleichermaßen belohnt!~
+
+@4063 = ~Richtet den Eldathyn meine Grüße aus. Ich hätte nicht gedacht, dass sie zu etwas derart… Nützlichem fähig sind!~
+
+@4064 = ~Seid gegrüßt. Ich bin der Holzwerker von Dämmerwaldtal – obgleich ich, um ehrlich zu sein, zuvorderst ein Druide bin. Der Hain führt meine Hände; ich folge nur seiner Maserung.~
+
+@4065 = ~Aus gefallenen Ästen schnitze ich kleine Tiere und heitere Schmuckstücke, und bisweilen sammle ich hölzerne, druidische Ausrüstung, die ihren Weg zu mir findet. Ich fertige sogar Rüstungen aus dem Holz des Dämmerwaldes – leicht, robust und von der Ruhe des Waldes berührt. Möchtet Ihr meine Waren sehen?~
+
+@4066 = ~Zeigt mir, was Ihr habt.~
+
+@4067 = ~Nicht jetzt.~
+
+@4068 = ~Warum schnitzt Ihr Holz?~
+
+@4069 = ~Gehen Euch hier nie die Bäume aus?~
+
+@4070 = ~Wird Eure Arbeit wirklich geschätzt?~
+
+@4071 = ~Schon wieder hier? Das Holz hält mich beschäftigt. Wollt Ihr meine Arbeiten betrachten?~
+
+@4072 = ~Ja, zeigt sie mir.~
+
+@4073 = ~Heute nicht.~
+
+@4074 = ~Es beruhigt Hände und Herz. Eine kleine Schnitzerei kann mehr Trost spenden als Münzen.~
+
+@4075 = ~Wenn Ihr möchtet, zeige ich Euch meine Werke.~
+
+@4076 = ~Ich fälle niemals lebendes Holz. Sturm und Zeit hinterlassen mehr als genug für willige Hände.~
+
+@4077 = ~Möchtet Ihr einen Blick darauf werfen?~
+
+@4078 = ~Genug, um zu bestehen. Ein Lächeln gilt mir als voller Lohn.~
+
+@4079 = ~Soll ich meine Arbeit ausbreiten?~
+
+@4080 = ~Was darf es sein?~
+
+@4081 = ~Zeigt mir Eure Arbeiten.~
+
+@4082 = ~Ein andermal.~
+
+@4083 = ~Wie Ihr wünscht. Das Holz wird warten.~
+
+@4084 = ~Ganz wie Ihr wollt. Ich halte die Späne beisammen.~
+
+@4085 = ~Kehrt zurück, wenn die Maserung Euch ruft.~
+
+@4086 = ~Ein neuer Tag, eine neue Schnitzerei. Geht sichere Wege.~
+// 4087–4176
+
+@4087 = ~Ah, Freund! Wir danken Euch noch immer. Ihr habt uns auf der Straße das Leben gerettet.~
+
+@4088 = ~Nun spaltet unsere Axt nur noch Kürbisse, nicht Köpfe. Bessere Arbeit. Besseres Leben.~
+
+@4089 = ~Oh! Idee. Hier, wir geben Euch die alte Axt. Als Dank. Brauchen sie nicht mehr. Wir benutzen jetzt eine einfache Axt, die nur für Kürbisse taugt.~
+
+@4090 = ~Axt half uns, den Weg zu Eldath zu finden. Vielleicht hilft sie auch Euch.~
+
+@4091 = ~Gut zu sehen, dass es Euch gut geht.~
+
+@4092 = ~Ich bin überrascht, dass Ihr es tatsächlich hierher geschafft habt.~
+
+@4093 = ~Ich bin sicher, ich werde die Axt für Besseres nutzen als für Kürbisse.~
+
+@4094 = ~Oh, Ihr schon wieder! Keine Sorge, diesmal keine Gefahr. Nur Kürbisse spalten.~
+
+@4095 = ~Gut zu sehen, dass Ihr am Leben seid und Frieden gefunden habt.~
+
+@4096 = ~Warum ausgerechnet Kürbisse?~
+
+@4097 = ~Ich lasse Euch zu Euren Kürbissen.~
+
+@4098 = ~Ihr freundlich. Wir danken nochmals. Ihr gabt uns neues Leben.~
+
+@4099 = ~Wenn Ihr nach Dämmerwaldtal kommt, singen wir kleinen Dank und teilen Eintopf.~
+
+@4100 = ~Vielleicht komme ich vorbei.~
+
+@4101 = ~Behaltet Eure Lieder für Euch.~
+
+@4102 = ~Gut. Ihr willkommen. Eldath segne den Weg, der Euch brachte.~
+
+@4103 = ~Wie Ihr wollt. Dennoch – Ihr habt uns gerettet. Wir vergessen nicht.~
+
+@4104 = ~Kürbis gibt Nahrung. Kürbis fühlt sich beim Spalten an wie Kopf – aber platzt nicht in Blut.~
+
+@4105 = ~Axt noch schwer, aber Herz leichter. Kürbisse müssen gespalten – wir beschäftigt und glücklich.~
+
+@4106 = ~Das klingt in der Tat friedlich.~
+
+@4107 = ~Ihr könntet lügen, um etwas zu verbergen.~
+
+@4108 = ~Ja. Frieden gut. Danke.~
+
+@4109 = ~Wir verbergen nichts. Ihr beobachten. Wenn wir kämpfen, Ihr sehen. Wenn nicht, Ihr auch sehen.~
+
+@4110 = ~Lebt wohl. Haltet die Axt scharf, Freund – aber nur für Kürbisse!~
+
+@4111 = ~Danke, dass Ihr uns gerettet habt!~
+
+@4112 = ~Verzeiht… Ihr seid doch derjenige, der unserem Hochverehrten geholfen hat, nicht wahr? Ich fragte mich, ob Ihr vielleicht auch mir helfen würdet… nur einen Augenblick lang.~
+
+@4113 = ~Kommt darauf an. Was braucht Ihr?~
+
+@4114 = ~Ich habe keine Zeit, Jungen zu helfen, die sich noch nicht einmal rasieren. Geh und spiel in den Bäumen.~
+
+@4115 = ~Seht Ihr, erst kürzlich bin ich von zu Hause fortgelaufen. Ich… ich konnte dieses Leben einfach nicht führen! Meine Eltern starben, als ich noch jung war, und ich wurde von meiner Tante Pesca großgezogen. Sie lebt im Regierungsviertel von Athkatla. Ihre Welt besteht aus Marmor, Seide und Münzen. Sie wollte, dass ich ein vornehmer, reicher Mann werde. Privilegiert. Gepflegt. Verwöhnt.~
+
+@4116 = ~Doch nichts davon fühlte sich je wie meines an. Nicht die Kleidung, nicht die Manieren, nicht die Zukunft. Eines Tages hörte ich etwas – spürte etwas. Eine Stille. Einen Ruf. Vielleicht Eldaths Stimme im Wind.~
+
+@4117 = ~Also kam ich hierher, nach Dämmerwaldtal, um zu lernen, zu atmen, meinen eigenen Weg zu finden. Aber… ich ging, ohne ein Wort zu sagen. Verschwand einfach. Das war nicht recht.~
+
+@4118 = ~Ich kann nicht zurück – sie würde mich nie wieder gehen lassen. Doch vielleicht… wenn jemand ihr diese Blume brächte… ihr sagte, dass es mir gut geht und wo ich bin… vielleicht könnte dann wieder Frieden zwischen uns wachsen.~
+
+@4119 = ~Sie lebt in Athkatla. Oft spaziert sie durch die Gärten des Regierungsviertels. Würdet Ihr ihr diese Blume bringen und meine Botschaft übermitteln?~
+
+@4120 = ~Gut. Ich werde es tun.~
+
+@4121 = ~Das ist Euer Problem, nicht meines.~
+
+@4122 = ~Wirklich? Danke. Hier – nehmt sie. Sie verlässt das Viertel selten; sie sagte stets, die Stadt der Münzen sei alles, was sie brauche.~
+
+@4123 = ~Lasst mich wissen, sobald Ihr sie ihr übergeben habt. Ich wäre Euch sehr dankbar.~
+
+@4124 = ~R-richtig… entschuldigt die Störung.~
+
+@4125 = ~Ich hoffe wirklich, dass meine Tante versteht, dass ich atmen musste. Dass ich etwas anderes brauchte als sie. Ich bin nicht vor ihr geflohen – ich bin auf etwas zugelaufen, das ich brauchte.~
+
+@4126 = ~Ich habe Eure Botschaft überbracht und ihr die Blume gegeben. Sie meinte, vielleicht solltet Ihr ihr eines Tages selbst Blumen bringen.~
+
+@4127 = ~Ich habe ihr die Blume gegeben. Es überrascht mich nicht, dass Ihr fortgegangen seid. Sie wirkt… unerquicklich.~
+
+@4128 = ~Hm.~
+
+@4129 = ~Das hat sie gesagt? Hm… damit hätte ich nicht gerechnet.~
+
+@4130 = ~Nun, so schlimm ist sie auch nicht. Ich meine… manchmal kann sie nett sein.~
+
+@4131 = ~Danke, dass Ihr das getan habt. Es bedeutet mir mehr, als ich sagen kann. Jetzt, da sie weiß, dass ich in Sicherheit bin, kann ich mich wirklich auf das konzentrieren, was zählt.~
+
+@4132 = ~Was auch immer das genau ist. Ich finde es noch heraus. Aber danke. Wirklich. Ihr seid in Ordnung.~
+
+@4133 = ~Friede sei mit Euch! Ihr tragt den Geruch von Erde und Gefahr an Euch – wart Ihr in Ruinen oder an einem finsteren Ort? Ich weiß nicht, ob ich für solche Wege geschaffen bin… aber ich hoffe, die Stille, die ich hier finde, hilft dennoch jemandem.~
+
+@4134 = ~Was ist das nun wieder für ein Auflauf? Ich habe weder Zeit noch Geduld für ungebetene Störungen. Verschwindet, es sei denn, Ihr tragt etwas von wirklicher Bedeutung vor.~
+
+@4135 = ~Tatsächlich glaube ich das. Ich habe mit Eurem Neffen gesprochen. Er ist gegangen, weil er sein Leben auf eigene Weise entdecken will. Doch er wollte, dass Ihr wisst, dass es ihm gut geht – und er bat mich, Euch diese Blume zu überreichen.~
+
+@4136 = ~Nun gut. Ich werde dann gehen.~
+
+@4137 = ~Er tat was? Er lebt? Ich dachte… ich fürchtete das Schlimmste. Und dennoch läuft er fort, verschwindet ohne ein einziges Wort? Diese Unverschämtheit!~
+
+@4138 = ~Undankbarer Bengel! Ich habe ihn behütet, gekleidet, erzogen, ihm alles gegeben – und so dankt er es mir?~
+
+@4139 = ~Vielleicht liegt genau darin das Problem.~
+
+@4140 = ~Gnädige Frau, ich überbringe nur eine Nachricht. Er ist in Sicherheit. Ihr werdet ihn wiedersehen, da bin ich gewiss. Mehr müsst Ihr nicht wissen.~
+
+@4141 = ~Wie wagt Ihr es, so etwas anzudeuten?~
+
+@4142 = ~Er will sein eigenes Leben führen. Seine eigenen Fehler machen. Er weiß, dass Ihr es gut meintet – doch er muss seinen eigenen Weg finden.~
+
+@4143 = ~Und was, bitteschön, fehlte ihm hier? Wir haben alles – Komfort, Schönheit, Sicherheit! Seht Euch dieses Viertel an! Es gibt nichts jenseits dieser Mauern, das ihm besser dienen könnte als das, was ich ihm bot.~
+
+@4144 = ~Es geht ihm gut. Gebt ihm Zeit. Lasst ihn stolpern. Lasst ihn wachsen.~
+
+@4145 = ~Ich…~
+
+@4146 = ~Er kommt zurecht. Konzentriert Euch darauf.~
+
+@4147 = ~Nun gut. Sagt ihm… sagt ihm, er solle mir das nächste Mal die Blumen selbst bringen. Hmpf. Dieser unverschämte, törichte, geliebte Junge!~
+
+@4148 = ~Hmpf! Dann verschwindet, Einmischer, und tretet mir nicht weiter vor die Augen!~
+
+@4149 = ~He! Hast du Würmer?~
+
+@4150 = ~Nein, ich erfreue mich bester Gesundheit.~
+
+@4151 = ~Ähm, ich glaube nicht. Tut mir leid.~
+
+@4152 = ~Darauf werde ich nicht einmal antworten. Leb wohl.~
+
+@4153 = ~Wie kommt ein Kind wie du an einen Ort wie diesen?~
+
+@4154 = ~Was – igitt! So war das nicht gemeint!~
+
+@4155 = ~Oh… nun gut. Schade eigentlich.~
+
+@4156 = ~Ich bin ein Waisenkind. Die Priester hier nahmen mich auf, als ich sonst niemanden hatte. Sie sagen, die Göttin wende sich nicht einmal vom kleinsten Blatt ab, das im Strom treibt.~
+
+@4157 = ~Also… hilfst du mir jetzt, Würmer zu finden, oder nicht?~
+
+@4158 = ~Ich WILL unbedingt ein paar gute Fische fangen und allen zeigen, was für ein toller Fischerjunge ich bin! Aber dafür brauche ich einen richtig fetten Wurm! Sag mir Bescheid, wenn du einen findest!~
+
+@4159 = ~Hier müssten doch irgendwo Würmer sein…~
+
+@4160 = ~Hm, immer noch kein Glück bei der Wurmsuche. Ernsthaft, wie schwer kann das sein? Wo sind all die Würmer, wenn man sie mal braucht? Ich habe überall gesucht.~
+
+@4161 = ~Rate mal! Ich habe einen Wurm für dich.~
+
+@4162 = ~Geduld. Du wirst schon einen finden.~
+
+@4163 = ~Wirklich?! Das ist ja großartig!~
+
+@4164 = ~Schau nur, wie groß er ist! Und wie rosa! Und wie lustig er sich windet!~
+
+@4165 = ~Tut mir leid, aber jetzt muss ich dich an den Haken stecken. Ich hoffe wirklich, dass es nicht allzu sehr weh tut.~
+
+@4166 = ~…~
+
+@4167 = ~…ähm…~
+
+@4168 = ~Oh nein. Ich kann ihn doch nicht einfach töten. Er sieht so nett aus. Und ich… ich will ihn „Nudel“ nennen und ihm Tricks beibringen!~
+
+@4169 = ~Du solltest Fischfutter sein!~
+
+@4170 = ~Sieht so aus, als würdest du ihn einfach zu sehr mögen.~
+
+@4171 = ~Ach, ich hab genug davon. (Nimm den Wurm und wirf ihn ins Wasser)~
+
+@4172 = ~Irgendwie schon.~
+
+@4173 = ~Hm, dann werde ich wohl doch kein Fischerjunge. Aber weißt du was? Ich kann Wurm-Dompteur werden!~
+
+@4174 = ~Danke, dass du ihn mir gebracht hast. Ich glaube, wir werden gute Freunde.~
+
+@4175 = ~Was?! Was hast du getan! Du bist sooo gemein, und ich werde allen erzählen, dass du schrecklich bist! Und dann wird dich keiner mehr mögen! NIEMALS!~
+
+@4176 = ~He! Weißt du was? Ich habe Nudel einen neuen Trick beigebracht! Vielleicht zeige ich ihn dir beim nächsten Mal.~
+// 4177–4249
+
+@4177 = ~Eldath wache über Euch, mein Freund. Es ist ein Segen, einer weiteren Seele zu begegnen, die im Frieden wandelt.~
+
+@4178 = ~Ich denke, Ihr solltet dies erhalten. Dies ist das Emblem Eldaths, das Merethan trug, als er verschied. Ich glaube, er hätte gewollt, dass es wieder getragen wird.~
+
+@4179 = ~Ich habe mit Alatoasz gesprochen. Er stimmt zu – Ihr seid würdig, Merethans Emblem zu tragen.~
+
+@4180 = ~Ihr wirkt ruhig und zufrieden. Lebt Ihr schon lange hier, Priesterin?~
+
+@4181 = ~Wie gefällt Euch dieser Ort, Priesterin? Dämmerwaldtal scheint eine Oase der Ruhe in einer unruhigen Welt.~
+
+@4182 = ~Das geht mich nichts an. Lebt wohl.~
+
+@4183 = ~Möge der Friede mit Euch gehen. Lebt wohl.~
+
+@4184 = ~Ich traf eine Sirene voller Zorn. Ihr lebt nach Frieden und Gelassenheit – könnt Ihr mir sagen, wie ich ihr helfen kann?~
+
+@4185 = ~Oh ja, ich lebe seit vielen Jahren hier, umgeben von sanften Seelen und dem unaufhörlichen Murmeln der Wasser.~
+
+@4186 = ~Einst verbrachte ich meine Tage damit, das Zeichen unserer Herrin in Holz und Stein zu schnitzen… doch meine Hände gehorchen mir nicht mehr wie einst.~
+
+@4187 = ~Ach, wie sehr wünschte ich, ich könnte eines dieser schönen Symbole Eldaths noch einmal selbst schnitzen, wie früher! Doch ich betrauere nicht, was die Zeit mir genommen hat.~
+
+@4188 = ~Nun lehre ich die Jüngeren das Schnitzen. Ihre Hände sind meine Hände, und durch sie blühen die Zeichen der Herrin weiter. Auch Merethan habe ich gelehrt, sein Emblem zu fertigen. Schade, dass er nicht mehr Frieden in die Welt bringen konnte, ehe die Göttin ihn heimrief.~
+
+@4189 = ~Nun sagt mir – sucht Ihr etwas, oder ruht Ihr nur einen Moment Eure Seele aus?~
+
+@4190 = ~Nein. Ich muss gehen, ich habe genug von Eurem Gerede.~
+
+@4191 = ~Nein, ich wollte Euch nur einen friedvollen Tag wünschen, meine Freundin.~
+
+@4192 = ~Ja… dieser Ort ist sichtbar gewordener Frieden. Nach all dem Lärm und der Hast ist es ein Geschenk, der Stille zu lauschen.~
+
+@4193 = ~Der Fluss eilt nie – und doch erreicht er das Meer. Darin liegt Weisheit, denke ich.~
+
+@4194 = ~Eure Worte klingen friedvoll, doch sie tragen einen Hauch von Nachdenken in sich. Vermisst Ihr Eure früheren Aufgaben?~
+
+@4195 = ~Gut. Wie auch immer. Ich muss gehen.~
+
+@4196 = ~Danke, dass Ihr diesen Frieden mit mir geteilt habt.~
+
+@4197 = ~Ihr wollt mir Merethans Emblem überlassen? Das ist eine große Ehre… doch ich kann es nicht leichtfertig annehmen. Eine solche Entscheidung muss vom Hochverehrten Hüter der Stillen Wasser selbst kommen.~
+
+@4198 = ~Soll ich in Eurem Namen mit dem Hochverehrten sprechen?~
+
+@4199 = ~Ich habe bereits mit ihm gesprochen. Er wünscht, dass Ihr es tragt.~
+
+@4200 = ~Es war nur ein Gedanke. Ich habe anderes zu tun.~
+
+@4201 = ~Das wäre eine Güte ohnegleichen. Doch wisst, selbst wenn er ablehnt, werde ich mich nicht weniger gesegnet fühlen. Die Herrin lehrt, dass Frieden in der Annahme liegt.~
+
+@4202 = ~Der Hochverehrte gewährt mir die Ehre, Merethans Emblem zu tragen? Dann schließt sich der Kreis des Friedens wahrhaftig. Solche Güte zieht weitere Kreise als jeder Fluss.~
+
+@4203 = ~Ich kann Euch nur Dank darbringen, doch wisst, ich werde Euren Namen im Gebet zur Herrin der Stillen Wasser tragen.~
+
+@4204 = ~Dank Euch wandle ich wieder im Frieden – langsam, ja, doch jeder Schritt ist ein Gebet.~
+
+@4205 = ~Lebt wohl. Meine Hände mögen zittern, doch mein Herz ist fest. Möge es mit dem Euren ebenso sein, wohin auch immer Euer Weg fließt.~
+
+@4206 = ~Meine Schwester der Gezeiten irrt verloren in ihrem Zorn, unfähig, das Flüstern der stillen Wasser zu hören?~
+
+@4207 = ~Bringt ihr dies. Geweihtes Wasser, vermischt mit Kamille, wildem Honig, Brombeere und Lavendel – jedes ein Hauch von Ruhe aus dem Hain. Möge es ihren Zorn schmelzen wie Morgensonne den Winterreif und nur Stille zurücklassen.~
+
+@4208 = ~Vielleicht sollten wir unserem zornigen Zwerg hier ebenfalls etwas von diesem Gebräu anbieten?~
+
+@4209 = ~Ha! Sehr witzig, Halbelf! Mein Zorn beugt sich keinem Trank – und so soll es bleiben! Nun halt den Mund, ehe ich einen neuen Grund finde, wirklich wütend zu werden!~
+
+@4210 = ~Lasst meine Sirenenschwester diesen Trank unter freiem Himmel trinken. Ist ihr Geist bereit, wird Eldaths Ruhe durch ihren Zorn sickern wie Sonnenlicht durch gefrorenes Wasser.~
+
+@4211 = ~Danke, das wird ihr helfen.~
+
+@4212 = ~Hoffentlich wirkt es.~
+
+@4213 = ~Gut. Ich bringe Euer Gebräu zu Eurer salzigen Schwester.~
+
+@4214 = ~Tragt Ruhe als Schild und Güte als Klinge.~
+
+@4215 = ~Argh!~ [SIRIN03]
+
+@4216 = ~Nun, hier scheint jemand wütend zu sein.~
+
+@4217 = ~Ihr seid die Einzige hier, die keine Harmonie zeigt.~
+
+@4218 = ~Ich lasse Euch besser allein.~
+
+@4219 = ~Natürlich bin ich wütend! Wenn alle Lieder der Welt zu Schreien werden, wie sollte ich es nicht sein? Die Reiche erbeben vor Krieg und Wahnsinn, als sei Toril selbst dem Irrsinn verfallen.~
+
+@4220 = ~Ich kam hierher, nachdem mein Volk mit Piraten aneinandergeriet. Ich sah Tod… Blut… Leid. Viel zu viel. Und nun brennt es in mir – mit jedem Atemzug.~
+
+@4221 = ~Manchmal will ich einfach einen weiteren Pfeil anlegen und allem ein Ende bereiten – die Welt in den Frieden zwingen, wenn es sein muss.~
+
+@4222 = ~Doch ich suchte Frieden, nicht Rache. Als Eldaths Stimme mich erreichte – sanft wie Wellen an einem schlafenden Ufer – glaubte ich, die Wut versinken lassen zu können. Doch sie haftet noch immer an mir, wie Tang um das Herz.~
+
+@4223 = ~Es tut mir sehr leid, das zu hören.~
+
+@4224 = ~Ich wusste nicht, dass Eldaths Ruf auch Stimmen wie die Eure erreicht.~
+
+@4225 = ~Ich glaube, das interessiert mich nicht. Ich gehe.~
+
+@4226 = ~Überrascht? Das war ich auch. Doch selbst sturmgepeinigte Herzen sehnen sich nach Ruhe. Und ihre Stimme war die einzige, die kein Blut verlangte.~
+
+@4227 = ~Interessant.~
+
+@4228 = ~Mein Herz trauert, wahrlich… doch die Wut heult in mir wie eine steigende Flut.~
+
+@4229 = ~Dann geht. Verschwindet. Je eher Ihr fort seid, desto stiller wird es.~
+
+@4230 = ~Argh!~
+
+@4231 = ~Ich lasse Euch besser in Ruhe.~
+
+@4232 = ~Ich sprach mit einer alten Eldathyn-Priesterin. Sie meint, Ihr müsst akzeptieren, dass ein Teil des Zorns bleiben wird. Sie gab mir diesen Kräutertrank, um Euch zur Ruhe zu verhelfen.~
+
+@4233 = ~Hier – ein Schluck dieses Kräutergebräus, und Eure Sorgen vergehen. So behauptet zumindest die alte Frau.~
+
+@4234 = ~Ein Kräutertrank? Ihr glaubt, ein paar Schlucke lassen mich all das vergessen, was ich gesehen habe?~
+
+@4235 = ~Nun, einen Versuch ist es wert.~
+
+@4236 = ~Habt Ihr eine bessere Idee?~
+
+@4237 = ~Um ehrlich zu sein: nein.~
+
+@4238 = ~Wie Ihr wollt. Ich wollte helfen, doch vielleicht seid Ihr noch nicht bereit, Euch besser zu fühlen.~
+
+@4239 = ~Nun… ich schätze, ich kann es zumindest versuchen.~
+
+@4240 = ~Es fühlt sich… angenehm an.~
+
+@4241 = ~Seht Ihr? Das war doch nicht so schwer.~
+
+@4242 = ~Das lief besser, als ich erwartet hatte.~
+
+@4243 = ~Genießt diesen Moment. Ich lasse Euch nun allein.~
+
+@4244 = ~Ein Hauch von Ruhe endlich… das einzige Gewicht, das ich noch trage, ist dieser Köcher voller Pfeile – stete Erinnerung an das Leben, das ich einst führte.~
+
+@4245 = ~Ich hielt diese Pfeile länger bei mir, als ich mich erinnern kann, doch nun ziehen sie mich zurück, statt mich zu befreien – zumindest hier, in diesen Wassern.~
+
+@4246 = ~Ihr hingegen scheint jemand zu sein, der sie noch gebrauchen kann. Nehmt sie. Sie haben mir gute Dienste geleistet, doch vielleicht dienen sie Euch besser. Ihr habt meinen Dank… und vielleicht einen Teil meines Friedens.~
+
+@4247 = ~Ich möchte gerade nicht sprechen… ich will nur dem Wasser zusehen.~
+
+@4248 = ~Ich weiß nicht, warum ich glaubte, dieser Ort würde alles besser machen…~
+
+@4249 = ~*Seufz*~
+
