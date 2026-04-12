@@ -6,15 +6,15 @@
 
 @3403 = ~Gift, Tote... ich habe keine Zeit für Höflichkeiten. Weist mir einfach den Weg zu Eurem Hochpriester.~
 
-@3404 = ~Einer der Euren ist tot, und nun habe ich die Arbeit, weil Ihr zu schwach seid zu handeln. Wo versteckt sich Euer rückgratloser Anführer?~
+@3404 = ~Einer der Euren ist tot, und nun mache ich die ganze Arbeit, weil Ihr zu schwach seid zu handeln. Wo versteckt sich Euer rückgratloser Anführer?~
 
 @3405 = ~Ich suche den Höchstermüdeten Sturzbäcker Apfelzeh Berendisch.~
 
 @3406 = ~Ich suche den Hochverehrten Hüter der Stillen Wasser Alatoasz Berendim.~
 
-@3407 = ~Bei der Mutterhüterin der Haine! Dann ist Merethan gefallen? Von ihm sprecht Ihr, nicht wahr? Dies sind schwerwiegende Nachrichten...~
+@3407 = ~Bei der Hüterin der Haine! Dann ist Merethan gefallen? Von ihm sprecht Ihr, nicht wahr? Dies sind schwerwiegende Nachrichten...~
 
-@3408 = ~Schnell – bringt den vergifteten Pfeil zu unserem Hochpriester. Ihr findet ihn in seinen Gemächern, im hintersten nordöstlichen Baum am Ufer. Doch seid vorsichtig – das Gift scheint außerordentlich stark zu sein, und selbst eine Spur könnte Schaden bringen. Alatoasz wird wissen, wie weiter zu verfahren ist.~
+@3408 = ~Schnell – bringt den vergifteten Pfeil zu unserem Hochpriester. Ihr findet ihn in seinen Gemächern, im hintersten nordöstlichen Baum am Ufer. Doch seid vorsichtig – das Gift scheint außerordentlich stark zu sein, und selbst ein kleiner Tropfen könnte großen Schaden bringen. Alatoasz wird wissen, wie weiter zu verfahren ist.~
 
 @3409 = ~Trotz dieser schweren Zeiten heiße ich Euch in unserem Hain willkommen. Möge die Grüne Göttin Euch ihren Segen gewähren.~
 
@@ -24,7 +24,7 @@
 
 @3412 = ~Unser Hochpriester befindet sich in seinen Gemächern, im nordöstlichen Baum am Ufer. Möge er Euch den Segen der Grünen Göttin gewähren.~
 
-@3413 = ~Möge die Mutterhüterin der Haine Euch Frieden und Gesundheit schenken, Fremder. Ich bin Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim, ein demütiger Diener Eldaths. Was führt Euch in unser Heiligtum?~
+@3413 = ~Möge die Hüterin der Haine Euch Frieden und Gesundheit schenken, Fremder. Ich bin Hochverehrter Hüter der Stillen Wasser Alatoasz Berendim, ein demütiger Diener Eldaths. Was führt Euch in unser Heiligtum?~
 
 @3414 = ~Kurz gesagt: Merethan ist tot. Er wurde mit diesem Gift getötet. Wir müssen herausfinden, wer es hergestellt hat.~
 
@@ -34,15 +34,15 @@
 
 @3417 = ~Seid gegrüßt, Hochverehrter Hüter der Stillen Wasser. Ich bringe traurige Kunde – Euer Priester Merethan wurde vergiftet. Dieser Pfeil trägt dasselbe Toxin, das ihn tötete... und andere. Merethan hoffte, Ihr könntet dessen Ursprung ermitteln.~
 
-@3418 = ~Ich suche den Feuchtfrohlockten Flegelweiner Apfeltoast Bärlichdünn.~
+@3418 = ~Ich suche den Feuchtfrohlockten Flegelweiner Apfeltrost Bärlichdünn.~
 
-@3419 = ~Verdammt! Ihr habt meine Verkleidung durchschaut! Ich bin gar nicht Alatoasz... ich bin Apfeltoast! Schade – ich habe mir solche Mühe mit Bart und Titel gegeben. Wollt Ihr dennoch mit diesem Hochstapler sprechen, oder soll ich mich verneigen und Euch Eurer heldenhaften Wanderschaft überlassen?~
+@3419 = ~Verdammt! Ihr habt meine Verkleidung durchschaut! Ich bin gar nicht Alatoasz... ich bin Apfeltrost! Schade – ich habe mir solche Mühe mit Bart und Titel gegeben. Wollt Ihr dennoch mit diesem Hochstapler sprechen, oder soll ich mich verneigen und Euch Eurer heldenhaften Wanderschaft überlassen?~
 
-@3420 = ~Das sind traurige Nachrichten. Merethan war ein treuer Diener – ein Freiwandler –, der durch die Reiche zog, um die Botschaft des Friedens zu verbreiten. Es schmerzt mich, dass er unsere Welt verlassen hat. Die Umstände sind mir bekannt – tatsächlich war ich es, der ihn mit der Untersuchung dieser beunruhigenden Vergiftungen beauftragte.~
+@3420 = ~Das sind traurige Nachrichten. Merethan war ein treuer Diener – ein Freiwandler – der durch die Reiche zog, um die Botschaft des Friedens zu verbreiten. Es schmerzt mich, dass er unsere Welt verlassen hat. Die Angelegenheit ist mir wohlbekannt – tatsächlich war ich es, der ihn mit der Untersuchung dieser beunruhigenden Vergiftungen beauftragte.~
 
 @3421 = ~Lasst mich den Pfeil näher betrachten...~
 
-@3422 = ~Ein wahrhaft seltsames Gift. Merethan hat Euch gewiss berichtet, was dieses Toxin so beunruhigend macht?~
+@3422 = ~Ein wahrhaft seltsames Gift. Merethan hat Euch gewiss berichtet, was dieses Toxin so gefährlich macht?~
 
 @3423 = ~Mehr oder minder.~
 
@@ -50,7 +50,7 @@
 
 @3425 = ~Er sagte, es sei nicht zu heilen.~
 
-@3426 = ~Weder Magie noch einfache Gegengifte vermögen den Leib rasch von diesem Toxin zu befreien. All unsere Gebete, all unsere Kräfte – nichts vermag seine Verderbnis zurückzudrängen.~
+@3426 = ~Weder Magie noch einfache Gegengifte vermögen den Leib von diesem Toxin zu befreien. All unsere Gebete, all unsere Kräfte – nichts vermag seine Verderbnis zurückzudrängen.~
 
 @3427 = ~Und doch gibt es Hoffnung. So unerquicklich die Umstände auch sind – es ist ein Segen, dass Ihr mir eine Probe dieser abscheulichen Substanz gebracht habt.~
 
@@ -58,67 +58,67 @@
 
 @3429 = ~Lasst mich einen Zauber wirken, um das Wesen dieses Giftes besser zu erkennen...~
 
-@3430 = ~Selbst ein Erkenntniszauber versagt? Wie kann das nur sein...?~
+@3430 = ~Selbst ein Erkenntniszauber schlägt fehl? Wie kann das sein...?~
 
-@3431 = ~Nun denn – wenn Magie versagt, müssen wir uns auf unsere Sinne verlassen. Ich rieche etwas an diesem Pfeil – ein eigentümlicher Duft, scharf und süß. Ein Pflanzengift, ohne Zweifel...~
+@3431 = ~Nun denn – wenn Magie versagt, müssen wir uns eben auf unsere Sinne verlassen. Ich rieche etwas an diesem Pfeil – ein eigentümlicher Duft, scharf und süß. Ein Pflanzengift, ohne Zweifel...~
 
 @3432 = ~Lasst mich eine winzige Spur des Giftes kosten.~
 
 @3433 = ~Ihr wollt das nicht ernsthaft in Euren Mund nehmen, oder?~
 
-@3434 = ~Vorsicht! Ich will nicht noch einen zweiten Eldathyn verlieren.~
+@3434 = ~Vorsicht! Ich will nicht noch einen zweiten Eldathyner verlieren.~
 
 @3435 = ~Wenn uns das Kosten Antworten bringt, so soll es geschehen.~
 
-@3436 = ~Auf eigene Gefahr.~
+@3436 = ~Auf Eure eigene Gefahr.~
 
-@3437 = ~Ich kenne die Gefahr – doch wir haben keine Zeit. Gelangt dieses Toxin in noch gefährlichere Hände, wäre der Preis ungleich höher.~
+@3437 = ~Ich kenne die Gefahr – doch wir haben keine Zeit. Gelangt dieses Gift in noch gefährlichere Hände, wäre der Preis ungleich höher.~
 
-@3438 = ~Hmm... Der Geschmack ist wie der Nektar einer längst vergessenen Blüte – süß, und doch entgleitet er der Erinnerung wie Blätter im Wind. Der Duft verweilt wie überreifes Obst in einem sonnengefleckten Hain: einen Augenblick betörend, im nächsten schon verloren.~
+@3438 = ~Hmm... Der Geschmack ist wie der Nektar einer längst vergessenen Blüte – süß, und doch entgleitet er der Erinnerung wie Blätter im Wind. Der Duft verweilt wie überreifes Obst in einem sonnengefleckten Hain: Einen Augenblick betörend, im nächsten schon verloren.~
 
-@3439 = ~Da ist eine Bitterkeit, wie bei Fingerhut – doch etwas Älteres liegt darin... etwas Rohes, Ungezähmtes. Die Taubheit breitet sich aus, langsam und bedacht, tastet nach meinem Herzen. Könnte es sein –~
+@3439 = ~Da ist eine Bitterkeit, wie bei Fingerhut – doch etwas Älteres liegt darin... etwas Rohes, Ungezähmtes. Die Taubheit breitet sich aus, langsam und bedacht, tastet nach meinem Herzen. Könnte es sein...~
 
 @3440 = ~Natürlich! Es muss die Hainblüte sein – eine seltene elfische Pflanze! Hochgiftig, und von Elfen seit Jahrtausenden verehrt.~
 
-@3441 = ~Und doch lässt sich ihr Gift gewöhnlich leicht durch Magie heilen – weshalb versagt sie nun? Es ergibt keinen Sinn.~
+@3441 = ~Und doch lässt sich ihr Gift gewöhnlich leicht durch Magie heilen – weshalb versagt sie hier? Das ergibt keinen Sinn.~
 
-@3442 = ~Gut, dass Euch das Zeug nicht auch noch umgebracht hat.~
+@3442 = ~Gut, dass Euch das Zeug nicht auch umgebracht hat.~
 
 @3443 = ~Ihr setzt großes Vertrauen in den Schutz Eurer Göttin. Treibt es nicht zu weit.~
 
 @3444 = ~Und das alles habt Ihr herausgefunden, indem Ihr an dem Pfeil geschnuppert und das Gift gekostet habt?~
 
-@3445 = ~Wir haben hier oft mit Giften zu tun. Viele schwerkranke Seelen finden den Weg zu uns, und es ist an uns, sie zu heilen – oder sie durch den Tod zu geleiten. Mit der Zeit gewinnt man eine beklagenswerte Vertrautheit mit manch übelstem Stoff, den die Reiche kennen. Doch nie bin ich etwas begegnet wie diesem. Nun gut. Fürs Erste wissen wir, wo unsere Suche beginnen muss.~
+@3445 = ~Wir haben an diesem Ort hier oft mit Giften zu tun. Viele schwerkranke Wesen finden den Weg zu uns, und es ist an uns, sie zu heilen – oder sie bis zum Tod zu geleiten. Mit der Zeit gewinnt man eine traurige Vertrautheit mit manch übelstem Stoff, den die Reiche kennen. Doch nie bin ich etwas begegnet wie diesem. Nun gut. Fürs Erste wissen wir, wo unsere Suche beginnen muss.~
 
-@3446 = ~Die Pflanze, aus der dieses Gift bereitet wird, wächst nahe den Ruinen uralter Elfenstädte, wo das Land sich noch an seine alte Magie erinnert. Dort muss das Gift hergestellt werden. Wir müssen uns auf eine der alten elfenhaften Ruinen konzentrieren, die in diesen Landen verstreut liegen. Doch ihrer gibt es viele. Die richtige zu finden, wird unsere erste Aufgabe sein.~
+@3446 = ~Die Pflanze, aus der dieses Gift bereitet wurde, wächst nahe den Ruinen alter Elfenstädte, wo das Land noch von ihrer alten Magie getränkt ist. Dort muss das Gift hergestellt worden sein. Wir müssen uns auf eine der alten elfenhaften Ruinen konzentrieren, die in diesen Landen verstreut liegen. Doch derer gibt es viele. Die richtige zu finden, wird unsere erste Aufgabe sein.~
 
-@3447 = ~Von wie vielen uralten Elfenruinen reden wir?~
+@3447 = ~Von wie vielen uralten Elfenruinen reden wir hier?~
 
 @3448 = ~Elfenstädte, alte Magie, geheimnisvolle Giftpflanzen – das wird ja immer besser.~
 
 @3449 = ~Euer Wissen ist beeindruckend.~
 
-@3450 = ~Diese Gegend, wie Ihr vielleicht wisst, war einst von einem gewaltigen, ungebrochenen Wald bedeckt – dem alten Herzen des Elfenreiches Keltormir. Die Elfen errichteten viele prachtvolle Städte in jenen Wäldern, und auch wenn ihre Zeit längst vergangen ist, sind Ruinen geblieben... und ebenso seltene Pflanzen. Pflanzen, die uns zum rechten Ort führen könnten.~
+@3450 = ~Diese Gegend war, wie Ihr vielleicht wisst, einst von einem einzigen großen Wald bedeckt – dem Wald des Elfenreiches Keltormir. Die Elfen errichteten prachtvolle Städte in diesem Wald, und auch wenn ihre Zeit längst vergangen ist, sind ihre Ruinen geblieben... und ebenso seltene Pflanzen. Pflanzen, die uns zum rechten Ort führen könnten.~
 
-@3451 = ~Keltormir? Sicher, Kerzenburg hatte etwas darüber. Viel Laub und Legenden. Elfen lieben ihre Bäume, nicht wahr?~
+@3451 = ~Keltormir? Kerzenburg hatte Bücher darüber. Laub und Legenden. Elfen lieben ihre Bäume, was?~
 
-@3452 = ~Die Sage von Keltormir ist meinem Volk wohlbekannt. Es ist unser verlorenes Erbe... doch geblieben sind nur Erinnerungen.~
+@3452 = ~Die Geschichte von Keltormir ist meinem Volk wohlbekannt. Es ist unser verlorenes Erbe... doch geblieben sind nur Erinnerungen.~
 
 @3453 = ~Ich glaube, mir ist der Name Keltormir in meinen Studien begegnet. Vertraut... doch längst verschwunden.~
 
 @3454 = ~Und wo soll ich mit der Suche beginnen?~
 
-@3455 = ~Zeit, aufzudecken, was von Keltormir übrig blieb.~
+@3455 = ~Zeit, aufzudecken, was von Keltormir übrig ist.~
 
-@3456 = ~Leider bin ich kein Gelehrter der alten Geschichte. Mein Wissen gilt der Natur. Doch glücklicherweise kenne ich jemanden, der es ist.~
+@3456 = ~Leider bin ich kein Gelehrter alter Geschichte. Mein Wissen gilt der Natur. Glücklicherweise kenne ich jedoch jemanden, der sich damit auskennt.~
 
-@3457 = ~Ich bitte Euch, den Tempel Oghmas in Athkatla aufzusuchen. Dort verwahren sie viele uralte Folianten, darunter auch solche, die von den alten Elfenstädten berichten. Erhalte ich auch nur einen einzigen Hinweis, kann ich unsere Suche vielleicht erheblich eingrenzen.~
+@3457 = ~Ich bitte Euch, den Tempel Oghmas in Athkatla aufzusuchen. Dort verwahren sie viele uralte Folianten, darunter sicher auch solche, die von den alten Elfenstädten dieser Gegend berichten. Erlange ich nur einen ersten aufschlussreichen Hinweis, kann ich unsere Suche sicher erheblich eingrenzen.~
 
 @3458 = ~Dann also zurück nach Athkatla.~
 
 @3459 = ~Ich bin gerade erst aus Athkatla hierher gekommen, und Ihr schickt mich schon wieder zurück?~
 
-@3460 = ~Für Bücher laufe ich gewöhnlich keine Botengänge... aber gut.~
+@3460 = ~Für Bücher mache ich gewöhnlich keine Botengänge... aber gut.~
 
 @3461 = ~Wenn Ihr meint, dass es hilft, werde ich das Buch beschaffen.~
 
@@ -140,21 +140,21 @@
 
 @3470 = ~Dann mache ich mich auf den Weg.~
 
-@3471 = ~Noch etwas – ich habe Merethans Zeichen Eldaths bei mir.~
+@3471 = ~Noch etwas – ich habe Merethans Zeichen von Eldath bei mir.~
 
-@3472 = ~Solche Zeichen werden gewöhnlich von einem Priester an den nächsten weitergegeben. Doch derzeit weiß ich von niemandem, der es tragen sollte. Behaltet es einstweilen bei Euch – vielleicht finden wir eine würdige Seele, der es anvertraut werden kann.~
+@3472 = ~Solche Zeichen werden gewöhnlich von einem Priester an den nächsten weitergegeben. Derzeit weiß ich von niemandem, der es tragen sollte. Behaltet es einstweilen bei Euch – vielleicht finden wir eine würdige Person, der es anvertraut werden kann.~
 
 @3473 = ~Ich kenne vielleicht jemanden – Montrassa, die betagte Priesterin. Ihre Hände sind zu schwach geworden, um ihr eigenes Zeichen zu fertigen.~
 
-@3474 = ~Montrassa? Sie sprach nie von einer solchen Mühsal... doch es ergibt Sinn. Ein bedachter Vorschlag! Gebt ihr das Zeichen mit meinem Segen. Und begebt Euch danach bitte wie besprochen zum Tempel Oghmas in Athkatla.~
+@3474 = ~Montrassa? Sie sprach nie von einem solchen Gebrechen... doch es ergibt Sinn. Ein guter Vorschlag! Gebt ihr das Zeichen mit meinem Segen. Und begebt Euch danach bitte wie besprochen zum Tempel Oghmas in Athkatla.~
 
-@3475 = ~Ich werde eine Taube zum Tempel Oghmas entsenden, damit ihre Schreiber das entsprechende Werk bereitlegen. Kehrt zu mir zurück, sobald Ihr das Buch erlangt habt. Ich werde unten, auf der unteren Ebene dieses Baumes, auf Euch warten. Möge Eldaths Segen Eure Schritte lenken.~
+@3475 = ~Ich werde eine Taube zum Tempel Oghmas entsenden, damit ihre Schreiber das entsprechende Werk bereitlegen. Kehrt zu mir zurück, sobald Ihr das Buch erlangt habt. Ich werde weiter unten, auf der unteren Ebene dieses Baumes, auf Euch warten. Möge Eldaths Segen Eure Schritte lenken.~
 
 @3476 = ~<CHARNAME>! Ihr seid zurückgekehrt. Habt Ihr das Buch aus dem Tempel Oghmas mitgebracht?~
 
 @3477 = ~Ja, hier ist es.~
 
-@3478 = ~Gebt mir noch einen Augenblick. Ich komme so bald wie möglich darauf zurück.~
+@3478 = ~Gebt mir noch einen Augenblick. Ich komme so bald wie möglich wieder.~
 
 @3479 = ~Solche Zeichen werden gewöhnlich von einem Priester an den nächsten weitergegeben. Doch im Augenblick weiß ich von niemandem, dem es zustehen sollte. Behaltet es vorerst – vielleicht finden wir noch einen würdigen Träger.~
 
@@ -168,7 +168,7 @@
 
 @3484 = ~Hochinteressant... Ein wohlverfasstes Werk, voller wertvoller Einsichten. Drei Mythal-Städte werden hier ausdrücklich genannt: Myth Rhynn, Myth Unnohyr und Myth Tellaren. Hm. Oh! Das ist vielversprechend – vielleicht gar eine echte Spur.~
 
-@3485 = ~Von diesen drei Städten – welche seht Ihr als möglichen Ursprung? des Giftes an?~
+@3485 = ~Von diesen drei Städten – welche seht Ihr als möglichen Ursprung des Giftes an?~
 
 @3486 = ~Myth Rhynn.~
 
@@ -180,7 +180,8 @@
 
 @3490 = ~Ich habe bislang nur den Einband betrachtet.~
 
-@3491 = ~Ich lese keine törichten Bücher.~
+@3491 = ~Ich lese keine Bücher.~
+
 @3492 = ~Myth Rhynn – die elfische Totenstadt? Ein reizvoller Gedanke, doch nein... ich glaube nicht, dass wir dort unsere Antwort finden werden.~
 
 @3493 = ~Vielleicht Myth Tellaren?~
@@ -193,7 +194,7 @@
 
 @3497 = ~Dann bleibt nur Myth Unnohyr.~
 
-@3498 = ~Ja – Myth Unnohyr! Das muss der Ort sein. Hört diesen Abschnitt: „Als sein Segen entzogen wurde, zerbarst das Mythal im stummen Urteil und hinterließ eine Zone wilder und toter Magie – eine eiternde Wunde im Gewebe, die bis heute fortbesteht. Nun wagt kaum noch jemand, sich den Ruinen zu nähern, wo selbst göttliche Macht versagt und Pflanzen Gift in den Boden flüstern.“~
+@3498 = ~Ja – Myth Unnohyr! Das muss der Ort sein. Beachtet diesen Abschnitt: "Als sein Segen entzogen wurde, zerbarst der Mythal im stummen Urteil und hinterließ eine Zone wilder und toter Magie – eine klaffende Wunde im Gewebe, die bis heute fortbesteht. Nun wagt kaum noch jemand, sich den Ruinen zu nähern, wo selbst göttliche Macht versagt und Pflanzen Gift in den Boden flüstern."~
 
 @3499 = ~Das erklärt, weshalb unsere Heilversuche fehlschlagen – die Pflanze, aus der dieses unheilbare Gift gebraut wird, wächst im Boden eines verdorbenen Mythals. Sie saugt tote Magie in sich auf und trägt diese Fäulnis als Gift in den Leib ihrer Opfer. Und all dies fügt sich nahtlos in das, was wir über Myth Unnohyr wissen.~
 
@@ -203,7 +204,7 @@
 
 @3502 = ~Kein besonders einladendes Ziel.~
 
-@3503 = ~Ihr meint, die Pflanze nährt sich von toter Magie? Verderbt.~
+@3503 = ~Ihr meint, die Pflanze nährt sich von toter Magie? Übel.~
 
 @3504 = ~Dann werde ich hier warten.~
 
@@ -221,9 +222,9 @@
 
 @3511 = ~Und Ihr wollt, dass ich dorthin gehe?~
 
-@3512 = ~Dann werden wir uns auf Stahl und Verstand verlassen müssen.~
+@3512 = ~Dann werden wir uns auf unseren Stahl und eisernen Verstand verlassen müssen.~
 
-@3513 = ~Ich nehme an, ich führe die Kämpfe, während Ihr hier bleibt und über die Stille predigt?~
+@3513 = ~Ich nehme an, ich führe die Kämpfe, während Ihr hier bleibt und die Stille predigt?~
 
 @3514 = ~Es ist leicht, Frieden im Schutz eines Hains zu predigen, während ich in Eurem Namen durch Blut wate.~
 
@@ -238,17 +239,18 @@
 @3519 = ~Um die Opfer zu heilen, müssten wir also die Magie selbst heilen – oder was von ihr übrig ist.~
 
 @3520 = ~Dann haben wir das Problem immerhin zur Hälfte gelöst.~
+
 @3521 = ~Die letzte Frage lautet: Wer braut dieses Gift? Konntet Ihr einen Blick auf Merethans Mörder erhaschen?~
 
 @3522 = ~Nicht wirklich. Er sagte etwas wie Mal... Malar...~
 
-@3523 = ~Hättet Ihr mich das früher gefragt? Jetzt habe ich es wieder vergessen.~
+@3523 = ~Hättet Ihr mich das nicht früher fragen können? Jetzt habe ich es wieder vergessen.~
 
 @3524 = ~Ein seltsamer Kerl mit einem seltsamen Namen. Irgendetwas mit Mala-...~
 
 @3525 = ~Er nannte sich Malagent.~
 
-@3526 = ~Denkt zurück. Nannte er Euch einen Namen, der uns weiterhelfen könnte?~
+@3526 = ~Denkt nach. Nannte er Euch einen Namen, der uns weiterhelfen könnte?~
 
 @3527 = ~Malagent?~
 
@@ -258,15 +260,15 @@
 
 @3530 = ~Ich weiß es nicht, und es kümmert mich auch nicht.~
 
-@3531 = ~Ein Malagent! Das fügt sich erschreckend gut. So nennen sich die unheiligen Diener Talonas – Giftmischer, Verderber, Bringer des Verfalls. Wisst Ihr, wer Talona ist?~
+@3531 = ~Ein Malagent! Das passt erschreckend gut. So nennen sich die unheiligen Diener Talonas – all ihre Giftmischer, Verderber, Bringer des Verfalls. Wisst Ihr, wer Talona ist?~
 
 @3532 = ~Ja.~
 
 @3533 = ~Nein.~
 
-@3534 = ~Talona ist die Herrin des Giftes und die Gebieterin der Seuchen. Ihre Anhänger ziehen durch die Welt und säen Leid und Verfall – warum also nicht mit einem neu gebrauten Gift? Ihre Diener sind... ausgesprochen erfinderisch.~
+@3534 = ~Talona ist die Herrin des Giftes und die Gebieterin der Seuchen. Ihre Anhänger ziehen durch die Welt und säen Leid und Verfall – warum also nicht mit einem neu gebrauten Gift? Ihre Diener sind ausgesprochen erfinderisch in solchen Sachen.~
 
-@3535 = ~Dann ergibt alles Sinn. Das unheilbare Gift, die verdorbene Magie... alles trägt Talonas Zeichen. Unser Feind dient niemand Geringerem als der Herrin der Gifte selbst. Dieser Malagent wirkt als ihre Hand und verbreitet das Verderben. Die Antworten haben wir nun – jetzt gilt es, die Quelle zu finden.~
+@3535 = ~Dann ergibt alles einen Sinn. Das unheilbare Gift, die verdorbene Magie... das trägt Talonas Handschrift. Unser Feind dient niemand Geringerem als der Herrin der Gifte selbst. Dieser Malagent wirkt als ihre Hand und verbreitet das Verderben. Die Antworten haben wir nun – jetzt gilt es, die Quelle zu finden.~
 
 @3536 = ~Lasst mich raten – ich darf mich mit vergifteten Pfeilen, Monstern und Fallen herumschlagen, während Ihr ein Gebet darüber verfasst.~
 
@@ -274,11 +276,11 @@
 
 @3538 = ~Dann lasst uns keine Zeit verlieren.~
 
-@3539 = ~Der Weg ist klar. Glaube und Stahl werden uns hindurchführen.~
+@3539 = ~Der Weg ist klar. Selbstvertrauen und Stahl werden uns hindurchführen.~
 
-@3540 = ~Gut. Aber danach erwarte ich wenigstens einen ruhigen Tag.~
+@3540 = ~Gut. Aber danach erwarte ich wenigstens einen Tag Pause.~
 
-@3541 = ~Die Antworten zu finden ist der leichte Teil. Was danach kommt, wird gewöhnlich unerquicklich.~
+@3541 = ~Antworten zu finden ist der leichte Teil. Was anschließend kommt, wird meistens ungemütlich.~
 
 @3542 = ~Eine Frage noch... Ist unter Eldaths Geboten überhaupt ein Kampf erlaubt? Oder ist jede Form von Gewalt untersagt?~
 
@@ -304,22 +306,23 @@
 
 @3553 = ~Eldath hat Euch den Pfad gewiesen – nun müsst Ihr ihn selbst beschreiten.~
 
-@3554 = ~In Myth Unnohyr werdet Ihr sowohl die Pflanze als auch den Schuldigen finden. Doch es wird kein leichter Weg sein – ich wage kaum zu denken, welche Kreaturen sich an einem so verworfenen Ort eingenistet haben mögen. Die Ruinen von Myth Unnohyr liegen im südlichen Rest der alten Elfenwälder. Ich werde den Ort auf Eurer Karte vermerken.~
+@3554 = ~In Myth Unnohyr werdet Ihr sowohl die Pflanze als auch den Schuldigen finden. Doch es wird kein leichter Weg sein – ich wage kaum zu denken, welche Kreaturen sich an einem so verdorbenen Ort eingenistet haben könnten. Die Ruinen von Myth Unnohyr liegen im südlichen Überbleibsel der alten Elfenwälder. Ich werde den Ort auf Eurer Karte vermerken.~
 
-@3555 = ~Die Schwachen weinen um Gleichgewicht. Die Starken gedeihen im Chaos. Ich sage, lasst dieses Mythal verfaulen – es ist nicht unsere Sache.~
+@3555 = ~Die Schwachen weinen um Gleichgewicht. Die Starken gedeihen im Chaos. Ich sage, lasst diesen Mythal in Ruhe – es ist nicht unsere Sache.~
 
-@3556 = ~Böse Magie in der Luft? Boo sagt, wir sollten auf etwas einschlagen, bis wieder Frieden herrscht!~
+@3556 = ~Böse Magie in der Luft? Boo meint, wir sollten so lange auf etwas einschlagen, bis wieder Frieden herrscht!~
 
-@3557 = ~Der Giftmischer hat seine Spur hinterlassen. Nun möge die Natur unsere Vergeltung leiten.~
+@3557 = ~Der Giftmischer hat seine Spur hinterlassen. Nun möge die Natur uns zur Vergeltung leiten.~
 
 @3558 = ~Eine solche Entweihung ist ein Makel für die Reiche. Sie beleidigt alles Heilige. Sie muss beendet werden.~
 
 @3559 = ~Mögen unsere Schritte die Ruinen nicht weiter stören – doch dort Spuren hinterlassen, wo das Gleichgewicht wiederhergestellt werden muss.~
 
 @3560 = ~Bitte, lasst uns vorsichtig sein. Ich fürchte, was den Mythal zerbrach, weilt noch immer dort – und heißt Besucher nicht willkommen.~
-@3561 = ~Noch eines: Solltet Ihr auf die Blume stoßen, die er für seine Zwecke verdrehte, bringt sie mir. Ich werde versuchen, sie zu reinigen und ein Gegengift daraus zu bereiten.~
 
-@3562 = ~Geht nun und setzt dem Diener Talonas ein Ende. Mögen Eldaths Segnungen Eure Schritte leiten.~
+@3561 = ~Noch eines: Solltet Ihr auf die Giftpflanze stoßen, die er für seine Zwecke verwendete, bringt sie zu mir. Ich werde versuchen, sie zu reinigen und ein Gegengift daraus zuzubereiten.~
+
+@3562 = ~Geht nun und setzt dem Schergen Talonas ein Ende. Mögen Eldaths Segnungen Eure Schritte leiten.~
 
 @3563 = ~Ihr seid zurückgekehrt! Habt Ihr den Urheber des Giftes gefunden und zur Rechenschaft gezogen?~
 
@@ -341,17 +344,17 @@
 
 @3572 = ~Ihr habt uns einen großen Dienst erwiesen, und dafür danke ich Euch. Doch vielleicht lässt sich noch mehr zum Guten wenden.~
 
-@3573 = ~Mit dem rechten Gegengift könnten wir all jene Gifte zunichtemachen, die dieser Giftmischer bereits in die Welt entlassen hat. Um es jedoch zu bereiten, benötigen wir eine Probe jener Pflanze, die der Malagent für seine verderblichen Gebräue nutzte. Konntet Ihr ein Exemplar der Hainblüte sichern?~
+@3573 = ~Mit dem rechten Gegengift könnten wir all jene Gifte zunichtemachen, die dieser Giftmischer bereits in die Welt entlassen hat. Um es zuzubereiten, benötigen wir eine Probe jener Pflanze, die der Malagent für seine verderblichen Gebräue nutzte. Konntet Ihr ein Exemplar der Hainblüte sichern?~
 
 @3574 = ~Ich habe Euch eine Probe dieser Pflanze mitgebracht.~
 
-@3575 = ~Wäre diese kleine Blume jene, die Ihr sucht?~
+@3575 = ~Ist diese kleine Blume jene, die Ihr sucht?~
 
 @3576 = ~Ich bin einer solchen Pflanze bislang nicht begegnet.~
 
 @3577 = ~Ich bin erschöpft und möchte nun rasten. Lasst uns später weiterreden.~
 
-@3578 = ~So habt Ihr sie also! Das sind höchst willkommene Nachrichten.~
+@3578 = ~Ihr habt sie also! Das sind höchst willkommene Nachrichten.~
 
 @3579 = ~Verstehe. Dann kann ich Euch nur bitten, die Ruinen von Myth Unnohyr erneut nach dieser Pflanze zu durchsuchen. Kehrt zu mir zurück, sobald Ihr das Exemplar gesichert habt.~
 
@@ -381,30 +384,31 @@
 
 @3592 = ~Wenn wir das Gegengift bereiten wollen, ist diese Blume unerlässlich. Bitte setzt Eure Suche fort. Ich werde hier warten. Möge Eldath Eure Schritte führen.~
 
-@3593 = ~Lasst mich die Pflanze betrachten. Behaltet sie jedoch bei Euch – Ihr werdet sie bald benötigen. Also, dies ist die Hainblüte – gewachsen in einer Zone toter Magie innerhalb von Myth Unnohyr. Wie überaus bemerkenswert...~
+@3593 = ~Lasst mich die Pflanze betrachten. Behaltet sie jedoch bei Euch – Ihr werdet sie bald benötigen. Also, dies ist die Hainblüte – gewachsen in einer Zone toter Magie innerhalb von Myth Unnohyr. Überaus bemerkenswert...~
 
-@3594 = ~Sie ist in ausgezeichnetem Zustand. Und sie ist hoch gewachsen, schwer von giftigen Blüten – mehr als ausreichend für ein Gegengift!~
+@3594 = ~Sie ist in ausgezeichnetem Zustand. Und sie ist hoch gewachsen, voll von giftigen Blüten – mehr als ausreichend für ein Gegengift!~
 
-@3595 = ~Während Ihr unseren Feind bekämpftet, glaube ich einen Weg gefunden zu haben, ein solches Gegengift zu erschaffen. Dafür benötigen wir sowohl die Blume als auch Kenntnis des genauen Ortes – des Kessels oder Labors –, in dem das Gift erstmals gebraut wurde.~
-@3596 = ~Ich erinnere mich gut an den Ort. Ein Kessel, erfüllt vom Gift seines verderbten Handwerks.~
+@3595 = ~Während Ihr unseren Feind bekämpft habt, habe ich einen Weg gefunden, das Gegengift zu erschaffen. Dafür benötigen wir sowohl die Blume als auch Kenntnis des genauen Ortes – des Kessels oder Labors –, in dem das Gift gebraut wurde.~
+
+@3596 = ~Ich erinnere mich gut an den Ort. Ein Kessel, gefüllt mit Gift.~
 
 @3597 = ~Einen Kessel sah ich wohl, doch inmitten des Kampfes schenkte ich ihm wenig Beachtung.~
 
-@3598 = ~Ach, dieser brodelnde Topf? Sah halb vollendet aus – und ganz und gar unerquicklich.~
+@3598 = ~Ach, dieser brodelnde Topf? Sah halb vollendet aus – und ganz und gar ungenießbar.~
 
-@3599 = ~Genau das hatte ich erhofft. Doch es bedarf noch mehr. Lasst mich Euch darlegen, was ich herausgefunden habe.~
+@3599 = ~Genau das hatte ich erhofft. Doch es bedarf noch mehr. Lasst mich Euch erklären, was ich herausgefunden habe.~
 
-@3600 = ~Hört wohl: Drei Segnungen der Götter müssen dieser Blume eingeprägt werden. Eine oder zwei allein genügen nicht, denn die tote Magie, die sie genährt hat, ist von großer Macht. Erst wenn sie durch Leben, Mitgefühl und Erneuerung geheiligt wird, kann die Verderbnis gebrochen werden.~
+@3600 = ~Hört zu: Drei Segnungen der Götter müssen dieser Blume geschenkt werden. Eine oder zwei allein genügen nicht, denn die tote Magie, die sie genährt hat, ist von großer Macht. Erst wenn sie durch Leben, Mitgefühl und Erneuerung geheiligt wird, kann die Verderbnis gebrochen werden.~
 
-@3601 = ~Ich vermag nicht alle drei Segnungen selbst zu spenden. Dafür müssen wir die Hilfe anderer Glaubensrichtungen suchen. Und ich weiß wohl, an wen wir uns wenden sollten.~
+@3601 = ~Ich vermag nicht alle drei Segnungen selbst zu spenden. Dafür müssen wir die Hilfe anderer Glaubensrichtungen suchen. Und ich weiß, an wen wir uns wenden sollten.~
 
-@3602 = ~Reist nach Athkatla und sucht den Priester Ilmaters in den Slums auf. Bittet ihn um die Segnung des Mitgefühls. Er und ich stehen in gutem Einvernehmen – ich zweifle nicht daran, dass er unser Anliegen unterstützen wird.~
+@3602 = ~Reist nach Athkatla und sucht den Priester Ilmaters in den Slums auf. Bittet ihn um die Segnung des Mitgefühls. Er und ich stehen in gutem Verhältnis – ich zweifle nicht daran, dass er unser Anliegen unterstützen wird.~
 
 @3603 = ~Ebenso solltet Ihr die Kirche Lathanders in der Stadt aufsuchen und um die Segnung der Erneuerung bitten. Ich werde eine weiße Taube mit meiner Botschaft entsenden. Wenn Ihr dort eintrefft, werden sie bereits vorbereitet sein, Euch beizustehen.~
 
 @3604 = ~Mitgefühl? Erneuerung? Klingt wie ein Fest für Feiglinge.~
 
-@3605 = ~Wie entzückend. Eine heilige Schnitzeljagd. Sollen wir die Blütenblätter auch noch mit Spitze verzieren?~
+@3605 = ~Wie entzückend. Eine heilige Schnitzeljagd.~
 
 @3606 = ~Erneuerung? Leben? Sollen wir vor Ilmaters winselnder Schar niederknien? Die Schwachen klammern sich an solche Worte, wenn ihnen Wahrheit und Stärke fehlen.~
 
@@ -414,7 +418,7 @@
 
 @3609 = ~Was den dritten Teil betrifft, so werde ich Euch selbst die Segnung des Lebens spenden.~
 
-@3610 = ~Es ist vollbracht. Diese Segnungen sollen auch auf Euch ruhen, damit – sollte die Blume selbst dem Gebet widerstehen – Eure eigenen Hände die Gnade weiterzugeben vermögen.~
+@3610 = ~Es ist vollbracht. Diese Segnungen sollen auf Euch ruhen, damit – sollte die Blume selbst dem Gebet widerstehen – Eure eigenen Hände die Gnade weiterzugeben vermögen.~
 
 @3611 = ~Ein Diener des Morgenfürsten steht vor Euch; erlaubt mir, die Blume zu segnen.~
 
@@ -424,7 +428,7 @@
 
 @3614 = ~Ich werde tun, was Ihr verlangt, auch wenn es kein einfacher Auftrag ist.~
 
-@3615 = ~Wenn selbst die Götter angerufen werden, hoffe ich, dass der Lohn ebenso erhaben ist wie die Aufgabe.~
+@3615 = ~Wenn selbst Götter angerufen werden, hoffe ich, dass wenigstens der Lohn ebenso göttlich ist wie die Aufgabe.~
 
 @3616 = ~Ich nehme an, für all die Mühe und Zeit, die dies erfordert, wird es eine angemessene Belohnung geben?~
 
@@ -432,32 +436,33 @@
 
 @3618 = ~Ich bin zuversichtlich, dass diese Priester uns helfen werden – ich habe bereits Schreiben entsandt, und sie erwarten Euch. Doch auch Eure eigene Segnung mag unserer Sache Kraft verleihen.~
 
-@3619 = ~So sehr ich Euch schätze – da ist doch eine Dunkelheit in Euch. Verzeiht, doch wir benötigen eine andere Art von Gnade. Dennoch weiß ich Euer Angebot zu würdigen.~
+@3619 = ~So sehr ich Euch schätze – da ist eine merkwürdige Dunkelheit in Euch. Verzeiht, doch wir benötigen eine andere Art von Segen. Dennoch weiß ich Euer Angebot zu würdigen.~
 
 @3620 = ~Habt Dank. Doch vergesst nicht: Wir benötigen die Segnungen aller Glaubensrichtungen, die ich genannt habe.~
 
-@3621 = ~Gewiss. Ich werde Euch etwas bereiten. Kein Gold – doch etwas anderes. Etwas, das Euch auf Euren Reisen nützlich sein wird.~
+@3621 = ~Gewiss. Ich werde Euch etwas als Dank geben. Kein Gold. Etwas, das Euch auf Euren Reisen nützlich sein wird.~
 
 @3622 = ~Zudem benötigt Ihr einen Krug mit Eldaths geweihtem Wasser aus unserer Grotte. Sprecht mit Eldaths Dienerin nahe dem Wasser; sie wird Euch eine Karaffe des heiligen Wassers überreichen.~
 
 @3623 = ~Wenn Ihr das Wasser und die Segnungen Lathanders und Ilmaters erlangt habt, kehrt zu mir zurück. Dann werde ich Euch sagen, was als Nächstes zu tun ist.~
 
 @3624 = ~Ich zähle auf Euch, <CHARNAME>. Wir werden die Ausbreitung dieses niederträchtigen Giftes aufhalten – dessen bin ich gewiss. Kehrt zu mir zurück, sobald Ihr alles gesammelt habt.~
-@3625 = ~Ich wurde aus Dämmerwaldtal hierhergesandt. Ich trage diese Blume bei mir und ersuche um die Segnung des Mitgefühls. Man sagte mir, Ihr hättet bereits ein Schreiben mit den Einzelheiten erhalten.~
 
-@3626 = ~Ah… ja. Ich hatte erwartet, einer ihrer eigenen möge erscheinen, doch das ist unerheblich. Ihr seid gekommen – und meine Segnung soll Euch nicht versagt bleiben.~
+@3625 = ~Ich wurde aus dem Dämmerwaldtal hierhergesandt. Ich trage diese Blume bei mir und ersuche um die Segnung des Mitgefühls. Man sagte mir, Ihr hättet bereits ein Schreiben mit den Einzelheiten erhalten.~
 
-@3627 = ~Höre mich, Ilmater, Weinender Gott, Dulder aller Qualen. Blicke mit Erbarmen auf jene, die leiden, und schenke ihnen die Kraft auszuharren. Lindere ihre Bürden, sei es nur für einen Augenblick, und lass ihre Schmerzen die meinen sein. Weine um die Verwundeten, schütze die Gebrochenen und hülle uns alle in Geduld und Barmherzigkeit. In Deinem Mitgefühl liegt unsere Hoffnung – so lasse diese Hoffnung nun in diese Blume fließen, damit sie Trost bringe, wo einst Gift gesät wurde.~
+@3626 = ~Ah… ja. Ich hatte erwartet, einer der ihren würde erscheinen, doch das ist unerheblich. Ihr seid gekommen – und meine Segnung soll Euch nicht versagt bleiben.~
 
-@3628 = ~Die Segnung ist gesprochen. Nimm sie an, mein Kind, und lass Dein Herz um andere weinen, wie mein Gott stets um Dich geweint hat.~
+@3627 = ~Höre mich, Ilmater, Weinender Gott, Dulder aller Qualen. Blicke mit Erbarmen auf jene, die leiden, und schenke ihnen Kraft, auszuharren. Lindere ihre Bürden, und sei es nur für einen Augenblick, und lass ihre Schmerzen die meinen sein. Weine um die Verwundeten, schütze die Gebrochenen und hülle uns alle in Geduld und Barmherzigkeit. In Deinem Mitgefühl liegt unsere Hoffnung – lasse diese Hoffnung nun in jene Blume fließen, damit sie Trost bringe, womit einst Gift gebraut wurde.~
 
-@3629 = ~Ich wurde aus Dämmerwaldtal hierhergesandt. Ich trage diese Blume bei mir und ersuche um die Segnung der Erneuerung. Man sagte mir, Ihr hättet bereits ein Schreiben erhalten.~
+@3628 = ~Die Segnung ist gesprochen. Nehmt sie an, mein Kind, und lasst Euer Herz um andere weinen, wie mein Gott stets um Euch geweint hat.~
+
+@3629 = ~Ich wurde aus dem Dämmerwaldtal hierhergesandt. Ich trage diese Blume bei mir und ersuche um die Segnung der Erneuerung. Man sagte mir, Ihr hättet bereits ein Schreiben erhalten.~
 
 @3630 = ~Ja, gewiss – das Schreiben erreichte mich. Und selbstverständlich will ich Euch segnen, damit Ihr Euren Weg im Lichte des Morgenfürsten fortsetzen könnt.~
 
 @3631 = ~Lathander, Bringer der Morgenröte, Herold der Erneuerung, gewähre diesem <PRO_RACE> Deinen Segen. Erfülle <PRO_HIMHER> mit der Wärme der aufgehenden Sonne, damit <PRO_HESHE> ihr Licht selbst in die kältesten Schatten und finstersten Winkel trage.~
 
-@3632 = ~Die Segnung ist vollzogen. Geht nun im Lichte des Morgenfürsten – möge seine Morgenröte stets in Eurem Herzen aufgehen und jeder Schritt die Verheißung der Erneuerung tragen.~
+@3632 = ~Die Segnung ist vollzogen. Geht nun im Lichte des Morgenfürsten – möge sein Licht stets in Eurem Herzen aufgehen und jeder Schritt die Verheißung der Erneuerung tragen.~
 
 @3633 = ~Willkommen zurück. Habt Ihr die Segnungen empfangen und Eldaths geweihtes Wasser aus unserer Grotte erlangt?~
 
@@ -469,17 +474,17 @@
 
 @3637 = ~Wir haben die Blume, Eldaths heiliges Wasser und die Segnungen. Und wir wissen, wo das Gift bereitet wurde.~
 
-@3638 = ~Ihr müsst nach Myth Unnohyr zurückkehren und die gesegnete Blume gemeinsam mit Eldaths geweihtem Wasser in den Kessel des Malagent legen. Seid jedoch gewarnt – dies könnte eine unwillkommene Reaktion hervorrufen, und Ihr müsst Euch womöglich verteidigen.~
+@3638 = ~Ihr müsst nach Myth Unnohyr zurückkehren und die gesegnete Blume gemeinsam mit Eldaths geweihtem Wasser in den Kessel des Malagenten legen. Seid jedoch gewarnt – dies könnte eine unwillkommene Reaktion hervorrufen, und Ihr müsst Euch womöglich verteidigen.~
 
-@3639 = ~Dann möge dieses abscheuliche Gebräu Fleisch annehmen, damit wir es im gerechten Kampf zerschmettern!~
+@3639 = ~Dann möge dieses abscheuliche Gebräu Gestalt annehmen, damit ich es im gerechten Kampf zerschmettern kann!~
 
 @3640 = ~Entweder endet das in glorreicher Läuterung… oder in einer gewaltigen Explosion.~
 
-@3641 = ~Also werfen wir die Segnungen hinein, rühren dreimal im Uhrzeigersinn und hoffen, dass es uns nicht um die Ohren fliegt? Klingt wie meine ersten Kochversuche mit Winthrop in Kerzenburg.~
+@3641 = ~Also werfen wir die Segnungen hinein, rühren dreimal im Kreis und hoffen, dass es uns nicht um die Ohren fliegt? Klingt wie meine ersten Kochversuche mit Winthrop in Kerzenburg.~
 
 @3642 = ~Wenn der Kessel ein Monster ausspuckt, dann gibt es Monster-Eintopf! Heute wird die Gerechtigkeit satt!~
 
-@3643 = ~Falls es Tentakel bekommt, denkt daran: erst die Tentakel abschlagen, dann aufräumen. Hat bei Tante Belbas Waschkessel auch funktioniert.~
+@3643 = ~Falls es Tentakel bekommt, denkt daran: Erst die Tentakel abschlagen, dann aufräumen. Hat bei Tante Belbas Waschkessel auch funktioniert.~
 
 @3644 = ~Kehrt mit dem vollendeten Gegengift zu mir zurück, und Ihr sollt sowohl meinen Dank als auch einen angemessenen Lohn erhalten. Möge Eldaths Frieden Euch auf Eurem Weg umfangen und vor allem Unheil bewahren, bis wir uns wiedersehen.~
 
@@ -487,19 +492,19 @@
 
 @3646 = ~Ja. Hier ist es. Möge es viele Leben bewahren.~
 
-@3647 = ~Hier – hart errungen und frisch bereitet.~
+@3647 = ~Hier – hart errungen und frisch gebraut.~
 
-@3648 = ~Dieses Fläschchen kostete mich Blut, Schweiß und einige Leichen.~
+@3648 = ~Dieses Fläschchen kostete mich Blut, Schweiß und einige blaue Flecken.~
 
 @3649 = ~Noch nicht.~
 
-@3650 = ~Ich verstehe. Kehrt zu mir zurück, sobald es vollendet ist. Dies ist von großer Bedeutung, und wir stehen kurz vor dem Ziel.~
+@3650 = ~Ich verstehe. Kehrt zu mir zurück, sobald es vollendet ist. Dies ist von großer Bedeutung, und wir stehen kurz vor unserem Ziel.~
 
 @3651 = ~Oh, gesegneter Tag! Ihr habt eine Tat wahrer Barmherzigkeit vollbracht. Wenige dürfen sich größere Freunde des Friedens nennen als Ihr.~
 
-@3652 = ~Mit diesem Gegengift werden wir antworten können, wann immer Kunde von einem Opfer eines Giftes oder Leidens zu uns gelangt, das sich der Magie widersetzt. Leben werden gerettet und Leid gelindert werden.~
+@3652 = ~Mit diesem Gegengift werden wir antworten können, wann immer Kunde von einem Opfer eines Giftes oder Leidens zu uns gelangt, das sich Magie widersetzt. Leben werden gerettet und Leid gelindert werden!~
 
-@3653 = ~Für alles, was Ihr getan habt – für die Menschen Amns und für das Dämmerwaldtal – spreche ich Euch meinen tiefsten Dank aus. Und wie versprochen, habe ich etwas für Euch. Möge es Euch auf den Prüfungen und Reisen helfen, die noch vor Euch liegen.~
+@3653 = ~Für alles, was Ihr getan habt – für die Menschen Amns und für das Dämmerwaldtal – spreche ich Euch meinen tiefsten Dank aus. Und, wie versprochen, habe ich etwas für Euch. Möge es Euch auf den Prüfungen und Reisen helfen, die noch vor Euch liegen.~
 
 @3654 = ~Und wisset: Wann immer Ihr Obdach oder Ruhe sucht, wird das Dämmerwaldtal Euch unter Eldaths friedlicher Umarmung willkommen heißen.~
 
@@ -513,17 +518,17 @@
 
 @3659 = ~Möge Eldaths Segen mit Euch sein.~
 
-@3660 = ~Hochverehrter Hüter der Stillen Wasser… warum tragen wir niemals Waffen, selbst wenn andere es tun? Ist der Friede es nicht wert, verteidigt zu werden?~
+@3660 = ~Hochverehrter Hüter der Stillen Wasser… warum tragen wir niemals Waffen, selbst wenn andere es tun? Ist Frieden es nicht wert, verteidigt zu werden?~
 
-@3661 = ~Der Friede ist nichts, das wir in den Händen tragen, sondern im Herzen. Eine Klinge kann eine Stimme zum Schweigen bringen – doch niemals Stille verbreiten.~
+@3661 = ~Frieden ist nichts, was wir in den Händen tragen, sondern in unserem Herzen. Eine Klinge kann eine Stimme zum Schweigen bringen – doch niemals Stille verbreiten.~
 
-@3662 = ~Doch was, wenn jemand Gewalt in unseren Hain trägt? Wenn er nicht hören will?~
+@3662 = ~Doch was, wenn jemand Gewalt in unseren Hain bringt? Wenn jemand nicht zuhören will?~
 
-@3663 = ~Dann hören wir umso mehr zu. Worte erreichen Orte, an die Pfeile niemals gelangen. Und wenn sie zuschlagen, antworten wir nicht mit Schmerz, sondern mit Gegenwart.~
+@3663 = ~Dann hören wir umso mehr zu. Worte erreichen Orte, an die Pfeile niemals gelangen. Und wenn jemand zuschlägt, so antworten wir nicht mit Schmerz, sondern mit Durchhalten.~
 
 @3664 = ~Ich glaube, ich verstehe es noch nicht ganz… aber ich werde es versuchen.~
 
-@3665 = ~Dann wandelst Du bereits auf ihrem Pfad. Eldath verlangt keine Hast – nur den Mut, nicht stehen zu bleiben. Geh nun, und möge jeder Deiner Schritte so sanft sein wie fallender Regen.~
+@3665 = ~Dann wandelt Ihr bereits auf dem rechten Pfad. Eldath verlangt keine Hast – nur den Mut, nicht stehen zu bleiben. Geht nun, und möge jeder Eurer Schritte so sanft sein wie fallender Regen.~
 
 @3666 = ~Ich danke Euch für Eure Führung, Hochverehrter Hüter der Stillen Wasser. Möge ich eines Tages Eldaths Lehren in ihrer ganzen Tiefe begreifen.~
 
