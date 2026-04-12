@@ -1,7 +1,7 @@
 //Script files
 
 // Detect EEex
-ACTION_IF FILE_EXISTS_IN_GAME ~EEex_Actionbar.lua~ BEGIN
+ACTION_IF MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) BEGIN
     // Import Custom EEex Triggers
     ACTION_IF !FILE_EXISTS_IN_GAME ~m_mocast.lua~ BEGIN
       COPY ~%MOD_FOLDER%/lua/m_mocast.lua~ ~override~
