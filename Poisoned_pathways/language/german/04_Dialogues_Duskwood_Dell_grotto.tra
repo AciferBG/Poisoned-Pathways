@@ -10,17 +10,17 @@
 
 @4405 = ~Für einen Herzschlag scheint die Welt zu erbeben, als kleine Gegenstände in Eurem Gepäck erscheinen.~
 
-@4406 = ~Zu viele Jahre habe ich Stahl geführt und Blut an meinen Händen getragen… Ich will, dass es endet. Keine weiteren Schlachten. Kein weiteres Töten.~
+@4406 = ~Zu viele Jahre habe ich Stahl geführt und Blut an meinen Händen getragen… Ich will, dass dies endet. Keine weiteren Schlachten. Kein weiteres Töten.~
 
 @4407 = ~Dann legt Eure Waffe nieder und lasst die Last des Krieges forttreiben wie Blätter auf sanfter Strömung. Die Mutter der Haine richtet nicht über die Vergangenheit – nur über den Mut, jetzt die Stille zu wählen.~
 
-@4408 = ~So soll dieses Werkzeug der Zerstörung fortan ruhen. Mögen meine Hände lernen andere zu heilen anstatt zu verletzen.~
+@4408 = ~So soll dieses Werkzeug der Zerstörung fortan ruhen. Mögen meine Hände lernen, andere zu heilen anstatt zu verletzen.~
 
-@4409 = ~Eldath erfreut Eure Entscheidung. Trinkt von ihren geweihten Wassern und schreitet unbelastet weiter, mit weichem Moos unter jedem Schritt.~
+@4409 = ~Eldath freut sich an Eurer Entscheidung. Trinkt von ihren geweihten Wassern und schreitet unbelastet weiter, mit weichem Moos unter jedem Schritt.~
 
 @4410 = ~Ich fühle mich… erleichtert…~
 
-@4411 = ~Auf ein Wort, <PRO_RACE>. Ich sehe Eure Waffen. Auch wenn ich es nicht verstehe, so erkenne ich doch, dass Ihr Euch noch nicht von all Euren Waffen trennen könnt. Von manchen vielleicht schon.~
+@4411 = ~Auf ein Wort, <PRO_RACE>. Ich sehe Eure Waffen. Auch wenn ich es nicht verstehe, so erkenne ich doch, dass Ihr Euch noch nicht von ihnen trennen könnt. Von manchen... vielleicht schon.~
 
 @4412 = ~Was meint Ihr damit?~
 
@@ -48,9 +48,9 @@
 
 @4424 = ~Das… das klingt richtig. So viel Schmerz haftet an diesen Klingen. Sie zur Ruhe zu legen, wäre eine Gnade.~
 
-@4425 = ~Ein weiser Vorschlag. Zu viele Waffen wechseln von Hand zu Hand und hinterlassen nur Leid.~
+@4425 = ~Ein weiser Vorschlag. Zu viele Waffen wechseln die Hand und hinterlassen nur Leid.~
 
-@4426 = ~Ja, großartig. Legen wir unsere Macht ins Gewässer. Wahrlich, eine meisterhafte Strategie der Torheit.~
+@4426 = ~Ja, großartig. Legen wir unsere Macht ins Wasser. Wahrlich, eine meisterhafte Idee von Torheit.~
 
 @4427 = ~Welch schwächliche Sentimentalität. Waffen sind zum Töten geschaffen. Ich werde keine Klingen fortlegen, die nach Blut dürsten.~
 
@@ -82,7 +82,7 @@
 
 @4441 = ~Und jene, die bereits zu Legenden wurden, gewähren Euch noch größere Vitalität. Nun, was sagt Ihr?~
 
-@4442 = ~Sehen wir nach, ob ich eine Waffe für Eldath habe.~
+@4442 = ~Sehen wir nach, ob ich eine Waffe für Eldath dabeihabe.~
 
 @4443 = ~Ich werde darüber nachdenken.~
 
@@ -104,21 +104,21 @@
 
 @4452 = ~Alatoasz Berendim sandte mich. Ich soll eine Karaffe mit Eldaths heiligem Wasser holen.~
 
-@4453 = ~Das heilige Wasser? Gewiss. Hier ist es – behandelt es vrosichtig, denn es ist so kostbar wie der Friede, den es bringt.~
+@4453 = ~Das heilige Wasser? Gewiss. Hier ist es – behandelt es vorsichtig, denn es ist so kostbar wie der Friede, den es bringt.~
 
-@4454 = ~Ich bin ein Geist, der an diesen Hain gebunden ist. Vor langer Zeit beruhigte Eldaths Berührung mein verängstigtes Herz, und seitdem diene ich hier als ihre sanfte Wächterin. Meine Seele ist an sein Wasser und an den stillen Atem Eldaths selbst gebunden.~
+@4454 = ~Ich bin ein Geist, der an diesen Hain gebunden ist. Vor langer Zeit beruhigte Eldaths Berührung mein verängstigtes Herz, und seitdem diene ich hier als ihre sanfte Wächterin. Meine Seele ist an das Wasser und an den stillen Atem Eldaths selbst gebunden.~
 
 @4455 = ~Dies ist Eldaths heilige Grotte, in der vollkommener Frieden herrscht.~
 
-@4456 = ~Hier haben viele tapfere Krieger beschlossen, ihr Handwerk aufzugeben und stattdessen dem Pfad des Friedens zu folgen. Seht ihr die vielen Waffen? Jede von ihnen gehörte einst einer Seele, deren Leben von Krieg und Blutvergießen geprägt war – bis sie hier ihre Klingen niederlegten und sich für einen anderen Weg entschieden.~
+@4456 = ~Hier haben viele tapfere Krieger beschlossen, ihr blutiges Handwerk aufzugeben und stattdessen dem Pfad des Friedens zu folgen. Seht ihr die vielen Waffen? Jede von ihnen gehörte einst einer Seele, deren Leben von Krieg und Blutvergießen geprägt war – bis sie hier ihre Klingen niederlegten und sich für einen anderen Weg entschieden.~
 
 @4457 = ~All diese Waffen einfach weggeworfen? So viel Stahl, verschwendet... Ich weiß nicht, ob ich das inspirierend oder töricht finden soll.~
 
-@4458 = ~Frieden ist ja schön und gut – bis das nächste Banditenpack auftaucht. Und dann? Singen wir sie etwa zu Tode?~
+@4458 = ~Frieden ist ja schön und gut – bis das nächste Banditenpack auftaucht. Und dann?~
 
-@4459 = ~Ein Schwert hält dich am Leben. Es aufzugeben? Das ist so gut wie dein eigenes Grab zu schaufeln.~
+@4459 = ~Ein Schwert hält einen am Leben. Es aufzugeben? Das ist so klug wie sein eigenes Grab zu schaufeln.~
 
-@4460 = ~Das ist... bewundernswert. Dem Krieg den Rücken zu kehren erfordert mehr Mut, als je eine Klinge zu schwingen.~
+@4460 = ~Das ist... bewundernswert. Dem Krieg den Rücken zu kehren erfordert mehr Mut als eine Klinge zu schwingen.~
 
 @4461 = ~Seid Ihr ebenfalls gekommen, um hier Eure Waffen im Namen des Friedens niederzulegen?~
 
@@ -180,19 +180,19 @@
 
 @4490 = ~Der Ausgleicher brachte nichts ins Gleichgewicht außer Leichen. Möge das Wasser seinem Streit ein Ende setzen.~
 
-@4491 = ~Carsomyrs Eifer schneidet zu tief. Ich übergebe es der Stille.~
+@4491 = ~Carsomyrs Eifer schneidet zu tief. Ich übergebe ihn der Stille.~
 
-@4492 = ~Der Flegel der Zeitalter band drei Stürme an den Krieg – löst seine Fesseln hier.~
+@4492 = ~Der Flegel der Zeitalter band drei Elemente – löst seine Fesseln hier.~
 
 @4493 = ~Crom Faeyr ließ Berge erbeben; nun soll er Wurzeln und Moos nicht länger stören.~
 
-@4494 = ~Soul Reaver trinkt Hoffnung; ich übergebe es Wassern, die heilen.~
+@4494 = ~Der Seelenschnitter trinkt Hoffnung; ich übergebe ihn Wassern, die heilen.~
 
 @4495 = ~Schwarzschnitter flüstert von Hunger. Möge das Becken ihm Schweigen lehren.~
 
-@4496 = ~Ich halte Lilarcors Geplapper nicht mehr aus. Nehmt es. Wenn es jemand zum Schweigen bringen kann, dann Ihr.~
+@4496 = ~Ich halte Lilarcors Geplapper nicht mehr aus. Nehmt es. Wenn ihn jemand zum Schweigen bringen kann, dann Ihr.~
 
-@4497 = ~Himmlischer Zorns Donner gehört in den Himmel, nicht in wandernde Hände.~
+@4497 = ~Himmlischer Zorns Donner gehört in den Himmel, nicht in sterbliche Hände.~
 
 @4498 = ~Ich biete die Kriegsklinge dar – ihre Schneide hat genug Blut gekostet.~
 
@@ -200,13 +200,13 @@
 
 @4500 = ~Der Kurzbogen von Gesen – möge sein Blitz nun in Frieden schlafen.~
 
-@4501 = ~Selbst Icingdeaths Kälte sollte nun ruhen.~
+@4501 = ~Selbst des Eisiger Tods Kälte sollte nun ruhen.~
 
-@4502 = ~Twinkles Licht darf hier in Frieden verblassen.~
+@4502 = ~Blaues Licht darf hier in Frieden verblassen.~
 
 @4503 = ~Selbst der Stecken der Magister kann hier zur Ruhe gelegt werden.~
 
-@4504 = ~Diese Klinge nennt sich selbst der "Verdammte Verlierer". Möge sie stattdessen in stillen Wassern verschwinden.~
+@4504 = ~Diese Klinge nennt sich selbst der Verdammte Verlierer. Möge sie stattdessen in stillen Wassern verschwinden.~
 
 @4505 = ~Der Schinderschnitter hat Schrecken gespalten, die besser vergessen bleiben. Mögen Eldaths Wasser seine Erinnerung fortwaschen.~
 
@@ -246,7 +246,7 @@
 
 @4522 = ~Donner gehört dem Himmel, nicht sterblichen Zornausbrüchen. Schlafe nun.~
 
-@4523 = ~Selbst in der Stille höre ich dein Geplapper. Das Becken wird dich Ruhe lehren.~
+@4523 = ~Selbst in der Stille höre ich das Geplapper. Das Becken wird nun Ruhe lehren.~
 
 @4524 = ~Das Becken ist bereit für eine weitere Last der Legende.~
 
@@ -258,7 +258,7 @@
 
 @4528 = ~Der Schädelbrecher gehört dorthin, wo Schädel sicher sind. Nehmt ihn.~
 
-@4529 = ~Der Hammer der Donnerkeile soll nicht länger donnern.~
+@4529 = ~Der Hammer der Blitze soll nicht länger donnern.~
 
 @4530 = ~Möge der Zwergenwerfer hier zur Ruhe finden.~
 
@@ -266,41 +266,41 @@
 
 @4532 = ~Nehmt Schwarzblut – möge es nie wieder Leben kosten.~
 
-@4533 = ~Die Klinge des Sengens soll kein Fleisch mehr verbrennen.~
+@4533 = ~Die Klinge des Versengens soll kein Fleisch mehr verbrennen.~
 
-@4534 = ~Azuredge darf ruhen; sein Kreuzzug ist beendet.~
+@4534 = ~Azurklinge darf ruhen; sein Kreuzzug ist beendet.~
 
-@4535 = ~Ich trenne mich von Herzsucher – kein Herz soll es mehr finden.~
+@4535 = ~Ich trenne mich von Herzsucher – kein Herz soll er mehr finden.~
 
-@4536 = ~Der Elfenhofbogen gehört der Erinnerung, nicht dem Mord. Nehmt ihn.~
+@4536 = ~Der Bogen des Elfenhofs gehört der Erinnerung, nicht dem Mord. Nehmt ihn.~
 
 @4537 = ~Der Aufspießer hat genug Leben beendet. Bewahrt ihn, wo er niemandem mehr schadet.~
 
-@4538 = ~Ich übergebe den Speer des Verwelkens – kein weiteres Siechtum für die Lebenden.~
+@4538 = ~Ich übergebe den Speer des Verdorrens – kein weiteres Siechtum für die Lebenden.~
 
-@4539 = ~Nehmt Frostreaver – sein kalter Biss endet hier.~
+@4539 = ~Nehmt Frostschnitter – sein kalter Biss endet hier.~
 
 @4540 = ~Die Rosenklinge hat zu viele stolze Herzen befleckt; ich bringe sie Euch.~
 
 @4541 = ~Hier, nehmt Steinfeuer. Mögen seine Flammen kein Herz mehr quälen.~
 
-@4542 = ~Die Axt von Rifthome spaltete genug Schädel. Sie sei hier vor Schaden bewahrt.~
+@4542 = ~Die Spaltenheimer Axt spaltete genug Schädel. Sie sei hier vor Schaden bewahrt.~
 
-@4543 = ~Drachenbann hat keinen Platz in einem friedlichen Hain. Ich gebe es freiwillig.~
+@4543 = ~Drachenbann hat keinen Platz in einem friedlichen Hain. Ich gebe ihn Euch.~
 
-@4544 = ~Die Hellebarde der Welle gehört ruhigeren Gezeiten. Möge sie hier rasten.~
+@4544 = ~Die Welle gehört ruhigeren Gezeiten. Möge sie hier rasten.~
 
 @4545 = ~Ras wurde vom Geist des Blutes gerufen; ich löse es aus dem Band der Beschwörung.~
 
-@4546 = ~Feenkoboldstich schlief mit geraubtem Atem; ich gebe es hier der Stille zurück.~
+@4546 = ~Feenkoboldstich schlief mit geraubtem Atem; ich gebe ihn hier der Stille zurück.~
 
-@4547 = ~Nach Mord benannt, findet Halsschneider hier kein Willkommen. Ich gebe es gern auf.~
+@4547 = ~Nach Mord benannt, findet Gurgelschlitzer hier kein Willkommen. Ich gebe ihn gern auf.~
 
-@4548 = ~Geisterbrand trägt den Geschmack untoten Leids; möge sein Echo im Becken verklingen.~
+@4548 = ~Spektralfeuer trägt den Geschmack untoten Leids; möge sein Echo im Becken verklingen.~
 
 @4549 = ~Adjatha der Trinker nährte sich von Magie – möge sein Durst unter Eurer Wacht enden.~
 
-@4550 = ~Das Schwert des Chaos schleuderte das Schicksal blind; ich schenke es den Wurzeln der Stille.~
+@4550 = ~Das Schwert des Chaos schleuderte das Schicksal durcheinander; ich schenke es den Wurzeln der Stille.~
 
 @4551 = ~Albruin war für alte Jagden geschmiedet. Ich lege es nieder, damit hier nichts mehr gejagt werde.~
 
@@ -308,7 +308,7 @@
 
 @4553 = ~Tagesstern zerschnitt die Dunkelheit – doch auch Licht kann grausam blenden. Hier sei seine Ruhe.~
 
-@4554 = ~Das Kurzschwert des Verrats liegt schwer auf der Seele. Ich überlasse es der heilenden Stille der Wasser.~
+@4554 = ~Die Klinge des Schattens liegt schwer auf der Seele. Ich überlasse sie der heilenden Stille der Wasser.~
 
 @4555 = ~Belm schwang sich im Zeichen der Rache. Möge sein Schwung in lautloser Gnade enden.~
 
@@ -318,10 +318,9 @@
 
 @4558 = ~Die Klinge des Elfen-Mykologen… ihre Schneide riecht schwach nach feuchter Erde. Möge sie zum Boden zurückkehren.~
 
-@4559 = ~Mirages Schneide – ihr Schimmer schnitt durch mehr als Stahl. Mögen ihre Trugbilder im Frieden verblassen.~
+@4559 = ~Klinge der Fata Morgana – ihr Schimmer schnitt durch mehr als Stahl. Mögen ihre Trugbilder im Frieden verblassen.~
 
 @4560 = ~Scolopendras Speichel… giftig, geduldig und lautlos. Ich werde seine Gesellschaft nicht vermissen.~
-// 4561–4635
 
 @4561 = ~Viel Glück, Geißblatt… möge sein Segen fern vom Klang der Klingen erblühen.~
 
@@ -335,7 +334,7 @@
 
 @4566 = ~Hier – "Fleisch und Furunkel". Es gehört nicht unter die Lebenden.~
 
-@4567 = ~Der Fleischformer verdirbt mit jedem Schlag das Fleisch. Beendet es hier.~
+@4567 = ~Der Fleischverformer verdirbt mit jedem Schlag das Fleisch. Beendet es hier.~
 
 @4568 = ~"Kopf" – eine Münze, zur Mörderin gewandelt. Ich übergebe sie dem Becken.~
 
@@ -443,7 +442,7 @@
 
 @4620 = ~Möge die Flamme, die einst Drachen verbrannte, in stiller Asche enden.~
 
-@4621 = ~Eine Gezeit, zum Töten gewandt, taugt nicht für diesen Hain.~
+@4621 = ~Wasser, zum Töten gewandt, taugt nicht für diesen Hain.~
 
 @4622 = ~Mögen die Toten ruhen. Keine weiteren Beschwörungen.~
 

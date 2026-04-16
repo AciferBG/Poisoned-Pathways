@@ -6,27 +6,27 @@
 
 @4851 = ~^0xFF9ADCE3 Tautröpfchen: ^-Wenn man Freiheit in Flaschen füllen könnte, würde sie genau so klingen — und doppelt so hell funkeln!~
 
-@4852 = ~^0xFFE3B0FF Lilafern: ^-Keine Flaschen mehr, Tautröpfchen — nie wieder. Lieber schlafe ich im Maul eines Drachen als noch einmal in einem Glas!~
+@4852 = ~^0xFFE3B0FF Lilafern: ^-Keine Flaschen mehr, Tautröpfchen — nie wieder. Lieber schlafe ich im Rachen eines Drachen als noch einmal in einem solcen Glas!~
 
 @4853 = ~^0xFF9ADCE3 Tautröpfchen: ^-Bist du gekommen, um dir etwas zu wünschen, oder um ein paar Rätsel zu lösen?~
 
-@4854 = ~Ein Wunsch, vielleicht… könnt ihr wirklich einen gewähren?~
+@4854 = ~Ein Wunsch, vielleicht… könnt Ihr mir wirklich einen gewähren?~
 
 @4855 = ~Ihr wollt Rätsel stellen? Nur zu.~
 
-@4856 = ~Hört bitte auf, so nah an meinem Gesicht zu funkeln.~
+@4856 = ~Hört bitte auf, so nah an meinem Gesicht herumzufunkeln.~
 
 @4857 = ~Ich komme nur vorbei, kleine Wesen.~
 
 @4858 = ~^0xFFE3B0FF Lilafern: ^-Wir sind frei!~
 
-@4859 = ~^0xFF9ADCE3 Tautröpfchen: ^-Der Held <CHARNAME> hat uns befreit!~
+@4859 = ~^0xFF9ADCE3 Tautröpfchen: ^-Held <CHARNAME> hat uns befreit!~
 
 @4860 = ~Es ist so wunderbar, euch beide wiederzusehen!~
 
-@4861 = ~^0xFFE3B0FF Lilafern: ^-Bruder Edrim! Du wirst doch nicht böse sein, wenn wir wieder an deiner Robe zupfen, oder?~
+@4861 = ~^0xFFE3B0FF Lilafern: ^-Bruder Edrim! Du wirst doch nicht böse sein, wenn wir wieder an Deiner Robe zupfen, oder?~
 
-@4862 = ~Nein, gewiss nicht. Ihr dürft mich so viel necken, wie ihr möchtet — ich bin nur froh, dass ihr in Sicherheit seid.~
+@4862 = ~Nein, gewiss nicht. Ihr dürft mich so viel necken, wie ihr möchtet — ich bin nur froh, dass Ihr in Sicherheit seid.~
 
 @4863 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ich sage dir, das war eine *durchaus* aufregende Reise!~
 
@@ -34,15 +34,15 @@
 
 @4865 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ja, Lilafern. Lasst uns ruhen — aber nicht, bevor wir unserem Retter gebührend danken.~
 
-@4866 = ~^0xFFE3B0FF Lilafern: ^-Hundert Segnungen und hundert Funken über dich, <CHARNAME>! Wir hätten deine Füße geküsst, wären sie nicht so entsetzlich stinkend.~
+@4866 = ~^0xFFE3B0FF Lilafern: ^-Hundert Segnungen und hundert Funken über dich, <CHARNAME>! Wir würden deine Füße küssen, würden sie nicht so entsetzlich stinken.~
 
 @4867 = ~^0xFF9ADCE3 Tautröpfchen: ^-Danke dir, <CHARNAME> — von Herzen. Du hast uns das Licht, das Lachen und das liebenswerte kleine Chaos zurückgegeben. Wir werden niemals vergessen, wie du die Welt wieder laut gemacht hast.~
 
-@4868 = ~^0xFFE3B0FF Lilafern: ^-Warte! Wir können <PRO_HIMHER> doch nicht ohne einen Wunsch gehen lassen! Das wäre... undankbar. Oder vielleicht unglücklich — oder beides!~
+@4868 = ~^0xFFE3B0FF Lilafern: ^-Warte! Wir können <PRO_HIMHER> doch nicht ohne einen Wunsch gehen lassen! Das wäre... undankbar. Oder unglücklich — oder beides!~
 
 @4869 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ganz recht, Lilafern! Ein kleines Geschenk, ein wenig Funkeln gegen die Dunkelheit. Was begehrst du, <CHARNAME>?~
 
-@4870 = ~^0xFFE3B0FF Lilafern: ^-Also! Ein Wunsch, <CHARNAME>. Nur einer — wir sind schließlich keine Dschinne! Du darfst dein Funkeln wählen: Schutz vor Giften, Schilde gegen Zauber, ein Hauch von Glück gegen feindliche Zauberstäbe, ein Zauber gegen allzu peinliche Verwandlungen oder vielleicht... ein wenig Standhaftigkeit gegen äußerst üblen Drachenodem? Wähle weise, <CHARNAME> — selbst kleine Wünsche hallen nach.~
+@4870 = ~^0xFFE3B0FF Lilafern: ^-Also! Ein Wunsch, <CHARNAME>. Nur einer — wir sind schließlich keine Dschinn! Du darfst dein Funkeln wählen: Schutz vor Giften, Schilde gegen Zauber, ein Hauch von Glück gegen feindliche Zauberstäbe, ein Zauber gegen allzu peinliche Verwandlungen oder vielleicht... ein wenig Standhaftigkeit gegen äußerst üblen Drachenodem? Wähle weise, <CHARNAME> — selbst kleine Wünsche hallen nach.~
 
 @4871 = ~Ich wäre gern besser vor Gift und Krankheit geschützt.~
 
@@ -54,21 +54,21 @@
 
 @4875 = ~Vielleicht etwas, das mir hilft, Gefahren wie Drachenodem zu überstehen.~
 
-@4876 = ~^0xFFE3B0FF Lilafern: ^-Eine weise Wahl! Halt still — es wird kaum funkeln... oder vielleicht doch.~
+@4876 = ~^0xFFE3B0FF Lilafern: ^-Eine weise Wahl! Halt still — es wird kaum funkeln... oder vielleicht ein bisschen.~
 
-@4877 = ~^0xFF9ADCE3 Tautröpfchen: ^-So! Ein Hauch Mondlicht, eine Prise Lachen und ein Stäubchen Bitte-stirb-nicht.~
+@4877 = ~^0xFF9ADCE3 Tautröpfchen: ^-So! Ein Hauch Mondlicht, eine Prise Lachen und ein Stäubchen Bitte-nicht-sterben.~
 
-@4878 = ~^0xFFE3B0FF Lilafern: ^-Schau, Tautröpfchen! Ein unbeholfener Hooman!~
+@4878 = ~^0xFFE3B0FF Lilafern: ^-Schau, Tautröpfchen! Ein unbeholfener Wanderer!~
 
 @4879 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ach, sei still, Lilafern! Das ist ein Abenteurer, Dummerchen! Man erkennt es an <PRO_HISHER> grimmigem Blick.~
 
-@4880 = ~^0xFF9ADCE3 Tautröpfchen: ^-Willkommen im Dämmerwaldtal, große Gestalt!~
+@4880 = ~^0xFF9ADCE3 Tautröpfchen: ^-Willkommen im Dämmerwaldtal, großer Lulatsch!~
 
 @4881 = ~Wer seid ihr?~
 
 @4882 = ~Wer spricht da?~
 
-@4883 = ~^0xFFE3B0FF Lilafern: ^-Die große Gestalt kehrt zurück — und noch immer ohne Funkeln, wie ich sehe!~
+@4883 = ~^0xFFE3B0FF Lilafern: ^-Der Lulatsch kehrt zurück — und noch immer ohne Funkeln, wie ich sehe!~
 
 @4884 = ~^0xFFE3B0FF Lilafern: ^-Wir sind die Zwielicht-Zwillinge, Hüter der nächtlichen Kicherlaute und Wächter von… nun ja, nichts allzu Wichtigem.~
 
@@ -78,19 +78,19 @@
 
 @4887 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ein passender Name, findest du nicht? Wir machen das Dämmerwaldtal lichtvoll!~
 
-@4888 = ~^0xFFE3B0FF Lilafern: ^-Für jene, die das Tal nicht nur bei Tageslicht erfreuen, natürlich.~
+@4888 = ~^0xFFE3B0FF Lilafern: ^-Für jene, die das Tal nicht nur bei Tageslicht besuchen, natürlich.~
 
 @4889 = ~^0xFFE3B0FF Lilafern: ^-Wir sind Feen, Dummerchen! Zu klein für deine Augen, zu flink für deine Hände.~
 
-@4890 = ~^0xFF9ADCE3 Tautröpfchen: ^-Das Dämmerwaldtal ist unser Zuhause! Jemand muss diese friedliebende Schar schließlich vom Einnicken abhalten.~
+@4890 = ~^0xFF9ADCE3 Tautröpfchen: ^-Das Dämmerwaldtal ist unser Zuhause! Jemand muss diese friedliebende Schar schließlich vom Eindösen abhalten.~
 
-@4891 = ~^0xFF9ADCE3 Lilafern: ^-Es heißt schließlich Dämmerwaldtal — nicht Dämmerwald-Fad!~
+@4891 = ~^0xFF9ADCE3 Lilafern: ^-Es heißt schließlich Dämmerwaldtal — nicht Eindämmertal!~
 
 @4892 = ~^0xFF9ADCE3 Tautröpfchen: ^-Also gut. Bist du gekommen, um dir etwas zu wünschen, oder um Rätsel zu lösen?~
 
-@4893 = ~^0xFFE3B0FF Lilafern: ^-Ein Rätsel! Ein Spiel! Lasst uns den Verstand der großen Gestalt prüfen!~
+@4893 = ~^0xFFE3B0FF Lilafern: ^-Ein Rätsel! Ein Spiel! Lasst uns den Verstand des Lulatschs prüfen!~
 
-@4894 = ~^0xFF9ADCE3 Tautröpfchen: ^-Oh ja! Rätsel sind wie Funken – sie zeigen, wer stumpf ist!~
+@4894 = ~^0xFF9ADCE3 Tautröpfchen: ^-Oh ja! Rätsel sind wie Leuchten – sie zeigen, wer unterbelichtet ist!~
 
 @4895 = ~^0xFFE3B0FF Lilafern: ^-Schon vergessen? Du hast gewonnen, erinnerst du dich? Keine Rätsel mehr für den Moment.~
 
@@ -122,17 +122,17 @@
 
 @4907 = ~^0xFFE3B0FF Lilafern: ^-Na schön! Du gewinnst... aber nur, weil du größer bist.~
 
-@4908 = ~^0xFFE3B0FF Lilafern: ^-Oh, reizender Versuch! Völlig falsch, aber reizend!~
+@4908 = ~^0xFFE3B0FF Lilafern: ^-Oh, reizender Versuch! Völlig falsch, aber niedlich!~
 
 @4909 = ~^0xFF9ADCE3 Tautröpfchen: ^-Wir lieben Selbstvertrauen mehr als Genauigkeit!~
 
-@4910 = ~^0xFFE3B0FF Lilafern: ^-Versuch es noch einmal, bevor wir *Hinweise* geben, die alles nur schlimmer machen.~
+@4910 = ~^0xFFE3B0FF Lilafern: ^-Versuch es noch einmal, bevor wir Hinweise geben, die alles nur noch schlimmer machen.~
 
 @4911 = ~Gut, ich versuche es noch einmal.~
 
 @4912 = ~Keine Rätsel mehr für heute.~
 
-@4913 = ~^0xFFE3B0FF Lilafern: ^-Oh, ein Skeptiker! Wie *erfrischend!*~
+@4913 = ~^0xFFE3B0FF Lilafern: ^-Oh, ein Skeptiker! Wie erquickend!~
 
 @4914 = ~^0xFF9ADCE3 Tautröpfchen: ^-Kitzeln wir <PRO_HIMHER> trotzdem, nur fürs Gleichgewicht!~
 
@@ -144,13 +144,15 @@
 // NOTE TO TRANSLATORS: KEEP THE FORMATTING - it's for the correct colors
 
 @4918 = ~^0xFFE3B0FF Lilafern: ^-Also gut, noch ein Rätsel! Hör genau zu:
-"Ich lauere geduldig im Verlies.
-Ich speise von denen, die zu gierig sind.
-Sei kühn, tritt näher,
-und sieh, was dort verweilt —
-ich glänze wie Gold
-und schnappe nach Fingern.  
-Was bin ich?"~
+Im Dunkel des Kerkers lieg’ ich ganz still,
+und warte geduldig, bis jemand mich will.
+Zu greifen nach Reichtum, nach Glanz und nach Gold—
+ach, wie mir doch solche Begierde gefällt!
+
+Komm näher, nur zu, sei mutig und blind,
+denn ich bin der Schatz, den du suchst, mein Kind.
+Ich blitze, ich locke – ein herrlicher Fund…
+doch öffnet sich mein Deckel, wird’s plötzlich sehr bunt.~
 
 @4919 = ~Ein Geist, vielleicht?~
 
@@ -164,15 +166,15 @@ Was bin ich?"~
 
 @4924 = ~^0xFF9ADCE3 Tautröpfchen: ^-Nein, <PRO_HESHE> wusste es; <PRO_HESHE> wusste es wirklich!~
 
-@4925 = ~^0xFFE3B0FF Lilafern: ^-Das sollte unlösbar sein!~
+@4925 = ~^0xFFE3B0FF Lilafern: ^-Das sollte eigentlich unlösbar sein!~
 
 @4926 = ~^0xFF9ADCE3 Tautröpfchen: ^-Hast du einen Gedankenschinder bestochen, um die Antwort zu erfahren?~
 
-@4927 = ~^0xFFE3B0FF Lilafern: ^-Nun gut, kluges <PRO_RACE>. Du gewinnst wieder. Aber nächstes Mal reimen wir es auf Drakonisch!~
+@4927 = ~^0xFFE3B0FF Lilafern: ^-Nun gut, kluger <PRO_RACE>. Du gewinnst wieder. Aber nächstes Mal reimen wir es auf Drakonisch!~
 
 @4928 = ~^0xFF9ADCE3 Tautröpfchen: ^-Wir lieben Selbstvertrauen mehr als Genauigkeit!~
 
-@4929 = ~^0xFFE3B0FF Lilafern: ^-Versuch es noch einmal, bevor wir *grauenhafte* Hinweise geben.~
+@4929 = ~^0xFFE3B0FF Lilafern: ^-Versuch es noch einmal, bevor wir grauenhafte Hinweise geben.~
 
 @4930 = ~Ich habe genug von euren Rätseln.~
 
@@ -180,31 +182,33 @@ Was bin ich?"~
 
 @4932 = ~^0xFF9ADCE3 Tautröpfchen: ^-Kitzeln wir <PRO_HIMHER> trotzdem, nur zum Spaß!~
 
-@4933 = ~^0xFFE3B0FF Lilafern: ^-Mal sehen, ob <PRO_HESHE> im Echo lacht.~
+@4933 = ~^0xFFE3B0FF Lilafern: ^-Mal sehen, ob <PRO_HESHE> lacht.~
 
 @4934 = ~^0xFF9ADCE3 Tautröpfchen: ^-Noch eine Herausforderung! Das Rätsel von Schlamm und Majestät!~
 
 @4935 = ~^0xFFE3B0FF Lilafern: ^-Höre wohl, Wanderer:  
-"Ich lebe in der Stille, ich singe im Regen.
-Ich springe ohne Furcht, doch klage ich nie.
-Meine Krone ist Schlamm, mein Thron ein Moor.
-Küss mich, und du wirst zu einem...?"~
+Ich springe durchs Dickicht, ganz ohne Scheu,
+und klage doch niemals – ich bleibe mir treu.
+Mein Krönchen ist Schlamm, mein Reich ist das Moor,
+kein goldener Palast, kein prunkvolles Tor.
+So küss mich, wenn du dich traust – und sieh' was ich Dir böte:
+denn nach meinem Kuss verwandelst du dich in die glitschige...~
 
 @4936 = ~^0xFF9ADCE3 Tautröpfchen: ^-Wähle weise! Der falsche Kuss kann ewig währen!~
 
-@4937 = ~Ein Hund.~
+@4937 = ~Katze.~
 
-@4938 = ~Ein Schwein.~
+@4938 = ~Schnecke.~
 
-@4939 = ~Ein Frosch.~
+@4939 = ~Kröte.~
 
 @4940 = ~Ein Vampir.~
 
-@4941 = ~^0xFFE3B0FF Lilafern: ^-Frosch, <PRO_HESHE> hat tatsächlich Frosch gesagt!~
+@4941 = ~^0xFFE3B0FF Lilafern: ^-Frosch, <PRO_HESHE> hat tatsächlich Kröte gesagt!~
 
 @4942 = ~^0xFF9ADCE3 Tautröpfchen: ^-Unglaublich!~
 
-@4943 = ~^0xFFE3B0FF Lilafern: ^-Nun gut, kluges <PRO_RACE>, du gewinnst. Schon wieder. Hör auf, recht zu haben, das ist lästig.~
+@4943 = ~^0xFFE3B0FF Lilafern: ^-Nun gut, kluger <PRO_RACE>, du gewinnst. Schon wieder. Hör auf, recht zu haben, das ist lästig.~
 
 @4944 = ~^0xFF9ADCE3 Tautröpfchen: ^-Beim nächsten Mal fragen wir etwas Unlösbares. Zum Beispiel die Paarungsgewohnheiten von Flumphs.~
 
@@ -228,7 +232,7 @@ Küss mich, und du wirst zu einem...?"~
 
 @4954 = ~^0xFFE3B0FF Lilafern: ^-Oh, herrlich! Nur zu, Tautröpfchen — blende <PRO_HIMHER> mit deinem Genie!~
 
-@4955 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ich? Ich dachte, *du* hättest eines vorbereitet!~
+@4955 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ich? Ich dachte, *du* hättest ein Rätsel vorbereitet!~
 
 @4956 = ~^0xFFE3B0FF Lilafern: ^-Ich? Nein. Du musst dir etwas ausdenken!~
 
@@ -240,13 +244,13 @@ Küss mich, und du wirst zu einem...?"~
 
 @4960 = ~^0xFFE3B0FF Lilafern: ^-Ach, gut. Wir geben auf.~
 
-@4961 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ja! Das kluge <PRO_RACE> gewinnt!~
+@4961 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ja! Der kluge <PRO_RACE> gewinnt!~
 
 @4962 = ~^0xFF9ADCE3 Tautröpfchen: ^-Lasst uns <PRO_HIMHER> mit Funken bestreuen. Oder vielleicht mit Feenstaub.~
 
 @4963 = ~^0xFFE3B0FF Lilafern: ^-Feenstaub, ja! <CHARNAME> verdient eine Belohnung für so viel Klugheit!~
 
-@4964 = ~^0xFF9ADCE3 Tautröpfchen: ^-Genau! Hier, nimm etwas von unserem Feenstaub — aber reib ihn dir nicht in die Augen, ja?~
+@4964 = ~^0xFF9ADCE3 Tautröpfchen: ^-Genau! Hier, nimm etwas von unserem Feenstaub — aber reib ihn dir nicht in die Augen, kapiert?~
 
 @4965 = ~^0xE3B0FFTautröpfchen: ^-In deinem Gesicht? Aber dein Gesicht ist so *unfunkelnd*!~
 
@@ -254,7 +258,7 @@ Küss mich, und du wirst zu einem...?"~
 
 @4967 = ~^0xFFE3B0FF Lilafern: ^-Komm, Tautröpfchen — Funkel-Rückzugsprotokoll einleiten!~
 
-@4968 = ~^0xFF9ADCE3 Tautröpfchen: ^-Vorsicht, Wanderer… wenn wir nicht mehr in deiner Nähe funkeln, wer vertreibt dann deine bösen Träume?~
+@4968 = ~^0xFF9ADCE3 Tautröpfchen: ^-Vorsicht, Wanderer… wenn wir nicht mehr in deiner Nähe funkeln, wer vertreibt dann deine bösen Gedanken?~
 
 @4969 = ~^0xFF9ADCE3Tautröpfchen: ^-Ein Wunsch?! Hast du das gehört, Lilafern? Ein *Wunsch*!~
 
@@ -266,17 +270,17 @@ Küss mich, und du wirst zu einem...?"~
 
 @4973 = ~^0xFF9ADCE3Tautröpfchen: ^-Aber! Wenn du dir Lachen oder Mondlicht wünschst, das können wir. Davon haben wir mehr als genug.~
 
-@4974 = ~^0xFFE3B0FF Lilafern: ^-Alles Größere musst du mit unserer Vorgesetzten klären. Das ist Eldath, selbstverständlich. Allerdings ist sie schrecklich mit Terminplänen.~
+@4974 = ~^0xFFE3B0FF Lilafern: ^-Alles Größere musst du mit unserer Vorgesetzten klären. Das ist Eldath, selbstverständlich. Allerdings ist sie schrecklich mit ausgebucht.~
 
-@4975 = ~^0xFFE3B0FF Lilafern: ^-Nun gut, dann eben nicht. Tritt sanft, große Gestalt — das Gras erinnert sich an Schritte.~
+@4975 = ~^0xFFE3B0FF Lilafern: ^-Nun gut, dann eben nicht. Schreite sanft, große Gestalt — das Gras erinnert sich an deine Schritte.~
 
 @4976 = ~^0xFF9ADCE3 Tautröpfchen: ^-Komm wieder, wenn du nicht so in Eile bist. Wir mögen Gespräche, die sich im Kreis drehen.~
 
 @4977 = ~Ihrrr wagt es, mich anzugrrreifen? Mich?~
 
-@4978 = ~Närrrischer Sterblicher! Eine weiterre Seele für meine Sammlung!~
+@4978 = ~Närrrischer Sterblicher! Eine weiterrre Seele fürrr meine Sammlung!~
 
-@4979 = ~Ihrrr habt die Wunsch-Schrrriftrolle erworrben! Meine Glückwünsche zu einem so selt'nen Errwerb. Bevorr Ihr geht, noch ein kleines Detail — und ein höchst interrressantes.~
+@4979 = ~Ihrrr habt die Wunsch-Schrrriftrolle erworrben! Meine Glückwünsche zu einem so seltenen Errrwerrrb. Bevorrr Ihrrr geht, noch ein kleines Detail — und ein höchst interrrressantes.~
 
 @4980 = ~Die Tinte der Schrrriftrolle ist... sagen wir, launisch. Ihrrre Macht währrt nur kurze Zeit nach dem Kauf. Verrzeiht, ich habe verrsäumt, das zu errrwähnen. Nennt mich gierig, aber ich bin nun einmal ein Händlerrr, ja? Am besten nutzt Ihr sie, solange die Magie noch wach ist. Was ist schon ein Wunsch, derr nie ausgesprochen wirrrd?~
 
