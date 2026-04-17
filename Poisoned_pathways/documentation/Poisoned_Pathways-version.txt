@@ -1,8 +1,11 @@
-Version 5.3
+Beta Version 5.4
+- changes by morpheus562
+- updated German translation
+Beta Version 5.3
 - changed ACPP30SR.bmp search map: added Exit to the North
 - changed area link ACPP30: Exit to the North now leads to Duskwood Dell
 - updated Delgorth's portrait
-Version 5.2
+Beta Version 5.2
 - changes by morpheus562:
 This is all of the script updates leaving original intent in-tact. The biggest divergeance is will-o-wisp where I have it use more spells based on difficulty level. I also updated the mummy to have an weapon assigned.
 In addition to updating attack and spell targeting, I am also utilizing EEex for net new custom triggers. This includes:
