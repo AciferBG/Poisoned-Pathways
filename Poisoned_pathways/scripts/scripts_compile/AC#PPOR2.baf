@@ -52,3 +52,37 @@ THEN
         StartDialogueNoSet(Player1)
 END
 
+IF
+    See(NearestEnemyOf(Myself))
+    !Range(NearestEnemyOf(Myself),5)
+THEN
+    RESPONSE #100
+        EquipRanged()
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Range(NearestEnemyOf(Myself),5)
+THEN
+    RESPONSE #100
+        EquipMostDamagingMelee()
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    ActionListEmpty()
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+

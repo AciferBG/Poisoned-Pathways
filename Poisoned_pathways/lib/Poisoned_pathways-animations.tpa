@@ -2,6 +2,19 @@
   // Dark treant animation - copy bams only
   //COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Treant_IWD2~         ~override~
   
+  // Yuan-Ti archer animation
+  LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xE000 slotMax = 0xefff RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% YUAN_TI_ARCHER_ACIFER~ UNLESS ~YUAN_TI_ARCHER_ACIFER~
+  CLEAR_IDS_MAP
+  COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/Yuan_Ti_archer_Acifer/exxx.ini~ ~override/%hexNumber%.ini~
+  ACTION_BASH_FOR ~%MOD_FOLDER%/animations/BG2_EE_animations/Yuan_Ti_archer_Acifer~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
   // Animation - will-o'-wisp
   COPY ~%MOD_FOLDER%/animations/BG2_EE_animations/WISP_BGEE~         ~override~
 

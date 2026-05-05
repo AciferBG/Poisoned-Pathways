@@ -375,6 +375,7 @@ COPY ~%MOD_FOLDER%/cre/AC#PPYU2.cre~ ~override~ // yuan-ti archer
 
 COPY ~%MOD_FOLDER%/cre/AC#PPOR1.cre~ ~override~ // yuan-ti archer Wadal Hrun in glade area ACPP30
   SAY NAME1 @23 SAY NAME2 @23
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~YUAN_TI_ARCHER_ACIFER~))
 
 COPY ~%MOD_FOLDER%/cre/AC#PPWOW.cre~ ~override~ // Will-o'-wisp
   SAY NAME1 @20 SAY NAME2 @20
@@ -394,6 +395,7 @@ COPY ~%MOD_FOLDER%/cre/AC#PPPX.cre~ ~override~ // Will-o'-pox
   
 COPY ~%MOD_FOLDER%/cre/AC#PPOR2.cre~ ~override~ // Wadal Hrun (yuan-ti leader)
   SAY NAME1 @23 SAY NAME2 @23
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~YUAN_TI_ARCHER_ACIFER~))
 
 COPY ~%MOD_FOLDER%/cre/AC#PPBOY.cre~ ~override~ // Henry (Boy)
   SAY NAME1 @24 SAY NAME2 @24

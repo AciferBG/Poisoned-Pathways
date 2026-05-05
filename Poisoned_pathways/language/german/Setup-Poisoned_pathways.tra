@@ -30,17 +30,17 @@
 @37 = ~Schlamm-Zombie~
 @38 = ~Viper~
 @39 = ~Wald-Woad~
-@40  = ~Debbie Gobblebubble~
-@41 = ~Graberd-Elementar~
+@40 = ~Debbie Gobblebubble~
+@41 = ~Graberden-Elementar~
 @42 = ~Uraltes Blut-Amniot~
 @43 = ~Blutlache~
-@44 = ~Hypnotisierter Ankheg~
+@44 = ~Verwirrter Ankheg~
 @45 = ~Mismal Al'Visalle~
-@46 = ~Der Unsterbliche~
+@46 = ~Der Nichtsterbende~
 @47 = ~Blutgetränkter Geist~
 @48 = ~Grauenhafter Symbiont~
 @49 = ~Elfengeist~
-@50 = ~Knochenweird~
+@50 = ~Knochengraus~
 @51 = ~Mythrien Sarath~
 @52 = ~Yuan-Ti-Bogenschütze~
 @53 = ~Skorpion~
@@ -92,16 +92,16 @@
 @311 = ~Legt Eure Ängste ab, wenn auch nur für eine Weile.~ [AC#PPELB]
 @312 = ~Die Wildnis flüstert denen Ruhe zu, die zuhören.~ [AC#PPELC]
 @313 = ~Keine Klinge heilt, was Zeit und Güte vermögen.~ [AC#PPELD]
-@314 = ~Lasst nicht Zorn Eure Hand führen, sondern von Erbarmen.~ [AC#PPELE]
-@315 = ~Wir schlagen nicht zu – wir bestehen.~ [AC#PPELF]
+@314 = ~Lasst nicht Zorn Eure Hand führen, sondern Erbarmen.~ [AC#PPELE]
+@315 = ~Wir schlagen nicht zurück – wir halten aus.~ [AC#PPELF]
 @316 = ~Eldaths Segen über Euch, Freund der stillen Pfade.~ [AC#PPELG]
 
-@325 = ~Die Winde tragen keine böse Absicht. Ich ebenso wenig.~ [AC#PPELL]
+@325 = ~Die Winde tragen keine böse Absicht. Ebenso wenig ich.~ [AC#PPELL]
 @326 = ~Wie Blätter fallen, so mögen auch Eure Lasten von Euch gleiten.~ [AC#PPELM]
 @327 = ~Frieden sei mit Euch, Reisender.~ [AC#PPELN]
 @328 = ~Ich hoffe, eines Tages Frieden zu bringen...~ [AC#PPELO]
 
-@330 = ~Ich bewahre, was wenig geblieben ist.~ [AC#PPMYB]
+@330 = ~Ich bewahre, was geblieben ist.~ [AC#PPMYB]
 @331 = ~Bruchstücke von Glanz verweilen noch.~ [AC#PPMYA]
 @332 = ~Mythale: Gebrochen, nicht vergessen.~ [AC#PPMYC]
 
@@ -115,8 +115,8 @@
 @348 = ~Ich hoffe, eines Tages Frieden zu bringen...~ [AC#PPED8]
 
 @351 = ~Willkommen in meiner bescheidenen Honigwabe.~ [AC#PPHO1]
-@352 = ~Das Leben ist süßer, wenn man seine Honig-Kombination findet.~ [AC#PPHO2]
-@353 = ~Ein Tropfen Honig heilt, wo eine Flut aus Salz nur verwundet.~ [AC#PPHO3]
+@352 = ~Das Leben schmeckt süßer, wenn man seine Honig-Kombination gefunden hat.~ [AC#PPHO2]
+@353 = ~Ein Tropfen Honig heilt, wo eine Flut aus Salz nur schmerzt.~ [AC#PPHO3]
 
 @360 = ~*hust*~ [AC#PPCH1]
 @361 = ~*hust*~ [AC#PPCH2]
@@ -139,7 +139,7 @@
 @907 = ~^0xFF22B4E6 hat +1 maximalen Trefferpunkt erhalten. ^-~
 @908 = ~^0xFF22B4E6 hat +2 maximale Trefferpunkte erhalten. ^-~
 
-@910 = ~Talona’s Kuss~
+@910 = ~Talonas Kuss~
 @911 = ~Schlafsummen~
 @912 = ~Todesschleier~
 @913 = ~Eldaths besänftigende Gegenwart~
@@ -183,7 +183,7 @@
 @955 = ~Zar’khaans Wunder~
 
 @1000 = ~Vergifteter Pfeil~
-@1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift überzogen, das sich auf gewöhnlichem Wege nicht entfernen lässt. Ihr sollt den Pfeil zu Alatoasz Berendim nach Dämmerwaldtal, Eldaths Heiligtum, bringen, damit das Gift untersucht und seine Herkunft zurückverfolgt werden kann.~
+@1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift überzogen, das sich auf gewöhnlichem Wege nicht entfernen lässt. Ihr sollt den Pfeil zu Alatoasz Berendim ins Dämmerwaldtal, Eldaths Heiligtum, bringen, damit das Gift untersucht und seine Herkunft zurückverfolgt werden kann.~
 
 @1002 = ~Hainblüte~
 @1003 = ~Die Hainblüte ist eine außergewöhnlich seltene Giftpflanze, deren wächserne, fingerhutartige Glocken in schimmernden Tönen von tiefem Violett bis zu zartem Rosa erblühen. Sie wächst nur in uralten, von Magie durchwirkten elfischen Hainen, oft nahe stiller Quellbecken oder innerhalb der Grenzen eines Mythals.
@@ -198,7 +198,7 @@ Ihr müsst eine dieser Blüten zu Alatoasz Berendim nach Dämmerwaldtal bringen.
 @1006 = ~Notiz~
 @1007 = ~Skann,
 
-ich brauche Euch, um eine größere Lieferung meiner Arbeit an mehrere interessierte Parteien auszuliefern. Trefft mich am markierten Ort im Fliegenpilz-Hain. Vernichtet diese Nachricht, damit sie nicht in falsche Hände gerät.
+ich brauche Euch, um eine größere Lieferung meiner Arbeit an mehrere interessierte Gruppen auszuliefern. Trefft mich am markierten Ort im Fliegenpilz-Hain. Vernichtet diese Nachricht, damit sie nicht in falsche Hände gerät.
 
 Delgorth~
 // itm files
