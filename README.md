@@ -54,11 +54,11 @@ Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core g
 
 **Acifer** – Writing, Area Art, Item Graphics & Design, Quest Design, Scripting, Music <br>
 **Lava** – Writing, Additional Area Art, Item Graphics & Design, Quest Design, Scripting, Worldmap Icons <br>
+**Weigo** – BP-BGT Worldmap mod compatibility <br>
 **morpheus562** – Bug fixing, additional scripting, EEex compatibility <br>
 **Megrimlock** – English version <br>
-**Weigo** – BP-BGT Worldmap mod compatibility <br>
 **ElGamerViejuno** – Beta-testing, Spanish version <br>
-**Trouveur** – Beta-testing <br>
+
 
 ---
 
