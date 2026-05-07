@@ -66,7 +66,7 @@
 
 @4433 = ~Vom Verkauf dieser Waffen lebe ich!~
 
-@4434 = ~Gold kann ich Euch keines geben. Doch Eldaths Segen steht Euch offen. Mit jeder Waffe, die Ihr ihr darbringt, wird sie Euch Gnade erweisen – Euch Leben und Lebenskraft schenken, jenseits dessen, was Töten allein vermag. Mit jeder Klinge, die Ihr aufgebt, wachst und gedeiht Ihr, während durch die Waffe niemand mehr sterben wird.~
+@4434 = ~Gold kann ich Euch keines geben, doch Eldaths Segen. Mit jeder Waffe, die Ihr ihr niederlegt, wird sie Euch Gnade gewähren – Euch Leben und Lebenskraft schenken, jenseits dessen, was Töten jemals vermag. Mit jeder Klinge, die Ihr aufgebt, wachst und gedeiht Ihr, während durch die Waffe niemand mehr sterben wird.~
 
 @4435 = ~Eine Waffe weniger – mehr Leben für Euch. Das ist Eldaths Angebot.~
 
@@ -90,7 +90,7 @@
 
 @4445 = ~Mehr verlange ich nicht. Wann immer Ihr eine Waffe findet, die Ihr selbst nicht führen wollt, denkt an Eldath – und nutzt die Gelegenheit, Frieden in die Welt zu tragen. Lebt wohl, <PRO_RACE>.~
 
-@4446 = ~Seid gegrüßt, <RACE>. Seid Ihr gekommen, Eure Waffen niederzulegen und den Segen der Göttin zu empfangen?~
+@4446 = ~Seid gegrüßt, <RACE>. Seid Ihr gekommen, um Eure Waffen niederzulegen und den Segen der Göttin zu empfangen?~
 
 @4447 = ~Was ist dies für ein Ort?~
 
@@ -190,7 +190,7 @@
 
 @4495 = ~Schwarzschnitter flüstert von Hunger. Möge das Becken ihm Schweigen lehren.~
 
-@4496 = ~Ich halte Lilarcors Geplapper nicht mehr aus. Nehmt es. Wenn ihn jemand zum Schweigen bringen kann, dann Ihr.~
+@4496 = ~Ich halte Lilarcors Geplapper nicht mehr aus. Wenn ihn jemand zum Schweigen bringen kann, dann Ihr.~
 
 @4497 = ~Himmlischer Zorns Donner gehört in den Himmel, nicht in sterbliche Hände.~
 
@@ -200,11 +200,11 @@
 
 @4500 = ~Der Kurzbogen von Gesen – möge sein Blitz nun in Frieden schlafen.~
 
-@4501 = ~Selbst des Eisiger Tods Kälte sollte nun ruhen.~
+@4501 = ~Selbst die Kälte des Eisigen Tods sollte nun ruhen.~
 
 @4502 = ~Blaues Licht darf hier in Frieden verblassen.~
 
-@4503 = ~Selbst der Stecken der Magister kann hier zur Ruhe gelegt werden.~
+@4503 = ~Der Stecken der Magister soll hier zur Ruhe gelegt werden.~
 
 @4504 = ~Diese Klinge nennt sich selbst der Verdammte Verlierer. Möge sie stattdessen in stillen Wassern verschwinden.~
 

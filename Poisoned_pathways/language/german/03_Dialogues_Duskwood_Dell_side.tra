@@ -7,7 +7,7 @@
 @3705 = ~Und so, meine Kleinen, rettete das Eichhörnchen die Eiche, indem es den Sturm zum Husten brachte.~
 @3706 = ~Das war wundervoll! Ich mochte den Teil, wo die Wolken vor Lachen geweint haben!~
 @3707 = ~Du magst immer die lustigen Stellen. Ich mochte, wie das Eichhörnchen sogar den Donner überlistet hat.~
-@3708 = ~Aber das war nicht fair. Der Käfer hat es nicht verdient, zerquetscht zu werden.~
+@3708 = ~Die Geschichte war ungerecht. Der Käfer hat es nicht verdient, zerquetscht zu werden.~
 @3709 = ~Ich bleibe dabei: Der Käfer hat's verdient. Dummer Käfer.~
 @3710 = ~Es ist doch nur eine Geschichte... oder nicht? Vielleicht ist so etwas wirklich einmal geschehen?~
 @3711 = ~In jeder Geschichte steckt ein wenig Wahrheit, meine Kleinen. Ihr müsst mit mehr als nur den Ohren lauschen.~
@@ -463,7 +463,7 @@
 
 @3990 = ~Ein andermal vielleicht.~
 
-@3991 = ~*Hust, hust*! Verzeiht den Dunst! Zu viele brennende Dochte. Trotz allem… willkommen! Wollt Ihr etwas erwerben? *Hust*!~
+@3991 = ~*Hust, hust*! Entschuldigt den ganzen Qualm! Zu viele brennende Kerzen. Trotz allem heiße ich Euch willkommen! Wollt Ihr etwas erwerben? *Hust*!~
 
 @3992 = ~Was bietet Ihr an?~
 
@@ -495,7 +495,7 @@
 
 @4006 = ~Mögen Eldaths milde Brise Euch führen, <BROTHERSISTER>.~
 
-@4007 = ~Eldath ist die Göttin des Friedens, der stillen Wasser und der ruhigen Haine. Wir gewähren Zuflucht jenen, die Harmonie suchen, fern vom Lärm der Welt. Keine Klinge wird gezogen, wo ihr Segen verweilt.~
+@4007 = ~Eldath ist die Göttin des Friedens, der stillen Wasser und der ruhigen Haine. Wir gewähren jenen Zuflucht, die Harmonie suchen. Keine Klinge wird gezogen, wo ihr Segen verweilt.~
 
 @4008 = ~Wenn ich noch einmal "Frieden" höre, fange ich an, Bäume zu fällen. Dann Köpfe. In dieser Reihenfolge.~
 
@@ -557,9 +557,9 @@
 
 @4037 = ~Was verlangt Ihr von mir?~
 
-@4038 = ~Ich bin kein Laufbursche für Mönche und Met. Sucht Euch jemand anderen für Eure Fässer.~
+@4038 = ~Ich bin kein Laufbursche für Mönche und Met. Sucht Euch jemand anderen für Eure Lieferung.~
 
-@4039 = ~In Athkatla steht ein Haus des Lachens und des Liedes – die Schenke "Die Fünf Krüge". Ihr Wirt, Samuel, ist ein Mann der Worte und des Witzes – doch selbst eine solche Bühne könnte durch Süße gewinnen. Würdet Ihr ein Fass meines Honigmets zu ihm tragen? Handelt einen gerechten Preis im Namen Eldaths aus, damit die Tempel und Gärten der Schweigsamen daran teilhaben mögen.~
+@4039 = ~In Athkatla steht ein Haus des Lachens und des Liedes – die Schenke "Zu den Fünf Krügen". Ihr Wirt, Samuel Donnerbölk, ist ein Mann der Worte und des Weines. Würdet Ihr ein Fass meines Honigmets zu ihm bringen? Handelt einen gerechten Preis im Namen Eldaths aus, damit die Tempel und Gärten der Schweigsamen daran teilhaben mögen.~
 
 @4040 = ~Gut. Ich werde Euren Honigmet zu Samuel von den Fünf Krügen bringen.~
 
@@ -567,7 +567,7 @@
 
 @4042 = ~Ihr kennt die Geschicke des Handels gewiss besser als ich. Fordert eine Summe, die den Wert des Mets ehrt, und kehrt mit der Zahlung zu mir zurück. Mit diesen Münzen werden wir neue Güter für Eldaths Heiligtum im Tal erwerben, damit der Frieden so sorgsam gepflegt werde wie ein Bienenstock.~
 
-@4043 = ~Mein Dank fließt so reich wie der Nektar der Waben. Mögen Eure Worte in jener Schenke so sanft sein wie Honig, und möge Samuel die Weisheit des gerechten Handels erkennen. Kehrt mit der Bezahlung zurück, und ich werde Euch einen Anteil gewähren – denn auch wer dem Frieden dient, soll ein wenig Süße kosten.~
+@4043 = ~So mögen Eure Worte in jener Schenke so sanft sein wie Honig, und möge Samuel die Weisheit des gerechten Handels erkennen. Kehrt mit der Bezahlung zurück, und ich werde Euch einen Anteil gewähren – denn auch wer dem Frieden dient, soll seine Süße kosten.~
 
 @4044 = ~So sei es. Der Bienenstock lehrt Geduld; vielleicht wird ein andrer Tag, ein andrer Mensch Eldaths Süße in die Welt tragen.~
 
@@ -803,7 +803,7 @@
 
 @4160 = ~Hm, immer noch kein Glück bei der Wurmsuche. Ernsthaft, wie schwer kann das sein? Wo sind all die Würmer, wenn man sie mal braucht? Ich habe überall gesucht.~
 
-@4161 = ~Rate mal! Ich habe einen Wurm für dich.~
+@4161 = ~Schau mal! Ich habe einen Wurm für dich.~
 
 @4162 = ~Geduld. Du wirst schon einen finden.~
 
@@ -819,7 +819,7 @@
 
 @4168 = ~Oh nein. Ich kann ihn doch nicht einfach töten. Er sieht so nett aus. Und ich… ich will ihn "Nudel" nennen und ihm Tricks beibringen!~
 
-@4169 = ~Der sollte Fischfutter sein!~
+@4169 = ~So ein Wesen sollte kein Fischfutter sein!~
 
 @4170 = ~Sieht so aus, als würdest du ihn einfach zu sehr mögen.~
 

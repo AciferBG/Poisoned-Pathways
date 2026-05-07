@@ -149,10 +149,10 @@
 @917 = ~Kugel der Finsternis~
 @918 = ~Eldath gewährt Euch Gelassenheit in der Gegenwart friedlicher Tiere.~
 
-@920 = ~^0xFF22B4E6 hat +1% Resistenz gegen Hiebschaden erhalten. ^-~
-@921 = ~^0xFF22B4E6 hat +1% Resistenz gegen Geschossschaden erhalten. ^-~
-@922 = ~^0xFF22B4E6 hat +1% Resistenz gegen Stichschaden erhalten. ^-~
-@923 = ~^0xFF22B4E6 hat +1% Resistenz gegen Wuchtschaden erhalten. ^-~
+@920 = ~^0xFF22B4E6 hat +1% Resistenz gegen Klingenwaffen erhalten. ^-~
+@921 = ~^0xFF22B4E6 hat +1% Resistenz gegen Geschosswaffen erhalten. ^-~
+@922 = ~^0xFF22B4E6 hat +1% Resistenz gegen Stichwaffen erhalten. ^-~
+@923 = ~^0xFF22B4E6 hat +1% Resistenz gegen Wuchtwaffen erhalten. ^-~
 @924 = ~^0xFF22B4E6 hat +1% Magieresistenz erhalten. ^-~
 
 @930 = ~Gestank~
@@ -183,7 +183,7 @@
 @955 = ~Zar’khaans Wunder~
 
 @1000 = ~Vergifteter Pfeil~
-@1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift überzogen, das sich auf gewöhnlichem Wege nicht entfernen lässt. Ihr sollt den Pfeil zu Alatoasz Berendim ins Dämmerwaldtal, Eldaths Heiligtum, bringen, damit das Gift untersucht und seine Herkunft zurückverfolgt werden kann.~
+@1001 = ~Dieser Pfeil ist mit einem gefährlichen Gift überzogen, welches sich auf gewöhnliche Weise nicht kurieren lässt. Ihr sollt den Pfeil zu Alatoasz Berendim ins Dämmerwaldtal, Eldaths Heiligtum, bringen, damit das Gift untersucht und seine Herkunft zurückverfolgt werden kann.~
 
 @1002 = ~Hainblüte~
 @1003 = ~Die Hainblüte ist eine außergewöhnlich seltene Giftpflanze, deren wächserne, fingerhutartige Glocken in schimmernden Tönen von tiefem Violett bis zu zartem Rosa erblühen. Sie wächst nur in uralten, von Magie durchwirkten elfischen Hainen, oft nahe stiller Quellbecken oder innerhalb der Grenzen eines Mythals.
@@ -305,7 +305,7 @@ Gewisse Taloniten nutzten solche Steine, um mit rivalisierenden Priestern abzure
 EIGENSCHAFTEN:
 
 Kampffähigkeiten:
-– THAC0 gegen Kleriker: +3
+– ETW0 gegen Kleriker: +3
 
 Besondere Fähigkeiten:
 – Wenn getragen oder angelegt, vertreibt dieser Ioun-Stein die giftigen Dämpfe, die den Eingang zum Turm in Myth Unnohyr versperren
@@ -380,17 +380,15 @@ Gewicht: 0~
 
 @1054 = ~Emblem~
 @1055 = ~Heiliges Symbol der Eldath~
-@1057 = ~Dies ist ein schlichtes Emblem, das Eldaths Zeichen darstellt. Obwohl unscheinbar im Äußeren, scheint es jenen stillen Schutz zu gewähren, die die Göttin des Friedens verehren. Sein Einfluss lenkt den Träger unmerklich von Aggression fort, stärkt die Verteidigung und mindert zugleich den Drang zum Angriff.
+@1057 = ~Dies ist ein schlichtes Emblem, das Eldaths Symbol darstellt. Obwohl unscheinbar im Äußeren, scheint es jenen Schutz zu gewähren, die die Göttin des Friedens verehren. Es lenkt den Träger unmerklich von Aggression fort, stärkt seine Verteidigung und mindert zugleich seinen Drang zum Angriff.
   
 EIGENSCHAFTEN:
 
-Ausgerüstete Fähigkeiten:
 – Rüstungsklasse: +1
 – Rettungswürfe: +1
-– THAC0: –2
+– ETW0: –2
 
 Gewicht: 0~
-// itm files
 
 @1058 = ~Schildfragment~
 
@@ -497,7 +495,7 @@ Kampffähigkeiten:
 – Verursachter Säureschaden: +10%
 – Ermöglicht Nah- und Fernangriffe
 
-THAC0: +3
+ETW0: +3
 Schaden (Nahkampf): 1W4+3 (Stich), +1 Säureschaden
 Schaden (Fernkampf): 1W4+3 (Säure)
 Initiativefaktor: 1
@@ -521,7 +519,7 @@ Fähigkeiten:
 Ausgerüstete Fähigkeiten:
 – Der Träger ist immun gegen sämtliche Effekte, die seine Bewegungsfreiheit beeinträchtigen. Dies schließt Hast und Verlangsamung ein.
 
-THAC0: +3
+ETW0: +3
 Schaden: 1W2 (nicht-tödlich)
 Initiativefaktor: 2
 Waffenfertigkeit: Kampfstab
@@ -557,7 +555,7 @@ EIGENSCHAFTEN:
 Kampffähigkeiten:
 – Jeder erfolgreiche Treffer hat eine 15% Chance, das Glück des Ziels für 2 Runden um 1 zu senken (Rettungswurf gegen Zauber bei –4 negiert), während das Glück des Trägers für einen ganzen Tag um 1 erhöht wird.
 
-THAC0: +3
+ETW0: +3
 Schaden: 1W10+3 (Hieb)
 Initiativefaktor: 7
 Waffenfertigkeit: Zweihandschwert
@@ -584,7 +582,7 @@ Kampffähigkeiten:
 – Benötigt keine Munition; verschießt herbeigerufene magische Dornbolzen
 – 20% Chance pro Treffer, das Ziel zu verstricken (Rettungswurf gegen Zauber bei –1 negiert)
 
-THAC0: +1
+ETW0: +1
 Schaden: 1W6+1 (Geschoss)
 Initiativefaktor: 4
 Waffenfertigkeit: Armbrust
@@ -694,7 +692,7 @@ EIGENSCHAFTEN:
 Kampffähigkeiten:
 – Jeder erfolgreiche Treffer hat eine 50% Chance, zusätzlich 1W6 Stichschaden zu verursachen
 
-THAC0: +2
+ETW0: +2
 Schaden: 1W10+2 (Stich)
 Initiativefaktor: 7
 Waffenfertigkeit: Hellebarde
@@ -739,7 +737,7 @@ Ausgerüstete Fähigkeiten:
 – Kann zwei zusätzliche Zauber des 1. Grades und einen zusätzlichen Zauber des 2. Grades memorieren (nur Barde)
 
 Schaden: +1 (nur Barde)
-THAC0: +3
+ETW0: +3
 Initiativefaktor: 3
 Waffenfertigkeit: Kurzbogen
 Typ: Zweihändig
@@ -763,7 +761,7 @@ Kampffähigkeiten:
 – Angriffe pro Runde: +1/2
 – Jeder erfolgreiche Treffer hat eine 50% Chance, zusätzlich 1W6+3 Wuchtschaden zu verursachen
 
-THAC0: +2
+ETW0: +2
 Schaden: 1W6+3 (Wucht)
 Initiativefaktor: 5
 Waffenfertigkeit: Flegel/Morgenstern
@@ -781,7 +779,7 @@ Gewicht: 12~
 
 EIGENSCHAFTEN:
 
-THAC0: –4
+ETW0: –4
 Schaden: 4W4+5 (Wucht)
 Initiativefaktor: 1
 Waffenfertigkeit: Kriegshammer
@@ -808,7 +806,7 @@ Kampffähigkeiten:
 – Jeder erfolgreiche Treffer hat eine 5% Chance, die Kälteresistenz des Ziels für 3 Runden um 10% zu senken (kein Rettungswurf)
 – Pro Treffer kann nur eine der obigen Fähigkeiten ausgelöst werden
 
-THAC0: +3
+ETW0: +3
 Schaden: 2W4+3 (Wucht)
 Initiativefaktor: 4
 Waffenfertigkeit: Flegel/Morgenstern
@@ -849,14 +847,13 @@ Solche Tränke sind selten und werden mit Respekt behandelt, denn sie lehren, wa
 
 EIGENSCHAFTEN:
 
-Fähigkeit (Aufladung):
-– Beim Trinken verliert der Charakter dauerhaft 1 Punkt Stärke, erhält jedoch entweder *Schwere Wunden heilen* oder *Gift neutralisieren* (je 50 % Chance) als angeborene Fähigkeit.
+– Beim Trinken verliert der Charakter dauerhaft 1 Punkt Stärke, erhält jedoch entweder "Schwere Wunden heilen" oder "Gift neutralisieren" (je 50 % Chance) als angeborene Fähigkeit.
 
 Gewicht: 1~
 
 @1181 = ~Zauberstab~
 
-@1182 = ~Zauberstab der Guten Beere~
+@1182 = ~Zauberstab der Guten Beeren~
 
 @1183 = ~Dieser schlanke Zauberstab scheint eher gewachsen als geschnitzt zu sein – er besteht aus einem einzelnen, gedrehten Zweig, der sich glatt anfühlt und noch immer warm vom Leben ist. An beiden Enden sind kleine Beeren gewachsen, die schwach mit druidischer Magie glimmen.
 
@@ -864,7 +861,7 @@ Obwohl er unscheinbar wirkt, besitzt dieser Stab die Macht, Gute Beeren hervorzu
 
 EIGENSCHAFTEN:
 
-– Kann pro Aufladung *Gute Beeren* wirken
+– Kann "Gute Beeren" wirken
 
 Erfordert:
  9 Weisheit
@@ -890,7 +887,7 @@ Gewicht: 1~
 
 EIGENSCHAFTEN:
 
-THAC0: +2
+ETW0: +2
 Schaden: 1W4+3 (Geschoss), +2 Stichschaden
 Abschussgerät: Schleuder
 
@@ -925,7 +922,7 @@ Kampffähigkeiten:
 Fähigkeiten (Aufladungen):
 – Giftstoß (1× pro Tag): Ziel erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde (Rettungswurf gegen Tod bei +1 negiert)
 
-THAC0: +3
+ETW0: +3
 Schaden: 1W6+3 (Wucht)
 Initiativefaktor: 1
 Waffenfertigkeit: Kampfstab
@@ -938,16 +935,15 @@ Gewicht: 3~
 
 @1193 = ~Pfeile der Betörung~
 
-@1194 = ~Diese kunstvoll gefertigten Pfeile sind von keiner gewöhnlichen Machart. Ihre Spitzen sind zu kleinen Herzen aus polierter Koralle geformt, die im Licht schwach schimmern. Wenn sie abgeschossen werden, versuchen sie den Willen ihres Ziels zu beugen und es auf die Seite des Schützen zu ziehen.
+@1194 = ~Diese kunstvoll gefertigten Pfeile sind von keiner gewöhnlichen Machart. Ihre Spitzen sind zu kleinen Herzen aus polierter Koralle geformt, die im Licht schwach schimmern. Wenn sie abgeschossen werden, versuchen sie den Willen ihres Ziels zu brechen und auf die Seite des Schützen zu ziehen.
 
 EIGENSCHAFTEN:
 
-Kampffähigkeiten:
-– Ziel muss Rettungswurf gegen Zauber bestehen oder wird für 5 Runden betört
+– Das Ziel muss einen Rettungswurf gegen Zauber bestehen oder es wird für 5 Runden bezaubert
 
-THAC0: +1
+ETW0: +1
 Schaden: 0 (Geschoss)
-Abschussgerät: Bogen
+Schusswaffe: Bogen
 
 Gewicht: 0~
 
@@ -960,7 +956,7 @@ EIGENSCHAFTEN:
 Kampffähigkeiten:
 – Ziel muss Rettungswurf gegen Tod bestehen oder erleidet 10 Sekunden lang 2 Punkte Giftschaden pro Sekunde
 
-THAC0: +1
+ETW0: +1
 Schaden: 1W4+1
 Schadensart: Geschoss
 Abschussgerät: Schleuder
@@ -979,7 +975,7 @@ Ausgerüstete Fähigkeiten:
 Kampffähigkeiten:
 – Bei 50 % aller Treffer muss das Ziel einen Rettungswurf gegen Tod bestehen oder erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde
 
-THAC0: +3
+ETW0: +3
 Schaden: 1W6+3 (Wucht)
 Initiativefaktor: 1
 Waffenfertigkeit: Keule
@@ -991,33 +987,31 @@ Gewicht: 1~
 
 @1199 = ~Baumhirtenhandschuhe~
 
-@1200 = ~Diese massiven Handschuhe bestehen aus Rinde und lebenden Wurzeln, zusammengehalten von Streifen aus Eisenholz. Ihre Oberfläche bewegt sich leicht, als zögen sie noch immer Kraft aus unsichtbarer Erde. Druiden erzählen, sie seien aus Ehrfurcht vor den Baumhirten des Waldes von Tethir geschaffen worden – Wächtern so geduldig wie der Wald  selbst.
+@1200 = ~Diese massiven Handschuhe bestehen aus Rinde und Wurzeln. Druiden erzählen, sie seien aus Ehrfurcht vor den Baumhirten des Waldes von Tethir geschaffen worden – Wächtern so geduldig wie der Wald  selbst.
 
-Wenn der Träger durch "Rindenhaut" gehärtet ist, leiten die Handschuhe diese lebendige Rüstung in rohe Kraft um und verleihen Schlägen die Wucht einer mächtigen Eiche.
+Wenn der Träger durch Rindenhaut gehärtet ist, verleihen die Handschuhe ihrem Träger die Kraft einer mächtigen Eiche.
 
 EIGENSCHAFTEN:
 
-Ausgerüstete Fähigkeiten:
-– +2 Stärke solange *Rindenhaut* aktiv ist
++2 Stärke solange "Rindenhaut" aktiv ist
 
 Gewicht: 2~
 
 @1201 = ~Amulett der inneren Stille~
 
-@1202 = ~Dieses schlichte hölzerne Amulett, in das eine einzelne grüne Perle gefasst ist, trägt keine Inschrift. Man sagt, es sei in den stillen Wassern Eldaths gesegnet worden. Wenn Stille den Träger umgibt, erhebt sich stattdessen ein tiefer innerer Frieden, der den Geist gegen jede fremde Einflussnahme schützt. Weder Verwirrung noch Betörung, Beherrschung noch betäubende Magie vermögen das stille Zentrum der Seele zu erschüttern.
+@1202 = ~Dieses schlichte hölzerne Amulett, in das eine einzelne grüne Perle gefasst ist, trägt keine Inschrift. Man sagt, es sei in den Wassern Eldaths gesegnet worden. Wenn Stille den Träger umgibt, erhebt sich ein tiefer innerer Frieden, der den Geist gegen jede fremde Einflussnahme schützt. Weder Verwirrung noch Bezauberung, Beherrschung noch betäubende Magie vermögen das stille Zentrum der Seele zu erschüttern.
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
-– Während der Träger verstummt ist: Immunität gegen Suggestion, Betörung, Beherrschung, Befehl, Schlaf, Irrgarten, Betäubung, Verwirrung und Psionischer Schock.
+– Während "Stille" auf dem Träger liegt: Immunität gegen Bezauberung, Beherrschung, Befehl, Schlaf, Irrgarten, Betäubung, Verwirrung und Psionische Angriffe.
 
 Gewicht: 1~
 
 @1203 = ~Honigmet aus dem Dämmerwaldtal~
 
-@1204 = ~Dieses schwere Fass ist mit goldenem Met gefüllt, gebraut von einem Eldathyn-Mönch im Dämmerwaldtal. Der Nektar trägt die geduldige Arbeit unzähliger Bienen in sich.
+@1204 = ~Dieses schwere Gefäß ist mit goldenem Met gefüllt, gebraut von einem Mönch im Dämmerwaldtal. Der Nektar trägt die geduldige Arbeit unzähliger Bienen.
 
-Der Mönch hat Euch dieses Fass anvertraut und Euch gebeten, es zu Samuel Donnerbauch, dem Wirt der Fünf Krüge in Athkatla, zu bringen. Sobald Ihr die Bezahlung erhalten habt, sollt Ihr das Gold zum Mönch zurückbringen, damit es den Tempeln und Gärten Eldaths zugutekommen kann.
+Der Mönch hat Euch gebeten, es zu Samuel Donnerbölk, dem Wirt der Fünf Krüge in Athkatla, zu bringen. Sobald Ihr die Bezahlung erhalten habt, sollt Ihr mit dem Gold zu ihm zurückkehren, um Euren Anteil am Verkauf zu erhalten.
 
 Gewicht: 1~
 
@@ -1102,7 +1096,7 @@ Fähigkeiten (Aufladungen):
 – Spiegelbild einmal pro Tag
   Dauer: 1 Runde
 
-THAC0: +3
+ETW0: +3
 Schaden: 1W8+3 (Hieb)
 Initiativefaktor: 2
 Waffenfertigkeit: Krummsäbel/Wakizashi/Ninjatō
@@ -1172,10 +1166,10 @@ Nun neu geschmiedet, verändert die Klinge ihre Natur mit dem Lauf des Himmels. 
 EIGENSCHAFTEN:
 
 Angelegte Fähigkeiten:
-– Bei Tag und Morgendämmerung: +1 THAC0 und +1 Schaden
+– Bei Tag und Morgendämmerung: +1 ETW0 und +1 Schaden
 – Bei Nacht und Abenddämmerung: +1 RK und +1 auf alle Rettungswürfe
 
-THAC0: +3
+ETW0: +3
 Schaden: 2W4+3 (Hieb)
 Initiativefaktor: 5
 Waffenfertigkeit: Bastardschwert
@@ -1215,15 +1209,15 @@ Die Magie des Staubs hält an, bis sie gebannt, freiwillig beendet oder durch ei
 
 @1242 = ~Heilpfeil~
 
-@1243 = ~Diese Pfeile sind eine Erfindung der Gläubigen Eldaths. Jeder Schaft trägt ein kleines Fläschchen mit geweihtem Wasser aus einer heiligen Quelle. Wenn der Pfeil sein Ziel trifft, zerbricht das Fläschchen und setzt einen sanften Schwall göttlicher Essenz frei, der in das verwundete Fleisch des Getroffenen einsickert.
+@1243 = ~Diese Pfeile sind eine Kreation der Anhänger Eldaths. Der Schaft trägt ein kleines Fläschchen mit geweihtem Wasser einer heiligen Quelle. Wenn der Pfeil sein Ziel trifft, zerbricht das Fläschchen und setzt einen sanften Schwall frei, der in das verwundete Fleisch des Getroffenen einwirkt.
 
 Obwohl die Pfeile zur Heilung bestimmt sind, kann selbst ein sanfter Treffer Prellungen oder kleine Wunden verursachen, wenn er aus einem starken Bogen abgeschossen wird — ein geringer Preis für die Heilung, die sie spenden.
 
 EIGENSCHAFTEN:
 
-THAC0: +1
-Abschussgerät: Bogen
-Besonderes: Stellt bei dem getroffenen Ziel 4W6 Trefferpunkte wieder her
+ETW0: +1
+Schusswaffe: Bogen
+Stellt bei dem getroffenen Ziel 4W6 Trefferpunkte wieder her
 
 Gewicht: 0~
 
@@ -1241,9 +1235,9 @@ Angelegte Fähigkeiten:
 – 25 % Chance, beim Treffer auf den Träger *Mittlere Wunden heilen* zu wirken
 
 Kampffähigkeiten:
-– Jeder erfolgreiche Treffer verursacht für den Träger einen kumulativen Malus von –2 auf THAC0 für 2 Runden
+– Jeder erfolgreiche Treffer verursacht für den Träger einen kumulativen Malus von –2 auf ETW0 für 2 Runden
 
-THAC0: +2
+ETW0: +2
 Schaden: 1W8+2 (Hieb)
 Initiativefaktor: 5
 Waffenfertigkeit: Axt
@@ -1255,12 +1249,11 @@ Gewicht: 5~
 
 @1246 = ~Sandalen des Freiwanderers~
 
-@1247 = ~Diese schlichten Ledersandalen schützen ihren Träger auf <PRO_HISHER> friedlicher Reise. Sie werden besonders von jenen geschätzt, die ohne Gewalt wandern und sich von niemandem aufhalten lassen. Mit ihnen wird kein Schritt vergeudet.
+@1247 = ~Diese schlichten Ledersandalen schützen ihren Träger auf <PRO_HISHER>er friedlicher Reise. Sie werden besonders von jenen geschätzt, die ohne Gewalt wandern und sich von niemandem aufhalten lassen. Mit ihnen wird kein Schritt vergeudet.
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
-– Immunität gegen Personen festhalten und Verlangsamung
+– Immunität gegen Personen festhalten und Verlangsamen
 
 Gewicht: 4~
 

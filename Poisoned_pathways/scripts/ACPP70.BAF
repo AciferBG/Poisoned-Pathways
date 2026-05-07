@@ -12,10 +12,26 @@ RESPONSE #100
     SpawnPtDeactivate("Spawn_ankhegs_entry")
     SpawnPtDeactivate("Spawn_spiders01")  
     SpawnPtDeactivate("Spawn_mounds")
+        SpawnPtDeactivate("Spawn_mounds_50")
+        SpawnPtDeactivate("Spawn_elementals_50")
+        SpawnPtDeactivate("Spawn_ankhegs_entry_50")
+        SpawnPtDeactivate("Spawn_vermin_entry_50")
+        SpawnPtDeactivate("Spawn_ankhegs_tower_50")
+        SpawnPtDeactivate("Spawn_undead_entry_50")
+        SpawnPtDeactivate("Spawn_undead_tower_50")
+        SpawnPtDeactivate("Spawn_spiders02_50")
+        SpawnPtDeactivate("Spawn_spiders03_50")
+        SpawnPtDeactivate("Spawn_spiders04_50")
+        SpawnPtDeactivate("Spawn_spiders05_50")
+        SpawnPtDeactivate("Spawn_undead02_50")
+        SpawnPtDeactivate("Spawn_undead03_50")
+        SpawnPtDeactivate("Spawn_undead04_50")
     TriggerActivation("Info_no_way_back",FALSE)
     SoundActivate("Portal01",FALSE)
     SoundActivate("Portal02",FALSE)
     TriggerActivation("Trigger_wardstone",FALSE)
+    SetRestEncounterProbabilityDay(0)
+    SetRestEncounterProbabilityNight(0)
 	SetGlobal("Prep","ACPP70",1)
 	Continue()
 END
@@ -48,6 +64,16 @@ THEN
       //RemoveAreaFlag(DEADMAGICZONE)
       SetGlobalTimer("AC#PP_WildMagicTimer","GLOBAL",6)
       Continue()
+END
+
+IF
+    GlobalGT("DeadMagicInfo","ACPP70",0)
+    Global("SetRestEncounters","ACPP70",0)
+THEN
+    RESPONSE #100
+        SetRestEncounterProbabilityDay(3)
+        SetRestEncounterProbabilityNight(3)
+        SetGlobal("SetRestEncounters","ACPP70",1)
 END
 
 IF
@@ -200,6 +226,37 @@ THEN
         AmbientActivate("PORTALBAM",TRUE)
         SoundActivate("Portal01",TRUE)
         SoundActivate("Portal02",TRUE)
+        // Deactivate 100% SpawnPoints
+        SpawnPtDeactivate("Spawn_spiders01")
+        SpawnPtDeactivate("Spawn_mounds")
+        SpawnPtDeactivate("Spawn_elementals")
+        SpawnPtDeactivate("Spawn_ankhegs_entry")
+        SpawnPtDeactivate("Spawn_vermin_entry")
+        SpawnPtDeactivate("Spawn_ankhegs_tower")
+        SpawnPtDeactivate("Spawn_undead_entry")
+        SpawnPtDeactivate("Spawn_undead_tower")
+        SpawnPtDeactivate("Spawn_spiders02")
+        SpawnPtDeactivate("Spawn_spiders03")
+        SpawnPtDeactivate("Spawn_spiders04")
+        SpawnPtDeactivate("Spawn_spiders05")
+        SpawnPtDeactivate("Spawn_undead02")
+        SpawnPtDeactivate("Spawn_undead03")
+        SpawnPtDeactivate("Spawn_undead04")
+        // Activate 50% SpawnPoints
+        SpawnPtActivate("Spawn_mounds_50")
+        SpawnPtActivate("Spawn_elementals_50")
+        SpawnPtActivate("Spawn_ankhegs_entry_50")
+        SpawnPtActivate("Spawn_vermin_entry_50")
+        SpawnPtActivate("Spawn_ankhegs_tower_50")
+        SpawnPtActivate("Spawn_undead_entry_50")
+        SpawnPtActivate("Spawn_undead_tower_50")
+        SpawnPtActivate("Spawn_spiders02_50")
+        SpawnPtActivate("Spawn_spiders03_50")
+        SpawnPtActivate("Spawn_spiders04_50")
+        SpawnPtActivate("Spawn_spiders05_50")
+        SpawnPtActivate("Spawn_undead02_50")
+        SpawnPtActivate("Spawn_undead03_50")
+        SpawnPtActivate("Spawn_undead04_50")
         AddJournalEntry(@13090,QUEST)
         SetGlobal("ActivatePortal","ACPP70",1)
 END
@@ -325,6 +382,7 @@ IF
 THEN
     RESPONSE #100
         SpawnPtActivate("Spawn_mounds")
+        SpawnPtDeactivate("Spawn_mounds_50")
         SetGlobal("SecondVisitSpawns","ACPP70",1)
 END
 /*
