@@ -16,7 +16,7 @@
 
 @4856 = ~Hört bitte auf, so nah an meinem Gesicht herumzufunkeln.~
 
-@4857 = ~Ich komme nur vorbei, kleine Wesen.~
+@4857 = ~Ich ziehe nur meines Weges, kleine Wesen.~
 
 @4858 = ~^0xFFE3B0FF Lilafern: ^-Wir sind frei!~
 
@@ -58,9 +58,9 @@
 
 @4877 = ~^0xFF9ADCE3 Tautröpfchen: ^-So! Ein Hauch Mondlicht, eine Prise Lachen und ein Stäubchen Bitte-nicht-sterben.~
 
-@4878 = ~^0xFFE3B0FF Lilafern: ^-Schau, Tautröpfchen! Ein unbeholfener Wanderer!~
+@4878 = ~^0xFFE3B0FF Lilafern: ^-Schau, Tautröpfchen! Ein Lulatsch!~
 
-@4879 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ach, sei still, Lilafern! Das ist ein Abenteurer, Dummerchen! Man erkennt es an <PRO_HISHER> grimmigem Blick.~
+@4879 = ~^0xFF9ADCE3 Tautröpfchen: ^-Aber nein, Lilafern! Das ist ein Abenteurer, Dummerchen! Man erkennt es an <PRO_HISHER>em grimmigem Blick.~
 
 @4880 = ~^0xFF9ADCE3 Tautröpfchen: ^-Willkommen im Dämmerwaldtal, großer Lulatsch!~
 
@@ -70,7 +70,7 @@
 
 @4883 = ~^0xFFE3B0FF Lilafern: ^-Der Lulatsch kehrt zurück — und noch immer ohne Funkeln, wie ich sehe!~
 
-@4884 = ~^0xFFE3B0FF Lilafern: ^-Wir sind die Zwielicht-Zwillinge, Hüter der nächtlichen Kicherlaute und Wächter von… nun ja, nichts allzu Wichtigem.~
+@4884 = ~^0xFFE3B0FF Lilafern: ^-Wir sind die Zwielicht-Zwillinge, Verursacher nächtlichem Geschnatters und Wächter von… nun ja, nichts allzu Wichtigem.~
 
 @4885 = ~Zwielicht-Zwillinge?~
 
@@ -144,23 +144,21 @@
 // NOTE TO TRANSLATORS: KEEP THE FORMATTING - it's for the correct colors
 
 @4918 = ~^0xFFE3B0FF Lilafern: ^-Also gut, noch ein Rätsel! Hör genau zu:
-Im Dunkel des Kerkers lieg’ ich ganz still,
-und warte geduldig, bis jemand mich will.
-Zu greifen nach Reichtum, nach Glanz und nach Gold—
-ach, wie mir doch solche Begierde gefällt!
 
+Im Dunkel des Kerkers lieg’ ich ganz still,
+warte geduldig, bis sich jemand nähern will.
 Komm näher, nur zu, sei mutig und blind,
 denn ich bin der Schatz, den du suchst, mein Kind.
-Ich blitze, ich locke – ein herrlicher Fund…
-doch öffnet sich mein Deckel, wird’s plötzlich sehr bunt.~
+Ich blitze, ich funkle in herrlicher Pracht…
+vorüber ist's, wenn mein Deckel wird aufgemacht.~
 
-@4919 = ~Ein Geist, vielleicht?~
+@4919 = ~Ein Geist?~
 
 @4920 = ~Ein Doppelgänger.~
 
 @4921 = ~Ein Echo.~
 
-@4922 = ~Ein Mimic.~
+@4922 = ~Ein Nachahmer.~
 
 @4923 = ~Das ist Unsinn. Das habt ihr euch gerade ausgedacht.~
 
@@ -186,25 +184,27 @@ doch öffnet sich mein Deckel, wird’s plötzlich sehr bunt.~
 
 @4934 = ~^0xFF9ADCE3 Tautröpfchen: ^-Noch eine Herausforderung! Das Rätsel von Schlamm und Majestät!~
 
-@4935 = ~^0xFFE3B0FF Lilafern: ^-Höre wohl, Wanderer:  
-Ich springe durchs Dickicht, ganz ohne Scheu,
-und klage doch niemals – ich bleibe mir treu.
-Mein Krönchen ist Schlamm, mein Reich ist das Moor,
-kein goldener Palast, kein prunkvolles Tor.
-So küss mich, wenn du dich traust – und sieh' was ich Dir böte:
-denn nach meinem Kuss verwandelst du dich in die glitschige...~
+@4935 = ~^0xFFE3B0FF Lilafern: ^-Höre wohl, Wanderer: 
+ 
+Ein eitler Prinz ritt zum düsteren Moor,
+ein winziges Wesen trat neckisch hervor.
+"Küss mich", rief es, "ich bin eine Prinzessin, geschwind!"
+Der Prinz beugte sich nieder — verblendet und blind.
+
+Ein Kuss, und seht, wie sein Anblick erlosch,
+verwandelte er sich doch schnurstracks in einen...~
 
 @4936 = ~^0xFF9ADCE3 Tautröpfchen: ^-Wähle weise! Der falsche Kuss kann ewig währen!~
 
-@4937 = ~Katze.~
+@4937 = ~Hund.~
 
-@4938 = ~Schnecke.~
+@4938 = ~Fisch.~
 
-@4939 = ~Kröte.~
+@4939 = ~Frosch.~
 
-@4940 = ~Ein Vampir.~
+@4940 = ~Vampir.~
 
-@4941 = ~^0xFFE3B0FF Lilafern: ^-Frosch, <PRO_HESHE> hat tatsächlich Kröte gesagt!~
+@4941 = ~^0xFFE3B0FF Lilafern: ^-Frosch, <PRO_HESHE> hat tatsächlich Frosch gesagt!~
 
 @4942 = ~^0xFF9ADCE3 Tautröpfchen: ^-Unglaublich!~
 
@@ -230,7 +230,7 @@ denn nach meinem Kuss verwandelst du dich in die glitschige...~
 
 @4953 = ~^0xFF9ADCE3 Tautröpfchen: ^-Also gut! Ein letztes Rätsel, die ultimative Prüfung sterblichen Witzes!~
 
-@4954 = ~^0xFFE3B0FF Lilafern: ^-Oh, herrlich! Nur zu, Tautröpfchen — blende <PRO_HIMHER> mit deinem Genie!~
+@4954 = ~^0xFFE3B0FF Lilafern: ^-Oh, herrlich! Nur zu, Tautröpfchen — blende den <PRO_RACE> mit deinem Genie!~
 
 @4955 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ich? Ich dachte, *du* hättest ein Rätsel vorbereitet!~
 
@@ -252,7 +252,7 @@ denn nach meinem Kuss verwandelst du dich in die glitschige...~
 
 @4964 = ~^0xFF9ADCE3 Tautröpfchen: ^-Genau! Hier, nimm etwas von unserem Feenstaub — aber reib ihn dir nicht in die Augen, kapiert?~
 
-@4965 = ~^0xE3B0FFTautröpfchen: ^-In deinem Gesicht? Aber dein Gesicht ist so *unfunkelnd*!~
+@4965 = ~^0xFF9ADCE3 Tautröpfchen: ^-In deinem Gesicht? Aber dein Gesicht ist so unfunkelig!~
 
 @4966 = ~^0xFFE3B0FF Lilafern: ^-Es braucht Hilfe! Eine dringende Funkel-Intervention!~
 
@@ -260,17 +260,17 @@ denn nach meinem Kuss verwandelst du dich in die glitschige...~
 
 @4968 = ~^0xFF9ADCE3 Tautröpfchen: ^-Vorsicht, Wanderer… wenn wir nicht mehr in deiner Nähe funkeln, wer vertreibt dann deine bösen Gedanken?~
 
-@4969 = ~^0xFF9ADCE3Tautröpfchen: ^-Ein Wunsch?! Hast du das gehört, Lilafern? Ein *Wunsch*!~
+@4969 = ~^0xFF9ADCE3 Tautröpfchen: ^-Ein Wunsch?! Hast du das gehört, Lilafern? Ein *Wunsch*!~
 
 @4970 = ~^0xFFE3B0FF Lilafern: ^-Schnell, wo sind die Unterlagen? Die Formulare? Die Vorschriften für unwahrscheinliche Wunder?!~
 
-@4971 = ~^0xFF9ADCE3Tautröpfchen: ^-Psst! Wir haben heute Dienstschluss. Der letzte Wunsch verwandelte eine Kröte in... eine schleimigere, kleinere Kröte.~
+@4971 = ~^0xFF9ADCE3 Tautröpfchen: ^-Psst! Wir haben heute Dienstschluss. Der letzte Wunsch verwandelte eine Kröte in... eine schleimigere, kleinere Kröte.~
 
 @4972 = ~^0xFFE3B0FF Lilafern: ^-Für alle Beteiligten höchst verwirrend.~
 
-@4973 = ~^0xFF9ADCE3Tautröpfchen: ^-Aber! Wenn du dir Lachen oder Mondlicht wünschst, das können wir. Davon haben wir mehr als genug.~
+@4973 = ~^0xFF9ADCE3 Tautröpfchen: ^-Aber! Wenn du dir Lachen oder Mondlicht wünschst, das können wir. Davon haben wir mehr als genug.~
 
-@4974 = ~^0xFFE3B0FF Lilafern: ^-Alles Größere musst du mit unserer Vorgesetzten klären. Das ist Eldath, selbstverständlich. Allerdings ist sie schrecklich mit ausgebucht.~
+@4974 = ~^0xFFE3B0FF Lilafern: ^-Alles Weitere müsstest du mit unserer Herrin klären. Das ist Eldath, offensichtlich. Allerdings ist sie schrecklich langsam in ihren Antworten.~
 
 @4975 = ~^0xFFE3B0FF Lilafern: ^-Nun gut, dann eben nicht. Schreite sanft, große Gestalt — das Gras erinnert sich an deine Schritte.~
 

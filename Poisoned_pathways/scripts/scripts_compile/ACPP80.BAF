@@ -31,6 +31,17 @@ THEN
         SetGlobal("City_healed","ACPP80",1)
 END
 
+
+IF
+    GlobalGT("AC#PPChapter6Quest","GLOBAL",0)
+    Global("CreateScrolls","ACPP80",0)
+THEN
+    RESPONSE #100
+        ActionOverride("PageCon01",CreateItem("AC#PPTP1",0,0,0))  // Torn Page I
+        ActionOverride("PageCon02",CreateItem("AC#PPTP2",0,0,0))  // Torn Page 2
+        SetGlobal("CreateScrolls","ACPP80",1)
+    END
+
 /*
 IF
     Global("AC#PPChapter6Quest","GLOBAL",24)

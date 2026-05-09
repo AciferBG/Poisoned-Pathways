@@ -1,10 +1,18 @@
+Beta Version 5.5
+- area changes
+- re-arrange shop lists
+- fix music
+- updated German Translation
+
 Beta Version 5.4
 - changes by morpheus562
-- updated German translation
+- updated German Translation
+
 Beta Version 5.3
 - changed ACPP30SR.bmp search map: added Exit to the North
 - changed area link ACPP30: Exit to the North now leads to Duskwood Dell
 - updated Delgorth's portrait
+
 Beta Version 5.2
 - changes by morpheus562:
 This is all of the script updates leaving original intent in-tact. The biggest divergeance is will-o-wisp where I have it use more spells based on difficulty level. I also updated the mummy to have an weapon assigned.

@@ -1185,7 +1185,8 @@ IF~~THEN EXTERN AC#PPON3 orc_thank_you_axe_01
 CHAIN AC#PPON3 orc_thank_you_axe_01
 @4089
 END
-IF~~THEN DO ~GiveItemCreate("AC#PPAX1",Player1,1,0,0)
+IF~~THEN DO ~GiveItemCreate("AX1H02",Player1,1,0,0)
+/*GiveItemCreate("AC#PPAX1",Player1,1,0,0) */
 SetGlobal("ThankYou","ACPP05",1)~ EXTERN AC#PPON1 orc_thank_you_axe_02
 
 CHAIN IF ~~ THEN AC#PPON1 orc_thank_you_axe_02
