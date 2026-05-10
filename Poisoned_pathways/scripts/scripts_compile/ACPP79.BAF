@@ -15,6 +15,19 @@ THEN
         SetGlobal("EnteredArea","ACPP79",1)  
 END
 
+/*
+IF
+    Global("CreateAllips","ACPP79",0)  
+THEN
+    RESPONSE #100
+        CreateCreature("AC#PPAL1",[421.354],S)  // Skorpion
+        CreateCreature("AC#PPAL1",[235.423],NE)  // Skorpion
+        SetGlobal("CreateAllips","ACPP79",1)  
+END
+*/
+
+       
+
 IF
     Global("ForgeAmulet","ACPP79",1)
     Contains("AC#PPCO1","Anvil")  
