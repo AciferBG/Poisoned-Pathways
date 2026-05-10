@@ -359,9 +359,9 @@
 
 @3938 = ~Ich werde Euch doch nicht helfen.~
 
-@3939 = ~Ihr habt mit dem Hohepriester gesprochen, nicht wahr? Er möchte, dass Ihr einen Talona-Priester sucht... und die seltene Blume für ein Gegenmittel findet. Jeder redet über diese pflanze. Ein Gift, so mächtig, dass selbst die Hände der Götter es nicht zu bannen vermögen.~
+@3939 = ~Ihr habt mit dem Hohepriester gesprochen, nicht wahr? Er möchte, dass Ihr einen Talona-Priester sucht... und die seltene Blume für ein Gegenmittel findet. Jeder redet über diese Pflanze. Ihr Gift sei so mächtig, dass selbst die Hände der Götter es nicht zu bannen vermögen.~
 
-@3940 = ~Wir sind uns noch nicht begegnet. Mein Name ist Mannatarv. Ich bin alt und krank, sehr krank. Alles, was ich will, ist zu sterben. Doch die Eldathyn lassen mich nicht.~
+@3940 = ~Wir sind uns noch nicht begegnet. Mein Name ist Mannatarv. Ich bin alt und krank, sehr krank. Alles, was ich will, ist zu sterben. Doch die Priester Eldaths lassen mich nicht.~
 
 @3941 = ~Wir sind uns schon begegnet. Mein Name ist Mannatarv. Ihr wisst, dass ich alt und schwer krank bin. Alles, was ich will, ist zu sterben. Doch sie lassen mich nicht.~
 
@@ -551,13 +551,13 @@
 
 @4034 = ~Viele Wanderer tragen schwere Lasten auf den Schultern, und ich reiche ihnen einen Löffel voll Süße. Ihr würdet staunen, wie viele Streitigkeiten vergehen, wenn die Lippen klebrig vor Honig sind.~
 
-@4035 = ~Nun, da Ihr vor mir steht, erkenne ich Euch wieder. Ihr seid der <PRO_RACE> aus Athkatla, nicht wahr? Ich hätte eine Aufgabe für Euch, solltet Ihr in die Stadt der Münzen zurückkehren.~
+@4035 = ~Oh! Ich erkenne Euch! Ihr seid der <PRO_RACE> aus Athkatla, nicht wahr? Ich hätte eine Aufgabe für Euch, solltet Ihr in die Stadt der Münzen zurückkehren.~
 
 @4036 = ~Warum sollte sich ein Priester Eldaths um die Stadt der Münzen kümmern?~
 
 @4037 = ~Was verlangt Ihr von mir?~
 
-@4038 = ~Ich bin kein Laufbursche für Mönche und Met. Sucht Euch jemand anderen für Eure Lieferung.~
+@4038 = ~Ich bin kein Laufbursche für Mönche. Sucht Euch jemand anderen.~
 
 @4039 = ~In Athkatla steht ein Haus des Lachens und des Liedes – die Schenke "Zu den Fünf Krügen". Ihr Wirt, Samuel Donnerbölk, ist ein Mann der Worte und des Weines. Würdet Ihr ein Fass meines Honigmets zu ihm bringen? Handelt einen gerechten Preis im Namen Eldaths aus, damit die Tempel und Gärten der Schweigsamen daran teilhaben mögen.~
 
@@ -567,7 +567,7 @@
 
 @4042 = ~Ihr kennt die Geschicke des Handels gewiss besser als ich. Fordert eine Summe, die den Wert des Mets ehrt, und kehrt mit der Zahlung zu mir zurück. Mit diesen Münzen werden wir neue Güter für Eldaths Heiligtum im Tal erwerben, damit der Frieden so sorgsam gepflegt werde wie ein Bienenstock.~
 
-@4043 = ~So mögen Eure Worte in jener Schenke so sanft sein wie Honig, und möge Samuel die Weisheit des gerechten Handels erkennen. Kehrt mit der Bezahlung zurück, und ich werde Euch einen Anteil gewähren – denn auch wer dem Frieden dient, soll seine Süße kosten.~
+@4043 = ~Möge Samuel die Weisheit des gerechten Handels erkennen. Kehrt mit der Bezahlung zurück, und ich werde Euch einen Anteil gewähren – denn wer dem Frieden dient, soll auch dessen Süße kosten.~
 
 @4044 = ~So sei es. Der Bienenstock lehrt Geduld; vielleicht wird ein andrer Tag, ein andrer Mensch Eldaths Süße in die Welt tragen.~
 
@@ -581,7 +581,7 @@
 
 @4049 = ~Möge Euer Zorn wie Wachs schmelzen und Eure Worte süß wie Sommerhonig sein.~
 
-@4050 = ~Ich habe hier ein Fass Honigmet von einem Mönch Eldaths aus Dämmerwaldtal.~
+@4050 = ~Ich habe hier Honigmet von einem Mönch Eldaths aus Dämmerwaldtal.~
 
 @4051 = ~Bei den Göttern, seht Euch diesen goldenen Schimmer an! Wenn der Geschmack der Farbe entspricht, ist dies kein Bauerngebräu. Ein Mönch Eldaths, sagt Ihr? Wie reizend – und wie klug. Frieden in der Flasche, Süße im Fass! Meine Gäste werden auf die Harmonie trinken, und Streit wird sich verflüchtigen, noch ehe der erste Krug geleert ist.~
 
@@ -607,7 +607,7 @@
 
 @4062 = ~Ein Königslohn! Doch solche Süße lässt sich kaum in Münzen messen. Dennoch – nehmt tausend Gold. Man soll sagen, dass Samuel Donnerbölk hervorragende Braukunst und edle Taten gleichermaßen belohnt!~
 
-@4063 = ~Richtet den Eldathyn meine Grüße aus. Ich hätte nicht gedacht, dass sie zu etwas derart Nützlichem fähig sind!~
+@4063 = ~Richtet den Anhängern Eldaths meine Grüße aus. Ich hätte nicht gedacht, dass sie zu etwas derart Nützlichem fähig sind!~
 
 @4064 = ~Seid gegrüßt. Ich bin der Holzwerker von Dämmerwaldtal – obgleich ich, um ehrlich zu sein, zuvorderst ein Druide bin. Der Hain führt meine Hände; ich folge nur seiner Maserung.~
 

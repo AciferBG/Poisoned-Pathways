@@ -637,12 +637,9 @@ Requires:
 Weight: 12~
 @1160 = ~Belt~
 @1161 = ~Belt of Starshaping~
-@1162 = ~This belt was once used by Stinna Raonar, an elven oracle that decided that she no longer wanted to see how future may unfold, but that she wanted to shape it. To do so, she started to learn how to change the future and manipulate the power of luck.
+@1162 = ~This belt was once used by Stinna Raonar, an elven diviner that decided that she no longer wanted to see how future may unfold, but that she wanted to shape it. To do so, she started to learn how to change the future and manipulate the power of luck.
 
 STATISTICS:
-
-Charge abilities:
-– May cast Oracle once per day
 
 Equipped abilities:
 – Luck: +1 (diviner only)

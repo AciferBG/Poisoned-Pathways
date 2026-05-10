@@ -71,8 +71,8 @@ IF
     Global("SetRestEncounters","ACPP70",0)
 THEN
     RESPONSE #100
-        SetRestEncounterProbabilityDay(3)
-        SetRestEncounterProbabilityNight(3)
+        SetRestEncounterProbabilityDay(5)
+        SetRestEncounterProbabilityNight(5)
         SetGlobal("SetRestEncounters","ACPP70",1)
 END
 

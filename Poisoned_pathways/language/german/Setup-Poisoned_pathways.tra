@@ -258,7 +258,7 @@ Gewicht: 0~
 
 EIGENSCHAFTEN:
 
-Besonderes: Heilt Gift und Krankheiten, entfernt Flüche und stellt 5 Trefferpunkte wieder her
+Heilt Gift und Krankheiten, entfernt Flüche und stellt 5 Trefferpunkte wieder her
 
 Gewicht: 1~
 
@@ -384,9 +384,9 @@ Gewicht: 0~
   
 EIGENSCHAFTEN:
 
-– Rüstungsklasse: +1
-– Rettungswürfe: +1
-– ETW0: –2
+– Rüstungsklasse: -1
+– Rettungswürfe: -1
+– ETW0: +2
 
 Gewicht: 0~
 
@@ -596,7 +596,7 @@ Gewicht: 6~
 
 @1146 = ~An den, der dies findet:
 
-Das Mythal, das einst Myth Unnohyr schützte, ist jenseits aller Erkenntnis zerschmettert. In diesen Ruinen zerfasert und zerbricht Magie ohne Vorwarnung — Gebete verhallen ungehört, Zauber verkrümmen sich oder vergehen im Nichts.
+Der Mythal, das einst Myth Unnohyr schützte, ist korrumpiert. In diesen Ruinen verfällt Magie ohne Vorwarnung — Gebete verhallen ungehört, Zauber verkrümmen sich oder vergehen im Nichts.
 
 Und doch ist nicht alles verloren. Gewisse Wesen — darunter Irrlichter — scheinen sich an die Verderbnis des Mythals angepasst zu haben. Ihre Widerstandskraft deutet darauf hin, dass Immunität nicht unmöglich ist.
 
@@ -639,18 +639,15 @@ Als ich die Augen öffnete, war ich allein. Man sagt, dort wachse nun ein Ring w
 
 @1149 = ~Geschichten des Friedenswanderers II~
 
-@1150 = ~„Der Dorn und die Taube“
-Aufgezeichnet vom Weidenwurzel-Kreis
+@1150 = ~Bruder Eolan — ein Freiwanderer Eldaths — trug weder Münze noch Waffe noch Karte, als er barfuß durch Amn wanderte. Nur einen Wasserschlauch und ein Herz frei von Zorn. Wo andere die Klinge gegen Fremde erhoben, bot er Stille, und wenn die Welt Erbarmen verhöhnte, reichte er dennoch seine Hand.
 
-Barfuß durchquerte er Amn. Bruder Eolan — ein Freiwanderer Eldaths — trug weder Münze noch Waffe noch Karte. Nur einen Wasserschlauch und ein Herz frei von Zorn. Wo andere die Klinge gegen Fremde erhoben, bot er Stille dar, und wenn die Welt Erbarmen verhöhnte, reichte er die Hand.
+In der Schlucht des Gefallenen Götzen wurde er jedoch am härtesten geprüft.
 
-In der Schlucht des Gefallenen Götzen wurde er am härtesten geprüft.
+Die Schlucht schneidet tief in die Ausläufer der Schmalen Zähne. Vor langer Zeit stürzte dort die Statue eines vergessenen Gottes von den Klippen und zerbrach im Abgrund. Seitdem zieht die Schlucht all jene mit finsteren Absichten an.
 
-Die Schlucht schneidet tief in die Ausläufer der Small Teeth. Vor langer Zeit stürzte dort die Statue eines vergessenen Gottes von den Klippen und zerbrach im Abgrund. Seitdem zieht die Schlucht jene mit finsteren Absichten an.
+Eine von ihnen war Dornschlund, eine von Narben gezeichnete Räuberanführerin. Als Bruder Eolan ihr Gebiet betrat, sahen sie und ihre Sippe in ihm leichte Beute.
 
-Eine von ihnen war Dornschlund, eine von Narben gezeichnete Räuberfürstin. Als Bruder Eolan ihr Gebiet betrat, sahen sie und ihre Sippe in ihm leichte Beute.
-
-Doch er flehte nicht, er argumentierte nicht. Er kniete einfach nieder. Im Staub am Rand des zerschmetterten Götzen zog er seinen Wasserschlauch hervor. Mit beiden Händen bot er ihn ihr dar. Sein Blick traf den ihren. Und er sprach: „Wann habt Ihr zuletzt ohne Furcht getrunken?“
+Doch er flehte nicht, er verhandelte nicht. Er kniete einfach nieder. Im Staub am Rand des zerschmetterten Götzen zog er seinen Wasserschlauch hervor. Mit beiden Händen bot er ihn ihr dar. Sein Blick traf den ihren. Und er sprach: „Wann habt Ihr zuletzt ohne Furcht getrunken?“
 
 Die anderen lachten. Doch Dornschlund nicht. Ihre Hand verharrte am Gürtel, wo die gekrümmte Klinge schwer von getrocknetem Blut hing. Sie trat vor. Nahm den Wasserschlauch. Trank.
 
@@ -658,9 +655,9 @@ Dann schleuderte sie ihn in die Schlucht und wandte sich ab. „Geht.“
 
 Und er ging.
 
-Keiner legte Hand noch Klaue an ihn. Er verschwand in den südlichen Pässen wie Nebel vor dem Morgen.
+Es legte niemand weder Hand noch Klaue an ihn. Er verschwand in den südlichen Pässen wie Nebel vor dem Morgen.
 
-Im nächsten Jahr trug der gefallene Götze etwas Neues — eine zarte grüne Ranke, die sich durch seine gesprungenen steinernen Lippen wand. Wasser sammelte sich an seinem Fuß.
+Im nächsten Jahr trug der gefallene Götze etwas Neues — eine zarte grüne Ranke, die sich durch seine gesprungenen steinernen Lippen wand, und Wasser sammelte sich an seinem Fuß.
 
 (Obwohl dieser Gegenstand kulturellen Wert besitzen mag, scheint er weder magisch noch von Nutzen für Eure Aufgabe zu sein.)~
 
@@ -710,7 +707,6 @@ Gewicht: 12~
 
 EIGENSCHAFTEN:
 
-– Kann einmal pro Tag Orakel wirken
 – Glück: +1 (nur Seher)
 – Sagenkunde: +10 (nur Seher)
 – Rettungswürfe: +2 Bonus
@@ -1068,9 +1064,9 @@ Geschöpfe aus Zonen toter Magie. Die bleichen Kugeln nähren sich nicht von Fur
 EIGENSCHAFTEN:
 
 Angriffe pro Runde: –0,5 (dauerhaft)
-Rüstungsklasse: +1 (dauerhaft)
+Rüstungsklasse: +1 Bonus (dauerhaft)
 Rettungswürfe: +1 Bonus (dauerhaft)
-Besonderes: Das Buch wird bei Gebrauch verbraucht
+Das Buch wird bei Gebrauch verbraucht
 Benutzung: In einen Schnellgegenstands-Slot legen
 
 Gewicht: 25~
@@ -1158,13 +1154,12 @@ Gewicht: 1~
 
 Legenden berichten, dass das Schwert zerbrach, als der schützende Mythal der Stadt zu schwinden begann, und seine beiden Hälften durch entgegengesetzte Kräfte von Licht und Schatten voneinander getrennt wurden.
 
-Nun neu geschmiedet, verändert die Klinge ihre Natur mit dem Lauf des Himmels. Bei Tageslicht brennt sie mit stiller Entschlossenheit, scharf und kraftvoll. Unter Mond und Sternen mildert sie ihr Leuchten und schützt ihren Träger mit Gelassenheit und Geduld.
+Neu geschmiedet, verändert die Klinge ihre Natur mit dem Lauf des Himmels. Bei Tageslicht brennt sie mit stiller Entschlossenheit, scharf und kraftvoll. Unter Mond und Sternen mildert sie ihr Leuchten und schützt ihren Träger.
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
-– Bei Tag und Morgendämmerung: +1 ETW0 und +1 Schaden
-– Bei Nacht und Abenddämmerung: +1 RK und +1 auf alle Rettungswürfe
+– Bei Tag und Morgendämmerung: +1 Bonus auf ETW0 und Schaden
+– Bei Nacht und Abenddämmerung: +1 Bonus auf Rüstungsklasse und alle Rettungswürfe
 
 ETW0: +3
 Schaden: 2W4+3 (Hieb)
@@ -1230,10 +1225,8 @@ Wenn der Träger jedoch verwundet wird, kann die Axt bisweilen nützlich sein un
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
-– 25 % Chance, beim Treffer auf den Träger *Mittlere Wunden heilen* zu wirken
 
-Kampffähigkeiten:
+– 25 % Chance, beim Treffer auf den Träger "Mittlere Wunden heilen" zu wirken
 – Jeder erfolgreiche Treffer verursacht für den Träger einen kumulativen Malus von –2 auf ETW0 für 2 Runden
 
 ETW0: +2
@@ -1297,7 +1290,7 @@ Eine feine Verzauberung – gewoben im Trotz gegen Lolths Getreue wie auch gegen
 EIGENSCHAFTEN:
 
 Angelegte Fähigkeiten:
-– Immunität gegen *Verstricken* und *Netz*
+– Immunität gegen Verstricken und Netz
 – +2 RK und +2 Rettungswürfe gegen Elfen
 – Lautlos bewegen: +10 %
 – Im Schatten verbergen: +10 %

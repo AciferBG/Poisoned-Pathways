@@ -1,7 +1,7 @@
 IF
     NumberOfTimesTalkedTo(0)
     See([PC])
-    Range(LastSeenBy(Myself),15)
+    Range(LastSeenBy(Myself),12)
 THEN
     RESPONSE #100
         StartDialogueNoSet([PC])
@@ -9,8 +9,8 @@ END
 
 IF
     Global("AttackOrcs","ACPP97",1)
-    Dead("AC#PPON4")  // Quietbrook
-    Dead("AC#PPON5")  // Peacefang
+    Dead("AC#PPON4")  // Stillbach
+    Dead("AC#PPON5")  // Friedenszahn
 THEN
     RESPONSE #100
         SetGlobal("AttackOrcs","ACPP97",2)
@@ -23,6 +23,6 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("AttackOrcsGo","LOCALS",1)
-        Attack("AC#PPON4")  // Quietbrook
+        Attack("AC#PPON4")  // Stillbach
 END
 

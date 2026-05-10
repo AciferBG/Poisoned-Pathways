@@ -78,7 +78,7 @@ IF~~THEN REPLY @3005 EXTERN AC#PPSKD bye
 		==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN @3034
 		==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN @3035
 		==HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN @3036
-		== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @3037
+		//== MazzyJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @3037
 		== BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN @3038 
 		==KorganJ IF ~InParty("korgan") !StateCheck("korgan",CD_STATE_NOTVALID)~ THEN @3039
 		EXIT
@@ -234,18 +234,18 @@ IF~~THEN EXTERN AC#PPEL2 bye_death
 CHAIN IF ~~ THEN AC#PPEL2 bye_death
 @3095
 == AerieJ  IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3096
-==RasaadJ IF ~InParty("rasaad") !StateCheck("rasaad",CD_STATE_NOTVALID)~ THEN @3097
+//==RasaadJ IF ~InParty("rasaad") !StateCheck("rasaad",CD_STATE_NOTVALID)~ THEN @3097
 ==ViconiJ IF ~InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN @3098
-==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN @3099
+//==JaheiraJ IF ~InParty("jaheira") !StateCheck("jaheira",CD_STATE_NOTVALID)~ THEN @3099
 ==HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN @3100
 ==HEXXATJ IF ~InParty("hexxat") !StateCheck("hexxat",CD_STATE_NOTVALID)~ THEN @3101
-==NeeraJ IF ~InParty("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN @3102
-==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN @3103
-== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @3104
+//==NeeraJ IF ~InParty("neera") !StateCheck("neera",CD_STATE_NOTVALID)~ THEN @3102
+//==ValygarJ IF ~InParty("valygar") !StateCheck("valygar",CD_STATE_NOTVALID)~ THEN @3103
+//== JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @3104
 ==CerndJ IF ~InParty("cernd") !StateCheck("cernd",CD_STATE_NOTVALID)~ THEN @3105
 == KeldorJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @3106
-== AnomenJ  IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3107
-==NaliaJ IF ~InParty("nalia") !StateCheck("nalia",CD_STATE_NOTVALID)~ THEN @3108
+//== AnomenJ  IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3107
+//==NaliaJ IF ~InParty("nalia") !StateCheck("nalia",CD_STATE_NOTVALID)~ THEN @3108
 ==MinscJ IF ~InParty("minsc") !StateCheck("minsc",CD_STATE_NOTVALID)~ THEN @3109
 == DornJ  IF ~InParty("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @3110
 == BEDWIN IF ~InParty("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN @3111 
@@ -296,7 +296,7 @@ CHAIN IF ~Global("AC#PP_PlotStart","GLOBAL",3)~ THEN AC#PPEL1 hello_02
 @3130
 END
 IF~Global("AC#PPHasMap","GLOBAL",1)
-PartyHasItem("AC#PPMP1") ~THEN REPLY @3131 DO ~SetGlobal("AC#PPHasMap","GLOBAL",10) TakePartyItem("AC#PPMP1") DestroyItem("AC#PPMP1")~ EXTERN AC#PPEL1 about_glade
+PartyHasItem("AC#PPMP1") ~THEN REPLY @3131 DO ~SetGlobal("AC#PPHasMap","GLOBAL",10) TakePartyItem("AC#PPMP1") DestroyItem("AC#PPMP1") AddJournalEntry(@12003,QUEST)~ EXTERN AC#PPEL1 about_glade
 IF~~THEN REPLY @3132 EXTERN AC#PPEL1 bye_wait
 
 CHAIN IF ~~ THEN AC#PPEL1 about_glade
@@ -321,7 +321,7 @@ StartCutScene("AC#PPCT1")~ EXIT
 
 CHAIN AC#PPEL1 bye_wait
 @3139
-DO ~AddJournalEntry(@12003,QUEST)~ EXIT
+EXIT
 
 // Dialogue Eldath priest #1 in Athkatla
 
@@ -438,7 +438,7 @@ EscapeArea()
 CHAIN IF ~~ THEN AC#PPEL1 bye
 @3203
 END
-IF~~THEN REPLY @3204 EXTERN AC#PPEL1 about_person
+IF~~THEN REPLY @3204 EXTERN AC#PPEL1 job
 IF~~THEN REPLY @3205 EXTERN AC#PPEL1 bye_definitve
 
 CHAIN IF ~~ THEN AC#PPEL1 bye_definitve
