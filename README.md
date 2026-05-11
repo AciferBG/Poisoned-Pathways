@@ -44,6 +44,7 @@ The mod is triggered **after delivering Renfeld’s body** in the Docks District
 This mod is available in: 
 - **English**
 - **Spanish**
+- **German**
 
 ## Compatibility  
 Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core game content and should be compatible with most other mods.
