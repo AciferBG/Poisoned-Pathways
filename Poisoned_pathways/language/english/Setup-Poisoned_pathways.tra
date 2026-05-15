@@ -1154,7 +1154,9 @@ In the old, magic-saturated Shoon Imperium, such tokens were used to cleanse arc
 STATISTICS:
 
 Charge abilities:
-– The token may be activated with a command word to unleash a powerful Dispel Magic effect within a 15-foot radius. The token is destroyed upon use.~
+– The token may be activated with a command word to unleash a powerful Dispel Magic effect within a 15-foot radius. The token is destroyed upon use.
+
+Weight: 0~
 
 // script strings
 @2000 = ~Duskwood Dell~

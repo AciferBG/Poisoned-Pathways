@@ -27,11 +27,11 @@ Fallskeeper Alatoasz believes that the key to understanding the poison lies with
 
 @12006 = ~The Perfect Poison
 
-I returned the tome from the Temple of Oghma to Fallskeeper Alatoasz. Its passages point to Myth Unnohyr: a ruined elven city whose shattered mythal breeds wild magic by day and dead magic by night. The taint has seeped into a rare plant used to craft the incurable poison. He marked the ruins on my map. I must travel to Myth Unnohyr, find the poisoner—a Malagent of Talona—and bring back a blossom of the corrupted plant so the Fallskeeper can attempt an antidote.~
+I returned the tome from the Temple of Oghma to Fallskeeper Alatoasz. Its passages point to Myth Unnohyr; a ruined elven city whose shattered mythal breeds wild magic by day and dead magic by night. The taint has seeped into a rare plant used to craft the incurable poison. I must travel to Myth Unnohyr, find the poisoner—a Malagent of Talona—and bring back a blossom of the corrupted plant so the Fallskeeper can attempt an antidote.~
 
 @12007 = ~The Perfect Poison
 
-I confronted the Malagent deep within the ruins of Myth Unnohyr. He confessed to fusing corrupt mythal magic into a novel toxin and boasted that multiple batches had already been distributed across Amn. He vowed to turn Myth Unnohyr into his lady’s toxic domain—but I put an end to his schemes. I must now bring a sample of the corrupted plant back to Fallskeeper Alatoasz Berendim in Duskwood Dell so that an antidote can be created.~
+I confronted the Malagent deep within the ruins of Myth Unnohyr and put an end to his schemes. I must now bring a sample of the corrupted plant back to Fallskeeper Alatoasz Berendim in Duskwood Dell so that an antidote can be created.~
 
 @12008 = ~The Perfect Poison
 
@@ -49,7 +49,7 @@ Fallskeeper Alatoasz believes the Groveglove flower can be cleansed and turned i
 
 @12101 = ~The Antidote: Ilmater's Blessing of Compassion
 
-I am to travel to the Temple of Ilmater in the Slums of Athkatla and request the Blessing of Compassion. The Fallskeeper believes the Ilmateri will aid our cause without hesitation.~
+I am to travel to the Temple of Ilmater in the Slums of Athkatla and request the Blessing of Compassion.~
 
 @12102 = ~The Antidote: Lathander's Blessing of Renewal
 
@@ -61,15 +61,15 @@ Alatoasz has instructed me to collect a carafe of Eldath’s singing water from 
 
 @12104 = ~The Antidote: Ilmater's Blessing of Compassion
 
-I have received the Blessing of Compassion from the Ilmateri in the Slums. Their prayer imbued the Groveglove with a faint warmth—as if the flower itself responded to mercy.~
+I have received the Blessing of Compassion from the Ilmateri in the Slums.~
 
 @12105 = ~The Antidote: Lathander's Blessing of Renewal
 
-The priests of Lathander have bestowed the Blessing of Renewal. Bathed in sunlight, the Groveglove seemed to stir, its dark hue paling ever so slightly under the Morninglord’s grace.~
+The priests of Lathander have bestowed the Blessing of Renewal.~
 
 @12106 = ~The Antidote: Eldath’s singing water
 
-I have obtained a jug of Eldath’s singing water from the grotto in Duskwood Dell. Its surface hums softly, reflecting every breath of the forest. Now all that remains is to return to Fallskeeper Alatoasz with the blessed flower and the sacred water.~
+I have obtained a jug of Eldath’s singing water from the grotto in Duskwood Dell. Now all that remains is to return to Fallskeeper Alatoasz with the blessed flower and the sacred water.~
 
 @12107 = ~The Antidote
 
@@ -81,11 +81,11 @@ I have gathered all that was required: the Groveglove flower, the blessings, and
 
 @12110 = ~The Antidote
 
-The ritual succeeded. From the Malagent’s corrupted cauldron rose a monstrous Poison Incarnation—an embodiment of the toxin’s final wrath. I destroyed it, and the Groveglove’s corruption was purged. The antidote has taken shape, shimmering with a calm, emerald light. I must bring it back to Fallskeeper Alatoasz Berendim in Duskwood Dell.~
+The ritual succeeded, and the Groveglove’s corruption was purged. I must bring the antidote back to Fallskeeper Alatoasz Berendim in Duskwood Dell.~
 
 @12111 = ~The Antidote
 
-I delivered the antidote to Alatoasz Berendim, and he accepted it with gratitude. The venom that once threatened the Lands of Intrigue can spread no further.~
+I delivered the antidote to Alatoasz Berendim. The venom that once threatened the Lands of Intrigue can spread no further.~
 
 /******************************
 SIDE quest journal entries
@@ -110,7 +110,7 @@ I have found the Dell-Light Twins. The Rakshasa imprisoned them within a magical
 
 @13004 = ~The Missing Faerie Twins
 
-I have brought the faerie glass back to Brother Edrim in Duskwood Dell. He was able to break the seal, and the Dell-Light Twins have emerged unharmed. Their laughter once again dances through Duskwood Dell. Peace — and some mischief — have returned to this quiet corner of the world.~
+I have brought the faerie glass back to Brother Edrim in Duskwood Dell. He was able to break the seal, and the Dell-Light Twins have emerged unharmed. Peace — and some mischief — have returned to Duskwood Dell.~
 
 // Mythal forge amulet
 @13010 = ~Binding the Unbound
@@ -148,7 +148,7 @@ At the old anvil I combined the two wisp essences with the restored elven talism
 // Banshee seeking head:
 @13020 = ~Lament of the Lost
 
-In the upper reaches of a ruined tower in Myth Unnohyr I encountered the spirit of a banshee, forever lamenting the death of her beloved. She seeks something to remember him by—something that might finally let her spirit rest.~
+In the upper reaches of a ruined tower in Myth Unnohyr I encountered a banshee, forever lamenting the death of her beloved. She seeks something to remember him by—something that might finally let her spirit rest.~
 
 @13021 = ~Lament of the Lost
 
@@ -160,7 +160,7 @@ I returned the head of her beloved to the banshee. She whispered a final sigh an
 
 @13023 = ~Lament of the Lost
 
-I destroyed a banshee haunting a ruined tower in Myth Unnohyr. Her wail has fallen silent, and her grief will trouble this place no more.~
+I destroyed a banshee haunting a ruined tower in Myth Unnohyr. Her grief will trouble this place no more.~
 
 // Honeymead Quest
 @13030 = ~The Eldathyn Honeymead
@@ -193,7 +193,7 @@ I returned to the beekeeper in Duskwood Dell and delivered five hundred gold pie
 
 @13038 = ~The Eldathyn Honeymead
 
-I brought the beekeeper seven hundred and fifty gold pieces for the honeymead. He was pleasantly surprised, murmuring that Eldath’s blessings come in many forms.~
+I brought the beekeeper seven hundred and fifty gold pieces for the honeymead. He was pleasantly surprised.~
 
 @13039 = ~The Eldathyn Honeymead
 
@@ -203,7 +203,7 @@ I returned to the beekeeper with one thousand gold pieces for the honeymead. He 
 
 @13040 = ~The Little Angler
 
-A boy by the pier in Duskwood Dell asked me to help him find a worm for fishing. He said he wants to prove to everyone that he can catch a real fish all by himself.~
+A boy by the pier in Duskwood Dell asked me to help him find a worm for fishing.~
 
 @13041 = ~The Little Angler
 
@@ -211,7 +211,7 @@ I found a worm wriggling in the soft soil of Duskwood Dell. Perhaps this is the 
 
 @13042 = ~The Little Angler
 
-I gave the worm to the boy by the pier. Instead of using it as bait, he decided to keep it as a pet and named it Noodle. The two seem rather happy together.~
+I gave the worm to the boy by the pier. Instead of using it as bait, he decided to keep it as a pet. The two seem rather happy together.~
 
 @13043 = ~The Little Angler
 
@@ -228,16 +228,16 @@ Alatoasz agreed that Montrassa is worthy to carry Merethan’s emblem. I should 
 
 @13052 = ~The Emblem of Eldath
 
-I gave Merethan’s emblem to Montrassa. Her gratitude was quiet yet profound—she said she would carry my name in her prayers to the Lady of Still Waters.~
+I gave Merethan’s emblem to Montrassa.~
 
 // Siren
 @13060 = ~The Siren’s Fury
 
-In Duskwood Dell I met a siren tormented by anger and grief. She came seeking peace in Eldath’s grove, yet fury still clings to her like salt upon the tide. Perhaps someone in the Dell knows how to soothe her unrest.~
+In Duskwood Dell I met a siren tormented by anger and grief. Perhaps someone in the Dell knows how to soothe her unrest.~
 
 @13061 = ~The Siren’s Fury
 
-An elderly Eldathyn priestess entrusted me with a mug of herbal brew. She believes it may calm the siren’s heart if given beneath the open sky.~
+An elderly Eldathyn priestess entrusted me with a mug of herbal brew. She believes it may calm the siren’s heart.~
 
 @13062 = ~The Siren’s Fury
 
@@ -260,7 +260,7 @@ I met a halfling merchant named Debbie Gobblebubble in the wilderness. She chose
 // Mannatarv wants to die
 @13080 = ~A Peaceful Death
 
-In Duskwood Dell I met an old man named Mannatarv. He is frail and weary of life, yet the priests of Eldath refuse to let him die. He asked me to bring him a leaf of the Groveglove before an antidote is made, so that he might finally leave this world in silence.~
+In Duskwood Dell I met an old man named Mannatarv. He is frail and weary of life, yet the priests of Eldath refuse to let him die. He asked me to bring him a leaf of the Groveglove before an antidote is made, so that he might finally leave this world.~
 
 @13081 = ~A Peaceful Death
 
@@ -268,11 +268,11 @@ I agreed to Mannatarv’s request. He waits in the infirmary of Duskwood Dell fo
 
 @13082 = ~A Peaceful Death
 
-I gave Mannatarv a leaf of the Groveglove. He thanked me for granting the mercy others would not—and passed away peacefully soon after.~
+I gave Mannatarv a leaf of the Groveglove. He passed away soon after.~
 
 @13083 = ~A Peaceful Death
 
-I refused to help Mannatarv end his life. The priests of Eldath will keep him alive through their healing, whether he wishes it or not. I can only hope he finds peace in their care—or in his dreams.~
+I refused to help Mannatarv end his life. The priests of Eldath will keep him alive through their healing, whether he wishes it or not.~
 
 // Wadal Hrun
 @13090 = ~The Poisoner’s Tower
@@ -281,16 +281,16 @@ I encountered one of the Talonite’s yuan-ti servants near the poisoned ruins o
 
 @13091 = ~The Poisoner’s Tower
 
-I killed the yuan-ti servant. Among its belongings was a small ioun stone, smooth and berry-shaped, humming faintly with trapped venomous light. It likely serves as the key to the poisoner’s tower.~
+I killed the yuan-ti servant. Among its belongings was a small ioun stone. It likely serves as the key to the poisoner’s tower.~
 
 // Grotto quest
 @13110 = ~Where Steel Grows Silent
 
-The maiden of the grotto in Duskwood Dell offered to take any weapons I no longer need, to lay them to rest in Eldath’s sacred pool. She promised that by doing so, I would please the Quiet One and receive her blessing—along with a touch of renewed vitality.~
+The maiden of the grotto in Duskwood Dell offered to take any weapons I no longer need, to lay them to rest in Eldath’s sacred pool. She promised that by doing so, I would receive her blessing—along with a touch of renewed vitality.~
 
 @13111 = ~Where Steel Grows Silent
 
-I offered one of my weapons to the pool, as the maiden asked. The water shimmered faintly as the steel sank beneath the surface, swallowed by calm. In that quiet, I felt a fleeting touch of Eldath’s peace—gentle, wordless, and whole.~
+I offered one of my weapons to the pool. I felt a fleeting touch of Eldath’s peace.~
 
 // Runaway Nephew
 @13120 = ~The Runaway Nephew

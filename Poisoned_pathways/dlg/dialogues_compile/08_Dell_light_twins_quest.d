@@ -404,6 +404,7 @@ END
 IF~Global("AC#PP_RakStoreVisit","GLOBAL",0)~THEN REPLY @4987 DO ~SetGlobal("AC#PP_RakStoreVisit","GLOBAL",1)~ EXTERN AC#PPZAR start_store
 IF~Global("AC#PP_RakStoreVisit","GLOBAL",1)~THEN REPLY @4987 EXTERN AC#PPZAR start_store
 IF ~Global("AC#PP_RakStoreVisit","GLOBAL",1)~ THEN REPLY @4989 EXTERN AC#PPZAR store_strange
+IF~~THEN REPLY @4988 EXTERN AC#PPZAR strange_accent
 IF~~THEN REPLY @4990 EXTERN AC#PPZAR what_items
 IF~~THEN REPLY @4991 EXTERN AC#PPZAR Farewell
 

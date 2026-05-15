@@ -1085,9 +1085,8 @@ Gewicht: 1~
 
 EIGENSCHAFTEN:
 
-Fähigkeiten (Aufladungen):
-– Spiegelbild einmal pro Tag
-  Dauer: 1 Runde
+Spiegelbild einmal pro Tag
+  Dauer: 1 Phase
 
 ETW0: +3
 Schaden: 1W8+3 (Hieb)
@@ -1304,7 +1303,9 @@ Im alten, von Magie durchdrungenen Shoon-Imperium dienten solche Bannmarken dazu
 
 EIGENSCHAFTEN: 
 
-Die Bannmarke kann einmalig durch ein Befehlswort aktiviert werden, um einen mächtigen Magie bannen-Effekt im Radius von 4,5 m auszulösen und wird bei der Anwendung zerstört.~
+Die Bannmarke kann einmalig durch ein Befehlswort aktiviert werden, um einen mächtigen Magie bannen-Effekt im Radius von 4,5 m auszulösen und wird bei der Anwendung zerstört.
+
+Gewicht: 0~
 
 // script strings
 // script strings

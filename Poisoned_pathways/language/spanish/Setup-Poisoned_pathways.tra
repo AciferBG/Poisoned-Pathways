@@ -1140,16 +1140,16 @@ Aptitudes poseídas:
 
 Peso: 4 lbs~
 
-@1256 = ~Unbinding Coin of Shoonach~
+@1256 = ~Moneda desatadora de Shoonach~
+@1257 = ~Una sencilla moneda de cobre procedente de la ciudad hundida de Shoonach. Lleva la imagen idealizada de un humano sin nombre: lisa, inexpresiva y deliberadamente intercambiable.
+En el antiguo imperio de Shoon, impregnado de magia, estas fichas se usaban para purificar manipulaciones arcanas y encantamientos. La mayoría perdió su poder hace siglos. Esta, sin embargo, parece conservar aún el último vestigio de una antigua magia de disipación.
 
-@1257 = ~A plain copper coin from the sunken city of Shoonach. It bears the idealized likeness of a nameless human — smooth, expressionless, and deliberately interchangeable.
+CARACTERÍSTICAS:
 
-In the old, magic-saturated Shoon Imperium, such tokens were used to cleanse arcane manipulations and enchantments. Most lost their power centuries ago. This one, however, still appears to preserve the last remnant of an ancient dispelling magic.
-
-STATISTICS:
-
-Charge abilities:
-– The token may be activated with a command word to unleash a powerful Dispel Magic effect within a 15-foot radius. The token is destroyed upon use.~
+Aptitudes de carga:
+  La ficha puede activarse con una palabra de comando para desatar un poderoso efecto de disipar magia en un radio de 4,5 metros. La ficha se destruye al usarla.
+  
+  Peso: 0 lbs~
 
 // script strings
 @2000 = ~Valle del Bosque del Ocaso~
