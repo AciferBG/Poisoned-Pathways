@@ -336,7 +336,7 @@ COPY ~%MOD_FOLDER%/cre/AC#PPON4.cre~ ~override~ // Ondonti orc#1: Quietbrook in 
   
 COPY ~%MOD_FOLDER%/cre/AC#PPON2.cre~ ~override~ // Honeymaker: Brother Gentleswarm
   SAY NAME1 @16 SAY NAME2 @16
-   SAY INITIAL_MEETING @351
+  SAY INITIAL_MEETING @351
   SAY SELECT_COMMON1 @351
   SAY SELECT_COMMON2 @352
   SAY SELECT_COMMON3 @353
@@ -347,6 +347,13 @@ COPY ~%MOD_FOLDER%/cre/AC#PPON2.cre~ ~override~ // Honeymaker: Brother Gentleswa
 COPY ~%MOD_FOLDER%/cre/AC#PPDR1.cre~ ~override~ // Dryad in area acpp06
   SAY NAME1 @17 SAY NAME2 @17
   WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~AC#NYMPH_WATER~))
+  SAY INITIAL_MEETING @327
+  SAY SELECT_COMMON1 @327
+  SAY SELECT_COMMON2 @327
+  SAY SELECT_COMMON3 @327
+  SAY SELECT_COMMON4 @327
+  SAY SELECT_COMMON5 @327
+  SAY SELECT_COMMON6 @327
   
 COPY ~%MOD_FOLDER%/cre/AC#PPZOT.cre~ ~override~ // zombie treant
   SAY NAME1 @18 SAY NAME2 @18

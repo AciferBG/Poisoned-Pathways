@@ -529,7 +529,7 @@ IF ~~ THEN REPLY @3616 EXTERN AC#PPEL4 cnt.01.07
 
 CHAIN AC#PPEL4 blessing_player_priest_lathander
 @3617
-DO ~StartCutSceneMode() SmallWait(2) ActionOverride(Player1,ForceSpell(Myself,DO_NOTHING)) CreateVisualEffectObject("SPROTECT",Player1) CreateVisualEffectObject("SPROTECT",Player2) CreateVisualEffectObject("SPROTECT",Player3) CreateVisualEffectObject("SPROTECT",Player4) CreateVisualEffectObject("SPROTECT",Player5) CreateVisualEffectObject("SPROTECT",Player6) Wait(2) SetGlobal("AC#PP_LathanderBlessing","GLOBAL",1) SetGlobal("AC#PP_BonusBlessing","GLOBAL",1) SmallWait(1) EndCutSceneMode()~ EXIT
+DO ~StartCutSceneMode() SmallWait(2) ActionOverride(Player1,ForceSpell(Myself,DO_NOTHING)) CreateVisualEffectObject("SPROTECT",Player1) CreateVisualEffectObject("SPROTECT",Player2) CreateVisualEffectObject("SPROTECT",Player3) CreateVisualEffectObject("SPROTECT",Player4) CreateVisualEffectObject("SPROTECT",Player5) CreateVisualEffectObject("SPROTECT",Player6) Wait(2) SetGlobal("AC#PP_LathanderBlessing","GLOBAL",1) SetGlobal("AC#PP_BonusBlessing","GLOBAL",1) SmallWait(1) EndCutSceneMode()AddJournalEntry(@12105,QUEST_DONE)~ EXIT
 
 CHAIN AC#PPEL4 cnt.01.05a
 @3618
