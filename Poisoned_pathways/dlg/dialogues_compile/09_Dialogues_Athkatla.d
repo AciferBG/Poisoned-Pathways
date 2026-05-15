@@ -198,10 +198,11 @@ END
 IF ~~ THEN EXTERN AC#PPMA4 token_bye
 
 CHAIN AC#PPMA4 token_bye
-@5175
+@5177
 DO ~SetGlobal("AC#PP_MarrikQuest","GLOBAL",10)
    AddExperienceParty(500)
    AddJournalEntry(@13134,QUEST_DONE)
+   GiveItemCreate("AC#PPCOD",LastTalkedToBy,1,0,0)
    EscapeArea()~
 EXIT
 
@@ -209,33 +210,6 @@ CHAIN AC#PPMA4 bye
 @5176
 EXIT
 
-/*
-CHAIN AC#PPMA4 token_03
-~That depends. What did you want or expect?~
-END
-IF ~~ THEN REPLY ~I don’t know. You tell me.~ EXTERN AC#PPMA4 token_04
-IF ~~ THEN REPLY ~A handsome reward for all my troubles!~ EXTERN AC#PPMA4 token_05
-
-CHAIN AC#PPMA4 token_04
-~Me? I thought you were the one who knew. You’ve followed every word, every whisper... Surely you remember what you were seeking.~ 
-END
-IF ~~ THEN REPLY ~Gold, perhaps. A reward.~ EXTERN AC#PPMA4 token_05
-
-CHAIN AC#PPMA4 token_05
-~A reward? Gold? No, I have none of that. In truth, I’ve nothing to offer you at all — nothing save what you already carry with you. Tell me... is that not enough?~
-END
-IF ~~ THEN REPLY ~I’m not sure anymore.~ EXTERN AC#PPMA4 token_end
-IF ~~ THEN REPLY @5172 EXTERN AC#PPMA4 token_end
-IF ~~ THEN REPLY ~You mean to tell me I’ve been strung along this whole time?~ EXTERN AC#PPMA4 token_end
-
-CHAIN AC#PPMA4 token_end
-~Then perhaps that’s the answer you came for. Not all journeys end with treasure — some end when we stop searching. Farewell.~
-DO ~SetGlobal("AC#PP_MarrikQuest","GLOBAL",10)
-AddexperienceParty(500)
-AddJournalEntry(@13134,QUEST_DONE)
-EscapeArea()~
-EXIT
-*/
 
 
 

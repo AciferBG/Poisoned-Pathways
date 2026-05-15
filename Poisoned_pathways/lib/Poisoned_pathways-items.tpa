@@ -2,6 +2,12 @@
 
 COPY ~%MOD_FOLDER%/itm/copy~         ~override~
 
+COPY ~%MOD_FOLDER%/itm/AC#PPCOD.itm~         ~override~    // Shoon coin
+  SAY NAME1 @1238
+  SAY NAME2 @1256
+  SAY UNIDENTIFIED_DESC @1239
+  SAY DESC  @1257
+
 COPY ~%MOD_FOLDER%/itm/AC#PPDRB.itm~         ~override~    // drow boots
   SAY NAME2 @1254
   SAY DESC  @1255
