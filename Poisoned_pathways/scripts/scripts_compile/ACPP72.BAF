@@ -96,7 +96,7 @@ IF
     Global("PPFinalBoss2ND","ACPP72",1)
     OR(2)
         Difficulty(HARD)
-        LevelPartyGT(12)
+        LevelPartyGT(11)
 THEN
     RESPONSE #100
         ClearAllActions()
@@ -153,10 +153,11 @@ IF
     Difficulty(EASIEST)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -168,8 +169,8 @@ THEN
         CreateCreature("AC#PPGH1",[350.500],S)  // Ghoul
         CreateCreature("AC#PPGH1",[520.370],S)  // Ghoul
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 
 IF
@@ -177,10 +178,11 @@ IF
     Difficulty(EASY)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -195,8 +197,8 @@ THEN
         CreateCreature("AC#PPSCR",[700.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 
 IF
@@ -204,10 +206,11 @@ IF
     Difficulty(NORMAL)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -224,8 +227,8 @@ THEN
         CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 
 IF
@@ -233,10 +236,11 @@ IF
     DifficultyGT(NORMAL)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -253,8 +257,8 @@ THEN
         CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 
 IF
@@ -262,10 +266,11 @@ IF
     Difficulty(EASIEST)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -280,8 +285,8 @@ THEN
         CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 
 IF
@@ -289,10 +294,11 @@ IF
     Difficulty(EASY)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -309,8 +315,8 @@ THEN
         CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 
 IF
@@ -318,10 +324,11 @@ IF
     Difficulty(NORMAL)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -338,8 +345,8 @@ THEN
         CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 
 IF
@@ -347,10 +354,11 @@ IF
     DifficultyGT(NORMAL)
 THEN
     RESPONSE #100
+        ActionOverride("AC#PPTA2",Enemy())
         StartCombatCounter()
-        ClearAllActions()
-        StartCutSceneMode()
-        ClearAllActions()
+        //ClearAllActions()
+        //StartCutSceneMode()
+        //ClearAllActions()
         ScreenShake([20.20],3)
         CreateVisualEffectObject("SPFLESHS","AC#PPTA2")  // Delgorth
         CreateVisualEffect("SPANISUM",[350.500])
@@ -367,7 +375,7 @@ THEN
         CreateCreature("AC#PPSCR",[1100.420],S)  // Scorpion
         CreateCreature("AC#PPSN1",[750.200],S)  // Viper
         SetGlobal("AC#PPFinalBossPrepare","GLOBAL",3)
-        ActionOverride("AC#PPTA2",Enemy())
-        EndCutSceneMode()
+        //ActionOverride("AC#PPTA2",Enemy())
+        //EndCutSceneMode()
 END
 

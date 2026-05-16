@@ -290,7 +290,7 @@ Gewicht: 0~
 
 // itm files
 
-@1037 = ~Ioun-Stein~
+@1037 = ~Ionenstein~
 @1038 = ~Beerenförmiger Ionenstein~
 @1039 = ~Dieser Ionenstein ist wie eine Beere geformt. Jemand muss Magie gewirkt haben, um ihm dieses Aussehen zu verleihen.
   
@@ -304,11 +304,10 @@ Gewisse Taloniten nutzten solche Steine, um mit rivalisierenden Priestern abzure
 
 EIGENSCHAFTEN:
 
-Kampffähigkeiten:
-– ETW0 gegen Kleriker: +3
+– ETW0 gegen Kleriker: +3 Bonus
 
 Besondere Fähigkeiten:
-– Wenn getragen oder angelegt, vertreibt dieser Ioun-Stein die giftigen Dämpfe, die den Eingang zum Turm in Myth Unnohyr versperren
+– Wenn getragen oder angelegt, vertreibt dieser Ionenstein die giftigen Dämpfe, die den Eingang zum Turm in Myth Unnohyr versperren
 
 Gewicht: 0~
 
@@ -365,7 +364,7 @@ Gewicht: 3~
 
 @1050 = ~Rotwabenblume~
 
-@1051 = ~Diese wunderschöne, süß duftende Blume ist ein Geschenk eines Jungen aus Dämmerwaldtal an seine Tante im Regierungsviertel von Athkatla. Er bittet Euch, ihr die Blume zusammen mit einer Botschaft zu überbringen: Dass es ihm gut geht und er lediglich etwas Zeit für sich braucht.
+@1051 = ~Diese wunderschöne, süß duftende Blume ist ein Geschenk eines Jungen aus Dämmerwaldtal an seine Tante im Regierungsviertel von Athkatla. Er bittet Euch, ihr die Blume zusammen mit einer Botschaft zu überbringen: Dass es ihm gut gehe und er Zeit für sich brauche.
 
 EIGENSCHAFTEN:
 Gewicht: 1~
@@ -441,26 +440,24 @@ Gewicht: 2~
 @1067 = ~Delgorths Notiz~
 
 @1068 = ~Erster Eintrag:
-Die Hainblüte... die Legenden sprachen die Wahrheit. Sie blüht noch immer zwischen den zerschmetterten Überresten von Myth Unnohyr, wo tote Magie fault und Leben sich verdreht. Talona lächelt über meine Entdeckung!
+Die Hainblüte... ich habe sie gefunden! Sie blüht noch immer in den Ruinen Myth Unnohyrs, der Ort, an dem Magie stirbt oder sich verdreht. Talona lächelt über meine Entdeckung!
 
 Zweiter Eintrag:
-Mit mühseliger Sorgfalt habe ich die ersten Essenzen des Toxins destilliert. Nur geringe Mengen — kostbare Tropfen des Todes, geboren aus dem purpurnen Herzen der Ader. Die Ergebnisse übertreffen bereits alle Erwartungen: Es ist rasch, unheilbar, ein Verstummen von Fleisch und Geist.
+Mit mühseliger Sorgfalt habe ich die ersten Essenzen destilliert. Geringe Mengen zwar — doch kostbare Tropfen des Todes. Die Ergebnisse übertreffen bereits alle Erwartungen: Das Gift ist rasch und unheilbar.
 
 Dritter Eintrag:
-Meine ersten Lieferungen gingen an die Feinde der Harfner. Kleinliche Fürsten, enttäuschte Söldner und jene, die das Eingreifen der Harfner als Bedrohung des wahren Gleichgewichts betrachten. Mögen die Selbstgerechten an ihrer eigenen Frömmigkeit ersticken.
+Meine ersten Lieferungen gingen an die Feinde der Harfner. Kleinliche Fürsten, enttäuschte Söldner und jene, die das Eingreifen der Harfner als Bedrohung des wahren Gleichgewichts betrachten. Mögen die Selbstgerechten an ihrer eigenen Frömmigkeit ersticken!
 
 Vierter Eintrag:
-Die Nachtmasken in Westtor wittern Gewinn. Sie bieten Münze und Hände, um das Werk zu verbreiten, doch es fehlt ihnen an Feingefühl. Ich muss vorsichtig vorgehen. Die Zhentarim, stets wachsam, könnten nützlich sein — sofern man sie auf Abstand hält.
+Die Nachtmasken in Westtor haben Interesse bekundet. Auch die Zhentarim könnten noch nützlich sein — sofern man sie auf Abstand hält.
 
 Fünfter Eintrag:
-Die Fundamente hier in Myth Unnohyr sind fest genug — seine wilde und tote Magie schirmt meine Arbeit vor unerwünschten Blicken ab. Zwar ist es mir gelungen, einige Ranken im toten Boden zu kultivieren, doch wachsen sie langsam und eigensinnig und tragen nur wenige Blüten. In diesem Tempo wird es Jahre dauern, bis genug Toxin für meine ehrgeizigen Pläne gewonnen ist. Ich muss einen Weg finden, das Wachstum zu beschleunigen — oder mehr Hände gewinnen, die bereit sind, die Ernte zu pflegen.
+Mir ist es zwar gelungen, einige Blumen im toten Boden zu kultivieren, doch sie wachsen langsam und tragen nur wenige Blüten. Es wird Jahre dauern, bis genügend Gift für meine Pläne gewonnen ist. Ich muss einen Weg finden, das Wachstum zu beschleunigen!
 
 Sechster Eintrag:
-Ein Priester der Eldath mischte sich ein — und bezahlte für seine Torheit. Andere mögen ihm nachfolgen, doch mein Weg ist klar: Das Toxin wird sich ausbreiten. Es wird in die Adern der Mächtigen wie der Demütigen Faerûns sickern. Talonas Wille ist in jeden zitternden Atemzug gewoben.
+Ein Priester Eldaths wollte mir das Handwerk legen und kostete von meinem Gift. Andere werden ihm folgen. Mögen die Starken fallen und die Schwachen vergehen. Nur der Verfall ist ewig!
 
-Mögen die Starken fallen und die Schwachen vergehen. Nur Verfall ist ewig!
-
-— Malagent Delgorth
+Malagent Delgorth
 ~
 
 @1075 = ~Stirnband~
@@ -470,10 +467,7 @@ Mögen die Starken fallen und die Schwachen vergehen. Nur Verfall ist ewig!
 
 EIGENSCHAFTEN:
 
-Kampffähigkeiten:
 – Wenn der Träger ein Wesen tötet, erhält <PRO_HESHE> 1 temporären Trefferpunkt für 1 Runde (kumulativ).
-
-Ausgerüstete Fähigkeiten:
 – Charisma: –1
 – Säureresistenz: +10%
 – 25% Chance, dass ein Angreifer beim Treffer 1W2 Säureschaden erleidet (Rettungswurf gegen Tod bei –2 negiert)
@@ -487,11 +481,8 @@ Gewicht: 1
 
 EIGENSCHAFTEN:
 
-Ausgerüstete Fähigkeiten:
 – Zauberwirkzeit um 1 verringert
 – Immunität gegen Gift
-
-Kampffähigkeiten:
 – Verursachter Säureschaden: +10%
 – Ermöglicht Nah- und Fernangriffe
 
@@ -574,13 +565,9 @@ Gewicht: 9~
 Aufgrund der druidischen Verzauberungen, die in die Waffe gewoben wurden, können nur einklassige Druiden sie wirkungsvoll führen.
 
 EIGENSCHAFTEN:
-
-Ausgerüstete Fähigkeiten:
 – Setzt Armbrust-Fertigkeit auf 1
-
-Kampffähigkeiten:
-– Benötigt keine Munition; verschießt herbeigerufene magische Dornbolzen
-– 20% Chance pro Treffer, das Ziel zu verstricken (Rettungswurf gegen Zauber bei –1 negiert)
+– Benötigt keine Munition; verschießt herbeigerufene magische Dornenbolzen
+– 20% Chance pro Treffer, das Ziel zu verstricken, wenn ihm Rettungswurf gegen Zauber mit –1 misslingt
 
 ETW0: +1
 Schaden: 1W6+1 (Geschoss)
@@ -610,30 +597,28 @@ Möget Ihr mehr Erfolg haben als ich.~
 
 @1147 = ~Geschichten des Friedenswanderers I~
 
-@1148 = ~„Das stille Wasser im Innern“
+@1148 = ~Niedergeschrieben von Lirael von den Sanften Ufern, Hüterin des Stillen Beckens
 
-Niedergeschrieben von Lirael von den Sanften Ufern, Hüterin des Stillen Beckens
+Ich war noch jung, als ich erstmals tief in den Scharfzahnwald wanderte. Die Ältesten hatten mich vorher gewarnt: „Nicht alle, die unter dem Grün wandeln, ehren das Leben.“
+Doch mein Herz kannte keine Furcht, nur den Ruf, Eldaths Frieden dorthin zu tragen, wohin meine Schritte mich auch führten.
 
-Ich war noch jung, als ich erstmals tief in den Wald der Scharfen Zähne wanderte.
-Die Ältesten hatten gewarnt: „Nicht alle, die unter dem Grün wandeln, ehren das Leben.“
-Doch mein Herz kannte keine Furcht, nur den Ruf, Eldaths Frieden dorthin zu tragen, wohin meine Schritte mich führten.
+Drei Nächte schlief ich unter dem sternklaren Blätterdach. Am vierten Abend begegnete ich dem Oger Brughul, dessen Knüppel nach Blut dürstete.
 
-Drei Nächte schlief ich unter dem sternklaren Blätterdach, und das Flüstern der Blätter sang Windlieder für meine Seele. Am vierten Abend begegnete ich dem Oger Brughul, der sein Knüppel nach Blut dürstete.
-
-Ein Kalb, gefesselt und zitternd, lag nahe seinem Feuer. Brughul ragte wie zwei Männer übereinander, sein Knüppel glänzte von alten Flecken. Ich hätte fliehen können. Ich hätte mit Zauber oder Flamme zuschlagen können.
+Ein Reh, gefesselt und zitternd, lag nahe seinem Feuer. Brughul ragte über ihm auf, sein Knüppel glänzte von frischem Blut. Ich hätte fliehen können. Ich hätte mit Zauber oder Flamme zuschlagen können.
 
 Doch ich tat, was Eldath stets gelehrt hatte: Ich setzte mich.
 
-Einfach so. Im Schneidersitz. Die Handflächen offen. Das Herz entblößt. Und ich begann das alte Wiegenlied der stillen Wasser zu singen.
+Die Handflächen offen. Und ich begann das alte Wiegenlied der stillen Wasser zu singen.
 
 „Kein Blut stillt je so rein das Licht,
 Wie Quell, der klar aus Tiefe bricht.
-Kein Schrei vermag Erlösung je,
-Lass Stille säen Frieden im Weh.“
+Kein Schrei vermag, was Ruhe schafft,
+denn Frieden wächst aus stiller Kraft.“
 
-Brughuls Zorn schwankte. Das Ungeheuer trat näher. Ich roch seinen Atem. Sein Griff lockerte sich. Der Knüppel fiel ins Moos. Dann — Stille. Nur das leise Plätschern des Kalbes, als es ins seichte Wasser taumelte und verschwand.
+Brughuls Zorn schwankte. Der Unhold trat näher. Ich roch seinen Atem, als er seinen Waffenarm hob. Doch sein Griff lockerte sich. Der Knüppel fiel ins Moos.  Und dann — Stille. Nur das leise Plätschern des Rehes, als es ins seichte Wasser taumelte und verschwand.
+Als ich die Augen öffnete, war ich allein. 
 
-Als ich die Augen öffnete, war ich allein. Man sagt, dort wachse nun ein Ring weißer Lilien, wo zuvor keine blühten.
+Man sagt, an jenem Ort wachse nun ein Ring weißer Lilien, wo zuvor nichts blühte.
 
 (Obwohl dieser Gegenstand kulturellen Wert besitzen mag, scheint er weder magisch noch von Nutzen für Eure Aufgabe zu sein.)~
 
@@ -962,10 +947,7 @@ Gewicht: 0~
 
 EIGENSCHAFTEN:
 
-Ausgerüstete Fähigkeiten:
 – Talonas Kuss: Solange der Träger vergiftet ist, erhält <PRO_HESHE> +5 auf alle Rettungswürfe und Angriffswürfe, bis das Gift abgeklungen ist.
-
-Kampffähigkeiten:
 – Bei 50 % aller Treffer muss das Ziel einen Rettungswurf gegen Tod bestehen oder erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde
 
 ETW0: +3
@@ -1254,7 +1236,6 @@ Gewicht: 4~
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
 – Während der Träger verborgen oder unsichtbar ist, kann er nicht durch magische Mittel wie "Unsichtbarkeit entdecken" oder andere magische Spähzauber aufgespürt werden
 
 Gewicht: 0~

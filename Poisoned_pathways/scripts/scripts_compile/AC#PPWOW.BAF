@@ -1818,7 +1818,7 @@ THEN
     SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
     SetGlobalTimer("MO_WillSpellTimer","LOCALS",6)
     SetInterrupt(FALSE)
-    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_EMOTION_HOPELESSNESS)  // SPWI411.SPL (Emotion: Hopelessness)
+    ReallyForceSpellRES("AC#PPEM",NearestEnemyOf(Myself))  // (Emotion: Hopelessness)
     SetInterrupt(TRUE)
 END
 
@@ -1853,7 +1853,7 @@ THEN
     SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
     SetGlobalTimer("MO_WillSpellTimer","LOCALS",18)
     SetInterrupt(FALSE)
-    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_EMOTION_HOPELESSNESS)  // SPWI411.SPL (Emotion: Hopelessness)
+    ReallyForceSpellRES("AC#PPEM",NearestEnemyOf(Myself))  // (Emotion: Hopelessness)
     SetInterrupt(TRUE)
 END
 
@@ -1888,7 +1888,7 @@ THEN
     SetGlobalTimer("MO_SpellCastTimer","LOCALS",6)
     SetGlobalTimer("MO_WillSpellTimer","LOCALS",600)
     SetInterrupt(FALSE)
-    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_EMOTION_HOPELESSNESS)  // SPWI411.SPL (Emotion: Hopelessness)
+    ReallyForceSpellRES("AC#PPEM",NearestEnemyOf(Myself))  // (Emotion: Hopelessness)
     SetInterrupt(TRUE)
 END
 

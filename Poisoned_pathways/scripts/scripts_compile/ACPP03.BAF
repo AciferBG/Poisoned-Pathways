@@ -7,6 +7,29 @@ THEN
 END
 
 IF
+    Global("AC#PP_MythUnnohyr","GLOBAL",5)
+    Global("LathanderJournal","ACPP03",0)
+    Global("AC#PP_LathanderBlessing","GLOBAL",0)
+    Global("AC#PP_PlayerLath","GLOBAL",0)
+THEN
+    RESPONSE #100
+        AddJournalEntry(@12102,QUEST)  
+        SetGlobal("LathanderJournal","ACPP03",1)
+END
+
+IF
+    Global("AC#PP_MythUnnohyr","GLOBAL",5)
+    Global("LathanderJournal","ACPP03",0)
+    Global("AC#PP_LathanderBlessing","GLOBAL",1)
+    Global("AC#PP_PlayerLath","GLOBAL",1)
+THEN
+    RESPONSE #100
+        AddJournalEntry(@12105,QUEST_DONE)   
+        SetGlobal("LathanderJournal","ACPP03",1)
+END
+
+/*
+IF
     Global("AC#PP_NewProblemsUnnohyr","GLOBAL",1)
     Global("AC#PP_MythUnnohyr","GLOBAL",7)
 THEN
@@ -14,4 +37,5 @@ THEN
         CreateCreature("AC#PPMI",[370.240],S)  // Mismal Al'Visalle
         SetGlobal("AC#PP_MythUnnohyr","GLOBAL",8)
 END
+*/
 

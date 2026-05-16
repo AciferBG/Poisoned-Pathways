@@ -55,9 +55,9 @@ Ich soll zum Tempel des Ilmater in den Slums von Athkatla reisen und um den Sege
 
 Ich muss die Kirche Lathanders in Athkatla aufsuchen, um den Segen der Erneuerung zu empfangen.~
 
-@12103 = ~Das Gegengift: Eldaths singendes Wasser
+@12103 = ~Das Gegengift: Eldaths Wasser
 
-Alatoasz wies mich an, eine Karaffe von Eldaths singendem Wasser aus der Grotte im Dämmerwaldtal zu holen. Die Dienerin am heiligen Becken wird es mir geben. Das Wasser dient als letztes Medium, durch das die Segnungen vereint werden sollen.~
+Alatoasz wies mich an, eine Karaffe von Eldaths Wasser aus der Grotte im Dämmerwaldtal zu holen. Die Dienerin am heiligen Becken wird es mir geben.~
 
 @12104 = ~Das Gegengift: Ilmaters Segen des Mitgefühls
 
@@ -67,13 +67,13 @@ Ich erhielt den Segen des Mitgefühls von Ilmater in den Slums.~
 
 Lathander habt mir den Segen der Erneuerung gewährt.~
 
-@12106 = ~Das Gegengift: Eldaths singendes Wasser
+@12106 = ~Das Gegengift: Eldaths Wasser
 
-Ich habe einen Krug von Eldaths singendem Wasser aus der Grotte Im Dämmerwaldtal erhalten. Nun bleibt nur noch, mit der gesegneten Blume und dem heiligen Wasser zu Alatoasz zurückzukehren.~
+Ich habe einen Krug von Eldaths Wasser aus der Grotte Im Dämmerwaldtal erhalten. Nun bleibt nur noch, mit der gesegneten Blume und dem heiligen Wasser zu Alatoasz zurückzukehren.~
 
 @12107 = ~Das Gegengift
 
-Alle drei Segnungen wurden gesammelt – Leben, Mitgefühl und Erneuerung – und ich habe Eldaths singendes Wasser gesichert. Nun muss ich zu Alatoasz im Dämmerwaldtal zurückkehren, damit das Gegengift endlich erschaffen werden kann.~
+Alle drei Segnungen wurden gesammelt – Leben, Mitgefühl und Erneuerung – und ich habe Eldaths Wasser erhalten. Nun muss ich zu Alatoasz im Dämmerwaldtal zurückkehren, damit das Gegengift endlich erschaffen werden kann.~
 
 @12108 = ~Das Gegengift
 
@@ -271,7 +271,7 @@ Im Dämmerwaldtal traf ich einen alten Mann namens Mannatarv. Er ist bereit zu s
 
 @13081 = ~Ein friedvoller Tod
 
-Ich stimmte Mannatarvs Bitte zu. Er wartet in der Krankenstube vom Dämmerwaldtal auf das Gift, bereit, seinem Leiden ein Ende zu setzen.~
+Ich stimmte Mannatarvs Bitte zu. Er wartet in der Krankenstube vom Dämmerwaldtal auf das Gift, bereit, seinem Leben ein Ende zu setzen.~
 
 @13082 = ~Ein friedvoller Tod
 
@@ -279,7 +279,7 @@ Ich gab Mannatarv ein Blatt der Hainblüte. Er dankte mir  — und starb.~
 
 @13083 = ~Ein friedvoller Tod
 
-Ich weigerte mich, Mannatarv zu helfen. Die Priester Eldaths werden ihn weiter mit ihrer Heilkunst am Leben erhalten, ob er es wünscht oder nicht.~
+Ich beschloss, Mannatarv nicht zu helfen. Die Priester Eldaths werden ihn weiter mit ihrer Heilkunst am Leben erhalten, ob er es wünscht oder nicht.~
 
 // Wadal Hrun
 
