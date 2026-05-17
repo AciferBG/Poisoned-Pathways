@@ -26,11 +26,20 @@ THEN
 END
 
 IF
+    See(NearestEnemyOf(Myself))
+    Global("PoisonShield","LOCALS",0)
+THEN
+    RESPONSE #100
+        ApplySpellRES("AC#PPTF",Myself)  // No such index
+        SetGlobal("PoisonShield","LOCALS",1)
+END
+
+IF
     OR(2)
         Difficulty(HARDEST)
         LevelPartyGT(14)
     See(NearestEnemyOf(Myself))
-    HPPercentLT(Myself,50)
+    HPPercentLT(Myself,75)
     Global("Summon_Chasme","LOCALS",0)
 THEN
     RESPONSE #100
@@ -43,10 +52,10 @@ END
 
 IF
     OR(2)
-        LevelPartyGT(12)
+        LevelPartyGT(11)
         DifficultyGT(NORMAL)
     See(NearestEnemyOf(Myself))
-    HPPercentLT(Myself,50)
+    HPPercentLT(Myself,75)
     Global("Summon_Chasme","LOCALS",0)
 THEN
     RESPONSE #100
@@ -58,7 +67,7 @@ END
 
 IF
     See(NearestEnemyOf(Myself))
-    HPPercentLT(Myself,50)
+    HPPercentLT(Myself,75)
     DifficultyGT(EASY)
     Global("Summon_Chasme","LOCALS",0)
 THEN
