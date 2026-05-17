@@ -14,8 +14,8 @@
 - New enemies with custom animations: face Chasmes, Zombie Treants and many more!  
 - Unique magical items  
 - Challenging battles and dialogue-driven progression  
-- Two new custom music tracks created for this mod 
-- Approx. 2–3 hours of gameplay  
+- Two new custom music tracks created for this mod; one additional music track from NWN  
+- Approx. 5 hours of gameplay  
 - Compatible with both BG2EE and EET
 
 *The current release of this mod ends with the resolution of the Renfeld poison storyline. Certain areas introduced in this mod are planned to be revisited in later BG chapters and in Throne of Bhaal in a future release, though no release date has been set.*

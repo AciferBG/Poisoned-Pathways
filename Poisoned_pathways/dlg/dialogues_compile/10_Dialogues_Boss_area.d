@@ -43,6 +43,7 @@ CHAIN IF ~Global("FinalBossBreak","ACPP72",1)~ THEN AC#PPTA2 hello_break
 @5306
 DO ~DestroyItem("minhp1")
 ApplySpell(Myself,RESTORE_FULL_HEALTH)
+ReallyForceSpell(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT)
 SetGlobal("FinalBossBreak","ACPP72",2)
 SetGlobal("PPFinalBoss2ND","ACPP72",1)~
 EXIT

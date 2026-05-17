@@ -891,22 +891,16 @@ Dann ... werde ich wieder einen Körper haben. Einen vollkommenen. Ein Gefäß w
 
 EIGENSCHAFTEN:
 
-Ausgerüstete Fähigkeiten:
 – +2 Bonus auf Rettungswürfe gegen Tod
+– Bei Treffer: 5 % Chance auf „Verzehrende Krankheit“ – Ziel muss Rettungswurf gegen Tod bestehen oder verliert 1 Runde lang 2 Punkte Stärke (kumulativ)
+– Giftstoß (1× täglich): Ziel erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde, wenn ihm ein Rettungswurf gegen Tod +1 misslingt
 
-Kampffähigkeiten:
-– Bei Treffer: 5 % Chance auf „Verzehrende Krankheit“ – Ziel muss Rettungswurf gegen Tod bestehen oder verliert 1 Runde lang 2 Punkte Stärke (stapelbar)
-
-Fähigkeiten (Aufladungen):
-– Giftstoß (1× pro Tag): Ziel erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde (Rettungswurf gegen Tod bei +1 negiert)
-
-ETW0: +3
+ETW0-Bonus: -3
 Schaden: 1W6+3 (Wucht)
 Initiativefaktor: 1
 Waffenfertigkeit: Kampfstab
-Typ: Zweihändig
-Erfordert:
- 5 Stärke
+Typ: 2-händig
+Mindeststärke: 5
 
 Gewicht: 3~
 // itm files
@@ -919,7 +913,7 @@ EIGENSCHAFTEN:
 
 – Das Ziel muss einen Rettungswurf gegen Zauber bestehen oder es wird für 5 Runden bezaubert
 
-ETW0: +1
+ETW0-Bonus: -1
 Schaden: 0 (Geschoss)
 Schusswaffe: Bogen
 
@@ -931,10 +925,9 @@ Gewicht: 0~
 
 EIGENSCHAFTEN:
 
-Kampffähigkeiten:
-– Ziel muss Rettungswurf gegen Tod bestehen oder erleidet 10 Sekunden lang 2 Punkte Giftschaden pro Sekunde
+– Ziel muss einen Rettungswurf gegen Tod bestehen oder erleidet 10 Sekunden lang 2 Punkte Giftschaden pro Sekunde
 
-ETW0: +1
+ETW0-Bonus: -1
 Schaden: 1W4+1
 Schadensart: Geschoss
 Abschussgerät: Schleuder
@@ -943,20 +936,19 @@ Gewicht: 0~
 
 @1197 = ~Verdorrter Zweig~
 
-@1198 = ~Diese grausame Keule scheint nichts weiter als ein knorriger, geschwärzter Ast zu sein, dessen Oberfläche aufgespalten und verdreht wirkt, als habe sie Schmerzen erlitten. Sie wurde von einem Baum tief in einem seuchenverseuchten Hain geschnitten, wo Talonas Atem alles Leben erstickt hatte. Ihre Dornen tragen eine stumpfgrüne Patina – Rückstände jahrelanger Giftsegnungen.
+@1198 = ~Diese Keule ist nichts weiter als ein knorriger, verdorrter Ast, dessen Oberfläche vor Schmerzen verdreht wirkt. Sie wurde von einem Baum tief in einem seuchenverseuchten Hain geschnitten, an welchem Talonas Atem alles Leben erstickt hatte. Die Dornen tragen eine stumpfgrüne Patina – Rückstände jahrzehntelanger Giftsegnungen.
 
 EIGENSCHAFTEN:
 
 – Talonas Kuss: Solange der Träger vergiftet ist, erhält <PRO_HESHE> +5 auf alle Rettungswürfe und Angriffswürfe, bis das Gift abgeklungen ist.
 – Bei 50 % aller Treffer muss das Ziel einen Rettungswurf gegen Tod bestehen oder erleidet 6 Sekunden lang 1 Giftschaden pro Sekunde
 
-ETW0: +3
+ETW0-Bonus: -3
 Schaden: 1W6+3 (Wucht)
 Initiativefaktor: 1
 Waffenfertigkeit: Keule
 Typ: Einhändig
-Erfordert:
- 5 Stärke
+Mindeststärke: 5
 
 Gewicht: 1~
 
@@ -1120,10 +1112,7 @@ Auch wenn diese Seiten für Eure Aufgabe keinen unmittelbaren Nutzen haben, kann
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
 – Immunität gegen Gift
-
-Fähigkeiten (Aufladungen):
 – Kann einmal pro Tag Freunde wirken
   Wirkungsbereich: Selbst
 
@@ -1269,9 +1258,8 @@ Eine feine Verzauberung – gewoben im Trotz gegen Lolths Getreue wie auch gegen
 
 EIGENSCHAFTEN:
 
-Angelegte Fähigkeiten:
 – Immunität gegen Verstricken und Netz
-– +2 RK und +2 Rettungswürfe gegen Elfen
+– Bonus von +2 auf RK und +2 auf alle Rettungswürfe gegen Elfen
 – Lautlos bewegen: +10 %
 – Im Schatten verbergen: +10 %
 
