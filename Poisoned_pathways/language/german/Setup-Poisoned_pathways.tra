@@ -242,14 +242,12 @@ Ausgerüstete Fähigkeiten:
 Gewicht: 0~
 // itm files
 
-@1018 = ~Halskette des Lebens~
-@1019 = ~Schlicht im Äußeren, doch von stiller Kraft durchdrungen, pulsiert diese Halskette schwach mit heilender Energie. Obwohl ihr Ursprung im Dunkeln liegt, wird sie oft von Heilern, Friedenswächtern und jenen getragen, die dort wandeln, wo der Schatten des Todes verweilt.
+@1018 = ~Amulett der Lebenskraft~
+@1019 = ~Schlicht im Äußeren, doch von stiller Kraft durchdrungen, pulsiert diese Halskette schwach mit lebensspendender Energie. Ihr sanftes Leuchten stärkt den Körper des Trägers und spendet selbst in Zeiten von Erschöpfung und Leid neue Kraft.
 
 EIGENSCHAFTEN:
 
-Ausgerüstete Fähigkeiten:
-– Rettungswurf gegen Nekromantie: +5  
-– Maximale Trefferpunkte: +2  
+– Maximale Trefferpunkte: +8
 
 Gewicht: 0~
 
@@ -341,19 +339,14 @@ Gewicht: 1~
 
 @1047 = ~Umhang~
 @1048 = ~Eldaths Umarmung~
-@1049 = ~Dieser verzauberte Umhang geht auf einen zurückgezogen lebenden Priester Eldaths zurück, der vor langen Zeiten durch die Haine des Wealdath wanderte. Vögel nisteten in seinen Händen, Wölfe hüteten seinen Schlaf, und selbst die scheuesten Tiere traten näher, um in seiner friedvollen Gegenwart zu verweilen.
+@1049 = ~Dieser verzauberte Umhang geht auf einen zurückgezogen lebenden Priester Eldaths zurück, der vor langen Zeiten durch die Wälder des Faerûns wanderte. Vögel nisteten in seinen Händen, Wölfe hüteten seinen Schlaf, und selbst die scheuesten Tiere traten näher, um in seiner friedvollen Gegenwart zu verweilen.
 
-Als er aus der Welt schied, so heißt es, webten Dryaden diesen Mantel aus den Blättern, die um seine Ruhestätte gefallen waren. Wer ihn trägt, schreitet in stiller Anmut — und die wilden Geschöpfe der Welt schreiten an seiner Seite.
+Als er aus der Welt schied, webten Dryaden diesen Mantel aus den Blättern, die um seine Ruhestätte herabgefallen waren. Wer ihn trägt, schreitet in stiller Anmut — und die wilden Geschöpfe der Welt schreiten an seiner Seite.
 
 EIGENSCHAFTEN:
 
-Fähigkeiten (Aufladungen):
-– Kann einmal pro Tag Schutz vor Bösem im Umkreis von 3 Metern (auf sich selbst) wirken
-
-Ausgerüstete Fähigkeiten:
 – Rüstungsklasse: +2
 – Rettungswürfe: +2
-– Leise bewegen: +10%
 – 5% Chance, bei einem Treffer im Kampf Heiligtum zu wirken
 – Befinden sich Tiere im Umkreis von 3 Metern:
    - Zusätzlich +1 auf Rüstungsklasse
