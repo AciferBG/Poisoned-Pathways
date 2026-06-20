@@ -121,10 +121,11 @@ CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_which_weapons
 =  
 @4441
 END
+IF~GlobalGT("AC#PPTradeItems","GLOBAL",19)~THEN REPLY @4442 EXTERN AC#PPDR1 trade_too_much_no
 IF~Global("AC#PPTradeItems","GLOBAL",0)~THEN REPLY @4442 EXTERN AC#PPDR1 trade_root
-IF~GlobalGT("AC#PPTradeItems","GLOBAL",0)
+IF~GlobalGT("AC#PPTradeItems","GLOBAL",0) GlobalLT("AC#PPTradeItems","GLOBAL",20)
 !GlobalTimerNotExpired("GrottoTimer","ACPP06")~THEN REPLY @4442 EXTERN AC#PPDR1 trade_root
-IF~GlobalGT("AC#PPTradeItems","GLOBAL",0)
+IF~GlobalGT("AC#PPTradeItems","GLOBAL",0) GlobalLT("AC#PPTradeItems","GLOBAL",20)
 !GlobalTimerExpired("GrottoTimer","ACPP06")~THEN REPLY @4442 EXTERN AC#PPDR1 trade_timer_no
 IF ~~ THEN REPLY @4437 EXTERN AC#PPDR1 trade_weapons_exact_benefit
 IF ~~ THEN REPLY @4443 EXTERN AC#PPDR1 trade_think_about_it
@@ -143,13 +144,21 @@ IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY @4447 EXTERN AC#PPDR1 what_pl
 IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY @4447 EXTERN AC#PPDR1 what_place_2
 IF~~THEN REPLY @4448 EXTERN AC#PPDR1 who_are_you
 IF~~THEN REPLY @4449 EXTERN AC#PPDR1 bye
-IF~Global("AC#PP_TradeWeapons","GLOBAL",2) !GlobalTimerNotExpired("GrottoTimer","ACPP06")~THEN REPLY @4450 EXTERN AC#PPDR1 trade_root
-IF~Global("AC#PP_TradeWeapons","GLOBAL",2) !GlobalTimerExpired("GrottoTimer","ACPP06")~THEN REPLY @4450 EXTERN AC#PPDR1 trade_timer_no
+IF~GlobalGT("AC#PPTradeItems","GLOBAL",19)~THEN REPLY @4450 EXTERN AC#PPDR1 trade_too_much_no
+IF~Global("AC#PP_TradeWeapons","GLOBAL",2) Global("AC#PPTradeItems","GLOBAL",0)~THEN REPLY @4450 EXTERN AC#PPDR1 trade_root
+IF~Global("AC#PP_TradeWeapons","GLOBAL",2) GlobalGT("AC#PPTradeItems","GLOBAL",0) !GlobalTimerNotExpired("GrottoTimer","ACPP06")
+GlobalLT("AC#PPTradeItems","GLOBAL",20)~THEN REPLY @4450 EXTERN AC#PPDR1 trade_root
+IF~Global("AC#PP_TradeWeapons","GLOBAL",2) GlobalGT("AC#PPTradeItems","GLOBAL",0) !GlobalTimerExpired("GrottoTimer","ACPP06")
+GlobalLT("AC#PPTradeItems","GLOBAL",20)~THEN REPLY @4450 EXTERN AC#PPDR1 trade_timer_no
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY @4451 EXTERN AC#PPDR1 trade_weapons_hub
 IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY @4452 EXTERN AC#PPDR1 need_singing_water
 
 	CHAIN IF ~~ THEN AC#PPDR1 trade_timer_no
 	@4636
+	EXIT
+	
+	CHAIN IF ~~ THEN AC#PPDR1 trade_too_much_no
+	@4637
 	EXIT
 //IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ THEN REPLY ~Alatoasz told me to collect a weapon here, one to aid me against the undead.~ EXTERN AC#PPDR1 need_blade_01
 
