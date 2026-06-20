@@ -20,3 +20,6 @@ UNLESS ~ACPP82~
 
 // Adding Spawn groups to spawngrp.2da
 APPEND_COL ~spawngrp.2da~ "$ $ RDAC#PP7 150 AC#PPSK8 AC#PPSK8 AC#PPSK9 AC#PPSK9 * * * *"
+
+APPEND itemexcl.2da ~AC#PPRE 1~
+BUT_ONLY
