@@ -1145,6 +1145,18 @@ Aptitudes de carga:
   La ficha puede activarse con una palabra de comando para desatar un poderoso efecto de disipar magia en un radio de 4,5 metros. La ficha se destruye al usarla.
   
   Peso: 0 lbs~
+@1258 = ~Protección contra el veneno~
+@1259 = ~Protección contra el veneno 
+(Abjuración)
+
+Nivel: 2
+Alcance: Criatura tocada
+Duración: 10 asaltos 
+Tiempo de lanzamiento: 3
+Área de efecto: Criatura tocada
+Tirada de salvación: Ninguna
+
+Al usar este hechizo, la criatura elegida gana inmunidad a venenos y ponzoñas administrados por contacto con la piel, ingestión, picadura, mordedura o arma. Las toxinas de otros tipos siguen afectando a la criatura normalmente. Cualquier veneno que ya esté en el cuerpo cuando se lanza el hechizo tampoco se ve afectado por este hechizo.~  
 
 // script strings
 @2000 = ~Valle del Bosque del Ocaso~

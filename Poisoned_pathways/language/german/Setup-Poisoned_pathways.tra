@@ -1269,6 +1269,19 @@ Die Bannmarke kann einmalig durch ein Befehlswort aktiviert werden, um einen mä
 
 Gewicht: 0~
 
+@1258 = ~Schutz vor Gift~
+@1259 = ~Schutz vor Gift
+
+Grad: 2
+Schule: Bannzauber
+Reichweite: Berührung
+Dauer: 10 Runden
+Zeitaufwand: 3
+Bereich: 1 Wesen
+Rettungswurf: Nein
+
+Durch die Anwendung dieses Zaubers wird die gewählte Kreatur immun gegen Gifte, die über Kontakt mit der Haut, Verschlucken oder Stich verabreicht werden. Gifte anderer Arten wirken weiterhin normal auf das Wesen. Alle Gifte, die sich bereits im Körper befinden, wenn der Zauber gewirkt wird, sind ebenfalls von diesem Zauberspruch nicht betroffen.~
+
 // script strings
 // script strings
 
