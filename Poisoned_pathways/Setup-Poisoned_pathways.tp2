@@ -686,6 +686,11 @@ COPY ~Poisoned_pathways/spl/AC#HEZR.spl~            ~override~  // Hezrou stench
   SAY 0xce @931
        WRITE_SHORT   0x98 ~%AC#HEZRU%~
 
+COPY ~Poisoned_pathways/spl/AC#SPW2.spl~         ~override~ // protection from poison
+       SAY NAME1 @1258
+       SAY NAME2 @1258
+       SAY 0x50 @1259
+
 COPY ~Poisoned_pathways/spl/AC#PPF1.spl~            ~override~ // Faeries Save vs. death bonus
   SAY NAME1 @941
   SAY 0xce @932
