@@ -18,7 +18,7 @@
 - Approx. 5 hours of gameplay  
 - Compatible with both BG2EE and EET
 
-*The current release of this mod ends with the resolution of the Renfeld poison storyline. Certain areas introduced in this mod are planned to be revisited in later BG chapters and in Throne of Bhaal in a future release, though no release date has been set.*
+*The current release of this mod ends with the resolution of the Renfeld poison storyline. Certain areas introduced in this mod are planned to be revisited in Throne of Bhaal in a future release, though no release date has been set.*
 
 ![Town Watercolor](https://github.com/AciferBG/Poisoned-Pathways/blob/main/pics/screenshot01_lorez.png)
 
@@ -29,15 +29,15 @@ The mod is triggered **after delivering Renfeld’s body** in the Docks District
 1. Remove any previous version of the mod before installing a new one.  
 2. Extract the contents of the mod archive into your game's main directory (`BG2EE` / `EET`, where the `CHITIN.KEY` file is located).  
 3. After extraction, your game folder should contain:  
-   - A folder named **poisonedpathways**  
-   - A file named **setup-poisonedpathways.exe**  
+   - A folder named **Poisoned_pathways**  
+   - A file named **setup-Poisoned_pathways.exe**  
 4. Run the installer:  
-   - Double-click `setup-poisonedpathways.exe` and follow the on-screen instructions.  
+   - Double-click `setup-Poisoned_pathways.exe` and follow the on-screen instructions.  
 5. To uninstall or change components:  
-   - Run `setup-poisonedpathways.exe` again.
+   - Run `setup-Poisoned_pathways.exe` again.
 
 ## Recommended Character Level
-- Level 8+  
+- Level 9+  
 - The mod includes scaling elements that adapt to the player’s level and difficulty settings.
 
 ## Language Support  
@@ -49,6 +49,9 @@ This mod is available in:
 ## Compatibility  
 Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core game content and should be compatible with most other mods.
 
+This mod is fully compatible with Morpheus' Tactics Remix. When both mods are installed, Morpheus has adjusted several encounters to better match the increased difficulty and gameplay balance of Tactics Remix. You need to install Tactics Remix after this mod.
+
+
 ---
 
 ## Credits
@@ -56,7 +59,7 @@ Poisoned Pathways is compatible with *BG2EE* and *EET*. It does not alter core g
 **Acifer** – Writing, Area Art, Item Graphics & Design, Quest Design, Scripting, Music <br>
 **Lava** – Writing, Additional Area Art, Item Graphics & Design, Quest Design, Scripting, Worldmap Icons <br>
 **Weigo** – BP-BGT Worldmap mod compatibility <br>
-**morpheus562** – Bug fixing, additional scripting, EEex compatibility <br>
+**morpheus562** – Bug fixing, additional scripting, EEex compatibility, Tactics Remix compatibility <br>
 **Megrimlock** – English version <br>
 **ElGamerViejuno** – Beta-testing, Spanish version <br>
 

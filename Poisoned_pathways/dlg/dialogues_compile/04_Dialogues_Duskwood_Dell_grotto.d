@@ -121,7 +121,11 @@ CHAIN IF ~~ THEN AC#PPDR1 trade_weapons_which_weapons
 =  
 @4441
 END
-IF ~~ THEN REPLY @4442 EXTERN AC#PPDR1 trade_root
+IF~Global("AC#PPTradeItems","GLOBAL",0)~THEN REPLY @4442 EXTERN AC#PPDR1 trade_root
+IF~GlobalGT("AC#PPTradeItems","GLOBAL",0)
+!GlobalTimerNotExpired("GrottoTimer","ACPP06")~THEN REPLY @4442 EXTERN AC#PPDR1 trade_root
+IF~GlobalGT("AC#PPTradeItems","GLOBAL",0)
+!GlobalTimerExpired("GrottoTimer","ACPP06")~THEN REPLY @4442 EXTERN AC#PPDR1 trade_timer_no
 IF ~~ THEN REPLY @4437 EXTERN AC#PPDR1 trade_weapons_exact_benefit
 IF ~~ THEN REPLY @4443 EXTERN AC#PPDR1 trade_think_about_it
 IF ~~ THEN REPLY @4444 EXTERN AC#PPDR1 trade_think_about_it
@@ -139,9 +143,14 @@ IF~Global("NPC_ThrowWeapon","ACPP06",0)~THEN REPLY @4447 EXTERN AC#PPDR1 what_pl
 IF~Global("NPC_ThrowWeapon","ACPP06",1)~THEN REPLY @4447 EXTERN AC#PPDR1 what_place_2
 IF~~THEN REPLY @4448 EXTERN AC#PPDR1 who_are_you
 IF~~THEN REPLY @4449 EXTERN AC#PPDR1 bye
-IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY @4450 EXTERN AC#PPDR1 trade_root
+IF~Global("AC#PP_TradeWeapons","GLOBAL",2) !GlobalTimerNotExpired("GrottoTimer","ACPP06")~THEN REPLY @4450 EXTERN AC#PPDR1 trade_root
+IF~Global("AC#PP_TradeWeapons","GLOBAL",2) !GlobalTimerExpired("GrottoTimer","ACPP06")~THEN REPLY @4450 EXTERN AC#PPDR1 trade_timer_no
 IF~Global("AC#PP_TradeWeapons","GLOBAL",2)~THEN REPLY @4451 EXTERN AC#PPDR1 trade_weapons_hub
 IF ~Global("AC#PP_HolyWater","GLOBAL",1)~ THEN REPLY @4452 EXTERN AC#PPDR1 need_singing_water
+
+	CHAIN IF ~~ THEN AC#PPDR1 trade_timer_no
+	@4636
+	EXIT
 //IF ~Global("AC#PP_GiveBlade","GLOBAL",1)~ THEN REPLY ~Alatoasz told me to collect a weapon here, one to aid me against the undead.~ EXTERN AC#PPDR1 need_blade_01
 
 /*
@@ -359,6 +368,7 @@ DO ~TakePartyItem("AC#MGFL")
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
    AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_doomedloser
@@ -368,7 +378,8 @@ DO ~TakePartyItem("AC#WSW50")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_silversword
@@ -378,7 +389,8 @@ DO ~TakePartyItem("SW2H15")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -390,7 +402,8 @@ DO ~TakePartyItem("BOW19")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -401,7 +414,8 @@ DO ~TakePartyItem("SW1H15")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -412,7 +426,8 @@ DO ~TakePartyItem("SW1H16")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -423,7 +438,8 @@ DO ~TakePartyItem("STAF11")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -434,7 +450,8 @@ DO ~TakePartyItem("SW2H09")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -445,7 +462,8 @@ DO ~TakePartyItem("SW1H54")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -456,7 +474,8 @@ DO ~TakePartyItem("SW2H10")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -467,7 +486,8 @@ DO ~TakePartyItem("BLUN14")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -478,7 +498,8 @@ DO ~TakePartyItem("HAMM09")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -489,7 +510,8 @@ DO ~TakePartyItem("SW2H08")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -500,7 +522,8 @@ DO ~TakePartyItem("MISCBC")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -511,7 +534,8 @@ DO ~TakePartyItem("SW1H51")
    ApplySpellRES("AC#PPH2",Player1)
    ApplySpellRES("AC#PPGR",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -524,7 +548,8 @@ DO ~TakePartyItem("SW2H14")
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
    //DisplayString(Player1,@908)
    //DisplayString(Player1,@909)
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT 
 
@@ -747,7 +772,8 @@ DO ~TakePartyItem("BLUN18")
    SetGlobal("AC#TradeSkullcrusher","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)   
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -758,7 +784,8 @@ DO ~TakePartyItem("HAMM07")
    SetGlobal("AC#TradeThunderbolts","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -769,7 +796,8 @@ DO ~TakePartyItem("HAMM06")
    SetGlobal("AC#TradeDwarvenThrower","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -780,7 +808,8 @@ DO ~TakePartyItem("DAGG14")
    SetGlobal("AC#TradeBoneblade","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -791,7 +820,8 @@ DO ~TakePartyItem("BLUN22")
    SetGlobal("AC#TradeBlackblood","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -802,7 +832,8 @@ DO ~TakePartyItem("SW1H39")
    SetGlobal("AC#TradeSearing","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -813,7 +844,8 @@ DO ~TakePartyItem("AX1H10")
    SetGlobal("AC#TradeAzuredge","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -824,7 +856,8 @@ DO ~TakePartyItem("AC#W75SW")
    SetGlobal("AC#TradeFalsePride","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)    
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_skullmace
@@ -833,7 +866,8 @@ DO ~TakePartyItem("AC#WSKCL")
    SetGlobal("AC#TradeSkullMace","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_fleshboils
@@ -843,7 +877,8 @@ DO ~TakePartyItem("AC#WFLBO")
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
   
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_meatshaper
@@ -852,7 +887,8 @@ DO ~TakePartyItem("AC#WMSHP")
    SetGlobal("AC#TradeMeatshaper","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_heads
@@ -861,7 +897,8 @@ DO ~TakePartyItem("AC#W901")
    SetGlobal("AC#TradeHeads","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)   
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_tails
@@ -870,7 +907,8 @@ DO ~TakePartyItem("AC#W902")
    SetGlobal("AC#TradeTails","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)    
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_venomslicer
@@ -879,7 +917,8 @@ DO ~TakePartyItem("AC#W90SC")
    SetGlobal("AC#TradeVenomSlicer","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_bloodblade
@@ -888,7 +927,8 @@ DO ~TakePartyItem("AC#W90DG")
    SetGlobal("AC#TradeBloodblade","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_rustspreader
@@ -897,7 +937,8 @@ DO ~TakePartyItem("AC#WRUSP")
    SetGlobal("AC#TradeRustSpreader","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 
@@ -907,7 +948,8 @@ DO ~TakePartyItem("AC#WHSRZ")
    SetGlobal("AC#TradeHeartRazor","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)     
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_legend_heartseeker
@@ -916,7 +958,8 @@ DO ~TakePartyItem("BOW10")
    SetGlobal("AC#TradeHeartseeker","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -926,7 +969,8 @@ DO ~TakePartyItem("BOW12")
    SetGlobal("AC#TradeCourtBow","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -937,7 +981,8 @@ DO ~TakePartyItem("SPER08")
    SetGlobal("AC#TradeImpaler","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -948,7 +993,8 @@ DO ~TakePartyItem("SPER10")
    SetGlobal("AC#TradeWithering","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -959,7 +1005,8 @@ DO ~TakePartyItem("AX1H13")
    SetGlobal("AC#TradeFrostreaver","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -969,7 +1016,8 @@ DO ~TakePartyItem("AC#MGSP1")
    SetGlobal("AC#TradeBlackbite","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_bonefang
@@ -978,7 +1026,8 @@ DO ~TakePartyItem("AC#MGMS1")
    SetGlobal("AC#TradeBonefang","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_astralmace
@@ -987,7 +1036,8 @@ DO ~TakePartyItem("AC#MGAMB")
    SetGlobal("AC#TradeAstralMace","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_clockworkblade
@@ -996,7 +1046,8 @@ DO ~TakePartyItem("AC#CLKBL")
    SetGlobal("AC#TradeClockworkBlade","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_grubnuk
@@ -1005,7 +1056,8 @@ DO ~TakePartyItem("AC#MGTRH")
    SetGlobal("AC#TradeGrubnuksHand","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_prismaticscimitar
@@ -1014,7 +1066,8 @@ DO ~TakePartyItem("AC#MGSCI")
    SetGlobal("AC#TradePrismaticScimitar","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_airhammer
@@ -1023,7 +1076,8 @@ DO ~TakePartyItem("AC#MGHMA")
    SetGlobal("AC#TradeAirHammer","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
 ~ EXIT
 
 CHAIN AC#PPDR1 trade_lesser_mycologist_blade
@@ -1032,7 +1086,8 @@ DO ~TakePartyItem("AC#PPSW")
    SetGlobal("AC#TradeMycologistBlade","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)~
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_mirageedge
@@ -1041,7 +1096,8 @@ DO ~TakePartyItem("AC#PPSCI")
    SetGlobal("AC#TradeMirageEdge","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)~
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_scolopendra
@@ -1050,7 +1106,8 @@ DO ~TakePartyItem("AC#PPSCO")
    SetGlobal("AC#TradeScolopendra","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)~
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)~
 EXIT
 
 
@@ -1060,7 +1117,8 @@ DO ~TakePartyItem("AC#PP2HA")
    SetGlobal("AC#TradeHoneysuckle","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)~
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_loveletter
@@ -1069,7 +1127,8 @@ DO ~TakePartyItem("AC#PPBOW")
    SetGlobal("AC#TradeLoveLetter","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)~
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_unlikelyhammer
@@ -1078,7 +1137,8 @@ DO ~TakePartyItem("AC#PPHME")
    SetGlobal("AC#TradeUnlikelyHammer","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)~
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)~
 EXIT
 
 CHAIN AC#PPDR1 trade_lesser_jhor
@@ -1087,7 +1147,8 @@ DO ~TakePartyItem("SW1H38")
    SetGlobal("AC#TradeL_Jhor","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1097,7 +1158,8 @@ DO ~TakePartyItem("SW1H40")
    SetGlobal("AC#TradeL_BladeRoses","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1107,7 +1169,8 @@ DO ~TakePartyItem("AX1H12")
    SetGlobal("AC#TradeL_Stonefire","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1117,7 +1180,8 @@ DO ~TakePartyItem("AX1H09")
    SetGlobal("AC#TradeL_Rifthome","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1127,7 +1191,8 @@ DO ~TakePartyItem("HALB04")
    SetGlobal("AC#TradeL_DragBreath","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1137,7 +1202,8 @@ DO ~TakePartyItem("HALB09")
    SetGlobal("AC#TradeL_WaveHalb","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1147,7 +1213,8 @@ DO ~TakePartyItem("SW1H33")
    SetGlobal("AC#TradeL_Ras","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1157,7 +1224,8 @@ DO ~TakePartyItem("DAGG13")
    SetGlobal("AC#TradeL_PixiePrick","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1167,7 +1235,8 @@ DO ~TakePartyItem("SW1H33")
    SetGlobal("AC#TradeL_Cutthroat","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1177,7 +1246,8 @@ DO ~TakePartyItem("SW1H68")
    SetGlobal("AC#TradeL_SpectralBrand","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1187,7 +1257,8 @@ DO ~TakePartyItem("SW1H35")
    SetGlobal("AC#TradeL_Adjatha","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1197,7 +1268,8 @@ DO ~TakePartyItem("SW2H16")
    SetGlobal("AC#TradeL_SwordChaos","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1207,7 +1279,8 @@ DO ~TakePartyItem("SW1H34")
    SetGlobal("AC#TradeL_Albruin","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1217,7 +1290,8 @@ DO ~TakePartyItem("SW1H53")
    SetGlobal("AC#TradeL_SwordFlame","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1227,7 +1301,8 @@ DO ~TakePartyItem("SW1H31")
    SetGlobal("AC#TradeL_Daystar","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1237,7 +1312,8 @@ DO ~TakePartyItem("SW1H10")
    SetGlobal("AC#TradeL_SSBackstab","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1247,7 +1323,8 @@ DO ~TakePartyItem("SW1H30")
    SetGlobal("AC#TradeL_Belm","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
@@ -1257,7 +1334,8 @@ DO ~TakePartyItem("MISC75")
    SetGlobal("AC#TradeL_DagVenom","GLOBAL",1)
    ApplySpellRES("AC#PPH1",Player1)
    IncrementGlobal("AC#PPTradeItems","GLOBAL",1)  
-   AddexperienceParty(300)
+      AddexperienceParty(300)
+   SetGlobalTimer("GrottoTimer","ACPP06",ONE_DAY)
    SetGlobal("EldathBless","ACPP06",1)
 ~ EXIT
 
