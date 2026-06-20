@@ -417,7 +417,7 @@ EXIT
 CHAIN IF ~~ THEN AC#PPEL4 malagent_dead
 @3570
 == AC#PPEL4 @3571
-DO ~GiveGoldForce(6500) AddXPObject(Player1,6200) AddXPObject(Player2,6200) AddXPObject(Player3,6200) AddXPObject(Player4,6200) AddXPObject(Player5,6200) AddXPObject(Player6,6200) AddJournalEntry(@12009,QUEST_DONE)~
+DO ~GiveGoldForce(6500) AddXPObject(Player1,6200) AddXPObject(Player2,6200) AddXPObject(Player3,6200) AddXPObject(Player4,6200) AddXPObject(Player5,6200) AddXPObject(Player6,6200)~
 == AC#PPEL4 @3572
 END
 IF ~~ THEN EXTERN AC#PPEL4 antidote_quest_01
@@ -433,7 +433,7 @@ IF ~~ THEN REPLY @3577 EXTERN AC#PPEL4 malagent_dead_no_flo
 
 CHAIN AC#PPEL4 malagent_dead_flo
 @3578
-DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",2) SetGlobal("AC#PP_ShowFlower","GLOBAL",1)~ EXTERN AC#PPEL4 cnt.01.01
+DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",2) SetGlobal("AC#PP_ShowFlower","GLOBAL",1) AddJournalEntry(@12009,QUEST_DONE)~ EXTERN AC#PPEL4 cnt.01.01
 
 CHAIN AC#PPEL4 malagent_dead_no_flo
 @3579
@@ -449,13 +449,13 @@ CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",2)~ THEN AC#PPEL4 cnt.01.00
 DO ~SetGlobal("AC#PP_MythUnnohyr","GLOBAL",3)~
 ==AC#PPEL4 @3584
 END
-IF~PartyHasItem("AC#PPPUB")~THEN REPLY @3585 EXTERN AC#PPEL4 cnt.01.01
+IF~PartyHasItem("AC#PPPUB")~THEN REPLY @3585 DO ~AddJournalEntry(@12009,QUEST_DONE)~ EXTERN AC#PPEL4 cnt.01.01
 IF~!PartyHasItem("AC#PPPUB")~THEN REPLY @3586 EXTERN AC#PPEL4 cnt.01.02
 
 CHAIN IF ~Global("AC#PP_MythUnnohyr","GLOBAL",3)~ THEN AC#PPEL4 cnt.01.0B
 @3587
 END
-IF~PartyHasItem("AC#PPPUB")~THEN REPLY @3588 EXTERN AC#PPEL4 cnt.01.01
+IF~PartyHasItem("AC#PPPUB")~THEN REPLY @3588 DO ~AddJournalEntry(@12009,QUEST_DONE)~ EXTERN AC#PPEL4 cnt.01.01
 IF~!PartyHasItem("AC#PPPUB")~THEN REPLY @3589 EXTERN AC#PPEL4 cnt.01.02
 IF~~THEN REPLY @3590 EXIT
 IF~PartyHasItem("AC#PPSYM") Global("AC#PP_AlaAgreesSymbol","GLOBAL",0)~THEN REPLY @3471 EXTERN AC#PPEL4 Merethan_emblem_04

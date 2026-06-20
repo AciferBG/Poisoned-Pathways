@@ -28,6 +28,17 @@ THEN
         SetGlobal("LathanderJournal","ACPP03",1)
 END
 
+IF
+    OR(2)
+        GlobalGT("AC#PP_ShowFlower","GLOBAL",0)
+        GlobalGT("AC#PP_MythUnnohyr","GLOBAL",3)
+    Global("AC#PP_DyingMan","GLOBAL",3)
+THEN
+    RESPONSE #100
+        AddJournalEntry(@13083,QUEST_DONE)   
+        SetGlobal("AC#PP_DyingMan","GLOBAL",20)
+END
+
 /*
 IF
     Global("AC#PP_NewProblemsUnnohyr","GLOBAL",1)

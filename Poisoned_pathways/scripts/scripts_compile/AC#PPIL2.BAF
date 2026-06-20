@@ -1,5 +1,5 @@
 IF
-    Global("DyingMan","ACPP01",1)
+    Global("AC#PP_DyingMan","GLOBAL",1)
     See([PC])
     Range([PC],15)
 THEN
@@ -8,7 +8,7 @@ THEN
 END
 
 IF
-    GlobalGT("DyingMan","ACPP01",2)
+    GlobalGT("AC#PP_DyingMan","GLOBAL",2)
 THEN
     RESPONSE #100
         EscapeArea()

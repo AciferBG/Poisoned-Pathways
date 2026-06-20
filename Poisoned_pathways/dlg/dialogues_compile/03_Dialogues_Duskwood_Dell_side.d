@@ -679,20 +679,24 @@ EXIT
 
 BEGIN AC#PPILL
 
+	CHAIN IF ~Global("AC#PP_DyingMan","GLOBAL",20)~ THEN AC#PPILL hello_quest_failed
+	@3965  
+	EXIT
+
 //3rd encounter: Mannatarv's request after Alatoasz' quest has started
-	CHAIN IF ~Global("DyingMan","ACPP01",3)~ THEN AC#PPILL hello_waiting_poison
+	CHAIN IF ~Global("AC#PP_DyingMan","GLOBAL",3)~ THEN AC#PPILL hello_waiting_poison
 	@3935 
 	END
 	IF ~~ THEN REPLY @3936 EXTERN AC#PPILL farewell
 	IF ~PartyHasItem("AC#PPPUB")~ THEN REPLY @3937 EXTERN AC#PPILL yes_have_plant
-	IF ~~ THEN REPLY @3938 EXTERN AC#PPILL not_help_02
+	IF ~~ THEN REPLY @3938 DO ~SetGlobal("AC#PP_DyingMan","GLOBAL",20)    AddJournalEntry(@13083,QUEST_DONE)~ EXTERN AC#PPILL not_help_02
 
-CHAIN IF ~Global("DyingMan","ACPP01",1)~ THEN AC#PPILL request
+CHAIN IF ~Global("AC#PP_DyingMan","GLOBAL",1)~ THEN AC#PPILL request
 @3939
 == AC#PPILL IF ~Global("MetMannatarv","ACPP01",0)~ THEN @3940 
 == AC#PPILL IF ~GlobalGT("MetMannatarv","ACPP01",0)~ THEN @3941 
 == AC#PPILL @3942
-DO ~SetGlobal("DyingMan","ACPP01",2)
+DO ~SetGlobal("AC#PP_DyingMan","GLOBAL",2)
 AddJournalEntry(@13080,QUEST)~ EXTERN AC#PPILL request_02
 
 CHAIN AC#PPILL request_02
@@ -744,7 +748,7 @@ DO ~SetGlobal("MetMannatarv","ACPP01",1)~ EXTERN AC#PPILL priests_fuss
 	@3968
 	== AC#PPILL @3969
 	== AC#PPILL @3970
-	DO ~SetGlobal("DyingMan","ACPP01",10)
+	DO ~SetGlobal("AC#PP_DyingMan","GLOBAL",10)
 	AddexperienceParty(300)
 	AddJournalEntry(@13082,QUEST_DONE)
 	Kill(Myself)~
@@ -774,13 +778,13 @@ IF ~~ THEN REPLY @3957 EXTERN AC#PPILL alternative
 CHAIN AC#PPILL refuse
 @3971
 DO ~AddJournalEntry(@13083,QUEST_DONE)
-SetGlobal("DyingMan","ACPP01",20)
+SetGlobal("AC#PP_DyingMan","GLOBAL",20)
 EscapeArea()~ EXIT
 
 CHAIN AC#PPILL accept
 @3974 
 == AC#PPILL @3975   
-DO ~SetGlobal("DyingMan","ACPP01",3)
+DO ~SetGlobal("AC#PP_DyingMan","GLOBAL",3)
 AddJournalEntry(@13081,QUEST)
 EscapeArea()~ EXIT
 

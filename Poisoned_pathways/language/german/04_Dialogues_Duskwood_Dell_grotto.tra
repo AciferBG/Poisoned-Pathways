@@ -12,9 +12,9 @@
 
 @4406 = ~Zu viele Jahre habe ich Stahl geführt und Blut an meinen Händen getragen… Ich will, dass dies endet. Keine weiteren Schlachten. Kein weiteres Töten.~
 
-@4407 = ~Dann legt Eure Waffe nieder und lasst die Last des Krieges forttreiben wie Blätter auf sanfter Strömung. Die Mutter der Haine richtet nicht über die Vergangenheit – nur über den Mut, jetzt die Stille zu wählen.~
+@4407 = ~So legt Eure Waffe nieder und lasst die Last des Krieges forttreiben wie Blätter auf sanfter Strömung. Die Mutter der Haine richtet nicht über die Vergangenheit – nur über den Mut, jetzt die Stille zu wählen.~
 
-@4408 = ~So soll dieses Werkzeug der Zerstörung fortan ruhen. Mögen meine Hände lernen, andere zu heilen anstatt zu verletzen.~
+@4408 = ~Möge dieses Werkzeug der Zerstörung fortan ruhen. Mögen meine Hände lernen, andere zu heilen anstatt zu verletzen.~
 
 @4409 = ~Eldath freut sich an Eurer Entscheidung. Trinkt von ihren geweihten Wassern und schreitet unbelastet weiter, mit weichem Moos unter jedem Schritt.~
 
@@ -426,7 +426,7 @@
 
 @4612 = ~Gift ohne führende Hand versickert harmlos im Erdreich.~
 
-@4613 = ~Manches Glück sät man besser, als dass man es schwingt. Der Hain sei sein neuer Hüter.~
+@4613 = ~Manches Glück verschenkt man besser, als dass man es schwingt. Der Hain sei sein neuer Hüter.~
 
 @4614 = ~Möge der Wind seine Verse tragen, nicht seine Pfeile.~
 
@@ -452,17 +452,17 @@
 
 @4625 = ~Mögen Echos zur Stille zurückkehren.~
 
-@4626 = ~Durst nach Magie bleibt Durst. Sei nun gesättigt – nicht mehr.~
+@4626 = ~Durst nach Magie bleibt Durst. Sei gesättigt – nicht mehr.~
 
 @4627 = ~Chaos nährt sich von Menge. Hier wird es verhungern.~
 
-@4628 = ~Jäger des Verborgenen werden oft, was sie fürchten. Ruhe nun.~
+@4628 = ~Jäger des Verborgenen werden oft zu dem, was sie fürchten. Ruhe nun.~
 
-@4629 = ~Feuer im Heft bleibt Feuer. Das Becken wird es kühlen.~
+@4629 = ~Feuer bleibt Feuer. Das Becken wird es kühlen.~
 
 @4630 = ~Licht kann ebenso blenden wie führen.~
 
-@4631 = ~Verrat finde hier keinen Halt.~
+@4631 = ~Verrat findet hier keinen Halt.~
 
 @4632 = ~Eine schnelle Hand lernt mit der Zeit Geduld.~
 
@@ -471,3 +471,7 @@
 @4634 = ~Das Becken ist bereit für eine weitere Last.~
 
 @4635 = ~Ich habe eine weitere Waffe darzubringen.~
+
+@4636 = ~Ihr könnt nur eine Waffe pro Tag opfern. Eldaths Segen braucht Zeit, um sich zu erneuern.~
+
+@4637 = ~Die stillen Wasser haben bereits genug Stahl aufgenommen. Ihr Werk ist vollbracht, und keine weiteren Opfergaben können angenommen werden.~

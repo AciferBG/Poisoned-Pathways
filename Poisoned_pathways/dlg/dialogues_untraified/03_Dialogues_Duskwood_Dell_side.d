@@ -680,19 +680,19 @@ EXIT
 BEGIN AC#PPILL
 
 //3rd encounter: Mannatarv's request after Alatoasz' quest has started
-	CHAIN IF ~Global("DyingMan","ACPP01",3)~ THEN AC#PPILL hello_waiting_poison
+	CHAIN IF ~Global("AC#PP_DyingMan","GLOBAL",3)~ THEN AC#PPILL hello_waiting_poison
 	~Have you found the plant yet?~ 
 	END
 	IF ~~ THEN REPLY ~No, not yet.~ EXTERN AC#PPILL farewell
 	IF ~PartyHasItem("AC#PPPUB")~ THEN REPLY ~I have the plant here with me.~ EXTERN AC#PPILL yes_have_plant
 	IF ~~ THEN REPLY ~I'm not going to help you after all.~ EXTERN AC#PPILL not_help_02
 
-CHAIN IF ~Global("DyingMan","ACPP01",1)~ THEN AC#PPILL request
+CHAIN IF ~Global("AC#PP_DyingMan","GLOBAL",1)~ THEN AC#PPILL request
 ~You’ve spoken with the High One, haven’t you? Alatoasz sent you after the Talona priest... and the flower. The Groveglove. Everyone whispers of it. A poison so pure even the gentle hands of Eldath cannot undo it.~
 == AC#PPILL IF ~Global("MetMannatarv","ACPP01",0)~ THEN ~We haven't met yet. My name is Mannatarv. I am old and sick, very sick. All I want is to die. But the Eldathyns won't let me.~ 
 == AC#PPILL IF ~GlobalGT("MetMannatarv","ACPP01",0)~ THEN ~We've met before. My name is Mannatarv. You know I am old and sick, very sick. All I want is to die. But they won't let me.~ 
 == AC#PPILL ~The priests heal me every day. They pour their light into me, knit my wounds, call me back when I slip away. But I am tired. My bones rot, my breath burns. Each day they gift me is another day of pain. I want no more gifts.~
-DO ~SetGlobal("DyingMan","ACPP01",2)
+DO ~SetGlobal("AC#PP_DyingMan","GLOBAL",2)
 AddJournalEntry(@13080,QUEST)~ EXTERN AC#PPILL request_02
 
 CHAIN AC#PPILL request_02
@@ -744,7 +744,7 @@ DO ~SetGlobal("MetMannatarv","ACPP01",1)~ EXTERN AC#PPILL priests_fuss
 	~You're actually bringing it to me? You're a good <PRO_RACE>! Let me see...~
 	== AC#PPILL ~So beautiful and yet so deadly... here, I'll just take one leaf. Everyone else should get the antidote, just not me...~
 	== AC#PPILL ~Ugh, that tastes bitter! I didn't think that...~
-	DO ~SetGlobal("DyingMan","ACPP01",10)
+	DO ~SetGlobal("AC#PP_DyingMan","GLOBAL",10)
 	AddexperienceParty(300)
 	AddJournalEntry(@13082,QUEST_DONE)
 	Kill(Myself)~
@@ -774,13 +774,13 @@ IF ~~ THEN REPLY ~Perhaps there is another way.~ EXTERN AC#PPILL alternative
 CHAIN AC#PPILL refuse
 ~Then leave me to my torment. The priests will be pleased.~
 DO ~AddJournalEntry(@13083,QUEST_DONE)
-SetGlobal("DyingMan","ACPP01",20)
+SetGlobal("AC#PP_DyingMan","GLOBAL",20)
 EscapeArea()~ EXIT
 
 CHAIN AC#PPILL accept
 ~You... you would truly do this for me? I thank you already for even considering it. You may think me mad, but you have shown mercy where others offered only healing. I will wait for you by the stump in the water. Remember: you must give me a leaf of the plant before you bring it to Alatoasz! Once he crafts an antidote, I will have no hope left of passing peacefully from this world.~ 
 == AC#PPILL ~Good luck with your search, <PRO_RACE>. I’m counting on you and will be waiting for you.~   
-DO ~SetGlobal("DyingMan","ACPP01",3)
+DO ~SetGlobal("AC#PP_DyingMan","GLOBAL",3)
 AddJournalEntry(@13081,QUEST)
 EscapeArea()~ EXIT
 

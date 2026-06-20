@@ -1,7 +1,9 @@
+/*
 IF
-    GlobalGT("DyingMan","ACPP01",20)
+    GlobalGT("AC#PP_DyingMan","GLOBAL",19)
 THEN
     RESPONSE #100
         EscapeArea()
 END
+*/
 

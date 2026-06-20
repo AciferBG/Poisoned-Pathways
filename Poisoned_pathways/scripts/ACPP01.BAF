@@ -62,10 +62,10 @@ END
 
 IF
     GlobalGT("AC#PP_MythUnnohyr","GLOBAL",0)
-    Global("DyingMan","ACPP01",0)
+    Global("AC#PP_DyingMan","GLOBAL",0)
 THEN
     RESPONSE #100
-        SetGlobal("DyingMan","ACPP01",1)
+        SetGlobal("AC#PP_DyingMan","GLOBAL",1)
         CreateCreature("AC#PPIL2",[693.802],N)  // Mannatarv
 END
 
