@@ -22,7 +22,8 @@
 
 ![Town Watercolor](https://github.com/AciferBG/Poisoned-Pathways/blob/main/pics/screenshot01_lorez.png)
 
-**How the mod begins:**  
+**How the mod begins:**
+You need to start a new game 
 The mod is triggered **after delivering Renfeld’s body** in the Docks District of Athkatla. After a while, a messenger will approach you within the city.
 
 ## Installation
@@ -33,7 +34,8 @@ The mod is triggered **after delivering Renfeld’s body** in the Docks District
    - A file named **setup-Poisoned_pathways.exe**  
 4. Run the installer:  
    - Double-click `setup-Poisoned_pathways.exe` and follow the on-screen instructions.  
-5. To uninstall or change components:  
+5. **You need to start a new game**
+6. To uninstall or change components:  
    - Run `setup-Poisoned_pathways.exe` again.
 
 ## Recommended Character Level
