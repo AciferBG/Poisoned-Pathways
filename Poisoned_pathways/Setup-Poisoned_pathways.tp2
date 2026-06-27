@@ -2,7 +2,7 @@
 BACKUP ~Poisoned_pathways/backup~
 AUTHOR ~Acifer~
 README ~Poisoned_pathways/documentation/Poisoned_Pathways_Readme.pdf~ 
-VERSION ~v1.0~
+VERSION ~v1.1~
 
 ALWAYS
 
@@ -60,7 +60,7 @@ INCLUDE ~Poisoned_pathways/lib/extra_regexp_vars.tph~
 INCLUDE ~Poisoned_pathways/lib/functions.tph~
 INCLUDE ~Poisoned_pathways/lib/replace_multiline.tpa~ // Block of code in EET
 
-ADD_JOURNAL 
+ADD_JOURNAL
 @12000
 @12001
 @12002

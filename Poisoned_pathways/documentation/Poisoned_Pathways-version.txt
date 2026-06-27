@@ -1,3 +1,6 @@
+V 1.1
+- compressed AC#ZTG13.bam,  AC#ZTG22.ab, AC#ZTG23.bam, AC#ZTG24.bam, AC#ZTG25.bam to make the mod compatible with 32bit weiDU installers
+
 V 1.0
 - Initial public release
 
