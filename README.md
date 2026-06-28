@@ -75,6 +75,8 @@ This mod and all its contents may not be copied, modified, distributed, or used 
 ---
 
 ## Feedback & Support  
-If you encounter issues or have suggestions, please report them in the appropriate forum thread (link to be added).
+If you encounter issues or have suggestions, please report them in the appropriate forum thread:
+https://forums.beamdog.com/discussion/90716/mod-poisoned-pathways-a-quest-mod-for-bg2ee
+https://www.gibberlings3.net/forums/topic/41353-mod-poisoned-pathways-a-quest-mod-for-bg2ee/
 
 
