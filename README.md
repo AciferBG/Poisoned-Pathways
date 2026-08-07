@@ -55,6 +55,11 @@ If you are using the BP-BGT Worldmap mod, version 14 or higher is required for t
 
 This mod is fully compatible with Morpheus' Tactics Remix. When both mods are installed, Morpheus has adjusted several encounters to better match the increased difficulty and gameplay balance of Tactics Remix. You need to install Tactics Remix after this mod.
 
+## Review
+
+There's a review of the mod on Llewren's **— Smoldering Mods Bar**: 
+[Read the review](https://smolderingmodsbar.com/poisoned-pathways-bg2ee/)
+
 
 ---
 
