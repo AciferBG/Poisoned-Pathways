@@ -57,7 +57,7 @@ This mod is fully compatible with Morpheus' Tactics Remix. When both mods are in
 
 ## Review
 
-There's a review of the mod on Llewren's **— Smoldering Mods Bar**: 
+There's a review of the mod on ** Smoldering Mods Bar**: 
 [Read the review](https://smolderingmodsbar.com/poisoned-pathways-bg2ee/)
 
 
