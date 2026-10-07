@@ -62,6 +62,11 @@ LANGUAGE ~Italiano by Sauler~
          ~Poisoned_pathways/language/italian/Setup-Poisoned_pathways.tra~
          ~Poisoned_pathways/language/italian/Poisoned_pathways_Journal.tra~
 
+LANGUAGE ~Russian by Origanum8~
+         ~russian~
+         ~Poisoned_pathways/language/russian/Setup-Poisoned_pathways.tra~
+         ~Poisoned_pathways/language/russian/Poisoned_pathways_Journal.tra~
+
 BEGIN ~Poisoned pathways~
 
 REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~ && FILE_EXISTS ~engine.lua~) ~Requires BG2:EE or EET patched to 2.0 or higher.~
