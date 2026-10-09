@@ -1,3 +1,7 @@
+V 1.7
+- added Russian Version by Origanum8 - thank you!
+- updated Chinese Translation
+
 V 1.6
 - added Italian Version by Sauler - thank you!
 
