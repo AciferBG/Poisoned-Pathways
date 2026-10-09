@@ -69,6 +69,7 @@ This mod is available in:
 - **German**
 - **Chinese**
 - **Italian**
+- **Russian**
 
 ## Compatibility
 
