@@ -1,0 +1,371 @@
+// Journal strings
+
+//Quest start
+@12000 = ~Le Poison parfait
+
+À Athkatla, un eldathien nommé Merethan m'a parlé d'un poison incurable qui se répand dans la région. Il pense qu'un mystérieux fournisseur de poisons en est à l'origine et m'a demandé de l'aider à remonter jusqu'à la source.~
+
+@12001 = ~Le Poison parfait
+
+Merethan m'a orienté vers Skann Delth, un petit trafiquant de poisons qui traîne sur le toit de la Couronne de Cuivre. Je dois lui faire révéler l'origine de ses marchandises les plus mortelles. Merethan m'attend au temple d'Ilmater, dans les Bas-quartiers d'Athkatla.~
+
+@12002 = ~Le Poison parfait
+
+J'ai confronté Skann Delth et obtenu une carte menant à un lieu isolé appelé le Creux-des-Amanites. Je dois apporter cette carte à Merethan, qui m'attend au temple d'Ilmater, dans les Bas-quartiers d'Athkatla.~
+
+@12003 = ~Le Poison parfait
+
+Merethan souhaite que je l'accompagne au Creux-des-Amanites afin de voir si l'empoisonneur se révélera. Il m'attend au temple d'Ilmater, dans les Bas-quartiers, afin que nous partions ensemble.~
+
+@12004 = ~Le Poison parfait
+
+Au Creux-des-Amanites, ce qui devait être un échange s'est transformé en embuscade. Le serviteur du mystérieux empoisonneur a abattu Merethan, mais l'une des flèches est restée enduite du poison. Avant de mourir, il me l'a confiée et m'a demandé de la remettre au Gardien des Cascades Alatoasz Berendim, au Vallon de Sombrebois, sanctuaire d'Eldath.~
+
+@12005 = ~Le Poison parfait
+
+Le Gardien des Cascades Alatoasz pense que la clé permettant de comprendre ce poison se trouve dans les ruines d'une ancienne cité elfique. Il soupçonne que la plante rare utilisée pour le fabriquer y pousse encore. Afin de préciser nos recherches, il m'a demandé de me rendre au temple d'Oghma d'Athkatla et d'y consulter les ouvrages consacrés au royaume disparu de Keltormir.~
+
+@12006 = ~Le Poison parfait
+
+J'ai rapporté au Gardien des Cascades Alatoasz l'ouvrage du temple d'Oghma. Ses passages désignent Myth Unnohyr, une cité elfique en ruine dont le mythal brisé engendre de la magie entropique le jour et de la magie morte la nuit. Cette corruption a imprégné une plante rare utilisée pour fabriquer le poison incurable. Je dois me rendre à Myth Unnohyr, trouver l'empoisonneur — un Malagent de Talona — et rapporter une fleur de la plante corrompue afin que le Gardien des Cascades puisse tenter de préparer un antidote.~
+
+@12007 = ~Le Poison parfait
+
+J'ai affronté le Malagent au cœur des ruines de Myth Unnohyr et mis fin à ses projets. Je dois maintenant rapporter un échantillon de la plante corrompue au Gardien des Cascades Alatoasz Berendim, au Vallon de Sombrebois, afin qu'un antidote puisse être créé.~
+
+@12008 = ~Le Poison parfait
+
+J'ai trouvé la plante corrompue connue sous le nom de Gant-des-Bosquets, source du poison parfait. Après avoir vaincu le Malagent, je dois rapporter cet échantillon au Gardien des Cascades Alatoasz Berendim, au Vallon de Sombrebois, afin qu'il tente d'en purifier l'essence et de préparer un antidote.~
+
+@12009 = ~Le Poison parfait
+
+Le Malagent est mort et son œuvre infâme est en ruine. J'ai apporté le Gant-des-Bosquets au Gardien des Cascades Alatoasz Berendim, au Vallon de Sombrebois. Il pense qu'un antidote peut être créé pour contrer le poison déjà répandu à travers l'Amn. Mais purifier la fleur contaminée et préparer le remède nécessitera l'aide d'autres cultes.~
+
+// The antidote
+
+@12100 = ~L'Antidote
+
+Le Gardien des Cascades Alatoasz pense que la fleur de Gant-des-Bosquets peut être purifiée et transformée en antidote. Pour y parvenir, elle doit recevoir trois bénédictions — celles des aspects divins de la Vie, de la Compassion et du Renouveau. Alatoasz m'a lui-même accordé la première, mais je dois encore obtenir les deux autres.~
+
+@12101 = ~L'Antidote : la Bénédiction de Compassion d'Ilmater
+
+Je dois me rendre au temple d'Ilmater, dans les Bas-quartiers d'Athkatla, et demander la Bénédiction de Compassion.~
+
+@12102 = ~L'Antidote : la Bénédiction de Renouveau de Lathandre
+
+Je dois me rendre au temple de Lathandre à Athkatla afin de recevoir la Bénédiction de Renouveau.~
+
+@12103 = ~L'Antidote : l'eau chantante d'Eldath
+
+Alatoasz m'a demandé de rapporter une carafe d'eau chantante d'Eldath depuis la grotte du Vallon de Sombrebois. L'une des servantes qui veille sur le bassin sacré me la donnera. Cette eau servira de dernier vecteur pour unir les bénédictions.~
+
+@12104 = ~L'Antidote : la Bénédiction de Compassion d'Ilmater
+
+J'ai reçu la Bénédiction de Compassion des fidèles d'Ilmater dans les Bas-quartiers.~
+
+@12105 = ~L'Antidote : la Bénédiction de Renouveau de Lathandre
+
+Lathandre m'a accordé la Bénédiction de Renouveau.~
+
+@12106 = ~L'Antidote : l'eau chantante d'Eldath
+
+J'ai obtenu une cruche d'eau chantante d'Eldath dans la grotte du Vallon de Sombrebois. Il ne me reste plus qu'à retourner auprès du Gardien des Cascades Alatoasz avec la fleur bénie et l'eau sacrée.~
+
+@12107 = ~L'Antidote
+
+Les trois bénédictions ont été réunies — Vie, Compassion et Renouveau — et j'ai obtenu l'eau chantante d'Eldath. Je dois maintenant retourner auprès du Gardien des Cascades Alatoasz, au Vallon de Sombrebois, afin que l'antidote puisse enfin être créé et que la corruption du Gant-des-Bosquets soit définitivement purgée.~
+
+@12108 = ~L'Antidote
+
+J'ai réuni tout ce qui était nécessaire : la fleur de Gant-des-Bosquets, les bénédictions et une carafe d'eau chantante d'Eldath. Selon le Gardien des Cascades Alatoasz, pour créer l'antidote, il faut placer la fleur sanctifiée et l'eau sacrée dans le chaudron du Malagent, au cœur des ruines de Myth Unnohyr — là même où le poison fut préparé pour la première fois.~
+
+@12110 = ~L'Antidote
+
+Le rituel a réussi et la corruption du Gant-des-Bosquets a été purgée. Je dois rapporter l'antidote au Gardien des Cascades Alatoasz Berendim, au Vallon de Sombrebois.~
+
+@12111 = ~L'Antidote
+
+J'ai remis l'antidote à Alatoasz Berendim. Le poison qui menaçait autrefois les Terres de l'Intrigue ne pourra plus se répandre.~
+
+/******************************
+SIDE quest journal entries
+******************************/
+// Duskwood Dell – Missing Faerie Twins Quest
+
+@13000 = ~Les Jumelles-Lueurs disparues
+
+Les fées du Vallon de Sombrebois ont disparu. Frère Edrim m'a demandé d'enquêter. Les jumelles ont été vues pour la dernière fois en train de parler à un marchand vêtu de soie rouge vif, qui avait un accent étrange et roulait les « r ». Il a poursuivi sa route vers l'ouest, en direction d'Athkatla, et pourrait se cacher parmi les marchands de la Promenade de Waukyne. S'il fait réellement commerce de curiosités magiques, je devrais l'y trouver.~
+
+@13001 = ~Les Jumelles-Lueurs disparues
+
+Parmi les étals de la Promenade de Waukyne, j'ai rencontré un étrange marchand qui correspond à la description de Frère Edrim : un homme vêtu de soie rouge, vendant des objets singuliers et doté d'un charme presque hypnotique. Quelque chose chez lui semble... anormal.~
+
+@13002 = ~Les Jumelles-Lueurs disparues
+
+Le marchand qui se fait appeler Zar'khaan n'était pas un marchand, mais un rakshasa déguisé. Je dois découvrir s'il transporte les Jumelles-Lueurs du Vallon avec lui — peut-être enfermées dans un petit récipient ou un bibelot enchanté.~
+
+@13003 = ~Les Jumelles-Lueurs disparues
+
+J'ai retrouvé les Jumelles-Lueurs du Vallon. Le rakshasa les a emprisonnées dans un récipient magique scellé par un puissant enchantement. Les fées semblent indemnes, mais le bocal refuse de s'ouvrir. Je devrais le rapporter à Frère Edrim, au Vallon de Sombrebois ; peut-être saura-t-il briser le sceau.~
+
+@13004 = ~Les Jumelles-Lueurs disparues
+
+J'ai rapporté le bocal féerique à Frère Edrim, au Vallon de Sombrebois. Il a réussi à briser le sceau, et les Jumelles-Lueurs du Vallon en sont sorties indemnes. La paix — et quelques espiègleries — sont revenues au Vallon de Sombrebois.~
+
+// Mythal forge amulet
+@13010 = ~Lier ce qui ne l'est plus
+
+Parmi les restes d'un mage mort, j'ai trouvé une lettre décrivant le mythal brisé de Myth Unnohyr. Il pensait possible de forger un ancien talisman elfique capable de résister à sa corruption, à condition de réunir les essences de deux feux follets rares, l'un né de la magie entropique et l'autre de la magie morte, ainsi que les deux parties de la relique elle-même.~
+
+@13011 = ~Lier ce qui ne l'est plus
+
+J'ai découvert une ancienne enclume elfique dont la surface est restée lisse malgré les siècles. Elle servait autrefois à façonner de fins ornements et des reliques sacrées. S'il existe un endroit capable de lier à nouveau la magie, c'est bien celui-ci.~
+
+@13012 = ~Lier ce qui ne l'est plus
+
+J'ai trouvé une délicate chaîne elfique, probablement une partie d'un talisman. Elle devait autrefois porter un pendentif.~
+
+@13013 = ~Lier ce qui ne l'est plus
+
+J'ai découvert la partie supérieure d'une amulette finement ouvragée, manifestement elfique. Son attache semble destinée à recevoir une chaîne. Restaurées, les deux pièces pourraient former un talisman complet.~
+
+@13014 = ~Lier ce qui ne l'est plus
+
+J'ai obtenu l'essence d'un Feu-follet entropique, un fragment d'énergie chaotique vibrant d'une magie instable.~
+
+@13015 = ~Lier ce qui ne l'est plus
+
+J'ai capturé l'essence d'un Feu-follet de magie morte.~
+
+@13016 = ~Lier ce qui ne l'est plus
+
+Je possède maintenant tout ce qu'il faut pour forger le talisman décrit dans la lettre du mage : la chaîne elfique, la tête d'amulette et les deux essences de feux follets, l'une de magie entropique et l'autre de magie morte. Peut-être pourrai-je unir leurs pouvoirs sur l'ancienne enclume que j'ai découverte.~
+
+@13017 = ~Lier ce qui ne l'est plus
+
+Sur l'ancienne enclume, j'ai uni les deux essences de feux follets au talisman elfique restauré. La relique s'est éveillée. La corruption du mythal n'affecte plus les sorts du porteur du talisman.~
+
+// Banshee seeking head:
+@13020 = ~Lamentation de l'âme perdue
+
+Dans les hauteurs d'une tour en ruine de Myth Unnohyr, j'ai rencontré une banshee qui pleure sans fin la mort de son bien-aimé. Elle cherche quelque chose qui lui permette de se souvenir de lui — quelque chose qui pourrait enfin donner le repos à son esprit.~
+
+@13021 = ~Lamentation de l'âme perdue
+
+J'ai trouvé une tête d'elfe tranchée dans les ruines de Myth Unnohyr. Malgré son funeste destin, ses traits semblent étrangement paisibles.~
+
+@13022 = ~Lamentation de l'âme perdue
+
+J'ai rapporté à la banshee la tête de son bien-aimé. Elle a poussé un dernier soupir avant de disparaître, enfin délivrée de son chagrin.~
+
+@13023 = ~Lamentation de l'âme perdue
+
+J'ai détruit une banshee qui hantait une tour en ruine de Myth Unnohyr. Son chagrin ne troublera plus cet endroit.~
+
+// Honeymead Quest
+@13030 = ~L'Hydromel eldathien
+
+Au Vallon de Sombrebois, j'ai rencontré un apiculteur eldathien qui produit un hydromel rare. Il m'a demandé d'apporter une bouteille à l'Auberge des Cinq Chopes, à Athkatla, et de la vendre à Samuel Thunderburp à un prix honnête.~
+
+@13032 = ~L'Hydromel eldathien
+
+J'ai vendu la bouteille d'hydromel à Samuel Thunderburp pour cent pièces d'or.~
+
+@13033 = ~L'Hydromel eldathien
+
+J'ai vendu la bouteille d'hydromel à Samuel Thunderburp pour cinq cents pièces d'or.~
+
+@13034 = ~L'Hydromel eldathien
+
+J'ai vendu la bouteille d'hydromel à Samuel Thunderburp pour sept cent cinquante pièces d'or.~
+
+@13035 = ~L'Hydromel eldathien
+
+J'ai vendu la bouteille d'hydromel à Samuel Thunderburp pour mille pièces d'or.~
+
+@13036 = ~L'Hydromel eldathien
+
+Je suis retourné auprès de l'apiculteur au Vallon de Sombrebois et lui ai apporté cent pièces d'or pour l'hydromel. Il a accepté le paiement avec une déception contenue.~
+
+@13037 = ~L'Hydromel eldathien
+
+Je suis retourné auprès de l'apiculteur au Vallon de Sombrebois et lui ai remis cinq cents pièces d'or pour l'hydromel. Il a esquissé un sourire, reconnaissant de mon honnêteté.~
+
+@13038 = ~L'Hydromel eldathien
+
+J'ai apporté à l'apiculteur sept cent cinquante pièces d'or pour l'hydromel. Il a été agréablement surpris.~
+
+@13039 = ~L'Hydromel eldathien
+
+Je suis retourné auprès de l'apiculteur avec mille pièces d'or pour l'hydromel. Stupéfait par ma générosité, il a prononcé une prière sincère en mon nom.~
+
+// Boy and worm
+
+@13040 = ~Le Petit Pêcheur
+
+Un garçon près du ponton du Vallon de Sombrebois m'a demandé de l'aider à trouver un ver pour pêcher.~
+
+@13041 = ~Le Petit Pêcheur
+
+J'ai trouvé un ver qui se tortillait dans la terre meuble du Vallon de Sombrebois. C'est peut-être la prise porte-bonheur que cherchait le garçon.~
+
+@13042 = ~Le Petit Pêcheur
+
+J'ai donné le ver au garçon près du ponton. Au lieu de s'en servir comme appât, il a décidé de le garder comme animal de compagnie. Ils ont l'air plutôt heureux tous les deux.~
+
+@13043 = ~Le Petit Pêcheur
+
+J'ai jeté le ver à l'eau au lieu de le donner au garçon. Il a éclaté en sanglots, m'a couvert d'injures et s'est enfui. Je doute d'être à nouveau le bienvenu près du ponton.~
+
+// Montrassa - emblem
+@13050 = ~L'Emblème d'Eldath
+
+Au Vallon de Sombrebois, j'ai rencontré une eldathienne âgée nommée Montrassa. Ses mains tremblent avec l'âge et elle ne peut plus sculpter les emblèmes sacrés qu'elle fabriquait autrefois pour son temple. Elle a parlé de Merethan avec affection, mais a humblement refusé de prendre son emblème, estimant qu'un tel présent ne devrait être accordé qu'avec la bénédiction du Très Haut Gardien des Cascades. Je devrais peut-être en parler à Alatoasz Berendim.~
+
+@13051 = ~L'Emblème d'Eldath
+
+Alatoasz a convenu que Montrassa était digne de porter l'emblème de Merethan. Je dois le lui apporter au Vallon de Sombrebois afin qu'elle puisse de nouveau porter le symbole de sa déesse.~
+
+@13052 = ~L'Emblème d'Eldath
+
+J'ai donné l'emblème de Merethan à Montrassa.~
+
+// Siren
+@13060 = ~La Fureur de la sirène
+
+Au Vallon de Sombrebois, j'ai rencontré une sirène tourmentée par la colère et le chagrin. Peut-être quelqu'un dans le Vallon sait-il comment apaiser son trouble.~
+
+@13061 = ~La Fureur de la sirène
+
+Une vieille prêtresse d'Eldath m'a confié une chope d'infusion aux herbes. Elle pense qu'elle pourra apaiser le cœur de la sirène.~
+
+@13062 = ~La Fureur de la sirène
+
+J'ai donné l'infusion bénie à la sirène. En remerciement, elle m'a offert ses anciennes flèches, disant qu'elles avaient porté sa rage trop longtemps.~
+
+
+//HALFLING
+@13072 = ~La Marchande halfeline
+
+J'ai rencontré dans la nature une marchande halfeline nommée Debbie Gobblebubble. Elle a décidé de se rendre à Franc-Marché, où sa cuisine et ses marchandises pourraient recevoir un accueil plus chaleureux.~
+
+@13073 = ~La Marchande halfeline
+
+J'ai rencontré dans la nature une marchande halfeline nommée Debbie Gobblebubble. Elle est partie pour Athkatla afin de tenter sa chance parmi les marchands et les voyageurs de la Promenade de Waukyne.~
+
+@13074 = ~La Marchande halfeline
+
+J'ai rencontré dans la nature une marchande halfeline nommée Debbie Gobblebubble. Elle a choisi de se rendre à l'abbaye des Flèches d'Or, sanctuaire sacré des marchands voués à Waukyne.~
+
+// Mannatarv wants to die
+@13080 = ~Une mort paisible
+
+Au Vallon de Sombrebois, j'ai rencontré un vieil homme nommé Mannatarv. Il est frêle et las de vivre, mais les prêtres d'Eldath refusent de le laisser mourir. Il m'a demandé de lui apporter une feuille de Gant-des-Bosquets avant que l'antidote ne soit créé, afin qu'il puisse enfin quitter ce monde.~
+
+@13081 = ~Une mort paisible
+
+J'ai accepté la demande de Mannatarv. Il m'attend à l'infirmerie du Vallon de Sombrebois avec la feuille empoisonnée, prêt à mettre fin à ses souffrances à mon retour.~
+
+@13082 = ~Une mort paisible
+
+J'ai donné une feuille de Gant-des-Bosquets à Mannatarv. Il est mort peu après.~
+
+@13083 = ~Une mort paisible
+
+J'ai refusé d'aider Mannatarv à mettre fin à ses jours. Les prêtres d'Eldath continueront de le maintenir en vie par leurs soins, qu'il le veuille ou non.~
+
+// Wadal Hrun
+@13090 = ~La Tour de l'empoisonneur
+
+J'ai rencontré l'un des serviteurs yuan-ti du talonite près des ruines empoisonnées de Myth Unnohyr. La créature s'est cachée quelque part dans la cité, et l'entrée de la tour de l'empoisonneur reste scellée par une protection inconnue.~
+
+@13091 = ~La Tour de l'empoisonneur
+
+J'ai tué le serviteur yuan-ti. Parmi ses affaires se trouvait une petite pierre ioun. Elle sert probablement de clé pour entrer dans la tour de l'empoisonneur.~
+
+// Grotto quest
+@13110 = ~Là où l'acier se tait
+
+La jeune femme de la grotte du Vallon de Sombrebois m'a proposé de prendre les armes dont je n'ai plus besoin afin de les mettre au repos dans le bassin sacré d'Eldath. Elle m'a promis qu'en échange, je recevrais sa bénédiction — ainsi qu'un regain de vitalité.~
+
+@13111 = ~Là où l'acier se tait
+
+J'ai offert l'une de mes armes au bassin. J'ai ressenti un instant la paix d'Eldath.~
+
+// Runaway Nephew
+@13120 = ~Le Neveu fugueur
+
+Au Vallon de Sombrebois, j'ai rencontré un jeune homme qui a fui sa tante, dans le quartier du Gouvernement d'Athkatla. Il m'a demandé de lui apporter une fleur et de lui dire qu'il était sain et sauf.~
+
+@13121 = ~Le Neveu fugueur
+
+J'ai rencontré la tante du garçon dans le quartier du Gouvernement d'Athkatla. Elle était furieuse au début, mais le message — et la fleur — ont adouci sa colère. Elle a déclaré que la prochaine fois, il devrait apporter les fleurs lui-même.~
+
+@13122 = ~Le Neveu fugueur
+
+J'ai retrouvé le garçon au Vallon de Sombrebois et lui ai rapporté les paroles de sa tante. Il peut enfin se consacrer à la vie qu'il voulait réellement mener.~
+
+@13123 = ~Le Neveu fugueur
+
+J'ai rencontré la tante du garçon dans le quartier du Gouvernement d'Athkatla et lui ai remis la fleur.~
+
+
+// Coinquest
+@13130 = ~La Promesse non tenue
+
+J'ai trouvé une note froissée sur le cadavre d'un aventurier. Elle parlait d'un rendez-vous nocturne derrière le temple de Heaum, dans le quartier du Pont d'Athkatla, afin de récupérer quelque chose que son destinataire réclamait. La note était adressée à un homme nommé Marrik. J'ai également trouvé une vieille pièce portant le visage d'un homme âgé. Peut-être les deux sont-ils liés.~
+
+@13131 = ~La Promesse non tenue
+
+Derrière le temple de Heaum, dans le quartier du Pont, j'ai rencontré un homme et lui ai montré le jeton. Il m'a envoyé à un autre rendez-vous derrière le temple de Lathandre, dans le quartier des Temples — toujours après la tombée de la nuit. Il a affirmé que j'obtiendrais ce pour quoi j'étais venu, sans que je sache de quoi il pouvait bien parler.~
+
+@13132 = ~La Promesse non tenue
+
+Derrière le temple de Lathandre, ma présence — et la pièce — semblaient attendues. L'homme qui s'y trouvait m'a annoncé que le prochain rendez-vous aurait lieu au temple de Waukyne, dans le quartier du Gouvernement, à la nuit tombée. Personne ne m'a encore expliqué ce que je suis censé recevoir.~
+
+@13133 = ~La Promesse non tenue
+
+Au temple de Waukyne, on m'a envoyé ailleurs une fois encore. On m'a parlé d'un dernier rendez-vous, cette fois de nuit derrière le temple d'Ilmater, dans les Bas-quartiers. La promesse est toujours la même : j'obtiendrai ce que je voulais. Pourtant, je ne sais même plus ce que cela est censé être.~
+
+@13134 = ~La Promesse non tenue
+
+Derrière le temple d'Ilmater, j'ai enfin rencontré l'homme dont tous les autres avaient parlé. Il m'a interrogé au sujet d'un sort de quête auquel j'étais censé être soumis — mais la lettre que je portais appartenait à quelqu'un mort depuis longtemps. Quel que soit le fardeau ou la requête que son auteur espérait résoudre, l'affaire s'est achevée ailleurs et ne me concernait en rien.~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
