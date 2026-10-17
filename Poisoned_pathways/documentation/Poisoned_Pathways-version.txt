@@ -1,3 +1,6 @@
+V 1.8
+- added French translation by Deratiseur - thank you very much!
+
 V 1.7
 - added Russian Version by Origanum8 - thank you!
 - updated Chinese Translation
